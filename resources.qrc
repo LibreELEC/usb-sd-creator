@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>winapp_le_icons.ico</file>
+        <file>le_icon_256.png</file>
+        <file>header.png</file>
+        <file>refresh.png</file>
+        <file>paypal.png</file>
+        <file>no1.png</file>
+        <file>no2.png</file>
+        <file>no3.png</file>
+        <file>no4.png</file>
+        <file>device_eject.png</file>
+        <file>device_load.png</file>
+        <file>device_remove.png</file>
+    </qresource>
+    <qresource prefix="/qss">
+        <file>stylesheet.qss</file>
+        <file>stylesheet_osx.qss</file>
+    </qresource>
+</RCC>
