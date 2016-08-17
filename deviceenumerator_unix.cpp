@@ -411,7 +411,7 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
     return qLabel;
 }
 
-bool DeviceEnumerator_unix::unmount(const QString what) const;
+bool DeviceEnumerator_unix::unmount(const QString& what) const
 {
     QProcess cmd;
     cmd.start("umount " + what, QIODevice::ReadOnly);

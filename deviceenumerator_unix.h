@@ -49,7 +49,7 @@ private:
     qint64 driveSize(const QString &device) const;
     QStringList getPartitionsInfo(const QString &device) const;
     QString getFirstPartitionLabel(const QString& device) const;
-    bool unmount(const QString what) const;
+    bool unmount(const QString& what) const;
 #endif
 };
 
