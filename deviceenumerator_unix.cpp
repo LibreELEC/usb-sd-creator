@@ -90,9 +90,8 @@ QStringList DeviceEnumerator_unix::getUserFriendlyNames(const QStringList &devic
 
         if (partInfo.size() > 0) {
             friendlyName << " (partitions: ";
-            foreach (QString partition, partInfo) {
+            foreach (QString partition, partInfo)
                 friendlyName << partition << ", ";
-            }
 
             device.chop(2);
             friendlyName << ")";
@@ -184,6 +183,11 @@ bool DeviceEnumerator_unix::unmountDevicePartitions(const QString device) const
     if (ls == NULL) {
         qDebug() << "unmountDevicePartitions: Failed to get partitions";
         blkid_free_probe(pr);
+
+        // no partitions but mounted means it is whole disk formatted
+        if (unmount(device) == true)
+            return true; // not mounted anymore
+
         return false;
     }
 
@@ -197,19 +201,10 @@ bool DeviceEnumerator_unix::unmountDevicePartitions(const QString device) const
 
     // partitions starts with 1
     for (i = 1; i <= nparts; i++) {
-        QProcess umountPart;
         QString partition = QString("%1%2").arg(device).arg(i);
-        umountPart.start("umount " + partition, QIODevice::ReadOnly);
-        umountPart.waitForStarted();
-        umountPart.waitForFinished();
 
-        qDebug() << "checking device   " << partition;
-        if (checkIsMounted(partition) == true) {
-            qDebug() << "checkIsMounted" << partition << "return true";
+        if (unmount(partition) == false)
             return false; // still mounted
-        }
-
-        qDebug() << "unmounted partition" << partition;
     }
 
     return true;
@@ -400,7 +395,7 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
         return qLabel;
     }
 
-    // at lest one partititon
+    // at least one partititon
     char devName[36];
     const char *label = NULL;
     snprintf(devName, sizeof(devName), "%s1", qPrintable(device));
@@ -414,5 +409,22 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
         qLabel = QString::fromLatin1(label);
 
     return qLabel;
+}
+
+bool DeviceEnumerator_unix::unmount(const QString what) const;
+{
+    QProcess cmd;
+    cmd.start("umount " + what, QIODevice::ReadOnly);
+    cmd.waitForStarted();
+    cmd.waitForFinished();
+
+    qDebug() << "unmount: checking" << what;
+    if (checkIsMounted(what) == true) {
+        qDebug() << "unmount: failed";
+        return false; // still mounted
+    }
+
+    qDebug() << "unmount: done";
+    return true;
 }
 #endif
