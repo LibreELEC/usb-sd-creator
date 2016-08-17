@@ -251,7 +251,7 @@ void Creator::httpsUrlHandler(const QUrl &url)
 {
     // on windows open web browser directly
     // for linux use a wrapper to set uid/gid correctly
-#ifdef Q_OS_WIN
+#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
     QDesktopServices::openUrl(url);
 #else
     qDebug() << "httpsUrlHandler called" << url;
