@@ -167,15 +167,12 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     QFont aboutFont;
     aboutFont.setPointSize(13);
     ui->labelAbout->setFont(aboutFont);
-#endif
 
     // make button little bigger (workaround for higher QComboBox)
-    QRect currRectRdcb = ui->removableDevicesComboBox->geometry();
+    // and move it left for same change
     QRect currRectRrb = ui->refreshRemovablesButton->geometry();
-    currRectRrb.setY(currRectRdcb.y());
-    currRectRrb.setWidth(currRectRdcb.height());
-    currRectRrb.setHeight(currRectRdcb.height());
-    ui->refreshRemovablesButton->setGeometry(currRectRrb);
+    ui->refreshRemovablesButton->setGeometry(currRectRrb.x()-2, currRectRrb.y(), currRectRrb.height()+2, currRectRrb.width()+2);
+#endif
 
     setImageFileName("");
     ui->writeFlashButton->setEnabled(false);
