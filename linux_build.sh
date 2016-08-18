@@ -21,11 +21,11 @@ set -e
 
 echo ""
 if [ "$1" = "32" ]; then
-	echo "Building 32 bit version..."
-	QT_DIR=~/Qt5.6.1/5.6-static-32
+  echo "Building 32 bit version..."
+  QT_DIR=~/Qt5.6.1/5.6-static-32
 else
-	echo "Building 64 bit version..."
-	QT_DIR=~/Qt5.6.1/5.6-static-64
+  echo "Building 64 bit version..."
+  QT_DIR=~/Qt5.6.1/5.6-static-64
 fi
 
 export PATH=$QT_DIR/bin:$PATH
@@ -41,10 +41,10 @@ make -j4
 echo ""
 echo "  To run application directly type"
 if [ "$1" = "32" ]; then
-	mv LibreELEC.USB-SD.Creator LibreELEC.USB-SD.Creator.Linux-32bit.bin
-	echo "    sudo ./LibreELEC.USB-SD.Creator.Linux-32bit.bin"
+  mv LibreELEC.USB-SD.Creator.Linux-bit.bin LibreELEC.USB-SD.Creator.Linux-32bit.bin
+  echo "    sudo ./LibreELEC.USB-SD.Creator.Linux-32bit.bin"
 else
-  mv LibreELEC.USB-SD.Creator LibreELEC.USB-SD.Creator.Linux-64bit.bin
+  mv LibreELEC.USB-SD.Creator.Linux-bit.bin LibreELEC.USB-SD.Creator.Linux-64bit.bin
   echo "    sudo ./LibreELEC.USB-SD.Creator.Linux-64bit.bin"
 fi
 echo ""

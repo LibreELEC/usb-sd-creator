@@ -17,9 +17,10 @@ rem #  You should have received a copy of the GNU General Public License
 rem #  along with LibreELEC.  If not, see <http://www.gnu.org/licenses/>.
 rem ################################################################################
 
-set PATH=c:\Qt\Qt5.6.1-static\bin;c:\Qt\Qt5.6.1\Tools\mingw492_32\bin;%PATH%
+set PATH=c:\Qt\Qt5.6.1-static\bin;%PATH%
+set PATH=c:\Qt\Qt5.6.1\Tools\mingw492_32\bin;%PATH%
 
-del release\LibreELEC.USB-SD.Creator.exe > nul 2>&1
+del release\LibreELEC.USB-SD.Creator.Win32.exe > nul 2>&1
 
 qmake.exe
 mingw32-make -j4 release
