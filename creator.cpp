@@ -991,7 +991,7 @@ void Creator::handleDownloadProgress(qint64 bytesReceived, qint64 bytesTotal)
     QString timeText = QString::number(remainingTime, 'f', 0);
     int percentage = ((double) bytesReceived) / bytesTotal * 100;
 
-    QString text = QString("%1 seconds remaining - %2% with %3").arg(timeText, QString::number(percentage), speedText);
+    QString text = QString("%1 seconds remaining - %2% at %3").arg(timeText, QString::number(percentage), speedText);
     downloadProgressBarText(text);
 
     speedTime.restart();   // start again to get current speed
@@ -1363,7 +1363,7 @@ void Creator::handleWriteProgress(int written)
     QString timeText = QString::number(remainingTime, 'f', 0);
     int percentage = ((double) written) / uncompressedImageSize * 100;
 
-    QString text = QString("%1 seconds remaining - %2% with %3").arg(timeText, QString::number(percentage), speedText);
+    QString text = QString("%1 seconds remaining - %2% at %3").arg(timeText, QString::number(percentage), speedText);
     flashProgressBarText(text);
 
     speedTime.restart();   // start again to get current speed
