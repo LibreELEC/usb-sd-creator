@@ -56,6 +56,9 @@ static { # everything below takes effect with CONFIG += static
 }
 
 win32 {
+    # add suffix
+    TARGET = LibreELEC.USB-SD.Creator.Win32
+
     SOURCES += diskwriter_windows.cpp \
                deviceenumerator_windows.cpp
 
@@ -107,7 +110,7 @@ unix {
 }
 
 macx {
-    # use spaces on OS X
+    # use spaces on macOS
     TARGET = "LibreELEC USB-SD Creator"
 
     SOURCES += privileges_unix.cpp
@@ -115,6 +118,9 @@ macx {
 }
 
 linux* {
+    # manually add suffix 32/64
+    TARGET = LibreELEC.USB-SD.Creator.Linux-bit.bin
+
     SOURCES += privileges_unix.cpp
     HEADERS += privileges_unix.h
 
