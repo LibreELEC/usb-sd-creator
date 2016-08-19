@@ -179,7 +179,6 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
 
     ui->projectSelectBox->setToolTip("Select project");
     ui->imageSelectBox->setToolTip("Select image");
-    downloadReleases();
 
     // to be removed
     ui->checkBoxOverwrite->setVisible(false);
@@ -209,6 +208,8 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
 
     QDesktopServices::setUrlHandler("http", this, "httpsUrlHandler");
     QDesktopServices::setUrlHandler("https", this, "httpsUrlHandler");
+
+    downloadReleases();
 }
 
 bool Creator::showRootMessageBox()
@@ -602,7 +603,6 @@ void Creator::reset(const QString& message)
 
     ui->downloadButton->setEnabled(true);
     ui->downloadButton->setText("Download");
-    ui->loadButton->setEnabled(true);
 
     ui->refreshRemovablesButton->setEnabled(true);
     ui->removableDevicesComboBox->setEnabled(true);
@@ -672,7 +672,6 @@ void Creator::disableControls(const int which)
     ui->projectSelectBox->blockSignals(true);
     ui->imageSelectBox->setEnabled(false);
     ui->imageSelectBox->blockSignals(true);
-    ui->loadButton->setEnabled(false);
     ui->refreshRemovablesButton->setEnabled(false);
     ui->removableDevicesComboBox->setEnabled(false);
 
@@ -889,6 +888,7 @@ void Creator::handleFinishedDownload(const QByteArray &data)
     switch (state) {
     case STATE_GET_RELEASES:
         parseJsonAndSet(data);
+        ui->downloadButton->setEnabled(true);
         state = STATE_GOT_RELEASES;
         break;
 
@@ -923,7 +923,6 @@ void Creator::handleFinishedDownload(const QByteArray &data)
 
         delete averageSpeed;
         reset();
-        ui->loadButton->setEnabled(true);
         state = STATE_DOWNLOADED_IMAGE;
         break;
 
@@ -1000,6 +999,7 @@ void Creator::handleDownloadProgress(qint64 bytesReceived, qint64 bytesTotal)
 void Creator::downloadReleases()
 {
     state = STATE_GET_RELEASES;
+    ui->downloadButton->setEnabled(false);
     disableControls(DISABLE_CONTROL_DOWNLOAD);
 
     QUrl url(releasesUrl + "releases.json");
@@ -1022,7 +1022,6 @@ void Creator::downloadButtonClicked()
         resetProgressBars();
         downloadProgressBarText("Download canceled.");
         reset();
-        ui->loadButton->setEnabled(true);
         return;
     }
 
@@ -1106,7 +1105,6 @@ void Creator::downloadButtonClicked()
     averageSpeed = new MovingAverage(50);
 
     ui->downloadButton->setText("Cancel");
-    ui->loadButton->setEnabled(false);
 }
 
 void Creator::getImageFileNameFromUser()
