@@ -77,7 +77,7 @@ QStringList DeviceEnumerator_unix::getUserFriendlyNames(const QStringList &devic
 
 #ifdef Q_OS_LINUX
     foreach (QString device, devices) {
-        qint64 size = driveSize(device);
+        qint64 size = getSizeOfDevice(device);
         QStringList partInfo = getPartitionsInfo(device);
 
         QTextStream friendlyName(&device);
@@ -139,6 +139,7 @@ QStringList DeviceEnumerator_unix::getUserFriendlyNames(const QStringList &devic
                 // Total Size:  574.6 MB (574619648 Bytes) (exactly 1122304 512-Byte-Units)
                 QStringList sizeList = output.split('(').first().split(':');
                 size = sizeList.last().trimmed();
+                break;
             }
 
             output = lsblk.readLine();
@@ -160,7 +161,7 @@ QStringList DeviceEnumerator_unix::getUserFriendlyNames(const QStringList &devic
 #endif
 }
 
-bool DeviceEnumerator_unix::unmountDevicePartitions(const QString device) const
+bool DeviceEnumerator_unix::unmountDevicePartitions(const QString &device) const
 {
 #ifdef Q_OS_MAC
     Q_UNUSED(device);
@@ -287,19 +288,19 @@ QStringList DeviceEnumerator_unix::getDeviceNamesFromSysfs() const
 }
 
 #if defined(Q_OS_LINUX)
-qint64 DeviceEnumerator_unix::driveSize(const QString& device) const
+qint64 DeviceEnumerator_unix::getSizeOfDevice(const QString& device) const
 {
     blkid_probe pr;
 
     pr = blkid_new_probe_from_filename(qPrintable(device));
     if (!pr) {
-        qDebug() << "driveSize: Failed to open" << device;
-        return -1;
+        qDebug() << "getSizeOfDevice: Failed to open" << device;
+        return 0;
     }
 
     blkid_loff_t size = blkid_probe_get_size(pr);
     blkid_free_probe(pr);
-    qDebug() << "driveSize: size" << size << "device" << device;
+    qDebug() << "getSizeOfDevice: size" << size << "device" << device;
     return size;
 }
 
@@ -426,5 +427,31 @@ bool DeviceEnumerator_unix::unmount(const QString& what) const
 
     qDebug() << "unmount: done";
     return true;
+}
+#else
+qint64 DeviceEnumerator_unix::getSizeOfDevice(const QString& device) const
+{
+    QProcess lsblk;
+    QString output;
+
+    lsblk.start(QString("diskutil info %1").arg(device), QIODevice::ReadOnly);
+    lsblk.waitForStarted();
+    lsblk.waitForFinished();
+
+    QString size;
+    output = lsblk.readLine();
+    while (!lsblk.atEnd()) {
+        output = output.trimmed(); // Odd trailing whitespace
+        if (output.contains("Total Size:")) {
+            // Total Size:  574.6 MB (574619648 Bytes) (exactly 1122304 512-Byte-Units)
+            QStringList sizeList = output.split('(').value(1).split(' ');
+            size = sizeList.first().trimmed();
+            break;
+        }
+
+        output = lsblk.readLine();
+    }
+
+    return size.toLongLong();
 }
 #endif

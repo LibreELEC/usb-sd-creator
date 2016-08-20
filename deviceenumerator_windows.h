@@ -30,15 +30,15 @@ class DeviceEnumerator_windows : public DeviceEnumerator
 public:
     QStringList getRemovableDeviceNames() const;
     QStringList getUserFriendlyNames(const QStringList& devices) const;
-    bool unmountDevicePartitions(const QString device) const {
+    bool unmountDevicePartitions(const QString &device) const {
         Q_UNUSED(device);
         return true;
     }
-    int loadEjectDrive(const QString device, const loadEject action) const;
-    int removeDrive(const QString device) const;
+    qint64 getSizeOfDevice(const QString &device) const;
+    int loadEjectDrive(const QString &device, const loadEject action) const;
+    int removeDrive(const QString &device) const;
 
 private:
-    static qint64 getSizeOfDevice(const QString &device);
     static QString getLabelOfDevice(const QString &device);
 
     // returned errorlevels

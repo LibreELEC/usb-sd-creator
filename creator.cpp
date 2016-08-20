@@ -1271,6 +1271,7 @@ void Creator::writeFlashButtonClicked()
     // unmount partitions (on Linux only)
     privileges.SetRoot();    // root need for opening a device
     bool unmounted = devEnumerator->unmountDevicePartitions(destination);
+    qint64 deviceSize = devEnumerator->getSizeOfDevice(destination);
     privileges.SetUser();    // back to user
     if (unmounted == false) {
         flashProgressBarText("Cannot unmount partititons on device " + destination);
@@ -1281,6 +1282,15 @@ void Creator::writeFlashButtonClicked()
     uncompressedImageSize = getUncompressedImageSize();
     ui->flashProgressBar->setValue(0);
     ui->flashProgressBar->setMaximum(uncompressedImageSize);
+
+    qDebug() << "deviceSize" << deviceSize << "uncompressedImageSize" << uncompressedImageSize;
+    if (uncompressedImageSize > deviceSize) {
+        QString uncompressedSizeStr = devEnumerator->sizeToHuman(uncompressedImageSize);
+        QString deviceSizeStr = devEnumerator->sizeToHuman(deviceSize);
+        flashProgressBarText("Not enough space on " + destination + " [" + deviceSizeStr + " < " + uncompressedSizeStr + "]");
+        reset();
+        return;
+    }
 
     // DiskWriter will re-open the image file.
     if (imageFile.isOpen())
