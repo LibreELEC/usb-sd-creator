@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
         qInstallMessageHandler(noMessageOutput);
 #endif
 
-    qDebug() << "App data:" << BUILD_VERSION ", " BUILD_DATE;
+    qDebug() << "App data: Version: " << BUILD_VERSION ", " BUILD_DATE;
 
     Privileges privileges = Privileges();
     privileges.Whoami();

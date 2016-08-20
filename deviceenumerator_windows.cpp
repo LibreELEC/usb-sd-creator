@@ -69,8 +69,13 @@ QStringList DeviceEnumerator_windows::getUserFriendlyNames(const QStringList &de
     return names;
 }
 
-qint64 DeviceEnumerator_windows::getSizeOfDevice(const QString &device)
+qint64 DeviceEnumerator_windows::getSizeOfDevice(const QString &device) const
 {
+#ifdef WINDOWS_DUMMY_WRITE
+    Q_UNUSED(device);
+    return std::numeric_limits<qint64>::max();
+#endif
+
     HANDLE handle = DiskWriter_windows::getHandleOnDevice(device, GENERIC_READ);
     if (handle == INVALID_HANDLE_VALUE)
         return 0;
@@ -116,7 +121,7 @@ QString DeviceEnumerator_windows::getLabelOfDevice(const QString &device)
 // Simple demonstration how to flush, lock and dismount a volume and eject a media from a drive
 // Works under W2K, XP, W2K3, Vista, Win7, Win8, not tested under Win9x
 // you are free to use this code in your projects
-int DeviceEnumerator_windows::loadEjectDrive(const QString device, const loadEject action) const
+int DeviceEnumerator_windows::loadEjectDrive(const QString &device, const loadEject action) const
 {
     bool ForceEject = false;  // dismount and ejecting even we got no lock
 
@@ -204,7 +209,7 @@ int DeviceEnumerator_windows::loadEjectDrive(const QString device, const loadEje
     return ERRL_NO_EJECT;
 }
 
-int DeviceEnumerator_windows::removeDrive(const QString device) const
+int DeviceEnumerator_windows::removeDrive(const QString &device) const
 {
     Q_UNUSED(device);
     qDebug() << "unimplemented: DeviceEnumerator_windows::removeDrive";

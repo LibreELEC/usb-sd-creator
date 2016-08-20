@@ -38,6 +38,7 @@
 #include <QDesktopServices>
 #include <QMimeData>
 #include <QProcess>
+#include <QVersionNumber>
 
 #if defined(Q_OS_WIN)
 #include "diskwriter_windows.h"
@@ -49,6 +50,7 @@
 #endif
 
 const QString Creator::releasesUrl = "http://releases.libreelec.tv/";
+const QString Creator::versionUrl = releasesUrl + "creator_version";
 const QString Creator::helpUrl = "https://wiki.libreelec.tv/index.php?title=LibreELEC_USB-SD_Creator";
 const int Creator::timerValue = 1500;  // msec
 
@@ -88,7 +90,7 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     this->setWindowFlags(windowFlags() | Qt::WindowMinimizeButtonHint);
 
     // set app version
-    ui->labelVersion->setText(BUILD_VERSION "\n" BUILD_DATE);
+    ui->labelVersion->setText("Version: " BUILD_VERSION "\n" BUILD_DATE);
 
     connect(diskWriterThread, SIGNAL(finished()),
             diskWriter, SLOT(deleteLater()));
@@ -179,7 +181,6 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
 
     ui->projectSelectBox->setToolTip("Select project");
     ui->imageSelectBox->setToolTip("Select image");
-    downloadReleases();
 
     // to be removed
     ui->checkBoxOverwrite->setVisible(false);
@@ -209,6 +210,8 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
 
     QDesktopServices::setUrlHandler("http", this, "httpsUrlHandler");
     QDesktopServices::setUrlHandler("https", this, "httpsUrlHandler");
+
+    downloadVersionCheck();
 }
 
 bool Creator::showRootMessageBox()
@@ -602,7 +605,6 @@ void Creator::reset(const QString& message)
 
     ui->downloadButton->setEnabled(true);
     ui->downloadButton->setText("Download");
-    ui->loadButton->setEnabled(true);
 
     ui->refreshRemovablesButton->setEnabled(true);
     ui->removableDevicesComboBox->setEnabled(true);
@@ -672,7 +674,6 @@ void Creator::disableControls(const int which)
     ui->projectSelectBox->blockSignals(true);
     ui->imageSelectBox->setEnabled(false);
     ui->imageSelectBox->blockSignals(true);
-    ui->loadButton->setEnabled(false);
     ui->refreshRemovablesButton->setEnabled(false);
     ui->removableDevicesComboBox->setEnabled(false);
 
@@ -882,14 +883,24 @@ void Creator::handleDownloadError(const QString message)
 {
     qDebug() << "Something went wrong with download:" << message;
     downloadProgressBarText(message);
+
+    if (state == STATE_GET_VERSION)
+        downloadReleases();
 }
 
 void Creator::handleFinishedDownload(const QByteArray &data)
 {
     switch (state) {
+    case STATE_GET_VERSION:
+        state = STATE_IDLE;
+        checkNewVersion(data);
+        downloadReleases();
+        break;
+
     case STATE_GET_RELEASES:
         parseJsonAndSet(data);
-        state = STATE_GOT_RELEASES;
+        ui->downloadButton->setEnabled(true);
+        state = STATE_IDLE;
         break;
 
     case STATE_DOWNLOADING_IMAGE:
@@ -923,8 +934,7 @@ void Creator::handleFinishedDownload(const QByteArray &data)
 
         delete averageSpeed;
         reset();
-        ui->loadButton->setEnabled(true);
-        state = STATE_DOWNLOADED_IMAGE;
+        state = STATE_IDLE;
         break;
 
     default:
@@ -991,19 +1001,74 @@ void Creator::handleDownloadProgress(qint64 bytesReceived, qint64 bytesTotal)
     QString timeText = QString::number(remainingTime, 'f', 0);
     int percentage = ((double) bytesReceived) / bytesTotal * 100;
 
-    QString text = QString("%1 seconds remaining - %2% with %3").arg(timeText, QString::number(percentage), speedText);
+    QString text = QString("%1 seconds remaining - %2% at %3").arg(timeText, QString::number(percentage), speedText);
     downloadProgressBarText(text);
 
     speedTime.restart();   // start again to get current speed
 }
 
+void Creator::downloadVersionCheck()
+{
+    state = STATE_GET_VERSION;
+    ui->downloadButton->setEnabled(false);
+    disableControls(DISABLE_CONTROL_DOWNLOAD);
+
+    QUrl url(versionUrl);
+    manager->get(url);
+}
+
 void Creator::downloadReleases()
 {
     state = STATE_GET_RELEASES;
+    ui->downloadButton->setEnabled(false);
     disableControls(DISABLE_CONTROL_DOWNLOAD);
 
     QUrl url(releasesUrl + "releases.json");
     manager->get(url);
+}
+
+void Creator::checkNewVersion(const QString &verNewStr)
+{
+    QVersionNumber qVersionNew = QVersionNumber::fromString(verNewStr);
+    QVersionNumber qVersionOld = QVersionNumber::fromString(BUILD_VERSION);
+    if (qVersionNew.segmentCount() != 3 || qVersionOld.segmentCount() != 3) {
+        qDebug() << "not 3 segments version";
+        return;
+    }
+
+    int QVersionCompare = QVersionNumber::compare(qVersionNew, qVersionOld);
+    qDebug() << "QVersionCompare" << QVersionCompare;
+    if (QVersionCompare <= 0) {
+        qDebug() << "no new version";
+        return;
+    }
+
+    QMessageBox msgBox(this);
+    msgBox.setWindowTitle("Update Notification");
+#ifdef Q_OS_MAC
+    QAbstractButton *myVisitButton = msgBox.addButton(trUtf8("Visit Website"), QMessageBox::NoRole);
+    msgBox.addButton(trUtf8("Close"), QMessageBox::YesRole);
+#else
+    QAbstractButton *myVisitButton = msgBox.addButton(trUtf8("Visit Website"), QMessageBox::YesRole);
+    msgBox.addButton(trUtf8("Close"), QMessageBox::NoRole);
+#endif
+    int msgBoxWidth = 320;
+    int msgBoxWidthExtra = 28;  // real width is +28
+    int msgBoxHeight = 160;
+    QSpacerItem *horizontalSpacer = new QSpacerItem(msgBoxWidth - msgBoxWidthExtra,
+                      msgBoxHeight, QSizePolicy::Minimum, QSizePolicy::Expanding);
+    QString msg = "LibreELEC USB-SD Creator <font color=\"blue\">" + verNewStr + "</font> is available.";
+    msgBox.setText("<p align='center' style='margin-right:30px'><br>" + msg + "<br></p>");
+    QGridLayout *layout = (QGridLayout *) msgBox.layout();
+    layout->addItem(horizontalSpacer, layout->rowCount(), 0, 1, layout->columnCount());
+
+    // center msgbox over app
+    QRect mainWidgetGeometry = geometry();
+    msgBox.move((mainWidgetGeometry.x() + mainWidgetGeometry.width() / 2) - msgBoxWidth / 2,
+                (mainWidgetGeometry.y() + mainWidgetGeometry.height() / 2) - msgBoxHeight / 2);
+    msgBox.exec();
+    if (msgBox.clickedButton() == myVisitButton)
+      QDesktopServices::openUrl(QUrl(helpUrl));
 }
 
 void Creator::downloadButtonClicked()
@@ -1022,7 +1087,6 @@ void Creator::downloadButtonClicked()
         resetProgressBars();
         downloadProgressBarText("Download canceled.");
         reset();
-        ui->loadButton->setEnabled(true);
         return;
     }
 
@@ -1106,7 +1170,6 @@ void Creator::downloadButtonClicked()
     averageSpeed = new MovingAverage(50);
 
     ui->downloadButton->setText("Cancel");
-    ui->loadButton->setEnabled(false);
 }
 
 void Creator::getImageFileNameFromUser()
@@ -1213,6 +1276,7 @@ void Creator::writeFlashButtonClicked()
     // unmount partitions (on Linux only)
     privileges.SetRoot();    // root need for opening a device
     bool unmounted = devEnumerator->unmountDevicePartitions(destination);
+    qint64 deviceSize = devEnumerator->getSizeOfDevice(destination);
     privileges.SetUser();    // back to user
     if (unmounted == false) {
         flashProgressBarText("Cannot unmount partititons on device " + destination);
@@ -1223,6 +1287,15 @@ void Creator::writeFlashButtonClicked()
     uncompressedImageSize = getUncompressedImageSize();
     ui->flashProgressBar->setValue(0);
     ui->flashProgressBar->setMaximum(uncompressedImageSize);
+
+    qDebug() << "deviceSize" << deviceSize << "uncompressedImageSize" << uncompressedImageSize;
+    if (uncompressedImageSize > deviceSize) {
+        QString uncompressedSizeStr = devEnumerator->sizeToHuman(uncompressedImageSize);
+        QString deviceSizeStr = devEnumerator->sizeToHuman(deviceSize);
+        flashProgressBarText("Not enough space on " + destination + " [" + deviceSizeStr + " < " + uncompressedSizeStr + "]");
+        reset();
+        return;
+    }
 
     // DiskWriter will re-open the image file.
     if (imageFile.isOpen())
@@ -1363,7 +1436,7 @@ void Creator::handleWriteProgress(int written)
     QString timeText = QString::number(remainingTime, 'f', 0);
     int percentage = ((double) written) / uncompressedImageSize * 100;
 
-    QString text = QString("%1 seconds remaining - %2% with %3").arg(timeText, QString::number(percentage), speedText);
+    QString text = QString("%1 seconds remaining - %2% at %3").arg(timeText, QString::number(percentage), speedText);
     flashProgressBarText(text);
 
     speedTime.restart();   // start again to get current speed

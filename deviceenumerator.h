@@ -34,9 +34,10 @@ public:
     virtual ~DeviceEnumerator() {}
     virtual QStringList getRemovableDeviceNames() const = 0;
     virtual QStringList getUserFriendlyNames(const QStringList& devices) const = 0;
-    virtual bool unmountDevicePartitions(const QString device) const = 0;
-    virtual int loadEjectDrive(const QString device, const loadEject action) const = 0;
-    virtual int removeDrive(const QString device) const = 0;
+    virtual bool unmountDevicePartitions(const QString &device) const = 0;
+    virtual qint64 getSizeOfDevice(const QString &device) const = 0;
+    virtual int loadEjectDrive(const QString &device, const loadEject action) const = 0;
+    virtual int removeDrive(const QString &device) const = 0;
 
     QString sizeToHuman(const qint64 size) const
     {
