@@ -89,10 +89,9 @@ private:
     };
     enum {
         STATE_IDLE,
+        STATE_GET_VERSION,
         STATE_GET_RELEASES,
-        STATE_GOT_RELEASES,
         STATE_DOWNLOADING_IMAGE,
-        STATE_DOWNLOADED_IMAGE,
         STATE_WRITING_IMAGE
     } state;
     enum {
@@ -116,6 +115,7 @@ private:
     DeviceEnumerator* devEnumerator;
     static const int timerValue;
     static const QString releasesUrl;
+    static const QString versionUrl;
     static const QString helpUrl;
     JsonParser *parserData;
     QSettings settings;
@@ -147,6 +147,8 @@ private slots:
     void handleFinishedDownload(const QByteArray& data);
     void handlePartialData(const QByteArray& data, qlonglong total);
     void handleDownloadError(const QString);
+    void downloadVersionCheck();
+    void checkNewVersion(const QString &version);
     void downloadReleases();
     void parseJsonAndSet(const QByteArray &data);
     void setProjectImages();

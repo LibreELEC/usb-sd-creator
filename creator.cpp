@@ -38,6 +38,7 @@
 #include <QDesktopServices>
 #include <QMimeData>
 #include <QProcess>
+#include <QVersionNumber>
 
 #if defined(Q_OS_WIN)
 #include "diskwriter_windows.h"
@@ -49,6 +50,7 @@
 #endif
 
 const QString Creator::releasesUrl = "http://releases.libreelec.tv/";
+const QString Creator::versionUrl = releasesUrl + "creator_version";
 const QString Creator::helpUrl = "https://wiki.libreelec.tv/index.php?title=LibreELEC_USB-SD_Creator";
 const int Creator::timerValue = 1500;  // msec
 
@@ -88,7 +90,7 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     this->setWindowFlags(windowFlags() | Qt::WindowMinimizeButtonHint);
 
     // set app version
-    ui->labelVersion->setText(BUILD_VERSION "\n" BUILD_DATE);
+    ui->labelVersion->setText("Version: " BUILD_VERSION "\n" BUILD_DATE);
 
     connect(diskWriterThread, SIGNAL(finished()),
             diskWriter, SLOT(deleteLater()));
@@ -209,7 +211,7 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     QDesktopServices::setUrlHandler("http", this, "httpsUrlHandler");
     QDesktopServices::setUrlHandler("https", this, "httpsUrlHandler");
 
-    downloadReleases();
+    downloadVersionCheck();
 }
 
 bool Creator::showRootMessageBox()
@@ -881,15 +883,24 @@ void Creator::handleDownloadError(const QString message)
 {
     qDebug() << "Something went wrong with download:" << message;
     downloadProgressBarText(message);
+
+    if (state == STATE_GET_VERSION)
+        downloadReleases();
 }
 
 void Creator::handleFinishedDownload(const QByteArray &data)
 {
     switch (state) {
+    case STATE_GET_VERSION:
+        state = STATE_IDLE;
+        checkNewVersion(data);
+        downloadReleases();
+        break;
+
     case STATE_GET_RELEASES:
         parseJsonAndSet(data);
         ui->downloadButton->setEnabled(true);
-        state = STATE_GOT_RELEASES;
+        state = STATE_IDLE;
         break;
 
     case STATE_DOWNLOADING_IMAGE:
@@ -923,7 +934,7 @@ void Creator::handleFinishedDownload(const QByteArray &data)
 
         delete averageSpeed;
         reset();
-        state = STATE_DOWNLOADED_IMAGE;
+        state = STATE_IDLE;
         break;
 
     default:
@@ -996,6 +1007,16 @@ void Creator::handleDownloadProgress(qint64 bytesReceived, qint64 bytesTotal)
     speedTime.restart();   // start again to get current speed
 }
 
+void Creator::downloadVersionCheck()
+{
+    state = STATE_GET_VERSION;
+    ui->downloadButton->setEnabled(false);
+    disableControls(DISABLE_CONTROL_DOWNLOAD);
+
+    QUrl url(versionUrl);
+    manager->get(url);
+}
+
 void Creator::downloadReleases()
 {
     state = STATE_GET_RELEASES;
@@ -1004,6 +1025,45 @@ void Creator::downloadReleases()
 
     QUrl url(releasesUrl + "releases.json");
     manager->get(url);
+}
+
+void Creator::checkNewVersion(const QString &verNewStr)
+{
+    QVersionNumber qVersionNew = QVersionNumber::fromString(verNewStr);
+    QVersionNumber qVersionOld = QVersionNumber::fromString(BUILD_VERSION);
+    if (qVersionNew.segmentCount() != 3 || qVersionOld.segmentCount() != 3) {
+        qDebug() << "not 3 segments version";
+        return;
+    }
+
+    int QVersionCompare = QVersionNumber::compare(qVersionNew, qVersionOld);
+    qDebug() << "QVersionCompare" << QVersionCompare;
+    if (QVersionCompare <= 0) {
+        qDebug() << "no new version";
+        return;
+    }
+
+    QMessageBox msgBox(this);
+    msgBox.setWindowTitle("Update Notification");
+    QAbstractButton *myVisitButton = msgBox.addButton(trUtf8("Visit Website"), QMessageBox::YesRole);
+    msgBox.addButton(trUtf8("Close"), QMessageBox::NoRole);
+    int msgBoxWidth = 320;
+    int msgBoxWidthExtra = 28;  // real width is +28
+    int msgBoxHeight = 160;
+    QSpacerItem *horizontalSpacer = new QSpacerItem(msgBoxWidth - msgBoxWidthExtra,
+                      msgBoxHeight, QSizePolicy::Minimum, QSizePolicy::Expanding);
+    QString msg = "LibreELEC USB-SD Creator <font color=\"blue\">" + verNewStr + "</font> is available.";
+    msgBox.setText("<p align='center' style='margin-right:30px'><br>" + msg + "<br></p>");
+    QGridLayout *layout = (QGridLayout *) msgBox.layout();
+    layout->addItem(horizontalSpacer, layout->rowCount(), 0, 1, layout->columnCount());
+
+    // center msgbox over app
+    QRect mainWidgetGeometry = geometry();
+    msgBox.move((mainWidgetGeometry.x() + mainWidgetGeometry.width() / 2) - msgBoxWidth / 2,
+                (mainWidgetGeometry.y() + mainWidgetGeometry.height() / 2) - msgBoxHeight / 2);
+    msgBox.exec();
+    if (msgBox.clickedButton() == myVisitButton)
+      QDesktopServices::openUrl(QUrl(helpUrl));
 }
 
 void Creator::downloadButtonClicked()
