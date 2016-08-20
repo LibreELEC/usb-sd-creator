@@ -38,6 +38,7 @@ make -j4
 #    osadecompile main.scpt >main.scpt.txt
 echo ""
 echo "Running osacompile..."
+mkdir -p dmg_osx/template.app/Contents/Resources/Scripts
 osacompile -t osas -o dmg_osx/template.app/Contents/Resources/Scripts/main.scpt dmg_osx/main.scpt.txt
 
 echo ""
