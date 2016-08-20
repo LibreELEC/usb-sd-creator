@@ -1045,8 +1045,13 @@ void Creator::checkNewVersion(const QString &verNewStr)
 
     QMessageBox msgBox(this);
     msgBox.setWindowTitle("Update Notification");
+#ifdef Q_OS_MAC
+    QAbstractButton *myVisitButton = msgBox.addButton(trUtf8("Visit Website"), QMessageBox::NoRole);
+    msgBox.addButton(trUtf8("Close"), QMessageBox::YesRole);
+#else
     QAbstractButton *myVisitButton = msgBox.addButton(trUtf8("Visit Website"), QMessageBox::YesRole);
     msgBox.addButton(trUtf8("Close"), QMessageBox::NoRole);
+#endif
     int msgBoxWidth = 320;
     int msgBoxWidthExtra = 28;  // real width is +28
     int msgBoxHeight = 160;
