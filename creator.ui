@@ -29,7 +29,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Creator</string>
+   <string>LibreELEC USB-SD Creator</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
@@ -175,9 +175,9 @@
     <widget class="QPushButton" name="loadButton">
      <property name="geometry">
       <rect>
-       <x>102</x>
+       <x>120</x>
        <y>124</y>
-       <width>80</width>
+       <width>100</width>
        <height>23</height>
       </rect>
      </property>
@@ -324,7 +324,7 @@
       <rect>
        <x>10</x>
        <y>124</y>
-       <width>80</width>
+       <width>100</width>
        <height>23</height>
       </rect>
      </property>
@@ -437,25 +437,6 @@
       <string>Write</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBoxOverwrite">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>328</x>
-       <y>127</y>
-       <width>151</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Overwrite downloaded file</string>
-     </property>
-     <property name="checked">
-      <bool>false</bool>
-     </property>
-    </widget>
     <widget class="QPushButton" name="helpButton">
      <property name="geometry">
       <rect>
@@ -512,14 +493,11 @@
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
      </property>
-     <property name="text">
-      <string>fileNameLabel</string>
-     </property>
      <property name="frame">
       <bool>true</bool>
      </property>
      <property name="cursorPosition">
-      <number>13</number>
+      <number>0</number>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -567,7 +545,7 @@
       <string>Load device</string>
      </property>
      <property name="text">
-      <string>...</string>
+      <string/>
      </property>
      <property name="icon">
       <iconset resource="resources.qrc">
@@ -579,7 +557,7 @@
       <rect>
        <x>330</x>
        <y>184</y>
-       <width>101</width>
+       <width>131</width>
        <height>16</height>
       </rect>
      </property>
@@ -600,7 +578,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>...</string>
+      <string/>
      </property>
      <property name="icon">
       <iconset resource="resources.qrc">
@@ -663,10 +641,6 @@
        <width>311</width>
        <height>41</height>
       </rect>
-     </property>
-     <property name="text">
-      <string>label version
-label date</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

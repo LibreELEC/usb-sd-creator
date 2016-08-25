@@ -89,9 +89,6 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     // add minimize button on Windows
     this->setWindowFlags(windowFlags() | Qt::WindowMinimizeButtonHint);
 
-    // set app version
-    ui->labelVersion->setText("Version: " BUILD_VERSION "\n" BUILD_DATE);
-
     connect(diskWriterThread, SIGNAL(finished()),
             diskWriter, SLOT(deleteLater()));
     connect(this, SIGNAL(proceedToWriteImageToDevice(QString,QString)),
@@ -179,12 +176,8 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     setImageFileName("");
     ui->writeFlashButton->setEnabled(false);
 
-    ui->projectSelectBox->setToolTip("Select project");
-    ui->imageSelectBox->setToolTip("Select image");
-
-    // to be removed
-    ui->checkBoxOverwrite->setVisible(false);
-    //ui->checkBoxOverwrite->setChecked(Qt::Checked);   // overwrite automatically
+    ui->projectSelectBox->setToolTip(tr("Select project"));
+    ui->imageSelectBox->setToolTip(tr("Select image"));
 
     showLoadEject = false;  // disabled by default
 
@@ -208,8 +201,12 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     setAcceptDrops(true);    // allow droping files on a window
     showRootMessageBox();
 
+    // call web browser through our wrapper for Linux
     QDesktopServices::setUrlHandler("http", this, "httpsUrlHandler");
     QDesktopServices::setUrlHandler("https", this, "httpsUrlHandler");
+
+    // set app version
+    ui->labelVersion->setText(tr("Version: %1\nBuild date: %2").arg(BUILD_VERSION).arg(BUILD_DATE));
 
     downloadVersionCheck();
 }
@@ -223,7 +220,7 @@ bool Creator::showRootMessageBox()
         return false;
 
     QMessageBox msgBox;
-    msgBox.setText("Root privileges required to write image.\nRun application with sudo.");
+    msgBox.setText(tr("Root privileges required to write image.\nRun application with sudo."));
     msgBox.setIcon(QMessageBox::Critical);
     msgBox.exec();
     return true;
@@ -526,17 +523,17 @@ void Creator::setProjectImages()
             QStringList regExpVal = regExp.capturedTexts();
             QString alphaBetaNumber;
 
-            alphaBetaNumber = "[Stable]";
+            alphaBetaNumber = tr("[Stable]");
             if (regExpVal.count() == 2) {
                 if (regExpVal.at(1) == "90")
-                    alphaBetaNumber = "[Alpha]";
+                    alphaBetaNumber = tr("[Alpha]");
                 else if (regExpVal.at(1) == "95")
-                    alphaBetaNumber = "[Beta]";
+                    alphaBetaNumber = tr("[Beta]");
             }
 
             if (! ui->imagesShowAll->isChecked()) {
                 // check value (number 90 or 95)
-                if (alphaBetaNumber != "[Stable]")
+                if (alphaBetaNumber != tr("[Stable]"))
                   continue;    // skip testing images
             }
 
@@ -604,7 +601,7 @@ void Creator::reset(const QString& message)
     ui->imageSelectBox->setEnabled(true);
 
     ui->downloadButton->setEnabled(true);
-    ui->downloadButton->setText("Download");
+    ui->downloadButton->setText(tr("Download"));
 
     ui->refreshRemovablesButton->setEnabled(true);
     ui->removableDevicesComboBox->setEnabled(true);
@@ -630,7 +627,7 @@ void Creator::reset(const QString& message)
     else
         ui->writeFlashButton->setEnabled(false);
 
-    ui->writeFlashButton->setText("Write");
+    ui->writeFlashButton->setText(tr("Write"));
 
     if (! message.isNull()) {
         if (state == STATE_DOWNLOADING_IMAGE) {
@@ -906,7 +903,7 @@ void Creator::handleFinishedDownload(const QByteArray &data)
     case STATE_DOWNLOADING_IMAGE:
         // whole data at once (no partial)
         if (bytesDownloaded == 0) {
-            downloadProgressBarText("Download complete, syncing file...");
+            downloadProgressBarText(tr("Download complete, syncing file..."));
             qApp->processEvents();  // fix this
             handlePartialData(data, data.size());
         }
@@ -914,12 +911,12 @@ void Creator::handleFinishedDownload(const QByteArray &data)
         resetProgressBars();
 
         imageFile.close();
-        downloadProgressBarText("Download complete, verifying checksum...");
+        downloadProgressBarText(tr("Download complete, verifying checksum..."));
 
         if (isChecksumValid(imageHash.result().toHex()))
-            downloadProgressBarText("Download complete, checksum ok.");
+            downloadProgressBarText(tr("Download complete, checksum ok."));
         else
-            downloadProgressBarText("Download complete, checksum not ok.");
+            downloadProgressBarText(tr("Download complete, checksum not ok."));
 
         // rename file
         if (imageFile.fileName().endsWith(".temp")) {
@@ -1001,8 +998,7 @@ void Creator::handleDownloadProgress(qint64 bytesReceived, qint64 bytesTotal)
     QString timeText = QString::number(remainingTime, 'f', 0);
     int percentage = ((double) bytesReceived) / bytesTotal * 100;
 
-    QString text = QString("%1 seconds remaining - %2% at %3").arg(timeText, QString::number(percentage), speedText);
-    downloadProgressBarText(text);
+    downloadProgressBarText(tr("%1 seconds remaining - %2% at %3").arg(timeText, QString::number(percentage), speedText));
 
     speedTime.restart();   // start again to get current speed
 }
@@ -1038,26 +1034,28 @@ void Creator::checkNewVersion(const QString &verNewStr)
 
     int QVersionCompare = QVersionNumber::compare(qVersionNew, qVersionOld);
     qDebug() << "QVersionCompare" << QVersionCompare;
+    // QVersionCompare = 1;  // TEST
     if (QVersionCompare <= 0) {
         qDebug() << "no new version";
         return;
     }
 
     QMessageBox msgBox(this);
-    msgBox.setWindowTitle("Update Notification");
+    msgBox.setWindowTitle(tr("Update Notification"));
 #ifdef Q_OS_MAC
-    QAbstractButton *myVisitButton = msgBox.addButton(trUtf8("Visit Website"), QMessageBox::NoRole);
-    msgBox.addButton(trUtf8("Close"), QMessageBox::YesRole);
+    QAbstractButton *myVisitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::NoRole);
+    msgBox.addButton(tr("Close"), QMessageBox::YesRole);
 #else
-    QAbstractButton *myVisitButton = msgBox.addButton(trUtf8("Visit Website"), QMessageBox::YesRole);
-    msgBox.addButton(trUtf8("Close"), QMessageBox::NoRole);
+    QAbstractButton *myVisitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::YesRole);
+    msgBox.addButton(tr("Close"), QMessageBox::NoRole);
 #endif
     int msgBoxWidth = 320;
     int msgBoxWidthExtra = 28;  // real width is +28
     int msgBoxHeight = 160;
     QSpacerItem *horizontalSpacer = new QSpacerItem(msgBoxWidth - msgBoxWidthExtra,
                       msgBoxHeight, QSizePolicy::Minimum, QSizePolicy::Expanding);
-    QString msg = "LibreELEC USB-SD Creator <font color=\"blue\">" + verNewStr + "</font> is available.";
+
+    QString msg = tr("LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available.").arg(verNewStr);
     msgBox.setText("<p align='center' style='margin-right:30px'><br>" + msg + "<br></p>");
     QGridLayout *layout = (QGridLayout *) msgBox.layout();
     layout->addItem(horizontalSpacer, layout->rowCount(), 0, 1, layout->columnCount());
@@ -1085,7 +1083,7 @@ void Creator::downloadButtonClicked()
         }
 
         resetProgressBars();
-        downloadProgressBarText("Download canceled.");
+        downloadProgressBarText(tr("Download canceled."));
         reset();
         return;
     }
@@ -1121,22 +1119,19 @@ void Creator::downloadButtonClicked()
         return;
     }
 
-    // save state
-    if (ui->checkBoxOverwrite->checkState() == Qt::Unchecked) {
-        QFile fileTest(saveDir + "/" + selectedImage);
-        if (fileTest.exists()) {
-            QMessageBox msgBox;
-            msgBox.setWindowTitle("Error");
-            msgBox.setText("File \n" + saveDir + '/' + selectedImage + "\nalready exists.");
-            msgBox.setInformativeText("Do you want to overwrite?");
-            msgBox.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
-            msgBox.setDefaultButton(QMessageBox::Cancel);
-            int ret = msgBox.exec();
-            if (ret != QMessageBox::Ok) {
-                downloadProgressBarText("File already exist.");
-                reset();
-                return;
-            }
+    QFile fileTest(saveDir + "/" + selectedImage);
+    if (fileTest.exists()) {
+        QMessageBox msgBox;
+        msgBox.setWindowTitle(tr("Error"));
+        msgBox.setText(tr("File \n%1/%2\nalready exist.").arg(saveDir).arg(selectedImage));
+        msgBox.setInformativeText(tr("Do you want to overwrite?"));
+        msgBox.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+        msgBox.setDefaultButton(QMessageBox::Cancel);
+        int ret = msgBox.exec();
+        if (ret != QMessageBox::Ok) {
+            downloadProgressBarText(tr("File already exist."));
+            reset();
+            return;
         }
     }
 
@@ -1156,7 +1151,7 @@ void Creator::downloadButtonClicked()
     setImageFileName(saveDir + "/" + selectedImage + ".temp");
 
     if (!imageFile.open(QFile::WriteOnly | QFile::Truncate)) {
-        downloadProgressBarText("Failed to open file for writing!");
+        downloadProgressBarText(tr("Failed to open file for writing!"));
         reset();
         return;
     }
@@ -1169,7 +1164,7 @@ void Creator::downloadButtonClicked()
     speedTime.start();
     averageSpeed = new MovingAverage(50);
 
-    ui->downloadButton->setText("Cancel");
+    ui->downloadButton->setText(tr("Cancel"));
 }
 
 void Creator::getImageFileNameFromUser()
@@ -1192,9 +1187,9 @@ void Creator::getImageFileNameFromUser()
     }
 
     QString filename = QFileDialog::getOpenFileName(this,
-                        "Open image file",
+                        tr("Open image file"),
                         loadDir,
-                        "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)");
+                        tr("Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)"));
 
     if (filename.isEmpty()) {
         //ui->fileNameLabel->setText("");
@@ -1235,7 +1230,7 @@ void Creator::writeFlashButtonClicked()
         // cancel flashing
         privileges.SetUser();
         resetProgressBars();
-        flashProgressBarText("Writing canceled.");
+        flashProgressBarText(tr("Writing canceled."));
         reset();
         diskWriter->cancelWrite();
         return;
@@ -1262,9 +1257,9 @@ void Creator::writeFlashButtonClicked()
 
     QMessageBox::StandardButton ok = QMessageBox::warning(this,
                     tr("Confirm write"),
-                    "Selected device: " + destination + "\n" +
-                    "Are you sure you want to write the image?\n\n" +
-                    "This will destroy your data!",
+                    tr("Selected device: %1\n"
+                    "Are you sure you want to write the image?\n\n"
+                    "Your USB-SD device will be wiped!").arg(destination),
                     QMessageBox::Yes | QMessageBox::No,
                     QMessageBox::No);
 
@@ -1279,7 +1274,7 @@ void Creator::writeFlashButtonClicked()
     qint64 deviceSize = devEnumerator->getSizeOfDevice(destination);
     privileges.SetUser();    // back to user
     if (unmounted == false) {
-        flashProgressBarText("Cannot unmount partititons on device " + destination);
+        flashProgressBarText(tr("Cannot unmount partititons on device %1").arg(destination));
         reset();
         return;
     }
@@ -1292,7 +1287,7 @@ void Creator::writeFlashButtonClicked()
     if (uncompressedImageSize > deviceSize) {
         QString uncompressedSizeStr = devEnumerator->sizeToHuman(uncompressedImageSize);
         QString deviceSizeStr = devEnumerator->sizeToHuman(deviceSize);
-        flashProgressBarText("Not enough space on " + destination + " [" + deviceSizeStr + " < " + uncompressedSizeStr + "]");
+        flashProgressBarText(tr("Not enough space on %1 [%2 < %3]").arg(destination).arg(deviceSizeStr).arg(uncompressedSizeStr));
         reset();
         return;
     }
@@ -1304,7 +1299,7 @@ void Creator::writeFlashButtonClicked()
     state = STATE_WRITING_IMAGE;
     privileges.SetRoot();    // root need for opening a device
 
-    ui->writeFlashButton->setText("Cancel");
+    ui->writeFlashButton->setText(tr("Cancel"));
     emit proceedToWriteImageToDevice(imageFile.fileName(), destination);
 
     speedTime.start();
@@ -1316,7 +1311,7 @@ void Creator::writingSyncing()
 {
     qDebug() << "writingSyncing";
     if (state == STATE_WRITING_IMAGE)
-        flashProgressBarText("Syncing file system.");
+        flashProgressBarText(tr("Syncing file system..."));
 }
 
 void Creator::writingFinished()
@@ -1325,7 +1320,7 @@ void Creator::writingFinished()
     privileges.SetUser();    // back to user
     reset();
     resetProgressBars();
-    flashProgressBarText("Writing done!");
+    flashProgressBarText(tr("Writing done!"));
     delete averageSpeed;
     state = STATE_IDLE;
 
@@ -1337,7 +1332,7 @@ void Creator::writingError(QString message)
 {
     qDebug() << "Writing error:" << message;
     privileges.SetUser();    // back to user
-    reset("Error: " + message);
+    reset(tr("Error: %1").arg(message));
     delete averageSpeed;
     state = STATE_IDLE;
 }
@@ -1436,8 +1431,7 @@ void Creator::handleWriteProgress(int written)
     QString timeText = QString::number(remainingTime, 'f', 0);
     int percentage = ((double) written) / uncompressedImageSize * 100;
 
-    QString text = QString("%1 seconds remaining - %2% at %3").arg(timeText, QString::number(percentage), speedText);
-    flashProgressBarText(text);
+    flashProgressBarText(tr("%1 seconds remaining - %2% at %3").arg(timeText, QString::number(percentage), speedText));
 
     speedTime.restart();   // start again to get current speed
 }

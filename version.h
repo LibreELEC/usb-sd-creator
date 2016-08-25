@@ -20,6 +20,6 @@
 #define VERSION_H
 
 #define BUILD_VERSION  "1.0.0"
-#define BUILD_DATE     "Build date: " __DATE__ " " __TIME__
+#define BUILD_DATE     __DATE__ " " __TIME__
 
 #endif // VERSION_H

@@ -51,27 +51,10 @@ int main(int argc, char *argv[])
         qInstallMessageHandler(noMessageOutput);
 #endif
 
-    qDebug() << "App data: Version: " << BUILD_VERSION ", " BUILD_DATE;
+    qDebug() << "App data: Version:" << BUILD_VERSION ", Build date: " BUILD_DATE;
 
     Privileges privileges = Privileges();
     privileges.Whoami();
-
-#if 0
-#ifndef Q_OS_WIN
-    if (app.arguments().size() == 2 && app.arguments().at(1) == "--browser") {
-        QString url = getenv("LE_URL_ADDRESS");
-        qDebug() << "url" << url;
-
-        if (! url.trimmed().isEmpty()) {
-            privileges.SetRealUser();   // no need to switch back
-            QDesktopServices::openUrl(QUrl(url));
-        }
-
-        qDebug() << "Exit browser instance";
-        exit(0);  // process stays with 'return app.exec();'
-    }
-#endif
-#endif
 
     // skip program filename
     for (int i=1; i<app.arguments().size(); i++) {
@@ -89,7 +72,6 @@ int main(int argc, char *argv[])
 
     Creator win(privileges, 0);
     win.setArgFile(argFile);
-    win.setWindowTitle("LibreELEC USB-SD Creator");
     win.show();
 
     return app.exec();
