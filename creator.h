@@ -31,6 +31,7 @@
 #include "downloadmanager.h"
 #include "jsonparser.h"
 #include "movingaverage.h"
+#include "translator.h"
 
 #ifdef Q_OS_UNIX
 #include "privileges_unix.h"
@@ -62,6 +63,7 @@ public:
 private:
     Ui::Creator *ui;
     DownloadManager* manager;
+    Translator *translator;
 
     void parseAndSetLinks(const QByteArray &data);
     void saveAndUpdateProgress(QNetworkReply *reply);

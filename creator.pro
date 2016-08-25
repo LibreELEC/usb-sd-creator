@@ -33,20 +33,26 @@ SOURCES += main.cpp \
            diskwriter.cpp \
            jsonparser.cpp \
            movingaverage.cpp \
-           downloadmanager.cpp
+           downloadmanager.cpp \
+           translator.cpp
 
 HEADERS += creator.h \
            diskwriter.h \
            jsonparser.h \
            movingaverage.h \
            downloadmanager.h  \
-           deviceenumerator.h
+           deviceenumerator.h \
+           translator.h
 
 MOC_DIR     = .generated_files
 OBJECTS_DIR = .generated_files
 
 # hide the full g++ command line and print only filename
 CONFIG += silent
+
+TRANSLATIONS += lang/lang-en_GB.ts \
+                lang/lang-de_DE.ts \
+                lang/lang-nl_NL.ts
 
 static { # everything below takes effect with CONFIG += static
     CONFIG += static

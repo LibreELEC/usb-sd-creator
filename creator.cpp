@@ -205,6 +205,9 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     QDesktopServices::setUrlHandler("http", this, "httpsUrlHandler");
     QDesktopServices::setUrlHandler("https", this, "httpsUrlHandler");
 
+    translator = new Translator(this, &settings);  // pass parent
+    translator->fillLanguages(ui->langBox);
+
     // set app version
     ui->labelVersion->setText(tr("Version: %1\nBuild date: %2").arg(BUILD_VERSION).arg(BUILD_DATE));
 
@@ -354,16 +357,28 @@ void Creator::timerEvent(QTimerEvent *event)
 }
 
 void Creator::changeEvent(QEvent *e) {
-    if(e->type() == QEvent::ActivationChange && this->isActiveWindow()) {
-        // got focus
-        if (timerId == 0)
-            timerId = startTimer(timerValue);
-    } else {
-        // lost focus
-        if (timerId > 0) {
-            killTimer(timerId);
-            timerId = 0;
+    switch (e->type()) {
+    case QEvent::ActivationChange:
+        if (this->isActiveWindow()) {
+            // got focus
+            if (timerId == 0)
+                timerId = startTimer(timerValue);
+        } else {
+            // lost focus
+            if (timerId > 0) {
+                killTimer(timerId);
+                timerId = 0;
+            }
         }
+
+        break;
+    case QEvent::LanguageChange:
+        ui->retranslateUi(this);
+        // retranslate dynamic text
+        ui->labelVersion->setText(tr("Version: %1\nBuild date: %2").arg(BUILD_VERSION).arg(BUILD_DATE));
+        break;
+    default:
+        break;
     }
 }
 

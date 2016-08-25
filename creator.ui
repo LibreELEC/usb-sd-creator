@@ -667,9 +667,26 @@
     <string/>
    </property>
   </widget>
+  <widget class="QComboBox" name="langBox">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>109</y>
+     <width>35</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+  </widget>
   <zorder>headerBackground</zorder>
   <zorder>logo</zorder>
   <zorder>stackedWidget</zorder>
+  <zorder>langBox</zorder>
  </widget>
  <layoutdefault spacing="5" margin="10"/>
  <resources>

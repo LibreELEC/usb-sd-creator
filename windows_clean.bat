@@ -24,7 +24,8 @@ if exist Makefile (
   mingw32-make distclean
   rmdir .generated_files
   rmdir debug
-  rm -f log
+  del log > nul 2>&1
+  del lang\*.qm > nul 2>&1
 )
 
 del object_script.* > nul 2>&1

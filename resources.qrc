@@ -17,4 +17,14 @@
         <file>stylesheet.qss</file>
         <file>stylesheet_osx.qss</file>
     </qresource>
+    <qresource prefix="">
+        <file>lang/flag-en_GB.png</file>
+        <file>lang/flag-de_DE.png</file>
+        <file>lang/flag-nl_NL.png</file>
+    </qresource>
+    <qresource prefix="">
+        <file>lang/lang-en_GB.qm</file>
+        <file>lang/lang-de_DE.qm</file>
+        <file>lang/lang-nl_NL.qm</file>
+    </qresource>
 </RCC>
