@@ -39,6 +39,9 @@
 #include "privileges.h"
 #endif
 
+// useful macro
+#define isFilled()  isEmpty() == false
+
 class QThread;
 class DiskWriter;
 class DeviceEnumerator;
