@@ -16,10 +16,37 @@
 //  along with LibreELEC.  If not, see <http://www.gnu.org/licenses/>.
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef VERSION_H
-#define VERSION_H
+#ifndef TRANSLATOR_H
+#define TRANSLATOR_H
 
-#define BUILD_VERSION  "1.0.0"
-#define BUILD_DATE     __DATE__ " " __TIME__
+#include <QtWidgets/QApplication>
+#include <QTranslator>
+#include <QObject>
+#include <QComboBox>
+#include <QSettings>
 
-#endif // VERSION_H
+// useful macro
+#define isFilled()  isEmpty() == false
+
+class Translator : public QObject
+{
+    Q_OBJECT
+
+public:
+    Translator(QObject *parent = 0, QSettings *set = 0);
+    ~Translator();
+    void fillLanguages(QComboBox *box);
+
+signals:
+    void languageChanged(const QString &language);  // standard Qt signal
+
+private:
+    QComboBox *langBox;
+    QSettings *settings;
+    QTranslator *qtranslator;
+
+protected slots:
+    void langBoxChanged(int idx);
+};
+
+#endif // TRANSLATOR_H

@@ -31,12 +31,16 @@
 #include "downloadmanager.h"
 #include "jsonparser.h"
 #include "movingaverage.h"
+#include "translator.h"
 
 #ifdef Q_OS_UNIX
 #include "privileges_unix.h"
 #else
 #include "privileges.h"
 #endif
+
+// useful macro
+#define isFilled()  isEmpty() == false
 
 class QThread;
 class DiskWriter;
@@ -62,6 +66,7 @@ public:
 private:
     Ui::Creator *ui;
     DownloadManager* manager;
+    Translator *translator;
 
     void parseAndSetLinks(const QByteArray &data);
     void saveAndUpdateProgress(QNetworkReply *reply);

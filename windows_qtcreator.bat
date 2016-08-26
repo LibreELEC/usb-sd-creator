@@ -21,4 +21,4 @@ set PATH=c:\Qt\Qt5.6.1-static\bin;%PATH%
 set PATH=c:\Qt\Qt5.6.1\Tools\mingw492_32\bin;%PATH%
 set PATH=c:\Qt\Qt5.6.1\Tools\QtCreator\bin;%PATH%
 
-qtcreator.exe creator.pro
+start qtcreator.exe creator.pro

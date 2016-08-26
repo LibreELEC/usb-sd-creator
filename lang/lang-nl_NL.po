@@ -1,0 +1,352 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: nl_NL\n"
+"X-Qt-Contexts: true\n"
+
+#: ../creator.ui:32
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator"
+msgstr ""
+
+#: ../creator.ui:123
+msgctxt "Creator|"
+msgid "Write image"
+msgstr ""
+
+#: ../creator.ui:142 ../creator.ui:603 ../creator.cpp:1062 ../creator.cpp:1065
+msgctxt "Creator|"
+msgid "Close"
+msgstr ""
+
+#: ../creator.ui:185
+msgctxt "Creator|"
+msgid "Select file"
+msgstr ""
+
+#: ../creator.ui:269
+msgctxt "Creator|"
+msgid "Select your USB stick or SD card"
+msgstr ""
+
+#: ../creator.ui:313
+msgctxt "Creator|"
+msgid "Select version"
+msgstr ""
+
+#: ../creator.ui:332 ../creator.cpp:619
+msgctxt "Creator|"
+msgid "Download"
+msgstr ""
+
+#: ../creator.ui:348
+msgctxt "Creator|"
+msgid "About"
+msgstr ""
+
+#: ../creator.ui:418
+msgctxt "Creator|"
+msgid "Download or select a local image file"
+msgstr ""
+
+#: ../creator.ui:437 ../creator.cpp:645
+msgctxt "Creator|"
+msgid "Write"
+msgstr ""
+
+#: ../creator.ui:453
+msgctxt "Creator|"
+msgid "Help"
+msgstr ""
+
+#: ../creator.ui:472
+msgctxt "Creator|"
+msgid "Show all"
+msgstr ""
+
+#: ../creator.ui:519
+msgctxt "Creator|"
+msgid "Eject device"
+msgstr ""
+
+#: ../creator.ui:545
+msgctxt "Creator|"
+msgid "Load device"
+msgstr ""
+
+#: ../creator.ui:565
+msgctxt "Creator|"
+msgid "Eject  Load   Remove"
+msgstr ""
+
+#: ../creator.ui:621
+msgctxt "Creator|"
+msgid ""
+"<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; "
+"font-weight:600;\"><h2>© LibreELEC 2016</h2></span></p><p "
+"align=\"center\">This software was created with love and released<br/>under "
+"GPLv2, using earlier work from RasPlex.</p><p align=\"center\">For license, "
+"credits and history, please read:<br/><a "
+"href=\"https://github.com/LibreELEC/usb-sd-creator\"><span style=\" "
+"text-decoration: underline; "
+"color:#0000ff;\">https://github.com/LibreELEC/usb-sd-creator</span></a><br/></p><p "
+"align=\"center\">If you enjoy using LibreELEC please consider a<br/>donation "
+"to support the project.</p><p align=\"center\">Click the logo below or "
+"donate<br/>using Paypal to: donations@libreelec.tv<br/><br/><a "
+"href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LE7N83P6ZDCC6\"><img "
+"src=\":/icons/paypal.png\"/></a></p></body></html>"
+msgstr ""
+
+#: ../creator.cpp:179
+msgctxt "Creator|"
+msgid "Select project"
+msgstr ""
+
+#: ../creator.cpp:180
+msgctxt "Creator|"
+msgid "Select image"
+msgstr ""
+
+#: ../creator.cpp:212 ../creator.cpp:378
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Version: %1\n"
+"Build date: %2"
+msgstr ""
+
+#: ../creator.cpp:226
+msgctxt "Creator|"
+msgid ""
+"Root privileges required to write image.\n"
+"Run application with sudo."
+msgstr ""
+
+#: ../creator.cpp:541 ../creator.cpp:551
+msgctxt "Creator|"
+msgid "[Stable]"
+msgstr ""
+
+#: ../creator.cpp:544
+msgctxt "Creator|"
+msgid "[Alpha]"
+msgstr ""
+
+#: ../creator.cpp:546
+msgctxt "Creator|"
+msgid "[Beta]"
+msgstr ""
+
+#: ../creator.cpp:921
+msgctxt "Creator|"
+msgid "Download complete, syncing file..."
+msgstr ""
+
+#: ../creator.cpp:929
+msgctxt "Creator|"
+msgid "Download complete, verifying checksum..."
+msgstr ""
+
+#: ../creator.cpp:932
+msgctxt "Creator|"
+msgid "Download complete, checksum ok."
+msgstr ""
+
+#: ../creator.cpp:934
+msgctxt "Creator|"
+msgid "Download complete, checksum not ok."
+msgstr ""
+
+#: ../creator.cpp:1016 ../creator.cpp:1449
+#, qt-format
+msgctxt "Creator|"
+msgid "%1 seconds remaining - %2% at %3"
+msgstr ""
+
+#: ../creator.cpp:1059
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr ""
+
+#: ../creator.cpp:1061 ../creator.cpp:1064
+msgctxt "Creator|"
+msgid "Visit Website"
+msgstr ""
+
+#: ../creator.cpp:1073
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
+msgstr ""
+
+#: ../creator.cpp:1101
+msgctxt "Creator|"
+msgid "Download canceled."
+msgstr ""
+
+#: ../creator.cpp:1128
+msgctxt "Creator|"
+msgid "Directory to store image file"
+msgstr ""
+
+#: ../creator.cpp:1140
+msgctxt "Creator|"
+msgid "Error"
+msgstr ""
+
+#: ../creator.cpp:1141
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"File \n"
+"%1/%2\n"
+"already exist."
+msgstr ""
+
+#: ../creator.cpp:1142
+msgctxt "Creator|"
+msgid "Do you want to overwrite?"
+msgstr ""
+
+#: ../creator.cpp:1147
+msgctxt "Creator|"
+msgid "File already exist."
+msgstr ""
+
+#: ../creator.cpp:1169
+msgctxt "Creator|"
+msgid "Failed to open file for writing!"
+msgstr ""
+
+#: ../creator.cpp:1182 ../creator.cpp:1317
+msgctxt "Creator|"
+msgid "Cancel"
+msgstr ""
+
+#: ../creator.cpp:1205
+msgctxt "Creator|"
+msgid "Open image file"
+msgstr ""
+
+#: ../creator.cpp:1207
+msgctxt "Creator|"
+msgid ""
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
+"image (*.img);;All files (*.*)"
+msgstr ""
+
+#: ../creator.cpp:1248
+msgctxt "Creator|"
+msgid "Writing canceled."
+msgstr ""
+
+#: ../creator.cpp:1274
+msgctxt "Creator|"
+msgid "Confirm write"
+msgstr ""
+
+#: ../creator.cpp:1275
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+
+#: ../creator.cpp:1292
+#, qt-format
+msgctxt "Creator|"
+msgid "Cannot unmount partititons on device %1"
+msgstr ""
+
+#: ../creator.cpp:1305
+#, qt-format
+msgctxt "Creator|"
+msgid "Not enough space on %1 [%2 < %3]"
+msgstr ""
+
+#: ../creator.cpp:1329
+msgctxt "Creator|"
+msgid "Syncing file system..."
+msgstr ""
+
+#: ../creator.cpp:1338
+msgctxt "Creator|"
+msgid "Writing done!"
+msgstr ""
+
+#: ../creator.cpp:1350
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr ""
+
+#: ../diskwriter_windows.cpp:116
+msgctxt "QObject|"
+msgid "Write Error"
+msgstr ""
+
+#: ../diskwriter_windows.cpp:117
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to write data to handle.\n"
+"Error %1: %2"
+msgstr ""
+
+#: ../diskwriter_windows.cpp:155
+msgctxt "QObject|"
+msgid "Volume Error"
+msgstr ""
+
+#: ../diskwriter_windows.cpp:156
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to get a handle on the volume.\n"
+"Error %1: %2"
+msgstr ""
+
+#: ../diskwriter_windows.cpp:171
+msgctxt "QObject|"
+msgid "Lock Error"
+msgstr ""
+
+#: ../diskwriter_windows.cpp:172
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to lock the volume.\n"
+"Error %1: %2"
+msgstr ""
+
+#: ../diskwriter_windows.cpp:187
+msgctxt "QObject|"
+msgid "Unlock Error"
+msgstr ""
+
+#: ../diskwriter_windows.cpp:188
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to unlock the volume.\n"
+"Error %1: %2"
+msgstr ""
+
+#: ../diskwriter_windows.cpp:203
+msgctxt "QObject|"
+msgid "Dismount Error"
+msgstr ""
+
+#: ../diskwriter_windows.cpp:204
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to dismount the volume.\n"
+"Error %1: %2"
+msgstr ""
