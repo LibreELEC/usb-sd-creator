@@ -25,6 +25,9 @@
 #include <QComboBox>
 #include <QSettings>
 
+// useful macro
+#define isFilled()  isEmpty() == false
+
 class Translator : public QObject
 {
     Q_OBJECT

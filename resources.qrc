@@ -18,6 +18,7 @@
         <file>stylesheet_osx.qss</file>
     </qresource>
     <qresource prefix="">
+    		<file>lang/flag-empty.png</file>
         <file>lang/flag-en_GB.png</file>
         <file>lang/flag-de_DE.png</file>
         <file>lang/flag-nl_NL.png</file>

@@ -38,13 +38,30 @@ void Translator::fillLanguages(QComboBox *box)
 {
     langBox = box;
 
-    foreach(const QString &qmFile, QDir(":/lang").entryList(QStringList("*.qm"))) {
+    QStringList qmFiles;
+    // languages from resources
+    qmFiles << QDir(":/lang").entryList(QStringList("*.qm"));
+    // languages from a local disk (mostly for testing purposes)
+    qmFiles << QDir(".").entryList(QStringList("*.qm"));
+
+    // add menu entry for all the files
+    foreach (const QString &qmFile, qmFiles) {
         QRegExp regExp = QRegExp("lang-(.*)\\.qm");
         regExp.indexIn(qmFile);
         QString locale = regExp.capturedTexts().at(1);
-        QIcon icon(":/lang/flag-" + locale + ".png");
+
+        QIcon icon;
+        QString iconName = "flag-" + locale + ".png";
+        if (QFile::exists(":/lang/" + iconName))
+            icon = QIcon(":/lang/" + iconName);
+        else if (QFile::exists(iconName))
+            icon = QIcon(iconName);
+        else
+            icon = QIcon(":/lang/flag-empty.png");
+
         QString lang = QLocale(locale).nativeLanguageName();
         lang.replace("British English", "English");   // nicer
+        lang.replace("American English", "English");
         langBox->addItem(icon, lang, locale);
     }
 
@@ -56,8 +73,10 @@ void Translator::fillLanguages(QComboBox *box)
         // not saved yet or error, try system locale
         QString locale = QLocale::system().name();
 
-        if (QFile::exists(":/lang/lang-" + locale + ".qm") == false)
-            locale = "en_GB";   // default locale
+        // check for file in resources and on disk
+        if (QFile::exists(":/lang/lang-" + locale + ".qm") == false ||
+            QFile::exists("lang-" + locale + ".qm") == false)
+                locale = "en_GB";   // default locale
 
         idx = langBox->findData(locale, Qt::UserRole, Qt::MatchFixedString);
     }
@@ -71,9 +90,14 @@ void Translator::langBoxChanged(int idx)
     settings->setValue("preferred/lang", idx);
     QString locale = langBox->itemData(idx).toString();
 
-    if (qtranslator->isEmpty() == false)
+    if (qtranslator->isFilled())
         qApp->removeTranslator(qtranslator);
 
-    qtranslator->load(":/lang/lang-" + locale + ".qm");
-    qApp->installTranslator(qtranslator);
+    if (QFile::exists(":/lang/lang-" + locale + ".qm"))
+        qtranslator->load(":/lang/lang-" + locale + ".qm");
+    else
+        qtranslator->load("lang-" + locale + ".qm");
+
+    if (qtranslator->isFilled())
+        qApp->installTranslator(qtranslator);
 }
