@@ -52,7 +52,10 @@ CONFIG += silent
 
 TRANSLATIONS += lang/lang-en_GB.ts \
                 lang/lang-de_DE.ts \
-                lang/lang-nl_NL.ts
+                lang/lang-fr_FR.ts \
+                lang/lang-nl_NL.ts \
+                lang/lang-pl_PL.ts \
+                lang/lang-sl_SI.ts
 
 static { # everything below takes effect with CONFIG += static
     CONFIG += static

@@ -20,12 +20,18 @@
     <qresource prefix="">
     		<file>lang/flag-empty.png</file>
         <file>lang/flag-en_GB.png</file>
+        <file>lang/flag-fr_FR.png</file>
         <file>lang/flag-de_DE.png</file>
         <file>lang/flag-nl_NL.png</file>
+        <file>lang/flag-pl_PL.png</file>
+        <file>lang/flag-sl_SI.png</file>
     </qresource>
     <qresource prefix="">
         <file>lang/lang-en_GB.qm</file>
         <file>lang/lang-de_DE.qm</file>
+        <file>lang/lang-fr_FR.qm</file>
         <file>lang/lang-nl_NL.qm</file>
+        <file>lang/lang-pl_PL.qm</file>
+        <file>lang/lang-sl_SI.qm</file>
     </qresource>
 </RCC>
