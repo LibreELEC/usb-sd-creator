@@ -29,6 +29,7 @@ if [ -f Makefile ]; then
   rm -f creator.pro.user
 fi
 
+rm -f lang/*.qm
 rm -f log
 rm -f *.dmg
 rm -f local_image_file
