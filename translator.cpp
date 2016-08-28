@@ -60,6 +60,8 @@ void Translator::fillLanguages(QComboBox *box)
             icon = QIcon(":/lang/flag-empty.png");
 
         QString lang = QLocale(locale).nativeLanguageName();
+        lang = lang.left(1).toUpper() + lang.mid(1);	// capitalize first letter
+        
         lang.replace("British English", "English");   // nicer
         lang.replace("American English", "English");
         langBox->addItem(icon, lang, locale);
