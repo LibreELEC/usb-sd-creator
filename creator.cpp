@@ -1163,7 +1163,7 @@ void Creator::downloadButtonClicked()
         msgBox.setDefaultButton(QMessageBox::Cancel);
         int ret = msgBox.exec();
         if (ret != QMessageBox::Ok) {
-            downloadProgressBarText(tr("File already exist."));
+            downloadProgressBarText(tr("File already exists."));
             reset();
             return;
         }

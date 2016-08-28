@@ -129,9 +129,9 @@
     <widget class="QPushButton" name="closeAppButton">
      <property name="geometry">
       <rect>
-       <x>400</x>
+       <x>380</x>
        <y>325</y>
-       <width>80</width>
+       <width>100</width>
        <height>25</height>
       </rect>
      </property>
@@ -337,7 +337,7 @@
       <rect>
        <x>10</x>
        <y>325</y>
-       <width>80</width>
+       <width>100</width>
        <height>25</height>
       </rect>
      </property>
@@ -429,7 +429,7 @@
       <rect>
        <x>10</x>
        <y>267</y>
-       <width>80</width>
+       <width>100</width>
        <height>23</height>
       </rect>
      </property>
@@ -440,9 +440,9 @@
     <widget class="QPushButton" name="helpButton">
      <property name="geometry">
       <rect>
-       <x>310</x>
+       <x>270</x>
        <y>325</y>
-       <width>80</width>
+       <width>100</width>
        <height>25</height>
       </rect>
      </property>
@@ -592,7 +592,7 @@
       <rect>
        <x>10</x>
        <y>325</y>
-       <width>80</width>
+       <width>100</width>
        <height>25</height>
       </rect>
      </property>
@@ -616,9 +616,6 @@
       <font>
        <pointsize>10</pointsize>
       </font>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;&lt;h2&gt;© LibreELEC 2016&lt;/h2&gt;&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;This software was created with love and released&lt;br/&gt;under GPLv2, using earlier work from RasPlex.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;For license, credits and history, please read:&lt;br/&gt;&lt;a href=&quot;https://github.com/LibreELEC/usb-sd-creator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/LibreELEC/usb-sd-creator&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;If you enjoy using LibreELEC please consider a&lt;br/&gt;donation to support the project.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Click the logo below or donate&lt;br/&gt;using Paypal to: donations@libreelec.tv&lt;br/&gt;&lt;br/&gt;&lt;a href=&quot;https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=LE7N83P6ZDCC6&quot;&gt;&lt;img src=&quot;:/icons/paypal.png&quot;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignHCenter|Qt::AlignTop</set>
