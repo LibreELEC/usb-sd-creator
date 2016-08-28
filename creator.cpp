@@ -478,6 +478,10 @@ void Creator::parseJsonAndSet(const QByteArray &data)
     QString previouslySelectedProject;
     previouslySelectedProject = settings.value("preferred/project").toString();
 
+    // RPi2/3 is default project
+    if (previouslySelectedProject.isEmpty())
+        previouslySelectedProject = "Raspberry Pi 2 and 3";
+
     int idx = ui->projectSelectBox->findText(previouslySelectedProject,
                                              Qt::MatchFixedString);
     if (idx >= 0)
