@@ -58,6 +58,7 @@ public:
     explicit Creator(Privileges &priv, QWidget *parent = 0);
     ~Creator();
     void setArgFile(QString argFile);
+    void retranslateUi();
     void keyPressEvent(QKeyEvent *);
     void closeEvent(QCloseEvent *);
     void dragEnterEvent(QDragEnterEvent *e);
