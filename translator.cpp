@@ -34,9 +34,10 @@ Translator::~Translator()
     delete qtranslator;
 }
 
-void Translator::fillLanguages(QComboBox *box)
+void Translator::fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr)
 {
-    langBox = box;
+    menu = menuPtr;
+    langBtn = langBtnPtr;
 
     QStringList qmFiles;
     // languages from resources
@@ -60,37 +61,41 @@ void Translator::fillLanguages(QComboBox *box)
             icon = QIcon(":/lang/flag-empty.png");
 
         QString lang = QLocale(locale).nativeLanguageName();
-        lang = lang.left(1).toUpper() + lang.mid(1);	// capitalize first letter
-        
+        lang = lang.left(1).toUpper() + lang.mid(1);  // capitalize first letter
+
         lang.replace("British English", "English");   // nicer
         lang.replace("American English", "English");
-        langBox->addItem(icon, lang, locale);
+
+        QAction *action = new QAction(lang, menu);
+        action->setIcon(icon);
+        action->setData(locale);
+        menu->addAction(action);
     }
 
-    connect(langBox, SIGNAL(currentIndexChanged(int)),
-            this, SLOT(langBoxChanged(int)));
+    connect(menu, SIGNAL(triggered(QAction*)), SLOT(languageAction(QAction*)));
 
-    int idx = settings->value("preferred/lang", "-1").toInt();
-    if (idx == -1 || idx > langBox->count()) {
-        // not saved yet or error, try system locale
-        QString locale = QLocale::system().name();
+    QString locale = settings->value("preferred/lang").toString();
 
-        // check for file in resources and on disk
-        if (QFile::exists(":/lang/lang-" + locale + ".qm") == false ||
-            QFile::exists("lang-" + locale + ".qm") == false)
-                locale = "en_GB";   // default locale
+    // check for file in resources and on disk
+    if (QFile::exists(":/lang/lang-" + locale + ".qm") == false &&
+        QFile::exists("lang-" + locale + ".qm") == false)
+            locale = "en_GB";   // default locale
 
-        idx = langBox->findData(locale, Qt::UserRole, Qt::MatchFixedString);
+    for (int i=0; i<menu->actions().count(); i++) {
+        if (locale == menu->actions().at(i)->data()) {
+            langBtn->setIcon(menu->actions().at(i)->icon());
+            languageAction(menu->actions().at(i));
+            break;
+        }
     }
-
-    langBox->setCurrentIndex(idx);
-    langBoxChanged(idx);
 }
 
-void Translator::langBoxChanged(int idx)
+void Translator::languageAction(QAction *action)
 {
-    settings->setValue("preferred/lang", idx);
-    QString locale = langBox->itemData(idx).toString();
+    QString locale = action->data().toString();
+    settings->setValue("preferred/lang", locale);
+
+    langBtn->setIcon(action->icon());
 
     if (qtranslator->isFilled())
         qApp->removeTranslator(qtranslator);
@@ -102,4 +107,5 @@ void Translator::langBoxChanged(int idx)
 
     if (qtranslator->isFilled())
         qApp->installTranslator(qtranslator);
+
 }

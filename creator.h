@@ -171,6 +171,7 @@ private slots:
     void resetProgressBars();
     void savePreferredImage(const QString &version);
     void savePreferredRemovableDevice(int idx);
+    void languageChange();
     void downloadProgressBarText(const QString &text);
     void flashProgressBarText(const QString &text);
     void handleWriteProgress(int written);

@@ -137,6 +137,8 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     connect(ui->closeAboutButton, SIGNAL(clicked()), this, SLOT(closeAbout()));
     connect(ui->closeAppButton, SIGNAL(clicked()), this, SLOT(close()));
 
+    connect(ui->langButton,SIGNAL(clicked()), this, SLOT(languageChange()));
+
     refreshRemovablesList();
 
     // create a timer that refreshes the device list every 1.5 second
@@ -206,7 +208,7 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     QDesktopServices::setUrlHandler("https", this, "httpsUrlHandler");
 
     translator = new Translator(this, &settings);  // pass parent
-    translator->fillLanguages(ui->langBox);
+    translator->fillLanguages(ui->menuLanguage, ui->langButton);
 
     retranslateUi();  // retranslate dynamic texts
 
@@ -696,6 +698,12 @@ void Creator::savePreferredRemovableDevice(int idx)
 
     settings.setValue("preferred/removableDevice", ui->removableDevicesComboBox->itemData(idx).toString());
     flashProgressBarText("");
+}
+
+void Creator::languageChange()
+{
+    // menu has padding around
+    ui->menuLanguage->exec(ui->langButton->mapToGlobal(QPoint(-6, -4)));
 }
 
 void Creator::disableControls(const int which)

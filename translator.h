@@ -22,7 +22,8 @@
 #include <QtWidgets/QApplication>
 #include <QTranslator>
 #include <QObject>
-#include <QComboBox>
+#include <QMenu>
+#include <QPushButton>
 #include <QSettings>
 
 // useful macro
@@ -35,18 +36,16 @@ class Translator : public QObject
 public:
     Translator(QObject *parent = 0, QSettings *set = 0);
     ~Translator();
-    void fillLanguages(QComboBox *box);
-
-signals:
-    void languageChanged(const QString &language);  // standard Qt signal
+    void fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr);
 
 private:
-    QComboBox *langBox;
+    QMenu *menu;
+    QPushButton *langBtn;
     QSettings *settings;
     QTranslator *qtranslator;
 
 protected slots:
-    void langBoxChanged(int idx);
+    void languageAction(QAction *action);
 };
 
 #endif // TRANSLATOR_H
