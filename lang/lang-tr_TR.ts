@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="si_LK">
+<TS version="2.1" language="tr_TR">
 <context>
     <name>Creator</name>
     <message>
         <location filename="../creator.ui" line="+32"/>
         <source>LibreELEC USB-SD Creator</source>
-        <translation type="unfinished"></translation>
+        <translation>LibreELEC USB-SD Creator</translation>
     </message>
     <message>
         <location line="+91"/>
         <source>Write image</source>
-        <translation>Zapiši sliko</translation>
+        <translation>İmajı yaz</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -19,64 +19,64 @@
         <location filename="../creator.cpp" line="+1089"/>
         <location line="+3"/>
         <source>Close</source>
-        <translation>Zapri</translation>
+        <translation>Kapat</translation>
     </message>
     <message>
         <location line="-418"/>
         <source>Select file</source>
-        <translation>Izberi datoteko</translation>
+        <translation>Dosyayı seç</translation>
     </message>
     <message>
         <location line="+84"/>
         <source>Select your USB stick or SD card</source>
-        <translation>Izberi USB stick ali SD kartico</translation>
+        <translation>Flashdiski ya da SD kartı seç</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Select version</source>
-        <translation>Izberi verzijo</translation>
+        <translation>Sürümü seç</translation>
     </message>
     <message>
         <location line="+19"/>
         <location filename="../creator.cpp" line="-452"/>
         <source>Download</source>
-        <translation>Prenesi</translation>
+        <translation>İndir</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>About</source>
-        <translation>O programu</translation>
+        <translation>Hakkında</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Download or select a local image file</source>
-        <translation>Prenesi ali izberi lokalno datoteko</translation>
+        <translation>Bir imaj dosyası seç ya da indir</translation>
     </message>
     <message>
         <location line="+19"/>
         <location filename="../creator.cpp" line="+26"/>
         <source>Write</source>
-        <translation>Zapiši</translation>
+        <translation>Yaz</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Help</source>
-        <translation>Pomoč</translation>
+        <translation>Yardım</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Show all</source>
-        <translation>Prikaži vse</translation>
+        <translation>Tümünü göster</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Eject device</source>
-        <translation type="unfinished"></translation>
+        <translation>Aleti çıkar</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Load device</source>
-        <translation type="unfinished"></translation>
+        <translation>Alet dolu</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -91,25 +91,24 @@
     <message>
         <location filename="../creator.cpp" line="-485"/>
         <source>Select project</source>
-        <translation>Izberi projekt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Select image</source>
-        <translation>Izberi sliko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>Potrebne so root pravice za zapisovanje. Poženite aplikacijo s sudo.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Version: %1
 Build date: %2</source>
-        <translation>Verzija: %1
-Prevedeno: %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>

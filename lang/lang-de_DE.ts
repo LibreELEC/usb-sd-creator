@@ -4,353 +4,370 @@
 <context>
     <name>Creator</name>
     <message>
-        <location filename="../creator.ui" line="32"/>
+        <location filename="../creator.ui" line="+32"/>
         <source>LibreELEC USB-SD Creator</source>
-        <translation type="unfinished"></translation>
+        <translation>LibreELEC USB-SD Creator</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="123"/>
+        <location line="+91"/>
         <source>Write image</source>
-        <translation type="unfinished"></translation>
+        <translation>Image schreiben</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="142"/>
-        <location filename="../creator.ui" line="603"/>
-        <location filename="../creator.cpp" line="1081"/>
-        <location filename="../creator.cpp" line="1084"/>
+        <location line="+19"/>
+        <location line="+461"/>
+        <location filename="../creator.cpp" line="+1089"/>
+        <location line="+3"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="185"/>
+        <location line="-418"/>
         <source>Select file</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei auswählen</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="269"/>
+        <location line="+84"/>
         <source>Select your USB stick or SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>USB Stick oder SD Karte auswählen</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="313"/>
+        <location line="+44"/>
         <source>Select version</source>
-        <translation type="unfinished"></translation>
+        <translation>Version auswählen</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="332"/>
-        <location filename="../creator.cpp" line="638"/>
+        <location line="+19"/>
+        <location filename="../creator.cpp" line="-452"/>
         <source>Download</source>
-        <translation type="unfinished"></translation>
+        <translation>Herunterladen</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="348"/>
+        <location line="+16"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Über</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="418"/>
+        <location line="+70"/>
         <source>Download or select a local image file</source>
-        <translation type="unfinished"></translation>
+        <translation>Herunterladen oder lokales Image auswählen</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="437"/>
-        <location filename="../creator.cpp" line="664"/>
+        <location line="+19"/>
+        <location filename="../creator.cpp" line="+26"/>
         <source>Write</source>
-        <translation type="unfinished"></translation>
+        <translation>Schreiben</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="453"/>
+        <location line="+16"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="472"/>
+        <location line="+19"/>
         <source>Show all</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle zeigen</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="519"/>
+        <location line="+47"/>
         <source>Eject device</source>
-        <translation type="unfinished"></translation>
+        <translation>Gerät auswerfen</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="545"/>
+        <location line="+26"/>
         <source>Load device</source>
-        <translation type="unfinished"></translation>
+        <translation>Gerät einlesen</translation>
     </message>
     <message>
-        <location filename="../creator.ui" line="565"/>
+        <location line="+20"/>
         <source>Eject  Load   Remove</source>
+        <translation>Eject Load Remove</translation>
+    </message>
+    <message>
+        <location line="+113"/>
+        <source>Language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="179"/>
+        <location filename="../creator.cpp" line="-485"/>
         <source>Select project</source>
-        <translation type="unfinished"></translation>
+        <translation>Projekt auswählen</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="180"/>
+        <location line="+1"/>
         <source>Select image</source>
-        <translation type="unfinished"></translation>
+        <translation>Image auswählen</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="225"/>
+        <location line="+45"/>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation type="unfinished"></translation>
+        <translation>Root-Rechte werden benötigt um das Image zu schreiben.
+Starte das Programm mit sudo.</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="311"/>
+        <location line="+86"/>
         <source>Version: %1
 Build date: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Version: %1
+Build-Datum: %2</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="315"/>
+        <location line="+4"/>
         <source>This software was created with love and released</source>
-        <translation type="unfinished"></translation>
+        <translation>Diese Software wurde mit Liebe erstellt und veröffentlicht</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="316"/>
+        <location line="+1"/>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation type="unfinished"></translation>
+        <translation>unter GPLv2, unter Verwendung der Arbeit von RasPlex.</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="317"/>
+        <location line="+1"/>
         <source>For license, credits and history, please read:</source>
-        <translation type="unfinished"></translation>
+        <translation>Für Lizenz, Credits und Changelog bitte hier lesen:</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="318"/>
+        <location line="+1"/>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation type="unfinished"></translation>
+        <translation>Wenn Dir LibreELEC gefällt kann man hier</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="319"/>
+        <location line="+1"/>
         <source>donation to support the project.</source>
-        <translation type="unfinished"></translation>
+        <translation>spenden um das Project zu unterstützen.</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="320"/>
+        <location line="+1"/>
         <source>Click the logo below or donate</source>
-        <translation type="unfinished"></translation>
+        <translation>Klicke auf das Logo oder spende</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="321"/>
+        <location line="+1"/>
         <source>using Paypal to:</source>
-        <translation type="unfinished"></translation>
+        <translation>mit Paypal an:</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="560"/>
-        <location filename="../creator.cpp" line="570"/>
+        <location line="+239"/>
+        <location line="+10"/>
         <source>[Stable]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Stabil]</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="563"/>
+        <location line="-7"/>
         <source>[Alpha]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Alpha]</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="565"/>
+        <location line="+2"/>
         <source>[Beta]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Beta]</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="940"/>
+        <location line="+381"/>
         <source>Download complete, syncing file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Herunterladen fertig, synchronisiere Datei...</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="948"/>
+        <location line="+8"/>
         <source>Download complete, verifying checksum...</source>
-        <translation type="unfinished"></translation>
+        <translation>Herunterladen fertig, vergleiche Prüfsumme...</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="951"/>
+        <location line="+3"/>
         <source>Download complete, checksum ok.</source>
-        <translation type="unfinished"></translation>
+        <translation>Herunterladen fertig, Prüfsumme ok.</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="953"/>
+        <location line="+2"/>
         <source>Download complete, checksum not ok.</source>
-        <translation type="unfinished"></translation>
+        <translation>Herunterladen fertig, Prüfsumme fehlerhaft.</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1035"/>
-        <location filename="../creator.cpp" line="1468"/>
+        <location line="+82"/>
+        <location line="+433"/>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Sekunde verbleibend - %2% at %3</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1078"/>
+        <location line="-390"/>
         <source>Update Notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Update Benachrichtigung</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1080"/>
-        <location filename="../creator.cpp" line="1083"/>
+        <location line="+2"/>
+        <location line="+3"/>
         <source>Visit Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Besuche Webseite</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1092"/>
+        <location line="+9"/>
         <source>LibreELEC USB-SD Creator &lt;font color=&quot;blue&quot;&gt;%1&lt;/font&gt; is available.</source>
-        <translation type="unfinished"></translation>
+        <translation>LibreELEC USB-SD Creator &lt;font color=&quot;blue&quot;&gt;%1&lt;/font&gt; ist verfügbar.</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1120"/>
+        <location line="+28"/>
         <source>Download canceled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Herunterladen abgebrochen.</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1147"/>
+        <location line="+27"/>
         <source>Directory to store image file</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzeichnis zum herunterladen</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1159"/>
+        <location line="+12"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1160"/>
+        <location line="+1"/>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei
+%1/%2
+existiert bereits.</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1161"/>
+        <location line="+1"/>
         <source>Do you want to overwrite?</source>
-        <translation type="unfinished"></translation>
+        <translation>Möchtest du überschreiben?</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1166"/>
+        <location line="+5"/>
         <source>File already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei existiert bereits.</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1188"/>
+        <location line="+22"/>
         <source>Failed to open file for writing!</source>
-        <translation type="unfinished"></translation>
+        <translation>Öffnen der Datei fehlgeschlagen!</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1201"/>
-        <location filename="../creator.cpp" line="1336"/>
+        <location line="+13"/>
+        <location line="+135"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1224"/>
+        <location line="-112"/>
         <source>Open image file</source>
-        <translation type="unfinished"></translation>
+        <translation>Öffne Image Datei</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1226"/>
+        <location line="+2"/>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1267"/>
+        <location line="+41"/>
         <source>Writing canceled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Schreiben abgebrochen.</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1293"/>
+        <location line="+26"/>
         <source>Confirm write</source>
-        <translation type="unfinished"></translation>
+        <translation>Schreiben bestätigen</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1294"/>
+        <location line="+1"/>
         <source>Selected device: %1
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation type="unfinished"></translation>
+        <translation>Gerät auswählen: %1
+Bist du Dir sicher das du das Image schreiben möchtest?
+
+Deine Daten auf dem Gerät werden gelöscht!</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1311"/>
+        <location line="+17"/>
         <source>Cannot unmount partititons on device %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Kann Partitionen am Gerät nicht aushängen %1</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1324"/>
+        <location line="+13"/>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation type="unfinished"></translation>
+        <translation>Nicht genug Speicher vorhanden auf %1 [%2 &lt; %3]</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1348"/>
+        <location line="+24"/>
         <source>Syncing file system...</source>
-        <translation type="unfinished"></translation>
+        <translation>Synchronisiere Dateisystem.</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1357"/>
+        <location line="+9"/>
         <source>Writing done!</source>
-        <translation type="unfinished"></translation>
+        <translation>Schreiben fertiggestellt!</translation>
     </message>
     <message>
-        <location filename="../creator.cpp" line="1369"/>
+        <location line="+12"/>
         <source>Error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler: %1</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../diskwriter_windows.cpp" line="116"/>
+        <location filename="../diskwriter_windows.cpp" line="+116"/>
         <source>Write Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim schreiben</translation>
     </message>
     <message>
-        <location filename="../diskwriter_windows.cpp" line="117"/>
+        <location line="+1"/>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Fehler trat während des Schreibvorgangs auf.
+Fehler %1: %2</translation>
     </message>
     <message>
-        <location filename="../diskwriter_windows.cpp" line="155"/>
+        <location line="+38"/>
         <source>Volume Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Volume Fehler</translation>
     </message>
     <message>
-        <location filename="../diskwriter_windows.cpp" line="156"/>
+        <location line="+1"/>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Fehler trat während des Zugriffes auf das Volume auf.
+Fehler %1: %2</translation>
     </message>
     <message>
-        <location filename="../diskwriter_windows.cpp" line="171"/>
+        <location line="+15"/>
         <source>Lock Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Sperr Fehler</translation>
     </message>
     <message>
-        <location filename="../diskwriter_windows.cpp" line="172"/>
+        <location line="+1"/>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Fehler trat während des sperren des Volume auf.
+Fehler %1: %2</translation>
     </message>
     <message>
-        <location filename="../diskwriter_windows.cpp" line="187"/>
+        <location line="+15"/>
         <source>Unlock Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Entsperr Fehler</translation>
     </message>
     <message>
-        <location filename="../diskwriter_windows.cpp" line="188"/>
+        <location line="+1"/>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Fehler trat während des entsperren des Volume auf.
+Fehler %1: %2</translation>
     </message>
     <message>
-        <location filename="../diskwriter_windows.cpp" line="203"/>
+        <location line="+15"/>
         <source>Dismount Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Aushängen fehlgeschlagen</translation>
     </message>
     <message>
-        <location filename="../diskwriter_windows.cpp" line="204"/>
+        <location line="+1"/>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Fehler trat während des aushängen des Volume auf.
+Fehler %1: %2</translation>
     </message>
 </context>
 </TS>

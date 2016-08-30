@@ -1,101 +1,101 @@
 # Translators:
-# Koos van Klojum <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
+# Luis Bermudez <email-removed>, 2016
+# Al Garcia <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
-"Language-Team: Dutch (https://www.transifex.com/libreelec/teams/61634/nl/)\n"
+"Last-Translator: Al Garcia <email-removed>, 2016\n"
+"Language-Team: Spanish (https://www.transifex.com/libreelec/teams/61634/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Qt-Contexts: true\n"
 
 #: ../creator.ui:32
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
-msgstr "LibreELEC USB-SD Creator"
+msgstr "Creador de USB-SD de LibreELEC"
 
 #: ../creator.ui:123
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "Schrijf image"
+msgstr "Escribir imagen"
 
 #: ../creator.ui:142 ../creator.ui:603 ../creator.cpp:1081 ../creator.cpp:1084
 msgctxt "Creator|"
 msgid "Close"
-msgstr "Sluiten"
+msgstr "Cerrar"
 
 #: ../creator.ui:185
 msgctxt "Creator|"
 msgid "Select file"
-msgstr "Kies bestand"
+msgstr "Seleccionar archivo"
 
 #: ../creator.ui:269
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Kies uw USB stick of SD kaart"
+msgstr "Seleccion tu memoria USB o tarjeta SD"
 
 #: ../creator.ui:313
 msgctxt "Creator|"
 msgid "Select version"
-msgstr "Kies versie"
+msgstr "Seleccionar versión"
 
 #: ../creator.ui:332 ../creator.cpp:638
 msgctxt "Creator|"
 msgid "Download"
-msgstr "Download"
+msgstr "Descargar"
 
 #: ../creator.ui:348
 msgctxt "Creator|"
 msgid "About"
-msgstr "Over"
+msgstr "Acerca"
 
 #: ../creator.ui:418
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "Download of kies lokaal imagebestand"
+msgstr "Descarga o elige un archivo de imagen local"
 
 #: ../creator.ui:437 ../creator.cpp:664
 msgctxt "Creator|"
 msgid "Write"
-msgstr "Schrijf"
+msgstr "Escribir"
 
 #: ../creator.ui:453
 msgctxt "Creator|"
 msgid "Help"
-msgstr "Help"
+msgstr "Ayuda"
 
 #: ../creator.ui:472
 msgctxt "Creator|"
 msgid "Show all"
-msgstr "Toon alles"
+msgstr "Mostrar todo"
 
 #: ../creator.ui:519
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr "Apparaat uitwerpen"
+msgstr "Expulsar dispositivo"
 
 #: ../creator.ui:545
 msgctxt "Creator|"
 msgid "Load device"
-msgstr "Apparaat inlezen"
+msgstr "Cargar dispositivo"
 
 #: ../creator.ui:565
 msgctxt "Creator|"
 msgid "Eject  Load   Remove"
-msgstr "Uitwerpen Laden Verwijderen"
+msgstr "Expulsar Cargar Remover"
 
 #: ../creator.cpp:179
 msgctxt "Creator|"
 msgid "Select project"
-msgstr "Kies project"
+msgstr "Seleccionar proyecto"
 
 #: ../creator.cpp:180
 msgctxt "Creator|"
 msgid "Select image"
-msgstr "Kies image"
+msgstr "Seleccionar imagen"
 
 #: ../creator.cpp:225
 msgctxt "Creator|"
@@ -103,8 +103,8 @@ msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
-"Root-privileges zijn vereist voor het schrijven van de image.\n"
-"Start applicatie met sudo."
+"Se requiere privilegios de root para escribir imagen. \n"
+"Ejecuta la aplicación con sudo."
 
 #: ../creator.cpp:311
 #, qt-format
@@ -113,53 +113,53 @@ msgid ""
 "Version: %1\n"
 "Build date: %2"
 msgstr ""
-"Versie: %1\n"
-"Bouwdatum: %2"
+"Versión: %1\n"
+"Fecha de construcción: %2"
 
 #: ../creator.cpp:315
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr "Deze software werd met liefde ontworpen en uitgegeven"
+msgstr "Este software fue creado con amor y publicado"
 
 #: ../creator.cpp:316
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "onder GPLv2, gebruikmakend van eerder werk van RasPlex."
+msgstr "bajo GPLv2, usando trabajos primarios de RasPlex."
 
 #: ../creator.cpp:317
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "Voor de licentie, credits en geschiedenis, bezoek de webpagina:"
+msgstr "Para licencia, créditos e historia, por favor lee:"
 
 #: ../creator.cpp:318
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "Indien LibreELEC u bevalt, overweeg dan een"
+msgstr "Si disfrutas usar LibreELEC por favor considera una"
 
 #: ../creator.cpp:319
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "donatie ter ondersteuning van het project."
+msgstr "donación para apoyar el proyecto."
 
 #: ../creator.cpp:320
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Klik op het logo hieronder of doneer"
+msgstr "Haz click en el logo abajo o dona"
 
 #: ../creator.cpp:321
 msgctxt "Creator|"
 msgid "using Paypal to:"
-msgstr "via Paypal aan:"
+msgstr "usando Paypal a:"
 
 #: ../creator.cpp:560 ../creator.cpp:570
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr "[Stabiel]"
+msgstr "[Estable]"
 
 #: ../creator.cpp:563
 msgctxt "Creator|"
 msgid "[Alpha]"
-msgstr "[Alpha]"
+msgstr "[Alfa]"
 
 #: ../creator.cpp:565
 msgctxt "Creator|"
@@ -169,63 +169,61 @@ msgstr "[Beta]"
 #: ../creator.cpp:940
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr "Download compleet, bestand synchroniseren..."
+msgstr "Descarga completa, sincronizando archivo..."
 
 #: ../creator.cpp:948
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr "Download compleet, checksum controleren..."
+msgstr "Descarga completa, verificando checksum..."
 
 #: ../creator.cpp:951
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "Download compleet, checksum in orde."
+msgstr "Descarga completa, checksum correcto."
 
 #: ../creator.cpp:953
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
-msgstr ""
-"Download compleet, font color=&quot;red&quot;&gt;checksum wijkt "
-"af&lt;/font&gt;."
+msgstr "Descarga completa, checksum no correcto."
 
 #: ../creator.cpp:1035 ../creator.cpp:1468
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr "%1 seconds te gaan - %2% met %3"
+msgstr "%1 segundos restantes - %2% a %3"
 
 #: ../creator.cpp:1078
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr "Updatemelding"
+msgstr "Notificación de actualización"
 
 #: ../creator.cpp:1080 ../creator.cpp:1083
 msgctxt "Creator|"
 msgid "Visit Website"
-msgstr "Bezoek website"
+msgstr "Visita el sitio web"
 
 #: ../creator.cpp:1092
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
 msgstr ""
-"LibreELEC USB-SD Creator &lt;font color=&quot;blue&quot;&gt;%1&lt;/font&gt; "
-"is beschikbaar."
+"Creador de USB-SD de LibreELEC <font color=\"blue\">%1</font> esta "
+"disponible."
 
 #: ../creator.cpp:1120
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr "Download afgebroken."
+msgstr "Descarga cancelada."
 
 #: ../creator.cpp:1147
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr "Folder voor opslaan imagebestand"
+msgstr "Directorio para guardar archivo de imagen"
 
 #: ../creator.cpp:1159
 msgctxt "Creator|"
 msgid "Error"
-msgstr "Fout"
+msgstr "Error"
 
 #: ../creator.cpp:1160
 #, qt-format
@@ -235,34 +233,34 @@ msgid ""
 "%1/%2\n"
 "already exist."
 msgstr ""
-"Bestand\n"
+"El archivo\n"
 "%1/%2\n"
-"bestaat al."
+"ya existe."
 
 #: ../creator.cpp:1161
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr "Wilt u het overschrijven?"
+msgstr "¿Deseas sobreescribir?"
 
 #: ../creator.cpp:1166
 msgctxt "Creator|"
 msgid "File already exists."
-msgstr "Bestand is reeds aanwezig."
+msgstr "El archivo ya existe."
 
 #: ../creator.cpp:1188
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr "Te schrijven bestand kon niet geopend worden!"
+msgstr "¡Falló la apertura del archivo para escritura!"
 
 #: ../creator.cpp:1201 ../creator.cpp:1336
 msgctxt "Creator|"
 msgid "Cancel"
-msgstr "Afbreken"
+msgstr "Cancelar"
 
 #: ../creator.cpp:1224
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr "Open imagebestand"
+msgstr "Abrir archivo de imagen"
 
 #: ../creator.cpp:1226
 msgctxt "Creator|"
@@ -270,18 +268,18 @@ msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
 " image (*.img);;All files (*.*)"
 msgstr ""
-"Gecomprimeerd gz-imagebestand (*img.gz);;Gecomprimeerd zipbestand "
-"(*img.zip);;Ongecomprimeerde image (*.img);;Alle bestanden (*.*)"
+"Imagen comprimida gz (*img.gz);;Imagen comprimida zip (*img.zip);;Imagen sin"
+" comprimir (*.img);;Todos los archivos (*.*)"
 
 #: ../creator.cpp:1267
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr "Schrijven afgebroken."
+msgstr "Escritura cancelada."
 
 #: ../creator.cpp:1293
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr "Bevestig schrijven"
+msgstr "Confirmar escritura"
 
 #: ../creator.cpp:1294
 #, qt-format
@@ -292,43 +290,43 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
-"Gekozen apparaat: %1\n"
-"Weet u zeker dat u de image wilt schrijven?\n"
+"Dispositivo seleccionado: %1\n"
+"¿Estas seguro de que deseas escribir la imagen?\n"
 "\n"
-"Uw USB-SD-apparaat zal gewist worden!"
+"¡Tu dispositivo USB-SD ha sido formateado!"
 
 #: ../creator.cpp:1311
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr "Kan partities van apparaat %1 niet ontkoppelen"
+msgstr "No se pueden desmontar las particiones en el dispositivo %1"
 
 #: ../creator.cpp:1324
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Onvoldoende schijfruimte op %1 [%2 &lt; %3]"
+msgstr "No hay suficiente espacio en %1 [%2 < %3]"
 
 #: ../creator.cpp:1348
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr "Bestandssysteem synchroniseren..."
+msgstr "Sincronizando sistema de archivos..."
 
 #: ../creator.cpp:1357
 msgctxt "Creator|"
 msgid "Writing done!"
-msgstr "Schrijven is klaar!"
+msgstr "¡Escritura realizada!"
 
 #: ../creator.cpp:1369
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
-msgstr "Fout: %1"
+msgstr "Error: %1"
 
 #: ../diskwriter_windows.cpp:116
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr "Schrijffout"
+msgstr "Escribir Error"
 
 #: ../diskwriter_windows.cpp:117
 #, qt-format
@@ -337,13 +335,13 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het schrijven van data.\n"
-"Fout %1: %2"
+"Ha ocurrido un error al tratar de escribir los datos al handle.\n"
+"Error %1: %2"
 
 #: ../diskwriter_windows.cpp:155
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr "Volumefout"
+msgstr "Error del volumen"
 
 #: ../diskwriter_windows.cpp:156
 #, qt-format
@@ -352,13 +350,13 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het opvragen van het volume.\n"
-"Fout %1: %2"
+"Ha ocurrido un error al tratar de obtenerel handle en el volumen.\n"
+"Error %1: %2"
 
 #: ../diskwriter_windows.cpp:171
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr "Lockfout"
+msgstr "Error de bloqueo"
 
 #: ../diskwriter_windows.cpp:172
 #, qt-format
@@ -367,13 +365,13 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het locken van het volume.\n"
-"Fout %1: %2"
+"Ha ocurrido un error al tratar de bloquear el volumen.\n"
+"Error %1: %2"
 
 #: ../diskwriter_windows.cpp:187
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr "Unlockfout"
+msgstr "Error de desbloqueo"
 
 #: ../diskwriter_windows.cpp:188
 #, qt-format
@@ -382,13 +380,13 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het unlocken van het volume.\n"
-"Fout %1: %2"
+"Ha ocurrido un error al tratar de desbloquear el volumen.\n"
+"Error %1: %2"
 
 #: ../diskwriter_windows.cpp:203
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr "Ontkoppelfout"
+msgstr "Error de desmontaje"
 
 #: ../diskwriter_windows.cpp:204
 #, qt-format
@@ -397,5 +395,5 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het ontkoppelen van het volume.\n"
-"Fout %1: %2"
+"Ha ocurrido un error al tratar de desmontar el volumen.\n"
+"Error %1: %2"

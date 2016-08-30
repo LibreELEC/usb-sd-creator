@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="si_LK">
+<TS version="2.1">
 <context>
     <name>Creator</name>
     <message>
         <location filename="../creator.ui" line="+32"/>
         <source>LibreELEC USB-SD Creator</source>
-        <translation type="unfinished"></translation>
+        <translation>LibreELEC USB-SD Creator</translation>
     </message>
     <message>
         <location line="+91"/>
         <source>Write image</source>
-        <translation>Zapiši sliko</translation>
+        <translation>Запишіть образ</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -19,69 +19,69 @@
         <location filename="../creator.cpp" line="+1089"/>
         <location line="+3"/>
         <source>Close</source>
-        <translation>Zapri</translation>
+        <translation>Закрити</translation>
     </message>
     <message>
         <location line="-418"/>
         <source>Select file</source>
-        <translation>Izberi datoteko</translation>
+        <translation>Вибрати файл</translation>
     </message>
     <message>
         <location line="+84"/>
         <source>Select your USB stick or SD card</source>
-        <translation>Izberi USB stick ali SD kartico</translation>
+        <translation>Виберіть ваш USB-диск або SD-карту</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Select version</source>
-        <translation>Izberi verzijo</translation>
+        <translation>Виберіть версію</translation>
     </message>
     <message>
         <location line="+19"/>
         <location filename="../creator.cpp" line="-452"/>
         <source>Download</source>
-        <translation>Prenesi</translation>
+        <translation>Завантажити</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>About</source>
-        <translation>O programu</translation>
+        <translation>Про програму</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Download or select a local image file</source>
-        <translation>Prenesi ali izberi lokalno datoteko</translation>
+        <translation>Завантажте або виберіть локальний файл образу</translation>
     </message>
     <message>
         <location line="+19"/>
         <location filename="../creator.cpp" line="+26"/>
         <source>Write</source>
-        <translation>Zapiši</translation>
+        <translation>Записати</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Help</source>
-        <translation>Pomoč</translation>
+        <translation>Допомога</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Show all</source>
-        <translation>Prikaži vse</translation>
+        <translation>Показати всі</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Eject device</source>
-        <translation type="unfinished"></translation>
+        <translation>Вилучити пристрій</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Load device</source>
-        <translation type="unfinished"></translation>
+        <translation>Завантажити пристрій</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Eject  Load   Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Вилучити  Завантажити   Видалити</translation>
     </message>
     <message>
         <location line="+113"/>
@@ -91,25 +91,25 @@
     <message>
         <location filename="../creator.cpp" line="-485"/>
         <source>Select project</source>
-        <translation>Izberi projekt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Select image</source>
-        <translation>Izberi sliko</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>Potrebne so root pravice za zapisovanje. Poženite aplikacijo s sudo.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Version: %1
 Build date: %2</source>
-        <translation>Verzija: %1
-Prevedeno: %2</translation>
+        <translation>Версія: %1
+Дата складання: %2</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -124,27 +124,27 @@ Prevedeno: %2</translation>
     <message>
         <location line="+1"/>
         <source>For license, credits and history, please read:</source>
-        <translation type="unfinished"></translation>
+        <translation>Для інформації про ліцензію, подяки та історію, буд-ласка, читайте:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо вам подобається LibreELEC, будь-ласка розгляньте можливість</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>donation to support the project.</source>
-        <translation type="unfinished"></translation>
+        <translation>пожертви для підтримки проекту.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Click the logo below or donate</source>
-        <translation type="unfinished"></translation>
+        <translation>Клацніть на логотипі нижче для пожертви</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>using Paypal to:</source>
-        <translation type="unfinished"></translation>
+        <translation>через Paypal на користь:</translation>
     </message>
     <message>
         <location line="+239"/>
@@ -165,22 +165,22 @@ Prevedeno: %2</translation>
     <message>
         <location line="+381"/>
         <source>Download complete, syncing file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Завантаження завершене, синхронізація файла...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Download complete, verifying checksum...</source>
-        <translation type="unfinished"></translation>
+        <translation>Завантаження завершене, перевірка контрольної суми...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Download complete, checksum ok.</source>
-        <translation type="unfinished"></translation>
+        <translation>Завантаження завершене, контрольна сума в порядку.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Download complete, checksum not ok.</source>
-        <translation type="unfinished"></translation>
+        <translation>Завантаження завершене, контрольна сума не в порядку.</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -197,7 +197,7 @@ Prevedeno: %2</translation>
         <location line="+2"/>
         <location line="+3"/>
         <source>Visit Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Відвідати веб-сайт</translation>
     </message>
     <message>
         <location line="+9"/>

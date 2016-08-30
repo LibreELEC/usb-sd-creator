@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="si_LK">
+<TS version="2.1" language="nb_NO">
 <context>
     <name>Creator</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location line="+91"/>
         <source>Write image</source>
-        <translation>Zapiši sliko</translation>
+        <translation>Skriv bildefil</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -19,69 +19,69 @@
         <location filename="../creator.cpp" line="+1089"/>
         <location line="+3"/>
         <source>Close</source>
-        <translation>Zapri</translation>
+        <translation>Lukk</translation>
     </message>
     <message>
         <location line="-418"/>
         <source>Select file</source>
-        <translation>Izberi datoteko</translation>
+        <translation>Velg fil</translation>
     </message>
     <message>
         <location line="+84"/>
         <source>Select your USB stick or SD card</source>
-        <translation>Izberi USB stick ali SD kartico</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Select version</source>
-        <translation>Izberi verzijo</translation>
+        <translation>Velg versjon</translation>
     </message>
     <message>
         <location line="+19"/>
         <location filename="../creator.cpp" line="-452"/>
         <source>Download</source>
-        <translation>Prenesi</translation>
+        <translation>Last ned</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>About</source>
-        <translation>O programu</translation>
+        <translation>Om</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Download or select a local image file</source>
-        <translation>Prenesi ali izberi lokalno datoteko</translation>
+        <translation>Last ned eller velg en lokal bildefil</translation>
     </message>
     <message>
         <location line="+19"/>
         <location filename="../creator.cpp" line="+26"/>
         <source>Write</source>
-        <translation>Zapiši</translation>
+        <translation>Skriv</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Help</source>
-        <translation>Pomoč</translation>
+        <translation>Hjelp</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Show all</source>
-        <translation>Prikaži vse</translation>
+        <translation>Vis alle</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Eject device</source>
-        <translation type="unfinished"></translation>
+        <translation>Løs ut enhet</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Load device</source>
-        <translation type="unfinished"></translation>
+        <translation>Last enhet</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Eject  Load   Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Løs ut Last Fjern</translation>
     </message>
     <message>
         <location line="+113"/>
@@ -91,35 +91,36 @@
     <message>
         <location filename="../creator.cpp" line="-485"/>
         <source>Select project</source>
-        <translation>Izberi projekt</translation>
+        <translation>Velg prosjekt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Select image</source>
-        <translation>Izberi sliko</translation>
+        <translation>Velg bildefil</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>Potrebne so root pravice za zapisovanje. Poženite aplikacijo s sudo.</translation>
+        <translation>Rot-tillatelser er påkrevd for å skrive bildefil.
+Kjør applikasjonen med sudo.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Version: %1
 Build date: %2</source>
-        <translation>Verzija: %1
-Prevedeno: %2</translation>
+        <translation>Versjon: %1
+Byggdato: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>This software was created with love and released</source>
-        <translation type="unfinished"></translation>
+        <translation>Denne programvaren er laget med kjærlighet og sluppet</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation type="unfinished"></translation>
+        <translation>under GPLv2, og bruker tidligere arbeid fra RasPlex.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -134,59 +135,59 @@ Prevedeno: %2</translation>
     <message>
         <location line="+1"/>
         <source>donation to support the project.</source>
-        <translation type="unfinished"></translation>
+        <translation>donasjon for å støtte prosjektet.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Click the logo below or donate</source>
-        <translation type="unfinished"></translation>
+        <translation>Klikk på logoen under, eller doner</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>using Paypal to:</source>
-        <translation type="unfinished"></translation>
+        <translation>ved hjelp av Paypal for:</translation>
     </message>
     <message>
         <location line="+239"/>
         <location line="+10"/>
         <source>[Stable]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Stabil]</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>[Alpha]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Alfa]</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>[Beta]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Beta]</translation>
     </message>
     <message>
         <location line="+381"/>
         <source>Download complete, syncing file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedlasting komplett, synkroniserer fil...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Download complete, verifying checksum...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedlasting komplett, verifiserer sjekksum.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Download complete, checksum ok.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedlasting komplett, sjekksum ok.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Download complete, checksum not ok.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedlasting komplett, sjekksum ikke ok.</translation>
     </message>
     <message>
         <location line="+82"/>
         <location line="+433"/>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 sekunder gjenstår - %2% på %3</translation>
     </message>
     <message>
         <location line="-390"/>
@@ -197,7 +198,7 @@ Prevedeno: %2</translation>
         <location line="+2"/>
         <location line="+3"/>
         <source>Visit Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Besøk nettside</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -207,50 +208,52 @@ Prevedeno: %2</translation>
     <message>
         <location line="+28"/>
         <source>Download canceled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedlasting avbrutt.</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Directory to store image file</source>
-        <translation type="unfinished"></translation>
+        <translation>Mappe for å lagre bildefilen</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Feil</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fil
+%1/%2
+eksisterer allerede.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Do you want to overwrite?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vil du overskrive?</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>File already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Filen eksisterer allerede.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Failed to open file for writing!</source>
-        <translation type="unfinished"></translation>
+        <translation>Åpning av fil for skriving feilet!</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+135"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Avbryt</translation>
     </message>
     <message>
         <location line="-112"/>
         <source>Open image file</source>
-        <translation type="unfinished"></translation>
+        <translation>Åpne bildefil</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -260,12 +263,12 @@ already exist.</source>
     <message>
         <location line="+41"/>
         <source>Writing canceled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriving avbrutt.</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Confirm write</source>
-        <translation type="unfinished"></translation>
+        <translation>Bekreft skriving</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -273,32 +276,34 @@ already exist.</source>
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation type="unfinished"></translation>
+        <translation>Valgt enhet: %1
+Er du sikker på at du vil skrive bildefilen?
+Din USB-SD enhet vil bli tømt!</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cannot unmount partititons on device %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan ikke demontere partisjoner på enhet %1</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikke nok plass på %1 [%2 &lt; %3]</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Syncing file system...</source>
-        <translation type="unfinished"></translation>
+        <translation>Synkroniserer filsystem...</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Writing done!</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriving fullført!</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Feil: %1</translation>
     </message>
 </context>
 <context>
@@ -306,7 +311,7 @@ Your USB-SD device will be wiped!</source>
     <message>
         <location filename="../diskwriter_windows.cpp" line="+116"/>
         <source>Write Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrivefeil</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -317,7 +322,7 @@ Error %1: %2</source>
     <message>
         <location line="+38"/>
         <source>Volume Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Volumfeil</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -328,7 +333,7 @@ Error %1: %2</source>
     <message>
         <location line="+15"/>
         <source>Lock Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Låsefeil</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -339,24 +344,26 @@ Error %1: %2</source>
     <message>
         <location line="+15"/>
         <source>Unlock Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Opplåsingsfeil</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>En feil oppstod når det ble forsøkt å låse opp volumet.
+Feil %1: %2</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Dismount Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Demonteringsfeil</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>En feil oppstod når det ble forsøkt å demontere volumet.
+Feil %1: %2</translation>
     </message>
 </context>
 </TS>

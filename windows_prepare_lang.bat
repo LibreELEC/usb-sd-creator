@@ -23,8 +23,6 @@ set PATH=c:\Qt\Qt5.6.1\5.6\mingw49_32\bin;%PATH%
 set PATH=c:\Qt\Qt5.6.1\Tools\mingw492_32\bin;%PATH%
 set PATH=c:\Qt\Qt5.6.1-static\bin;%PATH%
 
-rem setlocal EnableDelayedExpansion
-
 echo.
 echo ====================================================================
 
@@ -33,6 +31,7 @@ if not exist lang/lang-en_GB.ts (
   echo.
   echo Creating new .ts files
   lupdate -verbose creator.pro
+  echo.
 )
 
 if not exist lang/lang-en_GB.po (
@@ -42,37 +41,38 @@ if not exist lang/lang-en_GB.po (
     set name=%%i
     set lang=!name:~5,5!
     echo Converting !lang! from .ts to .po
-    lconvert lang/lang-%lang%.ts -o lang/lang-%lang%.po
+    lconvert lang/lang-!lang!.ts -o lang/lang-!lang!.po
   )
+
+	echo.
 )
 
 rem convert .po files back to .ts files
-echo.
 for /f "tokens=*" %%i in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
   set name=%%i
   set lang=!name:~5,5!
   echo Converting !lang! from .po to .ts
-  lconvert -locations relative lang/lang-%lang%.po -o lang/lang-%lang%.ts
+  lconvert -locations relative lang/lang-!lang!.po -o lang/lang-!lang!.ts >NUL
 )
+echo.
 
 rem update .ts files
-echo.
 echo Updating .ts files
-lupdate -verbose creator.pro
+lupdate -verbose creator.pro >NUL
+echo.
 
 rem convert .ts files to .po files
-echo.
 for /f "tokens=*" %%i in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
   set name=%%i
   set lang=!name:~5,5!
   echo Converting !lang! from .ts to .po
-  lconvert lang/lang-%lang%.ts -o lang/lang-%lang%.po
+  lconvert lang/lang-!lang!.ts -o lang/lang-!lang!.po >NUL
 )
+echo.
 
 rem create .qm files out of .ts files
-echo.
 echo Creating .qm files
-lrelease creator.pro
+lrelease creator.pro >NUL
 
 echo ====================================================================
 echo.

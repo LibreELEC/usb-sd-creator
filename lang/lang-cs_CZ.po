@@ -1,15 +1,14 @@
 # Translators:
-# Koos van Klojum <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
+# sabai <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
-"Language-Team: Dutch (https://www.transifex.com/libreelec/teams/61634/nl/)\n"
+"Last-Translator: sabai <email-removed>, 2016\n"
+"Language-Team: Czech (https://www.transifex.com/libreelec/teams/61634/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Qt-Contexts: true\n"
 
 #: ../creator.ui:32
@@ -20,82 +19,82 @@ msgstr "LibreELEC USB-SD Creator"
 #: ../creator.ui:123
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "Schrijf image"
+msgstr "Zapsat soubor img"
 
 #: ../creator.ui:142 ../creator.ui:603 ../creator.cpp:1081 ../creator.cpp:1084
 msgctxt "Creator|"
 msgid "Close"
-msgstr "Sluiten"
+msgstr "Zavřít"
 
 #: ../creator.ui:185
 msgctxt "Creator|"
 msgid "Select file"
-msgstr "Kies bestand"
+msgstr "Vybrat soubor"
 
 #: ../creator.ui:269
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Kies uw USB stick of SD kaart"
+msgstr "Vybrat USB disk nebo SD kartu"
 
 #: ../creator.ui:313
 msgctxt "Creator|"
 msgid "Select version"
-msgstr "Kies versie"
+msgstr "Vybrat verzi"
 
 #: ../creator.ui:332 ../creator.cpp:638
 msgctxt "Creator|"
 msgid "Download"
-msgstr "Download"
+msgstr "Stáhnout"
 
 #: ../creator.ui:348
 msgctxt "Creator|"
 msgid "About"
-msgstr "Over"
+msgstr "O programu"
 
 #: ../creator.ui:418
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "Download of kies lokaal imagebestand"
+msgstr "Stáhnout nebo vybrat lokální img soubor"
 
 #: ../creator.ui:437 ../creator.cpp:664
 msgctxt "Creator|"
 msgid "Write"
-msgstr "Schrijf"
+msgstr "Zapsat"
 
 #: ../creator.ui:453
 msgctxt "Creator|"
 msgid "Help"
-msgstr "Help"
+msgstr "Pomoc"
 
 #: ../creator.ui:472
 msgctxt "Creator|"
 msgid "Show all"
-msgstr "Toon alles"
+msgstr "Ukázat vše"
 
 #: ../creator.ui:519
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr "Apparaat uitwerpen"
+msgstr "Vysunout zařízení"
 
 #: ../creator.ui:545
 msgctxt "Creator|"
 msgid "Load device"
-msgstr "Apparaat inlezen"
+msgstr "Načíst zařízení"
 
 #: ../creator.ui:565
 msgctxt "Creator|"
 msgid "Eject  Load   Remove"
-msgstr "Uitwerpen Laden Verwijderen"
+msgstr "Vysunout Načíst Odebrat"
 
 #: ../creator.cpp:179
 msgctxt "Creator|"
 msgid "Select project"
-msgstr "Kies project"
+msgstr "Vybrat projekt"
 
 #: ../creator.cpp:180
 msgctxt "Creator|"
 msgid "Select image"
-msgstr "Kies image"
+msgstr "Vybrat soubor img"
 
 #: ../creator.cpp:225
 msgctxt "Creator|"
@@ -103,8 +102,7 @@ msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
-"Root-privileges zijn vereist voor het schrijven van de image.\n"
-"Start applicatie met sudo."
+"K zapsání obrazu jsou potřeba práva root. Spustťe aplikaci pomocí sudo."
 
 #: ../creator.cpp:311
 #, qt-format
@@ -113,48 +111,48 @@ msgid ""
 "Version: %1\n"
 "Build date: %2"
 msgstr ""
-"Versie: %1\n"
-"Bouwdatum: %2"
+"Verze: %1\n"
+"Datum buildu: %2"
 
 #: ../creator.cpp:315
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr "Deze software werd met liefde ontworpen en uitgegeven"
+msgstr "Tento software byl vytvořen s láskou a uvolněn"
 
 #: ../creator.cpp:316
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "onder GPLv2, gebruikmakend van eerder werk van RasPlex."
+msgstr "pod GPlv2 díky předchozí práci z RasPlex"
 
 #: ../creator.cpp:317
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "Voor de licentie, credits en geschiedenis, bezoek de webpagina:"
+msgstr "Pro licenční ujednání, zásluhy a historii čtěte:"
 
 #: ../creator.cpp:318
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "Indien LibreELEC u bevalt, overweeg dan een"
+msgstr "Pokud se vám líbí LibreELEC zvažte"
 
 #: ../creator.cpp:319
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "donatie ter ondersteuning van het project."
+msgstr "poskytnutí daru pro podporu projektu."
 
 #: ../creator.cpp:320
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Klik op het logo hieronder of doneer"
+msgstr "Klikněte na logo níže nebo darujte"
 
 #: ../creator.cpp:321
 msgctxt "Creator|"
 msgid "using Paypal to:"
-msgstr "via Paypal aan:"
+msgstr "pomocí Paypalu na:"
 
 #: ../creator.cpp:560 ../creator.cpp:570
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr "[Stabiel]"
+msgstr "[Stabilní]"
 
 #: ../creator.cpp:563
 msgctxt "Creator|"
@@ -169,63 +167,59 @@ msgstr "[Beta]"
 #: ../creator.cpp:940
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr "Download compleet, bestand synchroniseren..."
+msgstr "Stažení dokončeno, probíhá synchronizace..."
 
 #: ../creator.cpp:948
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr "Download compleet, checksum controleren..."
+msgstr "Stažení dokončeno, probíhá ověřování..."
 
 #: ../creator.cpp:951
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "Download compleet, checksum in orde."
+msgstr "Stažení dokončeno, ověření proběhlo v pořádku."
 
 #: ../creator.cpp:953
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
-msgstr ""
-"Download compleet, font color=&quot;red&quot;&gt;checksum wijkt "
-"af&lt;/font&gt;."
+msgstr "Stažení dokončeno, ověření se nezdařilo."
 
 #: ../creator.cpp:1035 ../creator.cpp:1468
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr "%1 seconds te gaan - %2% met %3"
+msgstr "%1 sekund zbývá - %2% na %3"
 
 #: ../creator.cpp:1078
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr "Updatemelding"
+msgstr "Upozornění na aktualizaci"
 
 #: ../creator.cpp:1080 ../creator.cpp:1083
 msgctxt "Creator|"
 msgid "Visit Website"
-msgstr "Bezoek website"
+msgstr "Navštivte webové stránky"
 
 #: ../creator.cpp:1092
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
-msgstr ""
-"LibreELEC USB-SD Creator &lt;font color=&quot;blue&quot;&gt;%1&lt;/font&gt; "
-"is beschikbaar."
+msgstr "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> je k dispozici."
 
 #: ../creator.cpp:1120
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr "Download afgebroken."
+msgstr "Stahování zrušeno."
 
 #: ../creator.cpp:1147
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr "Folder voor opslaan imagebestand"
+msgstr "Cesta k uložení img souboru"
 
 #: ../creator.cpp:1159
 msgctxt "Creator|"
 msgid "Error"
-msgstr "Fout"
+msgstr "Chyba"
 
 #: ../creator.cpp:1160
 #, qt-format
@@ -235,34 +229,34 @@ msgid ""
 "%1/%2\n"
 "already exist."
 msgstr ""
-"Bestand\n"
+"Soubor \n"
 "%1/%2\n"
-"bestaat al."
+"již existuje."
 
 #: ../creator.cpp:1161
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr "Wilt u het overschrijven?"
+msgstr "Chcete jej přepsat?"
 
 #: ../creator.cpp:1166
 msgctxt "Creator|"
 msgid "File already exists."
-msgstr "Bestand is reeds aanwezig."
+msgstr "Soubor již existuje."
 
 #: ../creator.cpp:1188
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr "Te schrijven bestand kon niet geopend worden!"
+msgstr "Nepodařilo se otevřít soubor k zapsání!"
 
 #: ../creator.cpp:1201 ../creator.cpp:1336
 msgctxt "Creator|"
 msgid "Cancel"
-msgstr "Afbreken"
+msgstr "Zrušit"
 
 #: ../creator.cpp:1224
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr "Open imagebestand"
+msgstr "Otevřít soubor img"
 
 #: ../creator.cpp:1226
 msgctxt "Creator|"
@@ -270,18 +264,18 @@ msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
 " image (*.img);;All files (*.*)"
 msgstr ""
-"Gecomprimeerd gz-imagebestand (*img.gz);;Gecomprimeerd zipbestand "
-"(*img.zip);;Ongecomprimeerde image (*.img);;Alle bestanden (*.*)"
+"Komprimovaný soubor gz (*img.gz);;Komprimovaný soubor zip "
+"(*img.zip);;Nekomprimovaný soubor (*.img);;All files (*.*)"
 
 #: ../creator.cpp:1267
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr "Schrijven afgebroken."
+msgstr "Zapisování bylo zrušeno"
 
 #: ../creator.cpp:1293
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr "Bevestig schrijven"
+msgstr "Potvrďte zápis"
 
 #: ../creator.cpp:1294
 #, qt-format
@@ -292,43 +286,43 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
-"Gekozen apparaat: %1\n"
-"Weet u zeker dat u de image wilt schrijven?\n"
+"Zvolené zařízení: %1\n"
+"Určitě chcete zapsat img?\n"
 "\n"
-"Uw USB-SD-apparaat zal gewist worden!"
+"Vaše USB zařízení bude zcela smazáno!"
 
 #: ../creator.cpp:1311
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr "Kan partities van apparaat %1 niet ontkoppelen"
+msgstr "Nelze odebrat partions na zařízení %1"
 
 #: ../creator.cpp:1324
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Onvoldoende schijfruimte op %1 [%2 &lt; %3]"
+msgstr "Nedostatek místa na %1 [%2 < %3]"
 
 #: ../creator.cpp:1348
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr "Bestandssysteem synchroniseren..."
+msgstr "Synchronizace souborového systému..."
 
 #: ../creator.cpp:1357
 msgctxt "Creator|"
 msgid "Writing done!"
-msgstr "Schrijven is klaar!"
+msgstr "Zapisování dokončeno!"
 
 #: ../creator.cpp:1369
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
-msgstr "Fout: %1"
+msgstr "Chyba: %1"
 
 #: ../diskwriter_windows.cpp:116
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr "Schrijffout"
+msgstr "Chyba zápisu"
 
 #: ../diskwriter_windows.cpp:117
 #, qt-format
@@ -337,13 +331,13 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het schrijven van data.\n"
-"Fout %1: %2"
+"Při pokusu o zapsání dat nastala chyba.\n"
+"Chyba %1: %2"
 
 #: ../diskwriter_windows.cpp:155
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr "Volumefout"
+msgstr "Chyba svazku"
 
 #: ../diskwriter_windows.cpp:156
 #, qt-format
@@ -352,13 +346,13 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het opvragen van het volume.\n"
-"Fout %1: %2"
+"Při pokusu spojení se svazkem nastala chyba.\n"
+"Chyba %1: %2"
 
 #: ../diskwriter_windows.cpp:171
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr "Lockfout"
+msgstr "Chyba uzamčení"
 
 #: ../diskwriter_windows.cpp:172
 #, qt-format
@@ -367,13 +361,13 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het locken van het volume.\n"
-"Fout %1: %2"
+"Při pokusu o uzamčení svazku nastala chyba.\n"
+"Chyba %1: %2"
 
 #: ../diskwriter_windows.cpp:187
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr "Unlockfout"
+msgstr "Chyba odemčení"
 
 #: ../diskwriter_windows.cpp:188
 #, qt-format
@@ -382,13 +376,13 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het unlocken van het volume.\n"
-"Fout %1: %2"
+"Při pokusu o odemčení svazku nastala chyba.\n"
+"Chyba %1: %2"
 
 #: ../diskwriter_windows.cpp:203
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr "Ontkoppelfout"
+msgstr "Chyba odebrání"
 
 #: ../diskwriter_windows.cpp:204
 #, qt-format
@@ -397,5 +391,5 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het ontkoppelen van het volume.\n"
-"Fout %1: %2"
+"Při pokusu o odebrání svazku nastala chyba.\n"
+"Chyba %1: %2"

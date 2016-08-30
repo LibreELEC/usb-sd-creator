@@ -1,10 +1,14 @@
+# Translators:
+# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Language-Team: Slovenian (https://www.transifex.com/libreelec/teams/61634/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Language: si_LK\n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 "X-Qt-Contexts: true\n"
 
 #: ../creator.ui:32
@@ -15,57 +19,57 @@ msgstr ""
 #: ../creator.ui:123
 msgctxt "Creator|"
 msgid "Write image"
-msgstr ""
+msgstr "Zapiši sliko"
 
 #: ../creator.ui:142 ../creator.ui:603 ../creator.cpp:1081 ../creator.cpp:1084
 msgctxt "Creator|"
 msgid "Close"
-msgstr ""
+msgstr "Zapri"
 
 #: ../creator.ui:185
 msgctxt "Creator|"
 msgid "Select file"
-msgstr ""
+msgstr "Izberi datoteko"
 
 #: ../creator.ui:269
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr ""
+msgstr "Izberi USB stick ali SD kartico"
 
 #: ../creator.ui:313
 msgctxt "Creator|"
 msgid "Select version"
-msgstr ""
+msgstr "Izberi verzijo"
 
 #: ../creator.ui:332 ../creator.cpp:638
 msgctxt "Creator|"
 msgid "Download"
-msgstr ""
+msgstr "Prenesi"
 
 #: ../creator.ui:348
 msgctxt "Creator|"
 msgid "About"
-msgstr ""
+msgstr "O programu"
 
 #: ../creator.ui:418
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr ""
+msgstr "Prenesi ali izberi lokalno datoteko"
 
 #: ../creator.ui:437 ../creator.cpp:664
 msgctxt "Creator|"
 msgid "Write"
-msgstr ""
+msgstr "Zapiši"
 
 #: ../creator.ui:453
 msgctxt "Creator|"
 msgid "Help"
-msgstr ""
+msgstr "Pomoč"
 
 #: ../creator.ui:472
 msgctxt "Creator|"
 msgid "Show all"
-msgstr ""
+msgstr "Prikaži vse"
 
 #: ../creator.ui:519
 msgctxt "Creator|"
@@ -85,19 +89,19 @@ msgstr ""
 #: ../creator.cpp:179
 msgctxt "Creator|"
 msgid "Select project"
-msgstr ""
+msgstr "Izberi projekt"
 
 #: ../creator.cpp:180
 msgctxt "Creator|"
 msgid "Select image"
-msgstr ""
+msgstr "Izberi sliko"
 
 #: ../creator.cpp:225
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
-msgstr ""
+msgstr "Potrebne so root pravice za zapisovanje. Poženite aplikacijo s sudo."
 
 #: ../creator.cpp:311
 #, qt-format
@@ -106,6 +110,8 @@ msgid ""
 "Version: %1\n"
 "Build date: %2"
 msgstr ""
+"Verzija: %1\n"
+"Prevedeno: %2"
 
 #: ../creator.cpp:315
 msgctxt "Creator|"
@@ -251,8 +257,8 @@ msgstr ""
 #: ../creator.cpp:1226
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 msgstr ""
 
 #: ../creator.cpp:1267
