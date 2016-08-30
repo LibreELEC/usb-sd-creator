@@ -41,3 +41,8 @@ QComboBox {
 QComboBox:on {
   color: #00A9F6;
 }
+
+QMenu::item:checked {
+  color: red;
+  background: orange;
+}

@@ -67,6 +67,7 @@ void Translator::fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr)
         lang.replace("American English", "English");
 
         QAction *action = new QAction(lang, menu);
+        action->setCheckable(true);
         action->setIcon(icon);
         action->setData(locale);
         menu->addAction(action);
@@ -112,4 +113,10 @@ void Translator::languageAction(QAction *action)
     if (qtranslator->isFilled())
         qApp->installTranslator(qtranslator);
 
+    // clear checked status
+    for (int i=0; i<menu->actions().count(); i++)
+        menu->actions().at(i)->setChecked(false);
+
+    // set checked for current one
+    action->setChecked(true);
 }
