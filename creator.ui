@@ -459,10 +459,10 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>380</x>
+       <x>259</x>
        <y>17</y>
-       <width>100</width>
-       <height>17</height>
+       <width>221</width>
+       <height>20</height>
       </rect>
      </property>
      <property name="layoutDirection">

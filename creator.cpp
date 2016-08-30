@@ -169,6 +169,9 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     aboutFont.setPointSize(13);
     ui->labelAbout->setFont(aboutFont);
 
+    ui->closeAboutButton->setAttribute(Qt::WA_MacSmallSize);
+    ui->labelVersion->setAttribute(Qt::WA_MacSmallSize);
+
     // make button little bigger (workaround for higher QComboBox)
     // and move it left for same change
     QRect currRectRrb = ui->refreshRemovablesButton->geometry();
