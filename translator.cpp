@@ -76,6 +76,10 @@ void Translator::fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr)
 
     QString locale = settings->value("preferred/lang").toString();
 
+    // set first time locale from the system
+    if (locale.isEmpty())
+        locale = QLocale::system().name();
+
     // check for file in resources and on disk
     if (QFile::exists(":/lang/lang-" + locale + ".qm") == false &&
         QFile::exists("lang-" + locale + ".qm") == false)
