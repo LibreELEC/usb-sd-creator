@@ -675,7 +675,7 @@
    </property>
    <widget class="QMenu" name="menuLanguage">
     <property name="title">
-     <string>Language</string>
+     <string></string>
     </property>
    </widget>
    <addaction name="menuLanguage"/>

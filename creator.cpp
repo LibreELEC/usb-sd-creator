@@ -49,6 +49,9 @@
 #include "deviceenumerator_unix.h"
 #endif
 
+// force update notification dialog
+//#define FORCE_UPDATE_NOTIFICATION
+
 const QString Creator::releasesUrl = "http://releases.libreelec.tv/";
 const QString Creator::versionUrl = releasesUrl + "creator_version";
 const QString Creator::helpUrl = "https://wiki.libreelec.tv/index.php?title=LibreELEC_USB-SD_Creator";
@@ -64,6 +67,12 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     privileges(privilegesArg),
     deviceEjected("")
 {
+    // dummy strings used for translation buttons on message box
+    QString forMsgBoxTranslationStrings = tr("Yes") + \
+                                          tr("No") + \
+                                          tr("OK");
+    Q_UNUSED(forMsgBoxTranslationStrings);
+
     timerId = 0;
     restoreGeometry(settings.value("window/geometry").toByteArray());
 
@@ -229,6 +238,8 @@ bool Creator::showRootMessageBox()
     QMessageBox msgBox;
     msgBox.setText(tr("Root privileges required to write image.\nRun application with sudo."));
     msgBox.setIcon(QMessageBox::Critical);
+    msgBox.setStandardButtons(QMessageBox::Ok);
+    msgBox.setButtonText(QMessageBox::Ok, tr("OK"));
     msgBox.exec();
     return true;
 #endif
@@ -1091,7 +1102,9 @@ void Creator::checkNewVersion(const QString &verNewStr)
 
     int QVersionCompare = QVersionNumber::compare(qVersionNew, qVersionOld);
     qDebug() << "QVersionCompare" << QVersionCompare;
-    // QVersionCompare = 1;  // TEST
+#ifdef FORCE_UPDATE_NOTIFICATION
+    QVersionCompare = 1;  // TEST
+#endif
     if (QVersionCompare <= 0) {
         qDebug() << "no new version";
         return;
@@ -1100,29 +1113,19 @@ void Creator::checkNewVersion(const QString &verNewStr)
     QMessageBox msgBox(this);
     msgBox.setWindowTitle(tr("Update Notification"));
 #ifdef Q_OS_MAC
-    QAbstractButton *myVisitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::NoRole);
+    QAbstractButton *visitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::NoRole);
     msgBox.addButton(tr("Close"), QMessageBox::YesRole);
 #else
-    QAbstractButton *myVisitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::YesRole);
+    QAbstractButton *visitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::YesRole);
     msgBox.addButton(tr("Close"), QMessageBox::NoRole);
 #endif
-    int msgBoxWidth = 320;
-    int msgBoxWidthExtra = 28;  // real width is +28
-    int msgBoxHeight = 160;
-    QSpacerItem *horizontalSpacer = new QSpacerItem(msgBoxWidth - msgBoxWidthExtra,
-                      msgBoxHeight, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
     QString msg = tr("LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available.").arg(verNewStr);
+    // replace html entities
+    msg = msg.replace("&amp;","&").replace("&quot;","\"").replace("&gt;",">").replace("&lt;","<");
     msgBox.setText("<p align='center' style='margin-right:30px'><br>" + msg + "<br></p>");
-    QGridLayout *layout = (QGridLayout *) msgBox.layout();
-    layout->addItem(horizontalSpacer, layout->rowCount(), 0, 1, layout->columnCount());
 
-    // center msgbox over app
-    QRect mainWidgetGeometry = geometry();
-    msgBox.move((mainWidgetGeometry.x() + mainWidgetGeometry.width() / 2) - msgBoxWidth / 2,
-                (mainWidgetGeometry.y() + mainWidgetGeometry.height() / 2) - msgBoxHeight / 2);
     msgBox.exec();
-    if (msgBox.clickedButton() == myVisitButton)
+    if (msgBox.clickedButton() == visitButton)
       QDesktopServices::openUrl(QUrl(helpUrl));
 }
 
@@ -1182,10 +1185,12 @@ void Creator::downloadButtonClicked()
         msgBox.setWindowTitle(tr("Error"));
         msgBox.setText(tr("File \n%1/%2\nalready exist.").arg(saveDir).arg(selectedImage));
         msgBox.setInformativeText(tr("Do you want to overwrite?"));
-        msgBox.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
-        msgBox.setDefaultButton(QMessageBox::Cancel);
+        msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+        msgBox.setDefaultButton(QMessageBox::No);
+        msgBox.setButtonText(QMessageBox::Yes, tr("Yes"));
+        msgBox.setButtonText(QMessageBox::No, tr("No"));
         int ret = msgBox.exec();
-        if (ret != QMessageBox::Ok) {
+        if (ret != QMessageBox::Yes) {
             downloadProgressBarText(tr("File already exists."));
             reset();
             return;
@@ -1312,15 +1317,17 @@ void Creator::writeFlashButtonClicked()
         return;
     }
 
-    QMessageBox::StandardButton ok = QMessageBox::warning(this,
-                    tr("Confirm write"),
-                    tr("Selected device: %1\n"
-                    "Are you sure you want to write the image?\n\n"
-                    "Your USB-SD device will be wiped!").arg(destination),
-                    QMessageBox::Yes | QMessageBox::No,
-                    QMessageBox::No);
-
-    if (ok != QMessageBox::Yes) {
+    QMessageBox msgBox;
+    msgBox.setWindowTitle(tr("Confirm write"));
+    msgBox.setText(tr("Selected device: %1\n"
+                      "Are you sure you want to write the image?\n\n"
+                      "Your USB-SD device will be wiped!").arg(destination));
+    msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+    msgBox.setDefaultButton(QMessageBox::No);
+    msgBox.setButtonText(QMessageBox::Yes, tr("Yes"));
+    msgBox.setButtonText(QMessageBox::No, tr("No"));
+    int ret = msgBox.exec();
+    if (ret != QMessageBox::Yes) {
         reset();
         return;
     }
