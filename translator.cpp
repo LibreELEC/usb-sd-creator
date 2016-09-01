@@ -21,6 +21,8 @@
 #include <QDebug>
 #include <QFile>
 #include <QDir>
+#include <QCollator>
+#include <algorithm>
 
 Translator::Translator(QObject *parent, QSettings *set) :
     QObject(parent),
@@ -46,6 +48,7 @@ void Translator::fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr)
     qmFiles << QDir(".").entryList(QStringList("*.qm"));
 
     // add menu entry for all the files
+    QList<QAction *> actions;
     foreach (const QString &qmFile, qmFiles) {
         QRegExp regExp = QRegExp("lang-(.*)\\.qm");
         regExp.indexIn(qmFile);
@@ -62,16 +65,37 @@ void Translator::fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr)
 
         QString lang = QLocale(locale).nativeLanguageName();
         lang = lang.left(1).toUpper() + lang.mid(1);  // capitalize first letter
+        QString langEn = QLocale::languageToString(QLocale(locale).language());
 
-        lang.replace("British English", "English");   // nicer
-        lang.replace("American English", "English");
+        // make names nicer
+        lang.replace("British English", "English UK");
+        lang.replace("American English", "English US");
+        lang.replace("Portugu" + QString::fromUtf8("\xc3\xaa") + "s europeu", \
+          "Portugu" + QString::fromUtf8("\xc3\xaa"));
+        lang.replace("Espa" + QString::fromUtf8("\xc3\xb1") + "ol de Espa" + QString::fromUtf8("\xc3\xb1") + "a", \
+          "Espa" + QString::fromUtf8("\xc3\xb1") + "ol");
 
-        QAction *action = new QAction(lang, menu);
+        langEn.replace("NorwegianBokmal", "Norwegian");
+
+        QAction *action = new QAction(langEn + " (" + lang + ")", menu);
         action->setCheckable(true);
         action->setIcon(icon);
         action->setData(locale);
-        menu->addAction(action);
+
+        actions << action;
     }
+
+    // sort actions by country name
+    QCollator collator;
+    collator.setNumericMode(false);
+    collator.setCaseSensitivity(Qt::CaseSensitive);
+
+    std::sort(actions.begin(), actions.end(),
+      [&collator](const QAction *act1, const QAction *act2)
+         {return collator.compare(act1->text(), act2->text()) < 0;}
+    );
+
+    menu->addActions(actions);  // add to menu
 
     connect(menu, SIGNAL(triggered(QAction*)), SLOT(languageAction(QAction*)));
 
