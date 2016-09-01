@@ -1,9 +1,10 @@
 # Translators:
 # David Fodor <email-removed>, 2016
 # Gabe Smith <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Gabe Smith <email-removed>, 2016\n"
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
 "Language-Team: Hungarian (https://www.transifex.com/libreelec/teams/61634/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -12,92 +13,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Qt-Contexts: true\n"
 
-#: ../creator.ui:32
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
 msgstr "LibreELEC USB-SD készítő"
 
-#: ../creator.ui:123
 msgctxt "Creator|"
 msgid "Write image"
 msgstr "Lemezkép írása"
 
-#: ../creator.ui:142 ../creator.ui:603 ../creator.cpp:1081 ../creator.cpp:1084
 msgctxt "Creator|"
 msgid "Close"
 msgstr "Bezár"
 
-#: ../creator.ui:185
 msgctxt "Creator|"
 msgid "Select file"
 msgstr "Tallózás"
 
-#: ../creator.ui:269
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
 msgstr "USB meghajtó vagy SD kártya kiválasztása"
 
-#: ../creator.ui:313
 msgctxt "Creator|"
 msgid "Select version"
 msgstr "Verzió kiválasztása"
 
-#: ../creator.ui:332 ../creator.cpp:638
 msgctxt "Creator|"
 msgid "Download"
 msgstr "Letöltés"
 
-#: ../creator.ui:348
 msgctxt "Creator|"
 msgid "About"
 msgstr "Rólunk"
 
-#: ../creator.ui:418
 msgctxt "Creator|"
 msgid "Download or select a local image file"
 msgstr "Letöltés vagy helyi lemezkép kiválasztása"
 
-#: ../creator.ui:437 ../creator.cpp:664
 msgctxt "Creator|"
 msgid "Write"
 msgstr "Írás"
 
-#: ../creator.ui:453
 msgctxt "Creator|"
 msgid "Help"
 msgstr "Segítség"
 
-#: ../creator.ui:472
 msgctxt "Creator|"
 msgid "Show all"
 msgstr "Mutasd mind"
 
-#: ../creator.ui:519
 msgctxt "Creator|"
 msgid "Eject device"
 msgstr "Lemez kiadása"
 
-#: ../creator.ui:545
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "Lemez betöltése"
 
-#: ../creator.ui:565
 msgctxt "Creator|"
 msgid "Eject  Load   Remove"
 msgstr "Kiadás Betöltés Eltávolítás"
 
-#: ../creator.cpp:179
 msgctxt "Creator|"
 msgid "Select project"
 msgstr "Projekt kiválsztása"
 
-#: ../creator.cpp:180
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "Lemezkép kiválasztása"
 
-#: ../creator.cpp:225
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
@@ -106,7 +89,6 @@ msgstr ""
 "Rendszergazdai jogosultságok szükséges az íráshoz.\n"
 "Futtasd az alkalmazást sudo -val."
 
-#: ../creator.cpp:311
 #, qt-format
 msgctxt "Creator|"
 msgid ""
@@ -116,114 +98,92 @@ msgstr ""
 "Verzió %1\n"
 "Build dátum: %2"
 
-#: ../creator.cpp:315
 msgctxt "Creator|"
 msgid "This software was created with love and released"
 msgstr "Ez a program szeretettel lett  létrehozva és kiadott"
 
-#: ../creator.cpp:316
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
 msgstr "GPLv2 alatt, használva RasPlex korábbi munkáját."
 
-#: ../creator.cpp:317
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
 msgstr "A licenszért, közreműködőkért és a történelemért kérjük olvassa el:"
 
-#: ../creator.cpp:318
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
 msgstr "Ha tetszik LibreELEC kérjük"
 
-#: ../creator.cpp:319
 msgctxt "Creator|"
 msgid "donation to support the project."
 msgstr "adományozzon a projekt támogátására."
 
-#: ../creator.cpp:320
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
 msgstr "Kattints az alábbi logora vagy adományozz"
 
-#: ../creator.cpp:321
 msgctxt "Creator|"
 msgid "using Paypal to:"
 msgstr "Paypalt használva hogy:"
 
-#: ../creator.cpp:560 ../creator.cpp:570
 msgctxt "Creator|"
 msgid "[Stable]"
 msgstr "[Stabil]"
 
-#: ../creator.cpp:563
 msgctxt "Creator|"
 msgid "[Alpha]"
 msgstr "[Alfa]"
 
-#: ../creator.cpp:565
 msgctxt "Creator|"
 msgid "[Beta]"
 msgstr "[Béta]"
 
-#: ../creator.cpp:940
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
 msgstr "Letöltés kész, fájl szinkronizálása..."
 
-#: ../creator.cpp:948
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
 msgstr "Letöltés kész, checksum ellenőrzése..."
 
-#: ../creator.cpp:951
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
 msgstr "Letöltés kész, checksum rendben."
 
-#: ../creator.cpp:953
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
 msgstr "Letöltés kész, checksum hibás."
 
-#: ../creator.cpp:1035 ../creator.cpp:1468
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 másodperc van hátra - %2% a %3 -ból"
 
-#: ../creator.cpp:1078
 msgctxt "Creator|"
 msgid "Update Notification"
 msgstr "Frissítési értesesítés"
 
-#: ../creator.cpp:1080 ../creator.cpp:1083
 msgctxt "Creator|"
 msgid "Visit Website"
 msgstr "Weboldal meglátogatása"
 
-#: ../creator.cpp:1092
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
 msgstr "LibreELEC USB-SD készítő <font color=\"blue\">%1</font> elérhető."
 
-#: ../creator.cpp:1120
 msgctxt "Creator|"
 msgid "Download canceled."
 msgstr "Letöltés megszakítva."
 
-#: ../creator.cpp:1147
 msgctxt "Creator|"
 msgid "Directory to store image file"
 msgstr "Könyvtár a képfájl tárolásához"
 
-#: ../creator.cpp:1159
 msgctxt "Creator|"
 msgid "Error"
 msgstr "Hiba"
 
-#: ../creator.cpp:1160
 #, qt-format
 msgctxt "Creator|"
 msgid ""
@@ -235,32 +195,26 @@ msgstr ""
 "%1/%2\n"
 "fájl már létezik."
 
-#: ../creator.cpp:1161
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
 msgstr "Biztosan felül akarod írni?"
 
-#: ../creator.cpp:1166
 msgctxt "Creator|"
 msgid "File already exists."
 msgstr "A fájl már létezik."
 
-#: ../creator.cpp:1188
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
 msgstr "Nem sikerült a fájlt megnyitni az íráshoz!"
 
-#: ../creator.cpp:1201 ../creator.cpp:1336
 msgctxt "Creator|"
 msgid "Cancel"
 msgstr "Mégsem"
 
-#: ../creator.cpp:1224
 msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Lemezkép megnyitása"
 
-#: ../creator.cpp:1226
 msgctxt "Creator|"
 msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
@@ -269,17 +223,37 @@ msgstr ""
 "Gz tömörített képfájl (*img.gz);;Zip tömörített képfájl "
 "(*img.zip);;Tömörítetlen képfájl (*.img);;Minden fájl (*.*)"
 
-#: ../creator.cpp:1267
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Írás megszakítva."
 
-#: ../creator.cpp:1293
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Írás megerősítésa"
 
-#: ../creator.cpp:1294
+#, qt-format
+msgctxt "Creator|"
+msgid "Cannot unmount partititons on device %1"
+msgstr "Nem tudom a particiókat leválasztani az eszközről %1"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Not enough space on %1 [%2 < %3]"
+msgstr "Nincs elegendő hely a következő eszközön. %1 [%2 < %3]"
+
+msgctxt "Creator|"
+msgid "Syncing file system..."
+msgstr "Fájlrendszer szinkronizálása..."
+
+msgctxt "Creator|"
+msgid "Writing done!"
+msgstr "Írás kész!"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Hiba: %1"
+
 #, qt-format
 msgctxt "Creator|"
 msgid ""
@@ -293,40 +267,22 @@ msgstr ""
 "\n"
 "A USB-SD eszköz törölve lesz!"
 
-#: ../creator.cpp:1311
-#, qt-format
 msgctxt "Creator|"
-msgid "Cannot unmount partititons on device %1"
-msgstr "Nem tudom a particiókat leválasztani az eszközről %1"
+msgid "Yes"
+msgstr "Igen"
 
-#: ../creator.cpp:1324
-#, qt-format
 msgctxt "Creator|"
-msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Nincs elegendő hely a következő eszközön. %1 [%2 < %3]"
+msgid "No"
+msgstr "Nem"
 
-#: ../creator.cpp:1348
 msgctxt "Creator|"
-msgid "Syncing file system..."
-msgstr "Fájlrendszer szinkronizálása..."
+msgid "OK"
+msgstr "OK"
 
-#: ../creator.cpp:1357
-msgctxt "Creator|"
-msgid "Writing done!"
-msgstr "Írás kész!"
-
-#: ../creator.cpp:1369
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Hiba: %1"
-
-#: ../diskwriter_windows.cpp:116
 msgctxt "QObject|"
 msgid "Write Error"
 msgstr "Írás hiba"
 
-#: ../diskwriter_windows.cpp:117
 #, qt-format
 msgctxt "QObject|"
 msgid ""
@@ -336,12 +292,10 @@ msgstr ""
 "Egy hiba történt az adat kiírása közben.\n"
 "Hiba %1: %2"
 
-#: ../diskwriter_windows.cpp:155
 msgctxt "QObject|"
 msgid "Volume Error"
 msgstr "Tároló Hiba"
 
-#: ../diskwriter_windows.cpp:156
 #, qt-format
 msgctxt "QObject|"
 msgid ""
@@ -351,12 +305,10 @@ msgstr ""
 "Egy hiba történt egy kezelő kérése közben.\n"
 "Error %1: %2"
 
-#: ../diskwriter_windows.cpp:171
 msgctxt "QObject|"
 msgid "Lock Error"
 msgstr "Zárási Hiba"
 
-#: ../diskwriter_windows.cpp:172
 #, qt-format
 msgctxt "QObject|"
 msgid ""
@@ -366,12 +318,10 @@ msgstr ""
 "Egy hiba történt a tároló zárolása közben.\n"
 "Hiba %1: %2"
 
-#: ../diskwriter_windows.cpp:187
 msgctxt "QObject|"
 msgid "Unlock Error"
 msgstr "Feloldási Hiba"
 
-#: ../diskwriter_windows.cpp:188
 #, qt-format
 msgctxt "QObject|"
 msgid ""
@@ -381,12 +331,10 @@ msgstr ""
 "Egy hiba történt a tároló feloldása közben\n"
 "Hiba %1: %2"
 
-#: ../diskwriter_windows.cpp:203
 msgctxt "QObject|"
 msgid "Dismount Error"
 msgstr "Leválasztási Hiba"
 
-#: ../diskwriter_windows.cpp:204
 #, qt-format
 msgctxt "QObject|"
 msgid ""

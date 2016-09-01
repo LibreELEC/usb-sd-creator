@@ -66,10 +66,6 @@ msgid "Eject  Load   Remove"
 msgstr ""
 
 msgctxt "Creator|"
-msgid "Language"
-msgstr ""
-
-msgctxt "Creator|"
 msgid "Select project"
 msgstr ""
 
@@ -220,15 +216,6 @@ msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-
-#, qt-format
-msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
 msgstr ""
 
@@ -248,6 +235,27 @@ msgstr ""
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
+msgstr ""
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "No"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "OK"
 msgstr ""
 
 msgctxt "QObject|"

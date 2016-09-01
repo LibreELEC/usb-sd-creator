@@ -1,8 +1,9 @@
 # Translators:
-# Aleksandr Surkov <email-removed>, 2016
+# Александр Сурков <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Aleksandr Surkov <email-removed>, 2016\n"
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
 "Language-Team: Russian (https://www.transifex.com/libreelec/teams/61634/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -11,92 +12,74 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Qt-Contexts: true\n"
 
-#: ../creator.ui:32
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
 msgstr "Создатель LibreELEC USB-SD"
 
-#: ../creator.ui:123
 msgctxt "Creator|"
 msgid "Write image"
 msgstr "Записать образ"
 
-#: ../creator.ui:142 ../creator.ui:603 ../creator.cpp:1081 ../creator.cpp:1084
 msgctxt "Creator|"
 msgid "Close"
 msgstr "Закрыть"
 
-#: ../creator.ui:185
 msgctxt "Creator|"
 msgid "Select file"
 msgstr "Выбрать файл"
 
-#: ../creator.ui:269
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
 msgstr "Выберете USB накопитель или SD карту"
 
-#: ../creator.ui:313
 msgctxt "Creator|"
 msgid "Select version"
 msgstr "Выбрать версию"
 
-#: ../creator.ui:332 ../creator.cpp:638
 msgctxt "Creator|"
 msgid "Download"
 msgstr "Загрузить"
 
-#: ../creator.ui:348
 msgctxt "Creator|"
 msgid "About"
 msgstr "О программе"
 
-#: ../creator.ui:418
 msgctxt "Creator|"
 msgid "Download or select a local image file"
 msgstr "Загрузить или выбрать файл образа"
 
-#: ../creator.ui:437 ../creator.cpp:664
 msgctxt "Creator|"
 msgid "Write"
 msgstr "Записать"
 
-#: ../creator.ui:453
 msgctxt "Creator|"
 msgid "Help"
 msgstr "Помощь"
 
-#: ../creator.ui:472
 msgctxt "Creator|"
 msgid "Show all"
 msgstr "Показать всё"
 
-#: ../creator.ui:519
 msgctxt "Creator|"
 msgid "Eject device"
 msgstr "Извлечь USB накопитель или SD карту"
 
-#: ../creator.ui:545
 msgctxt "Creator|"
 msgid "Load device"
-msgstr ""
+msgstr "Загрузить устройство"
 
-#: ../creator.ui:565
 msgctxt "Creator|"
 msgid "Eject  Load   Remove"
 msgstr "Извлечь Загрузить Удалить"
 
-#: ../creator.cpp:179
 msgctxt "Creator|"
 msgid "Select project"
 msgstr "Выбрать проект"
 
-#: ../creator.cpp:180
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "Выбрать образ"
 
-#: ../creator.cpp:225
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
@@ -105,7 +88,6 @@ msgstr ""
 "Для записи образа требуются права суперпользователя.\n"
 "Запустить приложение с использованием sudo."
 
-#: ../creator.cpp:311
 #, qt-format
 msgctxt "Creator|"
 msgid ""
@@ -115,116 +97,94 @@ msgstr ""
 "Версия: %1\n"
 "Дата создания: %2"
 
-#: ../creator.cpp:315
 msgctxt "Creator|"
 msgid "This software was created with love and released"
 msgstr "Это программа была сделана с любовью и выпущена"
 
-#: ../creator.cpp:316
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
 msgstr "под лицензией GPLv2, использовались ранние наработки проекта RasPlex."
 
-#: ../creator.cpp:317
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
 msgstr "Лицензия, детали и история проекта тут:"
 
-#: ../creator.cpp:318
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
 msgstr ""
 "Если вам нравится использовать LibreELEC примите во внимание возможность "
 "сделать"
 
-#: ../creator.cpp:319
 msgctxt "Creator|"
 msgid "donation to support the project."
 msgstr "пожертвование на поддержку проекта."
 
-#: ../creator.cpp:320
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
 msgstr "Для пожертвования кликните на лого ниже или"
 
-#: ../creator.cpp:321
 msgctxt "Creator|"
 msgid "using Paypal to:"
 msgstr "для пользователей Paypal:"
 
-#: ../creator.cpp:560 ../creator.cpp:570
 msgctxt "Creator|"
 msgid "[Stable]"
 msgstr "[Стабильная]"
 
-#: ../creator.cpp:563
 msgctxt "Creator|"
 msgid "[Alpha]"
 msgstr "[Альфа]"
 
-#: ../creator.cpp:565
 msgctxt "Creator|"
 msgid "[Beta]"
 msgstr "[Бета]"
 
-#: ../creator.cpp:940
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
 msgstr "Загрузка завершена, синхронизация файлов"
 
-#: ../creator.cpp:948
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
 msgstr "Загрузка завершена, проверка контрольной суммы"
 
-#: ../creator.cpp:951
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
 msgstr "Загрузка завершена, контрольная сумма проверена"
 
-#: ../creator.cpp:953
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
 msgstr "Загрузка завершена, ошибка контрольной суммы"
 
-#: ../creator.cpp:1035 ../creator.cpp:1468
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 секунд осталось - %2% шага %3"
 
-#: ../creator.cpp:1078
 msgctxt "Creator|"
 msgid "Update Notification"
 msgstr "Оповещение об обновлении"
 
-#: ../creator.cpp:1080 ../creator.cpp:1083
 msgctxt "Creator|"
 msgid "Visit Website"
 msgstr "Посетить сайт проекта"
 
-#: ../creator.cpp:1092
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
 msgstr "Версия LibreELEC USB-SD Creator <font color=\"blue\">%1</font>  доступна"
 
-#: ../creator.cpp:1120
 msgctxt "Creator|"
 msgid "Download canceled."
 msgstr "Загрузка отменена"
 
-#: ../creator.cpp:1147
 msgctxt "Creator|"
 msgid "Directory to store image file"
 msgstr "Катлог для сохранения файла образа"
 
-#: ../creator.cpp:1159
 msgctxt "Creator|"
 msgid "Error"
 msgstr "Ошибка"
 
-#: ../creator.cpp:1160
 #, qt-format
 msgctxt "Creator|"
 msgid ""
@@ -236,32 +196,26 @@ msgstr ""
 "%1/%2\n"
 "уже существует."
 
-#: ../creator.cpp:1161
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
 msgstr "Вы хотите перезаписать?"
 
-#: ../creator.cpp:1166
 msgctxt "Creator|"
 msgid "File already exists."
 msgstr "Файл уже существует"
 
-#: ../creator.cpp:1188
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
 msgstr "Не удалось открыть файл для записи!"
 
-#: ../creator.cpp:1201 ../creator.cpp:1336
 msgctxt "Creator|"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: ../creator.cpp:1224
 msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Открыть файл образа"
 
-#: ../creator.cpp:1226
 msgctxt "Creator|"
 msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
@@ -270,17 +224,37 @@ msgstr ""
 "Образ сжатый gz (*img.gz);;Образ сжатый zip (*img.zip);;Несжатый образ "
 "(*.img);;Все файлы (*.*)"
 
-#: ../creator.cpp:1267
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Запись отменена"
 
-#: ../creator.cpp:1293
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Подтвердите запись"
 
-#: ../creator.cpp:1294
+#, qt-format
+msgctxt "Creator|"
+msgid "Cannot unmount partititons on device %1"
+msgstr "Не удается отключить разделы на устройстве %1"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Not enough space on %1 [%2 < %3]"
+msgstr "Не хватает места на %1 [%2 < %3]"
+
+msgctxt "Creator|"
+msgid "Syncing file system..."
+msgstr "Синхронизация файловой системы..."
+
+msgctxt "Creator|"
+msgid "Writing done!"
+msgstr "Запись успешна"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Ошибка: %1"
+
 #, qt-format
 msgctxt "Creator|"
 msgid ""
@@ -294,40 +268,22 @@ msgstr ""
 "\n"
 "Вся информация на USB-SD устройстве будет удалена!"
 
-#: ../creator.cpp:1311
-#, qt-format
 msgctxt "Creator|"
-msgid "Cannot unmount partititons on device %1"
-msgstr "Не удается отключить разделы на устройстве %1"
+msgid "Yes"
+msgstr "Да"
 
-#: ../creator.cpp:1324
-#, qt-format
 msgctxt "Creator|"
-msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Не хватает места на %1 [%2 < %3]"
+msgid "No"
+msgstr "Нет"
 
-#: ../creator.cpp:1348
 msgctxt "Creator|"
-msgid "Syncing file system..."
-msgstr "Синхронизация файловой системы..."
+msgid "OK"
+msgstr "OK"
 
-#: ../creator.cpp:1357
-msgctxt "Creator|"
-msgid "Writing done!"
-msgstr "Запись успешна"
-
-#: ../creator.cpp:1369
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Ошибка: %1"
-
-#: ../diskwriter_windows.cpp:116
 msgctxt "QObject|"
 msgid "Write Error"
 msgstr "Ошибка записи"
 
-#: ../diskwriter_windows.cpp:117
 #, qt-format
 msgctxt "QObject|"
 msgid ""
@@ -337,12 +293,10 @@ msgstr ""
 "Ошибка при попытке записи данных.\n"
 "Детали ошибки: %1: %2"
 
-#: ../diskwriter_windows.cpp:155
 msgctxt "QObject|"
 msgid "Volume Error"
 msgstr "Ошибка при работе с разделами"
 
-#: ../diskwriter_windows.cpp:156
 #, qt-format
 msgctxt "QObject|"
 msgid ""
@@ -352,12 +306,10 @@ msgstr ""
 "Ошибка при попытке получить handle тома.\n"
 "Детали ошибки: %1: %2"
 
-#: ../diskwriter_windows.cpp:171
 msgctxt "QObject|"
 msgid "Lock Error"
 msgstr "Ошибка блокировки"
 
-#: ../diskwriter_windows.cpp:172
 #, qt-format
 msgctxt "QObject|"
 msgid ""
@@ -367,12 +319,10 @@ msgstr ""
 "Ошибка при попытке наложить блокировку на том.\n"
 "Детали ошибки: %1: %2"
 
-#: ../diskwriter_windows.cpp:187
 msgctxt "QObject|"
 msgid "Unlock Error"
 msgstr "Ошибка разблокировки"
 
-#: ../diskwriter_windows.cpp:188
 #, qt-format
 msgctxt "QObject|"
 msgid ""
@@ -382,12 +332,10 @@ msgstr ""
 "Ошибка при попытке снять блокировку с тома.\n"
 "Детали ошибки %1: %2"
 
-#: ../diskwriter_windows.cpp:203
 msgctxt "QObject|"
 msgid "Dismount Error"
 msgstr "Ошибка отмонтирования"
 
-#: ../diskwriter_windows.cpp:204
 #, qt-format
 msgctxt "QObject|"
 msgid ""

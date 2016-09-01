@@ -1,8 +1,9 @@
 # Translators:
 # Z F <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Z F <email-removed>, 2016\n"
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
 "Language-Team: Greek (https://www.transifex.com/libreelec/teams/61634/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -11,92 +12,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Qt-Contexts: true\n"
 
-#: ../creator.ui:32
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
 msgstr "LibreELEC USB-SD Creator"
 
-#: ../creator.ui:123
 msgctxt "Creator|"
 msgid "Write image"
 msgstr "Εγγραφή ειδώλου"
 
-#: ../creator.ui:142 ../creator.ui:603 ../creator.cpp:1081 ../creator.cpp:1084
 msgctxt "Creator|"
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: ../creator.ui:185
 msgctxt "Creator|"
 msgid "Select file"
 msgstr "Επιλογή αρχείου"
 
-#: ../creator.ui:269
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
 msgstr "Επιλογή του USB stick ή της κάρτας SD σας"
 
-#: ../creator.ui:313
 msgctxt "Creator|"
 msgid "Select version"
 msgstr "Επιλογή έκδοσης"
 
-#: ../creator.ui:332 ../creator.cpp:638
 msgctxt "Creator|"
 msgid "Download"
 msgstr "Μεταφόρτωση"
 
-#: ../creator.ui:348
 msgctxt "Creator|"
 msgid "About"
 msgstr "Σχετικά"
 
-#: ../creator.ui:418
 msgctxt "Creator|"
 msgid "Download or select a local image file"
 msgstr "Μεταφόρτωση ή επιλογή ενός τοπικού αρχείου ειδώλου"
 
-#: ../creator.ui:437 ../creator.cpp:664
 msgctxt "Creator|"
 msgid "Write"
 msgstr "Εγγραφή"
 
-#: ../creator.ui:453
 msgctxt "Creator|"
 msgid "Help"
 msgstr "Βοήθεια"
 
-#: ../creator.ui:472
 msgctxt "Creator|"
 msgid "Show all"
 msgstr "Εμφάνιση όλων"
 
-#: ../creator.ui:519
 msgctxt "Creator|"
 msgid "Eject device"
 msgstr "Εξαγωγή συσκευής"
 
-#: ../creator.ui:545
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "Φόρτωση συσκευής"
 
-#: ../creator.ui:565
 msgctxt "Creator|"
 msgid "Eject  Load   Remove"
 msgstr "Εξαγωγή  Φόρτωση   Αφαίρεση"
 
-#: ../creator.cpp:179
 msgctxt "Creator|"
 msgid "Select project"
 msgstr "Επιλογή έργου"
 
-#: ../creator.cpp:180
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "Επιλογή ειδώλου"
 
-#: ../creator.cpp:225
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
@@ -105,7 +88,6 @@ msgstr ""
 "Απαιτούνται δικαιώματα υπερχρήστη για την εγγραφή του ειδώλου.\n"
 "Εκτελέστε την εφαρμογή κάνοντας χρήση της εντολής sudo."
 
-#: ../creator.cpp:311
 #, qt-format
 msgctxt "Creator|"
 msgid ""
@@ -115,119 +97,97 @@ msgstr ""
 "Έκδοση: %1\n"
 "Ημερομηνία δημιουργίας: %2"
 
-#: ../creator.cpp:315
 msgctxt "Creator|"
 msgid "This software was created with love and released"
 msgstr "Αυτό το λογισμικό δημιουργήθηκε με αγάπη και κυκλοφόρησε"
 
-#: ../creator.cpp:316
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
 msgstr ""
 "σύμφωνα με την άδεια GPLv2, χρησιμοποιώντας προγενέστερο υλικό από το "
 "RasPlex."
 
-#: ../creator.cpp:317
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
 msgstr ""
 "Για την άδεια, τους συντελεστές και το ιστορικό, παρακαλούμε, διαβάστε:"
 
-#: ../creator.cpp:318
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
 msgstr "Αν σας αρέσει να χρησιμοποιείτε το LibreELEC, παρακαλούμε, κάνετε μία"
 
-#: ../creator.cpp:319
 msgctxt "Creator|"
 msgid "donation to support the project."
 msgstr "δωρεά για την υποστήριξη του έργου."
 
-#: ../creator.cpp:320
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
 msgstr "Πατήστε στο παρακάτω λογότυπο ή κάνετε μία δωρεά"
 
-#: ../creator.cpp:321
 msgctxt "Creator|"
 msgid "using Paypal to:"
 msgstr "χρησιμοποιώντας το Paypal στο:"
 
-#: ../creator.cpp:560 ../creator.cpp:570
 msgctxt "Creator|"
 msgid "[Stable]"
 msgstr "[Stable]"
 
-#: ../creator.cpp:563
 msgctxt "Creator|"
 msgid "[Alpha]"
 msgstr "[Alpha]"
 
-#: ../creator.cpp:565
 msgctxt "Creator|"
 msgid "[Beta]"
 msgstr "[Beta]"
 
-#: ../creator.cpp:940
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
 msgstr "Η μεταφόρτωση ολοκληρώθηκε, γίνεται συγχρονισμός του αρχείου..."
 
-#: ../creator.cpp:948
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
 msgstr ""
 "Η μεταφόρτωση ολοκληρώθηκε, γίνεται επαλήθευση του αθροίσματος ελέγχου..."
 
-#: ../creator.cpp:951
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
 msgstr "Η μεταφόρτωση ολοκληρώθηκε, το άθροισμα ελέγχου είναι εντάξει."
 
-#: ../creator.cpp:953
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
 msgstr "Η μεταφόρτωση ολοκληρώθηκε, το άθροισμα ελέγχου δεν είναι εντάξει."
 
-#: ../creator.cpp:1035 ../creator.cpp:1468
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 δευτερόλεπτα απομένουν - %2% στα %3"
 
-#: ../creator.cpp:1078
 msgctxt "Creator|"
 msgid "Update Notification"
 msgstr "Ειδοποίηση Ενημέρωσης"
 
-#: ../creator.cpp:1080 ../creator.cpp:1083
 msgctxt "Creator|"
 msgid "Visit Website"
 msgstr "Επίσκεψη Ιστότοπου"
 
-#: ../creator.cpp:1092
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
 msgstr ""
 "Το LibreELEC USB-SD Creator <font color=\"blue\">%1</font> είναι διαθέσιμο."
 
-#: ../creator.cpp:1120
 msgctxt "Creator|"
 msgid "Download canceled."
 msgstr "Η μεταφόρτωση ακυρώθηκε."
 
-#: ../creator.cpp:1147
 msgctxt "Creator|"
 msgid "Directory to store image file"
 msgstr "Κατάλογος αποθήκευσης του αρχείου ειδώλου"
 
-#: ../creator.cpp:1159
 msgctxt "Creator|"
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: ../creator.cpp:1160
 #, qt-format
 msgctxt "Creator|"
 msgid ""
@@ -239,32 +199,26 @@ msgstr ""
 "%1/%2\n"
 "υπάρχει ήδη."
 
-#: ../creator.cpp:1161
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
 msgstr "Θέλετε να αντικατασταθεί;"
 
-#: ../creator.cpp:1166
 msgctxt "Creator|"
 msgid "File already exists."
 msgstr "Το αρχείο υπάρχει ήδη."
 
-#: ../creator.cpp:1188
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
 msgstr "Αποτυχία ανοίγματος του αρχείου για εγγραφή!"
 
-#: ../creator.cpp:1201 ../creator.cpp:1336
 msgctxt "Creator|"
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: ../creator.cpp:1224
 msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Άνοιγμα του αρχείου ειδώλου"
 
-#: ../creator.cpp:1226
 msgctxt "Creator|"
 msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
@@ -273,17 +227,37 @@ msgstr ""
 "Συμπιεσμένο είδωλο gz (*img.gz);;Συμπιεσμένο είδωλο zip (*img.zip);;Μη "
 "συμπιεσμένο είδωλο (*.img);;Όλα τα αρχεία (*.*)"
 
-#: ../creator.cpp:1267
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Η εγγραφή ακυρώθηκε."
 
-#: ../creator.cpp:1293
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Επιβεβαίωση εγγραφής"
 
-#: ../creator.cpp:1294
+#, qt-format
+msgctxt "Creator|"
+msgid "Cannot unmount partititons on device %1"
+msgstr "Δεν είναι δυνατή η αποπροσάρτηση των κατατμήσεων στη συσκευή %1"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Not enough space on %1 [%2 < %3]"
+msgstr "Δεν υπάρχει επαρκής χώρος στο %1 [%2 < %3]"
+
+msgctxt "Creator|"
+msgid "Syncing file system..."
+msgstr "Γίνεται συγχρονισμός του συστήματος αρχείων..."
+
+msgctxt "Creator|"
+msgid "Writing done!"
+msgstr "Η εγγραφή ολοκληρώθηκε!"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Σφάλμα: %1"
+
 #, qt-format
 msgctxt "Creator|"
 msgid ""
@@ -297,40 +271,22 @@ msgstr ""
 "\n"
 "Η συσκευή USB-SD σας θα διαγραφεί!"
 
-#: ../creator.cpp:1311
-#, qt-format
 msgctxt "Creator|"
-msgid "Cannot unmount partititons on device %1"
-msgstr "Δεν είναι δυνατή η αποπροσάρτηση των κατατμήσεων στη συσκευή %1"
+msgid "Yes"
+msgstr "Ναι"
 
-#: ../creator.cpp:1324
-#, qt-format
 msgctxt "Creator|"
-msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Δεν υπάρχει επαρκής χώρος στο %1 [%2 < %3]"
+msgid "No"
+msgstr "Όχι"
 
-#: ../creator.cpp:1348
 msgctxt "Creator|"
-msgid "Syncing file system..."
-msgstr "Γίνεται συγχρονισμός του συστήματος αρχείων..."
+msgid "OK"
+msgstr "OK"
 
-#: ../creator.cpp:1357
-msgctxt "Creator|"
-msgid "Writing done!"
-msgstr "Η εγγραφή ολοκληρώθηκε!"
-
-#: ../creator.cpp:1369
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Σφάλμα: %1"
-
-#: ../diskwriter_windows.cpp:116
 msgctxt "QObject|"
 msgid "Write Error"
 msgstr "Σφάλμα Εγγραφής"
 
-#: ../diskwriter_windows.cpp:117
 #, qt-format
 msgctxt "QObject|"
 msgid ""
@@ -340,12 +296,10 @@ msgstr ""
 "Παρουσιάστηκε ένα σφάλμα κατά την προσπάθεια εγγραφής των δεδομένων.\n"
 "Σφάλμα %1: %2"
 
-#: ../diskwriter_windows.cpp:155
 msgctxt "QObject|"
 msgid "Volume Error"
 msgstr "Σφάλμα Τόμου"
 
-#: ../diskwriter_windows.cpp:156
 #, qt-format
 msgctxt "QObject|"
 msgid ""
@@ -355,12 +309,10 @@ msgstr ""
 "Παρουσιάστηκε ένα σφάλμα κατά την προσπάθεια ελέγχου του τόμου.\n"
 "Σφάλμα %1: %2"
 
-#: ../diskwriter_windows.cpp:171
 msgctxt "QObject|"
 msgid "Lock Error"
 msgstr "Σφάλμα Ασφάλισης"
 
-#: ../diskwriter_windows.cpp:172
 #, qt-format
 msgctxt "QObject|"
 msgid ""
@@ -370,12 +322,10 @@ msgstr ""
 "Παρουσιάστηκε ένα σφάλμα κατά την προσπάθεια ασφάλισης του τόμου.\n"
 "Σφάλμα %1: %2"
 
-#: ../diskwriter_windows.cpp:187
 msgctxt "QObject|"
 msgid "Unlock Error"
 msgstr "Σφάλμα Απασφάλισης"
 
-#: ../diskwriter_windows.cpp:188
 #, qt-format
 msgctxt "QObject|"
 msgid ""
@@ -385,12 +335,10 @@ msgstr ""
 "Παρουσιάστηκε ένα σφάλμα κατά την προσπάθεια απασφάλισης του τόμου.\n"
 "Σφάλμα %1: %2"
 
-#: ../diskwriter_windows.cpp:203
 msgctxt "QObject|"
 msgid "Dismount Error"
 msgstr "Σφάλμα Αποπροσάρτησης"
 
-#: ../diskwriter_windows.cpp:204
 #, qt-format
 msgctxt "QObject|"
 msgid ""
