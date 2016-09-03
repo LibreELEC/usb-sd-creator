@@ -27,6 +27,10 @@ USER=$(whoami)
 chmod -R 755 dmg_osx
 
 echo ""
+echo "Creating .qm files"
+/Users/$USER/Qt5.6.1/5.6/clang_64/bin/lrelease creator.pro
+
+echo ""
 echo "Running qmake..."
 /Users/$USER/Qt5.6.1/5.6/clang_64/bin/qmake
 

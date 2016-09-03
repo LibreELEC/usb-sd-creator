@@ -42,21 +42,7 @@ QComboBox:on {
   color: #00A9F6;
 }
 
-QComboBox#langBox, QComboBox#langBox:on {
-  background-color: transparent;
-}
-
-QComboBox#langBox:drop-down {
-	border: 0px;
-}
-
-QComboBox#langBox:!editable {
-	padding: 0px;
-	border: 0px;
-	color: black;
-}
-
-QComboBox#langBox:down-arrow {
-	image: url(noimg);
-	border: 0px;
+QMenu::item:checked {
+  color: red;
+  background: orange;
 }

@@ -129,17 +129,17 @@
     <widget class="QPushButton" name="closeAppButton">
      <property name="geometry">
       <rect>
-       <x>400</x>
+       <x>380</x>
        <y>325</y>
-       <width>80</width>
+       <width>100</width>
        <height>25</height>
       </rect>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="text">
-      <string>Close</string>
+      <string>&amp;Close</string>
      </property>
      <property name="flat">
       <bool>false</bool>
@@ -182,7 +182,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Select file</string>
+      <string>Select &amp;file</string>
      </property>
     </widget>
     <widget class="QComboBox" name="removableDevicesComboBox">
@@ -329,7 +329,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Download</string>
+      <string>&amp;Download</string>
      </property>
     </widget>
     <widget class="QPushButton" name="showAboutButton">
@@ -337,15 +337,15 @@
       <rect>
        <x>10</x>
        <y>325</y>
-       <width>80</width>
+       <width>100</width>
        <height>25</height>
       </rect>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="text">
-      <string>About</string>
+      <string>&amp;About</string>
      </property>
     </widget>
     <widget class="QComboBox" name="imageSelectBox">
@@ -429,28 +429,28 @@
       <rect>
        <x>10</x>
        <y>267</y>
-       <width>80</width>
+       <width>100</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>Write</string>
+      <string>&amp;Write</string>
      </property>
     </widget>
     <widget class="QPushButton" name="helpButton">
      <property name="geometry">
       <rect>
-       <x>310</x>
+       <x>270</x>
        <y>325</y>
-       <width>80</width>
+       <width>100</width>
        <height>25</height>
       </rect>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="text">
-      <string>Help</string>
+      <string>&amp;Help</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="imagesShowAll">
@@ -459,17 +459,17 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>380</x>
+       <x>259</x>
        <y>17</y>
-       <width>100</width>
-       <height>17</height>
+       <width>221</width>
+       <height>20</height>
       </rect>
      </property>
      <property name="layoutDirection">
       <enum>Qt::RightToLeft</enum>
      </property>
      <property name="text">
-      <string>Show all</string>
+      <string>&amp;Show all</string>
      </property>
      <property name="checked">
       <bool>false</bool>
@@ -541,6 +541,9 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="statusTip">
       <string>Load device</string>
      </property>
@@ -577,6 +580,9 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="text">
       <string/>
      </property>
@@ -592,15 +598,15 @@
       <rect>
        <x>10</x>
        <y>325</y>
-       <width>80</width>
+       <width>100</width>
        <height>25</height>
       </rect>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="text">
-      <string>Close</string>
+      <string>&amp;Close</string>
      </property>
     </widget>
     <widget class="QLabel" name="labelAbout">
@@ -616,9 +622,6 @@
       <font>
        <pointsize>10</pointsize>
       </font>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;&lt;h2&gt;© LibreELEC 2016&lt;/h2&gt;&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;This software was created with love and released&lt;br/&gt;under GPLv2, using earlier work from RasPlex.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;For license, credits and history, please read:&lt;br/&gt;&lt;a href=&quot;https://github.com/LibreELEC/usb-sd-creator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/LibreELEC/usb-sd-creator&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;If you enjoy using LibreELEC please consider a&lt;br/&gt;donation to support the project.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Click the logo below or donate&lt;br/&gt;using Paypal to: donations@libreelec.tv&lt;br/&gt;&lt;br/&gt;&lt;a href=&quot;https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=LE7N83P6ZDCC6&quot;&gt;&lt;img src=&quot;:/icons/paypal.png&quot;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -667,28 +670,67 @@
     <string/>
    </property>
   </widget>
-  <widget class="QComboBox" name="langBox">
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>214</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLanguage">
+    <property name="title">
+     <string/>
+    </property>
+   </widget>
+   <addaction name="menuLanguage"/>
+  </widget>
+  <widget class="QPushButton" name="langButton">
    <property name="geometry">
     <rect>
      <x>460</x>
-     <y>109</y>
-     <width>35</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="iconSize">
-    <size>
+     <y>112</y>
      <width>16</width>
      <height>16</height>
-    </size>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/lang/flag-en_GB.png</normaloff>:/lang/flag-en_GB.png</iconset>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
+  <zorder>menuBar</zorder>
   <zorder>headerBackground</zorder>
   <zorder>logo</zorder>
   <zorder>stackedWidget</zorder>
-  <zorder>langBox</zorder>
+  <zorder>langButton</zorder>
  </widget>
  <layoutdefault spacing="5" margin="10"/>
+ <tabstops>
+  <tabstop>langButton</tabstop>
+  <tabstop>imagesShowAll</tabstop>
+  <tabstop>projectSelectBox</tabstop>
+  <tabstop>imageSelectBox</tabstop>
+  <tabstop>downloadButton</tabstop>
+  <tabstop>loadButton</tabstop>
+  <tabstop>removableDevicesComboBox</tabstop>
+  <tabstop>refreshRemovablesButton</tabstop>
+  <tabstop>writeFlashButton</tabstop>
+  <tabstop>showAboutButton</tabstop>
+  <tabstop>helpButton</tabstop>
+  <tabstop>closeAppButton</tabstop>
+  <tabstop>closeAboutButton</tabstop>
+ </tabstops>
  <resources>
   <include location="resources.qrc"/>
  </resources>

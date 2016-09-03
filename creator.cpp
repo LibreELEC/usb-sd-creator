@@ -49,6 +49,9 @@
 #include "deviceenumerator_unix.h"
 #endif
 
+// force update notification dialog
+//#define FORCE_UPDATE_NOTIFICATION
+
 const QString Creator::releasesUrl = "http://releases.libreelec.tv/";
 const QString Creator::versionUrl = releasesUrl + "creator_version";
 const QString Creator::helpUrl = "https://wiki.libreelec.tv/index.php?title=LibreELEC_USB-SD_Creator";
@@ -64,6 +67,12 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     privileges(privilegesArg),
     deviceEjected("")
 {
+    // dummy strings used for translation buttons on message box
+    QString forMsgBoxTranslationStrings = tr("Yes") + \
+                                          tr("No") + \
+                                          tr("OK");
+    Q_UNUSED(forMsgBoxTranslationStrings);
+
     timerId = 0;
     restoreGeometry(settings.value("window/geometry").toByteArray());
 
@@ -137,6 +146,8 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     connect(ui->closeAboutButton, SIGNAL(clicked()), this, SLOT(closeAbout()));
     connect(ui->closeAppButton, SIGNAL(clicked()), this, SLOT(close()));
 
+    connect(ui->langButton,SIGNAL(clicked()), this, SLOT(languageChange()));
+
     refreshRemovablesList();
 
     // create a timer that refreshes the device list every 1.5 second
@@ -166,6 +177,9 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     QFont aboutFont;
     aboutFont.setPointSize(13);
     ui->labelAbout->setFont(aboutFont);
+
+    ui->closeAboutButton->setAttribute(Qt::WA_MacSmallSize);
+    ui->labelVersion->setAttribute(Qt::WA_MacSmallSize);
 
     // make button little bigger (workaround for higher QComboBox)
     // and move it left for same change
@@ -206,10 +220,9 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     QDesktopServices::setUrlHandler("https", this, "httpsUrlHandler");
 
     translator = new Translator(this, &settings);  // pass parent
-    translator->fillLanguages(ui->langBox);
+    translator->fillLanguages(ui->menuLanguage, ui->langButton);
 
-    // set app version
-    ui->labelVersion->setText(tr("Version: %1\nBuild date: %2").arg(BUILD_VERSION).arg(BUILD_DATE));
+    retranslateUi();  // retranslate dynamic texts
 
     downloadVersionCheck();
 }
@@ -225,6 +238,8 @@ bool Creator::showRootMessageBox()
     QMessageBox msgBox;
     msgBox.setText(tr("Root privileges required to write image.\nRun application with sudo."));
     msgBox.setIcon(QMessageBox::Critical);
+    msgBox.setStandardButtons(QMessageBox::Ok);
+    msgBox.setButtonText(QMessageBox::Ok, tr("OK"));
     msgBox.exec();
     return true;
 #endif
@@ -306,6 +321,35 @@ void Creator::setArgFile(QString file)
     setImageFileName(file);
 }
 
+void Creator::retranslateUi()
+{
+    // retranslate dynamic texts
+    ui->labelVersion->setText(tr("Version: %1\nBuild date: %2").arg(BUILD_VERSION).arg(BUILD_DATE));
+
+    ui->labelAbout->setTextFormat(Qt::RichText);
+    ui->labelAbout->setText(QString("<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\"><h2>&copy; LibreELEC 2016</h2></span></p><p align=\"center\">%1<br/>%2</p><p align=\"center\">%3<br/><a href=\"https://github.com/LibreELEC/usb-sd-creator\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/LibreELEC/usb-sd-creator</span></a><br/></p><p align=\"center\">%4<br/>%5</p><p align=\"center\">%6<br/>%7 donations@libreelec.tv<br/><br/><a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LE7N83P6ZDCC6\"><img src=\":/icons/paypal.png\"/></a></p></body></html>") \
+          .arg(tr("This software was created with love and released")) \
+          .arg(tr("under GPLv2, using earlier work from RasPlex.")) \
+          .arg(tr("For license, credits and history, please read:")) \
+          .arg(tr("If you enjoy using LibreELEC please consider a")) \
+          .arg(tr("donation to support the project.")) \
+          .arg(tr("Click the logo below or donate")) \
+          .arg(tr("using Paypal to:")) \
+    );
+
+    int loadButtonStrLen = ui->loadButton->text().length();
+
+    QRect currRect = ui->loadButton->geometry();
+    if (loadButtonStrLen >= 14) {
+#ifdef Q_OS_WIN
+        ui->loadButton->setGeometry(currRect.x(), currRect.y(), 120, currRect.height());
+#else
+        ui->loadButton->setGeometry(currRect.x(), currRect.y(), 140, currRect.height());
+#endif
+    } else
+        ui->loadButton->setGeometry(currRect.x(), currRect.y(), 100, currRect.height());
+}
+
 void Creator::keyPressEvent(QKeyEvent *event)
 {
     if (event->key() == Qt::Key_Escape)
@@ -373,9 +417,8 @@ void Creator::changeEvent(QEvent *e) {
 
         break;
     case QEvent::LanguageChange:
-        ui->retranslateUi(this);
-        // retranslate dynamic text
-        ui->labelVersion->setText(tr("Version: %1\nBuild date: %2").arg(BUILD_VERSION).arg(BUILD_DATE));
+        ui->retranslateUi(this);  // retranslate texts from .ui file
+        retranslateUi();  // retranslate dynamic texts
         break;
     default:
         break;
@@ -477,6 +520,10 @@ void Creator::parseJsonAndSet(const QByteArray &data)
 
     QString previouslySelectedProject;
     previouslySelectedProject = settings.value("preferred/project").toString();
+
+    // RPi2/3 is default project
+    if (previouslySelectedProject.isEmpty())
+        previouslySelectedProject = "Raspberry Pi 2 and 3";
 
     int idx = ui->projectSelectBox->findText(previouslySelectedProject,
                                              Qt::MatchFixedString);
@@ -677,6 +724,12 @@ void Creator::savePreferredRemovableDevice(int idx)
 
     settings.setValue("preferred/removableDevice", ui->removableDevicesComboBox->itemData(idx).toString());
     flashProgressBarText("");
+}
+
+void Creator::languageChange()
+{
+    // menu has padding around
+    ui->menuLanguage->exec(ui->langButton->mapToGlobal(QPoint(-6, -4)));
 }
 
 void Creator::disableControls(const int which)
@@ -1049,7 +1102,9 @@ void Creator::checkNewVersion(const QString &verNewStr)
 
     int QVersionCompare = QVersionNumber::compare(qVersionNew, qVersionOld);
     qDebug() << "QVersionCompare" << QVersionCompare;
-    // QVersionCompare = 1;  // TEST
+#ifdef FORCE_UPDATE_NOTIFICATION
+    QVersionCompare = 1;  // TEST
+#endif
     if (QVersionCompare <= 0) {
         qDebug() << "no new version";
         return;
@@ -1058,29 +1113,19 @@ void Creator::checkNewVersion(const QString &verNewStr)
     QMessageBox msgBox(this);
     msgBox.setWindowTitle(tr("Update Notification"));
 #ifdef Q_OS_MAC
-    QAbstractButton *myVisitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::NoRole);
+    QAbstractButton *visitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::NoRole);
     msgBox.addButton(tr("Close"), QMessageBox::YesRole);
 #else
-    QAbstractButton *myVisitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::YesRole);
+    QAbstractButton *visitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::YesRole);
     msgBox.addButton(tr("Close"), QMessageBox::NoRole);
 #endif
-    int msgBoxWidth = 320;
-    int msgBoxWidthExtra = 28;  // real width is +28
-    int msgBoxHeight = 160;
-    QSpacerItem *horizontalSpacer = new QSpacerItem(msgBoxWidth - msgBoxWidthExtra,
-                      msgBoxHeight, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
     QString msg = tr("LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available.").arg(verNewStr);
+    // replace html entities
+    msg = msg.replace("&amp;","&").replace("&quot;","\"").replace("&gt;",">").replace("&lt;","<");
     msgBox.setText("<p align='center' style='margin-right:30px'><br>" + msg + "<br></p>");
-    QGridLayout *layout = (QGridLayout *) msgBox.layout();
-    layout->addItem(horizontalSpacer, layout->rowCount(), 0, 1, layout->columnCount());
 
-    // center msgbox over app
-    QRect mainWidgetGeometry = geometry();
-    msgBox.move((mainWidgetGeometry.x() + mainWidgetGeometry.width() / 2) - msgBoxWidth / 2,
-                (mainWidgetGeometry.y() + mainWidgetGeometry.height() / 2) - msgBoxHeight / 2);
     msgBox.exec();
-    if (msgBox.clickedButton() == myVisitButton)
+    if (msgBox.clickedButton() == visitButton)
       QDesktopServices::openUrl(QUrl(helpUrl));
 }
 
@@ -1140,11 +1185,13 @@ void Creator::downloadButtonClicked()
         msgBox.setWindowTitle(tr("Error"));
         msgBox.setText(tr("File \n%1/%2\nalready exist.").arg(saveDir).arg(selectedImage));
         msgBox.setInformativeText(tr("Do you want to overwrite?"));
-        msgBox.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
-        msgBox.setDefaultButton(QMessageBox::Cancel);
+        msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+        msgBox.setDefaultButton(QMessageBox::No);
+        msgBox.setButtonText(QMessageBox::Yes, tr("Yes"));
+        msgBox.setButtonText(QMessageBox::No, tr("No"));
         int ret = msgBox.exec();
-        if (ret != QMessageBox::Ok) {
-            downloadProgressBarText(tr("File already exist."));
+        if (ret != QMessageBox::Yes) {
+            downloadProgressBarText(tr("File already exists."));
             reset();
             return;
         }
@@ -1270,15 +1317,17 @@ void Creator::writeFlashButtonClicked()
         return;
     }
 
-    QMessageBox::StandardButton ok = QMessageBox::warning(this,
-                    tr("Confirm write"),
-                    tr("Selected device: %1\n"
-                    "Are you sure you want to write the image?\n\n"
-                    "Your USB-SD device will be wiped!").arg(destination),
-                    QMessageBox::Yes | QMessageBox::No,
-                    QMessageBox::No);
-
-    if (ok != QMessageBox::Yes) {
+    QMessageBox msgBox;
+    msgBox.setWindowTitle(tr("Confirm write"));
+    msgBox.setText(tr("Selected device: %1\n"
+                      "Are you sure you want to write the image?\n\n"
+                      "Your USB-SD device will be wiped!").arg(destination));
+    msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+    msgBox.setDefaultButton(QMessageBox::No);
+    msgBox.setButtonText(QMessageBox::Yes, tr("Yes"));
+    msgBox.setButtonText(QMessageBox::No, tr("No"));
+    int ret = msgBox.exec();
+    if (ret != QMessageBox::Yes) {
         reset();
         return;
     }

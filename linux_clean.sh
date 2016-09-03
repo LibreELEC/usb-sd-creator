@@ -26,6 +26,7 @@ if [ -f Makefile ]; then
   rmdir .generated_files
   rm -f creator.pro.user
   rm -f log
+  rm -f lang/*.qm
 fi
 
 echo ""

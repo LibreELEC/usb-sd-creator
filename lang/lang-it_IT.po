@@ -1,0 +1,344 @@
+# Translators:
+# Stefano Cecconello <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
+msgid ""
+msgstr ""
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Language-Team: Italian (https://www.transifex.com/libreelec/teams/61634/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator"
+msgstr "LibreELEC USB-SD Creator"
+
+msgctxt "Creator|"
+msgid "Write image"
+msgstr "Scrivi Immagine"
+
+msgctxt "Creator|"
+msgid "Close"
+msgstr "Chiudi"
+
+msgctxt "Creator|"
+msgid "Select file"
+msgstr "Apri file"
+
+msgctxt "Creator|"
+msgid "Select your USB stick or SD card"
+msgstr "Seleziona il drive USB o scheda SD"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Scegli versione"
+
+msgctxt "Creator|"
+msgid "Download"
+msgstr "Download"
+
+msgctxt "Creator|"
+msgid "About"
+msgstr "Informazioni su"
+
+msgctxt "Creator|"
+msgid "Download or select a local image file"
+msgstr "Download o apri un file immagine locale"
+
+msgctxt "Creator|"
+msgid "Write"
+msgstr "Scrivi"
+
+msgctxt "Creator|"
+msgid "Help"
+msgstr "Aiuto"
+
+msgctxt "Creator|"
+msgid "Show all"
+msgstr "Mostra tutto"
+
+msgctxt "Creator|"
+msgid "Eject device"
+msgstr "Espelli drive"
+
+msgctxt "Creator|"
+msgid "Load device"
+msgstr "Apri drive"
+
+msgctxt "Creator|"
+msgid "Eject  Load   Remove"
+msgstr "Espelli Apri Rimuovi"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Apri progetto"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Seleziona immagine"
+
+msgctxt "Creator|"
+msgid ""
+"Root privileges required to write image.\n"
+"Run application with sudo."
+msgstr ""
+"Sono richiesti i privilegi di Root per scrivere l'immagine.\n"
+"Esegui l'applicazione tramite sudo."
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Version: %1\n"
+"Build date: %2"
+msgstr ""
+"Versione: %1\n"
+"Data Build: %2"
+
+msgctxt "Creator|"
+msgid "This software was created with love and released"
+msgstr "Questo software e' stato creato con amore e rilasciato"
+
+msgctxt "Creator|"
+msgid "under GPLv2, using earlier work from RasPlex."
+msgstr "sotto licenza GPLv2, utilizzando un precedente fork da RasPlex."
+
+msgctxt "Creator|"
+msgid "For license, credits and history, please read:"
+msgstr "Per informazioni su licenza, crediti e storico, leggete:"
+
+msgctxt "Creator|"
+msgid "If you enjoy using LibreELEC please consider a"
+msgstr "Se avete apprezzato l'uso di LibreELEC considerate una"
+
+msgctxt "Creator|"
+msgid "donation to support the project."
+msgstr "donazione per supportare il progetto."
+
+msgctxt "Creator|"
+msgid "Click the logo below or donate"
+msgstr "Premete il logo qui sotto o donate"
+
+msgctxt "Creator|"
+msgid "using Paypal to:"
+msgstr "tramite Paypal a:"
+
+msgctxt "Creator|"
+msgid "[Stable]"
+msgstr "[Stabile]"
+
+msgctxt "Creator|"
+msgid "[Alpha]"
+msgstr "[Alpha]"
+
+msgctxt "Creator|"
+msgid "[Beta]"
+msgstr "[Beta]"
+
+msgctxt "Creator|"
+msgid "Download complete, syncing file..."
+msgstr "Download completato, sincronizzando i file..."
+
+msgctxt "Creator|"
+msgid "Download complete, verifying checksum..."
+msgstr "Download completato, verificando il checksum..."
+
+msgctxt "Creator|"
+msgid "Download complete, checksum ok."
+msgstr "Download completato, checksum OK."
+
+msgctxt "Creator|"
+msgid "Download complete, checksum not ok."
+msgstr "Download completato, checksum NON ok."
+
+#, qt-format
+msgctxt "Creator|"
+msgid "%1 seconds remaining - %2% at %3"
+msgstr "%1 sec. rimanenti - %2% a %3"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Avviso Aggiornamento"
+
+msgctxt "Creator|"
+msgid "Visit Website"
+msgstr "Visita il sito internet"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
+msgstr "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> disponibile."
+
+msgctxt "Creator|"
+msgid "Download canceled."
+msgstr "Download annullato."
+
+msgctxt "Creator|"
+msgid "Directory to store image file"
+msgstr "Directory dove salvare il file immagine"
+
+msgctxt "Creator|"
+msgid "Error"
+msgstr "Errore"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"File \n"
+"%1/%2\n"
+"already exist."
+msgstr ""
+"File \n"
+"%1/%2\n"
+"gia' esistente."
+
+msgctxt "Creator|"
+msgid "Do you want to overwrite?"
+msgstr "Vuoi sovrascrivere?"
+
+msgctxt "Creator|"
+msgid "File already exists."
+msgstr "Il file esiste gia'."
+
+msgctxt "Creator|"
+msgid "Failed to open file for writing!"
+msgstr "Impossibile aprire il file in scrittura!"
+
+msgctxt "Creator|"
+msgid "Cancel"
+msgstr "Annulla"
+
+msgctxt "Creator|"
+msgid "Open image file"
+msgstr "Apri file immagine"
+
+msgctxt "Creator|"
+msgid ""
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
+msgstr ""
+"Immagine gz compressa (*img.gz);;Immagine zip compressa (*img.zip);;Immagine"
+" non compressa (*.img);;Tutti i files (*.*)"
+
+msgctxt "Creator|"
+msgid "Writing canceled."
+msgstr "Scrittura annullata."
+
+msgctxt "Creator|"
+msgid "Confirm write"
+msgstr "Confermi scrittura"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Cannot unmount partititons on device %1"
+msgstr "Impossibile smontare le partizioni sulla periferica %1"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Not enough space on %1 [%2 < %3]"
+msgstr "Spazio disponibile insufficiente su %1 [%2 < %3]"
+
+msgctxt "Creator|"
+msgid "Syncing file system..."
+msgstr "Sincronizzando il file system..."
+
+msgctxt "Creator|"
+msgid "Writing done!"
+msgstr "Scrittura completata!"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Errore: %1"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"Drive Selezionato: %1\n"
+"Vuoi procedere e scrivere l'immagine??\n"
+"\n"
+"Il contenuto del tuo drive USB \\ Scheda SD verra' eliminato!"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "Si"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "No"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "QObject|"
+msgid "Write Error"
+msgstr "Errore scrittura"
+
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to write data to handle.\n"
+"Error %1: %2"
+msgstr ""
+"Si e' verificato un errore durante la scrittura del dato sull' handle..\n"
+"Errore %1: %2"
+
+msgctxt "QObject|"
+msgid "Volume Error"
+msgstr "Errore sul Volume"
+
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to get a handle on the volume.\n"
+"Error %1: %2"
+msgstr ""
+"Si e' verificato un errore durante l'apertura di un handle sul volume.\n"
+"Errore %1: %2"
+
+msgctxt "QObject|"
+msgid "Lock Error"
+msgstr "Errore di lock"
+
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to lock the volume.\n"
+"Error %1: %2"
+msgstr ""
+"Si e' verificato un errore durante il lock del volume.\n"
+"Errore %1: %2"
+
+msgctxt "QObject|"
+msgid "Unlock Error"
+msgstr "Errore in fase di unlock"
+
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to unlock the volume.\n"
+"Error %1: %2"
+msgstr ""
+"Si e' verificato un errore durante l'unlock del volum.\n"
+"Errore %1: %2"
+
+msgctxt "QObject|"
+msgid "Dismount Error"
+msgstr "Errore in fase di Dismount"
+
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to dismount the volume.\n"
+"Error %1: %2"
+msgstr ""
+"Si e' verificato un errore durante l'operazione di dismount del volume.\n"
+"Errore %1: %2"

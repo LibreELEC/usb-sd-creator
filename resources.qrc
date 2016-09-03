@@ -19,13 +19,47 @@
     </qresource>
     <qresource prefix="">
     		<file>lang/flag-empty.png</file>
-        <file>lang/flag-en_GB.png</file>
+        <file>lang/flag-bg_BG.png</file>
+        <file>lang/flag-cs_CZ.png</file>
+        <file>lang/flag-da_DK.png</file>
         <file>lang/flag-de_DE.png</file>
+        <file>lang/flag-el_GR.png</file>
+        <file>lang/flag-en_GB.png</file>
+        <file>lang/flag-es_ES.png</file>
+        <file>lang/flag-fi_FI.png</file>
+        <file>lang/flag-fr_FR.png</file>
+        <file>lang/flag-hu_HU.png</file>
+        <file>lang/flag-it_IT.png</file>
         <file>lang/flag-nl_NL.png</file>
+        <file>lang/flag-no_NO.png</file>
+        <file>lang/flag-pl_PL.png</file>
+        <file>lang/flag-pt_PT.png</file>
+        <file>lang/flag-ru_RU.png</file>
+        <file>lang/flag-sl_SI.png</file>
+        <file>lang/flag-sr_RS.png</file>
+        <file>lang/flag-tr_TR.png</file>
+        <file>lang/flag-uk_UA.png</file>
     </qresource>
     <qresource prefix="">
-        <file>lang/lang-en_GB.qm</file>
+        <file>lang/lang-bg_BG.qm</file>
+        <file>lang/lang-cs_CZ.qm</file>
+        <file>lang/lang-da_DK.qm</file>
         <file>lang/lang-de_DE.qm</file>
+        <file>lang/lang-el_GR.qm</file>
+        <file>lang/lang-en_GB.qm</file>
+        <file>lang/lang-es_ES.qm</file>
+        <file>lang/lang-fi_FI.qm</file>
+        <file>lang/lang-fr_FR.qm</file>
+        <file>lang/lang-hu_HU.qm</file>
+        <file>lang/lang-it_IT.qm</file>
         <file>lang/lang-nl_NL.qm</file>
+        <file>lang/lang-no_NO.qm</file>
+        <file>lang/lang-pl_PL.qm</file>
+        <file>lang/lang-pt_PT.qm</file>
+        <file>lang/lang-ru_RU.qm</file>
+        <file>lang/lang-sl_SI.qm</file>
+        <file>lang/lang-sr_RS.qm</file>
+        <file>lang/lang-tr_TR.qm</file>
+        <file>lang/lang-uk_UA.qm</file>
     </qresource>
 </RCC>

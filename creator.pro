@@ -51,8 +51,25 @@ OBJECTS_DIR = .generated_files
 CONFIG += silent
 
 TRANSLATIONS += lang/lang-en_GB.ts \
+                lang/lang-bg_BG.ts \
+                lang/lang-cs_CZ.ts \
+                lang/lang-da_DK.ts \
                 lang/lang-de_DE.ts \
-                lang/lang-nl_NL.ts
+                lang/lang-el_GR.ts \
+                lang/lang-es_ES.ts \
+                lang/lang-fi_FI.ts \
+                lang/lang-fr_FR.ts \
+                lang/lang-hu_HU.ts \
+                lang/lang-it_IT.ts \
+                lang/lang-nl_NL.ts \
+                lang/lang-no_NO.ts \
+                lang/lang-pl_PL.ts \
+                lang/lang-pt_PT.ts \
+                lang/lang-ru_RU.ts \
+                lang/lang-sl_SI.ts \
+                lang/lang-sr_RS.ts \
+                lang/lang-tr_TR.ts \
+                lang/lang-uk_UA.ts
 
 static { # everything below takes effect with CONFIG += static
     CONFIG += static
@@ -121,6 +138,14 @@ macx {
 
     SOURCES += privileges_unix.cpp
     HEADERS += privileges_unix.h
+
+    # Specifies where to find the libraries at runtime
+    QMAKE_RPATHDIR += @executable_path/../Frameworks
+    QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/
+    #QT_CONFIG -= no-pkg-config
+    #CONFIG += link_pkgconfig
+    # same thing
+    #QMAKE_POST_LINK += install_name_tool -add_rpath @executable_path/../Frameworks \"LibreELEC USB-SD Creator.app/Contents/MacOS/LibreELEC USB-SD Creator\"
 }
 
 linux* {

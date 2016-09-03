@@ -29,10 +29,25 @@
 #include <QApplication>
 #include <QFileInfo>
 #include <QDesktopServices>
+#include <QProxyStyle>
 #include <QDebug>
 
 // show debug output always
 //#define ALWAYS_DEBUG_OUTPUT
+
+#ifdef Q_OS_MAC
+class MacFontStyle : public QProxyStyle
+{
+protected:
+    void polish(QWidget *w)
+    {
+        //QMenu* mn = dynamic_cast<QMenu*>(w);
+        //if (!mn && !w->testAttribute(Qt::WA_MacNormalSize))
+        if (!w->testAttribute(Qt::WA_MacNormalSize))
+            w->setAttribute(Qt::WA_MacSmallSize);
+    }
+};
+#endif
 
 void noMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
@@ -43,9 +58,15 @@ void noMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
 
 int main(int argc, char *argv[])
 {
+    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication app(argc, argv);
     QString argFile = "";
 
+#ifdef Q_OS_MAC
+    // prevents the font size from appearing overly large on OSX
+    app.setStyle(new MacFontStyle);
+#endif
+    
 #ifndef ALWAYS_DEBUG_OUTPUT
     if (! app.arguments().contains("--debug"))
         qInstallMessageHandler(noMessageOutput);

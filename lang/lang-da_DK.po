@@ -1,0 +1,344 @@
+# Translators:
+# Ole Nielsen <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
+msgid ""
+msgstr ""
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Language-Team: Danish (https://www.transifex.com/libreelec/teams/61634/da/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator"
+msgstr "LibreELEC USB-SD Creator"
+
+msgctxt "Creator|"
+msgid "Write image"
+msgstr "Skriv image"
+
+msgctxt "Creator|"
+msgid "Close"
+msgstr "Luk"
+
+msgctxt "Creator|"
+msgid "Select file"
+msgstr "Vælg fil"
+
+msgctxt "Creator|"
+msgid "Select your USB stick or SD card"
+msgstr "Vælg dit USB-stick eller SD-kort"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Vælg version"
+
+msgctxt "Creator|"
+msgid "Download"
+msgstr "Hent"
+
+msgctxt "Creator|"
+msgid "About"
+msgstr "Om"
+
+msgctxt "Creator|"
+msgid "Download or select a local image file"
+msgstr "Hent eller vælg en lokal image-fil"
+
+msgctxt "Creator|"
+msgid "Write"
+msgstr "Skriv"
+
+msgctxt "Creator|"
+msgid "Help"
+msgstr "Hjælp"
+
+msgctxt "Creator|"
+msgid "Show all"
+msgstr "Vis alle"
+
+msgctxt "Creator|"
+msgid "Eject device"
+msgstr "Skub ud"
+
+msgctxt "Creator|"
+msgid "Load device"
+msgstr "Indlæs enhed"
+
+msgctxt "Creator|"
+msgid "Eject  Load   Remove"
+msgstr "Fjern Eject Load"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Vælg projekt"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Vælg image"
+
+msgctxt "Creator|"
+msgid ""
+"Root privileges required to write image.\n"
+"Run application with sudo."
+msgstr ""
+"Rod privilegier nødvendige for at skrive image.\n"
+"Kør applikation med sudo."
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Version: %1\n"
+"Build date: %2"
+msgstr ""
+"Version: %1\n"
+"Build dato: %2"
+
+msgctxt "Creator|"
+msgid "This software was created with love and released"
+msgstr "Denne software blev lavet med kærlighed og udgivet"
+
+msgctxt "Creator|"
+msgid "under GPLv2, using earlier work from RasPlex."
+msgstr "under GPLv2, benytter tidligere arbejde fra RasPlex."
+
+msgctxt "Creator|"
+msgid "For license, credits and history, please read:"
+msgstr "For licens, credits og historie, læs venligst:"
+
+msgctxt "Creator|"
+msgid "If you enjoy using LibreELEC please consider a"
+msgstr "Hvis du nyder at benytte LibreELEC vær sød at overveje"
+
+msgctxt "Creator|"
+msgid "donation to support the project."
+msgstr "donér for at supportere projekt."
+
+msgctxt "Creator|"
+msgid "Click the logo below or donate"
+msgstr "Klik på logoet herunder eller donér"
+
+msgctxt "Creator|"
+msgid "using Paypal to:"
+msgstr "bruger Paypal til:"
+
+msgctxt "Creator|"
+msgid "[Stable]"
+msgstr "[Stabil]"
+
+msgctxt "Creator|"
+msgid "[Alpha]"
+msgstr "[Alfa]"
+
+msgctxt "Creator|"
+msgid "[Beta]"
+msgstr "[Beta]"
+
+msgctxt "Creator|"
+msgid "Download complete, syncing file..."
+msgstr "Download afsluttet, synkroniserer fil..."
+
+msgctxt "Creator|"
+msgid "Download complete, verifying checksum..."
+msgstr "Hentning afsluttet, verificerer checksum"
+
+msgctxt "Creator|"
+msgid "Download complete, checksum ok."
+msgstr "Hentning afsluttet, checksum ok"
+
+msgctxt "Creator|"
+msgid "Download complete, checksum not ok."
+msgstr "Hentning afsluttet, checksum ikke ok"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "%1 seconds remaining - %2% at %3"
+msgstr "%1 sekunder tilbage - %2% at %3"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Opdateringsnotifikation"
+
+msgctxt "Creator|"
+msgid "Visit Website"
+msgstr "Besøg Webside"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
+msgstr "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> er tilgængelig."
+
+msgctxt "Creator|"
+msgid "Download canceled."
+msgstr "Hentning annuleret"
+
+msgctxt "Creator|"
+msgid "Directory to store image file"
+msgstr "Bibliotek til at gemme image-fil"
+
+msgctxt "Creator|"
+msgid "Error"
+msgstr "Fejl"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"File \n"
+"%1/%2\n"
+"already exist."
+msgstr ""
+"Fil \n"
+"%1/%2\n"
+"eksisterer allerede."
+
+msgctxt "Creator|"
+msgid "Do you want to overwrite?"
+msgstr "Ønsker du at overskrive?"
+
+msgctxt "Creator|"
+msgid "File already exists."
+msgstr "Fil eksisterer allerede."
+
+msgctxt "Creator|"
+msgid "Failed to open file for writing!"
+msgstr "Fejlede i at åbne fil for at skrive!"
+
+msgctxt "Creator|"
+msgid "Cancel"
+msgstr "Annulér"
+
+msgctxt "Creator|"
+msgid "Open image file"
+msgstr "Åbn image-fil"
+
+msgctxt "Creator|"
+msgid ""
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
+msgstr ""
+"Komprimeret gz image (*img.gz);;Komprimeret zip image "
+"(*img.zip);;Ukomprimeret image (*.img);;Alle filer (*.*)"
+
+msgctxt "Creator|"
+msgid "Writing canceled."
+msgstr "Skrivning annuleret."
+
+msgctxt "Creator|"
+msgid "Confirm write"
+msgstr "Bekræft skriv"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Cannot unmount partititons on device %1"
+msgstr "Kan ikke afmontere partitioner på enhed %1"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Not enough space on %1 [%2 < %3]"
+msgstr "Ikke nok plads på %1 [%2 < %3]"
+
+msgctxt "Creator|"
+msgid "Syncing file system..."
+msgstr "Synkroniserer filsystem..."
+
+msgctxt "Creator|"
+msgid "Writing done!"
+msgstr "Skrivning færdig!"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Fejl: %1"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"Valgte enhed: %1\n"
+"Er du sikker på du vil skrive image'et?\n"
+"\n"
+"Din USB-SD enhed vil blive overskrevet!"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "Ja"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "Nej"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "QObject|"
+msgid "Write Error"
+msgstr "Skrivefejl"
+
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to write data to handle.\n"
+"Error %1: %2"
+msgstr ""
+"En fejl opstod ved forsøg på at skrive data til handle.\n"
+"Fejl %1: %2"
+
+msgctxt "QObject|"
+msgid "Volume Error"
+msgstr "Volume Fejl"
+
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to get a handle on the volume.\n"
+"Error %1: %2"
+msgstr ""
+"En fejl opstod ved forsøg på at få et \"handle\" på volume'et.\n"
+"Error %1: %2"
+
+msgctxt "QObject|"
+msgid "Lock Error"
+msgstr "Låse Fejl"
+
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to lock the volume.\n"
+"Error %1: %2"
+msgstr ""
+"En fejl opstod ved forsøg på at låse volume.\n"
+"Fejl %1: %2"
+
+msgctxt "QObject|"
+msgid "Unlock Error"
+msgstr "Aflåse Fejl"
+
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to unlock the volume.\n"
+"Error %1: %2"
+msgstr ""
+"En fejl opstod ved forsøg på at aflåse volume.\n"
+"Fejl %1: %2"
+
+msgctxt "QObject|"
+msgid "Dismount Error"
+msgstr "Afmonteringsfejl"
+
+#, qt-format
+msgctxt "QObject|"
+msgid ""
+"An error occurred when attempting to dismount the volume.\n"
+"Error %1: %2"
+msgstr ""
+"En fejl opstod ved forsøg på at afmontere volume.\n"
+"Fejl %1: %2"

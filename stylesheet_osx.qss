@@ -36,7 +36,7 @@ QLineEdit {
    OS X fix https://github.com/xPoke/MetroMumble/blob/master/OSX/OSX%20Dark.qss */
 QComboBox {
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 12pt;
+  font-size: 11pt;
   margin: 0;
   padding: 4px;
   min-height: 1em;
@@ -46,4 +46,9 @@ QComboBox {
 
 QComboBox:on {
   color: #00A9F6;
+}
+
+QMenu::item:checked {
+  color: red;
+  background: orange;
 }

@@ -1,203 +1,192 @@
+# Translators:
+# Koos van Klojum <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Language-Team: Dutch (https://www.transifex.com/libreelec/teams/61634/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Language: nl_NL\n"
 "X-Qt-Contexts: true\n"
 
-#: ../creator.ui:32
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
-msgstr ""
+msgstr "LibreELEC USB-SD Creator"
 
-#: ../creator.ui:123
 msgctxt "Creator|"
 msgid "Write image"
-msgstr ""
+msgstr "Schrijf image"
 
-#: ../creator.ui:142 ../creator.ui:603 ../creator.cpp:1062 ../creator.cpp:1065
 msgctxt "Creator|"
 msgid "Close"
-msgstr ""
+msgstr "Sluiten"
 
-#: ../creator.ui:185
 msgctxt "Creator|"
 msgid "Select file"
-msgstr ""
+msgstr "Kies bestand"
 
-#: ../creator.ui:269
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr ""
+msgstr "Kies uw USB stick of SD kaart"
 
-#: ../creator.ui:313
 msgctxt "Creator|"
 msgid "Select version"
-msgstr ""
+msgstr "Kies versie"
 
-#: ../creator.ui:332 ../creator.cpp:619
 msgctxt "Creator|"
 msgid "Download"
-msgstr ""
+msgstr "Download"
 
-#: ../creator.ui:348
 msgctxt "Creator|"
 msgid "About"
-msgstr ""
+msgstr "Over"
 
-#: ../creator.ui:418
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr ""
+msgstr "Download of kies lokaal imagebestand"
 
-#: ../creator.ui:437 ../creator.cpp:645
 msgctxt "Creator|"
 msgid "Write"
-msgstr ""
+msgstr "Schrijf"
 
-#: ../creator.ui:453
 msgctxt "Creator|"
 msgid "Help"
-msgstr ""
+msgstr "Help"
 
-#: ../creator.ui:472
 msgctxt "Creator|"
 msgid "Show all"
-msgstr ""
+msgstr "Alle versies"
 
-#: ../creator.ui:519
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr ""
+msgstr "Apparaat uitwerpen"
 
-#: ../creator.ui:545
 msgctxt "Creator|"
 msgid "Load device"
-msgstr ""
+msgstr "Apparaat inlezen"
 
-#: ../creator.ui:565
 msgctxt "Creator|"
 msgid "Eject  Load   Remove"
-msgstr ""
+msgstr "Uitwerpen Laden Verwijderen"
 
-#: ../creator.ui:621
-msgctxt "Creator|"
-msgid ""
-"<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; "
-"font-weight:600;\"><h2>© LibreELEC 2016</h2></span></p><p "
-"align=\"center\">This software was created with love and released<br/>under "
-"GPLv2, using earlier work from RasPlex.</p><p align=\"center\">For license, "
-"credits and history, please read:<br/><a "
-"href=\"https://github.com/LibreELEC/usb-sd-creator\"><span style=\" "
-"text-decoration: underline; "
-"color:#0000ff;\">https://github.com/LibreELEC/usb-sd-creator</span></a><br/></p><p "
-"align=\"center\">If you enjoy using LibreELEC please consider a<br/>donation "
-"to support the project.</p><p align=\"center\">Click the logo below or "
-"donate<br/>using Paypal to: donations@libreelec.tv<br/><br/><a "
-"href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LE7N83P6ZDCC6\"><img "
-"src=\":/icons/paypal.png\"/></a></p></body></html>"
-msgstr ""
-
-#: ../creator.cpp:179
 msgctxt "Creator|"
 msgid "Select project"
-msgstr ""
+msgstr "Kies project"
 
-#: ../creator.cpp:180
 msgctxt "Creator|"
 msgid "Select image"
-msgstr ""
+msgstr "Kies image"
 
-#: ../creator.cpp:212 ../creator.cpp:378
+msgctxt "Creator|"
+msgid ""
+"Root privileges required to write image.\n"
+"Run application with sudo."
+msgstr ""
+"Root-privileges zijn vereist voor het schrijven van de image.\n"
+"Start applicatie met sudo."
+
 #, qt-format
 msgctxt "Creator|"
 msgid ""
 "Version: %1\n"
 "Build date: %2"
 msgstr ""
+"Versie: %1\n"
+"Bouwdatum: %2"
 
-#: ../creator.cpp:226
 msgctxt "Creator|"
-msgid ""
-"Root privileges required to write image.\n"
-"Run application with sudo."
-msgstr ""
+msgid "This software was created with love and released"
+msgstr "Deze software werd met liefde ontworpen en uitgegeven"
 
-#: ../creator.cpp:541 ../creator.cpp:551
+msgctxt "Creator|"
+msgid "under GPLv2, using earlier work from RasPlex."
+msgstr "onder GPLv2, gebruikmakend van eerder werk van RasPlex."
+
+msgctxt "Creator|"
+msgid "For license, credits and history, please read:"
+msgstr "Voor de licentie, credits en geschiedenis, bezoek de webpagina:"
+
+msgctxt "Creator|"
+msgid "If you enjoy using LibreELEC please consider a"
+msgstr "Indien LibreELEC u bevalt, overweeg dan een"
+
+msgctxt "Creator|"
+msgid "donation to support the project."
+msgstr "donatie ter ondersteuning van het project."
+
+msgctxt "Creator|"
+msgid "Click the logo below or donate"
+msgstr "Klik op het logo hieronder of doneer"
+
+msgctxt "Creator|"
+msgid "using Paypal to:"
+msgstr "via Paypal aan:"
+
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr ""
+msgstr "[Stabiel]"
 
-#: ../creator.cpp:544
 msgctxt "Creator|"
 msgid "[Alpha]"
-msgstr ""
+msgstr "[Alpha]"
 
-#: ../creator.cpp:546
 msgctxt "Creator|"
 msgid "[Beta]"
-msgstr ""
+msgstr "[Beta]"
 
-#: ../creator.cpp:921
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr ""
+msgstr "Download compleet, bestand synchroniseren..."
 
-#: ../creator.cpp:929
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr ""
+msgstr "Download compleet, checksum controleren..."
 
-#: ../creator.cpp:932
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr ""
+msgstr "Download compleet, checksum in orde."
 
-#: ../creator.cpp:934
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
 msgstr ""
+"Download compleet, font color=&quot;red&quot;&gt;checksum wijkt "
+"af&lt;/font&gt;."
 
-#: ../creator.cpp:1016 ../creator.cpp:1449
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr ""
+msgstr "%1 seconds te gaan - %2% met %3"
 
-#: ../creator.cpp:1059
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr ""
+msgstr "Updatemelding"
 
-#: ../creator.cpp:1061 ../creator.cpp:1064
 msgctxt "Creator|"
 msgid "Visit Website"
-msgstr ""
+msgstr "Bezoek website"
 
-#: ../creator.cpp:1073
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
 msgstr ""
+"LibreELEC USB-SD Creator &lt;font color=&quot;blue&quot;&gt;%1&lt;/font&gt; "
+"is beschikbaar."
 
-#: ../creator.cpp:1101
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr ""
+msgstr "Download afgebroken."
 
-#: ../creator.cpp:1128
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr ""
+msgstr "Folder voor opslaan imagebestand"
 
-#: ../creator.cpp:1140
 msgctxt "Creator|"
 msgid "Error"
-msgstr ""
+msgstr "Fout"
 
-#: ../creator.cpp:1141
 #, qt-format
 msgctxt "Creator|"
 msgid ""
@@ -205,50 +194,69 @@ msgid ""
 "%1/%2\n"
 "already exist."
 msgstr ""
+"Bestand\n"
+"%1/%2\n"
+"bestaat al."
 
-#: ../creator.cpp:1142
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr ""
+msgstr "Wilt u het overschrijven?"
 
-#: ../creator.cpp:1147
 msgctxt "Creator|"
-msgid "File already exist."
-msgstr ""
+msgid "File already exists."
+msgstr "Bestand is reeds aanwezig."
 
-#: ../creator.cpp:1169
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr ""
+msgstr "Te schrijven bestand kon niet geopend worden!"
 
-#: ../creator.cpp:1182 ../creator.cpp:1317
 msgctxt "Creator|"
 msgid "Cancel"
-msgstr ""
+msgstr "Afbreken"
 
-#: ../creator.cpp:1205
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr ""
+msgstr "Open imagebestand"
 
-#: ../creator.cpp:1207
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 msgstr ""
+"Gecomprimeerd gz-imagebestand (*img.gz);;Gecomprimeerd zipbestand "
+"(*img.zip);;Ongecomprimeerde image (*.img);;Alle bestanden (*.*)"
 
-#: ../creator.cpp:1248
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr ""
+msgstr "Schrijven afgebroken."
 
-#: ../creator.cpp:1274
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr ""
+msgstr "Bevestig schrijven"
 
-#: ../creator.cpp:1275
+#, qt-format
+msgctxt "Creator|"
+msgid "Cannot unmount partititons on device %1"
+msgstr "Kan partities van apparaat %1 niet ontkoppelen"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Not enough space on %1 [%2 < %3]"
+msgstr "Onvoldoende schijfruimte op %1 [%2 &lt; %3]"
+
+msgctxt "Creator|"
+msgid "Syncing file system..."
+msgstr "Bestandssysteem synchroniseren..."
+
+msgctxt "Creator|"
+msgid "Writing done!"
+msgstr "Schrijven is klaar!"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Fout: %1"
+
 #, qt-format
 msgctxt "Creator|"
 msgid ""
@@ -257,96 +265,84 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
+"Gekozen apparaat: %1\n"
+"Weet u zeker dat u de image wilt schrijven?\n"
+"\n"
+"Uw USB-SD-apparaat zal gewist worden!"
 
-#: ../creator.cpp:1292
-#, qt-format
 msgctxt "Creator|"
-msgid "Cannot unmount partititons on device %1"
-msgstr ""
+msgid "Yes"
+msgstr "Ja"
 
-#: ../creator.cpp:1305
-#, qt-format
 msgctxt "Creator|"
-msgid "Not enough space on %1 [%2 < %3]"
-msgstr ""
+msgid "No"
+msgstr "Neen"
 
-#: ../creator.cpp:1329
 msgctxt "Creator|"
-msgid "Syncing file system..."
-msgstr ""
+msgid "OK"
+msgstr "OK"
 
-#: ../creator.cpp:1338
-msgctxt "Creator|"
-msgid "Writing done!"
-msgstr ""
-
-#: ../creator.cpp:1350
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr ""
-
-#: ../diskwriter_windows.cpp:116
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr ""
+msgstr "Schrijffout"
 
-#: ../diskwriter_windows.cpp:117
 #, qt-format
 msgctxt "QObject|"
 msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
+"Een fout trad op tijdens het schrijven van data.\n"
+"Fout %1: %2"
 
-#: ../diskwriter_windows.cpp:155
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr ""
+msgstr "Volumefout"
 
-#: ../diskwriter_windows.cpp:156
 #, qt-format
 msgctxt "QObject|"
 msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Een fout trad op tijdens het opvragen van het volume.\n"
+"Fout %1: %2"
 
-#: ../diskwriter_windows.cpp:171
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr ""
+msgstr "Lockfout"
 
-#: ../diskwriter_windows.cpp:172
 #, qt-format
 msgctxt "QObject|"
 msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Een fout trad op tijdens het locken van het volume.\n"
+"Fout %1: %2"
 
-#: ../diskwriter_windows.cpp:187
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr ""
+msgstr "Unlockfout"
 
-#: ../diskwriter_windows.cpp:188
 #, qt-format
 msgctxt "QObject|"
 msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Een fout trad op tijdens het unlocken van het volume.\n"
+"Fout %1: %2"
 
-#: ../diskwriter_windows.cpp:203
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr ""
+msgstr "Ontkoppelfout"
 
-#: ../diskwriter_windows.cpp:204
 #, qt-format
 msgctxt "QObject|"
 msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Een fout trad op tijdens het ontkoppelen van het volume.\n"
+"Fout %1: %2"

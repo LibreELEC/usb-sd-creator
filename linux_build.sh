@@ -28,7 +28,11 @@ else
   QT_DIR=~/Qt5.6.1/5.6-static-64
 fi
 
-export PATH=$QT_DIR/bin:$PATH
+export PATH=$QT_DIR/bin:$QT_DIR/../5.6/gcc_64/bin:$PATH
+
+echo ""
+echo "Creating .qm files"
+lrelease creator.pro
 
 echo ""
 echo "Running qmake..."
