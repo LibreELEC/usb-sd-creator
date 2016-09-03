@@ -139,7 +139,7 @@
       <enum>Qt::StrongFocus</enum>
      </property>
      <property name="text">
-      <string>Close</string>
+      <string>&amp;Close</string>
      </property>
      <property name="flat">
       <bool>false</bool>
@@ -182,7 +182,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Select file</string>
+      <string>Select &amp;file</string>
      </property>
     </widget>
     <widget class="QComboBox" name="removableDevicesComboBox">
@@ -329,7 +329,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Download</string>
+      <string>&amp;Download</string>
      </property>
     </widget>
     <widget class="QPushButton" name="showAboutButton">
@@ -345,7 +345,7 @@
       <enum>Qt::StrongFocus</enum>
      </property>
      <property name="text">
-      <string>About</string>
+      <string>&amp;About</string>
      </property>
     </widget>
     <widget class="QComboBox" name="imageSelectBox">
@@ -434,7 +434,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Write</string>
+      <string>&amp;Write</string>
      </property>
     </widget>
     <widget class="QPushButton" name="helpButton">
@@ -450,7 +450,7 @@
       <enum>Qt::StrongFocus</enum>
      </property>
      <property name="text">
-      <string>Help</string>
+      <string>&amp;Help</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="imagesShowAll">
@@ -469,7 +469,7 @@
       <enum>Qt::RightToLeft</enum>
      </property>
      <property name="text">
-      <string>Show all</string>
+      <string>&amp;Show all</string>
      </property>
      <property name="checked">
       <bool>false</bool>
@@ -606,7 +606,7 @@
       <enum>Qt::StrongFocus</enum>
      </property>
      <property name="text">
-      <string>Close</string>
+      <string>&amp;Close</string>
      </property>
     </widget>
     <widget class="QLabel" name="labelAbout">
@@ -681,7 +681,7 @@
    </property>
    <widget class="QMenu" name="menuLanguage">
     <property name="title">
-     <string></string>
+     <string/>
     </property>
    </widget>
    <addaction name="menuLanguage"/>
