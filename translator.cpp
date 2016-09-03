@@ -143,4 +143,6 @@ void Translator::languageAction(QAction *action)
 
     // set checked for current one
     action->setChecked(true);
+    // set tooltip
+    langBtn->setToolTip(action->text());
 }
