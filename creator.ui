@@ -136,7 +136,7 @@
       </rect>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="text">
       <string>Close</string>
@@ -342,7 +342,7 @@
       </rect>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="text">
       <string>About</string>
@@ -447,7 +447,7 @@
       </rect>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="text">
       <string>Help</string>
@@ -541,6 +541,9 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="statusTip">
       <string>Load device</string>
      </property>
@@ -577,6 +580,9 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="text">
       <string/>
      </property>
@@ -597,7 +603,7 @@
       </rect>
      </property>
      <property name="focusPolicy">
-      <enum>Qt::NoFocus</enum>
+      <enum>Qt::StrongFocus</enum>
      </property>
      <property name="text">
       <string>Close</string>
@@ -710,6 +716,21 @@
   <zorder>langButton</zorder>
  </widget>
  <layoutdefault spacing="5" margin="10"/>
+ <tabstops>
+  <tabstop>langButton</tabstop>
+  <tabstop>imagesShowAll</tabstop>
+  <tabstop>projectSelectBox</tabstop>
+  <tabstop>imageSelectBox</tabstop>
+  <tabstop>downloadButton</tabstop>
+  <tabstop>loadButton</tabstop>
+  <tabstop>removableDevicesComboBox</tabstop>
+  <tabstop>refreshRemovablesButton</tabstop>
+  <tabstop>writeFlashButton</tabstop>
+  <tabstop>showAboutButton</tabstop>
+  <tabstop>helpButton</tabstop>
+  <tabstop>closeAppButton</tabstop>
+  <tabstop>closeAboutButton</tabstop>
+ </tabstops>
  <resources>
   <include location="resources.qrc"/>
  </resources>
