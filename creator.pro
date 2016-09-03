@@ -138,6 +138,14 @@ macx {
 
     SOURCES += privileges_unix.cpp
     HEADERS += privileges_unix.h
+
+    # Specifies where to find the libraries at runtime
+    QMAKE_RPATHDIR += @executable_path/../Frameworks
+    QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/
+    #QT_CONFIG -= no-pkg-config
+    #CONFIG += link_pkgconfig
+    # same thing
+    #QMAKE_POST_LINK += install_name_tool -add_rpath @executable_path/../Frameworks \"LibreELEC USB-SD Creator.app/Contents/MacOS/LibreELEC USB-SD Creator\"
 }
 
 linux* {
