@@ -663,7 +663,7 @@ void Creator::reset(const QString& message)
     ui->imageSelectBox->setEnabled(true);
 
     ui->downloadButton->setEnabled(true);
-    ui->downloadButton->setText(tr("Download"));
+    ui->downloadButton->setText(tr("&Download"));
 
     ui->refreshRemovablesButton->setEnabled(true);
     ui->removableDevicesComboBox->setEnabled(true);
@@ -689,7 +689,7 @@ void Creator::reset(const QString& message)
     else
         ui->writeFlashButton->setEnabled(false);
 
-    ui->writeFlashButton->setText(tr("Write"));
+    ui->writeFlashButton->setText(tr("&Write"));
 
     if (message.isNull() == false) {
         if (state == STATE_DOWNLOADING_IMAGE) {
@@ -1113,11 +1113,11 @@ void Creator::checkNewVersion(const QString &verNewStr)
     QMessageBox msgBox(this);
     msgBox.setWindowTitle(tr("Update Notification"));
 #ifdef Q_OS_MAC
-    QAbstractButton *visitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::NoRole);
-    msgBox.addButton(tr("Close"), QMessageBox::YesRole);
+    QAbstractButton *visitButton = msgBox.addButton(tr("&Visit Website"), QMessageBox::NoRole);
+    msgBox.addButton(tr("&Close"), QMessageBox::YesRole);
 #else
-    QAbstractButton *visitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::YesRole);
-    msgBox.addButton(tr("Close"), QMessageBox::NoRole);
+    QAbstractButton *visitButton = msgBox.addButton(tr("&Visit Website"), QMessageBox::YesRole);
+    msgBox.addButton(tr("&Close"), QMessageBox::NoRole);
 #endif
     QString msg = tr("LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available.").arg(verNewStr);
     // replace html entities
@@ -1226,7 +1226,7 @@ void Creator::downloadButtonClicked()
     speedTime.start();
     averageSpeed = new MovingAverage(50);
 
-    ui->downloadButton->setText(tr("Cancel"));
+    ui->downloadButton->setText(tr("Cance&l"));
 }
 
 void Creator::getImageFileNameFromUser()
@@ -1363,7 +1363,7 @@ void Creator::writeFlashButtonClicked()
     state = STATE_WRITING_IMAGE;
     privileges.SetRoot();    // root need for opening a device
 
-    ui->writeFlashButton->setText(tr("Cancel"));
+    ui->writeFlashButton->setText(tr("Cance&l"));
     emit proceedToWriteImageToDevice(imageFile.fileName(), destination);
 
     speedTime.start();
