@@ -3,53 +3,51 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Language: nl_NL\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Language: sk_SK\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
-msgstr "LibreELEC USB-SD Creator"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "Schrijf image"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Kies uw USB stick of SD kaart"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "Download of kies lokaal imagebestand"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr "Apparaat &uitwerpen"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Load device"
-msgstr "Apparaat &inlezen"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Eject  Load   Remove"
-msgstr "Uitwerpen Laden Verwijderen"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select project"
-msgstr "Kies &project"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select image"
-msgstr "Kies &image"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
-"Root-privileges zijn vereist voor het schrijven van de image.\n"
-"Start applicatie met sudo."
 
 #, qt-format
 msgctxt "Creator|"
@@ -57,83 +55,79 @@ msgid ""
 "Version: %1\n"
 "Build date: %2"
 msgstr ""
-"Versie: %1\n"
-"Bouwdatum: %2"
 
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr "Deze software werd met liefde ontworpen en uitgegeven"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "onder GPLv2, gebruikmakend van eerder werk van RasPlex."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "Voor de licentie, credits en geschiedenis, bezoek de webpagina:"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "Indien LibreELEC u bevalt, overweeg dan een"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "donatie ter ondersteuning van het project."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Klik op het logo hieronder of doneer"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "using Paypal to:"
-msgstr "via Paypal aan:"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr "[Stabiel]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "[Alpha]"
-msgstr "[Alpha]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "[Beta]"
-msgstr "[Beta]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr "Download compleet, bestand synchroniseren..."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr "Download compleet, checksum controleren..."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "Download compleet, checksum in orde."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
 msgstr ""
-"Download compleet, font color=&quot;red&quot;&gt;checksum wijkt "
-"af&lt;/font&gt;."
 
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr "%1 seconds te gaan - %2% met %3"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr "Download afgebroken."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr "Folder voor opslaan imagebestand"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Error"
-msgstr "Fout"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
@@ -142,64 +136,59 @@ msgid ""
 "%1/%2\n"
 "already exist."
 msgstr ""
-"Bestand\n"
-"%1/%2\n"
-"bestaat al."
 
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr "Wilt u het overschrijven?"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "File already exists."
-msgstr "Bestand is reeds aanwezig."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr "Te schrijven bestand kon niet geopend worden!"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr "Open imagebestand"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
 "image (*.img);;All files (*.*)"
 msgstr ""
-"Gecomprimeerd gz-imagebestand (*img.gz);;Gecomprimeerd zipbestand "
-"(*img.zip);;Ongecomprimeerde image (*.img);;Alle bestanden (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr "Schrijven afgebroken."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr "Bevestig schrijven"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr "Kan partities van apparaat %1 niet ontkoppelen"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Onvoldoende schijfruimte op %1 [%2 &lt; %3]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr "Bestandssysteem synchroniseren..."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Writing done!"
-msgstr "Schrijven is klaar!"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
-msgstr "Fout: %1"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
@@ -209,75 +198,71 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
-"Gekozen apparaat: %1\n"
-"Weet u zeker dat u de image wilt schrijven?\n"
-"\n"
-"Uw USB-SD-apparaat zal gewist worden!"
 
 msgctxt "Creator|"
 msgid "Yes"
-msgstr "&Ja"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "No"
-msgstr "&Nee"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "OK"
-msgstr "&OK"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr "Updatemelding"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select version"
-msgstr "Kies versie"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Close"
-msgstr "&Sluiten"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Download"
-msgstr "&Download"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&About"
-msgstr "&Over"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Write"
-msgstr "&Schrijf"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Help"
-msgstr "&Help"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select &file"
-msgstr "Kies &bestand"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Show all"
-msgstr "&Toon alles"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Cance&l"
-msgstr "Af&breken"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Visit Website"
-msgstr "&Bezoek website"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Creator %1 is beschikbaar."
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr "Schrijffout"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -285,12 +270,10 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het schrijven van data.\n"
-"Fout %1: %2"
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr "Volumefout"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -298,12 +281,10 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het opvragen van het volume.\n"
-"Fout %1: %2"
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr "Lockfout"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -311,12 +292,10 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het locken van het volume.\n"
-"Fout %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr "Unlockfout"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -324,12 +303,10 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het unlocken van het volume.\n"
-"Fout %1: %2"
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr "Ontkoppelfout"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -337,5 +314,3 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Een fout trad op tijdens het ontkoppelen van het volume.\n"
-"Fout %1: %2"

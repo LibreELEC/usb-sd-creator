@@ -1,14 +1,8 @@
-# Translators:
-# Alex Deryskyba <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Alex Deryskyba <email-removed>, 2016\n"
-"Language-Team: Ukrainian (https://www.transifex.com/libreelec/teams/61634/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -20,44 +14,12 @@ msgid "Write image"
 msgstr "Запишіть образ"
 
 msgctxt "Creator|"
-msgid "Close"
-msgstr "Закрити"
-
-msgctxt "Creator|"
-msgid "Select file"
-msgstr "Вибрати файл"
-
-msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
 msgstr "Виберіть ваш USB-диск або SD-карту"
 
 msgctxt "Creator|"
-msgid "Select version"
-msgstr "Виберіть версію"
-
-msgctxt "Creator|"
-msgid "Download"
-msgstr "Завантажити"
-
-msgctxt "Creator|"
-msgid "About"
-msgstr "Про програму"
-
-msgctxt "Creator|"
 msgid "Download or select a local image file"
 msgstr "Завантажте або виберіть локальний файл образу"
-
-msgctxt "Creator|"
-msgid "Write"
-msgstr "Записати"
-
-msgctxt "Creator|"
-msgid "Help"
-msgstr "Допомога"
-
-msgctxt "Creator|"
-msgid "Show all"
-msgstr "Показати всі"
 
 msgctxt "Creator|"
 msgid "Eject device"
@@ -73,17 +35,19 @@ msgstr "Вилучити  Завантажити   Видалити"
 
 msgctxt "Creator|"
 msgid "Select project"
-msgstr ""
+msgstr "Вибрати проект"
 
 msgctxt "Creator|"
 msgid "Select image"
-msgstr ""
+msgstr "Вибрати образ"
 
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
+"Для запису образу необхідні привілегії root.\n"
+"Запустіть додаток з використанням sudo."
 
 #, qt-format
 msgctxt "Creator|"
@@ -96,11 +60,11 @@ msgstr ""
 
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr ""
+msgstr "Ця програма була свторена з любов'ю і випущена"
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr ""
+msgstr "під ліцензією GPLv2, використовуючи попередню роботу від RasPlex."
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
@@ -124,15 +88,15 @@ msgstr "через Paypal на користь:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr ""
+msgstr "[Стабільна]"
 
 msgctxt "Creator|"
 msgid "[Alpha]"
-msgstr ""
+msgstr "[Альфа]"
 
 msgctxt "Creator|"
 msgid "[Beta]"
-msgstr ""
+msgstr "[Бета]"
 
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
@@ -153,32 +117,19 @@ msgstr "Завантаження завершене, контрольна сум
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Visit Website"
-msgstr "Відвідати веб-сайт"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
-msgstr ""
+msgstr "%1 секунд залишилося - %2% на швидкості %3"
 
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr ""
+msgstr "Завантаження скасоване."
 
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr ""
+msgstr "Каталог для збереження файла образу"
 
 msgctxt "Creator|"
 msgid "Error"
-msgstr ""
+msgstr "Помилка"
 
 #, qt-format
 msgctxt "Creator|"
@@ -187,63 +138,64 @@ msgid ""
 "%1/%2\n"
 "already exist."
 msgstr ""
+"Файл \n"
+"%1/%2\n"
+"вже існує."
 
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr ""
+msgstr "Ви бажаєте перезаписати?"
 
 msgctxt "Creator|"
 msgid "File already exists."
-msgstr ""
+msgstr "Файл вже існує."
 
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Cancel"
-msgstr ""
+msgstr "Не вдалося відкрити файл для запису!"
 
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr ""
+msgstr "Відкрити файл образу"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
-" image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
+"image (*.img);;All files (*.*)"
 msgstr ""
+"Стиснутий образ gz (*img.gz);;Стиснутий образ zip (*img.zip);;Нестиснутий "
+"образ (*.img);;Всі файли (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr ""
+msgstr "Запис скасований."
 
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr ""
+msgstr "Підтвердіть запис"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr ""
+msgstr "Неможливо розмонтувати розділи на пристрої %1"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr ""
+msgstr "Недостатньо простору на %1 [%2 < %3]"
 
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr ""
+msgstr "Синхронізація файлової системи..."
 
 msgctxt "Creator|"
 msgid "Writing done!"
-msgstr ""
+msgstr "Запис завершено!"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
-msgstr ""
+msgstr "Помилка: %1"
 
 #, qt-format
 msgctxt "Creator|"
@@ -253,22 +205,75 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
+"Вибраний пристрій: %1\n"
+"Ви впевнені, що хочете записати образ?\n"
+"\n"
+"Ваш пристрій USB-SD буде витертий!"
 
 msgctxt "Creator|"
 msgid "Yes"
-msgstr ""
+msgstr "Так"
 
 msgctxt "Creator|"
 msgid "No"
-msgstr ""
+msgstr "Ні"
 
 msgctxt "Creator|"
 msgid "OK"
-msgstr ""
+msgstr "OK"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Повідомлення про оновлення"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Виберіть версію"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "&Закрити"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "За&вантажити"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "&Про програму"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Запи&сати"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "&Допомога"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Вибрати &файл"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "П&оказати всі"
+
+msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Скасувати"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Відвідати веб-сайт"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "Доступний LibreELEC USB-SD Creator %1."
 
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr ""
+msgstr "Помилка запису"
 
 #, qt-format
 msgctxt "QObject|"
@@ -276,10 +281,12 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
+"Виникла помилка при спробі запису даних в хендл.\n"
+"Помилка %1: %2"
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr ""
+msgstr "Помилка тома"
 
 #, qt-format
 msgctxt "QObject|"
@@ -287,10 +294,12 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Виникла помилка при спробі отримати хендл на томі.\n"
+"Помилка %1: %2"
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr ""
+msgstr "Помилка блокування"
 
 #, qt-format
 msgctxt "QObject|"
@@ -298,10 +307,12 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Виникла помилка при спробі блокування тома.\n"
+"Помилка %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr ""
+msgstr "Помилка розблокування"
 
 #, qt-format
 msgctxt "QObject|"
@@ -309,10 +320,12 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Виникла помилка при спробі розблокування тома.\n"
+"Помилка %1: %2"
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr ""
+msgstr "Помикла розмонтування"
 
 #, qt-format
 msgctxt "QObject|"
@@ -320,3 +333,5 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Виникла помилка при спробі розмонтування тома.\n"
+"Помилка %1: %2"

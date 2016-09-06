@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_BR">
+<TS version="2.1" language="se_NO">
 <context>
     <name>Creator</name>
     <message>
@@ -9,79 +9,79 @@
     </message>
     <message>
         <source>Write image</source>
-        <translation>Escrever imagem</translation>
+        <translation>Skriv avbild</translation>
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>Selecione a sua Pen USB ou cartão SD</translation>
+        <translation>Välj USB eller SD-kort</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
-        <translation>Transfira ou selecione um ficheiro de imagem localmente</translation>
+        <translation>Ladda ner eller välj en lokal fil</translation>
     </message>
     <message>
         <source>Eject device</source>
-        <translation>Ejetar o dispositivo</translation>
+        <translation>Mata ut enhet</translation>
     </message>
     <message>
         <source>Load device</source>
-        <translation>Carregar o dispositivo</translation>
+        <translation>Ladda enhet</translation>
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Ejetar Carregar Remover</translation>
+        <translation>Mata ut, Ladda, Ta bort</translation>
     </message>
     <message>
         <source>Select project</source>
-        <translation>Selecionar projeto</translation>
+        <translation>Välj projekt</translation>
     </message>
     <message>
         <source>Select image</source>
-        <translation>Selecionar imagem</translation>
+        <translation>Välj avbild</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>São necessários privilégios de root para escrever a imagem.
-Execute a aplicação com sudo.</translation>
+        <translation>Det krävs Root-behörighet för att skriva en avbild
+Kör programmet med sudo.</translation>
     </message>
     <message>
         <source>Version: %1
 Build date: %2</source>
-        <translation>Versão: %1
-Criada em: %2</translation>
+        <translation>Version: %1
+Byggdatum: %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
-        <translation>Este software foi criado com amor e lançado</translation>
+        <translation>Denna programvara skapades med kärlek och gavs ut</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>sobre GPLv2, usando trabalho anterior do RasPlex.</translation>
+        <translation>under GPLv2, med hjälp av tidigare arbete från RasPlex.</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
-        <translation>Para licença, créditos e histórico, leia por favor:</translation>
+        <translation>För licens, credd och historik, läs:</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation>Se gosta de usar o LibreELEC, por favor considere um</translation>
+        <translation>Om du gillar att använda LibreELEC vänligen överväg en</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation>donativo para suportar o projeto.</translation>
+        <translation>donation för att stötta projektet.</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
-        <translation>Clique no logotipo abaixo ou doe</translation>
+        <translation>Klicka på logotypen nedan för att donera</translation>
     </message>
     <message>
         <source>using Paypal to:</source>
-        <translation>através do Paypal para:</translation>
+        <translation>använd PayPal för:</translation>
     </message>
     <message>
         <source>[Stable]</source>
-        <translation>[Estável]</translation>
+        <translation>[Stable]</translation>
     </message>
     <message>
         <source>[Alpha]</source>
@@ -93,109 +93,109 @@ Criada em: %2</translation>
     </message>
     <message>
         <source>Download complete, syncing file...</source>
-        <translation>Transferência completa, a sincronizar o ficheiro...</translation>
+        <translation>Nedladdningen slutförd, synkroniserar filer...</translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation>Transferência completa, a verificar o checksum...</translation>
+        <translation>Nedladdning slutförd, veriferar checksumma...</translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation>Transferência completa, checksum ok.</translation>
+        <translation>Nedladdning slutförd, checksumma ok.</translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation>Transferência completa, checksum não ok.</translation>
+        <translation>Nedladdning slutförd, checksumman är fel.</translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation>%1 segundos restantes - %2% a %3</translation>
+        <translation>%1 sekunder kvarstår - %2% till %3</translation>
     </message>
     <message>
         <source>Download canceled.</source>
-        <translation>Transferência cancelada.</translation>
+        <translation>Nedladdning avbruten.</translation>
     </message>
     <message>
         <source>Directory to store image file</source>
-        <translation>Pasta para guardar o ficheiro de imagem</translation>
+        <translation>Mapp att spara avbilden i</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Erro</translation>
+        <translation>Fel</translation>
     </message>
     <message>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation>O ficheiro
+        <translation>Filen
 %1/%2
-já existe.</translation>
+finns redan.</translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
-        <translation>Deseja sobrepor?</translation>
+        <translation>Vill du skriva över den?</translation>
     </message>
     <message>
         <source>File already exists.</source>
-        <translation>O ficheiro já existe.</translation>
+        <translation>Filen finns nedan.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation>Falha no acesso ao ficheiro para escrita!</translation>
+        <translation>Kunde inte skriva till filen!</translation>
     </message>
     <message>
         <source>Open image file</source>
-        <translation>Abrir o ficheiro de imagem</translation>
+        <translation>Öppna avbild</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation>Imagem gz comprimida (*img.gz);;Imagem zip comprimida (*img.zip);;Imagem descomprimida (*.img);;Todos os ficheiros (*.*)</translation>
+        <translation>Komprimerad gz avbild (*img.gz);;Komprimerad zip avbild (*img.zip);;Okomprimerad avbild (*.img);;Alla filer (*.*)</translation>
     </message>
     <message>
         <source>Writing canceled.</source>
-        <translation>Escrita cancelada.</translation>
+        <translation>Skrivningen avbröts.</translation>
     </message>
     <message>
         <source>Confirm write</source>
-        <translation>Confirmação de escrita</translation>
+        <translation>Bekräfta skrivning</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
-        <translation>Não foi possível desmontar as partições do dispositivo %1</translation>
+        <translation>Kan inte avmontera partitioner på enhet %1</translation>
     </message>
     <message>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation>Não existe espaço suficiente em %1 [%2 &lt; %3]</translation>
+        <translation>Det saknas utrymme på %1 [%2 &lt; %3]</translation>
     </message>
     <message>
         <source>Syncing file system...</source>
-        <translation>A sincronizar o sistema de ficheiros...</translation>
+        <translation>Synkroniserar filsystem...</translation>
     </message>
     <message>
         <source>Writing done!</source>
-        <translation>Escrita completa!</translation>
+        <translation>Skrivning klar!</translation>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Erro: %1</translation>
+        <translation>Fel: %1</translation>
     </message>
     <message>
         <source>Selected device: %1
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation>Dispositivo selecionado: %1
-Tem a certeza que quer escrever a imagem?
+        <translation>Vald enhet: %1
+Är du säker på att du vill skriva avbilden?
 
-O seu dispositivo USB-SD será apagado!</translation>
+Din USB-SD enhet kommer raderas!</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation>Sim</translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <source>No</source>
-        <translation>Não</translation>
+        <translation>Nej</translation>
     </message>
     <message>
         <source>OK</source>
@@ -203,104 +203,104 @@ O seu dispositivo USB-SD será apagado!</translation>
     </message>
     <message>
         <source>Update Notification</source>
-        <translation>Notificação de atualização</translation>
+        <translation>Kontrollera uppdateringar</translation>
     </message>
     <message>
         <source>Select version</source>
-        <translation>Selecione a versão</translation>
+        <translation>Välj version</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>Fechar</translation>
+        <translation>&amp;Stäng</translation>
     </message>
     <message>
         <source>&amp;Download</source>
-        <translation>Transferir</translation>
+        <translation>&amp;Ladda ner</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>Sobre</translation>
+        <translation>&amp;Om</translation>
     </message>
     <message>
         <source>&amp;Write</source>
-        <translation>Escrever</translation>
+        <translation>S&amp;kriv</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>Ajuda</translation>
+        <translation>&amp;Hjälp</translation>
     </message>
     <message>
         <source>Select &amp;file</source>
-        <translation>Selecione o ficheiro</translation>
+        <translation>Välj %fil</translation>
     </message>
     <message>
         <source>&amp;Show all</source>
-        <translation>Mostrar tudo</translation>
+        <translation>&amp;Visa alla</translation>
     </message>
     <message>
         <source>Cance&amp;l</source>
-        <translation>Cancelar</translation>
+        <translation>&amp;Avbryt</translation>
     </message>
     <message>
         <source>&amp;Visit Website</source>
-        <translation>Visite o Website</translation>
+        <translation>&amp;Besök hemsidan</translation>
     </message>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD Creator %1 está disponível.</translation>
+        <translation>LibreELEC USB-SD Creator %1 finns tillgängligt.</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Write Error</source>
-        <translation>Erro de escrita</translation>
+        <translation>Skrivfel</translation>
     </message>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation>Ocorreu um erro ao tentar gravar dados no handle.
-Erro %1: %2</translation>
+        <translation>Ett fel inträffade när data försökte skrivas.
+Fel %1: %2</translation>
     </message>
     <message>
         <source>Volume Error</source>
-        <translation>Erro no volume</translation>
+        <translation>Volym Fel</translation>
     </message>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation>Ocorreu um erro ao tentar obter um handle no volume.
-Erro %1: %2</translation>
+        <translation>Ett fel inträffade när volymen skulle hanteras
+Fel %1: %2</translation>
     </message>
     <message>
         <source>Lock Error</source>
-        <translation>Erro de bloqueio</translation>
+        <translation>Låsningsfel</translation>
     </message>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation>Ocorreu um erro ao tentar bloquear o volume.
-Erro %1: %2</translation>
+        <translation>Ett fel inträffade när volymen försökte låsas.
+Fel: %1: %2</translation>
     </message>
     <message>
         <source>Unlock Error</source>
-        <translation>Erro de desbloqueio</translation>
+        <translation>Upplåsningsfel</translation>
     </message>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation>Ocorreu um erro ao tentar desbloquear o volume.
-Erro %1: %2</translation>
+        <translation>Ett fel inträffade när volymen skulle låsas upp.
+Fel %1: %2</translation>
     </message>
     <message>
         <source>Dismount Error</source>
-        <translation>Erro a desmontar</translation>
+        <translation>Avmonteringsfel</translation>
     </message>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation>Ocorreu um erro ao tentar desmontar o volume.
-Erro %1: %2</translation>
+        <translation>Ett fel inträffade när volymen skulle avmonteras.
+Fel: %1: %2</translation>
     </message>
 </context>
 </TS>

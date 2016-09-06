@@ -1,14 +1,8 @@
-# Translators:
-# Vladan Stanković <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Vladan Stanković <email-removed>, 2016\n"
-"Language-Team: Serbian (Serbia) (https://www.transifex.com/libreelec/teams/61634/sr_RS/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sr_RS\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -20,44 +14,12 @@ msgid "Write image"
 msgstr "Запиши слику"
 
 msgctxt "Creator|"
-msgid "Close"
-msgstr "Затвори"
-
-msgctxt "Creator|"
-msgid "Select file"
-msgstr "Одаберите фајл"
-
-msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
 msgstr "Одаберите USB диск или SD картицу"
 
 msgctxt "Creator|"
-msgid "Select version"
-msgstr "Одаберите верзију"
-
-msgctxt "Creator|"
-msgid "Download"
-msgstr "Преузимање"
-
-msgctxt "Creator|"
-msgid "About"
-msgstr "О пројекту"
-
-msgctxt "Creator|"
 msgid "Download or select a local image file"
 msgstr "Преузми са Интернета или одабери локалну датотеку слике"
-
-msgctxt "Creator|"
-msgid "Write"
-msgstr "Запиши"
-
-msgctxt "Creator|"
-msgid "Help"
-msgstr "Помоћ"
-
-msgctxt "Creator|"
-msgid "Show all"
-msgstr "Прикажи све"
 
 msgctxt "Creator|"
 msgid "Eject device"
@@ -158,19 +120,6 @@ msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 секунди преостало - %2% при %3"
 
 msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Освежи обавештења"
-
-msgctxt "Creator|"
-msgid "Visit Website"
-msgstr "Посети Интернет локацију"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
-msgstr "LibreELEC USB-SD Припрема <font color=\"blue\">%1</font> је доступна."
-
-msgctxt "Creator|"
 msgid "Download canceled."
 msgstr "Преузимање поништено."
 
@@ -206,17 +155,13 @@ msgid "Failed to open file for writing!"
 msgstr "Неуспех приликом отврања фајла за писање."
 
 msgctxt "Creator|"
-msgid "Cancel"
-msgstr "Поништи"
-
-msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Отвори фајл слике"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
-" image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
+"image (*.img);;All files (*.*)"
 msgstr ""
 "Компресована gz слика (*img.gz);;Компресована zip слика "
 "(*img.zip);;Некомпресована слика (*.img);;Сви фајлови (*.*)"
@@ -267,15 +212,64 @@ msgstr ""
 
 msgctxt "Creator|"
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 msgctxt "Creator|"
 msgid "No"
-msgstr ""
+msgstr "Не"
 
 msgctxt "Creator|"
 msgid "OK"
-msgstr ""
+msgstr "ОК"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Освежи обавештења"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Одаберите верзију"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "Затвори"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "Преузимање"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "О пројекту"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Запиши"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "Помоћ"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Одаберите фајл"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "Прикажи све"
+
+msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Поништи"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Посети Интернет локацију"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "LibreELEC USB-SD Припрема %1 је доступна."
 
 msgctxt "QObject|"
 msgid "Write Error"
@@ -290,7 +284,7 @@ msgstr ""
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr ""
+msgstr "Грешка Уређаја"
 
 #, qt-format
 msgctxt "QObject|"
@@ -298,6 +292,8 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Догодила се грешка при покушају дохватања управљача уређаја.\n"
+"Грешка %1: %2"
 
 msgctxt "QObject|"
 msgid "Lock Error"
@@ -309,6 +305,8 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Догодила се грешка при покушају постављања кључа на уређај.\n"
+"Грешка %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
@@ -320,6 +318,8 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Догодила се грешка при покушају уклањања кључа са уређаја.\n"
+"Грешка %1: %2"
 
 msgctxt "QObject|"
 msgid "Dismount Error"

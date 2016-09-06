@@ -1,15 +1,10 @@
-# Translators:
-# Александр Сурков <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
-"Language-Team: Russian (https://www.transifex.com/libreelec/teams/61634/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -21,44 +16,12 @@ msgid "Write image"
 msgstr "Записать образ"
 
 msgctxt "Creator|"
-msgid "Close"
-msgstr "Закрыть"
-
-msgctxt "Creator|"
-msgid "Select file"
-msgstr "Выбрать файл"
-
-msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
 msgstr "Выберете USB накопитель или SD карту"
 
 msgctxt "Creator|"
-msgid "Select version"
-msgstr "Выбрать версию"
-
-msgctxt "Creator|"
-msgid "Download"
-msgstr "Загрузить"
-
-msgctxt "Creator|"
-msgid "About"
-msgstr "О программе"
-
-msgctxt "Creator|"
 msgid "Download or select a local image file"
 msgstr "Загрузить или выбрать файл образа"
-
-msgctxt "Creator|"
-msgid "Write"
-msgstr "Записать"
-
-msgctxt "Creator|"
-msgid "Help"
-msgstr "Помощь"
-
-msgctxt "Creator|"
-msgid "Show all"
-msgstr "Показать всё"
 
 msgctxt "Creator|"
 msgid "Eject device"
@@ -161,19 +124,6 @@ msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 секунд осталось - %2% шага %3"
 
 msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Оповещение об обновлении"
-
-msgctxt "Creator|"
-msgid "Visit Website"
-msgstr "Посетить сайт проекта"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
-msgstr "Версия LibreELEC USB-SD Creator <font color=\"blue\">%1</font>  доступна"
-
-msgctxt "Creator|"
 msgid "Download canceled."
 msgstr "Загрузка отменена"
 
@@ -209,17 +159,13 @@ msgid "Failed to open file for writing!"
 msgstr "Не удалось открыть файл для записи!"
 
 msgctxt "Creator|"
-msgid "Cancel"
-msgstr "Отмена"
-
-msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Открыть файл образа"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
-" image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
+"image (*.img);;All files (*.*)"
 msgstr ""
 "Образ сжатый gz (*img.gz);;Образ сжатый zip (*img.zip);;Несжатый образ "
 "(*.img);;Все файлы (*.*)"
@@ -279,6 +225,55 @@ msgstr "Нет"
 msgctxt "Creator|"
 msgid "OK"
 msgstr "OK"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Оповещение об обновлении"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Выбрать версию"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "Закрыть"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "Загрузить"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "О программе"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Записать"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "Помощь"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Выбрать файл"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "Показать всё"
+
+msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Отмена"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Посетить сайт проекта"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "Версия LibreELEC USB-SD Creator %1  доступна"
 
 msgctxt "QObject|"
 msgid "Write Error"

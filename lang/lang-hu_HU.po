@@ -1,16 +1,10 @@
-# Translators:
-# David Fodor <email-removed>, 2016
-# Gabe Smith <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
-"Language-Team: Hungarian (https://www.transifex.com/libreelec/teams/61634/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Language: hu_HU\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -22,44 +16,12 @@ msgid "Write image"
 msgstr "Lemezkép írása"
 
 msgctxt "Creator|"
-msgid "Close"
-msgstr "Bezár"
-
-msgctxt "Creator|"
-msgid "Select file"
-msgstr "Tallózás"
-
-msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
 msgstr "USB meghajtó vagy SD kártya kiválasztása"
 
 msgctxt "Creator|"
-msgid "Select version"
-msgstr "Verzió kiválasztása"
-
-msgctxt "Creator|"
-msgid "Download"
-msgstr "Letöltés"
-
-msgctxt "Creator|"
-msgid "About"
-msgstr "Rólunk"
-
-msgctxt "Creator|"
 msgid "Download or select a local image file"
 msgstr "Letöltés vagy helyi lemezkép kiválasztása"
-
-msgctxt "Creator|"
-msgid "Write"
-msgstr "Írás"
-
-msgctxt "Creator|"
-msgid "Help"
-msgstr "Segítség"
-
-msgctxt "Creator|"
-msgid "Show all"
-msgstr "Mutasd mind"
 
 msgctxt "Creator|"
 msgid "Eject device"
@@ -160,19 +122,6 @@ msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 másodperc van hátra - %2% a %3 -ból"
 
 msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Frissítési értesesítés"
-
-msgctxt "Creator|"
-msgid "Visit Website"
-msgstr "Weboldal meglátogatása"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
-msgstr "LibreELEC USB-SD készítő <font color=\"blue\">%1</font> elérhető."
-
-msgctxt "Creator|"
 msgid "Download canceled."
 msgstr "Letöltés megszakítva."
 
@@ -208,17 +157,13 @@ msgid "Failed to open file for writing!"
 msgstr "Nem sikerült a fájlt megnyitni az íráshoz!"
 
 msgctxt "Creator|"
-msgid "Cancel"
-msgstr "Mégsem"
-
-msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Lemezkép megnyitása"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
-" image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
+"image (*.img);;All files (*.*)"
 msgstr ""
 "Gz tömörített képfájl (*img.gz);;Zip tömörített képfájl "
 "(*img.zip);;Tömörítetlen képfájl (*.img);;Minden fájl (*.*)"
@@ -278,6 +223,55 @@ msgstr "Nem"
 msgctxt "Creator|"
 msgid "OK"
 msgstr "OK"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Frissítési értesesítés"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Verzió kiválasztása"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "Bezár"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "Letöltés"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "Rólunk"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Írás"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "Segítség"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Tallózás"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "Mutasd mind"
+
+msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Mégsem"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Weboldal meglátogatása"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "LibreELEC USB-SD készítő %1 elérhető."
 
 msgctxt "QObject|"
 msgid "Write Error"
