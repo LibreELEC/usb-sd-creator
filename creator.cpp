@@ -1119,9 +1119,8 @@ void Creator::checkNewVersion(const QString &verNewStr)
     QAbstractButton *visitButton = msgBox.addButton(tr("&Visit Website"), QMessageBox::YesRole);
     msgBox.addButton(tr("&Close"), QMessageBox::NoRole);
 #endif
-    QString msg = tr("LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available.").arg(verNewStr);
-    // replace html entities
-    msg = msg.replace("&amp;","&").replace("&quot;","\"").replace("&gt;",">").replace("&lt;","<");
+    QString verHtml = "<font color=\"blue\">" + verNewStr + "</font>";
+    QString msg = tr("LibreELEC USB-SD Creator %1 is available.").arg(verHtml);
     msgBox.setText("<p align='center' style='margin-right:30px'><br>" + msg + "<br></p>");
 
     msgBox.exec();
