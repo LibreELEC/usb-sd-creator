@@ -3,6 +3,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n==2 ? 1 : 2);\n"
+"X-Language: se_NO\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -11,42 +13,43 @@ msgstr "LibreELEC USB-SD Creator"
 
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "Zapsat soubor img"
+msgstr "Skriv avbild"
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Vybrat USB disk nebo SD kartu"
+msgstr "Välj USB eller SD-kort"
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "Stáhnout nebo vybrat lokální img soubor"
+msgstr "Ladda ner eller välj en lokal fil"
 
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr "Vysunout zařízení"
+msgstr "Mata ut enhet"
 
 msgctxt "Creator|"
 msgid "Load device"
-msgstr "Načíst zařízení"
+msgstr "Ladda enhet"
 
 #~ msgctxt "Creator|"
 #~ msgid "Eject  Load   Remove"
-#~ msgstr "Vysunout Načíst Odebrat"
+#~ msgstr "Mata ut, Ladda, Ta bort"
 
 msgctxt "Creator|"
 msgid "Select project"
-msgstr "Vybrat projekt"
+msgstr "Välj projekt"
 
 msgctxt "Creator|"
 msgid "Select image"
-msgstr "Vybrat soubor img"
+msgstr "Välj avbild"
 
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
-"K zapsání obrazu jsou potřeba práva root. Spustťe aplikaci pomocí sudo."
+"Det krävs Root-behörighet för att skriva en avbild\n"
+"Kör programmet med sudo."
 
 #, qt-format
 msgctxt "Creator|"
@@ -54,40 +57,40 @@ msgid ""
 "Version: %1\n"
 "Build date: %2"
 msgstr ""
-"Verze: %1\n"
-"Datum buildu: %2"
+"Version: %1\n"
+"Byggdatum: %2"
 
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr "Tento software byl vytvořen s láskou a uvolněn"
+msgstr "Denna programvara skapades med kärlek och gavs ut"
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "pod GPlv2 díky předchozí práci z RasPlex"
+msgstr "under GPLv2, med hjälp av tidigare arbete från RasPlex."
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "Pro licenční ujednání, zásluhy a historii čtěte:"
+msgstr "För licens, credd och historik, läs:"
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "Pokud se vám líbí LibreELEC zvažte"
+msgstr "Om du gillar att använda LibreELEC vänligen överväg en"
 
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "poskytnutí daru pro podporu projektu."
+msgstr "donation för att stötta projektet."
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Klikněte na logo níže nebo darujte"
+msgstr "Klicka på logotypen nedan för att donera"
 
 msgctxt "Creator|"
 msgid "using Paypal to:"
-msgstr "pomocí Paypalu na:"
+msgstr "använd PayPal för:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr "[Stabilní]"
+msgstr "[Stable]"
 
 msgctxt "Creator|"
 msgid "[Alpha]"
@@ -99,36 +102,36 @@ msgstr "[Beta]"
 
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr "Stažení dokončeno, probíhá synchronizace..."
+msgstr "Nedladdningen slutförd, synkroniserar filer..."
 
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr "Stažení dokončeno, probíhá ověřování..."
+msgstr "Nedladdning slutförd, veriferar checksumma..."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "Stažení dokončeno, ověření proběhlo v pořádku."
+msgstr "Nedladdning slutförd, checksumma ok."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
-msgstr "Stažení dokončeno, ověření se nezdařilo."
+msgstr "Nedladdning slutförd, checksumman är fel."
 
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr "%1 sekund zbývá - %2% na %3"
+msgstr "%1 sekunder kvarstår - %2% till %3"
 
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr "Stahování zrušeno."
+msgstr "Nedladdning avbruten."
 
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr "Cesta k uložení img souboru"
+msgstr "Mapp att spara avbilden i"
 
 msgctxt "Creator|"
 msgid "Error"
-msgstr "Chyba"
+msgstr "Fel"
 
 #, qt-format
 msgctxt "Creator|"
@@ -137,64 +140,64 @@ msgid ""
 "%1/%2\n"
 "already exist."
 msgstr ""
-"Soubor \n"
+"Filen\n"
 "%1/%2\n"
-"již existuje."
+"finns redan."
 
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr "Chcete jej přepsat?"
+msgstr "Vill du skriva över den?"
 
 msgctxt "Creator|"
 msgid "File already exists."
-msgstr "Soubor již existuje."
+msgstr "Filen finns nedan."
 
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr "Nepodařilo se otevřít soubor k zapsání!"
+msgstr "Kunde inte skriva till filen!"
 
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr "Otevřít soubor img"
+msgstr "Öppna avbild"
 
 msgctxt "Creator|"
 msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
 "image (*.img);;All files (*.*)"
 msgstr ""
-"Komprimovaný soubor gz (*img.gz);;Komprimovaný soubor zip "
-"(*img.zip);;Nekomprimovaný soubor (*.img);;All files (*.*)"
+"Komprimerad gz avbild (*img.gz);;Komprimerad zip avbild "
+"(*img.zip);;Okomprimerad avbild (*.img);;Alla filer (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr "Zapisování bylo zrušeno"
+msgstr "Skrivningen avbröts."
 
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr "Potvrďte zápis"
+msgstr "Bekräfta skrivning"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr "Nelze odebrat partions na zařízení %1"
+msgstr "Kan inte avmontera partitioner på enhet %1"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Nedostatek místa na %1 [%2 < %3]"
+msgstr "Det saknas utrymme på %1 [%2 < %3]"
 
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr "Synchronizace souborového systému..."
+msgstr "Synkroniserar filsystem..."
 
 msgctxt "Creator|"
 msgid "Writing done!"
-msgstr "Zapisování dokončeno!"
+msgstr "Skrivning klar!"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
-msgstr "Chyba: %1"
+msgstr "Fel: %1"
 
 #, qt-format
 msgctxt "Creator|"
@@ -204,18 +207,18 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
-"Zvolené zařízení: %1\n"
-"Určitě chcete zapsat img?\n"
+"Vald enhet: %1\n"
+"Är du säker på att du vill skriva avbilden?\n"
 "\n"
-"Vaše USB zařízení bude zcela smazáno!"
+"Din USB-SD enhet kommer raderas!"
 
 msgctxt "Creator|"
 msgid "Yes"
-msgstr "Ano"
+msgstr "Ja"
 
 msgctxt "Creator|"
 msgid "No"
-msgstr "Ne"
+msgstr "Nej"
 
 msgctxt "Creator|"
 msgid "OK"
@@ -223,52 +226,52 @@ msgstr "OK"
 
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr "Upozornění na aktualizaci"
+msgstr "Kontrollera uppdateringar"
 
 msgctxt "Creator|"
 msgid "Select version"
-msgstr "Vybrat verzi"
+msgstr "Välj version"
 
 msgctxt "Creator|"
 msgid "&Close"
-msgstr "Zavřít"
+msgstr "&Stäng"
 
 msgctxt "Creator|"
 msgid "&Download"
-msgstr "Stáhnout"
+msgstr "&Ladda ner"
 
 msgctxt "Creator|"
 msgid "&About"
-msgstr "O programu"
+msgstr "&Om"
 
 msgctxt "Creator|"
 msgid "&Write"
-msgstr "Zapsat"
+msgstr "S&kriv"
 
 msgctxt "Creator|"
 msgid "&Help"
-msgstr "Pomoc"
+msgstr "&Hjälp"
 
 msgctxt "Creator|"
 msgid "Select &file"
-msgstr "Vybrat soubor"
+msgstr "Välj &fil"
 
 msgctxt "Creator|"
 msgid "&Show all"
-msgstr "Ukázat vše"
+msgstr "&Visa alla"
 
 msgctxt "Creator|"
 msgid "Cance&l"
-msgstr "Zrušit"
+msgstr "&Avbryt"
 
 msgctxt "Creator|"
 msgid "&Visit Website"
-msgstr "Navštivte webové stránky"
+msgstr "&Besök hemsidan"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Creator %1 je k dispozici."
+msgstr "LibreELEC USB-SD Creator %1 finns tillgängligt."
 
 msgctxt "Creator|"
 msgid "Eject  Load         Remove"
@@ -276,7 +279,7 @@ msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr "Chyba zápisu"
+msgstr "Skrivfel"
 
 #, qt-format
 msgctxt "QObject|"
@@ -284,12 +287,12 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
-"Při pokusu o zapsání dat nastala chyba.\n"
-"Chyba %1: %2"
+"Ett fel inträffade när data försökte skrivas.\n"
+"Fel %1: %2"
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr "Chyba svazku"
+msgstr "Volym Fel"
 
 #, qt-format
 msgctxt "QObject|"
@@ -297,12 +300,12 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Při pokusu spojení se svazkem nastala chyba.\n"
-"Chyba %1: %2"
+"Ett fel inträffade när volymen skulle hanteras\n"
+"Fel %1: %2"
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr "Chyba uzamčení"
+msgstr "Låsningsfel"
 
 #, qt-format
 msgctxt "QObject|"
@@ -310,12 +313,12 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Při pokusu o uzamčení svazku nastala chyba.\n"
-"Chyba %1: %2"
+"Ett fel inträffade när volymen försökte låsas.\n"
+"Fel: %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr "Chyba odemčení"
+msgstr "Upplåsningsfel"
 
 #, qt-format
 msgctxt "QObject|"
@@ -323,12 +326,12 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Při pokusu o odemčení svazku nastala chyba.\n"
-"Chyba %1: %2"
+"Ett fel inträffade när volymen skulle låsas upp.\n"
+"Fel %1: %2"
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr "Chyba odebrání"
+msgstr "Avmonteringsfel"
 
 #, qt-format
 msgctxt "QObject|"
@@ -336,5 +339,5 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Při pokusu o odebrání svazku nastala chyba.\n"
-"Chyba %1: %2"
+"Ett fel inträffade när volymen skulle avmonteras.\n"
+"Fel: %1: %2"

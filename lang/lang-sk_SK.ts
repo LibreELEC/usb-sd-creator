@@ -1,91 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.1" language="sk_SK">
 <context>
     <name>Creator</name>
     <message>
         <source>LibreELEC USB-SD Creator</source>
-        <translation>Creador de USB-SD de LibreELEC</translation>
+        <translation>LibreELEC USB-SD Creator</translation>
     </message>
     <message>
         <source>Write image</source>
-        <translation>Escribir imagen</translation>
+        <translation>Zapísať obraz</translation>
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>Seleccion tu memoria USB o tarjeta SD</translation>
+        <translation>Vybrať disk USB alebo kartu SD</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
-        <translation>Descarga o elige un archivo de imagen local</translation>
+        <translation>Stiahnuť a vybrať lokálny súbor s obrazom</translation>
     </message>
     <message>
         <source>Eject device</source>
-        <translation>Expulsar dispositivo</translation>
+        <translation>Vysunúť zariadenie</translation>
     </message>
     <message>
         <source>Load device</source>
-        <translation>Cargar dispositivo</translation>
+        <translation>Načítať zariadenie</translation>
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation type="vanished">Expulsar Cargar Remover</translation>
+        <translation type="vanished">Vysunúť Načítať Odobrať</translation>
     </message>
     <message>
         <source>Select project</source>
-        <translation>Seleccionar proyecto</translation>
+        <translation>Vybrať projekt</translation>
     </message>
     <message>
         <source>Select image</source>
-        <translation>Seleccionar imagen</translation>
+        <translation>Vybrať obraz</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>Se requiere privilegios de root para escribir imagen. 
-Ejecuta la aplicación con sudo.</translation>
+        <translation>Na zapísanie obrazu sú potrebné root privilégia.
+Spustite aplikáciu s príkazom sudo.</translation>
     </message>
     <message>
         <source>Version: %1
 Build date: %2</source>
-        <translation>Versión: %1
-Fecha de construcción: %2</translation>
+        <translation>Verzia: %1
+Číslo zostavy: %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
-        <translation>Este software fue creado con amor y publicado</translation>
+        <translation>Tento softvér bol vytvorený s láskou a uvoľnený</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>bajo GPLv2, usando trabajos primarios de RasPlex.</translation>
+        <translation>pod licenciou GPLv2, s použitím predošlej práce z RasPlex.</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
-        <translation>Para licencia, créditos e historia, por favor lee:</translation>
+        <translation>Pre licenčné podmienky, zásluhy a históriu, si prosím prečítajte:</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation>Si disfrutas usar LibreELEC por favor considera una</translation>
+        <translation>Ak ste spokojní s LibreELEC, prosím zvážte </translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation>donación para apoyar el proyecto.</translation>
+        <translation>príspevok na podporu projektu.</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
-        <translation>Haz click en el logo abajo o dona</translation>
+        <translation>Kliknite na logo nižšie alebo prispejte</translation>
     </message>
     <message>
         <source>using Paypal to:</source>
-        <translation>usando Paypal a:</translation>
+        <translation>prostredníctvom Paypalu na:</translation>
     </message>
     <message>
         <source>[Stable]</source>
-        <translation>[Estable]</translation>
+        <translation>[Stabilný]</translation>
     </message>
     <message>
         <source>[Alpha]</source>
-        <translation>[Alfa]</translation>
+        <translation>[Alpha]</translation>
     </message>
     <message>
         <source>[Beta]</source>
@@ -93,109 +93,109 @@ Fecha de construcción: %2</translation>
     </message>
     <message>
         <source>Download complete, syncing file...</source>
-        <translation>Descarga completa, sincronizando archivo...</translation>
+        <translation>Sťahovanie ukončené, prebieha synchonizácia súboru...</translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation>Descarga completa, verificando checksum...</translation>
+        <translation>Sťahovanie ukončené, prebieha overovanie...</translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation>Descarga completa, checksum correcto.</translation>
+        <translation>Sťahovanie ukončené, overovanie je v poriadku.</translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation>Descarga completa, checksum no correcto.</translation>
+        <translation>Sťahovanie ukončené, overovanie je chybné.</translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation>%1 segundos restantes - %2% a %3</translation>
+        <translation>Ostáva %1 sekúnd - %2% na %3</translation>
     </message>
     <message>
         <source>Download canceled.</source>
-        <translation>Descarga cancelada.</translation>
+        <translation>Sťahovanie zrušené.</translation>
     </message>
     <message>
         <source>Directory to store image file</source>
-        <translation>Directorio para guardar archivo de imagen</translation>
+        <translation>Priečinok pre umiestnenie súboru obrazu</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation>Chyba</translation>
     </message>
     <message>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation>El archivo
+        <translation>Súbor
 %1/%2
-ya existe.</translation>
+už existuje.</translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
-        <translation>¿Deseas sobreescribir?</translation>
+        <translation>Chcete ho prepísať?</translation>
     </message>
     <message>
         <source>File already exists.</source>
-        <translation>El archivo ya existe.</translation>
+        <translation>Súbor už existuje.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation>¡Falló la apertura del archivo para escritura!</translation>
+        <translation>Nepodarilo sa otvoriť súbor na zapisovanie!</translation>
     </message>
     <message>
         <source>Open image file</source>
-        <translation>Abrir archivo de imagen</translation>
+        <translation>Otvoriť súbor s obrazom</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation>Imagen comprimida gz (*img.gz);;Imagen comprimida zip (*img.zip);;Imagen sin comprimir (*.img);;Todos los archivos (*.*)</translation>
+        <translation>Komprimovaný obraz gz (*img.gz);;Komprimovaný obraz zip (*img.zip);;Nekomprimovaný obraz (*.img);;Všetky súbory (*.*)</translation>
     </message>
     <message>
         <source>Writing canceled.</source>
-        <translation>Escritura cancelada.</translation>
+        <translation>Zapisovanie zrušené.</translation>
     </message>
     <message>
         <source>Confirm write</source>
-        <translation>Confirmar escritura</translation>
+        <translation>Potvrdiť zápis</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
-        <translation>No se pueden desmontar las particiones en el dispositivo %1</translation>
+        <translation>Nedá sa odobrať partície na zariadené %1</translation>
     </message>
     <message>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation>No hay suficiente espacio en %1 [%2 &lt; %3]</translation>
+        <translation>Nedostatok miesta na %1 [%2 &lt; %3]</translation>
     </message>
     <message>
         <source>Syncing file system...</source>
-        <translation>Sincronizando sistema de archivos...</translation>
+        <translation>Synchronizácia súborového systému...</translation>
     </message>
     <message>
         <source>Writing done!</source>
-        <translation>¡Escritura realizada!</translation>
+        <translation>Zápis ukončený!</translation>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Error: %1</translation>
+        <translation>Chyba: %1</translation>
     </message>
     <message>
         <source>Selected device: %1
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation>Dispositivo seleccionado: %1
-¿Estas seguro de que deseas escribir la imagen?
+        <translation>Zvolené zariadenie: %1
+Určite chcete zapísať obraz?
 
-¡Tu dispositivo USB-SD ha sido formateado!</translation>
+Vaše zariadenie USB-SD bude vymazané!</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation>Sí</translation>
+        <translation>Áno</translation>
     </message>
     <message>
         <source>No</source>
-        <translation>No</translation>
+        <translation>Nie</translation>
     </message>
     <message>
         <source>OK</source>
@@ -203,51 +203,51 @@ Your USB-SD device will be wiped!</source>
     </message>
     <message>
         <source>Update Notification</source>
-        <translation>Notificación de actualización</translation>
+        <translation>Upozornenie na aktualizáciu</translation>
     </message>
     <message>
         <source>Select version</source>
-        <translation>Seleccionar versión</translation>
+        <translation>Vybrať verziu</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>Cerrar</translation>
+        <translation>Zavrieť</translation>
     </message>
     <message>
         <source>&amp;Download</source>
-        <translation>Descargar</translation>
+        <translation>Stiahnúť</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>Acerca</translation>
+        <translation>O programe</translation>
     </message>
     <message>
         <source>&amp;Write</source>
-        <translation>Escribir</translation>
+        <translation>Zapísať</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>Ayuda</translation>
+        <translation>Pomoc</translation>
     </message>
     <message>
         <source>Select &amp;file</source>
-        <translation>Seleccionar archivo</translation>
+        <translation>Vybrať súbor</translation>
     </message>
     <message>
         <source>&amp;Show all</source>
-        <translation>Mostrar todo</translation>
+        <translation>Zobraziť všetko</translation>
     </message>
     <message>
         <source>Cance&amp;l</source>
-        <translation>Cancelar</translation>
+        <translation>Zrušiť</translation>
     </message>
     <message>
         <source>&amp;Visit Website</source>
-        <translation>Visita el sitio web</translation>
+        <translation>Navštíviť webstránku</translation>
     </message>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>Creador de USB-SD de LibreELEC %1 esta disponible.</translation>
+        <translation>Je dostupný LibreELEC USB-SD Creator %1.</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>
@@ -258,53 +258,53 @@ Your USB-SD device will be wiped!</source>
     <name>QObject</name>
     <message>
         <source>Write Error</source>
-        <translation>Escribir Error</translation>
+        <translation>Chyba zápisu</translation>
     </message>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation>Ha ocurrido un error al tratar de escribir los datos al handle.
-Error %1: %2</translation>
+        <translation>Pri pokuse o zápis dát sa vyskytla chyba.
+Chyba %1: %2</translation>
     </message>
     <message>
         <source>Volume Error</source>
-        <translation>Error del volumen</translation>
+        <translation>Chyba jednotky</translation>
     </message>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation>Ha ocurrido un error al tratar de obtenerel handle en el volumen.
-Error %1: %2</translation>
+        <translation>Pri pokuse o spojenie so zväzkom sa vyskytla chyba.
+Chyba %1: %2</translation>
     </message>
     <message>
         <source>Lock Error</source>
-        <translation>Error de bloqueo</translation>
+        <translation>Chyba pri uzamykaní</translation>
     </message>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation>Ha ocurrido un error al tratar de bloquear el volumen.
-Error %1: %2</translation>
+        <translation>Pri pokuse o uzamknutie zväzku sa vyskytla chyba.
+Chyba %1: %2</translation>
     </message>
     <message>
         <source>Unlock Error</source>
-        <translation>Error de desbloqueo</translation>
+        <translation>Chyba pri odomykaní</translation>
     </message>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation>Ha ocurrido un error al tratar de desbloquear el volumen.
-Error %1: %2</translation>
+        <translation>Pri pokuse o odomknutie zväzku sa vyskytla chyba.
+Chyba %1: %2</translation>
     </message>
     <message>
         <source>Dismount Error</source>
-        <translation>Error de desmontaje</translation>
+        <translation>Chyba pri odoberaní</translation>
     </message>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation>Ha ocurrido un error al tratar de desmontar el volumen.
-Error %1: %2</translation>
+        <translation>Pri pokuse o odobratie zväzku sa vyskytla chyba.
+Chyba %1: %2</translation>
     </message>
 </context>
 </TS>

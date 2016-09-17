@@ -69,7 +69,10 @@ TRANSLATIONS += lang/lang-en_GB.ts \
                 lang/lang-sl_SI.ts \
                 lang/lang-sr_RS.ts \
                 lang/lang-tr_TR.ts \
-                lang/lang-uk_UA.ts
+                lang/lang-uk_UA.ts \
+                lang/lang-hr_HR.ts \
+                lang/lang-sk_SK.ts \
+                lang/lang-sv_SE.ts
 
 static { # everything below takes effect with CONFIG += static
     CONFIG += static

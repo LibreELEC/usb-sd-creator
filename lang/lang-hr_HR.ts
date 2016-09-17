@@ -1,201 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.1" language="hr_HR">
 <context>
     <name>Creator</name>
     <message>
         <source>LibreELEC USB-SD Creator</source>
-        <translation>Creador de USB-SD de LibreELEC</translation>
+        <translation>LibreELEC USB-SD Aplikacija</translation>
     </message>
     <message>
         <source>Write image</source>
-        <translation>Escribir imagen</translation>
+        <translation>Zapiši datoteku slike</translation>
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>Seleccion tu memoria USB o tarjeta SD</translation>
+        <translation>Odaberi USB medij ili SD karticu</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
-        <translation>Descarga o elige un archivo de imagen local</translation>
+        <translation>Preuzmi ili odaberi lokalnu datoteku slike</translation>
     </message>
     <message>
         <source>Eject device</source>
-        <translation>Expulsar dispositivo</translation>
+        <translation>Izbaci uređaj</translation>
     </message>
     <message>
         <source>Load device</source>
-        <translation>Cargar dispositivo</translation>
+        <translation>Učitaj uređaj</translation>
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation type="vanished">Expulsar Cargar Remover</translation>
+        <translation type="vanished">Izbaci  Učitaj  Ukloni</translation>
     </message>
     <message>
         <source>Select project</source>
-        <translation>Seleccionar proyecto</translation>
+        <translation>Odaberi projekt</translation>
     </message>
     <message>
         <source>Select image</source>
-        <translation>Seleccionar imagen</translation>
+        <translation>Odaberite datoteku slike</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>Se requiere privilegios de root para escribir imagen. 
-Ejecuta la aplicación con sudo.</translation>
+        <translation>Root prava potrebna za zapisivanje slike</translation>
     </message>
     <message>
         <source>Version: %1
 Build date: %2</source>
-        <translation>Versión: %1
-Fecha de construcción: %2</translation>
+        <translation>Datum izrade:</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
-        <translation>Este software fue creado con amor y publicado</translation>
+        <translation>Ova aplikacija je izrađena i objavljena s ljubavi</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>bajo GPLv2, usando trabajos primarios de RasPlex.</translation>
+        <translation>pod GPLv2, koristeći raniji rad od RasPlex projekta</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
-        <translation>Para licencia, créditos e historia, por favor lee:</translation>
+        <translation>Za licencu, zasluge i povijest, molim pročitaj:</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation>Si disfrutas usar LibreELEC por favor considera una</translation>
+        <translation>Ukoliko ti se sviđa korištenje LibreELEc-a molimo razmisli o</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation>donación para apoyar el proyecto.</translation>
+        <translation>donaciji kao podrški projektu.</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
-        <translation>Haz click en el logo abajo o dona</translation>
+        <translation>Klik na logo ispod ili doniraj</translation>
     </message>
     <message>
         <source>using Paypal to:</source>
-        <translation>usando Paypal a:</translation>
+        <translation>koristeći Paypal također:</translation>
     </message>
     <message>
         <source>[Stable]</source>
-        <translation>[Estable]</translation>
+        <translation>Stabilna</translation>
     </message>
     <message>
         <source>[Alpha]</source>
-        <translation>[Alfa]</translation>
+        <translation>Alfa</translation>
     </message>
     <message>
         <source>[Beta]</source>
-        <translation>[Beta]</translation>
+        <translation>Beta</translation>
     </message>
     <message>
         <source>Download complete, syncing file...</source>
-        <translation>Descarga completa, sincronizando archivo...</translation>
+        <translation>Preuzimanje završeno, sinhroniziram datoteke...</translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation>Descarga completa, verificando checksum...</translation>
+        <translation>Preuzimanje završeno, provjeravam checksum</translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation>Descarga completa, checksum correcto.</translation>
+        <translation>Preuzimanje završeno, checksum OK</translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation>Descarga completa, checksum no correcto.</translation>
+        <translation>Preuzimanje završeno, checksum nije u redu.</translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation>%1 segundos restantes - %2% a %3</translation>
+        <translation>%1 sekunda preostaje - %2% sa %3</translation>
     </message>
     <message>
         <source>Download canceled.</source>
-        <translation>Descarga cancelada.</translation>
+        <translation>Preuzimanje otkazano.</translation>
     </message>
     <message>
         <source>Directory to store image file</source>
-        <translation>Directorio para guardar archivo de imagen</translation>
+        <translation>Mapa za pohranu slikovne datoteke</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation>Pogreška</translation>
     </message>
     <message>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation>El archivo
-%1/%2
-ya existe.</translation>
+        <translation>već postoji.</translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
-        <translation>¿Deseas sobreescribir?</translation>
+        <translation>Da li želite prepraviti?</translation>
     </message>
     <message>
         <source>File already exists.</source>
-        <translation>El archivo ya existe.</translation>
+        <translation>Datoteka već postoji</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation>¡Falló la apertura del archivo para escritura!</translation>
+        <translation>Neuspjeli pokušaj otvaranja datoteke slike za zapis!</translation>
     </message>
     <message>
         <source>Open image file</source>
-        <translation>Abrir archivo de imagen</translation>
+        <translation>Otvori datoteku slike</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation>Imagen comprimida gz (*img.gz);;Imagen comprimida zip (*img.zip);;Imagen sin comprimir (*.img);;Todos los archivos (*.*)</translation>
+        <translation>komprimirani gz slika (*img.gz);;Komprimirana zip slika (*img.zip);;Nekomprimirana</translation>
     </message>
     <message>
         <source>Writing canceled.</source>
-        <translation>Escritura cancelada.</translation>
+        <translation>Zapisivanje otkazano.</translation>
     </message>
     <message>
         <source>Confirm write</source>
-        <translation>Confirmar escritura</translation>
+        <translation>Potvrdi zapisivanje</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
-        <translation>No se pueden desmontar las particiones en el dispositivo %1</translation>
+        <translation>Nije moguće odjaviti particiju na uređaju %1</translation>
     </message>
     <message>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation>No hay suficiente espacio en %1 [%2 &lt; %3]</translation>
+        <translation>Nema dovoljno prostora na %1 [%2 &lt; %3]</translation>
     </message>
     <message>
         <source>Syncing file system...</source>
-        <translation>Sincronizando sistema de archivos...</translation>
+        <translation>Sinhroniziram susav datoteka</translation>
     </message>
     <message>
         <source>Writing done!</source>
-        <translation>¡Escritura realizada!</translation>
+        <translation>Zapisivanje završeno!</translation>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Error: %1</translation>
+        <translation>Pogreška: %1</translation>
     </message>
     <message>
         <source>Selected device: %1
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation>Dispositivo seleccionado: %1
-¿Estas seguro de que deseas escribir la imagen?
+        <translation>Odaberi uređaj: %1
+Jesi li siguran da želiš zapisati slikovnu datoteku?
 
-¡Tu dispositivo USB-SD ha sido formateado!</translation>
+Tvoj USB-SD uređaj će biti izbrisan!</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation>Sí</translation>
+        <translation>Da</translation>
     </message>
     <message>
         <source>No</source>
-        <translation>No</translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <source>OK</source>
@@ -203,51 +199,51 @@ Your USB-SD device will be wiped!</source>
     </message>
     <message>
         <source>Update Notification</source>
-        <translation>Notificación de actualización</translation>
+        <translation>Obavijest o ažuriranju</translation>
     </message>
     <message>
         <source>Select version</source>
-        <translation>Seleccionar versión</translation>
+        <translation>Odaberi verziju</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>Cerrar</translation>
+        <translation>&amp;Zatvori</translation>
     </message>
     <message>
         <source>&amp;Download</source>
-        <translation>Descargar</translation>
+        <translation>&amp;Preuzmi</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>Acerca</translation>
+        <translation>&amp;O</translation>
     </message>
     <message>
         <source>&amp;Write</source>
-        <translation>Escribir</translation>
+        <translation>&amp;Zapiši</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>Ayuda</translation>
+        <translation>&amp;Pomoć</translation>
     </message>
     <message>
         <source>Select &amp;file</source>
-        <translation>Seleccionar archivo</translation>
+        <translation>Odaberi &amp;datoteku</translation>
     </message>
     <message>
         <source>&amp;Show all</source>
-        <translation>Mostrar todo</translation>
+        <translation>&amp;Prikaži sve</translation>
     </message>
     <message>
         <source>Cance&amp;l</source>
-        <translation>Cancelar</translation>
+        <translation>Otkaži</translation>
     </message>
     <message>
         <source>&amp;Visit Website</source>
-        <translation>Visita el sitio web</translation>
+        <translation>Posjeti web stranicu</translation>
     </message>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>Creador de USB-SD de LibreELEC %1 esta disponible.</translation>
+        <translation>LibreELEC USB-SD aplikacija %1 je dostupna.</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>
@@ -258,53 +254,53 @@ Your USB-SD device will be wiped!</source>
     <name>QObject</name>
     <message>
         <source>Write Error</source>
-        <translation>Escribir Error</translation>
+        <translation>Pogreška kod zapisivanju</translation>
     </message>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation>Ha ocurrido un error al tratar de escribir los datos al handle.
-Error %1: %2</translation>
+        <translation>Došlo je do pogreške prilikom pokušaja zapisa.
+</translation>
     </message>
     <message>
         <source>Volume Error</source>
-        <translation>Error del volumen</translation>
+        <translation>Pogreška u nazivu</translation>
     </message>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation>Ha ocurrido un error al tratar de obtenerel handle en el volumen.
-Error %1: %2</translation>
+        <translation>Došlo je do pogreške prilikom pristupa nazivu.
+</translation>
     </message>
     <message>
         <source>Lock Error</source>
-        <translation>Error de bloqueo</translation>
+        <translation>Pogreška kod zaključavanja</translation>
     </message>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation>Ha ocurrido un error al tratar de bloquear el volumen.
-Error %1: %2</translation>
+        <translation>Došlo je do pogreške prilikom zaključavanja naziva.
+</translation>
     </message>
     <message>
         <source>Unlock Error</source>
-        <translation>Error de desbloqueo</translation>
+        <translation>Pogreška kod otključavanja</translation>
     </message>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation>Ha ocurrido un error al tratar de desbloquear el volumen.
-Error %1: %2</translation>
+        <translation>Došlo je do pogreške prilikom otključavanja naziva.
+</translation>
     </message>
     <message>
         <source>Dismount Error</source>
-        <translation>Error de desmontaje</translation>
+        <translation>Pogreška kod odjave urešaja</translation>
     </message>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation>Ha ocurrido un error al tratar de desmontar el volumen.
-Error %1: %2</translation>
+        <translation>Došlo je do pogreške prilikom odjave uređaja.
+</translation>
     </message>
 </context>
 </TS>

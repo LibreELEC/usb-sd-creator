@@ -14,43 +14,11 @@ msgid "Write image"
 msgstr ""
 
 msgctxt "Creator|"
-msgid "Close"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Select file"
-msgstr ""
-
-msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
 msgstr ""
 
 msgctxt "Creator|"
-msgid "Select version"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Download"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "About"
-msgstr ""
-
-msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Write"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Help"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Show all"
 msgstr ""
 
 msgctxt "Creator|"
@@ -59,18 +27,6 @@ msgstr ""
 
 msgctxt "Creator|"
 msgid "Load device"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Eject  Load   Remove"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Select image"
 msgstr ""
 
 msgctxt "Creator|"
@@ -148,19 +104,6 @@ msgid "%1 seconds remaining - %2% at %3"
 msgstr ""
 
 msgctxt "Creator|"
-msgid "Update Notification"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Visit Website"
-msgstr ""
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
-msgstr ""
-
-msgctxt "Creator|"
 msgid "Download canceled."
 msgstr ""
 
@@ -190,10 +133,6 @@ msgstr ""
 
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Cancel"
 msgstr ""
 
 msgctxt "Creator|"
@@ -256,6 +195,67 @@ msgstr ""
 
 msgctxt "Creator|"
 msgid "OK"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Cance&l"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr ""
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
 msgstr ""
 
 msgctxt "QObject|"

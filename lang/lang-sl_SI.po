@@ -1,75 +1,39 @@
-# Translators:
-# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
-"Language-Team: Slovenian (https://www.transifex.com/libreelec/teams/61634/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sl\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: si_LK\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
-msgstr ""
+msgstr "LibreELEC USB-SD Creator"
 
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "Zapiši sliko"
-
-msgctxt "Creator|"
-msgid "Close"
-msgstr "Zapri"
-
-msgctxt "Creator|"
-msgid "Select file"
-msgstr "Izberi datoteko"
+msgstr "Zapiši sliko diska"
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Izberi USB stick ali SD kartico"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "Izberi verzijo"
-
-msgctxt "Creator|"
-msgid "Download"
-msgstr "Prenesi"
-
-msgctxt "Creator|"
-msgid "About"
-msgstr "O programu"
+msgstr "Izberi USB ključ ali SD kartico"
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "Prenesi ali izberi lokalno datoteko"
-
-msgctxt "Creator|"
-msgid "Write"
-msgstr "Zapiši"
-
-msgctxt "Creator|"
-msgid "Help"
-msgstr "Pomoč"
-
-msgctxt "Creator|"
-msgid "Show all"
-msgstr "Prikaži vse"
+msgstr "Prenesi ali izberi lokalno sliko diska"
 
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr ""
+msgstr "Eject device"
 
 msgctxt "Creator|"
 msgid "Load device"
-msgstr ""
+msgstr "Load device"
 
-msgctxt "Creator|"
-msgid "Eject  Load   Remove"
-msgstr ""
+#~ msgctxt "Creator|"
+#~ msgid "Eject  Load   Remove"
+#~ msgstr "Eject Load Remove"
 
 msgctxt "Creator|"
 msgid "Select project"
@@ -77,7 +41,7 @@ msgstr "Izberi projekt"
 
 msgctxt "Creator|"
 msgid "Select image"
-msgstr "Izberi sliko"
+msgstr "Izberi sliko diska"
 
 msgctxt "Creator|"
 msgid ""
@@ -96,89 +60,76 @@ msgstr ""
 
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr ""
+msgstr "Ta program je bil narejen z ljubeznijo in izdan"
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr ""
+msgstr "pod GPLv2 licenco iz prvotnega dela RasPlex."
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr ""
+msgstr "Za licenco, zasluge in zgodovino preberite:"
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr ""
+msgstr "Če z veseljem uporabljate LibreELEC razmislite o"
 
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr ""
+msgstr "donaciji in podprite projekt."
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr ""
+msgstr "Kliknite spodnji logo ali donirajte"
 
 msgctxt "Creator|"
 msgid "using Paypal to:"
-msgstr ""
+msgstr "z uporabo Paypala:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr ""
+msgstr "[Stabilna]"
 
 msgctxt "Creator|"
 msgid "[Alpha]"
-msgstr ""
+msgstr "[Alpha]"
 
 msgctxt "Creator|"
 msgid "[Beta]"
-msgstr ""
+msgstr "[Beta]"
 
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr ""
+msgstr "Prenos končan, zapisujem datoteko..."
 
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr ""
+msgstr "Prenos končan, preverjam kontrolno vsoto..."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr ""
+msgstr "Prenos končan, kontrolna vsota je ok..."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
-msgstr ""
+msgstr "Prenos končan, kontrolna vsota ni ok..."
 
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Visit Website"
-msgstr ""
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
-msgstr ""
+msgstr "še %1 sekund - %2% z %3"
 
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr ""
+msgstr "Prenos preklican."
 
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr ""
+msgstr "Folder za shranjevanje slike diska"
 
 msgctxt "Creator|"
 msgid "Error"
-msgstr ""
+msgstr "Napaka"
 
 #, qt-format
 msgctxt "Creator|"
@@ -187,63 +138,64 @@ msgid ""
 "%1/%2\n"
 "already exist."
 msgstr ""
+"Datoteka\n"
+"%1/%2\n"
+"že obstaja."
 
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr ""
+msgstr "Želite prepisati?"
 
 msgctxt "Creator|"
 msgid "File already exists."
-msgstr ""
+msgstr "Datoteka že obstaja."
 
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Cancel"
-msgstr ""
+msgstr "Napaka pri odpiranju datoteke za zapisovanje!"
 
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr ""
+msgstr "Odpri sliko diska"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
-" image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
+"image (*.img);;All files (*.*)"
 msgstr ""
+"Stisnjena gz slika (*img.gz);;Stisnjena zip slika (*img.zip);;Nestisnjena "
+"slika (*.img);;Vse datoteke (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr ""
+msgstr "Zapisovanje preklicano."
 
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr ""
+msgstr "Potrdi zapisovanje"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr ""
+msgstr "Ne morem odklopiti particije na napravi %1"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr ""
+msgstr "Ni dovolj prostora na %1 [%2 < %3]"
 
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr ""
+msgstr "Sinhroniziram datotečni sistem..."
 
 msgctxt "Creator|"
 msgid "Writing done!"
-msgstr ""
+msgstr "Zapisovanje končano!"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
-msgstr ""
+msgstr "Napaka: %1"
 
 #, qt-format
 msgctxt "Creator|"
@@ -253,22 +205,79 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
+"Izbrana naprava: %1\n"
+"Želite res zapisati sliko diska?\n"
+"\n"
+"Vaša USB-SD naprava bo zbrisana!"
 
 msgctxt "Creator|"
 msgid "Yes"
-msgstr ""
+msgstr "Da"
 
 msgctxt "Creator|"
 msgid "No"
-msgstr ""
+msgstr "Ne"
 
 msgctxt "Creator|"
 msgid "OK"
+msgstr "OK"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Obvestilo o posodobitvi"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Izberi verzijo"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "Zapri"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "Prenesi"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "O programu"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Zapiši"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "Pomoč"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Izberi datoteko"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "Prikaži vse"
+
+msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Prekliči"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Obišči spletno stran"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "Na voljo je nova verzija LibreELEC USB-SD Creator %1."
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
 msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr ""
+msgstr "Napaka pri zapisovanju"
 
 #, qt-format
 msgctxt "QObject|"
@@ -276,10 +285,12 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
+"Napaka pri zapisovanju podatkov v ročico.\n"
+"Napaka %1: %2"
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr ""
+msgstr "Napaka nosilca"
 
 #, qt-format
 msgctxt "QObject|"
@@ -287,10 +298,12 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Napaka pri pridobivanju ročice za nosilec.\n"
+"Napaka %1: %2"
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr ""
+msgstr "Napaka pri zaklepanju"
 
 #, qt-format
 msgctxt "QObject|"
@@ -298,10 +311,12 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Napaka pri zaklepanju nosilca.\n"
+"Napaka %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr ""
+msgstr "Napaka pri odklepanju"
 
 #, qt-format
 msgctxt "QObject|"
@@ -309,10 +324,12 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Napaka pri odklepanju nosilca.\n"
+"Napaka %1: %2"
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr ""
+msgstr "Napaka pri odklopu"
 
 #, qt-format
 msgctxt "QObject|"
@@ -320,3 +337,5 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Napaka pri odklopu nosilca.\n"
+"Napaka %1: %2"

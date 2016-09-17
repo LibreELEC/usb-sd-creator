@@ -190,9 +190,6 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     setImageFileName("");
     ui->writeFlashButton->setEnabled(false);
 
-    ui->projectSelectBox->setToolTip(tr("Select project"));
-    ui->imageSelectBox->setToolTip(tr("Select image"));
-
     showLoadEject = false;  // disabled by default
 
 #ifdef Q_OS_WIN
@@ -336,18 +333,6 @@ void Creator::retranslateUi()
           .arg(tr("Click the logo below or donate")) \
           .arg(tr("using Paypal to:")) \
     );
-
-    int loadButtonStrLen = ui->loadButton->text().length();
-
-    QRect currRect = ui->loadButton->geometry();
-    if (loadButtonStrLen >= 14) {
-#ifdef Q_OS_WIN
-        ui->loadButton->setGeometry(currRect.x(), currRect.y(), 120, currRect.height());
-#else
-        ui->loadButton->setGeometry(currRect.x(), currRect.y(), 140, currRect.height());
-#endif
-    } else
-        ui->loadButton->setGeometry(currRect.x(), currRect.y(), 100, currRect.height());
 }
 
 void Creator::keyPressEvent(QKeyEvent *event)
@@ -663,7 +648,7 @@ void Creator::reset(const QString& message)
     ui->imageSelectBox->setEnabled(true);
 
     ui->downloadButton->setEnabled(true);
-    ui->downloadButton->setText(tr("Download"));
+    ui->downloadButton->setText(tr("&Download"));
 
     ui->refreshRemovablesButton->setEnabled(true);
     ui->removableDevicesComboBox->setEnabled(true);
@@ -689,7 +674,7 @@ void Creator::reset(const QString& message)
     else
         ui->writeFlashButton->setEnabled(false);
 
-    ui->writeFlashButton->setText(tr("Write"));
+    ui->writeFlashButton->setText(tr("&Write"));
 
     if (message.isNull() == false) {
         if (state == STATE_DOWNLOADING_IMAGE) {
@@ -1113,15 +1098,14 @@ void Creator::checkNewVersion(const QString &verNewStr)
     QMessageBox msgBox(this);
     msgBox.setWindowTitle(tr("Update Notification"));
 #ifdef Q_OS_MAC
-    QAbstractButton *visitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::NoRole);
-    msgBox.addButton(tr("Close"), QMessageBox::YesRole);
+    QAbstractButton *visitButton = msgBox.addButton(tr("&Visit Website"), QMessageBox::NoRole);
+    msgBox.addButton(tr("&Close"), QMessageBox::YesRole);
 #else
-    QAbstractButton *visitButton = msgBox.addButton(tr("Visit Website"), QMessageBox::YesRole);
-    msgBox.addButton(tr("Close"), QMessageBox::NoRole);
+    QAbstractButton *visitButton = msgBox.addButton(tr("&Visit Website"), QMessageBox::YesRole);
+    msgBox.addButton(tr("&Close"), QMessageBox::NoRole);
 #endif
-    QString msg = tr("LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available.").arg(verNewStr);
-    // replace html entities
-    msg = msg.replace("&amp;","&").replace("&quot;","\"").replace("&gt;",">").replace("&lt;","<");
+    QString verHtml = "<font color=\"blue\">" + verNewStr + "</font>";
+    QString msg = tr("LibreELEC USB-SD Creator %1 is available.").arg(verHtml);
     msgBox.setText("<p align='center' style='margin-right:30px'><br>" + msg + "<br></p>");
 
     msgBox.exec();
@@ -1226,7 +1210,7 @@ void Creator::downloadButtonClicked()
     speedTime.start();
     averageSpeed = new MovingAverage(50);
 
-    ui->downloadButton->setText(tr("Cancel"));
+    ui->downloadButton->setText(tr("Cance&l"));
 }
 
 void Creator::getImageFileNameFromUser()
@@ -1363,7 +1347,7 @@ void Creator::writeFlashButtonClicked()
     state = STATE_WRITING_IMAGE;
     privileges.SetRoot();    // root need for opening a device
 
-    ui->writeFlashButton->setText(tr("Cancel"));
+    ui->writeFlashButton->setText(tr("Cance&l"));
     emit proceedToWriteImageToDevice(imageFile.fileName(), destination);
 
     speedTime.start();

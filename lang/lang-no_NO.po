@@ -1,64 +1,27 @@
-# Translators:
-# Mads Kristensen <email-removed>, 2016
-# Jan-Tore Velle <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Jan-Tore Velle <email-removed>, 2016\n"
-"Language-Team: Norwegian (https://www.transifex.com/libreelec/teams/61634/no/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: no\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: nb_NO\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
-msgstr ""
+msgstr "LibreELEC USB-SD Creator"
 
 msgctxt "Creator|"
 msgid "Write image"
 msgstr "Skriv bildefil"
 
 msgctxt "Creator|"
-msgid "Close"
-msgstr "Lukk"
-
-msgctxt "Creator|"
-msgid "Select file"
-msgstr "Velg fil"
-
-msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "Velg versjon"
-
-msgctxt "Creator|"
-msgid "Download"
-msgstr "Last ned"
-
-msgctxt "Creator|"
-msgid "About"
-msgstr "Om"
+msgstr "Velg minnebrikken eller minnekortet ditt"
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
 msgstr "Last ned eller velg en lokal bildefil"
-
-msgctxt "Creator|"
-msgid "Write"
-msgstr "Skriv"
-
-msgctxt "Creator|"
-msgid "Help"
-msgstr "Hjelp"
-
-msgctxt "Creator|"
-msgid "Show all"
-msgstr "Vis alle"
 
 msgctxt "Creator|"
 msgid "Eject device"
@@ -68,9 +31,9 @@ msgctxt "Creator|"
 msgid "Load device"
 msgstr "Last enhet"
 
-msgctxt "Creator|"
-msgid "Eject  Load   Remove"
-msgstr "Løs ut Last Fjern"
+#~ msgctxt "Creator|"
+#~ msgid "Eject  Load   Remove"
+#~ msgstr "Løs ut Last Fjern"
 
 msgctxt "Creator|"
 msgid "Select project"
@@ -107,11 +70,11 @@ msgstr "under GPLv2, og bruker tidligere arbeid fra RasPlex."
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr ""
+msgstr "For lisens, kreditt og historie, vennligst les:"
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr ""
+msgstr "Hvis du nyter å bruke LibreELEC, vennligst vurder en"
 
 msgctxt "Creator|"
 msgid "donation to support the project."
@@ -159,19 +122,6 @@ msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 sekunder gjenstår - %2% på %3"
 
 msgctxt "Creator|"
-msgid "Update Notification"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Visit Website"
-msgstr "Besøk nettside"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
-msgstr ""
-
-msgctxt "Creator|"
 msgid "Download canceled."
 msgstr "Nedlasting avbrutt."
 
@@ -207,18 +157,16 @@ msgid "Failed to open file for writing!"
 msgstr "Åpning av fil for skriving feilet!"
 
 msgctxt "Creator|"
-msgid "Cancel"
-msgstr "Avbryt"
-
-msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Åpne bildefil"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
-" image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
+"image (*.img);;All files (*.*)"
 msgstr ""
+"Komprimert gz bilde (*img.gz);;Komprimert zip bilde (*img.zip);;Ukomprimert "
+"bilde (*.img);;Alle filer (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
@@ -265,14 +213,67 @@ msgstr ""
 
 msgctxt "Creator|"
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 msgctxt "Creator|"
 msgid "No"
-msgstr ""
+msgstr "Nei"
 
 msgctxt "Creator|"
 msgid "OK"
+msgstr "OK"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Oppdateringsvarsling"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Velg versjon"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "Lukk"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "Last ned"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "Om"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Skriv"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "Hjelp"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Velg fil"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "Vis alle"
+
+msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Avbryt"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Besøk nettside"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "LibreELEC USB-SD Creator %1 er tilgjengelig."
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
 msgstr ""
 
 msgctxt "QObject|"
@@ -285,6 +286,8 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
+"En feil oppstod når det ble forsøkt å skrive data til å håndtere.\n"
+"Feil %1: %2"
 
 msgctxt "QObject|"
 msgid "Volume Error"
@@ -296,6 +299,8 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
+"En feil oppstod når det ble forsøkt å få en hånd på volumet.\n"
+"Feil %1: %2"
 
 msgctxt "QObject|"
 msgid "Lock Error"
@@ -307,6 +312,8 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
+"En feil oppstod når det ble forsøkt å låse volumet.\n"
+"Feil %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"

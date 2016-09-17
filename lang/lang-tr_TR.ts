@@ -4,358 +4,306 @@
 <context>
     <name>Creator</name>
     <message>
-        <location filename="../creator.ui" line="+32"/>
         <source>LibreELEC USB-SD Creator</source>
         <translation>LibreELEC USB-SD Creator</translation>
     </message>
     <message>
-        <location line="+91"/>
         <source>Write image</source>
         <translation>İmajı yaz</translation>
     </message>
     <message>
-        <location line="+19"/>
-        <location line="+461"/>
-        <location filename="../creator.cpp" line="+1089"/>
-        <location line="+3"/>
-        <source>Close</source>
-        <translation>Kapat</translation>
-    </message>
-    <message>
-        <location line="-418"/>
-        <source>Select file</source>
-        <translation>Dosyayı seç</translation>
-    </message>
-    <message>
-        <location line="+84"/>
         <source>Select your USB stick or SD card</source>
         <translation>Flashdiski ya da SD kartı seç</translation>
     </message>
     <message>
-        <location line="+44"/>
-        <source>Select version</source>
-        <translation>Sürümü seç</translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <location filename="../creator.cpp" line="-452"/>
-        <source>Download</source>
-        <translation>İndir</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>About</source>
-        <translation>Hakkında</translation>
-    </message>
-    <message>
-        <location line="+70"/>
         <source>Download or select a local image file</source>
-        <translation>Bir imaj dosyası seç ya da indir</translation>
+        <translation>İmaj dosyasını seç ya da indir</translation>
     </message>
     <message>
-        <location line="+19"/>
-        <location filename="../creator.cpp" line="+26"/>
-        <source>Write</source>
-        <translation>Yaz</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Help</source>
-        <translation>Yardım</translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>Show all</source>
-        <translation>Tümünü göster</translation>
-    </message>
-    <message>
-        <location line="+47"/>
         <source>Eject device</source>
         <translation>Aleti çıkar</translation>
     </message>
     <message>
-        <location line="+26"/>
         <source>Load device</source>
         <translation>Alet dolu</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Eject  Load   Remove</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Çıkar Yükle Sil</translation>
     </message>
     <message>
-        <location line="+113"/>
-        <source>Language</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../creator.cpp" line="-485"/>
         <source>Select project</source>
-        <translation type="unfinished"></translation>
+        <translation>Proje seç</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Select image</source>
-        <translation type="unfinished"></translation>
+        <translation>İmaj seç</translation>
     </message>
     <message>
-        <location line="+45"/>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation type="unfinished"></translation>
+        <translation>İmajı yazmak için root özelliği gerek.
+Sudo ile uygulamayı çalıştır.</translation>
     </message>
     <message>
-        <location line="+86"/>
         <source>Version: %1
 Build date: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Sürüm: %1
+Yapım tarihi: %2</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>This software was created with love and released</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu program sevgiyle yazılıp paylaşıldı</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation type="unfinished"></translation>
+        <translation>GPLv2 altında, daha evvel RasPlex&apos;de çalışmaya kullanıldı.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>For license, credits and history, please read:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisans için, yapımcılar ve tarih, lütfen okuyun:</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation type="unfinished"></translation>
+        <translation>LibreELEC&apos;i kullanmaktan hoşlanıyorsanız bir düşünün lütfen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>donation to support the project.</source>
-        <translation type="unfinished"></translation>
+        <translation>projeyi desteğe bağış.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Click the logo below or donate</source>
-        <translation type="unfinished"></translation>
+        <translation>Logo&apos;nun altındakini ya da bağışı tıklayın</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>using Paypal to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Paypal kullanmak:</translation>
     </message>
     <message>
-        <location line="+239"/>
-        <location line="+10"/>
         <source>[Stable]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Final]</translation>
     </message>
     <message>
-        <location line="-7"/>
         <source>[Alpha]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Alfa]</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>[Beta]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Beta]</translation>
     </message>
     <message>
-        <location line="+381"/>
         <source>Download complete, syncing file...</source>
-        <translation type="unfinished"></translation>
+        <translation>İndirme tamamlandı, dosya senkronize ediliyor...</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Download complete, verifying checksum...</source>
-        <translation type="unfinished"></translation>
+        <translation>İndirme tamamlandı, sağlaması yapılıyor...</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Download complete, checksum ok.</source>
-        <translation type="unfinished"></translation>
+        <translation>İndirme tamamlandı, sağlaması doğru.</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Download complete, checksum not ok.</source>
-        <translation type="unfinished"></translation>
+        <translation>İndirme tamamlandı, sağlama olmadı.</translation>
     </message>
     <message>
-        <location line="+82"/>
-        <location line="+433"/>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kalan saniye - %2% de %3</translation>
     </message>
     <message>
-        <location line="-390"/>
-        <source>Update Notification</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <location line="+3"/>
-        <source>Visit Website</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>LibreELEC USB-SD Creator &lt;font color=&quot;blue&quot;&gt;%1&lt;/font&gt; is available.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+28"/>
         <source>Download canceled.</source>
-        <translation type="unfinished"></translation>
+        <translation>İndirme iptal edildi.</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Directory to store image file</source>
-        <translation type="unfinished"></translation>
+        <translation>İmaj dosyasını saklama klasörü</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya
+%1/%2
+zaten var.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Do you want to overwrite?</source>
-        <translation type="unfinished"></translation>
+        <translation>Üzerine yazmak istiyor musun?</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>File already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya zaten mevcut.</translation>
     </message>
     <message>
-        <location line="+22"/>
         <source>Failed to open file for writing!</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazmak için dosya açılmıyor!</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+135"/>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-112"/>
         <source>Open image file</source>
-        <translation type="unfinished"></translation>
+        <translation>İmaj dosyasını aç</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıkıştırılmış gz imaj (*img.gz);;Sıkıştırılmış zip imaj (*img.zip);;Sıkıştırılmamış imaj (*.img);;Tüm dosyalar (*.*)</translation>
     </message>
     <message>
-        <location line="+41"/>
         <source>Writing canceled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazma iptal edildi.</translation>
     </message>
     <message>
-        <location line="+26"/>
         <source>Confirm write</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazma onayı</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <source>Cannot unmount partititons on device %1</source>
+        <translation>Aletteki partitisyonlar ayrılmıyor %1</translation>
+    </message>
+    <message>
+        <source>Not enough space on %1 [%2 &lt; %3]</source>
+        <translation>Yeterli yer yok %1 [%2 &lt; %3]</translation>
+    </message>
+    <message>
+        <source>Syncing file system...</source>
+        <translation>Dosya sistemi sağlaması yapılıyor...</translation>
+    </message>
+    <message>
+        <source>Writing done!</source>
+        <translation>Yazma bitti!</translation>
+    </message>
+    <message>
+        <source>Error: %1</source>
+        <translation>Hata: %1</translation>
+    </message>
+    <message>
         <source>Selected device: %1
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation type="unfinished"></translation>
+        <translation>Alet seçildi: %1
+İmajı yazmak istediğinden emin misin?
+USB-SD aleti silinecek!</translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>Cannot unmount partititons on device %1</source>
-        <translation type="unfinished"></translation>
+        <source>Yes</source>
+        <translation>Evet</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation type="unfinished"></translation>
+        <source>No</source>
+        <translation>Hayır</translation>
     </message>
     <message>
-        <location line="+24"/>
-        <source>Syncing file system...</source>
-        <translation type="unfinished"></translation>
+        <source>OK</source>
+        <translation>Tamam</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>Writing done!</source>
-        <translation type="unfinished"></translation>
+        <source>Update Notification</source>
+        <translation>Güncelleme Bildirimi</translation>
     </message>
     <message>
-        <location line="+12"/>
-        <source>Error: %1</source>
+        <source>Select version</source>
+        <translation>Sürümü seç</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>Kapat</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>İndir</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>Hakkında</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>Yaz</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>Yardım</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Dosyayı seç</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>Tümünü göster</translation>
+    </message>
+    <message>
+        <source>Cance&amp;l</source>
+        <translation>İptal</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>Siteye Git</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>LibreELEC USB-SD Creator %1 mevcut.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../diskwriter_windows.cpp" line="+116"/>
         <source>Write Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Yazım Hatası</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Veriyi yazmaya çalışırken bir sorun oluştu.
+Hata %1: %2</translation>
     </message>
     <message>
-        <location line="+38"/>
         <source>Volume Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapasite Hatası</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapasiteyi kontrol etmeye çalışırken bir sorun oluştu.
+Hata %1: %2</translation>
     </message>
     <message>
-        <location line="+15"/>
         <source>Lock Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Kilitleme Hatası</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapasiteyi kilitlemeye çalışırken bir sorun oluştu.
+Hata %1: %2</translation>
     </message>
     <message>
-        <location line="+15"/>
         <source>Unlock Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Kilidi açma Hatası</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapasiteyi açmaya çalışırken bir sorun oluştu.
+Hata %1: %2</translation>
     </message>
     <message>
-        <location line="+15"/>
         <source>Dismount Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Sökülme Hatası</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapasiteyi sökmeye çalışırken bir sorun oluştu.
+Hata %1: %2</translation>
     </message>
 </context>
 </TS>

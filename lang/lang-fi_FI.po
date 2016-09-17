@@ -1,15 +1,10 @@
-# Translators:
-# Olli Salonen <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
-"Language-Team: Finnish (https://www.transifex.com/libreelec/teams/61634/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: fi_FI\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -21,44 +16,12 @@ msgid "Write image"
 msgstr "Kirjoita levykuva"
 
 msgctxt "Creator|"
-msgid "Close"
-msgstr "Sulje"
-
-msgctxt "Creator|"
-msgid "Select file"
-msgstr "Valitse tiedosto"
-
-msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
 msgstr "Valitse USB-muisti tai SD-kortti"
 
 msgctxt "Creator|"
-msgid "Select version"
-msgstr "Valitse versio"
-
-msgctxt "Creator|"
-msgid "Download"
-msgstr "Lataa"
-
-msgctxt "Creator|"
-msgid "About"
-msgstr "Tietoja"
-
-msgctxt "Creator|"
 msgid "Download or select a local image file"
 msgstr "Lataa verkosta tai valitse tiedosto"
-
-msgctxt "Creator|"
-msgid "Write"
-msgstr "Kirjoita"
-
-msgctxt "Creator|"
-msgid "Help"
-msgstr "Apua"
-
-msgctxt "Creator|"
-msgid "Show all"
-msgstr "Näytä kaikki"
 
 msgctxt "Creator|"
 msgid "Eject device"
@@ -68,9 +31,9 @@ msgctxt "Creator|"
 msgid "Load device"
 msgstr "Lataa laite"
 
-msgctxt "Creator|"
-msgid "Eject  Load   Remove"
-msgstr "Irroita Lataa Poista"
+#~ msgctxt "Creator|"
+#~ msgid "Eject  Load   Remove"
+#~ msgstr "Irroita Lataa Poista"
 
 msgctxt "Creator|"
 msgid "Select project"
@@ -159,19 +122,6 @@ msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 sekuntia jäljellä - %2% @ %3"
 
 msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Ilmoitus päivityksestä"
-
-msgctxt "Creator|"
-msgid "Visit Website"
-msgstr "Käy web-sivulla"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator <font color=\"blue\">%1</font> is available."
-msgstr "LibreELEC USB-SD -työkalu <font color=\"blue\">%1</font> on saatavilla."
-
-msgctxt "Creator|"
 msgid "Download canceled."
 msgstr "Lataus peruutettu."
 
@@ -207,17 +157,13 @@ msgid "Failed to open file for writing!"
 msgstr "Tiedostoa ei saatu auki!"
 
 msgctxt "Creator|"
-msgid "Cancel"
-msgstr "Peruuta"
-
-msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Avaa levykuva"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
-" image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
+"image (*.img);;All files (*.*)"
 msgstr ""
 "Pakattu gz-levykuva (*img.gz);;Pakattu zip-levykuva (*img.zip);;Pakkaamaton "
 "levykuva (*.img);;Kaikki tiedostot (*.*)"
@@ -277,6 +223,59 @@ msgstr "Ei"
 msgctxt "Creator|"
 msgid "OK"
 msgstr "OK"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Ilmoitus päivityksestä"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Valitse versio"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "Sulje"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "Lataa"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "Tietoja"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Kirjoita"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "Apua"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Valitse tiedosto"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "Näytä kaikki"
+
+msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Peruuta"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Käy web-sivulla"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "LibreELEC USB-SD -työkalu %1 on saatavilla."
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

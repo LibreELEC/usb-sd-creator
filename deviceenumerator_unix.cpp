@@ -135,8 +135,11 @@ QStringList DeviceEnumerator_unix::getUserFriendlyNames(const QStringList &devic
         output = lsblk.readLine();
         while (!lsblk.atEnd()) {
             output = output.trimmed(); // Odd trailing whitespace
-            if (output.contains("Total Size:")) {
+            if (output.contains("Total Size:") ||
+            	  output.contains("Disk Size:")) {
                 // Total Size:  574.6 MB (574619648 Bytes) (exactly 1122304 512-Byte-Units)
+                // on 2015 Macbook Pro 15" running MacOS Sierra beta
+                // Disk Size:                15.9 GB (15931539456 Bytes) (exactly 31116288 512-Byte-Units)
                 QStringList sizeList = output.split('(').first().split(':');
                 size = sizeList.last().trimmed();
                 break;
