@@ -31,9 +31,9 @@ msgctxt "Creator|"
 msgid "Load device"
 msgstr "Alet dolu"
 
-msgctxt "Creator|"
-msgid "Eject  Load   Remove"
-msgstr "Çıkar Yükle Sil"
+#~ msgctxt "Creator|"
+#~ msgid "Eject  Load   Remove"
+#~ msgstr "Çıkar Yükle Sil"
 
 msgctxt "Creator|"
 msgid "Select project"
@@ -271,6 +271,10 @@ msgstr "Siteye Git"
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
 msgstr "LibreELEC USB-SD Creator %1 mevcut."
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

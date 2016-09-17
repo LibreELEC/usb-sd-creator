@@ -5,241 +5,252 @@
     <name>Creator</name>
     <message>
         <source>LibreELEC USB-SD Creator</source>
-        <translation type="unfinished"></translation>
+        <translation>LibreELEC USB-SD Creator</translation>
     </message>
     <message>
         <source>Write image</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapísať obraz</translation>
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrať disk USB alebo kartu SD</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
-        <translation type="unfinished"></translation>
+        <translation>Stiahnuť a vybrať lokálny súbor s obrazom</translation>
     </message>
     <message>
         <source>Eject device</source>
-        <translation type="unfinished"></translation>
+        <translation>Vysunúť zariadenie</translation>
     </message>
     <message>
         <source>Load device</source>
-        <translation type="unfinished"></translation>
+        <translation>Načítať zariadenie</translation>
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Vysunúť Načítať Odobrať</translation>
     </message>
     <message>
         <source>Select project</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrať projekt</translation>
     </message>
     <message>
         <source>Select image</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrať obraz</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation type="unfinished"></translation>
+        <translation>Na zapísanie obrazu sú potrebné root privilégia.
+Spustite aplikáciu s príkazom sudo.</translation>
     </message>
     <message>
         <source>Version: %1
 Build date: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzia: %1
+Číslo zostavy: %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
-        <translation type="unfinished"></translation>
+        <translation>Tento softvér bol vytvorený s láskou a uvoľnený</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation type="unfinished"></translation>
+        <translation>pod licenciou GPLv2, s použitím predošlej práce z RasPlex.</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pre licenčné podmienky, zásluhy a históriu, si prosím prečítajte:</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation type="unfinished"></translation>
+        <translation>Ak ste spokojní s LibreELEC, prosím zvážte </translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation type="unfinished"></translation>
+        <translation>príspevok na podporu projektu.</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
-        <translation type="unfinished"></translation>
+        <translation>Kliknite na logo nižšie alebo prispejte</translation>
     </message>
     <message>
         <source>using Paypal to:</source>
-        <translation type="unfinished"></translation>
+        <translation>prostredníctvom Paypalu na:</translation>
     </message>
     <message>
         <source>[Stable]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Stabilný]</translation>
     </message>
     <message>
         <source>[Alpha]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Alpha]</translation>
     </message>
     <message>
         <source>[Beta]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Beta]</translation>
     </message>
     <message>
         <source>Download complete, syncing file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sťahovanie ukončené, prebieha synchonizácia súboru...</translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sťahovanie ukončené, prebieha overovanie...</translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sťahovanie ukončené, overovanie je v poriadku.</translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sťahovanie ukončené, overovanie je chybné.</translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Ostáva %1 sekúnd - %2% na %3</translation>
     </message>
     <message>
         <source>Download canceled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sťahovanie zrušené.</translation>
     </message>
     <message>
         <source>Directory to store image file</source>
-        <translation type="unfinished"></translation>
+        <translation>Priečinok pre umiestnenie súboru obrazu</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba</translation>
     </message>
     <message>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbor
+%1/%2
+už existuje.</translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
-        <translation type="unfinished"></translation>
+        <translation>Chcete ho prepísať?</translation>
     </message>
     <message>
         <source>File already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbor už existuje.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepodarilo sa otvoriť súbor na zapisovanie!</translation>
     </message>
     <message>
         <source>Open image file</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvoriť súbor s obrazom</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Komprimovaný obraz gz (*img.gz);;Komprimovaný obraz zip (*img.zip);;Nekomprimovaný obraz (*.img);;Všetky súbory (*.*)</translation>
     </message>
     <message>
         <source>Writing canceled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisovanie zrušené.</translation>
     </message>
     <message>
         <source>Confirm write</source>
-        <translation type="unfinished"></translation>
+        <translation>Potvrdiť zápis</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedá sa odobrať partície na zariadené %1</translation>
     </message>
     <message>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedostatok miesta na %1 [%2 &lt; %3]</translation>
     </message>
     <message>
         <source>Syncing file system...</source>
-        <translation type="unfinished"></translation>
+        <translation>Synchronizácia súborového systému...</translation>
     </message>
     <message>
         <source>Writing done!</source>
-        <translation type="unfinished"></translation>
+        <translation>Zápis ukončený!</translation>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba: %1</translation>
     </message>
     <message>
         <source>Selected device: %1
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvolené zariadenie: %1
+Určite chcete zapísať obraz?
+
+Vaše zariadenie USB-SD bude vymazané!</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Áno</translation>
     </message>
     <message>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie</translation>
     </message>
     <message>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <source>Update Notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Upozornenie na aktualizáciu</translation>
     </message>
     <message>
         <source>Select version</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrať verziu</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Zavrieť</translation>
     </message>
     <message>
         <source>&amp;Download</source>
-        <translation type="unfinished"></translation>
+        <translation>Stiahnúť</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>O programe</translation>
     </message>
     <message>
         <source>&amp;Write</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapísať</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomoc</translation>
     </message>
     <message>
         <source>Select &amp;file</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrať súbor</translation>
     </message>
     <message>
         <source>&amp;Show all</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť všetko</translation>
     </message>
     <message>
         <source>Cance&amp;l</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrušiť</translation>
     </message>
     <message>
         <source>&amp;Visit Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Navštíviť webstránku</translation>
     </message>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>Je dostupný LibreELEC USB-SD Creator %1.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -247,48 +258,53 @@ Your USB-SD device will be wiped!</source>
     <name>QObject</name>
     <message>
         <source>Write Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba zápisu</translation>
     </message>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Pri pokuse o zápis dát sa vyskytla chyba.
+Chyba %1: %2</translation>
     </message>
     <message>
         <source>Volume Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba jednotky</translation>
     </message>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Pri pokuse o spojenie so zväzkom sa vyskytla chyba.
+Chyba %1: %2</translation>
     </message>
     <message>
         <source>Lock Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba pri uzamykaní</translation>
     </message>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Pri pokuse o uzamknutie zväzku sa vyskytla chyba.
+Chyba %1: %2</translation>
     </message>
     <message>
         <source>Unlock Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba pri odomykaní</translation>
     </message>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Pri pokuse o odomknutie zväzku sa vyskytla chyba.
+Chyba %1: %2</translation>
     </message>
     <message>
         <source>Dismount Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba pri odoberaní</translation>
     </message>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Pri pokuse o odobratie zväzku sa vyskytla chyba.
+Chyba %1: %2</translation>
     </message>
 </context>
 </TS>

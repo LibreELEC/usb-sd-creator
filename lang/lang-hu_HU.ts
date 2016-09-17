@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Kiadás Betöltés Eltávolítás</translation>
+        <translation type="vanished">Kiadás Betöltés Eltávolítás</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -248,6 +248,10 @@ A USB-SD eszköz törölve lesz!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD készítő %1 elérhető.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

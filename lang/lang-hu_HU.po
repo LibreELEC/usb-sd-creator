@@ -31,9 +31,9 @@ msgctxt "Creator|"
 msgid "Load device"
 msgstr "Lemez betöltése"
 
-msgctxt "Creator|"
-msgid "Eject  Load   Remove"
-msgstr "Kiadás Betöltés Eltávolítás"
+#~ msgctxt "Creator|"
+#~ msgid "Eject  Load   Remove"
+#~ msgstr "Kiadás Betöltés Eltávolítás"
 
 msgctxt "Creator|"
 msgid "Select project"
@@ -272,6 +272,10 @@ msgstr "Weboldal meglátogatása"
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
 msgstr "LibreELEC USB-SD készítő %1 elérhető."
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

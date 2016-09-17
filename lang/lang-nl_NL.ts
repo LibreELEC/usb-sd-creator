@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Uitwerpen Laden Verwijderen</translation>
+        <translation type="vanished">Uitwerpen Laden Verwijderen</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -248,6 +248,10 @@ Uw USB-SD-apparaat zal gewist worden!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD Creator %1 is beschikbaar.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Çıkar Yükle Sil</translation>
+        <translation type="vanished">Çıkar Yükle Sil</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -247,6 +247,10 @@ USB-SD aleti silinecek!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD Creator %1 mevcut.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Irroita Lataa Poista</translation>
+        <translation type="vanished">Irroita Lataa Poista</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -248,6 +248,10 @@ USB/SD-laitteesi nykyinen sisältö häviää!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD -työkalu %1 on saatavilla.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

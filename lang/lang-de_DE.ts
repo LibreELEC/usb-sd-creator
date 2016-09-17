@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Eject Load Remove</translation>
+        <translation type="vanished">Eject Load Remove</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -248,6 +248,10 @@ Deine Daten auf dem Gerät werden gelöscht!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD Creator %1 ist verfügbar.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

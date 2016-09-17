@@ -30,18 +30,6 @@ msgid "Load device"
 msgstr ""
 
 msgctxt "Creator|"
-msgid "Eject  Load   Remove"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr ""
-
-msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
@@ -256,6 +244,18 @@ msgstr ""
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
 msgstr ""
 
 msgctxt "QObject|"

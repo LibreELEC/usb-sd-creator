@@ -5,7 +5,7 @@
     <name>Creator</name>
     <message>
         <source>LibreELEC USB-SD Creator</source>
-        <translation type="unfinished"></translation>
+        <translation>LibreELEC USB-SD Creator</translation>
     </message>
     <message>
         <source>Write image</source>
@@ -13,7 +13,7 @@
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>Velg minnebrikken eller minnekortet ditt</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Løs ut Last Fjern</translation>
+        <translation type="vanished">Løs ut Last Fjern</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -61,11 +61,11 @@ Byggdato: %2</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
-        <translation type="unfinished"></translation>
+        <translation>For lisens, kreditt og historie, vennligst les:</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation type="unfinished"></translation>
+        <translation>Hvis du nyter å bruke LibreELEC, vennligst vurder en</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
@@ -149,7 +149,7 @@ eksisterer allerede.</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Komprimert gz bilde (*img.gz);;Komprimert zip bilde (*img.zip);;Ukomprimert bilde (*.img);;Alle filer (*.*)</translation>
     </message>
     <message>
         <source>Writing canceled.</source>
@@ -202,7 +202,7 @@ Din USB-SD enhet vil bli tømt!</translation>
     </message>
     <message>
         <source>Update Notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppdateringsvarsling</translation>
     </message>
     <message>
         <source>Select version</source>
@@ -246,6 +246,10 @@ Din USB-SD enhet vil bli tømt!</translation>
     </message>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>LibreELEC USB-SD Creator %1 er tilgjengelig.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -258,7 +262,8 @@ Din USB-SD enhet vil bli tømt!</translation>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>En feil oppstod når det ble forsøkt å skrive data til å håndtere.
+Feil %1: %2</translation>
     </message>
     <message>
         <source>Volume Error</source>
@@ -267,7 +272,8 @@ Error %1: %2</source>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>En feil oppstod når det ble forsøkt å få en hånd på volumet.
+Feil %1: %2</translation>
     </message>
     <message>
         <source>Lock Error</source>
@@ -276,7 +282,8 @@ Error %1: %2</source>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>En feil oppstod når det ble forsøkt å låse volumet.
+Feil %1: %2</translation>
     </message>
     <message>
         <source>Unlock Error</source>

@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Извади Зареди Премахни</translation>
+        <translation type="vanished">Извади Зареди Премахни</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -149,7 +149,7 @@ already exist.</source>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Сгъстен gz файл (*img.gz);;Сгъстен zip файл (*img.zip);;Некомпресиран файл (*.img);;Всички файлове (*.*)</translation>
     </message>
     <message>
         <source>Writing canceled.</source>
@@ -248,6 +248,10 @@ Your USB-SD device will be wiped!</source>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC създател за USB-SD %1 е наличен.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

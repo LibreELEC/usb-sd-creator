@@ -31,9 +31,9 @@ msgctxt "Creator|"
 msgid "Load device"
 msgstr "Ladda enhet"
 
-msgctxt "Creator|"
-msgid "Eject  Load   Remove"
-msgstr "Mata ut, Ladda, Ta bort"
+#~ msgctxt "Creator|"
+#~ msgid "Eject  Load   Remove"
+#~ msgstr "Mata ut, Ladda, Ta bort"
 
 msgctxt "Creator|"
 msgid "Select project"
@@ -254,7 +254,7 @@ msgstr "&Hjälp"
 
 msgctxt "Creator|"
 msgid "Select &file"
-msgstr "Välj %fil"
+msgstr "Välj &fil"
 
 msgctxt "Creator|"
 msgid "&Show all"
@@ -272,6 +272,10 @@ msgstr "&Besök hemsidan"
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
 msgstr "LibreELEC USB-SD Creator %1 finns tillgängligt."
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

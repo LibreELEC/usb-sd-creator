@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Mata ut, Ladda, Ta bort</translation>
+        <translation type="vanished">Mata ut, Ladda, Ta bort</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -231,7 +231,7 @@ Din USB-SD enhet kommer raderas!</translation>
     </message>
     <message>
         <source>Select &amp;file</source>
-        <translation>Välj %fil</translation>
+        <translation>Välj &amp;fil</translation>
     </message>
     <message>
         <source>&amp;Show all</source>
@@ -248,6 +248,10 @@ Din USB-SD enhet kommer raderas!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD Creator %1 finns tillgängligt.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

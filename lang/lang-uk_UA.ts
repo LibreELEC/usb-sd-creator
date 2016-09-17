@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Вилучити  Завантажити   Видалити</translation>
+        <translation type="vanished">Вилучити  Завантажити   Видалити</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -248,6 +248,10 @@ Your USB-SD device will be wiped!</source>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>Доступний LibreELEC USB-SD Creator %1.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

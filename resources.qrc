@@ -17,7 +17,7 @@
         <file>stylesheet.qss</file>
         <file>stylesheet_osx.qss</file>
     </qresource>
-    <qresource prefix="">
+    <qresource prefix="/">
     		<file>lang/flag-empty.png</file>
         <file>lang/flag-bg_BG.png</file>
         <file>lang/flag-cs_CZ.png</file>
@@ -39,14 +39,9 @@
         <file>lang/flag-sr_RS.png</file>
         <file>lang/flag-tr_TR.png</file>
         <file>lang/flag-uk_UA.png</file>
-        <file>lang/flag-he_IL.png</file>
         <file>lang/flag-hr_HR.png</file>
-        <file>lang/flag-nb_NO.png</file>
-        <file>lang/flag-ro_RO.png</file>
         <file>lang/flag-sk_SK.png</file>
         <file>lang/flag-sv_SE.png</file>
-    </qresource>
-    <qresource prefix="">
         <file>lang/lang-bg_BG.qm</file>
         <file>lang/lang-cs_CZ.qm</file>
         <file>lang/lang-da_DK.qm</file>
@@ -67,10 +62,7 @@
         <file>lang/lang-sr_RS.qm</file>
         <file>lang/lang-tr_TR.qm</file>
         <file>lang/lang-uk_UA.qm</file>
-        <file>lang/lang-he_IL.qm</file>
         <file>lang/lang-hr_HR.qm</file>
-        <file>lang/lang-nb_NO.qm</file>
-        <file>lang/lang-ro_RO.qm</file>
         <file>lang/lang-sk_SK.qm</file>
         <file>lang/lang-sv_SE.qm</file>
     </qresource>

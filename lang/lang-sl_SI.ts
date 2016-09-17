@@ -5,31 +5,31 @@
     <name>Creator</name>
     <message>
         <source>LibreELEC USB-SD Creator</source>
-        <translation type="unfinished"></translation>
+        <translation>LibreELEC USB-SD Creator</translation>
     </message>
     <message>
         <source>Write image</source>
-        <translation>Zapiši sliko</translation>
+        <translation>Zapiši sliko diska</translation>
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>Izberi USB stick ali SD kartico</translation>
+        <translation>Izberi USB ključ ali SD kartico</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
-        <translation>Prenesi ali izberi lokalno datoteko</translation>
+        <translation>Prenesi ali izberi lokalno sliko diska</translation>
     </message>
     <message>
         <source>Eject device</source>
-        <translation type="unfinished"></translation>
+        <translation>Eject device</translation>
     </message>
     <message>
         <source>Load device</source>
-        <translation type="unfinished"></translation>
+        <translation>Load device</translation>
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Eject Load Remove</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -37,7 +37,7 @@
     </message>
     <message>
         <source>Select image</source>
-        <translation>Izberi sliko</translation>
+        <translation>Izberi sliko diska</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -52,152 +52,157 @@ Prevedeno: %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta program je bil narejen z ljubeznijo in izdan</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation type="unfinished"></translation>
+        <translation>pod GPLv2 licenco iz prvotnega dela RasPlex.</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
-        <translation type="unfinished"></translation>
+        <translation>Za licenco, zasluge in zgodovino preberite:</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation type="unfinished"></translation>
+        <translation>Če z veseljem uporabljate LibreELEC razmislite o</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation type="unfinished"></translation>
+        <translation>donaciji in podprite projekt.</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
-        <translation type="unfinished"></translation>
+        <translation>Kliknite spodnji logo ali donirajte</translation>
     </message>
     <message>
         <source>using Paypal to:</source>
-        <translation type="unfinished"></translation>
+        <translation>z uporabo Paypala:</translation>
     </message>
     <message>
         <source>[Stable]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Stabilna]</translation>
     </message>
     <message>
         <source>[Alpha]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Alpha]</translation>
     </message>
     <message>
         <source>[Beta]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Beta]</translation>
     </message>
     <message>
         <source>Download complete, syncing file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Prenos končan, zapisujem datoteko...</translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation type="unfinished"></translation>
+        <translation>Prenos končan, preverjam kontrolno vsoto...</translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prenos končan, kontrolna vsota je ok...</translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prenos končan, kontrolna vsota ni ok...</translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation type="unfinished"></translation>
+        <translation>še %1 sekund - %2% z %3</translation>
     </message>
     <message>
         <source>Download canceled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prenos preklican.</translation>
     </message>
     <message>
         <source>Directory to store image file</source>
-        <translation type="unfinished"></translation>
+        <translation>Folder za shranjevanje slike diska</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka</translation>
     </message>
     <message>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka
+%1/%2
+že obstaja.</translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
-        <translation type="unfinished"></translation>
+        <translation>Želite prepisati?</translation>
     </message>
     <message>
         <source>File already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka že obstaja.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri odpiranju datoteke za zapisovanje!</translation>
     </message>
     <message>
         <source>Open image file</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpri sliko diska</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Stisnjena gz slika (*img.gz);;Stisnjena zip slika (*img.zip);;Nestisnjena slika (*.img);;Vse datoteke (*.*)</translation>
     </message>
     <message>
         <source>Writing canceled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisovanje preklicano.</translation>
     </message>
     <message>
         <source>Confirm write</source>
-        <translation type="unfinished"></translation>
+        <translation>Potrdi zapisovanje</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne morem odklopiti particije na napravi %1</translation>
     </message>
     <message>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation type="unfinished"></translation>
+        <translation>Ni dovolj prostora na %1 [%2 &lt; %3]</translation>
     </message>
     <message>
         <source>Syncing file system...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sinhroniziram datotečni sistem...</translation>
     </message>
     <message>
         <source>Writing done!</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisovanje končano!</translation>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka: %1</translation>
     </message>
     <message>
         <source>Selected device: %1
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbrana naprava: %1
+Želite res zapisati sliko diska?
+
+Vaša USB-SD naprava bo zbrisana!</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Da</translation>
     </message>
     <message>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <source>Update Notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Obvestilo o posodobitvi</translation>
     </message>
     <message>
         <source>Select version</source>
@@ -205,91 +210,100 @@ Your USB-SD device will be wiped!</source>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapri</translation>
     </message>
     <message>
         <source>&amp;Download</source>
-        <translation type="unfinished"></translation>
+        <translation>Prenesi</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>O programu</translation>
     </message>
     <message>
         <source>&amp;Write</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapiši</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomoč</translation>
     </message>
     <message>
         <source>Select &amp;file</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi datoteko</translation>
     </message>
     <message>
         <source>&amp;Show all</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži vse</translation>
     </message>
     <message>
         <source>Cance&amp;l</source>
-        <translation type="unfinished"></translation>
+        <translation>Prekliči</translation>
     </message>
     <message>
         <source>&amp;Visit Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Obišči spletno stran</translation>
     </message>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>Na voljo je nova verzija LibreELEC USB-SD Creator %1.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Write Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri zapisovanju</translation>
     </message>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri zapisovanju podatkov v ročico.
+Napaka %1: %2</translation>
     </message>
     <message>
         <source>Volume Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka nosilca</translation>
     </message>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri pridobivanju ročice za nosilec.
+Napaka %1: %2</translation>
     </message>
     <message>
         <source>Lock Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri zaklepanju</translation>
     </message>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri zaklepanju nosilca.
+Napaka %1: %2</translation>
     </message>
     <message>
         <source>Unlock Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri odklepanju</translation>
     </message>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri odklepanju nosilca.
+Napaka %1: %2</translation>
     </message>
     <message>
         <source>Dismount Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri odklopu</translation>
     </message>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri odklopu nosilca.
+Napaka %1: %2</translation>
     </message>
 </context>
 </TS>

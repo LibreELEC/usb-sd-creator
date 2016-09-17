@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Izbaci  Učitaj  Ukloni</translation>
+        <translation type="vanished">Izbaci  Učitaj  Ukloni</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -244,6 +244,10 @@ Tvoj USB-SD uređaj će biti izbrisan!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD aplikacija %1 je dostupna.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

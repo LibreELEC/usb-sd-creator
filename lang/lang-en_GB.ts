@@ -28,18 +28,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation type="unfinished"></translation>
@@ -240,6 +228,18 @@ Your USB-SD device will be wiped!</source>
     </message>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

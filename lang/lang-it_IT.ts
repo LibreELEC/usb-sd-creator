@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Espelli Apri Rimuovi</translation>
+        <translation type="vanished">Espelli Apri Rimuovi</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -248,6 +248,10 @@ Il contenuto del tuo drive USB \ Scheda SD verra&apos; eliminato!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD Creator %1 disponibile.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

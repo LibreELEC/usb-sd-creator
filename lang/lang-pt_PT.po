@@ -31,9 +31,9 @@ msgctxt "Creator|"
 msgid "Load device"
 msgstr "Carregar o dispositivo"
 
-msgctxt "Creator|"
-msgid "Eject  Load   Remove"
-msgstr "Ejetar Carregar Remover"
+#~ msgctxt "Creator|"
+#~ msgid "Eject  Load   Remove"
+#~ msgstr "Ejetar Carregar Remover"
 
 msgctxt "Creator|"
 msgid "Select project"
@@ -272,6 +272,10 @@ msgstr "Visite o Website"
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
 msgstr "LibreELEC USB-SD Creator %1 está disponível."
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation>Vysunout Načíst Odebrat</translation>
+        <translation type="vanished">Vysunout Načíst Odebrat</translation>
     </message>
     <message>
         <source>Select project</source>
@@ -247,6 +247,10 @@ Vaše USB zařízení bude zcela smazáno!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD Creator %1 je k dispozici.</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

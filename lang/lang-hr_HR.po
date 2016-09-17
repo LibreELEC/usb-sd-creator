@@ -31,9 +31,9 @@ msgctxt "Creator|"
 msgid "Load device"
 msgstr "Učitaj uređaj"
 
-msgctxt "Creator|"
-msgid "Eject  Load   Remove"
-msgstr "Izbaci  Učitaj  Ukloni"
+#~ msgctxt "Creator|"
+#~ msgid "Eject  Load   Remove"
+#~ msgstr "Izbaci  Učitaj  Ukloni"
 
 msgctxt "Creator|"
 msgid "Select project"
@@ -265,6 +265,10 @@ msgstr "Posjeti web stranicu"
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
 msgstr "LibreELEC USB-SD aplikacija %1 je dostupna."
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"
