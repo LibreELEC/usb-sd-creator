@@ -46,3 +46,13 @@ QMenu::item:checked {
   color: red;
   background: orange;
 }
+
+QPushButton {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+QPushButton:focus {
+  padding-left: 0px;
+  padding-right: 0px;
+}

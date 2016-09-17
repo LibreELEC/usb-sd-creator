@@ -190,9 +190,6 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     setImageFileName("");
     ui->writeFlashButton->setEnabled(false);
 
-    ui->projectSelectBox->setToolTip(tr("Select project"));
-    ui->imageSelectBox->setToolTip(tr("Select image"));
-
     showLoadEject = false;  // disabled by default
 
 #ifdef Q_OS_WIN
@@ -336,18 +333,6 @@ void Creator::retranslateUi()
           .arg(tr("Click the logo below or donate")) \
           .arg(tr("using Paypal to:")) \
     );
-
-    int loadButtonStrLen = ui->loadButton->text().length();
-
-    QRect currRect = ui->loadButton->geometry();
-    if (loadButtonStrLen >= 14) {
-#ifdef Q_OS_WIN
-        ui->loadButton->setGeometry(currRect.x(), currRect.y(), 120, currRect.height());
-#else
-        ui->loadButton->setGeometry(currRect.x(), currRect.y(), 140, currRect.height());
-#endif
-    } else
-        ui->loadButton->setGeometry(currRect.x(), currRect.y(), 100, currRect.height());
 }
 
 void Creator::keyPressEvent(QKeyEvent *event)
