@@ -404,9 +404,17 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
     }
 
     // at least one partititon
-    char devName[36];
+    char devName[64];
     const char *label = NULL;
-    snprintf(devName, sizeof(devName), "%s1", qPrintable(device));
+
+    if (device.startsWith("/dev/mmcblk")) {
+        // check /dev/mmcblk0p1
+        snprintf(devName, sizeof(devName), "%sp1", qPrintable(device));
+    } else {
+        // check /dev/sdb1
+        snprintf(devName, sizeof(devName), "%s1", qPrintable(device));
+    }
+
     prPart = blkid_new_probe_from_filename(devName);
     if (prPart == NULL)
         return qLabel;  // no label
