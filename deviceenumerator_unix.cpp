@@ -336,6 +336,9 @@ QStringList DeviceEnumerator_unix::getPartitionsInfo(const QString& device) cons
 
     for (i = 0; i < nparts; i++) {
         blkid_partition par = blkid_partlist_get_partition(ls, i);
+        if (par == NULL)
+            continue;
+
         QString partition;
         QTextStream stream(&partition);
         stream << "#" << blkid_partition_get_partno(par) << " ";
@@ -377,6 +380,7 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
     blkid_probe prPart;
     blkid_partlist ls;
     int nparts;
+    int rv;
     QString qLabel;
 
     pr = blkid_new_probe_from_filename(qPrintable(device));
@@ -404,10 +408,21 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
     const char *label = NULL;
     snprintf(devName, sizeof(devName), "%s1", qPrintable(device));
     prPart = blkid_new_probe_from_filename(devName);
-    blkid_do_probe(prPart);
-    blkid_probe_lookup_value(prPart, "LABEL", &label, NULL);
+    if (prPart == NULL)
+        return qLabel;  // no label
+
+    rv = blkid_do_probe(prPart);
+    if (rv != 0)
+        return qLabel;  // no label
+
+    rv = blkid_probe_lookup_value(prPart, "LABEL", &label, NULL);
+
     blkid_free_probe(prPart);
     blkid_free_probe(pr);
+
+    if (rv != 0)
+        return qLabel;  // no label
+
     qDebug() << "devName" << devName << "label" << label;
     if (label != NULL)
         qLabel = QString::fromLatin1(label);
