@@ -44,7 +44,7 @@ public:
         const QStringList suffixes = QStringList() << " B" << " kB" << " MB" << " GB" << " TB";
 
         if (size <= 0)
-            return "?? MB";
+            return "0 MB";
 
         int idx = 0;
         qreal fSize = size;
