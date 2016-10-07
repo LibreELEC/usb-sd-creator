@@ -50,7 +50,7 @@
 #endif
 
 // force update notification dialog
-//#define FORCE_UPDATE_NOTIFICATION
+//#define FORCE_UPDATE_NOTIFICATION "1.3"
 
 const QString Creator::releasesUrl = "http://releases.libreelec.tv/";
 const QString Creator::versionUrl = releasesUrl + "creator_version";
@@ -949,7 +949,11 @@ void Creator::handleFinishedDownload(const QByteArray &data)
     switch (state) {
     case STATE_GET_VERSION:
         state = STATE_IDLE;
+#ifdef FORCE_UPDATE_NOTIFICATION
+        checkNewVersion(FORCE_UPDATE_NOTIFICATION);
+#else
         checkNewVersion(data);
+#endif
         downloadReleases();
         break;
 
@@ -1086,16 +1090,11 @@ void Creator::checkNewVersion(const QString &verNewStr)
 {
     QVersionNumber qVersionNew = QVersionNumber::fromString(verNewStr);
     QVersionNumber qVersionOld = QVersionNumber::fromString(BUILD_VERSION);
-    if (qVersionNew.segmentCount() != 3 || qVersionOld.segmentCount() != 3) {
-        qDebug() << "not 3 segments version";
-        return;
-    }
+
 
     int QVersionCompare = QVersionNumber::compare(qVersionNew, qVersionOld);
     qDebug() << "QVersionCompare" << QVersionCompare;
-#ifdef FORCE_UPDATE_NOTIFICATION
-    QVersionCompare = 1;  // TEST
-#endif
+
     if (QVersionCompare <= 0) {
         qDebug() << "no new version";
         return;
