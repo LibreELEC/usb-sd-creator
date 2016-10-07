@@ -333,6 +333,12 @@ void Creator::retranslateUi()
           .arg(tr("Click the logo below or donate")) \
           .arg(tr("using Paypal to:")) \
     );
+
+    // orientation of the widget is reversed
+    if (QApplication::isLeftToRight())
+        ui->imagesShowAll->setLayoutDirection(Qt::RightToLeft);
+    else
+        ui->imagesShowAll->setLayoutDirection(Qt::LeftToRight);
 }
 
 void Creator::keyPressEvent(QKeyEvent *event)
@@ -714,7 +720,7 @@ void Creator::savePreferredRemovableDevice(int idx)
 void Creator::languageChange()
 {
     // menu has padding around
-    ui->menuLanguage->exec(ui->langButton->mapToGlobal(QPoint(-6, -4)));
+    ui->menuLanguage->exec(ui->langButton->mapToGlobal(QPoint(0, 0)));
 }
 
 void Creator::disableControls(const int which)
