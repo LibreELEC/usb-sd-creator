@@ -30,6 +30,7 @@ QProgressBar::chunk {
 
 QLineEdit {
   padding-left: 5px;
+  padding-right: 5px;
 }
 
 /* http://stackoverflow.com/questions/29939990/qcombobox-style-for-choosed-item-in-drop-down-list */
@@ -42,6 +43,11 @@ QComboBox:on {
   color: #00A9F6;
 }
 
+QComboBox:hover {
+  padding-left: 4px; /* this makes text colour work */
+  color: rgb(250,169,31);
+}
+
 QMenu::item:checked {
   color: red;
   background: orange;
@@ -50,9 +56,15 @@ QMenu::item:checked {
 QPushButton {
   padding-left: 8px;
   padding-right: 8px;
+  min-height: 23px;  /* same as in Creator */
 }
 
 QPushButton:focus {
   padding-left: 0px;
   padding-right: 0px;
+/*  color: rgb(0,169,246);*/
+}
+
+QPushButton:hover {
+  color: rgb(250,169,31);
 }
