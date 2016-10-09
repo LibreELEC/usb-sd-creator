@@ -180,11 +180,6 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
 
     ui->closeAboutButton->setAttribute(Qt::WA_MacSmallSize);
     ui->labelVersion->setAttribute(Qt::WA_MacSmallSize);
-
-    // make button little bigger (workaround for higher QComboBox)
-    // and move it left for same change
-    QRect currRectRrb = ui->refreshRemovablesButton->geometry();
-    ui->refreshRemovablesButton->setGeometry(currRectRrb.x()-2, currRectRrb.y(), currRectRrb.height()+2, currRectRrb.width()+2);
 #endif
 
     setImageFileName("");
