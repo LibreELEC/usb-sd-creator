@@ -820,19 +820,6 @@
       <set>Qt::TextBrowserInteraction</set>
      </property>
     </widget>
-    <widget class="QLabel" name="labelVersion">
-     <property name="geometry">
-      <rect>
-       <x>167</x>
-       <y>315</y>
-       <width>311</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
     <widget class="QWidget" name="horizontalLayoutWidget_4">
      <property name="geometry">
       <rect>
@@ -881,10 +868,20 @@
         </property>
        </spacer>
       </item>
+      <item>
+       <widget class="QLabel" name="labelVersion">
+        <property name="text">
+         <string>version
+date</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
     <zorder>horizontalLayoutWidget_4</zorder>
-    <zorder>labelVersion</zorder>
     <zorder>labelAbout</zorder>
    </widget>
   </widget>
