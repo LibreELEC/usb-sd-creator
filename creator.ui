@@ -870,10 +870,6 @@
       </item>
       <item>
        <widget class="QLabel" name="labelVersion">
-        <property name="text">
-         <string>version
-date</string>
-        </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
