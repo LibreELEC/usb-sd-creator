@@ -1,250 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hr_HR">
+<TS version="2.1">
 <context>
     <name>Creator</name>
     <message>
         <source>LibreELEC USB-SD Creator</source>
-        <translation>LibreELEC USB-SD Aplikacija</translation>
+        <translation>LibreELEC USB-SD Creator</translation>
     </message>
     <message>
         <source>Write image</source>
-        <translation>Zapiši datoteku slike</translation>
+        <translation>צור התקנה</translation>
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>Odaberi USB medij ili SD karticu</translation>
+        <translation>בחר התקן USB או כרטיס SD</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
-        <translation>Preuzmi ili odaberi lokalnu datoteku slike</translation>
+        <translation>הורד או בחר בהתקנה לוקאלית</translation>
     </message>
     <message>
         <source>Eject device</source>
-        <translation>Izbaci uređaj</translation>
+        <translation>הוצא התקן</translation>
     </message>
     <message>
         <source>Load device</source>
-        <translation>Učitaj uređaj</translation>
+        <translation>טען התקן</translation>
     </message>
     <message>
         <source>Eject  Load   Remove</source>
-        <translation type="vanished">Izbaci  Učitaj  Ukloni</translation>
+        <translation type="vanished">הוצא טען הסר</translation>
     </message>
     <message>
         <source>Select project</source>
-        <translation>Odaberi projekt</translation>
+        <translation>בחר פרוייקט</translation>
     </message>
     <message>
         <source>Select image</source>
-        <translation>Odaberite datoteku slike</translation>
+        <translation>בחר התקנה</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>Root prava potrebna za zapisivanje slike</translation>
+        <translation>לכתיבת ההתקנה דרוש הרשאות לניהול מכשיר (רוט)
+הרץ התקנה חוזרת בתור מנהל מכשיר. </translation>
     </message>
     <message>
         <source>Version: %1
 Build date: %2</source>
-        <translation>Verzija: %1
-Datum izrade: %2</translation>
+        <translation>גירסה: %1
+תאריך בניה: %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
-        <translation>Ova aplikacija je izrađena i objavljena s ljubavi</translation>
+        <translation>תוכנה זו נוצרה באהבה</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>pod GPLv2, koristeći raniji rad od RasPlex projekta</translation>
+        <translation>תחת רישיון GPLv2, בעזרת עבודה קודמת מאת RasPlex.</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
-        <translation>Za licencu, zasluge i povijest, molim pročitaj:</translation>
+        <translation>ל</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation>Ukoliko ti se sviđa korištenje LibreELEc-a molimo razmisli o</translation>
+        <translation>אם אהבת את התוכנה אנא חשוב</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation>donaciji kao podrški projektu.</translation>
+        <translation>תרום לתמיכה בתוכנה זו</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
-        <translation>Klik na logo ispod ili doniraj</translation>
+        <translation>לחץ על הלוגו מתחת או על התרומה.</translation>
     </message>
     <message>
         <source>using Paypal to:</source>
-        <translation>koristeći Paypal također:</translation>
+        <translation>השתמש בפייפל ל:</translation>
     </message>
     <message>
         <source>[Stable]</source>
-        <translation>Stabilna</translation>
+        <translation>[יציב]</translation>
     </message>
     <message>
         <source>[Alpha]</source>
-        <translation>Alfa</translation>
+        <translation>[אלפא]</translation>
     </message>
     <message>
         <source>[Beta]</source>
-        <translation>Beta</translation>
+        <translation>[בטא]</translation>
     </message>
     <message>
         <source>Download complete, syncing file...</source>
-        <translation>Preuzimanje završeno, sinhroniziram datoteke...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation>Preuzimanje završeno, provjeravam checksum</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation>Preuzimanje završeno, checksum OK</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation>Preuzimanje završeno, checksum nije u redu.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation>%1 sekunda preostaje - %2% sa %3</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Download canceled.</source>
-        <translation>Preuzimanje otkazano.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Directory to store image file</source>
-        <translation>Mapa za pohranu slikovne datoteke</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Pogreška</translation>
+        <translation>שגיאה</translation>
     </message>
     <message>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation>već postoji.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
-        <translation>Da li želite prepraviti?</translation>
+        <translation>האם ברצונך לשכתב?</translation>
     </message>
     <message>
         <source>File already exists.</source>
-        <translation>Datoteka već postoji</translation>
+        <translation>קובץ כבר קיים.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation>Neuspjeli pokušaj otvaranja datoteke slike za zapis!</translation>
+        <translation>שגיאת בפתיחת הקובץ לכתיבה!</translation>
     </message>
     <message>
         <source>Open image file</source>
-        <translation>Otvori datoteku slike</translation>
+        <translation>פתח קובץ התקנה</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation>komprimirani gz slika (*img.gz);;Komprimirana zip slika (*img.zip);;Nekomprimirana</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Writing canceled.</source>
-        <translation>Zapisivanje otkazano.</translation>
+        <translation>הכתיבה בוטלה.</translation>
     </message>
     <message>
         <source>Confirm write</source>
-        <translation>Potvrdi zapisivanje</translation>
+        <translation>אשר כתיבה</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
-        <translation>Nije moguće odjaviti particiju na uređaju %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation>Nema dovoljno prostora na %1 [%2 &lt; %3]</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Syncing file system...</source>
-        <translation>Sinhroniziram susav datoteka</translation>
+        <translation>מסנכרן מערכת קבצים</translation>
     </message>
     <message>
         <source>Writing done!</source>
-        <translation>Zapisivanje završeno!</translation>
+        <translation>הכתיבה הסתיימה!</translation>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Pogreška: %1</translation>
+        <translation>שגיאה: %1</translation>
     </message>
     <message>
         <source>Selected device: %1
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation>Odaberi uređaj: %1
-Jesi li siguran da želiš zapisati slikovnu datoteku?
-
-Tvoj USB-SD uređaj će biti izbrisan!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation>Da</translation>
+        <translation>כן</translation>
     </message>
     <message>
         <source>No</source>
-        <translation>Ne</translation>
+        <translation>לא</translation>
     </message>
     <message>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>אישור</translation>
     </message>
     <message>
         <source>Update Notification</source>
-        <translation>Obavijest o ažuriranju</translation>
+        <translation>התראה עודכנה</translation>
     </message>
     <message>
         <source>Select version</source>
-        <translation>Odaberi verziju</translation>
+        <translation>בחר גירסה</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>&amp;Zatvori</translation>
+        <translation>&amp;סגור</translation>
     </message>
     <message>
         <source>&amp;Download</source>
-        <translation>&amp;Preuzmi</translation>
+        <translation>&amp;הורדה</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>&amp;O</translation>
+        <translation>&amp;אודות</translation>
     </message>
     <message>
         <source>&amp;Write</source>
-        <translation>&amp;Zapiši</translation>
+        <translation>&amp;כתיבה</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>&amp;Pomoć</translation>
+        <translation>&amp;עזרה</translation>
     </message>
     <message>
         <source>Select &amp;file</source>
-        <translation>Odaberi &amp;datoteku</translation>
+        <translation>בחר &amp;קובץ</translation>
     </message>
     <message>
         <source>&amp;Show all</source>
-        <translation>&amp;Prikaži sve</translation>
+        <translation>&amp;הצג הכל</translation>
     </message>
     <message>
         <source>Cance&amp;l</source>
-        <translation>Otkaži</translation>
+        <translation>ביטול&amp;</translation>
     </message>
     <message>
         <source>&amp;Visit Website</source>
-        <translation>Posjeti web stranicu</translation>
+        <translation>&amp;בקר בדף הבית</translation>
     </message>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD aplikacija %1 je dostupna.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>
@@ -255,53 +253,48 @@ Tvoj USB-SD uređaj će biti izbrisan!</translation>
     <name>QObject</name>
     <message>
         <source>Write Error</source>
-        <translation>Pogreška kod zapisivanju</translation>
+        <translation>שגיאה בכתיבה</translation>
     </message>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation>Došlo je do pogreške prilikom pokušaja zapisa.
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Volume Error</source>
-        <translation>Pogreška u nazivu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation>Došlo je do pogreške prilikom pristupa nazivu.
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lock Error</source>
-        <translation>Pogreška kod zaključavanja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation>Došlo je do pogreške prilikom zaključavanja naziva.
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Unlock Error</source>
-        <translation>Pogreška kod otključavanja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation>Došlo je do pogreške prilikom otključavanja naziva.
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Dismount Error</source>
-        <translation>Pogreška kod odjave urešaja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation>Došlo je do pogreške prilikom odjave uređaja.
-</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

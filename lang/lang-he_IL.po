@@ -3,51 +3,51 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Language: hr_HR\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
-msgstr "LibreELEC USB-SD Aplikacija"
+msgstr "LibreELEC USB-SD Creator"
 
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "Zapiši datoteku slike"
+msgstr "צור התקנה"
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Odaberi USB medij ili SD karticu"
+msgstr "בחר התקן USB או כרטיס SD"
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "Preuzmi ili odaberi lokalnu datoteku slike"
+msgstr "הורד או בחר בהתקנה לוקאלית"
 
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr "Izbaci uređaj"
+msgstr "הוצא התקן"
 
 msgctxt "Creator|"
 msgid "Load device"
-msgstr "Učitaj uređaj"
+msgstr "טען התקן"
 
 #~ msgctxt "Creator|"
 #~ msgid "Eject  Load   Remove"
-#~ msgstr "Izbaci  Učitaj  Ukloni"
+#~ msgstr "הוצא טען הסר"
 
 msgctxt "Creator|"
 msgid "Select project"
-msgstr "Odaberi projekt"
+msgstr "בחר פרוייקט"
 
 msgctxt "Creator|"
 msgid "Select image"
-msgstr "Odaberite datoteku slike"
+msgstr "בחר התקנה"
 
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
-msgstr "Root prava potrebna za zapisivanje slike"
+msgstr ""
+"לכתיבת ההתקנה דרוש הרשאות לניהול מכשיר (רוט)\n"
+"הרץ התקנה חוזרת בתור מנהל מכשיר. "
 
 #, qt-format
 msgctxt "Creator|"
@@ -55,81 +55,81 @@ msgid ""
 "Version: %1\n"
 "Build date: %2"
 msgstr ""
-"Verzija: %1\n"
-"Datum izrade: %2"
+"גירסה: %1\n"
+"תאריך בניה: %2"
 
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr "Ova aplikacija je izrađena i objavljena s ljubavi"
+msgstr "תוכנה זו נוצרה באהבה"
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "pod GPLv2, koristeći raniji rad od RasPlex projekta"
+msgstr "תחת רישיון GPLv2, בעזרת עבודה קודמת מאת RasPlex."
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "Za licencu, zasluge i povijest, molim pročitaj:"
+msgstr "ל"
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "Ukoliko ti se sviđa korištenje LibreELEc-a molimo razmisli o"
+msgstr "אם אהבת את התוכנה אנא חשוב"
 
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "donaciji kao podrški projektu."
+msgstr "תרום לתמיכה בתוכנה זו"
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Klik na logo ispod ili doniraj"
+msgstr "לחץ על הלוגו מתחת או על התרומה."
 
 msgctxt "Creator|"
 msgid "using Paypal to:"
-msgstr "koristeći Paypal također:"
+msgstr "השתמש בפייפל ל:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr "Stabilna"
+msgstr "[יציב]"
 
 msgctxt "Creator|"
 msgid "[Alpha]"
-msgstr "Alfa"
+msgstr "[אלפא]"
 
 msgctxt "Creator|"
 msgid "[Beta]"
-msgstr "Beta"
+msgstr "[בטא]"
 
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr "Preuzimanje završeno, sinhroniziram datoteke..."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr "Preuzimanje završeno, provjeravam checksum"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "Preuzimanje završeno, checksum OK"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
-msgstr "Preuzimanje završeno, checksum nije u redu."
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr "%1 sekunda preostaje - %2% sa %3"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr "Preuzimanje otkazano."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr "Mapa za pohranu slikovne datoteke"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Error"
-msgstr "Pogreška"
+msgstr "שגיאה"
 
 #, qt-format
 msgctxt "Creator|"
@@ -137,62 +137,60 @@ msgid ""
 "File \n"
 "%1/%2\n"
 "already exist."
-msgstr "već postoji."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr "Da li želite prepraviti?"
+msgstr "האם ברצונך לשכתב?"
 
 msgctxt "Creator|"
 msgid "File already exists."
-msgstr "Datoteka već postoji"
+msgstr "קובץ כבר קיים."
 
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr "Neuspjeli pokušaj otvaranja datoteke slike za zapis!"
+msgstr "שגיאת בפתיחת הקובץ לכתיבה!"
 
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr "Otvori datoteku slike"
+msgstr "פתח קובץ התקנה"
 
 msgctxt "Creator|"
 msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
 "image (*.img);;All files (*.*)"
 msgstr ""
-"komprimirani gz slika (*img.gz);;Komprimirana zip slika "
-"(*img.zip);;Nekomprimirana"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr "Zapisivanje otkazano."
+msgstr "הכתיבה בוטלה."
 
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr "Potvrdi zapisivanje"
+msgstr "אשר כתיבה"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr "Nije moguće odjaviti particiju na uređaju %1"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Nema dovoljno prostora na %1 [%2 < %3]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr "Sinhroniziram susav datoteka"
+msgstr "מסנכרן מערכת קבצים"
 
 msgctxt "Creator|"
 msgid "Writing done!"
-msgstr "Zapisivanje završeno!"
+msgstr "הכתיבה הסתיימה!"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
-msgstr "Pogreška: %1"
+msgstr "שגיאה: %1"
 
 #, qt-format
 msgctxt "Creator|"
@@ -202,71 +200,67 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
-"Odaberi uređaj: %1\n"
-"Jesi li siguran da želiš zapisati slikovnu datoteku?\n"
-"\n"
-"Tvoj USB-SD uređaj će biti izbrisan!"
 
 msgctxt "Creator|"
 msgid "Yes"
-msgstr "Da"
+msgstr "כן"
 
 msgctxt "Creator|"
 msgid "No"
-msgstr "Ne"
+msgstr "לא"
 
 msgctxt "Creator|"
 msgid "OK"
-msgstr "OK"
+msgstr "אישור"
 
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr "Obavijest o ažuriranju"
+msgstr "התראה עודכנה"
 
 msgctxt "Creator|"
 msgid "Select version"
-msgstr "Odaberi verziju"
+msgstr "בחר גירסה"
 
 msgctxt "Creator|"
 msgid "&Close"
-msgstr "&Zatvori"
+msgstr "&סגור"
 
 msgctxt "Creator|"
 msgid "&Download"
-msgstr "&Preuzmi"
+msgstr "&הורדה"
 
 msgctxt "Creator|"
 msgid "&About"
-msgstr "&O"
+msgstr "&אודות"
 
 msgctxt "Creator|"
 msgid "&Write"
-msgstr "&Zapiši"
+msgstr "&כתיבה"
 
 msgctxt "Creator|"
 msgid "&Help"
-msgstr "&Pomoć"
+msgstr "&עזרה"
 
 msgctxt "Creator|"
 msgid "Select &file"
-msgstr "Odaberi &datoteku"
+msgstr "בחר &קובץ"
 
 msgctxt "Creator|"
 msgid "&Show all"
-msgstr "&Prikaži sve"
+msgstr "&הצג הכל"
 
 msgctxt "Creator|"
 msgid "Cance&l"
-msgstr "Otkaži"
+msgstr "ביטול&"
 
 msgctxt "Creator|"
 msgid "&Visit Website"
-msgstr "Posjeti web stranicu"
+msgstr "&בקר בדף הבית"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD aplikacija %1 je dostupna."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Eject  Load         Remove"
@@ -274,55 +268,55 @@ msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr "Pogreška kod zapisivanju"
+msgstr "שגיאה בכתיבה"
 
 #, qt-format
 msgctxt "QObject|"
 msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
-msgstr "Došlo je do pogreške prilikom pokušaja zapisa.\n"
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr "Pogreška u nazivu"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
 msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
-msgstr "Došlo je do pogreške prilikom pristupa nazivu.\n"
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr "Pogreška kod zaključavanja"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
 msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
-msgstr "Došlo je do pogreške prilikom zaključavanja naziva.\n"
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr "Pogreška kod otključavanja"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
 msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
-msgstr "Došlo je do pogreške prilikom otključavanja naziva.\n"
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr "Pogreška kod odjave urešaja"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
 msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
-msgstr "Došlo je do pogreške prilikom odjave uređaja.\n"
+msgstr ""
