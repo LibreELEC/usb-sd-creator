@@ -28,18 +28,6 @@
         <translation>Podłącz urządzenie</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Podłącz Odłącz Usuń</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Wybierz projekt</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Wybierz obraz</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>Wymagane uprawnienia roota do zapisu obrazu.
@@ -248,6 +236,14 @@ Twoje urządzenie USB/SD zostanie wymazane!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>Kreator LibreELEC USB-SD %1 jest dostępny.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Wybierz projekt</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Wybierz obraz</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

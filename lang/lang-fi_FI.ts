@@ -28,18 +28,6 @@
         <translation>Lataa laite</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Irroita Lataa Poista</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Valitse projekti</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Valitse levykuva</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>Root-oikeudet tarvitaan kirjoittamista varten.
@@ -248,6 +236,14 @@ USB/SD-laitteesi nykyinen sisältö häviää!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD -työkalu %1 on saatavilla.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Valitse projekti</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Valitse levykuva</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

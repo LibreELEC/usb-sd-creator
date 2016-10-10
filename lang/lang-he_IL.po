@@ -29,18 +29,6 @@ msgctxt "Creator|"
 msgid "Load device"
 msgstr "טען התקן"
 
-#~ msgctxt "Creator|"
-#~ msgid "Eject  Load   Remove"
-#~ msgstr "הוצא טען הסר"
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "בחר פרוייקט"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "בחר התקנה"
-
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
@@ -261,6 +249,14 @@ msgstr "&בקר בדף הבית"
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
 msgstr ""
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "בחר פרוייקט"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "בחר התקנה"
 
 msgctxt "Creator|"
 msgid "Eject  Load         Remove"

@@ -28,18 +28,6 @@
         <translation>Завантажити пристрій</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Вилучити  Завантажити   Видалити</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Вибрати проект</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Вибрати образ</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>Для запису образу необхідні привілегії root.
@@ -199,7 +187,7 @@ Your USB-SD device will be wiped!</source>
     </message>
     <message>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>Гаразд</translation>
     </message>
     <message>
         <source>Update Notification</source>
@@ -248,6 +236,14 @@ Your USB-SD device will be wiped!</source>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>Доступний LibreELEC USB-SD Creator %1.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Вибрати проект</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Вибрати образ</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

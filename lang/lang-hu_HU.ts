@@ -28,18 +28,6 @@
         <translation>Lemez betöltése</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Kiadás Betöltés Eltávolítás</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Projekt kiválsztása</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Lemezkép kiválasztása</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>Rendszergazdai jogosultságok szükséges az íráshoz.
@@ -248,6 +236,14 @@ A USB-SD eszköz törölve lesz!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD készítő %1 elérhető.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Projekt kiválsztása</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Lemezkép kiválasztása</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

@@ -3,39 +3,41 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: lt_LT\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
-msgstr "LibreELEC USB-SD Припрема"
+msgstr "LibreELEC USB-SD Creator"
 
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "Запиши слику"
+msgstr "Įrašyti atvaizdą"
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Одаберите USB диск или SD картицу"
+msgstr "Pasirinkite USB atmintinę arba SD kortelę"
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "Преузми са Интернета или одабери локалну датотеку слике"
+msgstr "Atsisiųskite arba pasirinkite lokalų atvaizdo failą"
 
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr "Избаци уређај"
+msgstr "Išimti įrenginį"
 
 msgctxt "Creator|"
 msgid "Load device"
-msgstr "Учитај уређај"
+msgstr "Įkelti įrenginį"
 
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
-"Root привилегије су неопходне како би се записала слика.\n"
-"Покрените ову апликацију кроз sudo."
+"Norint įrašyti atvaizdą reikalingos root teisės.\n"
+"Paleiskite programą su sudo komanda."
 
 #, qt-format
 msgctxt "Creator|"
@@ -43,81 +45,81 @@ msgid ""
 "Version: %1\n"
 "Build date: %2"
 msgstr ""
-"Верзија: %1\n"
-"Датум припреме: %2"
+"Versija: %1\n"
+"Darinio data: %2"
 
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr "Овај софтвер је направљен са љубављу и пуштен за употребу"
+msgstr "Ši programinė įranga buvo sukurta su meile ir išleista"
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "под GPLv2 лиценцом, уз употребу ранијих RasPlex радова."
+msgstr "su GPLv2 licencija, panaudojus ankstesnį RasPlex darbą. "
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "За информације о лиценци, заслуге и историјат, молимо прочитајте:"
+msgstr "Jei reikia licencijos, kūrėjų sąrašo ar istorijos, perskaitykite:"
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "Уколико уђивате користећи LibreELEC молимо размислите о"
+msgstr "Jei patinka naudotis LibreELEC, apsvarstykite"
 
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "донацији како би подрђали пројекат."
+msgstr "galimybę paaukoti projekto palaikymui."
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Кликните на лого испод или донирајте"
+msgstr "Paspauskite ant žemiau esančio logotipo norėdami paaukoti"
 
 msgctxt "Creator|"
 msgid "using Paypal to:"
-msgstr "путем Paypal-а на:"
+msgstr "naudojantis Paypal:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr "[Стабилан]"
+msgstr "[Stabili]"
 
 msgctxt "Creator|"
 msgid "[Alpha]"
-msgstr "[Алфа]"
+msgstr "[Alpha]"
 
 msgctxt "Creator|"
 msgid "[Beta]"
-msgstr "[Бета]"
+msgstr "[Beta]"
 
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr "Преузимање завршено, синхронизујем фај..."
+msgstr "Atsiuntimas baigtas, sinchronizuojamas failas..."
 
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr "Преузимање завршено, проверавам исправност..."
+msgstr "Atsiuntimas baigtas, tikrinama kontrolinė suma..."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "Преузимање завршено, фајл је исправах."
+msgstr "Atsiuntimas baigtas, kontrolinė suma gera."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
-msgstr "Преузимање је завршено, фајл није исправан."
+msgstr "Atsiuntimas baigtas, kontrolinė suma bloga."
 
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr "%1 секунди преостало - %2% при %3"
+msgstr "Liko %1 sekundžių - %2% baigta %3 sparta"
 
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr "Преузимање поништено."
+msgstr "Atsiuntimas atšauktas."
 
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr "Директоријум за чување фајла слике"
+msgstr "Katalogas, kuriame saugoti atvaizdo failą"
 
 msgctxt "Creator|"
 msgid "Error"
-msgstr "Грешка"
+msgstr "Klaida"
 
 #, qt-format
 msgctxt "Creator|"
@@ -126,64 +128,64 @@ msgid ""
 "%1/%2\n"
 "already exist."
 msgstr ""
-"Фајл \n"
+"Failas \n"
 "%1/%2\n"
-"већ постоји."
+"jau egzituoja."
 
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr "Да ли желите да снимите преко постојећег?"
+msgstr "Ar norite perrašyti?"
 
 msgctxt "Creator|"
 msgid "File already exists."
-msgstr "Фајл већ постоји."
+msgstr "Failas jau egzistuoja."
 
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr "Неуспех приликом отврања фајла за писање."
+msgstr "Nepavyko atidaryti failo įrašymui!"
 
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr "Отвори фајл слике"
+msgstr "Atidaryti atvaizdo failą"
 
 msgctxt "Creator|"
 msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
 "image (*.img);;All files (*.*)"
 msgstr ""
-"Компресована gz слика (*img.gz);;Компресована zip слика "
-"(*img.zip);;Некомпресована слика (*.img);;Сви фајлови (*.*)"
+"Suglaudintas gz atvaizdas (*img.gz);;Suglaudintas zip atvaizdas "
+"(*img.zip);;Nesuglaudintas atvaizdas (*.img);;Visi failai (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr "Писање поништено."
+msgstr "Įrašymas atšauktas."
 
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr "Потврда писања"
+msgstr "Patvirtinkite įrašymą"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr ""
+msgstr "Neįmanoma atjungti skaidinių įrenginyje %1"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Нема довољно простора на %1 [%2 < %3]"
+msgstr "Nepakanka vietos įrenginyje %1 [%2 < %3]"
 
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr "Синхронизујем фајл сисзем."
+msgstr "Sinchronizuojama failų sistema..."
 
 msgctxt "Creator|"
 msgid "Writing done!"
-msgstr "Записивање завршено!"
+msgstr "Įrašymas baigtas!"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
-msgstr "Грешка: %1"
+msgstr "Klaida: %1"
 
 #, qt-format
 msgctxt "Creator|"
@@ -193,79 +195,79 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
-"Одавран уређај: %1\n"
-"Да ли сте сигурни да желите да запишете слику?\n"
+"Pasirinktas įrenginys: %1\n"
+"Ar tikrai norite įrašyti atvaizdą?\n"
 "\n"
-"Сви подаци са USB-SD диска ће бити избисани!"
+"Jūsų USB-SD įrenginys bus ištrintas!"
 
 msgctxt "Creator|"
 msgid "Yes"
-msgstr "Да"
+msgstr "Taip"
 
 msgctxt "Creator|"
 msgid "No"
-msgstr "Не"
+msgstr "Ne"
 
 msgctxt "Creator|"
 msgid "OK"
-msgstr "ОК"
+msgstr "OK"
 
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr "Освежи обавештења"
+msgstr "Atnaujinimo pranešimas"
 
 msgctxt "Creator|"
 msgid "Select version"
-msgstr "Одаберите верзију"
+msgstr "Pasirinkite versiją"
 
 msgctxt "Creator|"
 msgid "&Close"
-msgstr "Затвори"
+msgstr "&Uždaryti"
 
 msgctxt "Creator|"
 msgid "&Download"
-msgstr "Преузимање"
+msgstr "A&tsisiųsti"
 
 msgctxt "Creator|"
 msgid "&About"
-msgstr "О пројекту"
+msgstr "&Apie"
 
 msgctxt "Creator|"
 msgid "&Write"
-msgstr "Запиши"
+msgstr "Į&rašyti"
 
 msgctxt "Creator|"
 msgid "&Help"
-msgstr "Помоћ"
+msgstr "&Pagalba"
 
 msgctxt "Creator|"
 msgid "Select &file"
-msgstr "Одаберите фајл"
+msgstr "Pasirinkti &failą"
 
 msgctxt "Creator|"
 msgid "&Show all"
-msgstr "Прикажи све"
+msgstr "&Rodyti viską"
 
 msgctxt "Creator|"
 msgid "Cance&l"
-msgstr "Поништи"
+msgstr "Atšau&kti"
 
 msgctxt "Creator|"
 msgid "&Visit Website"
-msgstr "Посети Интернет локацију"
+msgstr "Ap%lankykite svetainę"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Припрема %1 је доступна."
+msgstr "Prieinamas LibreELEC USB-SD Creator %1."
 
 msgctxt "Creator|"
 msgid "Select project"
-msgstr "Одабери пројекат"
+msgstr "Pasirinkite projektą"
 
 msgctxt "Creator|"
 msgid "Select image"
-msgstr "Одабери слику"
+msgstr "Pasirinkite atvaizdą"
 
 msgctxt "Creator|"
 msgid "Eject  Load         Remove"
@@ -273,7 +275,7 @@ msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr "Грешка у писању"
+msgstr "Įrašymo klaida"
 
 #, qt-format
 msgctxt "QObject|"
@@ -281,10 +283,12 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
+"Įvyko klaida mėginant įrašyti duomenis.\n"
+"Klaida %1: %2"
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr "Грешка Уређаја"
+msgstr "Tomo klaida"
 
 #, qt-format
 msgctxt "QObject|"
@@ -292,12 +296,12 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Догодила се грешка при покушају дохватања управљача уређаја.\n"
-"Грешка %1: %2"
+"Įvyko klaida mėginant gauti tomo valdymą.\n"
+"Klaida %1: %2"
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr "Грешка при закључавању"
+msgstr "Užrakinimo klaida"
 
 #, qt-format
 msgctxt "QObject|"
@@ -305,12 +309,12 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Догодила се грешка при покушају постављања кључа на уређај.\n"
-"Грешка %1: %2"
+"Įvyko klaida mėginant užrakinti tomą.\n"
+"Klaida %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr "Грешка при откључавању"
+msgstr "Atrakinimo klaida"
 
 #, qt-format
 msgctxt "QObject|"
@@ -318,12 +322,12 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Догодила се грешка при покушају уклањања кључа са уређаја.\n"
-"Грешка %1: %2"
+"Įvyko klaida mėginant atrakinti tomą.\n"
+"Klaida %1: %2"
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr ""
+msgstr "Atjungimo klaida"
 
 #, qt-format
 msgctxt "QObject|"
@@ -331,3 +335,5 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Įvyko klaida mėginant atjungti tomą.\n"
+"Klaida %1: %2"

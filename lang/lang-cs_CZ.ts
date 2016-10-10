@@ -28,18 +28,6 @@
         <translation>Načíst zařízení</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Vysunout Načíst Odebrat</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Vybrat projekt</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Vybrat soubor img</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>K zapsání obrazu jsou potřeba práva root. Spustťe aplikaci pomocí sudo.</translation>
@@ -247,6 +235,14 @@ Vaše USB zařízení bude zcela smazáno!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD Creator %1 je k dispozici.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Vybrat projekt</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Vybrat soubor img</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

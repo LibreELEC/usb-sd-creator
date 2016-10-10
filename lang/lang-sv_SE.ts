@@ -28,18 +28,6 @@
         <translation>Ladda enhet</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Mata ut, Ladda, Ta bort</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Välj projekt</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Välj avbild</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>Det krävs Root-behörighet för att skriva en avbild
@@ -248,6 +236,14 @@ Din USB-SD enhet kommer raderas!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD Creator %1 finns tillgängligt.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Välj projekt</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Välj avbild</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

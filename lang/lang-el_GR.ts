@@ -28,18 +28,6 @@
         <translation>Φόρτωση συσκευής</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Εξαγωγή  Φόρτωση   Αφαίρεση</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Επιλογή έργου</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Επιλογή ειδώλου</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>Απαιτούνται δικαιώματα υπερχρήστη για την εγγραφή του ειδώλου.
@@ -248,6 +236,14 @@ Your USB-SD device will be wiped!</source>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>Το LibreELEC USB-SD Creator %1 είναι διαθέσιμο.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Επιλογή έργου</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Επιλογή ειδώλου</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

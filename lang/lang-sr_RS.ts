@@ -28,18 +28,6 @@
         <translation>Учитај уређај</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Избаци Учитај Уклони</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Одабери пројекат</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Одабери слику</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>Root привилегије су неопходне како би се записала слика.
@@ -248,6 +236,14 @@ Your USB-SD device will be wiped!</source>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD Припрема %1 је доступна.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Одабери пројекат</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Одабери слику</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

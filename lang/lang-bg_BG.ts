@@ -28,18 +28,6 @@
         <translation>Зареди устройство</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Извади Зареди Премахни</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Избери проект</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Избери файл</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>Root права са нужни за записване на файла.
@@ -248,6 +236,14 @@ Your USB-SD device will be wiped!</source>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC създател за USB-SD %1 е наличен.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Избери проект</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Избери файл</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

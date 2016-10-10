@@ -28,18 +28,6 @@
         <translation>טען התקן</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">הוצא טען הסר</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>בחר פרוייקט</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>בחר התקנה</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>לכתיבת ההתקנה דרוש הרשאות לניהול מכשיר (רוט)
@@ -243,6 +231,14 @@ Your USB-SD device will be wiped!</source>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>בחר פרוייקט</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>בחר התקנה</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

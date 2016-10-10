@@ -28,18 +28,6 @@
         <translation>Load device</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Eject Load Remove</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Izberi projekt</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Izberi sliko diska</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>Potrebne so root pravice za zapisovanje. Poženite aplikacijo s sudo.</translation>
@@ -247,6 +235,14 @@ Vaša USB-SD naprava bo zbrisana!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>Na voljo je nova verzija LibreELEC USB-SD Creator %1.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Izberi projekt</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Izberi sliko diska</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>
