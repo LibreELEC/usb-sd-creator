@@ -37,9 +37,9 @@ if not exist lang/lang-en_GB.ts (
 if not exist lang/lang-en_GB.po (
   rem convert .ts files to new .po files
   echo.
-  for /f "tokens=*" %%i in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
-    set name=%%i
-    set lang=!name:~5,5!
+  for /f "tokens=*" %%f in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
+    set name=%%~nf
+    set lang=!name:~5,99!
     echo Converting !lang! from .ts to .po
     lconvert lang/lang-!lang!.ts -o lang/lang-!lang!.po
   )
@@ -49,9 +49,9 @@ if not exist lang/lang-en_GB.po (
 
 rem convert .po files back to .ts files
 echo Converting files po -^> ts
-for /f "tokens=*" %%i in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
-  set name=%%i
-  set lang=!name:~5,5!
+for /f "tokens=*" %%f in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
+  set name=%%~nf
+  set lang=!name:~5,99!
   echo Converting !lang! from .po to .ts >NUL
   lconvert -locations relative lang/lang-!lang!.po -o lang/lang-!lang!.ts >NUL
 )
@@ -62,9 +62,9 @@ lupdate -verbose creator.pro >NUL
 
 rem convert .ts files to .po files
 echo Converting files ts -^> po
-for /f "tokens=*" %%i in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
-  set name=%%i
-  set lang=!name:~5,5!
+for /f "tokens=*" %%f in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
+  set name=%%~nf
+  set lang=!name:~5,99!
   echo Converting !lang! from .ts to .po >NUL
   lconvert lang/lang-!lang!.ts -o lang/lang-!lang!.po >NUL
 )
