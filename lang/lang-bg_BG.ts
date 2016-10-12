@@ -259,43 +259,48 @@ Your USB-SD device will be wiped!</source>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Възникна грешка при опит за запис на данни.
+Грешка: %1: %2</translation>
     </message>
     <message>
         <source>Volume Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Грешка на обема памет</translation>
     </message>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Възникна грешка при опит за достъп до обемът памет.
+Грешка: %1: %2</translation>
     </message>
     <message>
         <source>Lock Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Грешка при заключване</translation>
     </message>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Възникна грешка при опит заключване на обемът памет.
+Грешка: %1: %2</translation>
     </message>
     <message>
         <source>Unlock Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Грешка при отключване</translation>
     </message>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Възникна грешка при опит за отключване на обемът памет.
+Грешка: %1: %2</translation>
     </message>
     <message>
         <source>Dismount Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Грешка при разкачване</translation>
     </message>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Възникна грешка при опит за разкачване на обемът памет.
+Грешка: %1: %2</translation>
     </message>
 </context>
 </TS>

@@ -283,10 +283,12 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
+"Възникна грешка при опит за запис на данни.\n"
+"Грешка: %1: %2"
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr ""
+msgstr "Грешка на обема памет"
 
 #, qt-format
 msgctxt "QObject|"
@@ -294,10 +296,12 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Възникна грешка при опит за достъп до обемът памет.\n"
+"Грешка: %1: %2"
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr ""
+msgstr "Грешка при заключване"
 
 #, qt-format
 msgctxt "QObject|"
@@ -305,10 +309,12 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Възникна грешка при опит заключване на обемът памет.\n"
+"Грешка: %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr ""
+msgstr "Грешка при отключване"
 
 #, qt-format
 msgctxt "QObject|"
@@ -316,10 +322,12 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Възникна грешка при опит за отключване на обемът памет.\n"
+"Грешка: %1: %2"
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr ""
+msgstr "Грешка при разкачване"
 
 #, qt-format
 msgctxt "QObject|"
@@ -327,3 +335,5 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
+"Възникна грешка при опит за разкачване на обемът памет.\n"
+"Грешка: %1: %2"
