@@ -1365,12 +1365,16 @@ void Creator::writingSyncing()
 void Creator::writingFinished()
 {
     qDebug() << "writingFinished";
-    privileges.SetUser();    // back to user
-    reset();
-    resetProgressBars();
-    flashProgressBarText(tr("Writing done!"));
-    delete averageSpeed;
-    state = STATE_IDLE;
+
+    /* if error happened leave it visible */
+    if (state != STATE_IDLE) {
+        privileges.SetUser();    // back to user
+        reset();
+        resetProgressBars();
+        flashProgressBarText(tr("Writing done!"));
+        delete averageSpeed;
+        state = STATE_IDLE;
+    }
 
     QApplication::beep();
     refreshRemovablesList();
@@ -1383,6 +1387,8 @@ void Creator::writingError(QString message)
     reset(tr("Error: %1").arg(message));
     delete averageSpeed;
     state = STATE_IDLE;
+
+    QApplication::beep();
 }
 
 void Creator::refreshRemovablesList()
