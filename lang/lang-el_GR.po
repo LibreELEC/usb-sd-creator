@@ -29,18 +29,6 @@ msgctxt "Creator|"
 msgid "Load device"
 msgstr "Φόρτωση συσκευής"
 
-#~ msgctxt "Creator|"
-#~ msgid "Eject  Load   Remove"
-#~ msgstr "Εξαγωγή  Φόρτωση   Αφαίρεση"
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Επιλογή έργου"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "Επιλογή ειδώλου"
-
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
@@ -274,6 +262,14 @@ msgstr "Επίσκεψη Ιστότοπου"
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
 msgstr "Το LibreELEC USB-SD Creator %1 είναι διαθέσιμο."
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Επιλογή έργου"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Επιλογή ειδώλου"
 
 msgctxt "Creator|"
 msgid "Eject  Load         Remove"

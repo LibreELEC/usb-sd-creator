@@ -31,18 +31,6 @@ msgctxt "Creator|"
 msgid "Load device"
 msgstr "Alet dolu"
 
-#~ msgctxt "Creator|"
-#~ msgid "Eject  Load   Remove"
-#~ msgstr "Çıkar Yükle Sil"
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Proje seç"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "İmaj seç"
-
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
@@ -271,6 +259,14 @@ msgstr "Siteye Git"
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
 msgstr "LibreELEC USB-SD Creator %1 mevcut."
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Proje seç"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "İmaj seç"
 
 msgctxt "Creator|"
 msgid "Eject  Load         Remove"

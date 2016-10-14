@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nb_NO">
+<TS version="2.1">
 <context>
     <name>Creator</name>
     <message>
@@ -9,240 +9,236 @@
     </message>
     <message>
         <source>Write image</source>
-        <translation>Skriv bildefil</translation>
+        <translation>צור התקנה</translation>
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>Velg minnebrikken eller minnekortet ditt</translation>
+        <translation>בחר התקן USB או כרטיס SD</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
-        <translation>Last ned eller velg en lokal bildefil</translation>
+        <translation>הורד או בחר בהתקנה לוקאלית</translation>
     </message>
     <message>
         <source>Eject device</source>
-        <translation>Løs ut enhet</translation>
+        <translation>הוצא התקן</translation>
     </message>
     <message>
         <source>Load device</source>
-        <translation>Last enhet</translation>
+        <translation>טען התקן</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>Rot-tillatelser er påkrevd for å skrive bildefil.
-Kjør applikasjonen med sudo.</translation>
+        <translation>לכתיבת ההתקנה דרוש הרשאות לניהול מכשיר (רוט)
+הרץ התקנה חוזרת בתור מנהל מכשיר. </translation>
     </message>
     <message>
         <source>Version: %1
 Build date: %2</source>
-        <translation>Versjon: %1
-Byggdato: %2</translation>
+        <translation>גירסה: %1
+תאריך בניה: %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
-        <translation>Denne programvaren er laget med kjærlighet og sluppet</translation>
+        <translation>תוכנה זו נוצרה באהבה</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>under GPLv2, og bruker tidligere arbeid fra RasPlex.</translation>
+        <translation>תחת רישיון GPLv2, בעזרת עבודה קודמת מאת RasPlex.</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
-        <translation>For lisens, kreditt og historie, vennligst les:</translation>
+        <translation>ל</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation>Hvis du nyter å bruke LibreELEC, vennligst vurder en</translation>
+        <translation>אם אהבת את התוכנה אנא חשוב</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation>donasjon for å støtte prosjektet.</translation>
+        <translation>תרום לתמיכה בתוכנה זו</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
-        <translation>Klikk på logoen under, eller doner</translation>
+        <translation>לחץ על הלוגו מתחת או על התרומה.</translation>
     </message>
     <message>
         <source>using Paypal to:</source>
-        <translation>ved hjelp av Paypal for:</translation>
+        <translation>השתמש בפייפל ל:</translation>
     </message>
     <message>
         <source>[Stable]</source>
-        <translation>[Stabil]</translation>
+        <translation>[יציב]</translation>
     </message>
     <message>
         <source>[Alpha]</source>
-        <translation>[Alfa]</translation>
+        <translation>[אלפא]</translation>
     </message>
     <message>
         <source>[Beta]</source>
-        <translation>[Beta]</translation>
+        <translation>[בטא]</translation>
     </message>
     <message>
         <source>Download complete, syncing file...</source>
-        <translation>Nedlasting komplett, synkroniserer fil...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation>Nedlasting komplett, verifiserer sjekksum.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation>Nedlasting komplett, sjekksum ok.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation>Nedlasting komplett, sjekksum ikke ok.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation>%1 sekunder gjenstår - %2% på %3</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Download canceled.</source>
-        <translation>Nedlasting avbrutt.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Directory to store image file</source>
-        <translation>Mappe for å lagre bildefilen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Feil</translation>
+        <translation>שגיאה</translation>
     </message>
     <message>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation>Fil
-%1/%2
-eksisterer allerede.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
-        <translation>Vil du overskrive?</translation>
+        <translation>האם ברצונך לשכתב?</translation>
     </message>
     <message>
         <source>File already exists.</source>
-        <translation>Filen eksisterer allerede.</translation>
+        <translation>קובץ כבר קיים.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation>Åpning av fil for skriving feilet!</translation>
+        <translation>שגיאת בפתיחת הקובץ לכתיבה!</translation>
     </message>
     <message>
         <source>Open image file</source>
-        <translation>Åpne bildefil</translation>
+        <translation>פתח קובץ התקנה</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation>Komprimert gz bilde (*img.gz);;Komprimert zip bilde (*img.zip);;Ukomprimert bilde (*.img);;Alle filer (*.*)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Writing canceled.</source>
-        <translation>Skriving avbrutt.</translation>
+        <translation>הכתיבה בוטלה.</translation>
     </message>
     <message>
         <source>Confirm write</source>
-        <translation>Bekreft skriving</translation>
+        <translation>אשר כתיבה</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
-        <translation>Kan ikke demontere partisjoner på enhet %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation>Ikke nok plass på %1 [%2 &lt; %3]</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Syncing file system...</source>
-        <translation>Synkroniserer filsystem...</translation>
+        <translation>מסנכרן מערכת קבצים</translation>
     </message>
     <message>
         <source>Writing done!</source>
-        <translation>Skriving fullført!</translation>
+        <translation>הכתיבה הסתיימה!</translation>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Feil: %1</translation>
+        <translation>שגיאה: %1</translation>
     </message>
     <message>
         <source>Selected device: %1
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation>Valgt enhet: %1
-Er du sikker på at du vil skrive bildefilen?
-Din USB-SD enhet vil bli tømt!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation>Ja</translation>
+        <translation>כן</translation>
     </message>
     <message>
         <source>No</source>
-        <translation>Nei</translation>
+        <translation>לא</translation>
     </message>
     <message>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>אישור</translation>
     </message>
     <message>
         <source>Update Notification</source>
-        <translation>Oppdateringsvarsling</translation>
+        <translation>התראה עודכנה</translation>
     </message>
     <message>
         <source>Select version</source>
-        <translation>Velg versjon</translation>
+        <translation>בחר גירסה</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>Lukk</translation>
+        <translation>&amp;סגור</translation>
     </message>
     <message>
         <source>&amp;Download</source>
-        <translation>Last ned</translation>
+        <translation>&amp;הורדה</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>Om</translation>
+        <translation>&amp;אודות</translation>
     </message>
     <message>
         <source>&amp;Write</source>
-        <translation>Skriv</translation>
+        <translation>&amp;כתיבה</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>Hjelp</translation>
+        <translation>&amp;עזרה</translation>
     </message>
     <message>
         <source>Select &amp;file</source>
-        <translation>Velg fil</translation>
+        <translation>בחר &amp;קובץ</translation>
     </message>
     <message>
         <source>&amp;Show all</source>
-        <translation>Vis alle</translation>
+        <translation>&amp;הצג הכל</translation>
     </message>
     <message>
         <source>Cance&amp;l</source>
-        <translation>Avbryt</translation>
+        <translation>ביטול&amp;</translation>
     </message>
     <message>
         <source>&amp;Visit Website</source>
-        <translation>Besøk nettside</translation>
+        <translation>&amp;בקר בדף הבית</translation>
     </message>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD Creator %1 er tilgjengelig.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Select project</source>
-        <translation>Velg prosjekt</translation>
+        <translation>בחר פרוייקט</translation>
     </message>
     <message>
         <source>Select image</source>
-        <translation>Velg bildefil</translation>
+        <translation>בחר התקנה</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>
@@ -253,53 +249,48 @@ Din USB-SD enhet vil bli tømt!</translation>
     <name>QObject</name>
     <message>
         <source>Write Error</source>
-        <translation>Skrivefeil</translation>
+        <translation>שגיאה בכתיבה</translation>
     </message>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation>En feil oppstod når det ble forsøkt å skrive data til å håndtere.
-Feil %1: %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Volume Error</source>
-        <translation>Volumfeil</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation>En feil oppstod når det ble forsøkt å få en hånd på volumet.
-Feil %1: %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lock Error</source>
-        <translation>Låsefeil</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation>En feil oppstod når det ble forsøkt å låse volumet.
-Feil %1: %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Unlock Error</source>
-        <translation>Opplåsingsfeil</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation>En feil oppstod når det ble forsøkt å låse opp volumet.
-Feil %1: %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Dismount Error</source>
-        <translation>Demonteringsfeil</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation>En feil oppstod når det ble forsøkt å demontere volumet.
-Feil %1: %2</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -39,9 +39,13 @@
         <file>lang/flag-sr_RS.png</file>
         <file>lang/flag-tr_TR.png</file>
         <file>lang/flag-uk_UA.png</file>
+        <file>lang/flag-he_IL.png</file>
         <file>lang/flag-hr_HR.png</file>
         <file>lang/flag-sk_SK.png</file>
         <file>lang/flag-sv_SE.png</file>
+        <file>lang/flag-ast_ES.png</file>
+        <file>lang/flag-fa_IR.png</file>
+        <file>lang/flag-lt_LT.png</file>
         <file>lang/lang-bg_BG.qm</file>
         <file>lang/lang-cs_CZ.qm</file>
         <file>lang/lang-da_DK.qm</file>
@@ -62,8 +66,12 @@
         <file>lang/lang-sr_RS.qm</file>
         <file>lang/lang-tr_TR.qm</file>
         <file>lang/lang-uk_UA.qm</file>
+        <file>lang/lang-he_IL.qm</file>
         <file>lang/lang-hr_HR.qm</file>
         <file>lang/lang-sk_SK.qm</file>
         <file>lang/lang-sv_SE.qm</file>
+        <file>lang/lang-ast_ES.qm</file>
+        <file>lang/lang-fa_IR.qm</file>
+        <file>lang/lang-lt_LT.qm</file>
     </qresource>
 </RCC>

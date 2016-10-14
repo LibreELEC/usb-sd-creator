@@ -29,18 +29,6 @@ msgctxt "Creator|"
 msgid "Load device"
 msgstr "Indlæs enhed"
 
-#~ msgctxt "Creator|"
-#~ msgid "Eject  Load   Remove"
-#~ msgstr "Fjern Eject Load"
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Vælg projekt"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "Vælg image"
-
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
@@ -72,11 +60,11 @@ msgstr "For licens, credits og historie, læs venligst:"
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "Hvis du nyder at benytte LibreELEC vær sød at overveje"
+msgstr "Hvis du kan lide at bruge LibreELEC, vær sød at overveje"
 
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "donér for at supportere projekt."
+msgstr "donation for at supportere projektet."
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
@@ -270,6 +258,14 @@ msgstr "Besøg Webside"
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
 msgstr "LibreELEC USB-SD Creator %1 er tilgængelig."
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Vælg projekt"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Vælg image"
 
 msgctxt "Creator|"
 msgid "Eject  Load         Remove"

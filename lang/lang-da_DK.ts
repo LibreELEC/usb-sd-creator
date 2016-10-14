@@ -28,18 +28,6 @@
         <translation>Indlæs enhed</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Fjern Eject Load</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Vælg projekt</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Vælg image</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>Rod privilegier nødvendige for at skrive image.
@@ -65,11 +53,11 @@ Build dato: %2</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation>Hvis du nyder at benytte LibreELEC vær sød at overveje</translation>
+        <translation>Hvis du kan lide at bruge LibreELEC, vær sød at overveje</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation>donér for at supportere projekt.</translation>
+        <translation>donation for at supportere projektet.</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
@@ -248,6 +236,14 @@ Din USB-SD enhed vil blive overskrevet!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD Creator %1 er tilgængelig.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Vælg projekt</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Vælg image</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

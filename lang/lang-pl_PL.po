@@ -31,18 +31,6 @@ msgctxt "Creator|"
 msgid "Load device"
 msgstr "Podłącz urządzenie"
 
-#~ msgctxt "Creator|"
-#~ msgid "Eject  Load   Remove"
-#~ msgstr "Podłącz Odłącz Usuń"
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Wybierz projekt"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "Wybierz obraz"
-
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
@@ -273,6 +261,14 @@ msgstr "Odwiedź stronę"
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
 msgstr "Kreator LibreELEC USB-SD %1 jest dostępny."
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Wybierz projekt"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Wybierz obraz"
 
 msgctxt "Creator|"
 msgid "Eject  Load         Remove"

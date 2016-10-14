@@ -37,9 +37,9 @@ if not exist lang/lang-en_GB.ts (
 if not exist lang/lang-en_GB.po (
   rem convert .ts files to new .po files
   echo.
-  for /f "tokens=*" %%i in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
-    set name=%%i
-    set lang=!name:~5,5!
+  for /f "tokens=*" %%f in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
+    set name=%%~nf
+    set lang=!name:~5,99!
     echo Converting !lang! from .ts to .po
     lconvert lang/lang-!lang!.ts -o lang/lang-!lang!.po
   )
@@ -48,30 +48,29 @@ if not exist lang/lang-en_GB.po (
 )
 
 rem convert .po files back to .ts files
-for /f "tokens=*" %%i in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
-  set name=%%i
-  set lang=!name:~5,5!
-  echo Converting !lang! from .po to .ts
+echo Converting files po -^> ts
+for /f "tokens=*" %%f in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
+  set name=%%~nf
+  set lang=!name:~5,99!
+  echo Converting !lang! from .po to .ts >NUL
   lconvert -locations relative lang/lang-!lang!.po -o lang/lang-!lang!.ts >NUL
 )
-echo.
 
 rem update .ts files
-echo Updating .ts files
+echo Updating ts files
 lupdate -verbose creator.pro >NUL
-echo.
 
 rem convert .ts files to .po files
-for /f "tokens=*" %%i in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
-  set name=%%i
-  set lang=!name:~5,5!
-  echo Converting !lang! from .ts to .po
+echo Converting files ts -^> po
+for /f "tokens=*" %%f in ('dir /b "lang\*.png" ^| %SYSTEMROOT%\system32\find.exe /v "empty"') do (
+  set name=%%~nf
+  set lang=!name:~5,99!
+  echo Converting !lang! from .ts to .po >NUL
   lconvert lang/lang-!lang!.ts -o lang/lang-!lang!.po >NUL
 )
-echo.
 
 rem create .qm files out of .ts files
-echo Creating .qm files
+echo Creating qm files
 lrelease creator.pro >NUL
 
 echo ====================================================================

@@ -126,49 +126,6 @@
       </item>
      </layout>
     </widget>
-    <widget class="QToolButton" name="refreshRemovablesButton">
-     <property name="geometry">
-      <rect>
-       <x>460</x>
-       <y>209</y>
-       <width>22</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="icon">
-      <iconset resource="resources.qrc">
-       <normaloff>:/icons/refresh.png</normaloff>:/icons/refresh.png</iconset>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="projectSelectBox">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>42</y>
-       <width>170</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="toolTip">
-      <string>Select project</string>
-     </property>
-     <property name="sizeAdjustPolicy">
-      <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="removableDevicesComboBox">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>209</y>
-       <width>441</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="toolTip">
-      <string>Select your USB stick or SD card</string>
-     </property>
-    </widget>
     <widget class="QProgressBar" name="downloadProgressBar">
      <property name="geometry">
       <rect>
@@ -277,6 +234,12 @@
       </item>
       <item>
        <widget class="QLabel" name="labelStep1">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>16777215</width>
@@ -288,20 +251,42 @@
         </property>
        </widget>
       </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>5</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="imagesShowAll">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>220</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string>&amp;Show all</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
      </layout>
-    </widget>
-    <widget class="QComboBox" name="imageSelectBox">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>42</y>
-       <width>290</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="toolTip">
-      <string>Select image</string>
-     </property>
     </widget>
     <widget class="QProgressBar" name="flashProgressBar">
      <property name="geometry">
@@ -365,28 +350,6 @@
        </widget>
       </item>
      </layout>
-    </widget>
-    <widget class="QCheckBox" name="imagesShowAll">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>259</x>
-       <y>17</y>
-       <width>221</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="layoutDirection">
-      <enum>Qt::RightToLeft</enum>
-     </property>
-     <property name="text">
-      <string>&amp;Show all</string>
-     </property>
-     <property name="checked">
-      <bool>false</bool>
-     </property>
     </widget>
     <widget class="QLineEdit" name="fileNameLabel">
      <property name="enabled">
@@ -507,7 +470,7 @@
     <widget class="QWidget" name="horizontalLayoutWidget">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>5</x>
        <y>120</y>
        <width>481</width>
        <height>31</height>
@@ -518,10 +481,10 @@
        <number>10</number>
       </property>
       <property name="leftMargin">
-       <number>10</number>
+       <number>5</number>
       </property>
       <property name="rightMargin">
-       <number>0</number>
+       <number>6</number>
       </property>
       <item>
        <widget class="QPushButton" name="downloadButton">
@@ -570,9 +533,9 @@
     <widget class="QWidget" name="horizontalLayoutWidget_2">
      <property name="geometry">
       <rect>
-       <x>1</x>
+       <x>5</x>
        <y>323</y>
-       <width>491</width>
+       <width>481</width>
        <height>31</height>
       </rect>
      </property>
@@ -581,10 +544,10 @@
        <number>10</number>
       </property>
       <property name="leftMargin">
-       <number>9</number>
+       <number>5</number>
       </property>
       <property name="rightMargin">
-       <number>12</number>
+       <number>6</number>
       </property>
       <item>
        <widget class="QPushButton" name="showAboutButton">
@@ -655,10 +618,10 @@
     <widget class="QWidget" name="horizontalLayoutWidget_3">
      <property name="geometry">
       <rect>
-       <x>1</x>
-       <y>263</y>
-       <width>261</width>
-       <height>31</height>
+       <x>5</x>
+       <y>266</y>
+       <width>481</width>
+       <height>26</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayoutButtons2">
@@ -666,10 +629,10 @@
        <number>10</number>
       </property>
       <property name="leftMargin">
-       <number>9</number>
+       <number>5</number>
       </property>
       <property name="rightMargin">
-       <number>0</number>
+       <number>6</number>
       </property>
       <item>
        <widget class="QPushButton" name="writeFlashButton">
@@ -702,6 +665,132 @@
       </item>
      </layout>
     </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_5">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>40</y>
+       <width>481</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayoutCombo">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QComboBox" name="projectSelectBox">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>170</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Select project</string>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="imageSelectBox">
+        <property name="toolTip">
+         <string>Select image</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>208</y>
+       <width>481</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayoutRemovable">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QComboBox" name="removableDevicesComboBox">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Select your USB stick or SD card</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="refreshRemovablesButton">
+        <property name="minimumSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/icons/refresh.png</normaloff>:/icons/refresh.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <zorder>horizontalLayoutWidgetStep4</zorder>
+    <zorder>downloadProgressBar</zorder>
+    <zorder>horizontalLayoutWidgetStep3</zorder>
+    <zorder>horizontalLayoutWidgetStep1</zorder>
+    <zorder>flashProgressBar</zorder>
+    <zorder>horizontalLayoutWidgetStep2</zorder>
+    <zorder>fileNameLabel</zorder>
+    <zorder>horizontalLayoutWidget</zorder>
+    <zorder>horizontalLayoutWidget_2</zorder>
+    <zorder>horizontalLayoutWidget_3</zorder>
+    <zorder>horizontalLayoutWidget_5</zorder>
+    <zorder>horizontalLayoutWidget_6</zorder>
+    <zorder>ejectUSB</zorder>
+    <zorder>labelEjectLoad</zorder>
+    <zorder>loadUSB</zorder>
+    <zorder>removeUSB</zorder>
    </widget>
    <widget class="QWidget" name="pageAbout">
     <widget class="QLabel" name="labelAbout">
@@ -731,25 +820,12 @@
       <set>Qt::TextBrowserInteraction</set>
      </property>
     </widget>
-    <widget class="QLabel" name="labelVersion">
-     <property name="geometry">
-      <rect>
-       <x>167</x>
-       <y>315</y>
-       <width>311</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
     <widget class="QWidget" name="horizontalLayoutWidget_4">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>5</x>
        <y>323</y>
-       <width>261</width>
+       <width>481</width>
        <height>31</height>
       </rect>
      </property>
@@ -758,7 +834,10 @@
        <number>10</number>
       </property>
       <property name="leftMargin">
-       <number>10</number>
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>6</number>
       </property>
       <item>
        <widget class="QPushButton" name="closeAboutButton">
@@ -789,8 +868,17 @@
         </property>
        </spacer>
       </item>
+      <item>
+       <widget class="QLabel" name="labelVersion">
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
+    <zorder>horizontalLayoutWidget_4</zorder>
+    <zorder>labelAbout</zorder>
    </widget>
   </widget>
   <widget class="QLabel" name="headerBackground">
@@ -828,14 +916,17 @@
   <widget class="QPushButton" name="langButton">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>112</y>
-     <width>16</width>
-     <height>16</height>
+     <x>456</x>
+     <y>107</y>
+     <width>22</width>
+     <height>18</height>
     </rect>
    </property>
    <property name="cursor">
     <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
    <property name="text">
     <string/>

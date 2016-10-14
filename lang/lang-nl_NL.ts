@@ -28,18 +28,6 @@
         <translation>Apparaat &amp;inlezen</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Uitwerpen Laden Verwijderen</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Kies &amp;project</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Kies &amp;image</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>Root-privileges zijn vereist voor het schrijven van de image.
@@ -248,6 +236,14 @@ Uw USB-SD-apparaat zal gewist worden!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD Creator %1 is beschikbaar.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Kies &amp;project</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Kies &amp;image</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

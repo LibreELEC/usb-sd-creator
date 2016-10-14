@@ -18,6 +18,7 @@
 
 #include "translator.h"
 
+#include <QApplication>
 #include <QDebug>
 #include <QFile>
 #include <QDir>
@@ -77,7 +78,7 @@ void Translator::fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr)
 
         langEn.replace("NorwegianBokmal", "Norwegian");
 
-        QAction *action = new QAction(langEn + " (" + lang + ")", menu);
+        QAction *action = new QAction(langEn + " / " + lang, menu);
         action->setCheckable(true);
         action->setIcon(icon);
         action->setData(locale);
@@ -117,6 +118,8 @@ void Translator::fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr)
             break;
         }
     }
+
+    QApplication::setLayoutDirection(QLocale(locale).textDirection());
 }
 
 void Translator::languageAction(QAction *action)
@@ -141,8 +144,9 @@ void Translator::languageAction(QAction *action)
     for (int i=0; i<menu->actions().count(); i++)
         menu->actions().at(i)->setChecked(false);
 
-    // set checked for current one
+    // set checked and tooltip for current one
     action->setChecked(true);
-    // set tooltip
     langBtn->setToolTip(action->text());
+
+    QApplication::setLayoutDirection(QLocale(locale).textDirection());
 }

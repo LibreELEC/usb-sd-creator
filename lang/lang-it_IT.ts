@@ -28,18 +28,6 @@
         <translation>Apri drive</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Espelli Apri Rimuovi</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Apri progetto</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Seleziona immagine</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>Sono richiesti i privilegi di Root per scrivere l&apos;immagine.
@@ -93,11 +81,11 @@ Data Build: %2</translation>
     </message>
     <message>
         <source>Download complete, syncing file...</source>
-        <translation>Download completato, sincronizzando i file...</translation>
+        <translation>Download completato, sincronizzazione file...</translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation>Download completato, verificando il checksum...</translation>
+        <translation>Download completato, verifica checksum...</translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
@@ -129,7 +117,7 @@ Data Build: %2</translation>
 already exist.</source>
         <translation>File 
 %1/%2
-gia&apos; esistente.</translation>
+già esistente.</translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
@@ -137,7 +125,7 @@ gia&apos; esistente.</translation>
     </message>
     <message>
         <source>File already exists.</source>
-        <translation>Il file esiste gia&apos;.</translation>
+        <translation>Il file esiste già.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
@@ -250,6 +238,14 @@ Il contenuto del tuo drive USB \ Scheda SD verra&apos; eliminato!</translation>
         <translation>LibreELEC USB-SD Creator %1 disponibile.</translation>
     </message>
     <message>
+        <source>Select project</source>
+        <translation>Apri progetto</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Seleziona immagine</translation>
+    </message>
+    <message>
         <source>Eject  Load         Remove</source>
         <translation type="unfinished"></translation>
     </message>
@@ -263,7 +259,7 @@ Il contenuto del tuo drive USB \ Scheda SD verra&apos; eliminato!</translation>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation>Si e&apos; verificato un errore durante la scrittura del dato sull&apos; handle..
+        <translation>Si e&apos; verificato un errore durante la scrittura del dato sull&apos;handle..
 Errore %1: %2</translation>
     </message>
     <message>
@@ -273,7 +269,7 @@ Errore %1: %2</translation>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation>Si e&apos; verificato un errore durante l&apos;apertura di un handle sul volume.
+        <translation>Si è verificato un errore durante l&apos;apertura di un handle sul volume.
 Errore %1: %2</translation>
     </message>
     <message>
@@ -283,7 +279,7 @@ Errore %1: %2</translation>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation>Si e&apos; verificato un errore durante il lock del volume.
+        <translation>Si è verificato un errore durante il lock del volume.
 Errore %1: %2</translation>
     </message>
     <message>
@@ -293,7 +289,7 @@ Errore %1: %2</translation>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation>Si e&apos; verificato un errore durante l&apos;unlock del volum.
+        <translation>Si è verificato un errore durante l&apos;unlock del volum.
 Errore %1: %2</translation>
     </message>
     <message>
@@ -303,7 +299,7 @@ Errore %1: %2</translation>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation>Si e&apos; verificato un errore durante l&apos;operazione di dismount del volume.
+        <translation>Si è verificato un errore durante l&apos;operazione di dismount del volume.
 Errore %1: %2</translation>
     </message>
 </context>

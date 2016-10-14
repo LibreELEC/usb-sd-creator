@@ -28,18 +28,6 @@
         <translation>Carregar o dispositivo</translation>
     </message>
     <message>
-        <source>Eject  Load   Remove</source>
-        <translation type="vanished">Ejetar Carregar Remover</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Selecionar projeto</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Selecionar imagem</translation>
-    </message>
-    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation>São necessários privilégios de root para escrever a imagem.
@@ -248,6 +236,14 @@ O seu dispositivo USB-SD será apagado!</translation>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
         <translation>LibreELEC USB-SD Creator %1 está disponível.</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Selecionar projeto</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Selecionar imagem</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>

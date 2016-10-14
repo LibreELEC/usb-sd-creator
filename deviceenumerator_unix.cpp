@@ -336,6 +336,9 @@ QStringList DeviceEnumerator_unix::getPartitionsInfo(const QString& device) cons
 
     for (i = 0; i < nparts; i++) {
         blkid_partition par = blkid_partlist_get_partition(ls, i);
+        if (par == NULL)
+            continue;
+
         QString partition;
         QTextStream stream(&partition);
         stream << "#" << blkid_partition_get_partno(par) << " ";
@@ -377,6 +380,7 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
     blkid_probe prPart;
     blkid_partlist ls;
     int nparts;
+    int rv;
     QString qLabel;
 
     pr = blkid_new_probe_from_filename(qPrintable(device));
@@ -400,14 +404,33 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
     }
 
     // at least one partititon
-    char devName[36];
+    char devName[64];
     const char *label = NULL;
-    snprintf(devName, sizeof(devName), "%s1", qPrintable(device));
+
+    if (device.startsWith("/dev/mmcblk")) {
+        // check /dev/mmcblk0p1
+        snprintf(devName, sizeof(devName), "%sp1", qPrintable(device));
+    } else {
+        // check /dev/sdb1
+        snprintf(devName, sizeof(devName), "%s1", qPrintable(device));
+    }
+
     prPart = blkid_new_probe_from_filename(devName);
-    blkid_do_probe(prPart);
-    blkid_probe_lookup_value(prPart, "LABEL", &label, NULL);
+    if (prPart == NULL)
+        return qLabel;  // no label
+
+    rv = blkid_do_probe(prPart);
+    if (rv != 0)
+        return qLabel;  // no label
+
+    rv = blkid_probe_lookup_value(prPart, "LABEL", &label, NULL);
+
     blkid_free_probe(prPart);
     blkid_free_probe(pr);
+
+    if (rv != 0)
+        return qLabel;  // no label
+
     qDebug() << "devName" << devName << "label" << label;
     if (label != NULL)
         qLabel = QString::fromLatin1(label);
@@ -445,8 +468,11 @@ qint64 DeviceEnumerator_unix::getSizeOfDevice(const QString& device) const
     output = lsblk.readLine();
     while (!lsblk.atEnd()) {
         output = output.trimmed(); // Odd trailing whitespace
-        if (output.contains("Total Size:")) {
+        if (output.contains("Total Size:") ||
+            output.contains("Disk Size:")) {
             // Total Size:  574.6 MB (574619648 Bytes) (exactly 1122304 512-Byte-Units)
+            // on 2015 Macbook Pro 15" running MacOS Sierra beta
+            // Disk Size:                15.9 GB (15931539456 Bytes) (exactly 31116288 512-Byte-Units)
             QStringList sizeList = output.split('(').value(1).split(' ');
             size = sizeList.first().trimmed();
             break;

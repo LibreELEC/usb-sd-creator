@@ -50,7 +50,7 @@
 #endif
 
 // force update notification dialog
-//#define FORCE_UPDATE_NOTIFICATION
+//#define FORCE_UPDATE_NOTIFICATION "1.3"
 
 const QString Creator::releasesUrl = "http://releases.libreelec.tv/";
 const QString Creator::versionUrl = releasesUrl + "creator_version";
@@ -180,11 +180,6 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
 
     ui->closeAboutButton->setAttribute(Qt::WA_MacSmallSize);
     ui->labelVersion->setAttribute(Qt::WA_MacSmallSize);
-
-    // make button little bigger (workaround for higher QComboBox)
-    // and move it left for same change
-    QRect currRectRrb = ui->refreshRemovablesButton->geometry();
-    ui->refreshRemovablesButton->setGeometry(currRectRrb.x()-2, currRectRrb.y(), currRectRrb.height()+2, currRectRrb.width()+2);
 #endif
 
     setImageFileName("");
@@ -333,6 +328,12 @@ void Creator::retranslateUi()
           .arg(tr("Click the logo below or donate")) \
           .arg(tr("using Paypal to:")) \
     );
+
+    // orientation of the widget is reversed
+    if (QApplication::isLeftToRight())
+        ui->imagesShowAll->setLayoutDirection(Qt::RightToLeft);
+    else
+        ui->imagesShowAll->setLayoutDirection(Qt::LeftToRight);
 }
 
 void Creator::keyPressEvent(QKeyEvent *event)
@@ -714,7 +715,7 @@ void Creator::savePreferredRemovableDevice(int idx)
 void Creator::languageChange()
 {
     // menu has padding around
-    ui->menuLanguage->exec(ui->langButton->mapToGlobal(QPoint(-6, -4)));
+    ui->menuLanguage->exec(ui->langButton->mapToGlobal(QPoint(0, 0)));
 }
 
 void Creator::disableControls(const int which)
@@ -943,7 +944,11 @@ void Creator::handleFinishedDownload(const QByteArray &data)
     switch (state) {
     case STATE_GET_VERSION:
         state = STATE_IDLE;
+#ifdef FORCE_UPDATE_NOTIFICATION
+        checkNewVersion(FORCE_UPDATE_NOTIFICATION);
+#else
         checkNewVersion(data);
+#endif
         downloadReleases();
         break;
 
@@ -1080,16 +1085,11 @@ void Creator::checkNewVersion(const QString &verNewStr)
 {
     QVersionNumber qVersionNew = QVersionNumber::fromString(verNewStr);
     QVersionNumber qVersionOld = QVersionNumber::fromString(BUILD_VERSION);
-    if (qVersionNew.segmentCount() != 3 || qVersionOld.segmentCount() != 3) {
-        qDebug() << "not 3 segments version";
-        return;
-    }
+
 
     int QVersionCompare = QVersionNumber::compare(qVersionNew, qVersionOld);
     qDebug() << "QVersionCompare" << QVersionCompare;
-#ifdef FORCE_UPDATE_NOTIFICATION
-    QVersionCompare = 1;  // TEST
-#endif
+
     if (QVersionCompare <= 0) {
         qDebug() << "no new version";
         return;
@@ -1365,12 +1365,16 @@ void Creator::writingSyncing()
 void Creator::writingFinished()
 {
     qDebug() << "writingFinished";
-    privileges.SetUser();    // back to user
-    reset();
-    resetProgressBars();
-    flashProgressBarText(tr("Writing done!"));
-    delete averageSpeed;
-    state = STATE_IDLE;
+
+    /* if error happened leave it visible */
+    if (state != STATE_IDLE) {
+        privileges.SetUser();    // back to user
+        reset();
+        resetProgressBars();
+        flashProgressBarText(tr("Writing done!"));
+        delete averageSpeed;
+        state = STATE_IDLE;
+    }
 
     QApplication::beep();
     refreshRemovablesList();
@@ -1383,6 +1387,8 @@ void Creator::writingError(QString message)
     reset(tr("Error: %1").arg(message));
     delete averageSpeed;
     state = STATE_IDLE;
+
+    QApplication::beep();
 }
 
 void Creator::refreshRemovablesList()

@@ -7,35 +7,37 @@ msgstr ""
 
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
-msgstr "LibreELEC USB-SD Припрема"
+msgstr "LibreELEC USB-SD Creator"
 
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "Запиши слику"
+msgstr "ایمیج را رایت کن"
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Одаберите USB диск или SD картицу"
+msgstr "درایو USB و یا SD card خود را انتخاب کنید"
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "Преузми са Интернета или одабери локалну датотеку слике"
+msgstr ""
+"فایل ایمیج مورد نظر را دانلود کنید و یا یکی از فایلهای موجود در کامپیوتر خود "
+"را انتخاب نمائید"
 
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr "Избаци уређај"
+msgstr "USB و یا SD card را خارج کنید"
 
 msgctxt "Creator|"
 msgid "Load device"
-msgstr "Учитај уређај"
+msgstr "USB و یا SD card را وارد کنید"
 
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
-"Root привилегије су неопходне како би се записала слика.\n"
-"Покрените ову апликацију кроз sudo."
+"جهت رایت کردن فایل ایمیج شما می بایست کاربر اصلی -Root- باشید.\n"
+"نرم افزار را با استفاده از واژه Sudo اجرا نمائید"
 
 #, qt-format
 msgctxt "Creator|"
@@ -43,81 +45,83 @@ msgid ""
 "Version: %1\n"
 "Build date: %2"
 msgstr ""
-"Верзија: %1\n"
-"Датум припреме: %2"
+"ویرایش: %1\n"
+"تاریخ ساخت: %2"
 
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr "Овај софтвер је направљен са љубављу и пуштен за употребу"
+msgstr "این نرم افزار عاشقانه ساخته و منتشر شده است."
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "под GPLv2 лиценцом, уз употребу ранијих RasPlex радова."
+msgstr "تحت لیسانس GPLv2، با بهره گیری از جدیدترین کار PasPlex."
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "За информације о лиценци, заслуге и историјат, молимо прочитајте:"
+msgstr ""
+"جهت اطلاع از لیسانس، اعتبار و تاریخچه نرم افزار لطفاً این قسمت را مطالعه "
+"فرمائید:"
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "Уколико уђивате користећи LibreELEC молимо размислите о"
+msgstr "اگر شما از LibreELEC استفاده کرده و راضی هستید خواهشمندیم"
 
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "донацији како би подрђали пројекат."
+msgstr "جهت حمایت از ما کمک مالی را مد نظر قرار دهید."
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Кликните на лого испод или донирајте"
+msgstr "لوگوی زیر را کلیک کنید و یا حمایت مالی نمائید"
 
 msgctxt "Creator|"
 msgid "using Paypal to:"
-msgstr "путем Paypal-а на:"
+msgstr "استفاده از Paypal برای:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr "[Стабилан]"
+msgstr "[پایدار]"
 
 msgctxt "Creator|"
 msgid "[Alpha]"
-msgstr "[Алфа]"
+msgstr "[آلفا]"
 
 msgctxt "Creator|"
 msgid "[Beta]"
-msgstr "[Бета]"
+msgstr "[بتا]"
 
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr "Преузимање завршено, синхронизујем фај..."
+msgstr "دانلود تکمیل شد، در حال هماهنگ سازی فایل..."
 
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr "Преузимање завршено, проверавам исправност..."
+msgstr "دانلود تکمیل شد، در حال جمعبندی و تأیید نهایی..."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "Преузимање завршено, фајл је исправах."
+msgstr "دانلود تکمیل شد، جمعبندی نیز انجام و تأیید شد."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
-msgstr "Преузимање је завршено, фајл није исправан."
+msgstr "دانلود تکمیل شد ولی جمعبندی بطور کامل انجام نگردید."
 
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr "%1 секунди преостало - %2% при %3"
+msgstr "%1 هنوز باقی مانده - %2% از 3%"
 
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr "Преузимање поништено."
+msgstr "دانلود لغو شد."
 
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr "Директоријум за чување фајла слике"
+msgstr "آدرس پوشه جهت ذخیره فایل ایمیج"
 
 msgctxt "Creator|"
 msgid "Error"
-msgstr "Грешка"
+msgstr "خطا"
 
 #, qt-format
 msgctxt "Creator|"
@@ -126,64 +130,64 @@ msgid ""
 "%1/%2\n"
 "already exist."
 msgstr ""
-"Фајл \n"
-"%1/%2\n"
-"већ постоји."
+"فایل\n"
+"%2/%1\n"
+"در حال حاضر موجود است."
 
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr "Да ли желите да снимите преко постојећег?"
+msgstr "آیا تمایل دارید مجدداً رایت شود؟"
 
 msgctxt "Creator|"
 msgid "File already exists."
-msgstr "Фајл већ постоји."
+msgstr "فایل مورد نظر در حال حاضر موجود است."
 
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr "Неуспех приликом отврања фајла за писање."
+msgstr "فایل مود نظر جهت رایت، قابل خواندن نمی باشد!"
 
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr "Отвори фајл слике"
+msgstr "فایل ایمیج مورد نظر را باز کنید"
 
 msgctxt "Creator|"
 msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
 "image (*.img);;All files (*.*)"
 msgstr ""
-"Компресована gz слика (*img.gz);;Компресована zip слика "
-"(*img.zip);;Некомпресована слика (*.img);;Сви фајлови (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
+"image (*.img);;All files (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr "Писање поништено."
+msgstr "عملیات رایت ایمیج لغو شد."
 
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr "Потврда писања"
+msgstr "رایت را تأیید کن"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr ""
+msgstr "خطا در جداسازی پارتیشنها بر روی 1%"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Нема довољно простора на %1 [%2 < %3]"
+msgstr "فضای موجود بر 1% ناکافیست [3% > 2%]"
 
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr "Синхронизујем фајл сисзем."
+msgstr "هماهنگسازی فایل سیستم..."
 
 msgctxt "Creator|"
 msgid "Writing done!"
-msgstr "Записивање завршено!"
+msgstr "عملیات رایت انجام شد!"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
-msgstr "Грешка: %1"
+msgstr "خطا: 1%"
 
 #, qt-format
 msgctxt "Creator|"
@@ -193,79 +197,79 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
-"Одавран уређај: %1\n"
-"Да ли сте сигурни да желите да запишете слику?\n"
+"درایو حافظه انتخاب شده: 1%\n"
+"آیا جهت رایت اطمینان دارید؟\n"
 "\n"
-"Сви подаци са USB-SD диска ће бити избисани!"
+"محتویات USB و یا SD card شما کاملاً پاک خواهد شد!"
 
 msgctxt "Creator|"
 msgid "Yes"
-msgstr "Да"
+msgstr "بله"
 
 msgctxt "Creator|"
 msgid "No"
-msgstr "Не"
+msgstr "خیر"
 
 msgctxt "Creator|"
 msgid "OK"
-msgstr "ОК"
+msgstr "Ok"
 
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr "Освежи обавештења"
+msgstr "اعلامیه جهت انجام بروز رسانی"
 
 msgctxt "Creator|"
 msgid "Select version"
-msgstr "Одаберите верзију"
+msgstr "انتخاب ویرایش"
 
 msgctxt "Creator|"
 msgid "&Close"
-msgstr "Затвори"
+msgstr "بستن&"
 
 msgctxt "Creator|"
 msgid "&Download"
-msgstr "Преузимање"
+msgstr "دانلود&"
 
 msgctxt "Creator|"
 msgid "&About"
-msgstr "О пројекту"
+msgstr "درباره&"
 
 msgctxt "Creator|"
 msgid "&Write"
-msgstr "Запиши"
+msgstr "رایت&"
 
 msgctxt "Creator|"
 msgid "&Help"
-msgstr "Помоћ"
+msgstr "کمک&"
 
 msgctxt "Creator|"
 msgid "Select &file"
-msgstr "Одаберите фајл"
+msgstr "انتخاب فایل&"
 
 msgctxt "Creator|"
 msgid "&Show all"
-msgstr "Прикажи све"
+msgstr "نمایش همه&"
 
 msgctxt "Creator|"
 msgid "Cance&l"
-msgstr "Поништи"
+msgstr "لغو&"
 
 msgctxt "Creator|"
 msgid "&Visit Website"
-msgstr "Посети Интернет локацију"
+msgstr "نمایش وبسایت&"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Припрема %1 је доступна."
+msgstr "LibreELEC USB-SD Creator ویرایش 1% موجود است."
 
 msgctxt "Creator|"
 msgid "Select project"
-msgstr "Одабери пројекат"
+msgstr "پروژه مورد نظر را انتخاب نمائید"
 
 msgctxt "Creator|"
 msgid "Select image"
-msgstr "Одабери слику"
+msgstr "ایمیج مورد نظر را انتخاب نمائید"
 
 msgctxt "Creator|"
 msgid "Eject  Load         Remove"
@@ -273,7 +277,7 @@ msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr "Грешка у писању"
+msgstr "خطا در هنگام رایت"
 
 #, qt-format
 msgctxt "QObject|"
@@ -281,10 +285,12 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
+"خطا در هنگام رایت اطلاعات بر روی هندل پیش آمده.\n"
+"خطا 1% : 2%"
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr "Грешка Уређаја"
+msgstr "خطا در پارتیشن"
 
 #, qt-format
 msgctxt "QObject|"
@@ -292,12 +298,12 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Догодила се грешка при покушају дохватања управљача уређаја.\n"
-"Грешка %1: %2"
+"خطا در هنگام ثبت هندل بر روی پارتیشن بوجود آمده.\n"
+"خطا 1% : 2%"
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr "Грешка при закључавању"
+msgstr "خطای قفل"
 
 #, qt-format
 msgctxt "QObject|"
@@ -305,12 +311,12 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Догодила се грешка при покушају постављања кључа на уређај.\n"
-"Грешка %1: %2"
+"در هنگام قفل کردن پارتیشن خطا پیش آمده است.\n"
+"خطا 1% : 2%"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr "Грешка при откључавању"
+msgstr "خطای باز کردن قفل"
 
 #, qt-format
 msgctxt "QObject|"
@@ -318,12 +324,12 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Догодила се грешка при покушају уклањања кључа са уређаја.\n"
-"Грешка %1: %2"
+"در هنگام باز کردن قفل پارتیشن خطا پیش آمده است.\n"
+"خطا 1% : 2%"
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr ""
+msgstr "خطای آزادسازی پارتیشن"
 
 #, qt-format
 msgctxt "QObject|"
@@ -331,3 +337,5 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
+"خطا هنگام آزادسازی پارتیشن پیش آمده است.\n"
+"خطا 1% : 2%"

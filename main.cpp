@@ -30,6 +30,7 @@
 #include <QFileInfo>
 #include <QDesktopServices>
 #include <QProxyStyle>
+#include <QNetworkProxy>
 #include <QDebug>
 
 // show debug output always
@@ -66,13 +67,22 @@ int main(int argc, char *argv[])
     // prevents the font size from appearing overly large on OSX
     app.setStyle(new MacFontStyle);
 #endif
-    
+
 #ifndef ALWAYS_DEBUG_OUTPUT
-    if (! app.arguments().contains("--debug"))
+    if (app.arguments().contains("--debug") == false)
         qInstallMessageHandler(noMessageOutput);
 #endif
 
     qDebug() << "App data: Version:" << BUILD_VERSION ", Build date: " BUILD_DATE;
+
+    if (app.arguments().contains("--no-proxy") == false) {
+        QNetworkProxyQuery npq(QUrl("http://releases.libreelec.tv/"));
+        QList<QNetworkProxy> listOfProxies = QNetworkProxyFactory::systemProxyForQuery(npq);
+        if (listOfProxies.size()) {
+            QNetworkProxy::setApplicationProxy(listOfProxies[0]);
+            qDebug() << "Using" << listOfProxies[0];
+        }
+    }
 
     Privileges privileges = Privileges();
     privileges.Whoami();
