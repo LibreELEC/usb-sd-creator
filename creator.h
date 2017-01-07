@@ -138,6 +138,7 @@ protected:
 
 signals:
     void proceedToWriteImageToDevice(const QString& image, const QString& device);
+    void error(const QString& message);
 
 private slots:
     void httpsUrlHandler(const QUrl &url);

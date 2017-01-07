@@ -772,9 +772,19 @@ unsigned int Creator::getUncompressedImageSize()
     unsigned char bufSize[4];
     unsigned int fileSize;
 
+#if defined(_WIN32)
+    // toStdString internally converts filename to utf8, which
+    // windows does not support for fileaccess
+    // so use unchanged 16 Bit unicode here (QChar is 16 Bit)
+    file = _wfopen((const wchar_t *)imageFile.fileName().utf16(), L"rb");
+#else
     file = fopen(imageFile.fileName().toStdString().c_str(), "rb");
+#endif
     if (file == NULL)
+    {
+        emit error("Couldn't open " + imageFile.fileName());
         return 0;
+    }
 
     if (imageFile.fileName().endsWith(".gz")) {
         if (fseek(file, -4, SEEK_END) != 0)
