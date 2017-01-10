@@ -59,7 +59,14 @@ void DiskWriter::writeGzCompressedImage(const QString &filename, const QString& 
     QByteArray buf(512*1024*sizeof(char), 0);
 
     // Open source
+#if defined(_WIN32)
+    // toStdString internally converts filename to utf8, which
+    // windows does not support for fileaccess
+    // so use unchanged 16 Bit unicode here
+    gzFile src = gzopen_w((const wchar_t *)filename.utf16(), "rb");
+#else
     gzFile src = gzopen(filename.toStdString().c_str(), "rb");
+#endif
     if (src == NULL) {
         emit error("Couldn't open " + filename);
         this->close();
@@ -125,7 +132,14 @@ void DiskWriter::writeZipCompressedImage(const QString &filename, const QString&
     off_t bytesRead = 0;
 
     // Open source
+#if defined(_WIN32)
+    // toStdString internally converts filename to utf8, which
+    // windows does not support for fileaccess
+    // so use unchanged 16 Bit unicode here
+    gzFile src = gzopen_w((const wchar_t *)filename.utf16(), "rb");
+#else
     gzFile src = gzopen(filename.toStdString().c_str(), "rb");
+#endif
     if (src == NULL) {
         emit error("Couldn't open " + filename);
         this->close();
