@@ -651,6 +651,8 @@ void Creator::reset(const QString& message)
     ui->downloadButton->setEnabled(true);
     ui->downloadButton->setText(tr("&Download"));
 
+    ui->loadButton->setEnabled(true);
+
     ui->refreshRemovablesButton->setEnabled(true);
     ui->removableDevicesComboBox->setEnabled(true);
 
@@ -728,10 +730,12 @@ void Creator::disableControls(const int which)
     ui->refreshRemovablesButton->setEnabled(false);
     ui->removableDevicesComboBox->setEnabled(false);
 
-    if (which == DISABLE_CONTROL_DOWNLOAD)
+    if (which == DISABLE_CONTROL_DOWNLOAD) {
         ui->writeFlashButton->setEnabled(false);
-    else
+    } else {
         ui->downloadButton->setEnabled(false);
+        ui->loadButton->setEnabled(false);
+    }
 
     // TBD - USB eject/load/remove
 }
