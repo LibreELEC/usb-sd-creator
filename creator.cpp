@@ -1004,6 +1004,9 @@ void Creator::handleFinishedDownload(const QByteArray &data)
         delete averageSpeed;
         reset();
         state = STATE_IDLE;
+
+        QApplication::beep();
+        QApplication::alert(this, 5000);
         break;
 
     default:
@@ -1391,6 +1394,7 @@ void Creator::writingFinished()
     }
 
     QApplication::beep();
+    QApplication::alert(this, 5000);
     refreshRemovablesList();
 }
 
@@ -1403,6 +1407,7 @@ void Creator::writingError(QString message)
     state = STATE_IDLE;
 
     QApplication::beep();
+    QApplication::alert(this, 5000);
 }
 
 void Creator::refreshRemovablesList()
