@@ -28,6 +28,62 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
         <translation type="unfinished"></translation>
@@ -98,6 +154,18 @@ Build date: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -128,6 +196,10 @@ already exist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Cance&amp;l</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Open image file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -136,11 +208,22 @@ already exist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Confirm write</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -157,89 +240,6 @@ already exist.</source>
     </message>
     <message>
         <source>Writing done!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -13,7 +13,7 @@ msgstr "LibreELEC USB-SD Creator"
 
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "Įrašyti atvaizdą"
+msgstr "Įrašykite atvaizdą"
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
@@ -98,11 +98,11 @@ msgstr "Atsiuntimas baigtas, tikrinama kontrolinė suma..."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "Atsiuntimas baigtas, kontrolinė suma gera."
+msgstr "Atsiuntimas baigtas, kontrolinė suma teisinga."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
-msgstr "Atsiuntimas baigtas, kontrolinė suma bloga."
+msgstr "Atsiuntimas baigtas, kontrolinė suma klaidinga."
 
 #, qt-format
 msgctxt "Creator|"

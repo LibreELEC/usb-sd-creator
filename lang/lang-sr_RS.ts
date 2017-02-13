@@ -148,10 +148,6 @@ already exist.</source>
         <translation>Потврда писања</translation>
     </message>
     <message>
-        <source>Cannot unmount partititons on device %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
         <translation>Нема довољно простора на %1 [%2 &lt; %3]</translation>
     </message>
@@ -247,6 +243,10 @@ Your USB-SD device will be wiped!</source>
     </message>
     <message>
         <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot unmount partititons on device %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

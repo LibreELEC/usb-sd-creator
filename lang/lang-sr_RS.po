@@ -164,11 +164,6 @@ msgstr "Потврда писања"
 
 #, qt-format
 msgctxt "Creator|"
-msgid "Cannot unmount partititons on device %1"
-msgstr ""
-
-#, qt-format
-msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
 msgstr "Нема довољно простора на %1 [%2 < %3]"
 
@@ -269,6 +264,11 @@ msgstr "Одабери слику"
 
 msgctxt "Creator|"
 msgid "Eject  Load         Remove"
+msgstr ""
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Cannot unmount partititons on device %1"
 msgstr ""
 
 msgctxt "QObject|"

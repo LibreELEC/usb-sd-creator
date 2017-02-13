@@ -87,45 +87,8 @@ msgid "[Beta]"
 msgstr "[בטא]"
 
 msgctxt "Creator|"
-msgid "Download complete, syncing file..."
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Download complete, verifying checksum..."
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Download complete, checksum ok."
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Download complete, checksum not ok."
-msgstr ""
-
-#, qt-format
-msgctxt "Creator|"
-msgid "%1 seconds remaining - %2% at %3"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Download canceled."
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Directory to store image file"
-msgstr ""
-
-msgctxt "Creator|"
 msgid "Error"
 msgstr "שגיאה"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"File \n"
-"%1/%2\n"
-"already exist."
-msgstr ""
 
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
@@ -144,28 +107,12 @@ msgid "Open image file"
 msgstr "פתח קובץ התקנה"
 
 msgctxt "Creator|"
-msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
-msgstr ""
-
-msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "הכתיבה בוטלה."
 
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "אשר כתיבה"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Cannot unmount partititons on device %1"
-msgstr ""
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Not enough space on %1 [%2 < %3]"
-msgstr ""
 
 msgctxt "Creator|"
 msgid "Syncing file system..."
@@ -179,15 +126,6 @@ msgstr "הכתיבה הסתיימה!"
 msgctxt "Creator|"
 msgid "Error: %1"
 msgstr "שגיאה: %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
 
 msgctxt "Creator|"
 msgid "Yes"
@@ -245,11 +183,6 @@ msgctxt "Creator|"
 msgid "&Visit Website"
 msgstr "&בקר בדף הבית"
 
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr ""
-
 msgctxt "Creator|"
 msgid "Select project"
 msgstr "בחר פרוייקט"
@@ -260,6 +193,73 @@ msgstr "בחר התקנה"
 
 msgctxt "Creator|"
 msgid "Eject  Load         Remove"
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Download complete, syncing file..."
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Download complete, verifying checksum..."
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Download complete, checksum ok."
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Download complete, checksum not ok."
+msgstr ""
+
+#, qt-format
+msgctxt "Creator|"
+msgid "%1 seconds remaining - %2% at %3"
+msgstr ""
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Download canceled."
+msgstr ""
+
+msgctxt "Creator|"
+msgid "Directory to store image file"
+msgstr ""
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"File \n"
+"%1/%2\n"
+"already exist."
+msgstr ""
+
+msgctxt "Creator|"
+msgid ""
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
+"image (*.img);;All files (*.*)"
+msgstr ""
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Cannot unmount partititons on device %1"
+msgstr ""
+
+#, qt-format
+msgctxt "Creator|"
+msgid "Not enough space on %1 [%2 < %3]"
 msgstr ""
 
 msgctxt "QObject|"

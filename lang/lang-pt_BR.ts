@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="bg_BG">
+<TS version="2.1" language="br_FR">
 <context>
     <name>Creator</name>
     <message>
         <source>LibreELEC USB-SD Creator</source>
-        <translation>LibreELEC създател за USB-SD</translation>
+        <translation>LibreELEC USB-SD Creator</translation>
     </message>
     <message>
         <source>Write image</source>
-        <translation>Записване на файл</translation>
+        <translation>Gravar imagem</translation>
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>Избери USB флашка или SD карта</translation>
+        <translation>Selecione seu dispositivo USB ou Cartão SD</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
-        <translation>Свали или избери локален файл</translation>
+        <translation>Baixar imagem ou selecionar um arquivo de imagem local</translation>
     </message>
     <message>
         <source>Eject device</source>
-        <translation>Извади устройство</translation>
+        <translation>Ejetar dispositivo</translation>
     </message>
     <message>
         <source>Load device</source>
-        <translation>Зареди устройство</translation>
+        <translation>Carregar dispositivo</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>Root права са нужни за записване на файла.
-Пуснете програмата с sudo.</translation>
+        <translation>É necessário ter privilégios de administrador para gravar a imagem.
+Execute a aplicação usando o comando sudo.</translation>
     </message>
     <message>
         <source>Version: %1
 Build date: %2</source>
-        <translation>Версия: %1
-Дата на изграждане: %2</translation>
+        <translation>Versão: %1
+Data de compilação: %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
-        <translation>Тази програма бе създаде с любов и пусната</translation>
+        <translation>Este aplicativo foi criado com amor e disponibilizado</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>под GPLv2, използвайки по-ранна работа от RasPlex.</translation>
+        <translation>sob GPLv2, utilizando trabalho anterior de RasPlex.</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
-        <translation>За лиценз, кредити и история, моля прочетете:</translation>
+        <translation>Informações sobre licença, créditos e história, por favor leia:</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation>Ако ти харесва ползване на LibreELEC, моля помислете</translation>
+        <translation>Se você está gostando de usar o LibreELEC por favor considere uma</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation>за дарение, за да подкрепите проекта.</translation>
+        <translation>doação para apoiar o projeto.</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
-        <translation>Кликни на логото долу или дарете</translation>
+        <translation>Clique no logo abaixo ou faça sua doação</translation>
     </message>
     <message>
         <source>using Paypal to:</source>
-        <translation>използвайки Paypal на:</translation>
+        <translation>utilizando Paypal para:</translation>
     </message>
     <message>
         <source>[Stable]</source>
-        <translation>[Стабилна]</translation>
+        <translation>[Estável]</translation>
     </message>
     <message>
         <source>[Alpha]</source>
@@ -81,109 +81,110 @@ Build date: %2</source>
     </message>
     <message>
         <source>Download complete, syncing file...</source>
-        <translation>Свалянето завърши, синхронизиране на файл...</translation>
+        <translation>Transferência completa, sincronizando arquivo...</translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation>Свалянето завърши, сравняване на чек сума...</translation>
+        <translation>Transferência completa, verificando checksum...</translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation>Свалянето завърши, чек сумата е ок</translation>
+        <translation>Transferência completa, checksum correto.</translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation>Свалянето завърши, чек сумата не е ок</translation>
+        <translation>Transferência completa, checksum incorreto.</translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation>%1 секунди остават - %2% от %3</translation>
+        <translation>%1 segundos restando - %2% em %3</translation>
     </message>
     <message>
         <source>Download canceled.</source>
-        <translation>Отменено сваляне</translation>
+        <translation>Transferência cancelada.</translation>
     </message>
     <message>
         <source>Directory to store image file</source>
-        <translation>Папка за запазване image файла</translation>
+        <translation>Diretório para armazenar arquivo de  imagem</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Грешка</translation>
+        <translation>Erro</translation>
     </message>
     <message>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation>Файла
+        <translation>Arquivo
 %1/%2
-вече съществува.</translation>
+já existe</translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
-        <translation>Искаш ли да се презапише?</translation>
+        <translation>Você gostaria de sobrescrever?</translation>
     </message>
     <message>
         <source>File already exists.</source>
-        <translation>Файла вече съществува.</translation>
+        <translation>Arquivo já existe.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation>Неуспех при отваряне на файл за записване!</translation>
+        <translation>Erro ao abrir arquivo para gravar!</translation>
     </message>
     <message>
         <source>Open image file</source>
-        <translation>Отвори файл за запис</translation>
+        <translation>Abrir arquivo de imagem</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation>Сгъстен gz файл (*img.gz);;Сгъстен zip файл (*img.zip);;Некомпресиран файл (*.img);;Всички файлове (*.*)</translation>
+        <translation>Imagem comprimida gz (*img.gz);;Imagem comprimida zip
+(*img.zip);;Imagem não-comprimida (*.img);;Todos os Arquivos (*.*)</translation>
     </message>
     <message>
         <source>Writing canceled.</source>
-        <translation>Записването отменено.</translation>
+        <translation>Gravação cancelada.</translation>
     </message>
     <message>
         <source>Confirm write</source>
-        <translation>Потвърди запис</translation>
+        <translation>Confirme a gravação</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
-        <translation>Не може да се разкачи дяловете на устройство %1</translation>
+        <translation>Não foi possível desmontar as partições do dispositivo %1</translation>
     </message>
     <message>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation>Няма достатъчно място на %1[%2 &lt; %3]</translation>
+        <translation>Não há espaco suficiente no %1 [%2 &lt; %3]</translation>
     </message>
     <message>
         <source>Syncing file system...</source>
-        <translation>Синхронизира файлова система...</translation>
+        <translation>Sincronizando sistema de arquivos...</translation>
     </message>
     <message>
         <source>Writing done!</source>
-        <translation>Записването завърши!</translation>
+        <translation>Gravação completa!</translation>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Грешка: %1</translation>
+        <translation>Erro: %1</translation>
     </message>
     <message>
         <source>Selected device: %1
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation>Избрано устройство: %1
-Сигурен ли си, че искаш да запишеш файла?
+        <translation>Selecione o dispositivo: %1
+Você tem certeza que quer gravar a imagem?
 
-Твоето USB-SD устройство ще бъде изтрито!</translation>
+Seu dispositivo USB-SD será totalmente apagado!</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation>Да</translation>
+        <translation>Sim</translation>
     </message>
     <message>
         <source>No</source>
-        <translation>Не</translation>
+        <translation>Não</translation>
     </message>
     <message>
         <source>OK</source>
@@ -191,59 +192,59 @@ Your USB-SD device will be wiped!</source>
     </message>
     <message>
         <source>Update Notification</source>
-        <translation>Известие за актуализация</translation>
+        <translation>Notificação de Atualização</translation>
     </message>
     <message>
         <source>Select version</source>
-        <translation>Избери версия</translation>
+        <translation>Selecione a versão</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>Затвори</translation>
+        <translation>&amp;Fechar</translation>
     </message>
     <message>
         <source>&amp;Download</source>
-        <translation>Свали</translation>
+        <translation>&amp;Transferência</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>Относно</translation>
+        <translation>&amp;Sobre</translation>
     </message>
     <message>
         <source>&amp;Write</source>
-        <translation>Запиши!</translation>
+        <translation>&amp;Gravar</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>Помощ</translation>
+        <translation>&amp;Ajuda</translation>
     </message>
     <message>
         <source>Select &amp;file</source>
-        <translation>Избери файл</translation>
+        <translation>Selecione o &amp;arquivo</translation>
     </message>
     <message>
         <source>&amp;Show all</source>
-        <translation>Покажи всичко</translation>
+        <translation>&amp;Mostrar todos</translation>
     </message>
     <message>
         <source>Cance&amp;l</source>
-        <translation>Отказ</translation>
+        <translation>Cancel&amp;ar</translation>
     </message>
     <message>
         <source>&amp;Visit Website</source>
-        <translation>Посети сайта</translation>
+        <translation>&amp;Visitar o site</translation>
     </message>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC създател за USB-SD %1 е наличен.</translation>
+        <translation>LibreELEC USB-SD Creator %1 está disponível.</translation>
     </message>
     <message>
         <source>Select project</source>
-        <translation>Избери проект</translation>
+        <translation>Selecionar projeto</translation>
     </message>
     <message>
         <source>Select image</source>
-        <translation>Избери файл</translation>
+        <translation>Selecionar imagem</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>
@@ -254,53 +255,53 @@ Your USB-SD device will be wiped!</source>
     <name>QObject</name>
     <message>
         <source>Write Error</source>
-        <translation>Грешка при запис</translation>
+        <translation>Erro de gravação</translation>
     </message>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation>Възникна грешка при опит за запис на данни.
-Грешка: %1: %2</translation>
+        <translation>Ocorreu um erro ao tentar gravar os dados
+Erro %1: %2</translation>
     </message>
     <message>
         <source>Volume Error</source>
-        <translation>Грешка на обема памет</translation>
+        <translation>Erro de volume</translation>
     </message>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation>Възникна грешка при опит за достъп до обемът памет.
-Грешка: %1: %2</translation>
+        <translation>Ocorreu um erro ao tentar manipular o volume.
+Erro %1: %2</translation>
     </message>
     <message>
         <source>Lock Error</source>
-        <translation>Грешка при заключване</translation>
+        <translation>Erro no bloqueio</translation>
     </message>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation>Възникна грешка при опит заключване на обемът памет.
-Грешка: %1: %2</translation>
+        <translation>Um erro ocorreu ao tentar bloquear o volume.
+Error %1: %2</translation>
     </message>
     <message>
         <source>Unlock Error</source>
-        <translation>Грешка при отключване</translation>
+        <translation>Erro de desbloqueio</translation>
     </message>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation>Възникна грешка при опит за отключване на обемът памет.
-Грешка: %1: %2</translation>
+        <translation>Um erro ocorreu ao tentar desbloquear o volume.
+Erro %1: %2</translation>
     </message>
     <message>
         <source>Dismount Error</source>
-        <translation>Грешка при разкачване</translation>
+        <translation>Erro ao desmontar</translation>
     </message>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation>Възникна грешка при опит за разкачване на обемът памет.
-Грешка: %1: %2</translation>
+        <translation>Um erro ocorreu ao tentar desmontar o volume.
+Erro %1: %2</translation>
     </message>
 </context>
 </TS>
