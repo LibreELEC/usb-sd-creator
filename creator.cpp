@@ -227,7 +227,7 @@ bool Creator::showRootMessageBox()
     if (getuid() == 0)  // root == 0, real user != 0
         return false;
 
-    QMessageBox msgBox;
+    QMessageBox msgBox(this);
     msgBox.setText(tr("Root privileges required to write image.\nRun application with sudo."));
     msgBox.setIcon(QMessageBox::Critical);
     msgBox.setStandardButtons(QMessageBox::Ok);
@@ -1175,7 +1175,7 @@ void Creator::downloadButtonClicked()
 
     QFile fileTest(saveDir + "/" + selectedImage);
     if (fileTest.exists()) {
-        QMessageBox msgBox;
+        QMessageBox msgBox(this);
         msgBox.setWindowTitle(tr("Error"));
         msgBox.setText(tr("File \n%1/%2\nalready exist.").arg(saveDir).arg(selectedImage));
         msgBox.setInformativeText(tr("Do you want to overwrite?"));
@@ -1311,7 +1311,7 @@ void Creator::writeFlashButtonClicked()
         return;
     }
 
-    QMessageBox msgBox;
+    QMessageBox msgBox(this);
     msgBox.setWindowTitle(tr("Confirm write"));
     msgBox.setText(tr("Selected device: %1\n"
                       "Are you sure you want to write the image?\n\n"
