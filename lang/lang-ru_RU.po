@@ -17,7 +17,7 @@ msgstr "Записать образ"
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Выберете USB накопитель или SD карту"
+msgstr "Выберите USB накопитель или SD карту"
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
