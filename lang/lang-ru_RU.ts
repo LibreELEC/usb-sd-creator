@@ -13,7 +13,7 @@
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>Выберете USB накопитель или SD карту</translation>
+        <translation>Выберите USB накопитель или SD карту</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
