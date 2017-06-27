@@ -1,10 +1,15 @@
+# Translators:
+# Dikey Elektronik <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Language-Team: Turkish (https://www.transifex.com/libreelec/teams/61634/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Language: tr_TR\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -150,8 +155,8 @@ msgstr "İmaj dosyasını aç"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 msgstr ""
 "Sıkıştırılmış gz imaj (*img.gz);;Sıkıştırılmış zip imaj "
 "(*img.zip);;Sıkıştırılmamış imaj (*.img);;Tüm dosyalar (*.*)"
@@ -267,10 +272,6 @@ msgstr "Proje seç"
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "İmaj seç"
-
-msgctxt "Creator|"
-msgid "Eject  Load         Remove"
-msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

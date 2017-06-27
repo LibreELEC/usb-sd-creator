@@ -1,10 +1,14 @@
+# Translators:
+# Alexander Kulumbeg <email-removed>, 2016
 msgid ""
 msgstr ""
+"Last-Translator: Alexander Kulumbeg <email-removed>, 2016\n"
+"Language-Team: Slovak (https://www.transifex.com/libreelec/teams/61634/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Language: sk_SK\n"
+"Language: sk\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -150,8 +154,8 @@ msgstr "Otvoriť súbor s obrazom"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 msgstr ""
 "Komprimovaný obraz gz (*img.gz);;Komprimovaný obraz zip "
 "(*img.zip);;Nekomprimovaný obraz (*.img);;Všetky súbory (*.*)"
@@ -268,10 +272,6 @@ msgstr "Vybrať projekt"
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "Vybrať obraz"
-
-msgctxt "Creator|"
-msgid "Eject  Load         Remove"
-msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

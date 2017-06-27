@@ -1,8 +1,14 @@
+# Translators:
+# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Language-Team: Czech (https://www.transifex.com/libreelec/teams/61634/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -147,8 +153,8 @@ msgstr "Otevřít soubor img"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 msgstr ""
 "Komprimovaný soubor gz (*img.gz);;Komprimovaný soubor zip "
 "(*img.zip);;Nekomprimovaný soubor (*.img);;All files (*.*)"
@@ -265,10 +271,6 @@ msgstr "Vybrat projekt"
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "Vybrat soubor img"
-
-msgctxt "Creator|"
-msgid "Eject  Load         Remove"
-msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

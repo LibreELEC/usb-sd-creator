@@ -1,8 +1,14 @@
+# Translators:
+# tyler tong <email-removed>, 2016
 msgid ""
 msgstr ""
+"Last-Translator: tyler tong <email-removed>, 2016\n"
+"Language-Team: Chinese (https://www.transifex.com/libreelec/teams/61634/zh/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -146,8 +152,8 @@ msgstr "打开镜像文件"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 msgstr "gz 压缩格式 (*img.gz);;zip 压缩格式 (*img.zip);;镜像文件 (*.img);;所有文件 (*.*)"
 
 msgctxt "Creator|"
@@ -262,10 +268,6 @@ msgstr "选择项目"
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "选择镜像"
-
-msgctxt "Creator|"
-msgid "Eject  Load         Remove"
-msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

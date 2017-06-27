@@ -1,8 +1,15 @@
+# Translators:
+# Kaveh Ebadi <email-removed>, 2016
+# Christian Hewitt <email-removed>, 2016
 msgid ""
 msgstr ""
+"Last-Translator: Christian Hewitt <email-removed>, 2016\n"
+"Language-Team: Persian (https://www.transifex.com/libreelec/teams/61634/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fa\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -20,8 +27,8 @@ msgstr "درایو USB و یا SD card خود را انتخاب کنید"
 msgctxt "Creator|"
 msgid "Download or select a local image file"
 msgstr ""
-"فایل ایمیج مورد نظر را دانلود کنید و یا یکی از فایلهای موجود در کامپیوتر خود "
-"را انتخاب نمائید"
+"فایل ایمیج مورد نظر را دانلود کنید و یا یکی از فایلهای موجود در کامپیوتر خود"
+" را انتخاب نمائید"
 
 msgctxt "Creator|"
 msgid "Eject device"
@@ -152,11 +159,11 @@ msgstr "فایل ایمیج مورد نظر را باز کنید"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 msgstr ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
@@ -270,10 +277,6 @@ msgstr "پروژه مورد نظر را انتخاب نمائید"
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "ایمیج مورد نظر را انتخاب نمائید"
-
-msgctxt "Creator|"
-msgid "Eject  Load         Remove"
-msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"
