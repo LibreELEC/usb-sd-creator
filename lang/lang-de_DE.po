@@ -17,7 +17,7 @@ msgstr "Image schreiben"
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "USB Stick oder SD Karte auswählen"
+msgstr "USB-Stick oder SD-Karte auswählen"
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
@@ -36,7 +36,7 @@ msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
-"Root-Rechte werden benötigt um das Image zu schreiben.\n"
+"Root-Rechte werden benötigt, um das Image zu schreiben.\n"
 "Starte das Programm mit sudo."
 
 #, qt-format
@@ -66,7 +66,7 @@ msgstr "Wenn Dir LibreELEC gefällt kann man hier"
 
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "spenden um das Project zu unterstützen."
+msgstr "spenden, um das Projekt zu unterstützen."
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
@@ -115,7 +115,7 @@ msgstr "Herunterladen abgebrochen."
 
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr "Verzeichnis zum herunterladen"
+msgstr "Verzeichnis zum Herunterladen"
 
 msgctxt "Creator|"
 msgid "Error"
@@ -146,7 +146,7 @@ msgstr "Öffnen der Datei fehlgeschlagen!"
 
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr "Öffne Image Datei"
+msgstr "Öffne Image-Datei"
 
 msgctxt "Creator|"
 msgid ""
@@ -196,7 +196,7 @@ msgid ""
 "Your USB-SD device will be wiped!"
 msgstr ""
 "Gerät auswählen: %1\n"
-"Bist du Dir sicher das du das Image schreiben möchtest?\n"
+"Bist du Dir sicher, dass du das Image schreiben möchtest?\n"
 "\n"
 "Deine Daten auf dem Gerät werden gelöscht!"
 
@@ -214,7 +214,7 @@ msgstr "OK"
 
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr "Update Benachrichtigung"
+msgstr "Aktualisierungsbenachrichtigung"
 
 msgctxt "Creator|"
 msgid "Select version"
@@ -275,7 +275,7 @@ msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr "Fehler beim schreiben"
+msgstr "Fehler beim Schreiben"
 
 #, qt-format
 msgctxt "QObject|"
@@ -309,12 +309,12 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Ein Fehler trat während des sperren des Volume auf.\n"
+"Ein Fehler trat während des Sperrens des Volume auf.\n"
 "Fehler %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr "Entsperr Fehler"
+msgstr "Entsperrfehler"
 
 #, qt-format
 msgctxt "QObject|"
@@ -322,7 +322,7 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Ein Fehler trat während des entsperren des Volume auf.\n"
+"Ein Fehler trat während des Entsperrens des Volume auf.\n"
 "Fehler %1: %2"
 
 msgctxt "QObject|"
@@ -335,5 +335,5 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Ein Fehler trat während des aushängen des Volume auf.\n"
+"Ein Fehler trat während des Aushängens des Volume auf.\n"
 "Fehler %1: %2"
