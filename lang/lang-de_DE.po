@@ -301,7 +301,7 @@ msgstr ""
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr "Sperr Fehler"
+msgstr "Sperrfehler"
 
 #, qt-format
 msgctxt "QObject|"
