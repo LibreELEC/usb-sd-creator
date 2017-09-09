@@ -80,42 +80,8 @@ Build date: %2</source>
         <translation>[בטא]</translation>
     </message>
     <message>
-        <source>Download complete, syncing file...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Download complete, verifying checksum...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Download complete, checksum ok.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Download complete, checksum not ok.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 seconds remaining - %2% at %3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Download canceled.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Directory to store image file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Error</source>
         <translation>שגיאה</translation>
-    </message>
-    <message>
-        <source>File 
-%1/%2
-already exist.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
@@ -134,24 +100,12 @@ already exist.</source>
         <translation>פתח קובץ התקנה</translation>
     </message>
     <message>
-        <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Writing canceled.</source>
         <translation>הכתיבה בוטלה.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>אשר כתיבה</translation>
-    </message>
-    <message>
-        <source>Cannot unmount partititons on device %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Syncing file system...</source>
@@ -164,13 +118,6 @@ already exist.</source>
     <message>
         <source>Error: %1</source>
         <translation>שגיאה: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yes</source>
@@ -229,10 +176,6 @@ Your USB-SD device will be wiped!</source>
         <translation>&amp;בקר בדף הבית</translation>
     </message>
     <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Select project</source>
         <translation>בחר פרוייקט</translation>
     </message>
@@ -242,6 +185,63 @@ Your USB-SD device will be wiped!</source>
     </message>
     <message>
         <source>Eject  Load         Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Download complete, syncing file...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Download complete, verifying checksum...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Download complete, checksum ok.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Download complete, checksum not ok.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 seconds remaining - %2% at %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Download canceled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Directory to store image file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File 
+%1/%2
+already exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot unmount partititons on device %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not enough space on %1 [%2 &lt; %3]</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

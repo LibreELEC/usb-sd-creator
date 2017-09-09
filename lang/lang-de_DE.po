@@ -1,10 +1,15 @@
+# Translators:
+# Namerp <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Language-Team: German (https://www.transifex.com/libreelec/teams/61634/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Language: de_DE\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -150,11 +155,11 @@ msgstr "Öffne Image Datei"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 msgstr ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
@@ -268,10 +273,6 @@ msgstr "Projekt auswählen"
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "Image auswählen"
-
-msgctxt "Creator|"
-msgid "Eject  Load         Remove"
-msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

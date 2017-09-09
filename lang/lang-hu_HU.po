@@ -1,10 +1,16 @@
+# Translators:
+# David Fodor <email-removed>, 2016
+# Gabe Smith <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Language-Team: Hungarian (https://www.transifex.com/libreelec/teams/61634/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Language: hu_HU\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -150,8 +156,8 @@ msgstr "Lemezkép megnyitása"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 msgstr ""
 "Gz tömörített képfájl (*img.gz);;Zip tömörített képfájl "
 "(*img.zip);;Tömörítetlen képfájl (*.img);;Minden fájl (*.*)"
@@ -268,10 +274,6 @@ msgstr "Projekt kiválsztása"
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "Lemezkép kiválasztása"
-
-msgctxt "Creator|"
-msgid "Eject  Load         Remove"
-msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

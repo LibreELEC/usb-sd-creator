@@ -1,10 +1,17 @@
+# Translators:
+# Александр Сурков <email-removed>, 2016
+# Namerp <email-removed>, 2016
+# Alf <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Language-Team: Russian (https://www.transifex.com/libreelec/teams/61634/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Language: ru_RU\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -17,7 +24,7 @@ msgstr "Записать образ"
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Выберете USB накопитель или SD карту"
+msgstr "Выберите USB накопитель или SD карту"
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
@@ -54,7 +61,8 @@ msgstr "Это программа была сделана с любовью и �
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "под лицензией GPLv2, использовались ранние наработки проекта RasPlex."
+msgstr ""
+"под лицензией GPLv2 с использованием ранних наработок проекта RasPlex."
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
@@ -152,8 +160,8 @@ msgstr "Открыть файл образа"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 msgstr ""
 "Образ сжатый gz (*img.gz);;Образ сжатый zip (*img.zip);;Несжатый образ "
 "(*.img);;Все файлы (*.*)"
@@ -270,10 +278,6 @@ msgstr "Выбрать проект"
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "Выбрать образ"
-
-msgctxt "Creator|"
-msgid "Eject  Load         Remove"
-msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

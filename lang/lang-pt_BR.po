@@ -1,14 +1,13 @@
 # Translators:
-# Dikey Elektronik <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
+# Adriano <email-removed>, 2016
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
-"Language-Team: Turkish (https://www.transifex.com/libreelec/teams/61634/tr/)\n"
+"Last-Translator: Adriano <email-removed>, 2016\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/libreelec/teams/61634/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr\n"
+"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Qt-Contexts: true\n"
 
@@ -18,31 +17,31 @@ msgstr "LibreELEC USB-SD Creator"
 
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "İmajı yaz"
+msgstr "Gravar imagem"
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Flashdiski ya da SD kartı seç"
+msgstr "Selecione seu dispositivo USB ou Cartão SD"
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "İmaj dosyasını seç ya da indir"
+msgstr "Baixar imagem ou selecionar um arquivo de imagem local"
 
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr "Aleti çıkar"
+msgstr "Ejetar dispositivo"
 
 msgctxt "Creator|"
 msgid "Load device"
-msgstr "Alet dolu"
+msgstr "Carregar dispositivo"
 
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
-"İmajı yazmak için root özelliği gerek.\n"
-"Sudo ile uygulamayı çalıştır."
+"É necessário ter privilégios de administrador para gravar a imagem.\n"
+"Execute a aplicação usando o comando sudo."
 
 #, qt-format
 msgctxt "Creator|"
@@ -50,44 +49,44 @@ msgid ""
 "Version: %1\n"
 "Build date: %2"
 msgstr ""
-"Sürüm: %1\n"
-"Yapım tarihi: %2"
+"Versão: %1\n"
+"Data de compilação: %2"
 
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr "Bu program sevgiyle yazılıp paylaşıldı"
+msgstr "Este aplicativo foi criado com amor e disponibilizado"
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "GPLv2 altında, daha evvel RasPlex'de çalışmaya kullanıldı."
+msgstr "sob GPLv2, utilizando trabalho anterior de RasPlex."
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "Lisans için, yapımcılar ve tarih, lütfen okuyun:"
+msgstr "Informações sobre licença, créditos e história, por favor leia:"
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "LibreELEC'i kullanmaktan hoşlanıyorsanız bir düşünün lütfen"
+msgstr "Se você está gostando de usar o LibreELEC por favor considere uma"
 
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "projeyi desteğe bağış."
+msgstr "doação para apoiar o projeto."
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Logo'nun altındakini ya da bağışı tıklayın"
+msgstr "Clique no logo abaixo ou faça sua doação"
 
 msgctxt "Creator|"
 msgid "using Paypal to:"
-msgstr "Paypal kullanmak:"
+msgstr "utilizando Paypal para:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr "[Final]"
+msgstr "[Estável]"
 
 msgctxt "Creator|"
 msgid "[Alpha]"
-msgstr "[Alfa]"
+msgstr "[Alpha]"
 
 msgctxt "Creator|"
 msgid "[Beta]"
@@ -95,36 +94,36 @@ msgstr "[Beta]"
 
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr "İndirme tamamlandı, dosya senkronize ediliyor..."
+msgstr "Transferência completa, sincronizando arquivo..."
 
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr "İndirme tamamlandı, sağlaması yapılıyor..."
+msgstr "Transferência completa, verificando checksum..."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "İndirme tamamlandı, sağlaması doğru."
+msgstr "Transferência completa, checksum correto."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
-msgstr "İndirme tamamlandı, sağlama olmadı."
+msgstr "Transferência completa, checksum incorreto."
 
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr "%1 kalan saniye - %2% de %3"
+msgstr "%1 segundos restando - %2% em %3"
 
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr "İndirme iptal edildi."
+msgstr "Transferência cancelada."
 
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr "İmaj dosyasını saklama klasörü"
+msgstr "Diretório para armazenar arquivo de  imagem"
 
 msgctxt "Creator|"
 msgid "Error"
-msgstr "Hata"
+msgstr "Erro"
 
 #, qt-format
 msgctxt "Creator|"
@@ -133,64 +132,64 @@ msgid ""
 "%1/%2\n"
 "already exist."
 msgstr ""
-"Dosya\n"
+"Arquivo\n"
 "%1/%2\n"
-"zaten var."
+"já existe"
 
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr "Üzerine yazmak istiyor musun?"
+msgstr "Você gostaria de sobrescrever?"
 
 msgctxt "Creator|"
 msgid "File already exists."
-msgstr "Dosya zaten mevcut."
+msgstr "Arquivo já existe."
 
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr "Yazmak için dosya açılmıyor!"
+msgstr "Erro ao abrir arquivo para gravar!"
 
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr "İmaj dosyasını aç"
+msgstr "Abrir arquivo de imagem"
 
 msgctxt "Creator|"
 msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
 " image (*.img);;All files (*.*)"
 msgstr ""
-"Sıkıştırılmış gz imaj (*img.gz);;Sıkıştırılmış zip imaj "
-"(*img.zip);;Sıkıştırılmamış imaj (*.img);;Tüm dosyalar (*.*)"
+"Imagem comprimida gz (*img.gz);;Imagem comprimida zip\n"
+"(*img.zip);;Imagem não-comprimida (*.img);;Todos os Arquivos (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr "Yazma iptal edildi."
+msgstr "Gravação cancelada."
 
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr "Yazma onayı"
+msgstr "Confirme a gravação"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr "Aletteki partitisyonlar ayrılmıyor %1"
+msgstr "Não foi possível desmontar as partições do dispositivo %1"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Yeterli yer yok %1 [%2 < %3]"
+msgstr "Não há espaco suficiente no %1 [%2 < %3]"
 
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr "Dosya sistemi sağlaması yapılıyor..."
+msgstr "Sincronizando sistema de arquivos..."
 
 msgctxt "Creator|"
 msgid "Writing done!"
-msgstr "Yazma bitti!"
+msgstr "Gravação completa!"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
-msgstr "Hata: %1"
+msgstr "Erro: %1"
 
 #, qt-format
 msgctxt "Creator|"
@@ -200,82 +199,83 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
-"Alet seçildi: %1\n"
-"İmajı yazmak istediğinden emin misin?\n"
-"USB-SD aleti silinecek!"
+"Selecione o dispositivo: %1\n"
+"Você tem certeza que quer gravar a imagem?\n"
+"\n"
+"Seu dispositivo USB-SD será totalmente apagado!"
 
 msgctxt "Creator|"
 msgid "Yes"
-msgstr "Evet"
+msgstr "Sim"
 
 msgctxt "Creator|"
 msgid "No"
-msgstr "Hayır"
+msgstr "Não"
 
 msgctxt "Creator|"
 msgid "OK"
-msgstr "Tamam"
+msgstr "OK"
 
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr "Güncelleme Bildirimi"
+msgstr "Notificação de Atualização"
 
 msgctxt "Creator|"
 msgid "Select version"
-msgstr "Sürümü seç"
+msgstr "Selecione a versão"
 
 msgctxt "Creator|"
 msgid "&Close"
-msgstr "Kapat"
+msgstr "&Fechar"
 
 msgctxt "Creator|"
 msgid "&Download"
-msgstr "İndir"
+msgstr "&Transferência"
 
 msgctxt "Creator|"
 msgid "&About"
-msgstr "Hakkında"
+msgstr "&Sobre"
 
 msgctxt "Creator|"
 msgid "&Write"
-msgstr "Yaz"
+msgstr "&Gravar"
 
 msgctxt "Creator|"
 msgid "&Help"
-msgstr "Yardım"
+msgstr "&Ajuda"
 
 msgctxt "Creator|"
 msgid "Select &file"
-msgstr "Dosyayı seç"
+msgstr "Selecione o &arquivo"
 
 msgctxt "Creator|"
 msgid "&Show all"
-msgstr "Tümünü göster"
+msgstr "&Mostrar todos"
 
 msgctxt "Creator|"
 msgid "Cance&l"
-msgstr "İptal"
+msgstr "Cancel&ar"
 
 msgctxt "Creator|"
 msgid "&Visit Website"
-msgstr "Siteye Git"
+msgstr "&Visitar o site"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Creator %1 mevcut."
+msgstr "LibreELEC USB-SD Creator %1 está disponível."
 
 msgctxt "Creator|"
 msgid "Select project"
-msgstr "Proje seç"
+msgstr "Selecionar projeto"
 
 msgctxt "Creator|"
 msgid "Select image"
-msgstr "İmaj seç"
+msgstr "Selecionar imagem"
 
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr "Yazım Hatası"
+msgstr "Erro de gravação"
 
 #, qt-format
 msgctxt "QObject|"
@@ -283,12 +283,12 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
-"Veriyi yazmaya çalışırken bir sorun oluştu.\n"
-"Hata %1: %2"
+"Ocorreu um erro ao tentar gravar os dados\n"
+"Erro %1: %2"
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr "Kapasite Hatası"
+msgstr "Erro de volume"
 
 #, qt-format
 msgctxt "QObject|"
@@ -296,12 +296,12 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Kapasiteyi kontrol etmeye çalışırken bir sorun oluştu.\n"
-"Hata %1: %2"
+"Ocorreu um erro ao tentar manipular o volume.\n"
+"Erro %1: %2"
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr "Kilitleme Hatası"
+msgstr "Erro no bloqueio"
 
 #, qt-format
 msgctxt "QObject|"
@@ -309,12 +309,12 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Kapasiteyi kilitlemeye çalışırken bir sorun oluştu.\n"
-"Hata %1: %2"
+"Um erro ocorreu ao tentar bloquear o volume.\n"
+"Error %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr "Kilidi açma Hatası"
+msgstr "Erro de desbloqueio"
 
 #, qt-format
 msgctxt "QObject|"
@@ -322,12 +322,12 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Kapasiteyi açmaya çalışırken bir sorun oluştu.\n"
-"Hata %1: %2"
+"Um erro ocorreu ao tentar desbloquear o volume.\n"
+"Erro %1: %2"
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr "Sökülme Hatası"
+msgstr "Erro ao desmontar"
 
 #, qt-format
 msgctxt "QObject|"
@@ -335,5 +335,5 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Kapasiteyi sökmeye çalışırken bir sorun oluştu.\n"
-"Hata %1: %2"
+"Um erro ocorreu ao tentar desmontar o volume.\n"
+"Erro %1: %2"

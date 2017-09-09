@@ -1,8 +1,15 @@
+# Translators:
+# Z F <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Language-Team: Greek (https://www.transifex.com/libreelec/teams/61634/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -152,8 +159,8 @@ msgstr "Άνοιγμα του αρχείου ειδώλου"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 msgstr ""
 "Συμπιεσμένο είδωλο gz (*img.gz);;Συμπιεσμένο είδωλο zip (*img.zip);;Μη "
 "συμπιεσμένο είδωλο (*.img);;Όλα τα αρχεία (*.*)"
@@ -270,10 +277,6 @@ msgstr "Επιλογή έργου"
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "Επιλογή ειδώλου"
-
-msgctxt "Creator|"
-msgid "Eject  Load         Remove"
-msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"

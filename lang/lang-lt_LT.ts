@@ -9,7 +9,7 @@
     </message>
     <message>
         <source>Write image</source>
-        <translation>Įrašyti atvaizdą</translation>
+        <translation>Įrašykite atvaizdą</translation>
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
@@ -89,11 +89,11 @@ Darinio data: %2</translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation>Atsiuntimas baigtas, kontrolinė suma gera.</translation>
+        <translation>Atsiuntimas baigtas, kontrolinė suma teisinga.</translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation>Atsiuntimas baigtas, kontrolinė suma bloga.</translation>
+        <translation>Atsiuntimas baigtas, kontrolinė suma klaidinga.</translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>

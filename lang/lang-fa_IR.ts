@@ -41,11 +41,11 @@ Build date: %2</source>
     </message>
     <message>
         <source>This software was created with love and released</source>
-        <translation>این نرم افزار عاشقانه ساخته و منتشر شده است.</translation>
+        <translation>این نرم افزار عاشقانه ساخته و منتشر شده است</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>تحت لیسانس GPLv2، با بهره گیری از جدیدترین کار PasPlex.</translation>
+        <translation>تحت لیسانس GPLv2، با بهره گیری از جدیدترین کار RasPlex.</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>

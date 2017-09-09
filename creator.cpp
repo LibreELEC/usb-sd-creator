@@ -227,7 +227,7 @@ bool Creator::showRootMessageBox()
     if (getuid() == 0)  // root == 0, real user != 0
         return false;
 
-    QMessageBox msgBox;
+    QMessageBox msgBox(this);
     msgBox.setText(tr("Root privileges required to write image.\nRun application with sudo."));
     msgBox.setIcon(QMessageBox::Critical);
     msgBox.setStandardButtons(QMessageBox::Ok);
@@ -651,6 +651,8 @@ void Creator::reset(const QString& message)
     ui->downloadButton->setEnabled(true);
     ui->downloadButton->setText(tr("&Download"));
 
+    ui->loadButton->setEnabled(true);
+
     ui->refreshRemovablesButton->setEnabled(true);
     ui->removableDevicesComboBox->setEnabled(true);
 
@@ -728,10 +730,12 @@ void Creator::disableControls(const int which)
     ui->refreshRemovablesButton->setEnabled(false);
     ui->removableDevicesComboBox->setEnabled(false);
 
-    if (which == DISABLE_CONTROL_DOWNLOAD)
+    if (which == DISABLE_CONTROL_DOWNLOAD) {
         ui->writeFlashButton->setEnabled(false);
-    else
+    } else {
         ui->downloadButton->setEnabled(false);
+        ui->loadButton->setEnabled(false);
+    }
 
     // TBD - USB eject/load/remove
 }
@@ -1000,6 +1004,9 @@ void Creator::handleFinishedDownload(const QByteArray &data)
         delete averageSpeed;
         reset();
         state = STATE_IDLE;
+
+        QApplication::beep();
+        QApplication::alert(this, 5000);
         break;
 
     default:
@@ -1175,7 +1182,7 @@ void Creator::downloadButtonClicked()
 
     QFile fileTest(saveDir + "/" + selectedImage);
     if (fileTest.exists()) {
-        QMessageBox msgBox;
+        QMessageBox msgBox(this);
         msgBox.setWindowTitle(tr("Error"));
         msgBox.setText(tr("File \n%1/%2\nalready exist.").arg(saveDir).arg(selectedImage));
         msgBox.setInformativeText(tr("Do you want to overwrite?"));
@@ -1311,7 +1318,7 @@ void Creator::writeFlashButtonClicked()
         return;
     }
 
-    QMessageBox msgBox;
+    QMessageBox msgBox(this);
     msgBox.setWindowTitle(tr("Confirm write"));
     msgBox.setText(tr("Selected device: %1\n"
                       "Are you sure you want to write the image?\n\n"
@@ -1387,6 +1394,7 @@ void Creator::writingFinished()
     }
 
     QApplication::beep();
+    QApplication::alert(this, 5000);
     refreshRemovablesList();
 }
 
@@ -1399,6 +1407,7 @@ void Creator::writingError(QString message)
     state = STATE_IDLE;
 
     QApplication::beep();
+    QApplication::alert(this, 5000);
 }
 
 void Creator::refreshRemovablesList()

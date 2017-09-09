@@ -1,8 +1,15 @@
+# Translators:
+# Ole Nielsen <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
 msgid ""
 msgstr ""
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Language-Team: Danish (https://www.transifex.com/libreelec/teams/61634/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -148,8 +155,8 @@ msgstr "Åbn image-fil"
 
 msgctxt "Creator|"
 msgid ""
-"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed "
-"image (*.img);;All files (*.*)"
+"Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
+" image (*.img);;All files (*.*)"
 msgstr ""
 "Komprimeret gz image (*img.gz);;Komprimeret zip image "
 "(*img.zip);;Ukomprimeret image (*.img);;Alle filer (*.*)"
@@ -266,10 +273,6 @@ msgstr "Vælg projekt"
 msgctxt "Creator|"
 msgid "Select image"
 msgstr "Vælg image"
-
-msgctxt "Creator|"
-msgid "Eject  Load         Remove"
-msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"
