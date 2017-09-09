@@ -57,7 +57,7 @@ Build-Datum: %2</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation>spenden, um das Project zu unterstützen.</translation>
+        <translation>spenden, um das Projekt zu unterstützen.</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
