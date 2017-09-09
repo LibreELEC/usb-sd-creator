@@ -13,7 +13,7 @@
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>USB Stick oder SD Karte auswählen</translation>
+        <translation>USB-Stick oder SD-Karte auswählen</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
@@ -30,7 +30,7 @@
     <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>Root-Rechte werden benötigt um das Image zu schreiben.
+        <translation>Root-Rechte werden benötigt, um das Image zu schreiben.
 Starte das Programm mit sudo.</translation>
     </message>
     <message>
@@ -57,7 +57,7 @@ Build-Datum: %2</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation>spenden um das Project zu unterstützen.</translation>
+        <translation>spenden, um das Project zu unterstützen.</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
@@ -105,7 +105,7 @@ Build-Datum: %2</translation>
     </message>
     <message>
         <source>Directory to store image file</source>
-        <translation>Verzeichnis zum herunterladen</translation>
+        <translation>Verzeichnis zum Herunterladen</translation>
     </message>
     <message>
         <source>Error</source>
@@ -133,7 +133,7 @@ existiert bereits.</translation>
     </message>
     <message>
         <source>Open image file</source>
-        <translation>Öffne Image Datei</translation>
+        <translation>Öffne Image-Datei</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
@@ -173,7 +173,7 @@ Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
         <translation>Gerät auswählen: %1
-Bist du Dir sicher das du das Image schreiben möchtest?
+Bist du Dir sicher, dass du das Image schreiben möchtest?
 
 Deine Daten auf dem Gerät werden gelöscht!</translation>
     </message>
@@ -191,7 +191,7 @@ Deine Daten auf dem Gerät werden gelöscht!</translation>
     </message>
     <message>
         <source>Update Notification</source>
-        <translation>Update Benachrichtigung</translation>
+        <translation>Aktualisierungsbenachrichtigung</translation>
     </message>
     <message>
         <source>Select version</source>
@@ -254,7 +254,7 @@ Deine Daten auf dem Gerät werden gelöscht!</translation>
     <name>QObject</name>
     <message>
         <source>Write Error</source>
-        <translation>Fehler beim schreiben</translation>
+        <translation>Fehler beim Schreiben</translation>
     </message>
     <message>
         <source>An error occurred when attempting to write data to handle.
@@ -274,22 +274,22 @@ Fehler %1: %2</translation>
     </message>
     <message>
         <source>Lock Error</source>
-        <translation>Sperr Fehler</translation>
+        <translation>Sperrfehler</translation>
     </message>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation>Ein Fehler trat während des sperren des Volume auf.
+        <translation>Ein Fehler trat während des Sperrens des Volume auf.
 Fehler %1: %2</translation>
     </message>
     <message>
         <source>Unlock Error</source>
-        <translation>Entsperr Fehler</translation>
+        <translation>Entsperrfehler</translation>
     </message>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation>Ein Fehler trat während des entsperren des Volume auf.
+        <translation>Ein Fehler trat während des Entsperrens des Volume auf.
 Fehler %1: %2</translation>
     </message>
     <message>
@@ -299,7 +299,7 @@ Fehler %1: %2</translation>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation>Ein Fehler trat während des aushängen des Volume auf.
+        <translation>Ein Fehler trat während des Aushängens des Volume auf.
 Fehler %1: %2</translation>
     </message>
 </context>
