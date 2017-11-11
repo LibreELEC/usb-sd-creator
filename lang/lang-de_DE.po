@@ -201,7 +201,7 @@ msgid ""
 "Your USB-SD device will be wiped!"
 msgstr ""
 "Gerät auswählen: %1\n"
-"Bist du Dir sicher das du das Image schreiben möchtest?\n"
+"Bist du Dir sicher dass du das Image schreiben möchtest?\n"
 "\n"
 "Deine Daten auf dem Gerät werden gelöscht!"
 
