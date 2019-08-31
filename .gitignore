@@ -1,0 +1,18 @@
+# built binaries/image
+LibreELEC.USB-SD.Creator.Linux-64bit.bin
+LibreELEC.USB-SD.Creator.Linux-32bit.bin
+LibreELEC\ USB-SD\ Creator.app
+LibreELEC.USB-SD.Creator.macOS.dmg
+
+# Qt files
+*.qm
+libreelec_usb-sd_creator_plugin_import.cpp
+qrc_resources.cpp
+ui_creator.h
+.qmake.stash
+.generated_files
+Makefile
+
+# crap
+.DS_Store
+.directory
