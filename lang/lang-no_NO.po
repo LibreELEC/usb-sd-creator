@@ -3,6 +3,7 @@
 # aMvEL2 <email-removed>, 2016
 # Peter Vicman <email-removed>, 2016
 # Jon Nilssen <email-removed>, 2016
+# 
 msgid ""
 msgstr ""
 "Last-Translator: Jon Nilssen <email-removed>, 2016\n"

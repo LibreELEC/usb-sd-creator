@@ -2,6 +2,7 @@
 # Luis Bermudez <email-removed>, 2016
 # aIgarcia <email-removed>, 2016
 # Peter Vicman <email-removed>, 2016
+# 
 msgid ""
 msgstr ""
 "Last-Translator: Peter Vicman <email-removed>, 2016\n"

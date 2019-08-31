@@ -1,9 +1,10 @@
 # Translators:
-# Ole Nielsen <email-removed>, 2016
 # Peter Vicman <email-removed>, 2016
+# Ole Nielsen <email-removed>, 2016
+# 
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Last-Translator: Ole Nielsen <email-removed>, 2016\n"
 "Language-Team: Danish (https://www.transifex.com/libreelec/teams/61634/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

@@ -1,10 +1,11 @@
 # Translators:
-# Koos van Klojum <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
+# Koos van Klojum, 2016
 # TRaSH <email-removed>, 2016
+# Peter Vicman <email-removed>, 2016
+# 
 msgid ""
 msgstr ""
-"Last-Translator: TRaSH <email-removed>, 2016\n"
+"Last-Translator: Peter Vicman <email-removed>, 2016\n"
 "Language-Team: Dutch (https://www.transifex.com/libreelec/teams/61634/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

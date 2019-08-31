@@ -1,5 +1,6 @@
 # Translators:
 # Peter Vicman <email-removed>, 2016
+# 
 msgid ""
 msgstr ""
 "Last-Translator: Peter Vicman <email-removed>, 2016\n"

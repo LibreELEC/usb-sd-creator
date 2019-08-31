@@ -2,9 +2,11 @@
 # David Fodor <email-removed>, 2016
 # Gabe Smith <email-removed>, 2016
 # Peter Vicman <email-removed>, 2016
+# Mark, 2019
+# 
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Last-Translator: Mark, 2019\n"
 "Language-Team: Hungarian (https://www.transifex.com/libreelec/teams/61634/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,18 +33,18 @@ msgstr "Letöltés vagy helyi lemezkép kiválasztása"
 
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr "Lemez kiadása"
+msgstr "Eszköz kiadása"
 
 msgctxt "Creator|"
 msgid "Load device"
-msgstr "Lemez betöltése"
+msgstr "Eszköz betöltése"
 
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
-"Rendszergazdai jogosultságok szükséges az íráshoz.\n"
+"Rendszergazdai jogosultság szükséges az íráshoz.\n"
 "Futtasd az alkalmazást sudo -val."
 
 #, qt-format
@@ -56,19 +58,19 @@ msgstr ""
 
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr "Ez a program szeretettel lett  létrehozva és kiadott"
+msgstr "Ez a program szeretettel lett létrehozva és kiadva"
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "GPLv2 alatt, használva RasPlex korábbi munkáját."
+msgstr "GPLv2 alatt, felhasználva RasPlex korábbi munkáját."
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "A licenszért, közreműködőkért és a történelemért kérjük olvassa el:"
+msgstr "A licenszért, közreműködőkért és a történetért kérjük olvassa el:"
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "Ha tetszik LibreELEC kérjük"
+msgstr "Ha tetszik a LibreELEC kérjük"
 
 msgctxt "Creator|"
 msgid "donation to support the project."
@@ -76,11 +78,11 @@ msgstr "adományozzon a projekt támogátására."
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Kattints az alábbi logora vagy adományozz"
+msgstr "Kattintson az alábbi logóra vagy adományozzon"
 
 msgctxt "Creator|"
 msgid "using Paypal to:"
-msgstr "Paypalt használva hogy:"
+msgstr "Paypalt használva, hogy:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -168,7 +170,7 @@ msgstr "Írás megszakítva."
 
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr "Írás megerősítésa"
+msgstr "Írás megerősítése"
 
 #, qt-format
 msgctxt "Creator|"
@@ -202,9 +204,9 @@ msgid ""
 "Your USB-SD device will be wiped!"
 msgstr ""
 "Kiválasztott eszköz: %1\n"
-"Biztos akarod megírni ezt a képet?\n"
+"Biztos ki akarod írni ezt a képfájlt?\n"
 "\n"
-"A USB-SD eszköz törölve lesz!"
+"Az USB-SD eszköz törölve lesz!"
 
 msgctxt "Creator|"
 msgid "Yes"

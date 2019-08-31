@@ -1,47 +1,43 @@
-# Translators:
-# Peter Vicman <email-removed>, 2016
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
-"Language-Team: Czech (https://www.transifex.com/libreelec/teams/61634/cs/)\n"
+"Language-Team: Korean (https://www.transifex.com/libreelec/teams/61634/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
-msgstr "LibreELEC USB-SD Creator"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "Zapsat soubor img"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Vybrat USB disk nebo SD kartu"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "Stáhnout nebo vybrat lokální img soubor"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr "Vysunout zařízení"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Load device"
-msgstr "Načíst zařízení"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
-"K zapsání obrazu jsou potřeba práva root. Spustťe aplikaci pomocí sudo."
 
 #, qt-format
 msgctxt "Creator|"
@@ -49,81 +45,79 @@ msgid ""
 "Version: %1\n"
 "Build date: %2"
 msgstr ""
-"Verze: %1\n"
-"Datum buildu: %2"
 
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr "Tento software byl vytvořen s láskou a uvolněn"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "pod GPlv2 díky předchozí práci z RasPlex"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "Pro licenční ujednání, zásluhy a historii čtěte:"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "Pokud se vám líbí LibreELEC zvažte"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "poskytnutí daru pro podporu projektu."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Klikněte na logo níže nebo darujte"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "using Paypal to:"
-msgstr "pomocí Paypalu na:"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr "[Stabilní]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "[Alpha]"
-msgstr "[Alpha]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "[Beta]"
-msgstr "[Beta]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr "Stažení dokončeno, probíhá synchronizace..."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr "Stažení dokončeno, probíhá ověřování..."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "Stažení dokončeno, ověření proběhlo v pořádku."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
-msgstr "Stažení dokončeno, ověření se nezdařilo."
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr "%1 sekund zbývá - %2% na %3"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr "Stahování zrušeno."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr "Cesta k uložení img souboru"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Error"
-msgstr "Chyba"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
@@ -132,64 +126,59 @@ msgid ""
 "%1/%2\n"
 "already exist."
 msgstr ""
-"Soubor \n"
-"%1/%2\n"
-"již existuje."
 
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr "Chcete jej přepsat?"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "File already exists."
-msgstr "Soubor již existuje."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr "Nepodařilo se otevřít soubor k zapsání!"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr "Otevřít soubor img"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
 " image (*.img);;All files (*.*)"
 msgstr ""
-"Komprimovaný soubor gz (*img.gz);;Komprimovaný soubor zip "
-"(*img.zip);;Nekomprimovaný soubor (*.img);;All files (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr "Zapisování bylo zrušeno"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr "Potvrďte zápis"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr "Nelze odebrat partions na zařízení %1"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Nedostatek místa na %1 [%2 < %3]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr "Synchronizace souborového systému..."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Writing done!"
-msgstr "Zapisování dokončeno!"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
-msgstr "Chyba: %1"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
@@ -199,83 +188,79 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
-"Zvolené zařízení: %1\n"
-"Určitě chcete zapsat img?\n"
-"\n"
-"Vaše USB zařízení bude zcela smazáno!"
 
 msgctxt "Creator|"
 msgid "Yes"
-msgstr "Ano"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "No"
-msgstr "Ne"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr "Upozornění na aktualizaci"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select version"
-msgstr "Vybrat verzi"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Close"
-msgstr "Zavřít"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Download"
-msgstr "Stáhnout"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&About"
-msgstr "O programu"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Write"
-msgstr "Zapsat"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Help"
-msgstr "Pomoc"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select &file"
-msgstr "Vybrat soubor"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Show all"
-msgstr "Ukázat vše"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Cance&l"
-msgstr "Zrušit"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Visit Website"
-msgstr "Navštivte webové stránky"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Creator %1 je k dispozici."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select project"
-msgstr "Vybrat projekt"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select image"
-msgstr "Vybrat soubor img"
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr "Chyba zápisu"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -283,12 +268,10 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
-"Při pokusu o zapsání dat nastala chyba.\n"
-"Chyba %1: %2"
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr "Chyba svazku"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -296,12 +279,10 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Při pokusu spojení se svazkem nastala chyba.\n"
-"Chyba %1: %2"
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr "Chyba uzamčení"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -309,12 +290,10 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Při pokusu o uzamčení svazku nastala chyba.\n"
-"Chyba %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr "Chyba odemčení"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -322,12 +301,10 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Při pokusu o odemčení svazku nastala chyba.\n"
-"Chyba %1: %2"
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr "Chyba odebrání"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -335,5 +312,3 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Při pokusu o odebrání svazku nastala chyba.\n"
-"Chyba %1: %2"
