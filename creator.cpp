@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 //      This file is part of LibreELEC - http://www.libreelec.tv
 //      Copyright (C) 2013-2015 RasPlex project
-//      Copyright (C) 2016 Team LibreELEC
+//      Copyright (C) 2016-Present Team LibreELEC
 //
 //  LibreELEC is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -319,14 +319,14 @@ void Creator::retranslateUi()
     ui->labelVersion->setText(tr("Version: %1\nBuild date: %2").arg(BUILD_VERSION).arg(BUILD_DATE));
 
     ui->labelAbout->setTextFormat(Qt::RichText);
-    ui->labelAbout->setText(QString("<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\"><h2>&copy; LibreELEC 2016</h2></span></p><p align=\"center\">%1<br/>%2</p><p align=\"center\">%3<br/><a href=\"https://github.com/LibreELEC/usb-sd-creator\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/LibreELEC/usb-sd-creator</span></a><br/></p><p align=\"center\">%4<br/>%5</p><p align=\"center\">%6<br/>%7 donations@libreelec.tv<br/><br/><a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LE7N83P6ZDCC6\"><img src=\":/icons/paypal.png\"/></a></p></body></html>") \
+    ui->labelAbout->setText(QString("<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\"><h2>&copy; LibreELEC 2016-2022</h2></span></p><p align=\"center\">%1<br/>%2</p><p align=\"center\">%3<br/><a href=\"https://github.com/LibreELEC/usb-sd-creator\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/LibreELEC/usb-sd-creator</span></a><br/></p><p align=\"center\">%4<br/>%5</p><p align=\"center\">%6<br/>%7 <br/><br/><a href=\"https://opencollective.com/libreelec/donate\"><img src=\":/icons/opencollective.png\"></a></p></body></html>") \
           .arg(tr("This software was created with love and released")) \
           .arg(tr("under GPLv2, using earlier work from RasPlex.")) \
           .arg(tr("For license, credits and history, please read:")) \
           .arg(tr("If you enjoy using LibreELEC please consider a")) \
           .arg(tr("donation to support the project.")) \
-          .arg(tr("Click the logo below or donate")) \
-          .arg(tr("using Paypal to:")) \
+          .arg(tr("Click the logo below to donate")) \
+          .arg(tr("using OpenCollective")) \
     );
 
     // orientation of the widget is reversed
