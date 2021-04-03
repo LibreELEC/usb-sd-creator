@@ -29,6 +29,7 @@
 #include <QApplication>
 #include <QFileInfo>
 #include <QDesktopServices>
+#include <QProcess>
 #include <QProxyStyle>
 #include <QNetworkProxy>
 #include <QDebug>
@@ -73,6 +74,35 @@ int main(int argc, char *argv[])
         qInstallMessageHandler(noMessageOutput);
 #endif
 
+#ifdef Q_OS_MACOS
+    // If not running with root privileges, relaunch executable with sudo.
+    if (getuid() != 0 && app.arguments().contains("--elevated") == false)
+    {
+        QString askPassCommand = QCoreApplication::applicationDirPath() + "/askPass.js";
+
+        QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+        env.insert("SUDO_ASKPASS", askPassCommand);
+
+        QProcess myProcess;
+        myProcess.setProcessEnvironment(env);
+        myProcess.setProgram("sudo");
+        myProcess.setArguments(QStringList()
+            << "-A"
+            << QCoreApplication::applicationFilePath()
+            << "--elevated");
+        bool success = myProcess.startDetached();
+
+        if (success)
+        {
+            return 0;
+        }
+        else
+        {
+            qDebug() << "Unable to start elevated process for " << QCoreApplication::applicationFilePath();
+        }
+    }
+#endif
+
     qDebug() << "App data: Version:" << BUILD_VERSION ", Build date: " BUILD_DATE;
 
     if (app.arguments().contains("--no-proxy") == false) {
@@ -98,7 +128,9 @@ int main(int argc, char *argv[])
         }
     }
 
+#ifndef Q_OS_MACOS
     privileges.SetUser();
+#endif
     privileges.Whoami();
 
     Creator win(privileges, 0);
