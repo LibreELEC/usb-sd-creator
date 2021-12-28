@@ -63,8 +63,8 @@ Datum izrade: %2</translation>
         <translation>Klik na logo ispod ili doniraj</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>koristeći Paypal također:</translation>
+        <source>using OpenCollective</source>
+        <translation>koristeći OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

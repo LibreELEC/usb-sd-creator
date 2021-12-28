@@ -64,8 +64,8 @@ Build date: %2</source>
         <translation>لوگوی زیر را کلیک کنید و یا حمایت مالی نمائید</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>استفاده از Paypal برای:</translation>
+        <source>using OpenCollective</source>
+        <translation>استفاده از OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

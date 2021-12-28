@@ -82,8 +82,8 @@ msgid "Click the logo below or donate"
 msgstr "Πατήστε στο παρακάτω λογότυπο ή κάνετε μία δωρεά"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "χρησιμοποιώντας το Paypal στο:"
+msgid "using OpenCollective"
+msgstr "χρησιμοποιώντας το OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"

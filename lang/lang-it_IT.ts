@@ -64,8 +64,8 @@ Data Build: %2</translation>
         <translation>Premete il logo qui sotto o donate</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>tramite Paypal a:</translation>
+        <source>using OpenCollective</source>
+        <translation>tramite OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

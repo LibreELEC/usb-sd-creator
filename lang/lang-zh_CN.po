@@ -77,8 +77,8 @@ msgid "Click the logo below or donate"
 msgstr "点击下面的logo来支持我们"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "使用Paypal"
+msgid "using OpenCollective"
+msgstr "使用OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"

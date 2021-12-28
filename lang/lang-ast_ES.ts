@@ -64,8 +64,8 @@ Data de construcción: %2</translation>
         <translation>Primi nel llogu d&apos;embaxo o dona</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>usando Paypal a:</translation>
+        <source>using OpenCollective</source>
+        <translation>usando OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

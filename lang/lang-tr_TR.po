@@ -79,8 +79,8 @@ msgid "Click the logo below or donate"
 msgstr "Logo'nun altındakini ya da bağışı tıklayın"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "Paypal kullanmak:"
+msgid "using OpenCollective"
+msgstr "OpenCollective kullanmak"
 
 msgctxt "Creator|"
 msgid "[Stable]"

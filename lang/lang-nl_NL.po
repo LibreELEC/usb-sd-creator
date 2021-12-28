@@ -80,8 +80,8 @@ msgid "Click the logo below or donate"
 msgstr "Klik op het logo hieronder of doneer"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "via Paypal aan:"
+msgid "using OpenCollective"
+msgstr "via OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"

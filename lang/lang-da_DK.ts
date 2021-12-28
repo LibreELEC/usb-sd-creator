@@ -64,8 +64,8 @@ Build dato: %2</translation>
         <translation>Klik på logoet herunder eller donér</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>bruger Paypal til:</translation>
+        <source>using OpenCollective</source>
+        <translation>bruger OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

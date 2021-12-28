@@ -76,8 +76,8 @@ msgid "Click the logo below or donate"
 msgstr "Kliknite spodnji logo ali donirajte"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "z uporabo Paypala:"
+msgid "using OpenCollective"
+msgstr "z uporabo OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"

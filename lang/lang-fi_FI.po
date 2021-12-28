@@ -79,8 +79,8 @@ msgid "Click the logo below or donate"
 msgstr "Klikkaa logoa alla tai lahjoita"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "käyttäen PayPalia:"
+msgid "using OpenCollective"
+msgstr "käyttäen OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"

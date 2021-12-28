@@ -83,8 +83,8 @@ msgid "Click the logo below or donate"
 msgstr "لوگوی زیر را کلیک کنید و یا حمایت مالی نمائید"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "استفاده از Paypal برای:"
+msgid "using OpenCollective"
+msgstr "استفاده از OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"
