@@ -23,6 +23,7 @@
 #include <QFile>
 #include <QDir>
 #include <QCollator>
+#include <QRegularExpression>
 #include <algorithm>
 
 Translator::Translator(QObject *parent, QSettings *set) :
@@ -51,9 +52,9 @@ void Translator::fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr)
     // add menu entry for all the files
     QList<QAction *> actions;
     foreach (const QString &qmFile, qmFiles) {
-        QRegExp regExp = QRegExp("lang-(.*)\\.qm");
-        regExp.indexIn(qmFile);
-        QString locale = regExp.capturedTexts().at(1);
+        QRegularExpression regExp = QRegularExpression("lang-(.*)\\.qm");
+        QRegularExpressionMatch match = regExp.match(qmFile);
+        QString locale = match.captured(1);
 
         QIcon icon;
         QString iconName = "flag-" + locale + ".png";
@@ -134,12 +135,13 @@ void Translator::languageAction(QAction *action)
     if (qtranslator->isFilled())
         qApp->removeTranslator(qtranslator);
 
+    bool loaded = false;
     if (QFile::exists(":/lang/lang-" + locale + ".qm"))
-        qtranslator->load(":/lang/lang-" + locale + ".qm");
+        loaded = qtranslator->load(":/lang/lang-" + locale + ".qm");
     else
-        qtranslator->load("lang-" + locale + ".qm");
+        loaded = qtranslator->load("lang-" + locale + ".qm");
 
-    if (qtranslator->isFilled())
+    if (loaded && qtranslator->isFilled())
         qApp->installTranslator(qtranslator);
 
     // clear checked status

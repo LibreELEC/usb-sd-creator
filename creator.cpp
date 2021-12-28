@@ -21,6 +21,7 @@
 #include "ui_creator.h"
 #include "version.h"
 
+#include <QRegularExpression>
 #include <QDebug>
 #include <QString>
 #include <QFile>
@@ -33,7 +34,6 @@
 #include <QThread>
 #include <QTimer>
 #include <QPlainTextEdit>
-#include <QLinkedList>
 #include <QStyleFactory>
 #include <QDesktopServices>
 #include <QMimeData>
@@ -231,7 +231,6 @@ bool Creator::showRootMessageBox()
     msgBox.setText(tr("Root privileges required to write image.\nRun application with sudo."));
     msgBox.setIcon(QMessageBox::Critical);
     msgBox.setStandardButtons(QMessageBox::Ok);
-    msgBox.setButtonText(QMessageBox::Ok, tr("OK"));
     msgBox.exec();
     return true;
 #endif
@@ -566,9 +565,9 @@ void Creator::setProjectImages()
             }
 
             //  LibreELEC-RPi2.arm-7.90.002.img.gz
-            QRegExp regExp = QRegExp(".+-[0-9]+\\.(9[05])\\.[0-9]+.*\\.img\\.gz");
-            regExp.indexIn(imageName);
-            QStringList regExpVal = regExp.capturedTexts();
+            QRegularExpression regExp = QRegularExpression(".+-[0-9]+\\.(9[05])\\.[0-9]+.*\\.img\\.gz");
+            QRegularExpressionMatch match = regExp.match(imageName);
+            QStringList regExpVal = match.capturedTexts();
             QString alphaBetaNumber;
 
             alphaBetaNumber = tr("[Stable]");
@@ -1188,8 +1187,6 @@ void Creator::downloadButtonClicked()
         msgBox.setInformativeText(tr("Do you want to overwrite?"));
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
         msgBox.setDefaultButton(QMessageBox::No);
-        msgBox.setButtonText(QMessageBox::Yes, tr("Yes"));
-        msgBox.setButtonText(QMessageBox::No, tr("No"));
         int ret = msgBox.exec();
         if (ret != QMessageBox::Yes) {
             downloadProgressBarText(tr("File already exists."));
@@ -1325,8 +1322,6 @@ void Creator::writeFlashButtonClicked()
                       "Your USB-SD device will be wiped!").arg(destination));
     msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
     msgBox.setDefaultButton(QMessageBox::No);
-    msgBox.setButtonText(QMessageBox::Yes, tr("Yes"));
-    msgBox.setButtonText(QMessageBox::No, tr("No"));
     int ret = msgBox.exec();
     if (ret != QMessageBox::Yes) {
         reset();

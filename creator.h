@@ -26,7 +26,7 @@
 #include <QSettings>
 #include <QFile>
 #include <QStandardPaths>
-#include <QTime>
+#include <QElapsedTimer>
 
 #include "downloadmanager.h"
 #include "jsonparser.h"
@@ -125,7 +125,7 @@ private:
     static const QString helpUrl;
     JsonParser *parserData;
     QSettings settings;
-    QTime speedTime;
+    QElapsedTimer speedTime;
     qlonglong bytesLast;
     MovingAverage *averageSpeed;
     unsigned int uncompressedImageSize;
