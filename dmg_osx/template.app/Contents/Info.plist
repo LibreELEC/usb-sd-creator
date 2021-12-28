@@ -42,5 +42,7 @@
 		<key>selectedTabView</key>
 		<string>result</string>
 	</dict>
+	<key>NSRequiresAquaSystemAppearance</key>
+	<true/>
 </dict>
 </plist>
