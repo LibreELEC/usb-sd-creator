@@ -54,7 +54,7 @@
 
 const QString Creator::releasesUrl = "http://releases.libreelec.tv/";
 const QString Creator::versionUrl = releasesUrl + "creator_version";
-const QString Creator::helpUrl = "https://libreelec.wiki/libreelec_usb-sd_creator";
+const QString Creator::helpUrl = "https://wiki.libreelec.tv/installation/create-media";
 const int Creator::timerValue = 1500;  // msec
 
 Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
