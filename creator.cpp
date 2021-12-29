@@ -491,11 +491,11 @@ void Creator::parseJsonAndSet(const QByteArray &data)
 
     ui->projectSelectBox->clear();
 
-    QList<JsonData> dataList = parserData->getJsonData();
-    for (int ix = 0; ix < dataList.size(); ix++) {
-        QString projectName = dataList.at(ix).name;
-        QString projectId = dataList.at(ix).id;
-        QString projectUrl = dataList.at(ix).url;
+    QList<ProjectData> dataList = parserData->getProjectData();
+    for (auto& project : dataList) {
+        QString projectName = project.name;
+        QString projectId = project.id;
+        QString projectUrl = project.url;
 
         QVariantMap projectData;
         projectData.insert("id", projectId);
@@ -537,15 +537,15 @@ void Creator::setProjectImages()
 
     ui->imageSelectBox->clear();
 
-    QList<JsonData> dataList = parserData->getJsonData();
-    for (int ix = 0; ix < dataList.size(); ix++) {
-        QString projectName = dataList.at(ix).name;
+    QList<ProjectData> dataList = parserData->getProjectData();
+    for (auto& project : dataList) {
+        QString projectName = project.name;
 
         // show images only for selected project
         if (projectName != ui->projectSelectBox->currentText())
             continue;
 
-        QList<QVariantMap> releases = dataList.at(ix).images;
+        QList<QVariantMap> releases = project.images;
         for (QList<QVariantMap>::const_iterator it = releases.constBegin();
              it != releases.constEnd();
              it++)
@@ -565,7 +565,8 @@ void Creator::setProjectImages()
                 imageSize = QString::number(size) + " MB";
             }
 
-            //  LibreELEC-RPi2.arm-7.90.002.img.gz
+            // LibreELEC-RPi2.arm-7.90.002.img.gz
+            // LibreELEC-TinkerBoard.arm-8.90.015-rk3288.img.gz
             QRegularExpression regExp = QRegularExpression(".+-[0-9]+\\.(9[05])\\.[0-9]+.*\\.img\\.gz");
             QRegularExpressionMatch match = regExp.match(imageName);
             QStringList regExpVal = match.capturedTexts();

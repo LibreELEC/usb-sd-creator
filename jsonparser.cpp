@@ -18,6 +18,7 @@
 
 #include "jsonparser.h"
 
+#include <QDebug>
 #include <QByteArray>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -29,28 +30,42 @@
 #include <QVersionNumber>
 #include <algorithm>
 
+QTextStream& qStdOut()
+{
+    static QTextStream ts( stdout );
+    return ts;
+}
+
 bool compareVersion(const QVariantMap &imageMap1, const QVariantMap &imageMap2)
 {
+    QString versionStr1;
+    QString versionStr2;
+
     // must compare only version not whole string
     // name-8.0.2.img.gz < name-8.0.2.1.img.gz
     // LibreELEC-WeTek_Hub.aarch64-8.0.2.1.img.gz
-    QRegularExpression regExp = QRegularExpression(".*-([0-9]+.*)\\.img\\.gz");
-    QRegularExpressionMatch match = regExp.match(imageMap1["name"].toString());
-    QStringList versionStr1 = match.capturedTexts();
-    QRegularExpressionMatch match2 = regExp.match(imageMap2["name"].toString());
-    QStringList versionStr2 = match2.capturedTexts();
+    // LibreELEC-A64.arm-9.95.5-pine64-plus.img.gz
+    QRegularExpression regExp = QRegularExpression("-([0-9]+\\.[0-9]+\\.[0-9]+).*\\.img\\.gz");
 
-    if (versionStr1.count() != 2 || versionStr2.count() != 2)
-        return false;   // some error
+    QRegularExpressionMatch match = regExp.match(imageMap1["name"].toString());
+    if (match.hasMatch())
+        versionStr1 = match.captured(1);
+
+    QRegularExpressionMatch match2 = regExp.match(imageMap2["name"].toString());
+    if (match2.hasMatch())
+        versionStr2 = match2.captured(1);
+
+    if (versionStr1.isEmpty() || versionStr2.isEmpty())
+        return false; // some error
 
     int versionCmp = QVersionNumber::compare(
-              QVersionNumber::fromString(versionStr1.at(1)),
-              QVersionNumber::fromString(versionStr2.at(1)));
+              QVersionNumber::fromString(versionStr1),
+              QVersionNumber::fromString(versionStr2));
 
     if (versionCmp < 0)
-        return false;
-    else
         return true;
+    else
+        return false;
 }
 
 JsonParser::JsonParser(const QByteArray &data)
@@ -63,25 +78,50 @@ void JsonParser::addExtra(const QByteArray &data, const QString label)
     parseAndSet(data, label);
 }
 
+namespace {
+
+bool ReadImageName(const QJsonObject& imageObject, int projectIndex, QList<QVariantMap>& imagesList, QList<ProjectData>& dataList)
+{
+    QVariantMap imageProps = imageObject.toVariantMap();
+    QString imageName = imageProps["name"].toString();
+
+    if (imageName.endsWith(".img.gz"))
+    {
+        // QTextStream& textStream = qStdOut();
+        // textStream << "Image: " << imageName << " - " << imageProps["sha256"].toString() << " - " << imageProps["size"].toString() << "\n";
+        // textStream.flush();
+
+        //We need to add the full map to the list as we'll need the name, sha256 and the size.
+        if (projectIndex < 0) // new project
+            imagesList.append(std::move(imageProps));
+        else // existing project
+            dataList[projectIndex].images.append(std::move(imageProps));
+
+        return true;
+    }
+
+    return false;
+}
+
+} //anonymous namespace
+
 void JsonParser::parseAndSet(const QByteArray &data, const QString label)
 {
     //qDebug() << "parseAndSet data:" << data;
     QJsonDocument jsonDocument = QJsonDocument::fromJson(data);
     QJsonObject jsonObject = jsonDocument.object();
 
-    // get project versions (7.0, 8.0, ...)
-    for (QJsonObject::Iterator itProjectVersions  = jsonObject.begin();
-                               itProjectVersions != jsonObject.end();
-                               itProjectVersions++)
+    int imageCount = 0;
+
+    // get project versions (LibreElec 7.0, 8.0, ...)
+    for (auto itProjectVersions = jsonObject.begin(); itProjectVersions != jsonObject.end(); itProjectVersions++)
     {
         QString project = itProjectVersions.key();
         QString projectUrl = itProjectVersions.value().toObject()["url"].toString();
 
         // get projects (imx6, Wetek, ...)
-        QJsonObject val = itProjectVersions.value().toObject()["project"].toObject();
-        for (QJsonObject::Iterator itProjects  = val.begin();
-                                   itProjects != val.end();
-                                   itProjects++)
+        QJsonObject projectVersionsNode = itProjectVersions.value().toObject()["project"].toObject();
+        for (auto itProjects = projectVersionsNode.begin(); itProjects != projectVersionsNode.end(); itProjects++)
         {
             QString projectId = itProjects.key();
             QString projectName = itProjects.value().toObject()["displayName"].toString();
@@ -99,45 +139,40 @@ void JsonParser::parseAndSet(const QByteArray &data, const QString label)
             projectData.insert("url", projectUrl);
 
             // get releases
-            QJsonObject val1 = itProjects.value().toObject();
-            for (QJsonObject::Iterator itReleasesNode  = val1.begin();
-                                       itReleasesNode != val1.end();
-                                       itReleasesNode++)
+            QJsonObject releasesNode = itProjects.value().toObject();
+            for (auto itReleases = releasesNode.begin(); itReleases != releasesNode.end(); itReleases++)
             {
-                QList<QVariantMap> images;
-                JsonData projectCheck;
+                QList<QVariantMap> imagesList;
+                ProjectData projectCheck;
                 projectCheck.name = projectName;
-                int projectIx = dataList.indexOf(projectCheck);
+                int projectIndex = dataList.indexOf(projectCheck);
 
-                QJsonObject val2 = itReleasesNode.value().toObject();
-                for (QJsonObject::Iterator itReleases  = val2.begin();
-                                           itReleases != val2.end();
-                                           itReleases++)
+                QJsonObject releaseNode = itReleases.value().toObject();
+                for (auto itReleaseItems = releaseNode.begin(); itReleaseItems != releaseNode.end(); itReleaseItems++)
                 {
-                    QJsonObject projectReleasesList = itReleases.value().toObject();
-                    for (QJsonObject::Iterator itImageFile  = projectReleasesList.begin();
-                                               itImageFile != projectReleasesList.end();
-                                               itImageFile++)
+                    QJsonObject releaseItemsNode = itReleaseItems.value().toObject();
+
+                    QJsonObject::Iterator itFile = releaseItemsNode.find("file");
+                    if (ReadImageName(itFile.value().toObject(), projectIndex, imagesList, dataList))
+                        imageCount++;
+
+                    QJsonObject::Iterator itImage = releaseItemsNode.find("image");
+                    if (ReadImageName(itImage.value().toObject(), projectIndex, imagesList, dataList))
+                        imageCount++;
+
+                    QJsonObject::Iterator itUbootsNode = releaseItemsNode.find("uboot");
+                    QJsonArray ubootsNode = itUbootsNode.value().toArray();
+                    for (QJsonValue uboot : ubootsNode)
                     {
-                        QString imageName = itImageFile.value().toObject().toVariantMap()["name"].toString();
-
-                        if (! imageName.endsWith(".img.gz"))
-                            continue;   // we want to see only image files
-
-                        if (projectIx < 0) {
-                            // new project
-                            images.append(itImageFile.value().toObject().toVariantMap());
-                        } else {
-                            // old project
-                            dataList[projectIx].images.append(itImageFile.value().toObject().toVariantMap());
-                        }
+                        if (ReadImageName(uboot.toObject(), projectIndex, imagesList, dataList))
+                            imageCount++;
                     }
                 }
 
-
-                if (projectIx < 0) {
+                if (projectIndex < 0)
+                {
                   // new project
-                  JsonData projectData(projectName, projectId, projectUrl, images);
+                  ProjectData projectData(projectName, projectId, projectUrl, imagesList);
                   dataList.append(projectData);
                 }
             }
@@ -149,14 +184,18 @@ void JsonParser::parseAndSet(const QByteArray &data, const QString label)
     collator.setCaseSensitivity(Qt::CaseSensitive);
 
     std::sort(dataList.begin(), dataList.end(),
-              [&collator](const JsonData &proj1, const JsonData &proj2)
+              [&collator](const ProjectData &proj1, const ProjectData &proj2)
          {return collator.compare(proj1.name, proj2.name) > 0;});
 
-    for (int ix = 0; ix < dataList.size(); ix++)
-        std::sort(dataList[ix].images.begin(), dataList[ix].images.end(), compareVersion);
+    for (auto& project : dataList)
+    {
+        auto& images = project.images;
+        std::sort(images.begin(), images.end(), compareVersion);
+        std::reverse(images.begin(), images.end());
+    }
 }
 
-QList<JsonData> JsonParser::getJsonData() const
+QList<ProjectData> JsonParser::getProjectData() const
 {
     return dataList;
 }

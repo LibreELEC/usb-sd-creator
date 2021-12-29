@@ -25,25 +25,25 @@
 #include <QVariant>
 #include <QDebug>
 
-class JsonData
+class ProjectData
 {
   public:
-    JsonData() {}
+    ProjectData() {}
 
-    JsonData(QString name, QString id, QString url, QList<QMap<QString, QVariant>> &images)
+    ProjectData(QString name, QString id, QString url, QList<QMap<QString, QVariant>> &images)
     {
          addData(name, id, url, images);
     }
 
     void addData(QString name, QString id, QString url, QList<QMap<QString, QVariant>> &images)
     {
-        JsonData::name = name;
-        JsonData::id = id;
-        JsonData::url = url;
-        JsonData::images = images;
+        ProjectData::name = name;
+        ProjectData::id = id;
+        ProjectData::url = url;
+        ProjectData::images = images;
     }
 
-    bool operator== (const JsonData &data) const
+    bool operator== (const ProjectData &data) const
     {
         if (data.name == this->name)
             return true;
@@ -64,10 +64,10 @@ public:
     JsonParser(const QByteArray &data);
     void addExtra(const QByteArray &data, const QString label);
     void parseAndSet(const QByteArray &data, const QString label);
-    QList<JsonData> getJsonData() const;
+    QList<ProjectData> getProjectData() const;
 
 private:
-    QList<JsonData> dataList;
+    QList<ProjectData> dataList;
 };
 
 #endif // JSONPARSER_H
