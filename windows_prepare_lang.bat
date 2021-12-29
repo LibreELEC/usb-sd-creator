@@ -19,9 +19,9 @@ rem ############################################################################
 
 Setlocal EnableDelayedExpansion
 
-set PATH=c:\Qt\Qt5.6.1\5.6\mingw49_32\bin;%PATH%
-set PATH=c:\Qt\Qt5.6.1\Tools\mingw492_32\bin;%PATH%
-set PATH=c:\Qt\Qt5.6.1-static\bin;%PATH%
+set PATH=c:\Qt\6.2.2\mingw_64\bin;%PATH%
+set PATH=c:\Qt\Tools\mingw900_64\bin;%PATH%
+set PATH=c:\Qt\Static\6.2.2\bin;%PATH%
 
 echo.
 echo ====================================================================

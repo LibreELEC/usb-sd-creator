@@ -17,8 +17,8 @@ rem #  You should have received a copy of the GNU General Public License
 rem #  along with LibreELEC.  If not, see <http://www.gnu.org/licenses/>.
 rem ################################################################################
 
-set PATH=c:\Qt\Qt5.6.1-static\bin;%PATH%
-set PATH=c:\Qt\Qt5.6.1\Tools\mingw492_32\bin;%PATH%
-set PATH=c:\Qt\Qt5.6.1\Tools\QtCreator\bin;%PATH%
+set PATH=c:\Qt\Static\6.2.2\bin;%PATH%
+set PATH=c:\Qt\Tools\mingw900_64\bin;%PATH%
+set PATH=c:\Qt\Tools\QtCreator\bin;%PATH%
 
 start qtcreator.exe creator.pro
