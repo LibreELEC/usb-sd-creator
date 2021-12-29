@@ -251,6 +251,7 @@ Creator::~Creator()
     diskWriterThread->wait();
     delete diskWriterThread;
     delete devEnumerator;
+    delete parserData;
 }
 
 void Creator::httpsUrlHandler(const QUrl &url)
