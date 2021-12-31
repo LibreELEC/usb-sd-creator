@@ -545,6 +545,8 @@ void Creator::setProjectImages()
         if (projectName != ui->projectSelectBox->currentText())
             continue;
 
+        QString lastVersionNum;
+
         QList<QVariantMap> releases = project.images;
         for (QList<QVariantMap>::const_iterator it = releases.constBegin();
              it != releases.constEnd();
@@ -553,6 +555,18 @@ void Creator::setProjectImages()
             QString imageName = (*it)["name"].toString();
             QString imageChecksum = (*it)["sha256"].toString();
             QString imageSize = (*it)["size"].toString();
+
+            QString versionNum;
+            QRegularExpression versionNumRegExp = QRegularExpression("-([0-9]+\\.[0-9]+\\.[0-9]+).*\\.img\\.gz");
+            QRegularExpressionMatch versionNumMatch = versionNumRegExp.match(imageName);
+            if (versionNumMatch.hasMatch())
+                versionNum = versionNumMatch.captured(1);
+
+            // if we don't show all images, break after the version number changes
+            // note that multiple latest image numbers are possible with hardware variations
+            // e.g LibreELEC-A64.arm-9.95.4-orangepi-win.img.gz or LibreELEC-A64.arm-9.95.4-pine64-lts.img.g
+            if (!ui->imagesShowAll->isChecked() && !lastVersionNum.isEmpty() && lastVersionNum != versionNum)
+                break;
 
             int size = imageSize.toInt();
             if (size < 1024) {
@@ -590,11 +604,7 @@ void Creator::setProjectImages()
             ui->imageSelectBox->insertItem(0, imageName + ", " + imageSize, imageName);
             ui->imageSelectBox->setItemData(0, alphaBetaNumber + " " + releasesUrl + imageName, Qt::ToolTipRole);
 
-            // if we don't show all images we are already done
-            // we are adding items in reverse order
-            // image with highest number already added
-            if (! ui->imagesShowAll->isChecked())
-                break;
+            lastVersionNum = versionNum;
         }
     }
 
