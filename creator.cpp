@@ -491,8 +491,8 @@ void Creator::parseJsonAndSet(const QByteArray &data)
 
     ui->projectSelectBox->clear();
 
-    QList<ProjectData> dataList = parserData->getProjectData();
-    for (auto& project : dataList) {
+    QList<ProjectData> projectList = parserData->getProjectData();
+    for (auto& project : projectList) {
         QString projectName = project.name;
         QString projectId = project.id;
         QString projectUrl = project.url;
@@ -537,8 +537,8 @@ void Creator::setProjectImages()
 
     ui->imageSelectBox->clear();
 
-    QList<ProjectData> dataList = parserData->getProjectData();
-    for (auto& project : dataList) {
+    QList<ProjectData> projectList = parserData->getProjectData();
+    for (auto& project : projectList) {
         QString projectName = project.name;
 
         // show images only for selected project

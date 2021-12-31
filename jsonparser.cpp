@@ -80,7 +80,7 @@ void JsonParser::addExtra(const QByteArray &data, const QString label)
 
 namespace {
 
-bool ReadImageName(const QJsonObject& imageObject, int projectIndex, QList<QVariantMap>& imagesList, QList<ProjectData>& dataList)
+bool ReadImageName(const QJsonObject& imageObject, int projectIndex, QList<QVariantMap>& imagesList, QList<ProjectData>& projectList)
 {
     QVariantMap imageProps = imageObject.toVariantMap();
     QString imageName = imageProps["name"].toString();
@@ -95,7 +95,7 @@ bool ReadImageName(const QJsonObject& imageObject, int projectIndex, QList<QVari
         if (projectIndex < 0) // new project
             imagesList.append(std::move(imageProps));
         else // existing project
-            dataList[projectIndex].images.append(std::move(imageProps));
+            projectList[projectIndex].images.append(std::move(imageProps));
 
         return true;
     }
@@ -145,7 +145,7 @@ void JsonParser::parseAndSet(const QByteArray &data, const QString label)
                 QList<QVariantMap> imagesList;
                 ProjectData projectCheck;
                 projectCheck.name = projectName;
-                int projectIndex = dataList.indexOf(projectCheck);
+                int projectIndex = projectList.indexOf(projectCheck);
 
                 QJsonObject releaseNode = itReleases.value().toObject();
                 for (auto itReleaseItems = releaseNode.begin(); itReleaseItems != releaseNode.end(); itReleaseItems++)
@@ -153,18 +153,18 @@ void JsonParser::parseAndSet(const QByteArray &data, const QString label)
                     QJsonObject releaseItemsNode = itReleaseItems.value().toObject();
 
                     QJsonObject::Iterator itFile = releaseItemsNode.find("file");
-                    if (ReadImageName(itFile.value().toObject(), projectIndex, imagesList, dataList))
+                    if (ReadImageName(itFile.value().toObject(), projectIndex, imagesList, projectList))
                         imageCount++;
 
                     QJsonObject::Iterator itImage = releaseItemsNode.find("image");
-                    if (ReadImageName(itImage.value().toObject(), projectIndex, imagesList, dataList))
+                    if (ReadImageName(itImage.value().toObject(), projectIndex, imagesList, projectList))
                         imageCount++;
 
                     QJsonObject::Iterator itUbootsNode = releaseItemsNode.find("uboot");
                     QJsonArray ubootsNode = itUbootsNode.value().toArray();
                     for (QJsonValue uboot : ubootsNode)
                     {
-                        if (ReadImageName(uboot.toObject(), projectIndex, imagesList, dataList))
+                        if (ReadImageName(uboot.toObject(), projectIndex, imagesList, projectList))
                             imageCount++;
                     }
                 }
@@ -173,7 +173,7 @@ void JsonParser::parseAndSet(const QByteArray &data, const QString label)
                 {
                   // new project
                   ProjectData projectData(projectName, projectId, projectUrl, imagesList);
-                  dataList.append(projectData);
+                  projectList.append(projectData);
                 }
             }
         }
@@ -183,11 +183,11 @@ void JsonParser::parseAndSet(const QByteArray &data, const QString label)
     collator.setNumericMode(true);
     collator.setCaseSensitivity(Qt::CaseSensitive);
 
-    std::sort(dataList.begin(), dataList.end(),
+    std::sort(projectList.begin(), projectList.end(),
               [&collator](const ProjectData &proj1, const ProjectData &proj2)
          {return collator.compare(proj1.name, proj2.name) > 0;});
 
-    for (auto& project : dataList)
+    for (auto& project : projectList)
     {
         auto& images = project.images;
         std::sort(images.begin(), images.end(), compareVersion);
@@ -197,5 +197,5 @@ void JsonParser::parseAndSet(const QByteArray &data, const QString label)
 
 QList<ProjectData> JsonParser::getProjectData() const
 {
-    return dataList;
+    return projectList;
 }

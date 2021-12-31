@@ -67,7 +67,7 @@ public:
     QList<ProjectData> getProjectData() const;
 
 private:
-    QList<ProjectData> dataList;
+    QList<ProjectData> projectList;
 };
 
 #endif // JSONPARSER_H
