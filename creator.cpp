@@ -39,6 +39,7 @@
 #include <QMimeData>
 #include <QProcess>
 #include <QVersionNumber>
+#include <QOperatingSystemVersion>
 
 #if defined(Q_OS_WIN)
 #include "diskwriter_windows.h"
@@ -1181,10 +1182,17 @@ void Creator::downloadButtonClicked()
     qDebug() << "saveDir" << saveDir;
     qDebug() << "Whole path" << saveDir + '/' + selectedImage;
 
+    auto flags = QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks;
+#ifdef Q_OS_MAC
+    // TODO: required until QT6 supports OSX Monterrey/Xcode 13 (likely QT 6.3)
+    if (QOperatingSystemVersion::current().majorVersion() >= 12)
+        flags |= QFileDialog::DontUseNativeDialog;
+#endif
+
     saveDir = QFileDialog::getExistingDirectory(this,
                 tr("Directory to store image file"),
                 saveDir,
-                QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+                flags);
 
     if (saveDir.isEmpty() || selectedImage.isEmpty()) {
         reset();
@@ -1258,10 +1266,19 @@ void Creator::getImageFileNameFromUser()
         qDebug() << "loadDir" << loadDir;
     }
 
+    QFileDialog::Options flags;
+#ifdef Q_OS_MAC
+    // TODO: required until QT6 supports OSX Monterrey/Xcode 13
+    if (QOperatingSystemVersion::current().majorVersion() >= 12)
+        flags |= QFileDialog::DontUseNativeDialog;
+#endif
+
     QString filename = QFileDialog::getOpenFileName(this,
                         tr("Open image file"),
                         loadDir,
-                        tr("Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)"));
+                        tr("Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)"),
+                        nullptr,
+                        flags);
 
     if (filename.isEmpty()) {
         //ui->fileNameLabel->setText("");
