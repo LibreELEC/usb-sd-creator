@@ -1,5 +1,6 @@
 # Translators:
 # enolp <email-removed>, 2016
+# 
 msgid ""
 msgstr ""
 "Last-Translator: enolp <email-removed>, 2016\n"
@@ -77,8 +78,8 @@ msgid "Click the logo below or donate"
 msgstr "Primi nel llogu d'embaxo o dona"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "usando Paypal a:"
+msgid "using OpenCollective"
+msgstr "usando OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"

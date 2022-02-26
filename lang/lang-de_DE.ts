@@ -64,8 +64,8 @@ Build-Datum: %2</translation>
         <translation>Klicke auf das Logo oder spende</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>mit Paypal an:</translation>
+        <source>using OpenCollective</source>
+        <translation>mit OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

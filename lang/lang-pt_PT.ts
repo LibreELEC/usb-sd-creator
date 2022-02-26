@@ -64,8 +64,8 @@ Criada em: %2</translation>
         <translation>Clique no logotipo abaixo ou doe</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>através do Paypal para:</translation>
+        <source>using OpenCollective</source>
+        <translation>através do OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

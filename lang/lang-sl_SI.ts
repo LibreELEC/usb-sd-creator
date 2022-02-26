@@ -63,8 +63,8 @@ Prevedeno: %2</translation>
         <translation>Kliknite spodnji logo ali donirajte</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>z uporabo Paypala:</translation>
+        <source>using OpenCollective</source>
+        <translation>z uporabo OpenCollectivea</translation>
     </message>
     <message>
         <source>[Stable]</source>

@@ -64,8 +64,8 @@ Luotu: %2</translation>
         <translation>Klikkaa logoa alla tai lahjoita</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>käyttäen PayPalia:</translation>
+        <source>using OpenCollective</source>
+        <translation>käyttäen OpenCollectiveia</translation>
     </message>
     <message>
         <source>[Stable]</source>

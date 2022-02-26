@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 //      This file is part of LibreELEC - http://www.libreelec.tv
 //      Copyright (C) 2013-2015 RasPlex project
-//      Copyright (C) 2016 Team LibreELEC
+//      Copyright (C) 2016-Present Team LibreELEC
 //
 //  LibreELEC is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -21,6 +21,7 @@
 #include "ui_creator.h"
 #include "version.h"
 
+#include <QRegularExpression>
 #include <QDebug>
 #include <QString>
 #include <QFile>
@@ -33,12 +34,12 @@
 #include <QThread>
 #include <QTimer>
 #include <QPlainTextEdit>
-#include <QLinkedList>
 #include <QStyleFactory>
 #include <QDesktopServices>
 #include <QMimeData>
 #include <QProcess>
 #include <QVersionNumber>
+#include <QOperatingSystemVersion>
 
 #if defined(Q_OS_WIN)
 #include "diskwriter_windows.h"
@@ -54,7 +55,7 @@
 
 const QString Creator::releasesUrl = "http://releases.libreelec.tv/";
 const QString Creator::versionUrl = releasesUrl + "creator_version";
-const QString Creator::helpUrl = "https://libreelec.wiki/libreelec_usb-sd_creator";
+const QString Creator::helpUrl = "https://wiki.libreelec.tv/installation/create-media";
 const int Creator::timerValue = 1500;  // msec
 
 Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
@@ -231,7 +232,6 @@ bool Creator::showRootMessageBox()
     msgBox.setText(tr("Root privileges required to write image.\nRun application with sudo."));
     msgBox.setIcon(QMessageBox::Critical);
     msgBox.setStandardButtons(QMessageBox::Ok);
-    msgBox.setButtonText(QMessageBox::Ok, tr("OK"));
     msgBox.exec();
     return true;
 #endif
@@ -252,6 +252,7 @@ Creator::~Creator()
     diskWriterThread->wait();
     delete diskWriterThread;
     delete devEnumerator;
+    delete parserData;
 }
 
 void Creator::httpsUrlHandler(const QUrl &url)
@@ -319,14 +320,14 @@ void Creator::retranslateUi()
     ui->labelVersion->setText(tr("Version: %1\nBuild date: %2").arg(BUILD_VERSION).arg(BUILD_DATE));
 
     ui->labelAbout->setTextFormat(Qt::RichText);
-    ui->labelAbout->setText(QString("<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\"><h2>&copy; LibreELEC 2016</h2></span></p><p align=\"center\">%1<br/>%2</p><p align=\"center\">%3<br/><a href=\"https://github.com/LibreELEC/usb-sd-creator\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/LibreELEC/usb-sd-creator</span></a><br/></p><p align=\"center\">%4<br/>%5</p><p align=\"center\">%6<br/>%7 donations@libreelec.tv<br/><br/><a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LE7N83P6ZDCC6\"><img src=\":/icons/paypal.png\"/></a></p></body></html>") \
+    ui->labelAbout->setText(QString("<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\"><h2>&copy; LibreELEC 2016-2022</h2></span></p><p align=\"center\">%1<br/>%2</p><p align=\"center\">%3<br/><a href=\"https://github.com/LibreELEC/usb-sd-creator\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/LibreELEC/usb-sd-creator</span></a><br/></p><p align=\"center\">%4<br/>%5</p><p align=\"center\">%6<br/>%7 <br/><br/><a href=\"https://opencollective.com/libreelec/donate\"><img src=\":/icons/opencollective.png\"></a></p></body></html>") \
           .arg(tr("This software was created with love and released")) \
           .arg(tr("under GPLv2, using earlier work from RasPlex.")) \
           .arg(tr("For license, credits and history, please read:")) \
           .arg(tr("If you enjoy using LibreELEC please consider a")) \
           .arg(tr("donation to support the project.")) \
-          .arg(tr("Click the logo below or donate")) \
-          .arg(tr("using Paypal to:")) \
+          .arg(tr("Click the logo below to donate")) \
+          .arg(tr("using OpenCollective")) \
     );
 
     // orientation of the widget is reversed
@@ -491,11 +492,11 @@ void Creator::parseJsonAndSet(const QByteArray &data)
 
     ui->projectSelectBox->clear();
 
-    QList<JsonData> dataList = parserData->getJsonData();
-    for (int ix = 0; ix < dataList.size(); ix++) {
-        QString projectName = dataList.at(ix).name;
-        QString projectId = dataList.at(ix).id;
-        QString projectUrl = dataList.at(ix).url;
+    QList<ProjectData> projectList = parserData->getProjectData();
+    for (auto& project : projectList) {
+        QString projectName = project.name;
+        QString projectId = project.id;
+        QString projectUrl = project.url;
 
         QVariantMap projectData;
         projectData.insert("id", projectId);
@@ -537,15 +538,17 @@ void Creator::setProjectImages()
 
     ui->imageSelectBox->clear();
 
-    QList<JsonData> dataList = parserData->getJsonData();
-    for (int ix = 0; ix < dataList.size(); ix++) {
-        QString projectName = dataList.at(ix).name;
+    QList<ProjectData> projectList = parserData->getProjectData();
+    for (auto& project : projectList) {
+        QString projectName = project.name;
 
         // show images only for selected project
         if (projectName != ui->projectSelectBox->currentText())
             continue;
 
-        QList<QVariantMap> releases = dataList.at(ix).images;
+        QString lastVersionNum;
+
+        QList<QVariantMap> releases = project.images;
         for (QList<QVariantMap>::const_iterator it = releases.constBegin();
              it != releases.constEnd();
              it++)
@@ -553,6 +556,18 @@ void Creator::setProjectImages()
             QString imageName = (*it)["name"].toString();
             QString imageChecksum = (*it)["sha256"].toString();
             QString imageSize = (*it)["size"].toString();
+
+            QString versionNum;
+            QRegularExpression versionNumRegExp = QRegularExpression("-([0-9]+\\.[0-9]+\\.[0-9]+).*\\.img\\.gz");
+            QRegularExpressionMatch versionNumMatch = versionNumRegExp.match(imageName);
+            if (versionNumMatch.hasMatch())
+                versionNum = versionNumMatch.captured(1);
+
+            // if we don't show all images, break after the version number changes
+            // note that multiple latest image numbers are possible with hardware variations
+            // e.g LibreELEC-A64.arm-9.95.4-orangepi-win.img.gz or LibreELEC-A64.arm-9.95.4-pine64-lts.img.g
+            if (!ui->imagesShowAll->isChecked() && !lastVersionNum.isEmpty() && lastVersionNum != versionNum)
+                break;
 
             int size = imageSize.toInt();
             if (size < 1024) {
@@ -565,10 +580,11 @@ void Creator::setProjectImages()
                 imageSize = QString::number(size) + " MB";
             }
 
-            //  LibreELEC-RPi2.arm-7.90.002.img.gz
-            QRegExp regExp = QRegExp(".+-[0-9]+\\.(9[05])\\.[0-9]+.*\\.img\\.gz");
-            regExp.indexIn(imageName);
-            QStringList regExpVal = regExp.capturedTexts();
+            // LibreELEC-RPi2.arm-7.90.002.img.gz
+            // LibreELEC-TinkerBoard.arm-8.90.015-rk3288.img.gz
+            QRegularExpression regExp = QRegularExpression(".+-[0-9]+\\.(9[05])\\.[0-9]+.*\\.img\\.gz");
+            QRegularExpressionMatch match = regExp.match(imageName);
+            QStringList regExpVal = match.capturedTexts();
             QString alphaBetaNumber;
 
             alphaBetaNumber = tr("[Stable]");
@@ -589,11 +605,7 @@ void Creator::setProjectImages()
             ui->imageSelectBox->insertItem(0, imageName + ", " + imageSize, imageName);
             ui->imageSelectBox->setItemData(0, alphaBetaNumber + " " + releasesUrl + imageName, Qt::ToolTipRole);
 
-            // if we don't show all images we are already done
-            // we are adding items in reverse order
-            // image with highest number already added
-            if (! ui->imagesShowAll->isChecked())
-                break;
+            lastVersionNum = versionNum;
         }
     }
 
@@ -1170,10 +1182,17 @@ void Creator::downloadButtonClicked()
     qDebug() << "saveDir" << saveDir;
     qDebug() << "Whole path" << saveDir + '/' + selectedImage;
 
+    auto flags = QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks;
+#ifdef Q_OS_MAC
+    // TODO: required until QT6 supports OSX Monterrey/Xcode 13 (likely QT 6.3)
+    if (QOperatingSystemVersion::current().majorVersion() >= 12)
+        flags |= QFileDialog::DontUseNativeDialog;
+#endif
+
     saveDir = QFileDialog::getExistingDirectory(this,
                 tr("Directory to store image file"),
                 saveDir,
-                QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+                flags);
 
     if (saveDir.isEmpty() || selectedImage.isEmpty()) {
         reset();
@@ -1188,8 +1207,6 @@ void Creator::downloadButtonClicked()
         msgBox.setInformativeText(tr("Do you want to overwrite?"));
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
         msgBox.setDefaultButton(QMessageBox::No);
-        msgBox.setButtonText(QMessageBox::Yes, tr("Yes"));
-        msgBox.setButtonText(QMessageBox::No, tr("No"));
         int ret = msgBox.exec();
         if (ret != QMessageBox::Yes) {
             downloadProgressBarText(tr("File already exists."));
@@ -1249,10 +1266,19 @@ void Creator::getImageFileNameFromUser()
         qDebug() << "loadDir" << loadDir;
     }
 
+    QFileDialog::Options flags;
+#ifdef Q_OS_MAC
+    // TODO: required until QT6 supports OSX Monterrey/Xcode 13
+    if (QOperatingSystemVersion::current().majorVersion() >= 12)
+        flags |= QFileDialog::DontUseNativeDialog;
+#endif
+
     QString filename = QFileDialog::getOpenFileName(this,
                         tr("Open image file"),
                         loadDir,
-                        tr("Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)"));
+                        tr("Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)"),
+                        nullptr,
+                        flags);
 
     if (filename.isEmpty()) {
         //ui->fileNameLabel->setText("");
@@ -1325,8 +1351,6 @@ void Creator::writeFlashButtonClicked()
                       "Your USB-SD device will be wiped!").arg(destination));
     msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
     msgBox.setDefaultButton(QMessageBox::No);
-    msgBox.setButtonText(QMessageBox::Yes, tr("Yes"));
-    msgBox.setButtonText(QMessageBox::No, tr("No"));
     int ret = msgBox.exec();
     if (ret != QMessageBox::Yes) {
         reset();

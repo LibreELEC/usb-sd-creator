@@ -1,10 +1,12 @@
 # Translators:
-# Piotr Kasprzak <email-removed>, 2016
+# piotrasd <email-removed>, 2016
 # Rafał Wójcik (Raf) <email-removed>, 2016
 # Peter Vicman <email-removed>, 2016
+# Marcin Wójcik, 2017
+# 
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Last-Translator: Marcin Wójcik, 2017\n"
 "Language-Team: Polish (https://www.transifex.com/libreelec/teams/61634/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,7 +45,7 @@ msgid ""
 "Run application with sudo."
 msgstr ""
 "Wymagane uprawnienia roota do zapisu obrazu.\n"
-"Uruchom aplikację z sudo."
+"Uruchom aplikację za pomocą sudo."
 
 #, qt-format
 msgctxt "Creator|"
@@ -80,8 +82,8 @@ msgid "Click the logo below or donate"
 msgstr "Naciśnij na logo poniżej lub użyj"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "Paypala:"
+msgid "using OpenCollective"
+msgstr "OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -165,7 +167,7 @@ msgstr ""
 
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr "Zapis anulowany"
+msgstr "Zapis anulowany."
 
 msgctxt "Creator|"
 msgid "Confirm write"
@@ -229,39 +231,39 @@ msgstr "Wybierz wersję"
 
 msgctxt "Creator|"
 msgid "&Close"
-msgstr "Zamknij"
+msgstr "&Zamknij"
 
 msgctxt "Creator|"
 msgid "&Download"
-msgstr "Pobierz"
+msgstr "&Pobierz"
 
 msgctxt "Creator|"
 msgid "&About"
-msgstr "Informacje"
+msgstr "&Informacje"
 
 msgctxt "Creator|"
 msgid "&Write"
-msgstr "Zapisz"
+msgstr "Zapi&sz"
 
 msgctxt "Creator|"
 msgid "&Help"
-msgstr "Pomoc"
+msgstr "&Pomoc"
 
 msgctxt "Creator|"
 msgid "Select &file"
-msgstr "Wybierz plik"
+msgstr "Wybierz &plik"
 
 msgctxt "Creator|"
 msgid "&Show all"
-msgstr "Pokaż wszystkie"
+msgstr "Pokaż &wszystkie"
 
 msgctxt "Creator|"
 msgid "Cance&l"
-msgstr "Anuluj"
+msgstr "&Anuluj"
 
 msgctxt "Creator|"
 msgid "&Visit Website"
-msgstr "Odwiedź stronę"
+msgstr "&Odwiedź stronę"
 
 #, qt-format
 msgctxt "Creator|"

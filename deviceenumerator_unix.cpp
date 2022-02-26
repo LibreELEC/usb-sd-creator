@@ -19,6 +19,7 @@
 
 #include "deviceenumerator_unix.h"
 
+#include <QRegularExpression>
 #include <QDebug>
 #include <QTextStream>
 #include <QDir>
@@ -49,7 +50,7 @@ QStringList DeviceEnumerator_unix::getRemovableDeviceNames() const
     return unmounted;
 #else
     QProcess lsblk;
-    lsblk.start("diskutil list", QIODevice::ReadOnly);
+    lsblk.start("diskutil", {"list"}, QIODevice::ReadOnly);
     lsblk.waitForStarted();
     lsblk.waitForFinished();
 
@@ -58,7 +59,7 @@ QStringList DeviceEnumerator_unix::getRemovableDeviceNames() const
         device = device.trimmed(); // Odd trailing whitespace
 
         if (device.startsWith("/dev/disk")) {
-            QString name = device.split(QRegExp("\\s+")).first();
+            QString name = device.split(QRegularExpression(QStringLiteral("\\s+")), Qt::SkipEmptyParts).first();
             // We only want to add USB devics
             if (this->checkIfUSB(name))
                 names << name;
@@ -111,7 +112,7 @@ QStringList DeviceEnumerator_unix::getUserFriendlyNames(const QStringList &devic
         QString output;
 
         // try to get label from first partititon
-        lsblk.start(QString("diskutil info %1s1").arg(device), QIODevice::ReadOnly);
+        lsblk.start("diskutil", {"info", QString("%1s1").arg(device)}, QIODevice::ReadOnly);
         lsblk.waitForStarted();
         lsblk.waitForFinished();
 
@@ -127,7 +128,7 @@ QStringList DeviceEnumerator_unix::getUserFriendlyNames(const QStringList &devic
             output = lsblk.readLine();
         }  // while
 
-        lsblk.start(QString("diskutil info %1").arg(device), QIODevice::ReadOnly);
+        lsblk.start("diskutil", {"info", device}, QIODevice::ReadOnly);
         lsblk.waitForStarted();
         lsblk.waitForFinished();
 
@@ -252,7 +253,7 @@ bool DeviceEnumerator_unix::checkIfUSB(const QString &device) const
     return false;
 #else
     QProcess lssize;
-    lssize.start(QString("diskutil info %1").arg(device), QIODevice::ReadOnly);
+    lssize.start("diskutil", {"info", device}, QIODevice::ReadOnly);
     lssize.waitForStarted();
     lssize.waitForFinished();
 
@@ -441,7 +442,7 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
 bool DeviceEnumerator_unix::unmount(const QString& what) const
 {
     QProcess cmd;
-    cmd.start("umount " + what, QIODevice::ReadOnly);
+    cmd.start("umount", {what}, QIODevice::ReadOnly);
     cmd.waitForStarted();
     cmd.waitForFinished();
 
@@ -460,7 +461,7 @@ qint64 DeviceEnumerator_unix::getSizeOfDevice(const QString& device) const
     QProcess lsblk;
     QString output;
 
-    lsblk.start(QString("diskutil info %1").arg(device), QIODevice::ReadOnly);
+    lsblk.start("diskutil", {"info", device}, QIODevice::ReadOnly);
     lsblk.waitForStarted();
     lsblk.waitForFinished();
 

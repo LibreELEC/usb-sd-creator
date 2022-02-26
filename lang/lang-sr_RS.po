@@ -1,6 +1,7 @@
 # Translators:
 # Vladan Stanković <email-removed>, 2016
 # Peter Vicman <email-removed>, 2016
+# 
 msgid ""
 msgstr ""
 "Last-Translator: Peter Vicman <email-removed>, 2016\n"
@@ -78,8 +79,8 @@ msgid "Click the logo below or donate"
 msgstr "Кликните на лого испод или донирајте"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "путем Paypal-а на:"
+msgid "using OpenCollective"
+msgstr "путем OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"

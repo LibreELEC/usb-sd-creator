@@ -64,8 +64,8 @@ Bouwdatum: %2</translation>
         <translation>Klik op het logo hieronder of doneer</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>via Paypal aan:</translation>
+        <source>using OpenCollective</source>
+        <translation>via OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

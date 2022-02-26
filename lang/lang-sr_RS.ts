@@ -64,8 +64,8 @@ Build date: %2</source>
         <translation>Кликните на лого испод или донирајте</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>путем Paypal-а на:</translation>
+        <source>using OpenCollective</source>
+        <translation>путем OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

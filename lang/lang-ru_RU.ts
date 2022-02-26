@@ -64,8 +64,8 @@ Build date: %2</source>
         <translation>Для пожертвования кликните на лого ниже или</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>для пользователей Paypal:</translation>
+        <source>using OpenCollective</source>
+        <translation>для пользователей OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

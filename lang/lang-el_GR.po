@@ -1,6 +1,7 @@
 # Translators:
 # Z F <email-removed>, 2016
 # Peter Vicman <email-removed>, 2016
+# 
 msgid ""
 msgstr ""
 "Last-Translator: Peter Vicman <email-removed>, 2016\n"
@@ -81,8 +82,8 @@ msgid "Click the logo below or donate"
 msgstr "Πατήστε στο παρακάτω λογότυπο ή κάνετε μία δωρεά"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "χρησιμοποιώντας το Paypal στο:"
+msgid "using OpenCollective"
+msgstr "χρησιμοποιώντας το OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"

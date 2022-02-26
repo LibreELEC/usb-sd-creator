@@ -1,8 +1,10 @@
 # Translators:
 # tyler tong <email-removed>, 2016
+# Dongkai Xie, 2018
+# 
 msgid ""
 msgstr ""
-"Last-Translator: tyler tong <email-removed>, 2016\n"
+"Last-Translator: Dongkai Xie, 2018\n"
 "Language-Team: Chinese (https://www.transifex.com/libreelec/teams/61634/zh/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,7 +15,7 @@ msgstr ""
 
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
-msgstr "LibreELEC 创建 USB-SD"
+msgstr "LibreELEC系统烧写工具"
 
 msgctxt "Creator|"
 msgid "Write image"
@@ -56,11 +58,11 @@ msgstr "这个软件是由一群充满激情的人设计的"
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "遵循GPLv2授权，从之前的RasPlex版本而来。"
+msgstr "原自RasPlex，以GPLv2授权"
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "阅读版权、制作人和版本历史信息"
+msgstr "阅读版权、贡献者及版本历史信息"
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
@@ -75,8 +77,8 @@ msgid "Click the logo below or donate"
 msgstr "点击下面的logo来支持我们"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "使用Paypal"
+msgid "using OpenCollective"
+msgstr "使用OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -100,7 +102,7 @@ msgstr "下载完成，正在校检……"
 
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "下载完成，校检完成。"
+msgstr "下载完成，校检成功。"
 
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
@@ -195,10 +197,10 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
-"请选择设备： %1\n"
+"已选设备： %1\n"
 "您确认要写入镜像么？\n"
 "\n"
-"您的 USB-SD 设备数据将被删除！"
+"%1设备上的所有数据将被删除！"
 
 msgctxt "Creator|"
 msgid "Yes"
@@ -323,7 +325,7 @@ msgstr ""
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr "卸载出错"
+msgstr "弹出磁盘出错"
 
 #, qt-format
 msgctxt "QObject|"
@@ -331,5 +333,5 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
-"卸载设备卷标时出错。\n"
+"弹出设备磁盘时出错。\n"
 "错误 %1: %2"

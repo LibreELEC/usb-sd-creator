@@ -1,5 +1,6 @@
 # Translators:
 # Aviad Spitzer <email-removed>, 2016
+# 
 msgid ""
 msgstr ""
 "Last-Translator: Aviad Spitzer <email-removed>, 2016\n"
@@ -8,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -77,8 +78,8 @@ msgid "Click the logo below or donate"
 msgstr "לחץ על הלוגו מתחת או על התרומה."
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "השתמש בפייפל ל:"
+msgid "using OpenCollective"
+msgstr "השתמש בפייפל ל"
 
 msgctxt "Creator|"
 msgid "[Stable]"

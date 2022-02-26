@@ -64,8 +64,8 @@ Data kompilacji: %2</translation>
         <translation>Naciśnij na logo poniżej lub użyj</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>Paypala:</translation>
+        <source>using OpenCollective</source>
+        <translation>OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

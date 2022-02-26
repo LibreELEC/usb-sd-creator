@@ -1,5 +1,6 @@
 # Translators:
 # Adriano <email-removed>, 2016
+# 
 msgid ""
 msgstr ""
 "Last-Translator: Adriano <email-removed>, 2016\n"
@@ -77,8 +78,8 @@ msgid "Click the logo below or donate"
 msgstr "Clique no logo abaixo ou faça sua doação"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "utilizando Paypal para:"
+msgid "using OpenCollective"
+msgstr "utilizando OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"

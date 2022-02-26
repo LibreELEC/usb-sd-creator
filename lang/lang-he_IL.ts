@@ -64,8 +64,8 @@ Build date: %2</source>
         <translation>לחץ על הלוגו מתחת או על התרומה.</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>השתמש בפייפל ל:</translation>
+        <source>using OpenCollective</source>
+        <translation>השתמש בפייפל ל</translation>
     </message>
     <message>
         <source>[Stable]</source>

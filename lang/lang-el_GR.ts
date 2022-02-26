@@ -64,8 +64,8 @@ Build date: %2</source>
         <translation>Πατήστε στο παρακάτω λογότυπο ή κάνετε μία δωρεά</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>χρησιμοποιώντας το Paypal στο:</translation>
+        <source>using OpenCollective</source>
+        <translation>χρησιμοποιώντας το OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

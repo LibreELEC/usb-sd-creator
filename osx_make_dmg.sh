@@ -21,6 +21,9 @@ set -e
 
 DEVICE=""
 
+USER=$(whoami)
+QBIN="/Users/$USER/Qt/6.2.2-static/bin"
+
 function finish {
   echo "Cleaning up..."
   rm -f *.shadow
@@ -70,7 +73,7 @@ sync
 
 echo ""
 echo "Running macdeployqt..."
-/Users/$USER/Qt5.6.1/5.6/clang_64/bin/macdeployqt "LibreELEC USB-SD Creator.app" -dmg
+$QBIN/macdeployqt "LibreELEC USB-SD Creator.app" -dmg
 
 echo ""
 echo "Running hdiutil attach..."
@@ -174,8 +177,17 @@ hdiutil detach $DEVICE
 
 mv "LibreELEC USB-SD Creator.dmg" LibreELEC.USB-SD.Creator.macOS.dmg
 
+echo ""
+echo "Signing DMG..."
+echo ""
+
+codesign -v -fs "LibreELEC" "LibreELEC.USB-SD.Creator.macOS.dmg"
+codesign -vvvv "LibreELEC.USB-SD.Creator.macOS.dmg"
+
 rm -f *.shadow
 rm -f hdiutil.log
+
+chmod -R 644 dmg_osx
 
 trap - EXIT
 exit 0

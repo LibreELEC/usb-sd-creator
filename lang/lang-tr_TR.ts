@@ -64,8 +64,8 @@ Yapım tarihi: %2</translation>
         <translation>Logo&apos;nun altındakini ya da bağışı tıklayın</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>Paypal kullanmak:</translation>
+        <source>using OpenCollective</source>
+        <translation>OpenCollective kullanmak</translation>
     </message>
     <message>
         <source>[Stable]</source>

@@ -3,6 +3,7 @@
 # aMvEL2 <email-removed>, 2016
 # Peter Vicman <email-removed>, 2016
 # Jon Nilssen <email-removed>, 2016
+# 
 msgid ""
 msgstr ""
 "Last-Translator: Jon Nilssen <email-removed>, 2016\n"
@@ -80,8 +81,8 @@ msgid "Click the logo below or donate"
 msgstr "Klikk på logoen under, eller doner"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "ved hjelp av Paypal for:"
+msgid "using OpenCollective"
+msgstr "ved hjelp av OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"

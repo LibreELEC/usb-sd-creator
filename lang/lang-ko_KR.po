@@ -1,49 +1,43 @@
-# Translators:
-# Olli Salonen <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
-"Language-Team: Finnish (https://www.transifex.com/libreelec/teams/61634/fi/)\n"
+"Language-Team: Korean (https://www.transifex.com/libreelec/teams/61634/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fi\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator"
-msgstr "LibreELEC USB-SD -työkalu"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "Kirjoita levykuva"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Valitse USB-muisti tai SD-kortti"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "Lataa verkosta tai valitse tiedosto"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr "Irroita laite"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Load device"
-msgstr "Lataa laite"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
-"Root-oikeudet tarvitaan kirjoittamista varten.\n"
-"Käynnistä käyttäen sudoa. "
 
 #, qt-format
 msgctxt "Creator|"
@@ -51,81 +45,79 @@ msgid ""
 "Version: %1\n"
 "Build date: %2"
 msgstr ""
-"Versio: %1\n"
-"Luotu: %2"
 
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr "Tämä ohjelma on luotu huolella ja julkaistu"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
-msgstr "GPLv2-lisenssillä. Pohjautuu RasPlexin koodiin."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "Lisenssi, pikkuprintti ja historia, lue:"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "Jos LibreELEC:stä on sinulle iloa, voisitko"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "harkita lahjoitusta projektille?"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Klikkaa logoa alla tai lahjoita"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "using OpenCollective"
-msgstr "käyttäen OpenCollective"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "[Stable]"
-msgstr "[Stable]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "[Alpha]"
-msgstr "[Alpha]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "[Beta]"
-msgstr "[Beta]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr "Lataus valmis, synkronoidaan..."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr "Lataus valmis, varmistetaan tarkiste..."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "Lataus valmis, tarkiste ok. "
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
-msgstr "Lataus valmis, tarkiste väärin."
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
-msgstr "%1 sekuntia jäljellä - %2% @ %3"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Download canceled."
-msgstr "Lataus peruutettu."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr "Kansio, johon levykuva tallennetaan"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Error"
-msgstr "Virhe"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
@@ -134,64 +126,59 @@ msgid ""
 "%1/%2\n"
 "already exist."
 msgstr ""
-"Tiedosto\n"
-"%1/%2\n"
-"on jo olemassa."
 
 msgctxt "Creator|"
 msgid "Do you want to overwrite?"
-msgstr "Haluatko kirjoittaa päälle?"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "File already exists."
-msgstr "Tiedosto on jo olemassa."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Failed to open file for writing!"
-msgstr "Tiedostoa ei saatu auki!"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Open image file"
-msgstr "Avaa levykuva"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
 " image (*.img);;All files (*.*)"
 msgstr ""
-"Pakattu gz-levykuva (*img.gz);;Pakattu zip-levykuva (*img.zip);;Pakkaamaton "
-"levykuva (*.img);;Kaikki tiedostot (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
-msgstr "Kirjoitus peruutettu."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr "Vahvista kirjoitus"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr "Laitteen %1 partitioita ei voida irroittaa."
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr "%1: vapaa tila ei riitä [%2 < %3]"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr "Synkronoidaan levyjärjestelmä."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Writing done!"
-msgstr "Kirjoitus valmis!"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Error: %1"
-msgstr "Virhe: %1"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
@@ -201,83 +188,79 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
-"Valittu laite: %1\n"
-"Oletko varma, että haluat kirjoittaa levykuvan?\n"
-"\n"
-"USB/SD-laitteesi nykyinen sisältö häviää!"
 
 msgctxt "Creator|"
 msgid "Yes"
-msgstr "Kyllä"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "No"
-msgstr "Ei"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr "Ilmoitus päivityksestä"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select version"
-msgstr "Valitse versio"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Close"
-msgstr "Sulje"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Download"
-msgstr "Lataa"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&About"
-msgstr "Tietoja"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Write"
-msgstr "Kirjoita"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Help"
-msgstr "Apua"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select &file"
-msgstr "Valitse tiedosto"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Show all"
-msgstr "Näytä kaikki"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Cance&l"
-msgstr "Peruuta"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "&Visit Website"
-msgstr "Käy web-sivulla"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD -työkalu %1 on saatavilla."
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select project"
-msgstr "Valitse projekti"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "Select image"
-msgstr "Valitse levykuva"
+msgstr ""
 
 msgctxt "QObject|"
 msgid "Write Error"
-msgstr "Kirjoitusvirhe"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -285,12 +268,10 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
-"Virhe kirjoitettaessa tietoa kahvaan.\n"
-"Virhe %1: %2"
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr "Levyvirhe"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -298,12 +279,10 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Tapahtui virhe kahvaa varattaessa.\n"
-"Virhe %1: %2"
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr "Lukitusvirhe"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -311,12 +290,10 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Virhe yritettäessä levyn lukitsemista.\n"
-"Virhe %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr "Virhe avattaessa lukkoa"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -324,12 +301,10 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Virhe yritettäessä levyn lukituksen poistoa.\n"
-"Virhe %1: %2"
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr "Virhe irroittaessa"
+msgstr ""
 
 #, qt-format
 msgctxt "QObject|"
@@ -337,5 +312,3 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Virhe yritettäessä levyn irroitusta.\n"
-"Virhe %1: %2"

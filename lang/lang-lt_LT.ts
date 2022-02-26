@@ -64,8 +64,8 @@ Darinio data: %2</translation>
         <translation>Paspauskite ant žemiau esančio logotipo norėdami paaukoti</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>naudojantis Paypal:</translation>
+        <source>using OpenCollective</source>
+        <translation>naudojantis OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

@@ -1,10 +1,9 @@
 # Translators:
-# Stefano Cecconello <email-removed>, 2016
-# Steve Roger <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
+# bovirus <email-removed>, 2019
+# 
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Last-Translator: bovirus <email-removed>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/libreelec/teams/61634/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,30 +18,30 @@ msgstr "LibreELEC USB-SD Creator"
 
 msgctxt "Creator|"
 msgid "Write image"
-msgstr "Scrivi Immagine"
+msgstr "Scrivi immagine"
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Seleziona il drive USB o scheda SD"
+msgstr "Seleziona l'unità USB o la scheda SD"
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "Download o apri un file immagine locale"
+msgstr "Download o seleziona un file immagine locale"
 
 msgctxt "Creator|"
 msgid "Eject device"
-msgstr "Espelli drive"
+msgstr "Espelli dispostivo"
 
 msgctxt "Creator|"
 msgid "Load device"
-msgstr "Apri drive"
+msgstr "Apri dispositivo"
 
 msgctxt "Creator|"
 msgid ""
 "Root privileges required to write image.\n"
 "Run application with sudo."
 msgstr ""
-"Sono richiesti i privilegi di Root per scrivere l'immagine.\n"
+"Per scrivere l'immagine sono richiesti i privilegi di root .\n"
 "Esegui l'applicazione tramite sudo."
 
 #, qt-format
@@ -52,11 +51,11 @@ msgid ""
 "Build date: %2"
 msgstr ""
 "Versione: %1\n"
-"Data Build: %2"
+"Data build: %2"
 
 msgctxt "Creator|"
 msgid "This software was created with love and released"
-msgstr "Questo software e' stato creato con amore e rilasciato"
+msgstr "Questo software è stato creato con amore e rilasciato"
 
 msgctxt "Creator|"
 msgid "under GPLv2, using earlier work from RasPlex."
@@ -64,23 +63,23 @@ msgstr "sotto licenza GPLv2, utilizzando un precedente fork da RasPlex."
 
 msgctxt "Creator|"
 msgid "For license, credits and history, please read:"
-msgstr "Per informazioni su licenza, crediti e storico, leggete:"
+msgstr "Per informazioni sulla licenza, crediti e cronologia, vedi:"
 
 msgctxt "Creator|"
 msgid "If you enjoy using LibreELEC please consider a"
-msgstr "Se avete apprezzato l'uso di LibreELEC considerate una"
+msgstr "Se hai apprezzato l'uso di LibreELEC considera di"
 
 msgctxt "Creator|"
 msgid "donation to support the project."
-msgstr "donazione per supportare il progetto."
+msgstr "fare una donazione per supportare il progetto."
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Premete il logo qui sotto o donate"
+msgstr "Seleziona il logo qui sotto o dona"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "tramite Paypal a:"
+msgid "using OpenCollective"
+msgstr "tramite OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -88,7 +87,7 @@ msgstr "[Stabile]"
 
 msgctxt "Creator|"
 msgid "[Alpha]"
-msgstr "[Alpha]"
+msgstr "[Alfa]"
 
 msgctxt "Creator|"
 msgid "[Beta]"
@@ -96,19 +95,27 @@ msgstr "[Beta]"
 
 msgctxt "Creator|"
 msgid "Download complete, syncing file..."
-msgstr "Download completato, sincronizzazione file..."
+msgstr ""
+"Download completato.\n"
+"Sincronizzazione file..."
 
 msgctxt "Creator|"
 msgid "Download complete, verifying checksum..."
-msgstr "Download completato, verifica checksum..."
+msgstr ""
+"Download completato.\n"
+"Verifica checksum..."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum ok."
-msgstr "Download completato, checksum OK."
+msgstr ""
+"Download completato.\n"
+"Checksum OK."
 
 msgctxt "Creator|"
 msgid "Download complete, checksum not ok."
-msgstr "Download completato, checksum NON ok."
+msgstr ""
+"Download completato.\n"
+"Checksum NON ok."
 
 #, qt-format
 msgctxt "Creator|"
@@ -121,7 +128,7 @@ msgstr "Download annullato."
 
 msgctxt "Creator|"
 msgid "Directory to store image file"
-msgstr "Directory dove salvare il file immagine"
+msgstr "Cartella dove salvare il file immagine"
 
 msgctxt "Creator|"
 msgid "Error"
@@ -160,7 +167,7 @@ msgid ""
 " image (*.img);;All files (*.*)"
 msgstr ""
 "Immagine gz compressa (*img.gz);;Immagine zip compressa (*img.zip);;Immagine"
-" non compressa (*.img);;Tutti i files (*.*)"
+" non compressa (*.img);;Tutti i file (*.*)"
 
 msgctxt "Creator|"
 msgid "Writing canceled."
@@ -168,21 +175,21 @@ msgstr "Scrittura annullata."
 
 msgctxt "Creator|"
 msgid "Confirm write"
-msgstr "Confermi scrittura"
+msgstr "Conferma scrittura"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Cannot unmount partititons on device %1"
-msgstr "Impossibile smontare le partizioni sulla periferica %1"
+msgstr "Impossibile smontare le partizioni nel dispositivo %1"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "Not enough space on %1 [%2 < %3]"
-msgstr "Spazio disponibile insufficiente su %1 [%2 < %3]"
+msgstr "Spazio disponibile insufficiente in %1 [%2 < %3]"
 
 msgctxt "Creator|"
 msgid "Syncing file system..."
-msgstr "Sincronizzando il file system..."
+msgstr "Sincronizzazione file system..."
 
 msgctxt "Creator|"
 msgid "Writing done!"
@@ -201,10 +208,10 @@ msgid ""
 "\n"
 "Your USB-SD device will be wiped!"
 msgstr ""
-"Drive Selezionato: %1\n"
-"Vuoi procedere e scrivere l'immagine??\n"
+"Unità selezionata: %1\n"
+"Vuoi procedere e scrivere l'immagine?\n"
 "\n"
-"Il contenuto del tuo drive USB \\ Scheda SD verra' eliminato!"
+"Il contenuto dell'unità USB\\scheda SD verrà cancellato!"
 
 msgctxt "Creator|"
 msgid "Yes"
@@ -220,52 +227,52 @@ msgstr "OK"
 
 msgctxt "Creator|"
 msgid "Update Notification"
-msgstr "Avviso Aggiornamento"
+msgstr "Notifica aggiornamento"
 
 msgctxt "Creator|"
 msgid "Select version"
-msgstr "Scegli versione"
+msgstr "Selezione versione"
 
 msgctxt "Creator|"
 msgid "&Close"
-msgstr "Chiudi"
+msgstr "&Chiudi"
 
 msgctxt "Creator|"
 msgid "&Download"
-msgstr "Download"
+msgstr "&Download"
 
 msgctxt "Creator|"
 msgid "&About"
-msgstr "Informazioni su"
+msgstr "&Informazioni su"
 
 msgctxt "Creator|"
 msgid "&Write"
-msgstr "Scrivi"
+msgstr "&Scrivi"
 
 msgctxt "Creator|"
 msgid "&Help"
-msgstr "Aiuto"
+msgstr "&Aiuto"
 
 msgctxt "Creator|"
 msgid "Select &file"
-msgstr "Apri file"
+msgstr "Seleziona file"
 
 msgctxt "Creator|"
 msgid "&Show all"
-msgstr "Mostra tutto"
+msgstr "Visualizza tutto"
 
 msgctxt "Creator|"
 msgid "Cance&l"
-msgstr "Annulla"
+msgstr "Annu&lla"
 
 msgctxt "Creator|"
 msgid "&Visit Website"
-msgstr "Visita il sito internet"
+msgstr "&Visita il sito internet"
 
 #, qt-format
 msgctxt "Creator|"
 msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Creator %1 disponibile."
+msgstr "È disponibile LibreELEC USB-SD Creator %1."
 
 msgctxt "Creator|"
 msgid "Select project"
@@ -285,12 +292,12 @@ msgid ""
 "An error occurred when attempting to write data to handle.\n"
 "Error %1: %2"
 msgstr ""
-"Si e' verificato un errore durante la scrittura del dato sull'handle..\n"
+"Si e' verificato un errore durante la scrittura del dato nell'handle.\n"
 "Errore %1: %2"
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr "Errore sul Volume"
+msgstr "Errore nel volume"
 
 #, qt-format
 msgctxt "QObject|"
@@ -298,12 +305,12 @@ msgid ""
 "An error occurred when attempting to get a handle on the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Si è verificato un errore durante l'apertura di un handle sul volume.\n"
+"Si è verificato un errore durante l'apertura di un handle nel volume.\n"
 "Errore %1: %2"
 
 msgctxt "QObject|"
 msgid "Lock Error"
-msgstr "Errore di lock"
+msgstr "Errore blocco volume"
 
 #, qt-format
 msgctxt "QObject|"
@@ -311,12 +318,12 @@ msgid ""
 "An error occurred when attempting to lock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Si è verificato un errore durante il lock del volume.\n"
+"Si è verificato un errore durante il blocco del volume.\n"
 "Errore %1: %2"
 
 msgctxt "QObject|"
 msgid "Unlock Error"
-msgstr "Errore in fase di unlock"
+msgstr "Errore sblocco volume"
 
 #, qt-format
 msgctxt "QObject|"
@@ -324,12 +331,12 @@ msgid ""
 "An error occurred when attempting to unlock the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Si è verificato un errore durante l'unlock del volum.\n"
+"Si è verificato un errore durante lo sblocco del volum.\n"
 "Errore %1: %2"
 
 msgctxt "QObject|"
 msgid "Dismount Error"
-msgstr "Errore in fase di Dismount"
+msgstr "Errore smontaggio voume"
 
 #, qt-format
 msgctxt "QObject|"
@@ -337,5 +344,5 @@ msgid ""
 "An error occurred when attempting to dismount the volume.\n"
 "Error %1: %2"
 msgstr ""
-"Si è verificato un errore durante l'operazione di dismount del volume.\n"
+"Si è verificato un errore durante l'operazione di smontaggio del volume.\n"
 "Errore %1: %2"

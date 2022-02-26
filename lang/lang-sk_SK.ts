@@ -64,8 +64,8 @@ Build date: %2</source>
         <translation>Kliknite na logo nižšie alebo prispejte</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>prostredníctvom Paypalu na:</translation>
+        <source>using OpenCollective</source>
+        <translation>prostredníctvom OpenCollectiveu</translation>
     </message>
     <message>
         <source>[Stable]</source>

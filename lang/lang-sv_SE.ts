@@ -64,8 +64,8 @@ Byggdatum: %2</translation>
         <translation>Klicka på logotypen nedan för att donera</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>använd PayPal för:</translation>
+        <source>using OpenCollective</source>
+        <translation>använd OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

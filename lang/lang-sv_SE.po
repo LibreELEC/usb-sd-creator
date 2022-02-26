@@ -1,9 +1,11 @@
 # Translators:
 # Andreas Hallberg <email-removed>, 2016
 # Peter Vicman <email-removed>, 2016
+# Sopor, 2018
+# 
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Last-Translator: Sopor, 2018\n"
 "Language-Team: Swedish (https://www.transifex.com/libreelec/teams/61634/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,11 +24,11 @@ msgstr "Skriv avbild"
 
 msgctxt "Creator|"
 msgid "Select your USB stick or SD card"
-msgstr "Välj USB eller SD-kort"
+msgstr "Välj USB-minne eller SD-kort"
 
 msgctxt "Creator|"
 msgid "Download or select a local image file"
-msgstr "Ladda ner eller välj en lokal fil"
+msgstr "Ladda ned eller välj en lokal fil"
 
 msgctxt "Creator|"
 msgid "Eject device"
@@ -75,11 +77,11 @@ msgstr "donation för att stötta projektet."
 
 msgctxt "Creator|"
 msgid "Click the logo below or donate"
-msgstr "Klicka på logotypen nedan för att donera"
+msgstr "Klicka på logotypen nedan eller donera"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "använd PayPal för:"
+msgid "using OpenCollective"
+msgstr "via OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -231,7 +233,7 @@ msgstr "&Stäng"
 
 msgctxt "Creator|"
 msgid "&Download"
-msgstr "&Ladda ner"
+msgstr "&Ladda ned"
 
 msgctxt "Creator|"
 msgid "&About"
@@ -289,7 +291,7 @@ msgstr ""
 
 msgctxt "QObject|"
 msgid "Volume Error"
-msgstr "Volym Fel"
+msgstr "Volymfel"
 
 #, qt-format
 msgctxt "QObject|"

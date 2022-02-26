@@ -64,8 +64,8 @@ Build date: %2</source>
         <translation>Клацніть на логотипі нижче для пожертви</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>через Paypal на користь:</translation>
+        <source>using OpenCollective</source>
+        <translation>через OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

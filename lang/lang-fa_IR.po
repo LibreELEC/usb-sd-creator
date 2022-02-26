@@ -1,15 +1,16 @@
 # Translators:
 # Kaveh Ebadi <email-removed>, 2016
-# Christian Hewitt <email-removed>, 2016
+# Christian Hewitt, 2016
+# 
 msgid ""
 msgstr ""
-"Last-Translator: Christian Hewitt <email-removed>, 2016\n"
+"Last-Translator: Christian Hewitt, 2016\n"
 "Language-Team: Persian (https://www.transifex.com/libreelec/teams/61634/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fa\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -82,8 +83,8 @@ msgid "Click the logo below or donate"
 msgstr "لوگوی زیر را کلیک کنید و یا حمایت مالی نمائید"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "استفاده از Paypal برای:"
+msgid "using OpenCollective"
+msgstr "استفاده از OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"

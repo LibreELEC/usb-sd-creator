@@ -64,8 +64,8 @@ Byggdato: %2</translation>
         <translation>Klikk på logoen under, eller doner</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>ved hjelp av Paypal for:</translation>
+        <source>using OpenCollective</source>
+        <translation>ved hjelp av OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>

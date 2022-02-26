@@ -64,8 +64,8 @@ Build dátum: %2</translation>
         <translation>Kattints az alábbi logora vagy adományozz</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>Paypalt használva hogy:</translation>
+        <source>using OpenCollective</source>
+        <translation>OpenCollectivet használva</translation>
     </message>
     <message>
         <source>[Stable]</source>

@@ -63,8 +63,8 @@ Datum buildu: %2</translation>
         <translation>Klikněte na logo níže nebo darujte</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>pomocí Paypalu na:</translation>
+        <source>using OpenCollective</source>
+        <translation>pomocí OpenCollectiveu</translation>
     </message>
     <message>
         <source>[Stable]</source>

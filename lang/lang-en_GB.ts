@@ -118,7 +118,7 @@ Build date: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
+        <source>using OpenCollective</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

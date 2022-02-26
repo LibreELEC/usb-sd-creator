@@ -1,5 +1,6 @@
 # Translators:
 # Zapata11 <email-removed>, 2016
+# 
 msgid ""
 msgstr ""
 "Last-Translator: Zapata11 <email-removed>, 2016\n"
@@ -8,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lt_LT\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Creator|"
@@ -77,8 +78,8 @@ msgid "Click the logo below or donate"
 msgstr "Paspauskite ant žemiau esančio logotipo norėdami paaukoti"
 
 msgctxt "Creator|"
-msgid "using Paypal to:"
-msgstr "naudojantis Paypal:"
+msgid "using OpenCollective"
+msgstr "naudojantis OpenCollective"
 
 msgctxt "Creator|"
 msgid "[Stable]"

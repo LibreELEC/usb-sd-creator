@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>applet</string>
+	<string>LibreELEC USB-SD Creator</string>
 	<key>CFBundleIconFile</key>
 	<string>applet</string>
 	<key>CFBundleIdentifier</key>
@@ -42,5 +42,7 @@
 		<key>selectedTabView</key>
 		<string>result</string>
 	</dict>
+	<key>NSRequiresAquaSystemAppearance</key>
+	<true/>
 </dict>
 </plist>

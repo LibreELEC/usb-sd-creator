@@ -63,8 +63,8 @@ Build date: %2</source>
         <translation>点击下面的logo来支持我们</translation>
     </message>
     <message>
-        <source>using Paypal to:</source>
-        <translation>使用Paypal</translation>
+        <source>using OpenCollective</source>
+        <translation>使用OpenCollective</translation>
     </message>
     <message>
         <source>[Stable]</source>
