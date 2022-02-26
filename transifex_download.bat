@@ -19,8 +19,7 @@ rem ############################################################################
 
 set TRANSIFEX_USER="username:password"
 
-set PATH=c:\Qt\Qt5.6.1-static\bin;%PATH%
-set PATH=c:\Qt\Qt5.6.1\Tools\mingw492_32\bin;%PATH%
+call windows_build_paths.bat
 
 rmdir /s /q lang_dl 2>NUL
 mkdir lang_dl 2>NUL

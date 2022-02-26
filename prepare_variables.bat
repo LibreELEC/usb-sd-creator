@@ -2,9 +2,7 @@
 
 Setlocal EnableDelayedExpansion
 
-set PATH=c:\Qt\Qt5.6.1\5.6\mingw49_32\bin;%PATH%
-set PATH=c:\Qt\Qt5.6.1\Tools\mingw492_32\bin;%PATH%
-set PATH=c:\Qt\Qt5.6.1-static\bin;%PATH%
+call windows_build_paths.bat
 
 rem ------------------------------
 rem Creating a Newline variable

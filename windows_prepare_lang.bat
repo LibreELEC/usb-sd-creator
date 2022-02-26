@@ -19,9 +19,7 @@ rem ############################################################################
 
 Setlocal EnableDelayedExpansion
 
-set PATH=c:\Qt\6.2.2\mingw_64\bin;%PATH%
-set PATH=c:\Qt\Tools\mingw900_64\bin;%PATH%
-set PATH=c:\Qt\Static\6.2.2\bin;%PATH%
+call windows_build_paths.bat
 
 echo.
 echo ====================================================================
