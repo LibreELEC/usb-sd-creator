@@ -21,3 +21,6 @@ object_script.*
 # crap
 .DS_Store
 .directory
+
+# translations
+lang_dl/
