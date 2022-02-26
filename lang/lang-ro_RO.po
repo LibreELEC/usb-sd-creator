@@ -1,10 +1,12 @@
+# 
 # Translators:
 # Alexe Moldovan, 2017
 # Ciprian Constantinescu <email-removed>, 2017
+# Namerp, 2022
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Ciprian Constantinescu <email-removed>, 2017\n"
+"Last-Translator: Namerp, 2022\n"
 "Language-Team: Romanian (https://www.transifex.com/libreelec/teams/61634/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,6 +38,62 @@ msgstr "Ejectare dispozitiv"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "Căutare dispozitiv"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "Da"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "Nu"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Selectați versiunea"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "&Închide"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "&Descarcă"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "Des&pre"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "&Scrie"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "&Ajutor"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Selecție &fișier"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "Arată &tot"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Selectați proiectul"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Selectați imaginea"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -116,6 +174,19 @@ msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 secunde rămase - %2% la %3"
 
 msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Notificare actualizare"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Vizitează &website"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "LibreELEC USB-SD Creator %1 e disponibil."
+
+msgctxt "Creator|"
 msgid "Download canceled."
 msgstr "Descărcare anulată."
 
@@ -151,6 +222,10 @@ msgid "Failed to open file for writing!"
 msgstr "Eroare la deschiderea fișierului pentru scriere!"
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Anulea&ză"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Deschideți fișierul imagine"
 
@@ -162,6 +237,11 @@ msgstr ""
 "Imagine comprimată gz (*img.gz);;Imagine comprimată zip (*img.zip);;Imagine "
 "necomprimată (*.img);;Toate fișierele (*.*)"
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Eroare: %1"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Scriere anulată."
@@ -169,6 +249,19 @@ msgstr "Scriere anulată."
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Confirmați scrierea"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"Dispozitiv selectat: %1\n"
+"Sunteți sigur că vreți să scrieți imaginea?\n"
+"\n"
+"Dispozitivul USB-SD va fi șters!"
 
 #, qt-format
 msgctxt "Creator|"
@@ -187,93 +280,6 @@ msgstr "Sincronizare fișiere..."
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "Scriere terminată!"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Eroare: %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-"Dispozitiv selectat: %1\n"
-"Sunteți sigur că vreți să scrieți imaginea?\n"
-"\n"
-"Dispozitivul USB-SD va fi șters!"
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "Da"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "Nu"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "OK"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Notificare actualizare"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "Selectați versiunea"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "&Închide"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "&Descarcă"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "Des&pre"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "&Scrie"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "&Ajutor"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "Selecție &fișier"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "Arată &tot"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "Anulea&ză"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "Vizitează &website"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Creator %1 e disponibil."
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Selectați proiectul"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "Selectați imaginea"
 
 msgctxt "QObject|"
 msgid "Write Error"

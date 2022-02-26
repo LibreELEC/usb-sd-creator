@@ -1,10 +1,12 @@
+# 
 # Translators:
 # Vladan Stanković <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
+# Peter Vicman, 2016
+# Namerp, 2022
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Last-Translator: Namerp, 2022\n"
 "Language-Team: Serbian (Serbia) (https://www.transifex.com/libreelec/teams/61634/sr_RS/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,6 +38,62 @@ msgstr "Избаци уређај"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "Учитај уређај"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "Да"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "Не"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "ОК"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Одаберите верзију"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "Затвори"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "Преузимање"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "О пројекту"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Запиши"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "Помоћ"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Одаберите фајл"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "Прикажи све"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Одабери пројекат"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Одабери слику"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -80,7 +138,7 @@ msgstr "Кликните на лого испод или донирајте"
 
 msgctxt "Creator|"
 msgid "using OpenCollective"
-msgstr "путем OpenCollective"
+msgstr "путем OpenCollective на:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -114,6 +172,19 @@ msgstr "Преузимање је завршено, фајл није испра
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 секунди преостало - %2% при %3"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Освежи обавештења"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Посети Интернет локацију"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "LibreELEC USB-SD Припрема %1 је доступна."
 
 msgctxt "Creator|"
 msgid "Download canceled."
@@ -151,6 +222,10 @@ msgid "Failed to open file for writing!"
 msgstr "Неуспех приликом отврања фајла за писање."
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Поништи"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Отвори фајл слике"
 
@@ -162,6 +237,11 @@ msgstr ""
 "Компресована gz слика (*img.gz);;Компресована zip слика "
 "(*img.zip);;Некомпресована слика (*.img);;Сви фајлови (*.*)"
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Грешка: %1"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Писање поништено."
@@ -169,6 +249,19 @@ msgstr "Писање поништено."
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Потврда писања"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"Одавран уређај: %1\n"
+"Да ли сте сигурни да желите да запишете слику?\n"
+"\n"
+"Сви подаци са USB-SD диска ће бити избисани!"
 
 #, qt-format
 msgctxt "Creator|"
@@ -187,93 +280,6 @@ msgstr "Синхронизујем фајл сисзем."
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "Записивање завршено!"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Грешка: %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-"Одавран уређај: %1\n"
-"Да ли сте сигурни да желите да запишете слику?\n"
-"\n"
-"Сви подаци са USB-SD диска ће бити избисани!"
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "Да"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "Не"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "ОК"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Освежи обавештења"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "Одаберите верзију"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "Затвори"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "Преузимање"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "О пројекту"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "Запиши"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "Помоћ"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "Одаберите фајл"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "Прикажи све"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "Поништи"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "Посети Интернет локацију"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Припрема %1 је доступна."
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Одабери пројекат"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "Одабери слику"
 
 msgctxt "QObject|"
 msgid "Write Error"

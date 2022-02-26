@@ -1,10 +1,12 @@
+# 
 # Translators:
 # Dikey Elektronik <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
+# Peter Vicman, 2016
+# Namerp, 2022
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Last-Translator: Namerp, 2022\n"
 "Language-Team: Turkish (https://www.transifex.com/libreelec/teams/61634/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,6 +38,62 @@ msgstr "Aleti çıkar"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "Alet dolu"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "Evet"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "Hayır"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "Tamam"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Sürümü seç"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "Kapat"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "İndir"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "Hakkında"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Yaz"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "Yardım"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Dosyayı seç"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "Tümünü göster"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Proje seç"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "İmaj seç"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -80,7 +138,7 @@ msgstr "Logo'nun altındakini ya da bağışı tıklayın"
 
 msgctxt "Creator|"
 msgid "using OpenCollective"
-msgstr "OpenCollective kullanmak"
+msgstr "OpenCollective kullanmak:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -114,6 +172,19 @@ msgstr "İndirme tamamlandı, sağlama olmadı."
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 kalan saniye - %2% de %3"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Güncelleme Bildirimi"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Siteye Git"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "LibreELEC USB-SD Creator %1 mevcut."
 
 msgctxt "Creator|"
 msgid "Download canceled."
@@ -151,6 +222,10 @@ msgid "Failed to open file for writing!"
 msgstr "Yazmak için dosya açılmıyor!"
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "İptal"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "İmaj dosyasını aç"
 
@@ -162,6 +237,11 @@ msgstr ""
 "Sıkıştırılmış gz imaj (*img.gz);;Sıkıştırılmış zip imaj "
 "(*img.zip);;Sıkıştırılmamış imaj (*.img);;Tüm dosyalar (*.*)"
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Hata: %1"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Yazma iptal edildi."
@@ -169,6 +249,18 @@ msgstr "Yazma iptal edildi."
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Yazma onayı"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"Alet seçildi: %1\n"
+"İmajı yazmak istediğinden emin misin?\n"
+"USB-SD aleti silinecek!"
 
 #, qt-format
 msgctxt "Creator|"
@@ -187,92 +279,6 @@ msgstr "Dosya sistemi sağlaması yapılıyor..."
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "Yazma bitti!"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Hata: %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-"Alet seçildi: %1\n"
-"İmajı yazmak istediğinden emin misin?\n"
-"USB-SD aleti silinecek!"
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "Evet"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "Hayır"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "Tamam"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Güncelleme Bildirimi"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "Sürümü seç"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "Kapat"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "İndir"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "Hakkında"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "Yaz"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "Yardım"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "Dosyayı seç"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "Tümünü göster"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "İptal"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "Siteye Git"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Creator %1 mevcut."
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Proje seç"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "İmaj seç"
 
 msgctxt "QObject|"
 msgid "Write Error"

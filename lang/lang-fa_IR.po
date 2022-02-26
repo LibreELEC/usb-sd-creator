@@ -1,10 +1,12 @@
+# 
 # Translators:
 # Kaveh Ebadi <email-removed>, 2016
 # Christian Hewitt, 2016
+# Namerp, 2022
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Christian Hewitt, 2016\n"
+"Last-Translator: Namerp, 2022\n"
 "Language-Team: Persian (https://www.transifex.com/libreelec/teams/61634/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,6 +40,62 @@ msgstr "USB و یا SD card را خارج کنید"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "USB و یا SD card را وارد کنید"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "بله"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "خیر"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "Ok"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "انتخاب ویرایش"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "بستن&"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "دانلود&"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "درباره&"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "رایت&"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "کمک&"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "انتخاب فایل&"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "نمایش همه&"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "پروژه مورد نظر را انتخاب نمائید"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "ایمیج مورد نظر را انتخاب نمائید"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -84,7 +142,7 @@ msgstr "لوگوی زیر را کلیک کنید و یا حمایت مالی ن�
 
 msgctxt "Creator|"
 msgid "using OpenCollective"
-msgstr "استفاده از OpenCollective"
+msgstr "استفاده از OpenCollective برای:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -118,6 +176,19 @@ msgstr "دانلود تکمیل شد ولی جمعبندی بطور کامل ا�
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 هنوز باقی مانده - %2% از 3%"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "اعلامیه جهت انجام بروز رسانی"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "نمایش وبسایت&"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "LibreELEC USB-SD Creator ویرایش 1% موجود است."
 
 msgctxt "Creator|"
 msgid "Download canceled."
@@ -155,6 +226,10 @@ msgid "Failed to open file for writing!"
 msgstr "فایل مود نظر جهت رایت، قابل خواندن نمی باشد!"
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "لغو&"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "فایل ایمیج مورد نظر را باز کنید"
 
@@ -166,6 +241,11 @@ msgstr ""
 "Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed"
 " image (*.img);;All files (*.*)"
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "خطا: 1%"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "عملیات رایت ایمیج لغو شد."
@@ -173,6 +253,19 @@ msgstr "عملیات رایت ایمیج لغو شد."
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "رایت را تأیید کن"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"درایو حافظه انتخاب شده: 1%\n"
+"آیا جهت رایت اطمینان دارید؟\n"
+"\n"
+"محتویات USB و یا SD card شما کاملاً پاک خواهد شد!"
 
 #, qt-format
 msgctxt "Creator|"
@@ -191,93 +284,6 @@ msgstr "هماهنگسازی فایل سیستم..."
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "عملیات رایت انجام شد!"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "خطا: 1%"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-"درایو حافظه انتخاب شده: 1%\n"
-"آیا جهت رایت اطمینان دارید؟\n"
-"\n"
-"محتویات USB و یا SD card شما کاملاً پاک خواهد شد!"
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "بله"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "خیر"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "Ok"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "اعلامیه جهت انجام بروز رسانی"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "انتخاب ویرایش"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "بستن&"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "دانلود&"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "درباره&"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "رایت&"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "کمک&"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "انتخاب فایل&"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "نمایش همه&"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "لغو&"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "نمایش وبسایت&"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Creator ویرایش 1% موجود است."
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "پروژه مورد نظر را انتخاب نمائید"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "ایمیج مورد نظر را انتخاب نمائید"
 
 msgctxt "QObject|"
 msgid "Write Error"

@@ -1,11 +1,13 @@
+# 
 # Translators:
 # Andreas Hallberg <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
+# Peter Vicman, 2016
 # Sopor, 2018
+# Namerp, 2022
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Sopor, 2018\n"
+"Last-Translator: Namerp, 2022\n"
 "Language-Team: Swedish (https://www.transifex.com/libreelec/teams/61634/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +39,62 @@ msgstr "Mata ut enhet"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "Ladda enhet"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "Ja"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "Nej"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Välj version"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "&Stäng"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "&Ladda ned"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "&Om"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "S&kriv"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "&Hjälp"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Välj &fil"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "&Visa alla"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Välj projekt"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Välj avbild"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -81,7 +139,7 @@ msgstr "Klicka på logotypen nedan eller donera"
 
 msgctxt "Creator|"
 msgid "using OpenCollective"
-msgstr "via OpenCollective"
+msgstr "använd OpenCollective för:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -115,6 +173,19 @@ msgstr "Nedladdning slutförd, checksumman är fel."
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 sekunder kvarstår - %2% till %3"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Kontrollera uppdateringar"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "&Besök hemsidan"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "LibreELEC USB-SD Creator %1 finns tillgängligt."
 
 msgctxt "Creator|"
 msgid "Download canceled."
@@ -152,6 +223,10 @@ msgid "Failed to open file for writing!"
 msgstr "Kunde inte skriva till filen!"
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "&Avbryt"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Öppna avbild"
 
@@ -163,6 +238,11 @@ msgstr ""
 "Komprimerad gz avbild (*img.gz);;Komprimerad zip avbild "
 "(*img.zip);;Okomprimerad avbild (*.img);;Alla filer (*.*)"
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Fel: %1"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Skrivningen avbröts."
@@ -170,6 +250,19 @@ msgstr "Skrivningen avbröts."
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Bekräfta skrivning"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"Vald enhet: %1\n"
+"Är du säker på att du vill skriva avbilden?\n"
+"\n"
+"Din USB-SD enhet kommer raderas!"
 
 #, qt-format
 msgctxt "Creator|"
@@ -188,93 +281,6 @@ msgstr "Synkroniserar filsystem..."
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "Skrivning klar!"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Fel: %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-"Vald enhet: %1\n"
-"Är du säker på att du vill skriva avbilden?\n"
-"\n"
-"Din USB-SD enhet kommer raderas!"
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "Ja"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "Nej"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "OK"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Kontrollera uppdateringar"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "Välj version"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "&Stäng"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "&Ladda ned"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "&Om"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "S&kriv"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "&Hjälp"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "Välj &fil"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "&Visa alla"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "&Avbryt"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "&Besök hemsidan"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Creator %1 finns tillgängligt."
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Välj projekt"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "Välj avbild"
 
 msgctxt "QObject|"
 msgid "Write Error"

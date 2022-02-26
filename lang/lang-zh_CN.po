@@ -1,10 +1,12 @@
+# 
 # Translators:
 # tyler tong <email-removed>, 2016
 # Dongkai Xie, 2018
+# Namerp, 2022
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Dongkai Xie, 2018\n"
+"Last-Translator: Namerp, 2022\n"
 "Language-Team: Chinese (https://www.transifex.com/libreelec/teams/61634/zh/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,6 +38,62 @@ msgstr "弹出设备"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "读取设备"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "是"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "否"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "完成"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "选择版本"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "关闭 &C"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "下载 &D"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "关于 &A"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "写入 &W"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "帮助 &H"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "选择文件 &f"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "显示所有 &S"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "选择项目"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "选择镜像"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -114,6 +172,19 @@ msgid "%1 seconds remaining - %2% at %3"
 msgstr "还剩 %1 秒—— %2% / %3"
 
 msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "更新通知"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "访问网站 &V"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "更新提示：LibreELEC USB-SD Creator %1 "
+
+msgctxt "Creator|"
 msgid "Download canceled."
 msgstr "下载取消。"
 
@@ -149,6 +220,10 @@ msgid "Failed to open file for writing!"
 msgstr "打开或写入文件失败！"
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "取消 &l"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "打开镜像文件"
 
@@ -158,6 +233,11 @@ msgid ""
 " image (*.img);;All files (*.*)"
 msgstr "gz 压缩格式 (*img.gz);;zip 压缩格式 (*img.zip);;镜像文件 (*.img);;所有文件 (*.*)"
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "出错： %1"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "写入操作已取消。"
@@ -165,6 +245,19 @@ msgstr "写入操作已取消。"
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "确认写入"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"已选设备： %1\n"
+"您确认要写入镜像么？\n"
+"\n"
+"%1设备上的所有数据将被删除！"
 
 #, qt-format
 msgctxt "Creator|"
@@ -183,93 +276,6 @@ msgstr "正在同步系统文件……"
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "写入完成！"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "出错： %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-"已选设备： %1\n"
-"您确认要写入镜像么？\n"
-"\n"
-"%1设备上的所有数据将被删除！"
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "是"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "否"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "完成"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "更新通知"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "选择版本"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "关闭 &C"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "下载 &D"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "关于 &A"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "写入 &W"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "帮助 &H"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "选择文件 &f"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "显示所有 &S"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "取消 &l"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "访问网站 &V"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "更新提示：LibreELEC USB-SD Creator %1 "
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "选择项目"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "选择镜像"
 
 msgctxt "QObject|"
 msgid "Write Error"
