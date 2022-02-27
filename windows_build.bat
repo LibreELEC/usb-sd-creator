@@ -17,6 +17,8 @@ rem #  You should have received a copy of the GNU General Public License
 rem #  along with LibreELEC.  If not, see <http://www.gnu.org/licenses/>.
 rem ################################################################################
 
+call windows_build_clean.bat > nul 2>&1
+
 call windows_build_paths.bat
 
 del release\LibreELEC.USB-SD.Creator.Win32.exe > nul 2>&1
