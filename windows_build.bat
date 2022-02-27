@@ -21,7 +21,7 @@ call windows_build_paths.bat
 
 del release\LibreELEC.USB-SD.Creator.Win32.exe > nul 2>&1
 
-call windows_prepare_lang.bat
+call windows_build_prepare_lang.bat
 
 qmake.exe
 mingw32-make -j4 release
