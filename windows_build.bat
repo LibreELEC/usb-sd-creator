@@ -25,3 +25,5 @@ call windows_prepare_lang.bat
 
 qmake.exe
 mingw32-make -j4 release
+
+call windows_build_upx.bat

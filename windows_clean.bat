@@ -30,5 +30,5 @@ if exist Makefile (
 del object_script.* > nul 2>&1
 del creator.pro.user > nul 2>&1
 
-del release\LibreELEC.USB-SD.Creator.Win32.exe > nul 2>&1
+del release\LibreELEC.USB-SD.Creator.Win32.ex* > nul 2>&1
 del release\dummy_image_device > nul 2>&1
