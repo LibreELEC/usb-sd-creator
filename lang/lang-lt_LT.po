@@ -1,9 +1,11 @@
+# 
 # Translators:
 # Zapata11 <email-removed>, 2016
+# Namerp, 2022
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Zapata11 <email-removed>, 2016\n"
+"Last-Translator: Namerp, 2022\n"
 "Language-Team: Lithuanian (Lithuania) (https://www.transifex.com/libreelec/teams/61634/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,6 +37,62 @@ msgstr "Išimti įrenginį"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "Įkelti įrenginį"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "Taip"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "Ne"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Pasirinkite versiją"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "&Uždaryti"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "A&tsisiųsti"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "&Apie"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Į&rašyti"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "&Pagalba"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Pasirinkti &failą"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "&Rodyti viską"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Pasirinkite projektą"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Pasirinkite atvaizdą"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -79,7 +137,7 @@ msgstr "Paspauskite ant žemiau esančio logotipo norėdami paaukoti"
 
 msgctxt "Creator|"
 msgid "using OpenCollective"
-msgstr "naudojantis OpenCollective"
+msgstr "naudojantis OpenCollective:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -113,6 +171,19 @@ msgstr "Atsiuntimas baigtas, kontrolinė suma klaidinga."
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
 msgstr "Liko %1 sekundžių - %2% baigta %3 sparta"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Atnaujinimo pranešimas"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Ap%lankykite svetainę"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "Prieinamas LibreELEC USB-SD Creator %1."
 
 msgctxt "Creator|"
 msgid "Download canceled."
@@ -150,6 +221,10 @@ msgid "Failed to open file for writing!"
 msgstr "Nepavyko atidaryti failo įrašymui!"
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Atšau&kti"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Atidaryti atvaizdo failą"
 
@@ -161,6 +236,11 @@ msgstr ""
 "Suglaudintas gz atvaizdas (*img.gz);;Suglaudintas zip atvaizdas "
 "(*img.zip);;Nesuglaudintas atvaizdas (*.img);;Visi failai (*.*)"
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Klaida: %1"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Įrašymas atšauktas."
@@ -168,6 +248,19 @@ msgstr "Įrašymas atšauktas."
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Patvirtinkite įrašymą"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"Pasirinktas įrenginys: %1\n"
+"Ar tikrai norite įrašyti atvaizdą?\n"
+"\n"
+"Jūsų USB-SD įrenginys bus ištrintas!"
 
 #, qt-format
 msgctxt "Creator|"
@@ -186,93 +279,6 @@ msgstr "Sinchronizuojama failų sistema..."
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "Įrašymas baigtas!"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Klaida: %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-"Pasirinktas įrenginys: %1\n"
-"Ar tikrai norite įrašyti atvaizdą?\n"
-"\n"
-"Jūsų USB-SD įrenginys bus ištrintas!"
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "Taip"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "Ne"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "OK"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Atnaujinimo pranešimas"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "Pasirinkite versiją"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "&Uždaryti"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "A&tsisiųsti"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "&Apie"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "Į&rašyti"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "&Pagalba"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "Pasirinkti &failą"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "&Rodyti viską"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "Atšau&kti"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "Ap%lankykite svetainę"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "Prieinamas LibreELEC USB-SD Creator %1."
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Pasirinkite projektą"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "Pasirinkite atvaizdą"
 
 msgctxt "QObject|"
 msgid "Write Error"

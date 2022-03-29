@@ -1,10 +1,12 @@
+# 
 # Translators:
 # Z F <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
+# Peter Vicman, 2016
+# Namerp, 2022
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Last-Translator: Namerp, 2022\n"
 "Language-Team: Greek (https://www.transifex.com/libreelec/teams/61634/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,6 +38,62 @@ msgstr "Εξαγωγή συσκευής"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "Φόρτωση συσκευής"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "Ναι"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "Όχι"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Επιλογή έκδοσης"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "Κλείσιμο"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "Μεταφόρτωση"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "Σχετικά"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Εγγραφή"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "Βοήθεια"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Επιλογή αρχείου"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "Εμφάνιση όλων"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Επιλογή έργου"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Επιλογή ειδώλου"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -83,7 +141,7 @@ msgstr "Πατήστε στο παρακάτω λογότυπο ή κάνετε 
 
 msgctxt "Creator|"
 msgid "using OpenCollective"
-msgstr "χρησιμοποιώντας το OpenCollective"
+msgstr "ρησιμοποιώντας το OpenCollective στο:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -118,6 +176,19 @@ msgstr "Η μεταφόρτωση ολοκληρώθηκε, το άθροισμ�
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 δευτερόλεπτα απομένουν - %2% στα %3"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Ειδοποίηση Ενημέρωσης"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Επίσκεψη Ιστότοπου"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "Το LibreELEC USB-SD Creator %1 είναι διαθέσιμο."
 
 msgctxt "Creator|"
 msgid "Download canceled."
@@ -155,6 +226,10 @@ msgid "Failed to open file for writing!"
 msgstr "Αποτυχία ανοίγματος του αρχείου για εγγραφή!"
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Ακύρωση"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Άνοιγμα του αρχείου ειδώλου"
 
@@ -166,6 +241,11 @@ msgstr ""
 "Συμπιεσμένο είδωλο gz (*img.gz);;Συμπιεσμένο είδωλο zip (*img.zip);;Μη "
 "συμπιεσμένο είδωλο (*.img);;Όλα τα αρχεία (*.*)"
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Σφάλμα: %1"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Η εγγραφή ακυρώθηκε."
@@ -173,6 +253,19 @@ msgstr "Η εγγραφή ακυρώθηκε."
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Επιβεβαίωση εγγραφής"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"Επιλεγμένη συσκευή: %1\n"
+"Είστε σίγουροι πως θέλετε να κάνετε εγγραφή του ειδώλου;\n"
+"\n"
+"Η συσκευή USB-SD σας θα διαγραφεί!"
 
 #, qt-format
 msgctxt "Creator|"
@@ -191,93 +284,6 @@ msgstr "Γίνεται συγχρονισμός του συστήματος αρ
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "Η εγγραφή ολοκληρώθηκε!"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Σφάλμα: %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-"Επιλεγμένη συσκευή: %1\n"
-"Είστε σίγουροι πως θέλετε να κάνετε εγγραφή του ειδώλου;\n"
-"\n"
-"Η συσκευή USB-SD σας θα διαγραφεί!"
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "Ναι"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "Όχι"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "OK"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Ειδοποίηση Ενημέρωσης"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "Επιλογή έκδοσης"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "Κλείσιμο"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "Μεταφόρτωση"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "Σχετικά"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "Εγγραφή"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "Βοήθεια"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "Επιλογή αρχείου"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "Εμφάνιση όλων"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "Ακύρωση"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "Επίσκεψη Ιστότοπου"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "Το LibreELEC USB-SD Creator %1 είναι διαθέσιμο."
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Επιλογή έργου"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "Επιλογή ειδώλου"
 
 msgctxt "QObject|"
 msgid "Write Error"

@@ -1,11 +1,13 @@
+# 
 # Translators:
 # Anton Voyl, 2016
-# Peter Vicman <email-removed>, 2016
-# Surfoo <email-removed>, 2018
+# Peter Vicman, 2016
+# Surfoo, 2018
+# Namerp, 2022
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Surfoo <email-removed>, 2018\n"
+"Last-Translator: Namerp, 2022\n"
 "Language-Team: French (https://www.transifex.com/libreelec/teams/61634/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +39,62 @@ msgstr "Éjecter le périphérique"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "Charger le périphérique"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "Oui"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "Non"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Choisir une version"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "Fermer"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "Télécharger"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "À propos"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Ecrire"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "Aide"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Choisir un fichier"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "Montrer tout"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Choisir un projet"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Choisir une image"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -83,7 +141,7 @@ msgstr "Cliquez sur le logo ci-dessous ou faites un don"
 
 msgctxt "Creator|"
 msgid "using OpenCollective"
-msgstr "avec OpenCollective"
+msgstr "avec OpenCollective à:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -117,6 +175,19 @@ msgstr "Téléchargement terminé, somme de contrôle invalide."
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 secondes restantes - %2% at %3"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Notification de mise à jour"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Visiter le site"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "LibreELEC USB-SD Creator %1 est disponible."
 
 msgctxt "Creator|"
 msgid "Download canceled."
@@ -154,6 +225,10 @@ msgid "Failed to open file for writing!"
 msgstr "Impossible d'ouvrir le fichier en écriture !"
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Annuler"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Ouvrir le fichier d'image"
 
@@ -165,6 +240,11 @@ msgstr ""
 "Image compressée gz (*img.gz);;Image compressée zip (*img.zip);;Image non "
 "compressée (*.img);;All files (*.*)"
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Erreur : %1"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Ecriture annulée."
@@ -172,6 +252,19 @@ msgstr "Ecriture annulée."
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Confirmer l'écriture"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"Périphérique sélectionné : %1\n"
+"Êtes-vous certain de vouloir écrire l'image ?\n"
+"\n"
+"Votre périphérique USB-SD sera effacé !"
 
 #, qt-format
 msgctxt "Creator|"
@@ -190,93 +283,6 @@ msgstr "Synchronisation du système de fichiers..."
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "Ecriture terminée !"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Erreur : %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-"Périphérique sélectionné : %1\n"
-"Êtes-vous certain de vouloir écrire l'image ?\n"
-"\n"
-"Votre périphérique USB-SD sera effacé !"
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "Oui"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "Non"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "OK"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Notification de mise à jour"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "Choisir une version"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "Fermer"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "Télécharger"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "À propos"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "Ecrire"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "Aide"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "Choisir un fichier"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "Montrer tout"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "Annuler"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "Visiter le site"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Creator %1 est disponible."
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Choisir un projet"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "Choisir une image"
 
 msgctxt "QObject|"
 msgid "Write Error"

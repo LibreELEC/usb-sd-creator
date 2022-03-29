@@ -1,11 +1,13 @@
+# 
 # Translators:
 # Koos van Klojum, 2016
 # TRaSH <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
+# Peter Vicman, 2016
+# Namerp, 2022
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Peter Vicman <email-removed>, 2016\n"
+"Last-Translator: Namerp, 2022\n"
 "Language-Team: Dutch (https://www.transifex.com/libreelec/teams/61634/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +39,62 @@ msgstr "Apparaat &uitwerpen"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "Apparaat &inlezen"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "&Ja"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "&Nee"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "&OK"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Kies versie"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "&Sluiten"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "&Download"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "&Over"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "&Schrijf"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "&Help"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Kies &bestand"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "&Toon alles"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Kies &project"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Kies &image"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -81,7 +139,7 @@ msgstr "Klik op het logo hieronder of doneer"
 
 msgctxt "Creator|"
 msgid "using OpenCollective"
-msgstr "via OpenCollective"
+msgstr "via OpenCollective aan:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -119,6 +177,19 @@ msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 seconds te gaan - %2% met %3"
 
 msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Updatemelding"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "&Bezoek website"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "LibreELEC USB-SD Creator %1 is beschikbaar."
+
+msgctxt "Creator|"
 msgid "Download canceled."
 msgstr "Download afgebroken."
 
@@ -154,6 +225,10 @@ msgid "Failed to open file for writing!"
 msgstr "Te schrijven bestand kon niet geopend worden!"
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Af&breken"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Open imagebestand"
 
@@ -165,6 +240,11 @@ msgstr ""
 "Gecomprimeerd gz-imagebestand (*img.gz);;Gecomprimeerd zipbestand "
 "(*img.zip);;Ongecomprimeerde image (*.img);;Alle bestanden (*.*)"
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Fout: %1"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Schrijven afgebroken."
@@ -172,6 +252,19 @@ msgstr "Schrijven afgebroken."
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Bevestig schrijven"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"Gekozen apparaat: %1\n"
+"Weet u zeker dat u de image wilt schrijven?\n"
+"\n"
+"Uw USB-SD-apparaat zal gewist worden!"
 
 #, qt-format
 msgctxt "Creator|"
@@ -190,93 +283,6 @@ msgstr "Bestandssysteem synchroniseren..."
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "Schrijven is klaar!"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Fout: %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-"Gekozen apparaat: %1\n"
-"Weet u zeker dat u de image wilt schrijven?\n"
-"\n"
-"Uw USB-SD-apparaat zal gewist worden!"
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "&Ja"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "&Nee"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "&OK"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Updatemelding"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "Kies versie"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "&Sluiten"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "&Download"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "&Over"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "&Schrijf"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "&Help"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "Kies &bestand"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "&Toon alles"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "Af&breken"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "&Bezoek website"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "LibreELEC USB-SD Creator %1 is beschikbaar."
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Kies &project"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "Kies &image"
 
 msgctxt "QObject|"
 msgid "Write Error"

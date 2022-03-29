@@ -1,3 +1,4 @@
+# 
 # Translators:
 # Aviad Spitzer <email-removed>, 2016
 # 
@@ -35,6 +36,62 @@ msgstr "הוצא התקן"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "טען התקן"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "כן"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "לא"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "אישור"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "בחר גירסה"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "&סגור"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "&הורדה"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "&אודות"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "&כתיבה"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "&עזרה"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "בחר &קובץ"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "&הצג הכל"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "בחר פרוייקט"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "בחר התקנה"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -79,7 +136,7 @@ msgstr "לחץ על הלוגו מתחת או על התרומה."
 
 msgctxt "Creator|"
 msgid "using OpenCollective"
-msgstr "השתמש בפייפל ל"
+msgstr ""
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -115,6 +172,19 @@ msgid "%1 seconds remaining - %2% at %3"
 msgstr ""
 
 msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "התראה עודכנה"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "&בקר בדף הבית"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr ""
+
+msgctxt "Creator|"
 msgid "Download canceled."
 msgstr ""
 
@@ -147,6 +217,10 @@ msgid "Failed to open file for writing!"
 msgstr "שגיאת בפתיחת הקובץ לכתיבה!"
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "ביטול&"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "פתח קובץ התקנה"
 
@@ -156,6 +230,11 @@ msgid ""
 " image (*.img);;All files (*.*)"
 msgstr ""
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "שגיאה: %1"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "הכתיבה בוטלה."
@@ -163,6 +242,15 @@ msgstr "הכתיבה בוטלה."
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "אשר כתיבה"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
 
 #, qt-format
 msgctxt "Creator|"
@@ -181,89 +269,6 @@ msgstr "מסנכרן מערכת קבצים"
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "הכתיבה הסתיימה!"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "שגיאה: %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "כן"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "לא"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "אישור"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "התראה עודכנה"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "בחר גירסה"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "&סגור"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "&הורדה"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "&אודות"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "&כתיבה"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "&עזרה"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "בחר &קובץ"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "&הצג הכל"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "ביטול&"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "&בקר בדף הבית"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr ""
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "בחר פרוייקט"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "בחר התקנה"
 
 msgctxt "QObject|"
 msgid "Write Error"

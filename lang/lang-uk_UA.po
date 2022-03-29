@@ -1,11 +1,13 @@
+# 
 # Translators:
 # Alex Deryskyba <email-removed>, 2016
-# Peter Vicman <email-removed>, 2016
+# Peter Vicman, 2016
 # zubr139, 2016
+# Namerp, 2022
 # 
 msgid ""
 msgstr ""
-"Last-Translator: zubr139, 2016\n"
+"Last-Translator: Namerp, 2022\n"
 "Language-Team: Ukrainian (https://www.transifex.com/libreelec/teams/61634/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +39,62 @@ msgstr "Вилучити пристрій"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "Завантажити пристрій"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "Так"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "Ні"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "Гаразд"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Виберіть версію"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "&Закрити"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "За&вантажити"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "&Про програму"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "Запи&сати"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "&Допомога"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Вибрати &файл"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "П&оказати всі"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Вибрати проект"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Вибрати образ"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -81,7 +139,7 @@ msgstr "Клацніть на логотипі нижче для пожертв�
 
 msgctxt "Creator|"
 msgid "using OpenCollective"
-msgstr "через OpenCollective"
+msgstr "через OpenCollective на користь:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -115,6 +173,19 @@ msgstr "Завантаження завершене, контрольна сум
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 секунд залишилося - %2% на швидкості %3"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Повідомлення про оновлення"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "Відвідати веб-сайт"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "Доступний LibreELEC USB-SD Creator %1."
 
 msgctxt "Creator|"
 msgid "Download canceled."
@@ -152,6 +223,10 @@ msgid "Failed to open file for writing!"
 msgstr "Не вдалося відкрити файл для запису!"
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Скасувати"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Відкрити файл образу"
 
@@ -163,6 +238,11 @@ msgstr ""
 "Стиснутий образ gz (*img.gz);;Стиснутий образ zip (*img.zip);;Нестиснутий "
 "образ (*.img);;Всі файли (*.*)"
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Помилка: %1"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Запис скасований."
@@ -170,6 +250,19 @@ msgstr "Запис скасований."
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Підтвердіть запис"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"Вибраний пристрій: %1\n"
+"Ви впевнені, що хочете записати образ?\n"
+"\n"
+"Ваш пристрій USB-SD буде витертий!"
 
 #, qt-format
 msgctxt "Creator|"
@@ -188,93 +281,6 @@ msgstr "Синхронізація файлової системи..."
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "Запис завершено!"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Помилка: %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-"Вибраний пристрій: %1\n"
-"Ви впевнені, що хочете записати образ?\n"
-"\n"
-"Ваш пристрій USB-SD буде витертий!"
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "Так"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "Ні"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "Гаразд"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Повідомлення про оновлення"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "Виберіть версію"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "&Закрити"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "За&вантажити"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "&Про програму"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "Запи&сати"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "&Допомога"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "Вибрати &файл"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "П&оказати всі"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "Скасувати"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "Відвідати веб-сайт"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "Доступний LibreELEC USB-SD Creator %1."
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Вибрати проект"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "Вибрати образ"
 
 msgctxt "QObject|"
 msgid "Write Error"

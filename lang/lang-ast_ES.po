@@ -1,9 +1,11 @@
+# 
 # Translators:
 # enolp <email-removed>, 2016
+# Namerp, 2022
 # 
 msgid ""
 msgstr ""
-"Last-Translator: enolp <email-removed>, 2016\n"
+"Last-Translator: Namerp, 2022\n"
 "Language-Team: Asturian (Spain) (https://www.transifex.com/libreelec/teams/61634/ast_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,6 +37,62 @@ msgstr "Expulsar preséu"
 msgctxt "Creator|"
 msgid "Load device"
 msgstr "Cargar preséu"
+
+msgctxt "Creator|"
+msgid "Yes"
+msgstr "Sí"
+
+msgctxt "Creator|"
+msgid "No"
+msgstr "Non"
+
+msgctxt "Creator|"
+msgid "OK"
+msgstr "Aceutar"
+
+msgctxt "Creator|"
+msgid "Select version"
+msgstr "Esbillar versión"
+
+msgctxt "Creator|"
+msgid "&Close"
+msgstr "&Zarrar"
+
+msgctxt "Creator|"
+msgid "&Download"
+msgstr "&Baxar"
+
+msgctxt "Creator|"
+msgid "&About"
+msgstr "&Tocante a"
+
+msgctxt "Creator|"
+msgid "&Write"
+msgstr "&Escribir"
+
+msgctxt "Creator|"
+msgid "&Help"
+msgstr "&Ayuda"
+
+msgctxt "Creator|"
+msgid "Select &file"
+msgstr "Esbillar &ficheru"
+
+msgctxt "Creator|"
+msgid "&Show all"
+msgstr "&Amosar too"
+
+msgctxt "Creator|"
+msgid "Select project"
+msgstr "Esbillar proyeutu"
+
+msgctxt "Creator|"
+msgid "Select image"
+msgstr "Esbillar imaxe"
+
+msgctxt "Creator|"
+msgid "Eject  Load         Remove"
+msgstr ""
 
 msgctxt "Creator|"
 msgid ""
@@ -79,7 +137,7 @@ msgstr "Primi nel llogu d'embaxo o dona"
 
 msgctxt "Creator|"
 msgid "using OpenCollective"
-msgstr "usando OpenCollective"
+msgstr "usando OpenCollective a:"
 
 msgctxt "Creator|"
 msgid "[Stable]"
@@ -113,6 +171,19 @@ msgstr "Completóse la descarga, suma de comprobación incorreuta."
 msgctxt "Creator|"
 msgid "%1 seconds remaining - %2% at %3"
 msgstr "%1 segundos restantes - %2% a %3"
+
+msgctxt "Creator|"
+msgid "Update Notification"
+msgstr "Avisur d'anovamientu"
+
+msgctxt "Creator|"
+msgid "&Visit Website"
+msgstr "&Visitar sitiu web"
+
+#, qt-format
+msgctxt "Creator|"
+msgid "LibreELEC USB-SD Creator %1 is available."
+msgstr "Ta disponible LibreELEC USB-SD Creator %1."
 
 msgctxt "Creator|"
 msgid "Download canceled."
@@ -150,6 +221,10 @@ msgid "Failed to open file for writing!"
 msgstr "¡Fallu al abrir el ficheru pa escritura!"
 
 msgctxt "Creator|"
+msgid "Cance&l"
+msgstr "Encabo&xar"
+
+msgctxt "Creator|"
 msgid "Open image file"
 msgstr "Abrir ficheru d'imaxe"
 
@@ -161,6 +236,11 @@ msgstr ""
 "Imaxe gz comprimida (*img.gz);;Imaxe zip comprimida (*img.zip);;Imaxe ensin "
 "comprimir (*.img);;Tolos ficheros (*.*)"
 
+#, qt-format
+msgctxt "Creator|"
+msgid "Error: %1"
+msgstr "Fallu: %1"
+
 msgctxt "Creator|"
 msgid "Writing canceled."
 msgstr "Encaboxóse la escritura"
@@ -168,6 +248,19 @@ msgstr "Encaboxóse la escritura"
 msgctxt "Creator|"
 msgid "Confirm write"
 msgstr "Confirmar escritura"
+
+#, qt-format
+msgctxt "Creator|"
+msgid ""
+"Selected device: %1\n"
+"Are you sure you want to write the image?\n"
+"\n"
+"Your USB-SD device will be wiped!"
+msgstr ""
+"Esbillóse'l preséu: %1\n"
+"¿De xuru que quies escribir la imaxe?\n"
+"\n"
+"¡Llimpiaráse'l to preséu USB/SD!"
 
 #, qt-format
 msgctxt "Creator|"
@@ -186,93 +279,6 @@ msgstr "Sincronizando sistema de ficheros..."
 msgctxt "Creator|"
 msgid "Writing done!"
 msgstr "¡Féxose la escritura!"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "Error: %1"
-msgstr "Fallu: %1"
-
-#, qt-format
-msgctxt "Creator|"
-msgid ""
-"Selected device: %1\n"
-"Are you sure you want to write the image?\n"
-"\n"
-"Your USB-SD device will be wiped!"
-msgstr ""
-"Esbillóse'l preséu: %1\n"
-"¿De xuru que quies escribir la imaxe?\n"
-"\n"
-"¡Llimpiaráse'l to preséu USB/SD!"
-
-msgctxt "Creator|"
-msgid "Yes"
-msgstr "Sí"
-
-msgctxt "Creator|"
-msgid "No"
-msgstr "Non"
-
-msgctxt "Creator|"
-msgid "OK"
-msgstr "Aceutar"
-
-msgctxt "Creator|"
-msgid "Update Notification"
-msgstr "Avisur d'anovamientu"
-
-msgctxt "Creator|"
-msgid "Select version"
-msgstr "Esbillar versión"
-
-msgctxt "Creator|"
-msgid "&Close"
-msgstr "&Zarrar"
-
-msgctxt "Creator|"
-msgid "&Download"
-msgstr "&Baxar"
-
-msgctxt "Creator|"
-msgid "&About"
-msgstr "&Tocante a"
-
-msgctxt "Creator|"
-msgid "&Write"
-msgstr "&Escribir"
-
-msgctxt "Creator|"
-msgid "&Help"
-msgstr "&Ayuda"
-
-msgctxt "Creator|"
-msgid "Select &file"
-msgstr "Esbillar &ficheru"
-
-msgctxt "Creator|"
-msgid "&Show all"
-msgstr "&Amosar too"
-
-msgctxt "Creator|"
-msgid "Cance&l"
-msgstr "Encabo&xar"
-
-msgctxt "Creator|"
-msgid "&Visit Website"
-msgstr "&Visitar sitiu web"
-
-#, qt-format
-msgctxt "Creator|"
-msgid "LibreELEC USB-SD Creator %1 is available."
-msgstr "Ta disponible LibreELEC USB-SD Creator %1."
-
-msgctxt "Creator|"
-msgid "Select project"
-msgstr "Esbillar proyeutu"
-
-msgctxt "Creator|"
-msgid "Select image"
-msgstr "Esbillar imaxe"
 
 msgctxt "QObject|"
 msgid "Write Error"
