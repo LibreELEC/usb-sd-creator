@@ -42,6 +42,7 @@ DownloadManager::~DownloadManager()
 QNetworkReply* DownloadManager::get(const QUrl &url)
 {
     QNetworkRequest req(url);
+    req.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::NoLessSafeRedirectPolicy);
     req.setRawHeader("User-Agent", "Wget/1.14 (linux-gnu)");
     req.setRawHeader("Connection", "keep-alive");
     qDebug() << "Getting" << url;
