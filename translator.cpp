@@ -99,7 +99,7 @@ void Translator::fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr)
 
     menu->addActions(actions);  // add to menu
 
-    connect(menu, SIGNAL(triggered(QAction*)), SLOT(languageAction(QAction*)));
+    connect(menu, &QMenu::triggered, this, &Translator::languageAction);
 
     QString locale = settings->value("preferred/lang").toString();
 
