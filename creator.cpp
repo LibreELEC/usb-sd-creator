@@ -133,7 +133,7 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
             this, SLOT(projectImagesShowAllChanged(int)));
     connect(ui->projectSelectBox, SIGNAL(currentIndexChanged(int)),
             this, SLOT(setProjectImages()));
-    connect(ui->imageSelectBox, SIGNAL(currentIndexChanged(QString)),
+    connect(ui->imageSelectBox, SIGNAL(currentTextChanged(QString)),
             this, SLOT(projectImagesChanged(QString)));
 
     connect(ui->removableDevicesComboBox, SIGNAL(currentIndexChanged(int)),
