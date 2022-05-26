@@ -87,6 +87,12 @@ static { # everything below takes effect with CONFIG += static
     message("~~~ static build ~~~") # this is for information, that the static build is done
 }
 
+versionAtLeast(QT_VERSION, 6) {
+    CONFIG += c++17
+} else {
+    CONFIG += c++11
+}
+
 win32 {
     # add suffix
     TARGET = LibreELEC.USB-SD.Creator.Win32
@@ -160,8 +166,6 @@ macx {
 linux* {
     # manually add suffix 32/64
     TARGET = LibreELEC.USB-SD.Creator.Linux-bit.bin
-
-    QMAKE_CXXFLAGS += -std=c++11
 
     LIBS += -lblkid
 }
