@@ -21,7 +21,6 @@
 
 #include <pwd.h>
 #include <errno.h>
-#include <sys/sysctl.h>
 #include <unistd.h>
 #include <grp.h>
 
