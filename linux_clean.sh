@@ -19,7 +19,7 @@
 
 echo ""
 echo "  Start cleaning..."
-rm -f LibreELEC.USB-SD.Creator.Linux-*bit.bin
+rm -f LibreELEC.USB-SD.Creator.Linux.bin
 
 if [ -f Makefile ]; then
   make distclean
