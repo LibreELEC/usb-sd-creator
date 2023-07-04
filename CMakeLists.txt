@@ -170,11 +170,14 @@ endif()
 if(LINUX)
     set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES SUFFIX .Linux.bin)
 
+    find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS DBus)
+
     target_sources(LibreELEC.USB-SD.Creator PUBLIC
         privileges_unix.cpp privileges_unix.h
     )
 
     target_link_libraries(LibreELEC.USB-SD.Creator PUBLIC
+        Qt::DBus
         blkid
     )
 endif()
