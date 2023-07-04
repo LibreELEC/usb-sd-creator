@@ -154,16 +154,11 @@ if(WIN32)
     )
 endif()
 
-if(UNIX)
-    target_sources(LibreELEC.USB-SD.Creator PUBLIC
-        deviceenumerator_unix.cpp deviceenumerator_unix.h
-        diskwriter_unix.cpp diskwriter_unix.h
-    )
-endif()
-
 if(MACOS)
     target_sources(LibreELEC.USB-SD.Creator PUBLIC
         privileges_unix.cpp privileges_unix.h
+        diskwriter_unix.cpp diskwriter_unix.h
+        deviceenumerator_unix.cpp deviceenumerator_unix.h
     )
 endif()
 
@@ -173,12 +168,13 @@ if(LINUX)
     find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS DBus)
 
     target_sources(LibreELEC.USB-SD.Creator PUBLIC
-        privileges_unix.cpp privileges_unix.h
+        diskwriter_udisks2.cpp diskwriter_udisks2.h
+        deviceenumerator_udisks2.cpp deviceenumerator_udisks2.h
+        privileges.h
     )
 
     target_link_libraries(LibreELEC.USB-SD.Creator PUBLIC
         Qt::DBus
-        blkid
     )
 endif()
 

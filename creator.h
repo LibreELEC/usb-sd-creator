@@ -33,7 +33,7 @@
 #include "movingaverage.h"
 #include "translator.h"
 
-#ifdef Q_OS_UNIX
+#ifdef Q_OS_MAC
 #include "privileges_unix.h"
 #else
 #include "privileges.h"
