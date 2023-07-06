@@ -161,11 +161,14 @@ void JsonParser::parseAndSet(const QByteArray &data, const QString label)
                         imageCount++;
 
                     QJsonObject::Iterator itUbootsNode = releaseItemsNode.find("uboot");
-                    QJsonArray ubootsNode = itUbootsNode.value().toArray();
-                    for (QJsonValue uboot : ubootsNode)
+                    if (itUbootsNode != releaseItemsNode.end())
                     {
-                        if (ReadImageName(uboot.toObject(), projectIndex, imagesList, projectList))
-                            imageCount++;
+                        QJsonArray ubootsNode = itUbootsNode.value().toArray();
+                        for (QJsonValue uboot : ubootsNode)
+                        {
+                            if (ReadImageName(uboot.toObject(), projectIndex, imagesList, projectList))
+                                imageCount++;
+                        }
                     }
                 }
 
