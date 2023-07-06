@@ -31,21 +31,21 @@ void DiskWriter::cancelWrite()
     isCancelled = true;
 }
 
-void DiskWriter::writeImageToRemovableDevice(const QString &filename, const QString &device)
+void DiskWriter::writeImageToRemovableDevice(const QString &filename, const QString &device, const QString& deviceText)
 {
     if (!open(device)) {
-        emit error("Couldn't open " + device);
+        emit error("Couldn't open " + deviceText);
         return;
     }
 
     isCancelled = false;
 
     if (filename.endsWith(".gz"))
-        writeGzCompressedImage(filename, device);
+        writeGzCompressedImage(filename, device, deviceText);
     else if (filename.endsWith(".zip"))
-        writeZipCompressedImage(filename, device);
+        writeZipCompressedImage(filename, device, deviceText);
     else
-        writeUncompressedImage(filename, device);
+        writeUncompressedImage(filename, device, deviceText);
 
     if (isCancelled)
         emit bytesWritten(0);
@@ -53,7 +53,7 @@ void DiskWriter::writeImageToRemovableDevice(const QString &filename, const QStr
         emit finished();
 }
 
-void DiskWriter::writeGzCompressedImage(const QString &filename, const QString& device)
+void DiskWriter::writeGzCompressedImage(const QString &filename, const QString& device, const QString& deviceText)
 {
     int read;
     QByteArray buf(512*1024*sizeof(char), 0);
@@ -96,7 +96,7 @@ void DiskWriter::writeGzCompressedImage(const QString &filename, const QString& 
             buf.truncate(read);
 
         if (this->write(buf) == false) {
-            emit error("Failed to write to " + device + "!");
+            emit error("Failed to write to " + deviceText + "!");
             gzclose(src);
             this->close();
             return;
@@ -112,16 +112,16 @@ void DiskWriter::writeGzCompressedImage(const QString &filename, const QString& 
     this->close();
 }
 
-void DiskWriter::writeUncompressedImage(const QString &filename, const QString& device)
+void DiskWriter::writeUncompressedImage(const QString &filename, const QString& device, const QString& deviceText)
 {
     // if input file is not in gzip format then
     // gzread reads directly from the file
-    writeGzCompressedImage(filename, device);
+    writeGzCompressedImage(filename, device, deviceText);
 }
 
 // zip parts from zipcat.c -- inflate a single-file PKZIP archive to stdout
 // by Sam Hocevar <sam@zoy.org>
-void DiskWriter::writeZipCompressedImage(const QString &filename, const QString& device)
+void DiskWriter::writeZipCompressedImage(const QString &filename, const QString& device, const QString& deviceText)
 {
     int read;
     uint8_t buf4[4];
@@ -212,7 +212,7 @@ void DiskWriter::writeZipCompressedImage(const QString &filename, const QString&
             bufOut.truncate(read);
 
         if (this->write(bufOut) == false) {
-            emit error("Failed to write to " + device + "!");
+            emit error("Failed to write to " + deviceText + "!");
             gzclose(src);
             this->close();
             return;

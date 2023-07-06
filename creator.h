@@ -137,7 +137,7 @@ protected:
     void timerEvent(QTimerEvent *event);
 
 signals:
-    void proceedToWriteImageToDevice(const QString& image, const QString& device);
+    void proceedToWriteImageToDevice(const QString& image, const QString& device, const QString& deviceText);
     void error(const QString& message);
 
 private slots:
