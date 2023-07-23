@@ -263,7 +263,7 @@ msgstr ""
 "Dispositivo seleccionado: %1\n"
 "¿Estas seguro de que deseas escribir la imagen?\n"
 "\n"
-"¡Tu dispositivo USB-SD ha sido formateado!"
+"¡Tu dispositivo USB-SD será formateado!"
 
 #, qt-format
 msgctxt "Creator|"
