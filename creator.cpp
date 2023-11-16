@@ -101,8 +101,8 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
 
     connect(diskWriterThread, SIGNAL(finished()),
             diskWriter, SLOT(deleteLater()));
-    connect(this, SIGNAL(proceedToWriteImageToDevice(QString,QString)),
-            diskWriter, SLOT(writeImageToRemovableDevice(QString,QString)));
+    connect(this, SIGNAL(proceedToWriteImageToDevice(QString,QString,QString)),
+            diskWriter, SLOT(writeImageToRemovableDevice(QString,QString,QString)));
 
     connect(diskWriter, SIGNAL(bytesWritten(int)),this, SLOT(handleWriteProgress(int)));
     connect(diskWriter, SIGNAL(syncing()), this, SLOT(writingSyncing()));
@@ -1348,7 +1348,7 @@ void Creator::writeFlashButtonClicked()
     msgBox.setWindowTitle(tr("Confirm write"));
     msgBox.setText(tr("Selected device: %1\n"
                       "Are you sure you want to write the image?\n\n"
-                      "Your USB-SD device will be wiped!").arg(destination));
+                      "Your USB-SD device will be wiped!").arg(destinationText));
     msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
     msgBox.setDefaultButton(QMessageBox::No);
     int ret = msgBox.exec();
@@ -1363,7 +1363,7 @@ void Creator::writeFlashButtonClicked()
     qint64 deviceSize = devEnumerator->getSizeOfDevice(destination);
     privileges.SetUser();    // back to user
     if (unmounted == false) {
-        flashProgressBarText(tr("Cannot unmount partititons on device %1").arg(destination));
+        flashProgressBarText(tr("Cannot unmount partititons on device %1").arg(destinationText));
         reset();
         return;
     }
@@ -1376,7 +1376,7 @@ void Creator::writeFlashButtonClicked()
     if (uncompressedImageSize > deviceSize) {
         QString uncompressedSizeStr = devEnumerator->sizeToHuman(uncompressedImageSize);
         QString deviceSizeStr = devEnumerator->sizeToHuman(deviceSize);
-        flashProgressBarText(tr("Not enough space on %1 [%2 < %3]").arg(destination).arg(deviceSizeStr).arg(uncompressedSizeStr));
+        flashProgressBarText(tr("Not enough space on %1 [%2 < %3]").arg(destinationText).arg(deviceSizeStr).arg(uncompressedSizeStr));
         reset();
         return;
     }
@@ -1389,7 +1389,7 @@ void Creator::writeFlashButtonClicked()
     privileges.SetRoot();    // root need for opening a device
 
     ui->writeFlashButton->setText(tr("Cance&l"));
-    emit proceedToWriteImageToDevice(imageFile.fileName(), destination);
+    emit proceedToWriteImageToDevice(imageFile.fileName(), destination, destinationText);
 
     speedTime.start();
     averageSpeed = new MovingAverage(20);
