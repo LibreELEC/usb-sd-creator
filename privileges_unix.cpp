@@ -22,6 +22,10 @@
 
 #include "privileges_unix.h"
 
+#ifdef Q_OS_MAC
+#include <sys/sysctl.h>
+#endif
+
 Privileges::Privileges()
 {
     struct passwd *pwd;
