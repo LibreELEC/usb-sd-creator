@@ -23,7 +23,7 @@ Issues should be reported via the forum here: https://forum.libreelec.tv/board/4
 # Windows
 
 ### 1. install "Qt Online Installer"
-select: Custom install -> select QT 6.2.2 -> disable all besides MinGW  
+select: Custom install -> select QT 6.6.2 -> disable all besides MinGW
 Install to `C:\QT`
 
 ### 2. Install 7zip
@@ -36,38 +36,89 @@ https://git-scm.com/download/win
 https://rubyinstaller.org/downloads/ select "WITHOUT DEVKIT" for download
 
 ### 5. Install Perl
-https://www.activestate.com/products/perl/ (needs registration) or 
+https://www.activestate.com/products/perl/ (needs registration) or
 
 https://www.softpedia.com/get/Programming/Coding-languages-Compilers/ActivePerl.shtml
 
 ### 6. Install Python
-https://www.python.org/downloads/windows/ select Windows installer (64-bit) for download  
+https://www.python.org/downloads/windows/ select Windows installer (64-bit) for download
 at install select "Add Python to PATH"
 
 ### 7. Add programs to PATH variable
 
-`C:\Qt\Tools\Ninja`  
+`C:\Qt\Tools\Ninja`
 `C:\Qt\Tools\CMake_64\bin`
 
 reboot Windows
 
 ### 8. Clone Git Repo
-Clone the repository to `C:\usb-sd-creator`  
+Clone the repository to `C:\usb-sd-creator`
 `git clone https://github.com/LibreELEC/usb-sd-creator.git`
 
 ### 9. Enable powershell script execution
-Open cmd with admin rights  
+Open cmd with admin rights
 `powershell Set-ExecutionPolicy RemoteSigned`
 
 ### 10. Build static Qt files
 
 Compiling needs around **13GB RAM**.
 
-Open powershell at C:\usb-sd-creator  
+Open powershell at C:\usb-sd-creator
 `.\windows_qt_build_static.ps1`
 
 After the compiling is finished the files are located at `C:\Qt\static\$version` .
 
 ### 11. Build USB-SD-Creator
-Open a cmd at `C:\usb-sd-creator` and run `windows_build.bat`.  
+Open a cmd at `C:\usb-sd-creator` and run `windows_build.bat`.
 The finished executable is located at `C:\usb-sd-creator\releases`.
+
+# MacOS
+
+### Building for MacOS
+
+### 1. Install XCode with Command-line tools
+
+### 2. Setup QT 6.6.2 (static build or shared)
+
+#### Static build
+
+Open a command prompt and type the following in the console:
+
+```
+mkdir -p ~/Downloads ~/Qt
+cd ~/Downloads
+
+wget https://download.qt.io/official_releases/qt/6.6/6.6.2/single/qt-everywhere-src-6.6.2.tar.xz
+tar xf qt-everywhere-src-6.6.2.tar.xz
+cd qt-everywhere-src-6.6.2
+./configure -static -no-shared -release -opensource -confirm-license -silent -prefix ~/Qt/6.6.2-static -nomake examples -nomake tests -no-strip -no-cups -qt-zlib -qt-pcre -qt-libpng -qt-libjpeg -qt-harfbuzz -qt-freetype
+ninja qtbase/all qttools/all
+ninja install
+```
+
+#### Shared library
+
+TODO
+
+### 4. Build USB-SD-Creator
+
+Assuming the repo is in your home directory
+
+```
+cd ~/usb-sd-creator
+
+chmod -R 755 dmg_osx
+lrelease creator.pro
+qmake
+make -j$(sysctl -n hw.ncpu)
+mkdir -p dmg_osx/template.app/Contents/Resources/Scripts
+osacompile -t osas -o dmg_osx/template.app/Contents/Resources/Scripts/main.scpt dmg_osx/main.scpt.txt
+macdeployqt "LibreELEC USB-SD Creator.app"
+cp -r dmg_osx/template.app/* "LibreELEC USB-SD Creator.app"
+```
+
+### 5. Run USB-SD-Creator
+
+```
+sudo ./LibreELEC\ USB-SD\ Creator.app/Contents/MacOS/*
+```
