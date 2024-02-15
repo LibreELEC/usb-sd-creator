@@ -107,14 +107,12 @@ Assuming the repo is in your home directory
 ```
 cd ~/usb-sd-creator
 
-chmod -R 755 dmg_osx
-lrelease creator.pro
-qmake
-make -j$(sysctl -n hw.ncpu)
-mkdir -p dmg_osx/template.app/Contents/Resources/Scripts
-osacompile -t osas -o dmg_osx/template.app/Contents/Resources/Scripts/main.scpt dmg_osx/main.scpt.txt
-macdeployqt "LibreELEC USB-SD Creator.app"
-cp -r dmg_osx/template.app/* "LibreELEC USB-SD Creator.app"
+./osx_build.sh
+```
+
+If building again cleanup using:
+```
+./osx_clean.sh
 ```
 
 ### 5. Run USB-SD-Creator
