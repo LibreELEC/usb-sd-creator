@@ -33,6 +33,9 @@ rm -f lang/*.qm
 rm -f log
 rm -f *.dmg
 rm -f local_image_file
+if [ -d "dmg_osx/template.app/Contents/Resources/Scripts" ]; then
+  rm -r dmg_osx/template.app/Contents/Resources/Scripts
+fi
 
 echo ""
 echo "Finished."
