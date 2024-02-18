@@ -5,6 +5,7 @@ LibreELEC\ USB-SD\ Creator.app
 LibreELEC.USB-SD.Creator.macOS.dmg
 release/
 tools/
+build/
 
 # Qt files
 *.qm

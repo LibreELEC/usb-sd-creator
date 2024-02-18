@@ -44,6 +44,10 @@
 #if defined(Q_OS_WIN)
 #include "diskwriter_windows.h"
 #include "deviceenumerator_windows.h"
+#elif defined(Q_OS_LINUX)
+#include <unistd.h>
+#include "diskwriter_udisks2.h"
+#include "deviceenumerator_udisks2.h"
 #elif defined(Q_OS_UNIX)
 #include <unistd.h>
 #include "diskwriter_unix.h"
@@ -83,6 +87,9 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
 #if defined(Q_OS_WIN)
     diskWriter = new DiskWriter_windows();
     devEnumerator = new DeviceEnumerator_windows();
+#elif defined(Q_OS_LINUX)
+    diskWriter = new DiskWriter_udisks2();
+    devEnumerator = new DeviceEnumerator_udisks2();
 #elif defined(Q_OS_UNIX)
     diskWriter = new DiskWriter_unix();
     devEnumerator = new DeviceEnumerator_unix();
@@ -222,9 +229,7 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
 
 bool Creator::showRootMessageBox()
 {
-#ifdef Q_OS_WIN
-    return false;   // always run with administrative privileges
-#else
+#ifdef Q_OS_MAC
     if (getuid() == 0)  // root == 0, real user != 0
         return false;
 
@@ -234,6 +239,8 @@ bool Creator::showRootMessageBox()
     msgBox.setStandardButtons(QMessageBox::Ok);
     msgBox.exec();
     return true;
+#else
+    return false;
 #endif
 }
 
@@ -1341,11 +1348,13 @@ void Creator::writeFlashButtonClicked()
 
     // check that both data points to same device (just in case)
     QString destinationText = ui->removableDevicesComboBox->itemText(idx);
+#ifndef Q_OS_LINUX
     if (destinationText.startsWith(destination) == false) {
         qDebug() << "destination critical error";
         reset();
         return;
     }
+#endif
 
     QMessageBox msgBox(this);
     msgBox.setWindowTitle(tr("Confirm write"));
