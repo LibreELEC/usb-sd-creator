@@ -173,3 +173,5 @@ LIBS += -lz
 OTHER_FILES +=
 
 RESOURCES += resources.qrc
+
+CONFIG(debug, debug|release): DEFINES += ALWAYS_DEBUG_OUTPUT
