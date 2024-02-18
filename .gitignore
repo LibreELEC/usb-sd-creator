@@ -18,6 +18,7 @@ Makefile
 Makefile.Debug
 Makefile.Release
 object_script.*
+*.pro.user
 
 # crap
 .DS_Store
