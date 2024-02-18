@@ -26,7 +26,6 @@
 #include <QString>
 #include <QFile>
 #include <QFileDialog>
-#include <iostream>
 #include <QUrl>
 #include <QNetworkReply>
 #include <QNetworkRequest>

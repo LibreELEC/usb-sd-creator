@@ -83,7 +83,6 @@ TRANSLATIONS += lang/lang-ast_ES.ts \
 static { # everything below takes effect with CONFIG += static
     CONFIG += static
     CONFIG += staticlib # this is needed if you create a static library, not a static executable
-    DEFINES += STATIC
     message("~~~ static build ~~~") # this is for information, that the static build is done
 }
 
@@ -147,9 +146,6 @@ macx {
     # use spaces on macOS
     TARGET = "LibreELEC USB-SD Creator"
 
-    # Specifies where to find the libraries at runtime
-    QMAKE_RPATHDIR += @executable_path/../Frameworks
-    QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/
     QMAKE_INFO_PLIST = dmg_osx/template.app/Contents/Info.plist
     #QT_CONFIG -= no-pkg-config
     #CONFIG += link_pkgconfig
