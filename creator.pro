@@ -135,18 +135,17 @@ unix {
     }
 
     SOURCES += diskwriter_unix.cpp \
-               deviceenumerator_unix.cpp
+               deviceenumerator_unix.cpp \
+               privileges_unix.cpp
 
     HEADERS += diskwriter_unix.h \
-               deviceenumerator_unix.h
+               deviceenumerator_unix.h \
+               privileges_unix.h
 }
 
 macx {
     # use spaces on macOS
     TARGET = "LibreELEC USB-SD Creator"
-
-    SOURCES += privileges_unix.cpp
-    HEADERS += privileges_unix.h
 
     # Specifies where to find the libraries at runtime
     QMAKE_RPATHDIR += @executable_path/../Frameworks
@@ -161,9 +160,6 @@ macx {
 linux* {
     # manually add suffix 32/64
     TARGET = LibreELEC.USB-SD.Creator.Linux-bit.bin
-
-    SOURCES += privileges_unix.cpp
-    HEADERS += privileges_unix.h
 
     QMAKE_CXXFLAGS += -std=c++11
 
