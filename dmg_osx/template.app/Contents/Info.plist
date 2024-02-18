@@ -7,11 +7,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>LibreELEC USB-SD Creator</string>
+	<string>${MACOSX_BUNDLE_EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string>applet</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.apple.ScriptEditor.id.LibreELEC</string>
+	<string>${MACOSX_BUNDLE_GUI_IDENTIFIER}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -19,29 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleSignature</key>
-	<string>aplt</string>
-	<key>LSMinimumSystemVersionByArchitecture</key>
-	<dict>
-		<key>x86_64</key>
-		<string>10.6</string>
-	</dict>
-	<key>LSRequiresCarbon</key>
-	<true/>
-	<key>WindowState</key>
-	<dict>
-		<key>dividerCollapsed</key>
-		<false/>
-		<key>eventLogLevel</key>
-		<integer>-1</integer>
-		<key>name</key>
-		<string>ScriptWindowState</string>
-		<key>positionOfDivider</key>
-		<real>333</real>
-		<key>savedFrame</key>
-		<string>3 281 602 597 0 0 1440 878 </string>
-		<key>selectedTabView</key>
-		<string>result</string>
-	</dict>
+	<string>????</string>
 	<key>NSRequiresAquaSystemAppearance</key>
 	<true/>
 </dict>

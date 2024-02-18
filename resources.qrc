@@ -48,34 +48,5 @@
         <file>lang/flag-tr_TR.png</file>
         <file>lang/flag-uk_UA.png</file>
         <file>lang/flag-zh_CN.png</file>
-        <file>lang/lang-ast_ES.qm</file>
-        <file>lang/lang-bg_BG.qm</file>
-        <file>lang/lang-cs_CZ.qm</file>
-        <file>lang/lang-da_DK.qm</file>
-        <file>lang/lang-de_DE.qm</file>
-        <file>lang/lang-el_GR.qm</file>
-        <file>lang/lang-en_GB.qm</file>
-        <file>lang/lang-es_ES.qm</file>
-        <file>lang/lang-fa_IR.qm</file>
-        <file>lang/lang-fi_FI.qm</file>
-        <file>lang/lang-fr_FR.qm</file>
-        <file>lang/lang-he_IL.qm</file>
-        <file>lang/lang-hr_HR.qm</file>
-        <file>lang/lang-hu_HU.qm</file>
-        <file>lang/lang-it_IT.qm</file>
-        <file>lang/lang-lt_LT.qm</file>
-        <file>lang/lang-nl_NL.qm</file>
-        <file>lang/lang-no_NO.qm</file>
-        <file>lang/lang-pl_PL.qm</file>
-        <file>lang/lang-pt_BR.qm</file>
-        <file>lang/lang-pt_PT.qm</file>
-        <file>lang/lang-ru_RU.qm</file>
-        <file>lang/lang-sk_SK.qm</file>
-        <file>lang/lang-sl_SI.qm</file>
-        <file>lang/lang-sr_RS.qm</file>
-        <file>lang/lang-sv_SE.qm</file>
-        <file>lang/lang-tr_TR.qm</file>
-        <file>lang/lang-uk_UA.qm</file>
-        <file>lang/lang-zh_CN.qm</file>
     </qresource>
 </RCC>

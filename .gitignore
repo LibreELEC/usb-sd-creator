@@ -20,6 +20,7 @@ Makefile.Debug
 Makefile.Release
 object_script.*
 *.pro.user
+CMakeLists.txt.*
 
 # crap
 .DS_Store
