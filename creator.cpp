@@ -40,6 +40,7 @@
 #include <QProcess>
 #include <QVersionNumber>
 #include <QOperatingSystemVersion>
+#include <QSignalBlocker>
 
 #if defined(Q_OS_WIN)
 #include "diskwriter_windows.h"
@@ -536,7 +537,10 @@ void Creator::setProjectImages()
     else
         previouslySelectedImage = ui->imageSelectBox->currentText();
 
-    ui->imageSelectBox->clear();
+    {
+        const QSignalBlocker blocker{ui->imageSelectBox};
+        ui->imageSelectBox->clear();
+    }
 
     QList<ProjectData> projectList = parserData->getProjectData();
     for (auto& project : projectList) {
