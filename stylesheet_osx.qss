@@ -36,7 +36,6 @@ QLineEdit {
 /* from http://stackoverflow.com/questions/29939990/qcombobox-style-for-choosed-item-in-drop-down-list
    OS X fix https://github.com/xPoke/MetroMumble/blob/master/OSX/OSX%20Dark.qss */
 QComboBox {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 11pt;
   margin: 0;
   padding: 4px;

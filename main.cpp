@@ -107,8 +107,8 @@ int main(int argc, char *argv[])
 
 #ifndef Q_OS_MACOS
     privileges.SetUser();
-#endif
     privileges.Whoami();
+#endif
 
     Creator win(privileges, 0);
     win.setArgFile(argFile);
