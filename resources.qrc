@@ -18,7 +18,7 @@
         <file>stylesheet_osx.qss</file>
     </qresource>
     <qresource prefix="/">
-    		<file>lang/flag-empty.png</file>
+        <file>lang/flag-empty.png</file>
         <file>lang/flag-ast_ES.png</file>
         <file>lang/flag-bg_BG.png</file>
         <file>lang/flag-cs_CZ.png</file>

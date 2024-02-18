@@ -26,7 +26,6 @@
 #include <QString>
 #include <QFile>
 #include <QFileDialog>
-#include <iostream>
 #include <QUrl>
 #include <QNetworkReply>
 #include <QNetworkRequest>
@@ -40,6 +39,7 @@
 #include <QProcess>
 #include <QVersionNumber>
 #include <QOperatingSystemVersion>
+#include <QSignalBlocker>
 
 #if defined(Q_OS_WIN)
 #include "diskwriter_windows.h"
@@ -133,7 +133,7 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
             this, SLOT(projectImagesShowAllChanged(int)));
     connect(ui->projectSelectBox, SIGNAL(currentIndexChanged(int)),
             this, SLOT(setProjectImages()));
-    connect(ui->imageSelectBox, SIGNAL(currentIndexChanged(QString)),
+    connect(ui->imageSelectBox, SIGNAL(currentTextChanged(QString)),
             this, SLOT(projectImagesChanged(QString)));
 
     connect(ui->removableDevicesComboBox, SIGNAL(currentIndexChanged(int)),
@@ -536,7 +536,10 @@ void Creator::setProjectImages()
     else
         previouslySelectedImage = ui->imageSelectBox->currentText();
 
-    ui->imageSelectBox->clear();
+    {
+        const QSignalBlocker blocker{ui->imageSelectBox};
+        ui->imageSelectBox->clear();
+    }
 
     QList<ProjectData> projectList = parserData->getProjectData();
     for (auto& project : projectList) {

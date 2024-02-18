@@ -203,7 +203,7 @@ void Privileges::SetRealUser()
 
 uid_t Privileges::userUidFromPid(pid_t pid, pid_t *ppid)
 {
-#ifdef Q_OS_OSX
+#ifdef Q_OS_MACOS
     // function for os x from
     //   http://stackoverflow.com/questions/6457682/how-to-programatically-get-uid-from-pid-in-osx-using-c
 
