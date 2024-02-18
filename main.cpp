@@ -20,7 +20,7 @@
 #include "creator.h"
 #include "version.h"
 
-#ifdef Q_OS_MAC
+#ifdef Q_OS_MACOS
 #include "privileges_unix.h"
 #else
 #include "privileges.h"

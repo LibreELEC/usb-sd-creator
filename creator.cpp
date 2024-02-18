@@ -207,7 +207,7 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
 
 bool Creator::showRootMessageBox()
 {
-#ifdef Q_OS_MAC
+#ifdef Q_OS_MACOS
     if (getuid() == 0)  // root == 0, real user != 0
         return false;
 
@@ -244,7 +244,7 @@ void Creator::httpsUrlHandler(const QUrl &url)
 {
     // on windows open web browser directly
     // for linux use a wrapper to set uid/gid correctly
-#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
     QDesktopServices::openUrl(url);
 #else
     qDebug() << "httpsUrlHandler called" << url;
@@ -1114,7 +1114,7 @@ void Creator::checkNewVersion(const QString &verNewStr)
 
     QMessageBox msgBox(this);
     msgBox.setWindowTitle(tr("Update Notification"));
-#ifdef Q_OS_MAC
+#ifdef Q_OS_MACOS
     QAbstractButton *visitButton = msgBox.addButton(tr("&Visit Website"), QMessageBox::NoRole);
     msgBox.addButton(tr("&Close"), QMessageBox::YesRole);
 #else

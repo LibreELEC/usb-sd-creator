@@ -22,7 +22,7 @@
 
 #include "privileges_unix.h"
 
-#ifdef Q_OS_MAC
+#ifdef Q_OS_MACOS
 #include <sys/sysctl.h>
 #endif
 
