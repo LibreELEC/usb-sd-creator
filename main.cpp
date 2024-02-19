@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
     privileges.Whoami();
 #endif
 
-    Creator win(privileges, 0);
+    Creator win(privileges);
     win.setArgFile(argFile);
     win.show();
 

@@ -59,10 +59,6 @@ public:
     ~Creator();
     void setArgFile(QString argFile);
     void retranslateUi();
-    void keyPressEvent(QKeyEvent *);
-    void closeEvent(QCloseEvent *);
-    void dragEnterEvent(QDragEnterEvent *e);
-    void dropEvent(QDropEvent *e);
 
 private:
     Ui::Creator *ui;
@@ -134,7 +130,12 @@ private:
     bool showLoadEject;
 
 protected:
-    void timerEvent(QTimerEvent *event);
+    void timerEvent(QTimerEvent *event) override;
+    void keyPressEvent(QKeyEvent *) override;
+    void closeEvent(QCloseEvent *) override;
+    void dragEnterEvent(QDragEnterEvent *e) override;
+    void dropEvent(QDropEvent *e) override;
+    void changeEvent(QEvent *e) override;
 
 signals:
     void proceedToWriteImageToDevice(const QString& image, const QString& device, const QString& deviceText);
@@ -142,7 +143,6 @@ signals:
 
 private slots:
     void httpsUrlHandler(const QUrl &url);
-    void changeEvent(QEvent * e);
     void ejectUSB();
     void loadUSB();
     void removeUSB();
