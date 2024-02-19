@@ -117,6 +117,21 @@ If building again cleanup using:
 
 ### 5. Run USB-SD-Creator
 
+#### Open the app
+
+Simply double click the app from a finder window in the root of the repo: `LibreELEC USB-SD Creator`
+
+#### Command line
+
+Run the app from the command line, that will prompt for a password:
 ```
-sudo ./LibreELEC\ USB-SD\ Creator.app/Contents/MacOS/*
+./LibreELEC\ USB-SD\ Creator.app/Contents/MacOS/LibreELEC\ USB-SD\ Creator
+```
+
+**Or:**
+
+Run the app from the command line using sudo
+
+```
+sudo ./LibreELEC\ USB-SD\ Creator.app/Contents/MacOS/LibreELEC\ USB-SD\ Creator
 ```
