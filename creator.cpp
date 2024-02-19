@@ -1439,10 +1439,14 @@ void Creator::refreshRemovablesList()
     QVariant previouslySelectedDevice;
     previouslySelectedDevice = settings.value("preferred/removableDevice");
 
+#ifndef Q_OS_MACOS
     privileges.SetRoot();    // root need for opening a device
+#endif
     QStringList devNames = devEnumerator->getRemovableDeviceNames();
     QStringList friendlyNames = devEnumerator->getUserFriendlyNames(devNames);
+#ifndef Q_OS_MACOS
     privileges.SetUser();    // back to user
+#endif
 
     // check for changes
     if (devNames.size() == ui->removableDevicesComboBox->count()) {
