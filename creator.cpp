@@ -71,17 +71,9 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     privileges(privilegesArg),
     deviceEjected("")
 {
-    // dummy strings used for translation buttons on message box
-    QString forMsgBoxTranslationStrings = tr("Yes") + \
-                                          tr("No") + \
-                                          tr("OK");
-    Q_UNUSED(forMsgBoxTranslationStrings);
-
-    timerId = 0;
     restoreGeometry(settings.value("window/geometry").toByteArray());
 
     ui->setupUi(this);
-    installEventFilter(this);
 
 #if defined(Q_OS_WIN)
     diskWriter = new DiskWriter_windows();
@@ -159,35 +151,22 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
 
     // create a timer that refreshes the device list every 1.5 second
     // if there is any change then list is changed and current device removed
-    timerId = 0;
     timerId = startTimer(timerValue);
 
     // set Fusion style
     QApplication::setStyle(QStyleFactory::create("Fusion"));
     // and apply some changes to styles
 
-#ifndef Q_OS_MAC
+#ifdef Q_OS_MACOS
+    QFile fileStyle(":/qss/stylesheet_osx.qss");
+#else
     QFile fileStyle(":/qss/stylesheet.qss");
+#endif
     if (fileStyle.open(QIODevice::ReadOnly | QIODevice::Text)) {
         this->setStyleSheet(QLatin1String(fileStyle.readAll()));
         this->ensurePolished();
         fileStyle.close();
     }
-#else
-    QFile fileStyleOsx(":/qss/stylesheet_osx.qss");
-    if (fileStyleOsx.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        this->setStyleSheet(QLatin1String(fileStyleOsx.readAll()));
-        this->ensurePolished();
-        fileStyleOsx.close();
-    }
-
-    QFont aboutFont;
-    aboutFont.setPointSize(13);
-    ui->labelAbout->setFont(aboutFont);
-
-    ui->closeAboutButton->setAttribute(Qt::WA_MacSmallSize);
-    ui->labelVersion->setAttribute(Qt::WA_MacSmallSize);
-#endif
 
     setImageFileName("");
     ui->writeFlashButton->setEnabled(false);
@@ -212,7 +191,9 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     }
 
     setAcceptDrops(true);    // allow droping files on a window
-    showRootMessageBox();
+
+    // singleShot fixes broken focus behavior if the message is shown on macOS
+    QTimer::singleShot(0, this, &Creator::showRootMessageBox);
 
     // call web browser through our wrapper for Linux
     QDesktopServices::setUrlHandler("http", this, "httpsUrlHandler");
@@ -228,7 +209,7 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
 
 bool Creator::showRootMessageBox()
 {
-#ifdef Q_OS_MAC
+#ifdef Q_OS_MACOS
     if (getuid() == 0)  // root == 0, real user != 0
         return false;
 
@@ -265,7 +246,7 @@ void Creator::httpsUrlHandler(const QUrl &url)
 {
     // on windows open web browser directly
     // for linux use a wrapper to set uid/gid correctly
-#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
     QDesktopServices::openUrl(url);
 #else
     qDebug() << "httpsUrlHandler called" << url;
@@ -1135,7 +1116,7 @@ void Creator::checkNewVersion(const QString &verNewStr)
 
     QMessageBox msgBox(this);
     msgBox.setWindowTitle(tr("Update Notification"));
-#ifdef Q_OS_MAC
+#ifdef Q_OS_MACOS
     QAbstractButton *visitButton = msgBox.addButton(tr("&Visit Website"), QMessageBox::NoRole);
     msgBox.addButton(tr("&Close"), QMessageBox::YesRole);
 #else

@@ -20,7 +20,7 @@
 #include "creator.h"
 #include "version.h"
 
-#ifdef Q_OS_MAC
+#ifdef Q_OS_MACOS
 #include "privileges_unix.h"
 #else
 #include "privileges.h"
@@ -107,10 +107,10 @@ int main(int argc, char *argv[])
 
 #ifndef Q_OS_MACOS
     privileges.SetUser();
-#endif
     privileges.Whoami();
+#endif
 
-    Creator win(privileges, 0);
+    Creator win(privileges);
     win.setArgFile(argFile);
     win.show();
 

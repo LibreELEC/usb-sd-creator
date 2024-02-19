@@ -22,7 +22,7 @@
 #include <QDebug>
 #include <unistd.h>
 
-#ifdef Q_OS_MAC
+#ifdef Q_OS_MACOS
 #include <QProcess>
 #endif
 
@@ -42,7 +42,7 @@ DiskWriter_unix::~DiskWriter_unix()
 bool DiskWriter_unix::open(const QString& device)
 {
     dev.setFileName(device);
-#ifdef Q_OS_MAC
+#ifdef Q_OS_MACOS
     // write to RAW device, this is MUCH faster
     QString rawdev(device);
     rawdev.replace(QString("/dev/"),QString("/dev/r"));

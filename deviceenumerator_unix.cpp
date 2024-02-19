@@ -167,7 +167,7 @@ QStringList DeviceEnumerator_unix::getUserFriendlyNames(const QStringList &devic
 
 bool DeviceEnumerator_unix::unmountDevicePartitions(const QString &device) const
 {
-#ifdef Q_OS_MAC
+#ifdef Q_OS_MACOS
     Q_UNUSED(device);
     return true;
 #else
