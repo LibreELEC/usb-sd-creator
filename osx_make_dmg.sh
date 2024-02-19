@@ -22,7 +22,7 @@ set -e
 DEVICE=""
 
 USER=$(whoami)
-QBIN="/Users/$USER/Qt/6.2.2-static/bin"
+QBIN="/Users/$USER/Qt/6.6.2-static/bin"
 
 function finish {
   echo "Cleaning up..."
