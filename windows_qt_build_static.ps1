@@ -6,7 +6,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-# Tested with QT 6.2.2 on Windows 10
+# Tested with QT 6.6.2 on Windows 10
 # https://mrfaptastic.github.io
 # https://gist.github.com/mrfaptastic/80e909c9a8237994471bce2d17657779
 
@@ -59,9 +59,9 @@
 
 [CmdletBinding()]
 param(
-    $QtSrcUrl = "https://download.qt.io/official_releases/qt/6.2/6.2.2/single/qt-everywhere-src-6.2.2.zip",
+    $QtSrcUrl = "https://download.qt.io/official_releases/qt/6.6/6.6.2/single/qt-everywhere-src-6.6.2.zip",
     $QtStaticDir = "C:\Qt\Static", # NO TRAILING SLASH
-    $QtVersion = "6.2.2", #If you change this, you'll need to change the URL above to download as well...
+    $QtVersion = "6.6.2", #If you change this, you'll need to change the URL above to download as well...
     $MingwDir = "",
     [switch]$NoPause = $false
 )
@@ -77,7 +77,7 @@ function Main
 {
     # Check that 7zip is installed. We use it to expand the downloaded archive.
     [void] (Get-7zip)
-	
+
     # Get Qt source file name from URL.
     $QtSrcFileName = Split-Path -Leaf $QtSrcUrl
 
@@ -136,15 +136,15 @@ DEFINES += QT_STATIC_BUILD
 
     # Set a clean path including MinGW.
     $env:Path += "$MingwDir\bin;$MingwDir\opt\bin;$env:SystemRoot\system32;$env:SystemRoot;$env:SystemRoot\system32\WindowsPowerShell\v1.0\;"
-	
-	
+
+
     # Check that the 'powershell' command is available
 	# ... and ruby, python and perl - as per: qt-everywhere-src-X.XX.X\README
 	#
 	# https://forum.qt.io/topic/118511/static-qt-environment-error-using-qt5-15-0/7
-	# 
-	[void] (Check-prequisites)	
-	
+	#
+	[void] (Check-prequisites)
+
 
     # Force English locale to avoid weird effects of tools localization.
     $env:LANG = "en"
@@ -250,43 +250,43 @@ function Get-7zip
 
 function Check-prequisites
 {
-	if (Get-Command "powershell.exe" -ErrorAction SilentlyContinue) 
-	{ 
+	if (Get-Command "powershell.exe" -ErrorAction SilentlyContinue)
+	{
 	   echo "PowerShell is available.. This is good"
 	}
 	else
 	{
        Exit-Script "'PowerShell' command is not available, check your windows path variable for this user account."
-	}	
+	}
 
-	if (Get-Command "ruby" -ErrorAction SilentlyContinue) 
-	{ 
+	if (Get-Command "ruby" -ErrorAction SilentlyContinue)
+	{
 	   echo "Ruby is available.. This is good"
 	}
 	else
 	{
        Exit-Script "'ruby' is not available, check your windows path variable for this user account or install per the Qt everything instructions!"
-	}	 	
-	
+	}
 
-	if (Get-Command "python" -ErrorAction SilentlyContinue) 
-	{ 
+
+	if (Get-Command "python" -ErrorAction SilentlyContinue)
+	{
 	   echo "Python is available.. This is good"
 	}
 	else
 	{
        Exit-Script "'python' is not available, check your windows path variable for this user account or install ActivePython per the Qt everything instructions!"
-	}	 	
+	}
 
-	if (Get-Command "perl" -ErrorAction SilentlyContinue) 
-	{ 
+	if (Get-Command "perl" -ErrorAction SilentlyContinue)
+	{
 	   echo "perl is available.. This is good"
 	}
 	else
 	{
        Exit-Script "'perl' is not available, check your windows path variable for this user account or install ActivePerl per the Qt everything instructions!"
-	}	 		
-	
+	}
+
 
 }
 
