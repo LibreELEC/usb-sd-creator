@@ -191,7 +191,9 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     }
 
     setAcceptDrops(true);    // allow droping files on a window
-    showRootMessageBox();
+
+    // singleShot fixes broken focus behavior if the message is shown on macOS
+    QTimer::singleShot(0, this, &Creator::showRootMessageBox);
 
     // call web browser through our wrapper for Linux
     QDesktopServices::setUrlHandler("http", this, "httpsUrlHandler");
