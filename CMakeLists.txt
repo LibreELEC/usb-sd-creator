@@ -83,7 +83,7 @@ qt_add_translations(LibreELEC.USB-SD.Creator
         lang/lang-pt_PT.ts
         lang/lang-ru_RU.ts
         lang/lang-sk_SK.ts
-        lang/lang-sl_SL.ts
+        lang/lang-sl_SI.ts
         lang/lang-sr_RS.ts
         lang/lang-sv_SE.ts
         lang/lang-tr_TR.ts
