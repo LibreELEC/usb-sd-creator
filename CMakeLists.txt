@@ -39,8 +39,9 @@ qt_add_executable(LibreELEC.USB-SD.Creator WIN32 MACOSX_BUNDLE
 # TODO: use Qt's template <QTDIR>/lib/cmake/Qt6/macos/Info.plist.app.in
 set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
     MACOSX_BUNDLE_INFO_PLIST "dmg_osx/template.app/Contents/Info.plist"
-    MACOSX_BUNDLE_GUI_IDENTIFIER "tv.libreelec.usb-sd-creator"
+    MACOSX_BUNDLE_BUNDLE_NAME "LibreELEC USB-SD Creator"
     MACOSX_BUNDLE_BUNDLE_VERSION "${PROJECT_VERSION}"
+    MACOSX_BUNDLE_GUI_IDENTIFIER "tv.libreelec.usb-sd-creator"
     MACOSX_BUNDLE_SHORT_VERSION_STRING "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}"
 )
 
