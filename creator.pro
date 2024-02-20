@@ -65,6 +65,7 @@ TRANSLATIONS += lang/lang-ast_ES.ts \
                 lang/lang-hr_HR.ts \
                 lang/lang-hu_HU.ts \
                 lang/lang-it_IT.ts \
+                lang/lang-ko_KR.ts \
                 lang/lang-lt_LT.ts \
                 lang/lang-nl_NL.ts \
                 lang/lang-no_NO.ts \
