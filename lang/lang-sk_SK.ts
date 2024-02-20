@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="sk_SK">
 <context>
     <name>Creator</name>
     <message>
@@ -26,6 +24,62 @@
     <message>
         <source>Load device</source>
         <translation>Načítať zariadenie</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Áno</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Nie</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Vybrať verziu</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>Zavrieť</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>Stiahnúť</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>O programe</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>Zapísať</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>Pomoc</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Vybrať súbor</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>Zobraziť všetko</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Vybrať projekt</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Vybrať obraz</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -100,6 +154,18 @@ Build date: %2</source>
         <translation>Ostáva %1 sekúnd - %2% na %3</translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation>Upozornenie na aktualizáciu</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>Navštíviť webstránku</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>Je dostupný LibreELEC USB-SD Creator %1.</translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation>Sťahovanie zrušené.</translation>
     </message>
@@ -132,6 +198,10 @@ už existuje.</translation>
         <translation>Nepodarilo sa otvoriť súbor na zapisovanie!</translation>
     </message>
     <message>
+        <source>Cance&amp;l</source>
+        <translation>Zrušiť</translation>
+    </message>
+    <message>
         <source>Open image file</source>
         <translation>Otvoriť súbor s obrazom</translation>
     </message>
@@ -140,12 +210,26 @@ už existuje.</translation>
         <translation>Komprimovaný obraz gz (*img.gz);;Komprimovaný obraz zip (*img.zip);;Nekomprimovaný obraz (*.img);;Všetky súbory (*.*)</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>Chyba: %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>Zapisovanie zrušené.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Potvrdiť zápis</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Zvolené zariadenie: %1
+Určite chcete zapísať obraz?
+
+Vaše zariadenie USB-SD bude vymazané!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -162,92 +246,6 @@ už existuje.</translation>
     <message>
         <source>Writing done!</source>
         <translation>Zápis ukončený!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Chyba: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Zvolené zariadenie: %1
-Určite chcete zapísať obraz?
-
-Vaše zariadenie USB-SD bude vymazané!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Áno</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Nie</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Upozornenie na aktualizáciu</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Vybrať verziu</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>Zavrieť</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>Stiahnúť</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>O programe</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>Zapísať</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>Pomoc</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Vybrať súbor</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>Zobraziť všetko</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>Zrušiť</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>Navštíviť webstránku</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>Je dostupný LibreELEC USB-SD Creator %1.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Vybrať projekt</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Vybrať obraz</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
