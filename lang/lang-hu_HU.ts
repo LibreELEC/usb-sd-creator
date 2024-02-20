@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="hu_HU">
 <context>
     <name>Creator</name>
     <message>
@@ -21,161 +19,11 @@
     </message>
     <message>
         <source>Eject device</source>
-        <translation>Lemez kiadása</translation>
+        <translation>Eszköz kiadása</translation>
     </message>
     <message>
         <source>Load device</source>
-        <translation>Lemez betöltése</translation>
-    </message>
-    <message>
-        <source>Root privileges required to write image.
-Run application with sudo.</source>
-        <translation>Rendszergazdai jogosultságok szükséges az íráshoz.
-Futtasd az alkalmazást sudo -val.</translation>
-    </message>
-    <message>
-        <source>Version: %1
-Build date: %2</source>
-        <translation>Verzió %1
-Build dátum: %2</translation>
-    </message>
-    <message>
-        <source>This software was created with love and released</source>
-        <translation>Ez a program szeretettel lett  létrehozva és kiadott</translation>
-    </message>
-    <message>
-        <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>GPLv2 alatt, használva RasPlex korábbi munkáját.</translation>
-    </message>
-    <message>
-        <source>For license, credits and history, please read:</source>
-        <translation>A licenszért, közreműködőkért és a történelemért kérjük olvassa el:</translation>
-    </message>
-    <message>
-        <source>If you enjoy using LibreELEC please consider a</source>
-        <translation>Ha tetszik LibreELEC kérjük</translation>
-    </message>
-    <message>
-        <source>donation to support the project.</source>
-        <translation>adományozzon a projekt támogátására.</translation>
-    </message>
-    <message>
-        <source>Click the logo below or donate</source>
-        <translation>Kattints az alábbi logora vagy adományozz</translation>
-    </message>
-    <message>
-        <source>using OpenCollective</source>
-        <translation>OpenCollectivet használva</translation>
-    </message>
-    <message>
-        <source>[Stable]</source>
-        <translation>[Stabil]</translation>
-    </message>
-    <message>
-        <source>[Alpha]</source>
-        <translation>[Alfa]</translation>
-    </message>
-    <message>
-        <source>[Beta]</source>
-        <translation>[Béta]</translation>
-    </message>
-    <message>
-        <source>Download complete, syncing file...</source>
-        <translation>Letöltés kész, fájl szinkronizálása...</translation>
-    </message>
-    <message>
-        <source>Download complete, verifying checksum...</source>
-        <translation>Letöltés kész, checksum ellenőrzése...</translation>
-    </message>
-    <message>
-        <source>Download complete, checksum ok.</source>
-        <translation>Letöltés kész, checksum rendben.</translation>
-    </message>
-    <message>
-        <source>Download complete, checksum not ok.</source>
-        <translation>Letöltés kész, checksum hibás.</translation>
-    </message>
-    <message>
-        <source>%1 seconds remaining - %2% at %3</source>
-        <translation>%1 másodperc van hátra - %2% a %3 -ból</translation>
-    </message>
-    <message>
-        <source>Download canceled.</source>
-        <translation>Letöltés megszakítva.</translation>
-    </message>
-    <message>
-        <source>Directory to store image file</source>
-        <translation>Könyvtár a képfájl tárolásához</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Hiba</translation>
-    </message>
-    <message>
-        <source>File 
-%1/%2
-already exist.</source>
-        <translation>A 
-%1/%2
-fájl már létezik.</translation>
-    </message>
-    <message>
-        <source>Do you want to overwrite?</source>
-        <translation>Biztosan felül akarod írni?</translation>
-    </message>
-    <message>
-        <source>File already exists.</source>
-        <translation>A fájl már létezik.</translation>
-    </message>
-    <message>
-        <source>Failed to open file for writing!</source>
-        <translation>Nem sikerült a fájlt megnyitni az íráshoz!</translation>
-    </message>
-    <message>
-        <source>Open image file</source>
-        <translation>Lemezkép megnyitása</translation>
-    </message>
-    <message>
-        <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation>Gz tömörített képfájl (*img.gz);;Zip tömörített képfájl (*img.zip);;Tömörítetlen képfájl (*.img);;Minden fájl (*.*)</translation>
-    </message>
-    <message>
-        <source>Writing canceled.</source>
-        <translation>Írás megszakítva.</translation>
-    </message>
-    <message>
-        <source>Confirm write</source>
-        <translation>Írás megerősítésa</translation>
-    </message>
-    <message>
-        <source>Cannot unmount partititons on device %1</source>
-        <translation>Nem tudom a particiókat leválasztani az eszközről %1</translation>
-    </message>
-    <message>
-        <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation>Nincs elegendő hely a következő eszközön. %1 [%2 &lt; %3]</translation>
-    </message>
-    <message>
-        <source>Syncing file system...</source>
-        <translation>Fájlrendszer szinkronizálása...</translation>
-    </message>
-    <message>
-        <source>Writing done!</source>
-        <translation>Írás kész!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Hiba: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Kiválasztott eszköz: %1
-Biztos akarod megírni ezt a képet?
-
-A USB-SD eszköz törölve lesz!</translation>
+        <translation>Eszköz betöltése</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -188,10 +36,6 @@ A USB-SD eszköz törölve lesz!</translation>
     <message>
         <source>OK</source>
         <translation>OK</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Frissítési értesesítés</translation>
     </message>
     <message>
         <source>Select version</source>
@@ -226,8 +70,92 @@ A USB-SD eszköz törölve lesz!</translation>
         <translation>Mutasd mind</translation>
     </message>
     <message>
-        <source>Cance&amp;l</source>
-        <translation>Mégsem</translation>
+        <source>Select project</source>
+        <translation>Projekt kiválsztása</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Lemezkép kiválasztása</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Root privileges required to write image.
+Run application with sudo.</source>
+        <translation>Rendszergazdai jogosultság szükséges az íráshoz.
+Futtasd az alkalmazást sudo -val.</translation>
+    </message>
+    <message>
+        <source>Version: %1
+Build date: %2</source>
+        <translation>Verzió %1
+Build dátum: %2</translation>
+    </message>
+    <message>
+        <source>This software was created with love and released</source>
+        <translation>Ez a program szeretettel lett létrehozva és kiadva</translation>
+    </message>
+    <message>
+        <source>under GPLv2, using earlier work from RasPlex.</source>
+        <translation>GPLv2 alatt, felhasználva RasPlex korábbi munkáját.</translation>
+    </message>
+    <message>
+        <source>For license, credits and history, please read:</source>
+        <translation>A licenszért, közreműködőkért és a történetért kérjük olvassa el:</translation>
+    </message>
+    <message>
+        <source>If you enjoy using LibreELEC please consider a</source>
+        <translation>Ha tetszik a LibreELEC kérjük</translation>
+    </message>
+    <message>
+        <source>donation to support the project.</source>
+        <translation>adományozzon a projekt támogátására.</translation>
+    </message>
+    <message>
+        <source>Click the logo below or donate</source>
+        <translation>Kattintson az alábbi logóra vagy adományozzon</translation>
+    </message>
+    <message>
+        <source>using OpenCollective</source>
+        <translation>OpenCollective használva hogy:</translation>
+    </message>
+    <message>
+        <source>[Stable]</source>
+        <translation>[Stabil]</translation>
+    </message>
+    <message>
+        <source>[Alpha]</source>
+        <translation>[Alfa]</translation>
+    </message>
+    <message>
+        <source>[Beta]</source>
+        <translation>[Béta]</translation>
+    </message>
+    <message>
+        <source>Download complete, syncing file...</source>
+        <translation>Letöltés kész, fájl szinkronizálása...</translation>
+    </message>
+    <message>
+        <source>Download complete, verifying checksum...</source>
+        <translation>Letöltés kész, checksum ellenőrzése...</translation>
+    </message>
+    <message>
+        <source>Download complete, checksum ok.</source>
+        <translation>Letöltés kész, checksum rendben.</translation>
+    </message>
+    <message>
+        <source>Download complete, checksum not ok.</source>
+        <translation>Letöltés kész, checksum hibás.</translation>
+    </message>
+    <message>
+        <source>%1 seconds remaining - %2% at %3</source>
+        <translation>%1 másodperc van hátra - %2% a %3 -ból</translation>
+    </message>
+    <message>
+        <source>Update Notification</source>
+        <translation>Frissítési értesesítés</translation>
     </message>
     <message>
         <source>&amp;Visit Website</source>
@@ -238,16 +166,86 @@ A USB-SD eszköz törölve lesz!</translation>
         <translation>LibreELEC USB-SD készítő %1 elérhető.</translation>
     </message>
     <message>
-        <source>Select project</source>
-        <translation>Projekt kiválsztása</translation>
+        <source>Download canceled.</source>
+        <translation>Letöltés megszakítva.</translation>
     </message>
     <message>
-        <source>Select image</source>
-        <translation>Lemezkép kiválasztása</translation>
+        <source>Directory to store image file</source>
+        <translation>Könyvtár a képfájl tárolásához</translation>
     </message>
     <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
+        <source>Error</source>
+        <translation>Hiba</translation>
+    </message>
+    <message>
+        <source>File 
+%1/%2
+already exist.</source>
+        <translation>A 
+%1/%2
+fájl már létezik.</translation>
+    </message>
+    <message>
+        <source>Do you want to overwrite?</source>
+        <translation>Biztosan felül akarod írni?</translation>
+    </message>
+    <message>
+        <source>File already exists.</source>
+        <translation>A fájl már létezik.</translation>
+    </message>
+    <message>
+        <source>Failed to open file for writing!</source>
+        <translation>Nem sikerült a fájlt megnyitni az íráshoz!</translation>
+    </message>
+    <message>
+        <source>Cance&amp;l</source>
+        <translation>Mégsem</translation>
+    </message>
+    <message>
+        <source>Open image file</source>
+        <translation>Lemezkép megnyitása</translation>
+    </message>
+    <message>
+        <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
+        <translation>Gz tömörített képfájl (*img.gz);;Zip tömörített képfájl (*img.zip);;Tömörítetlen képfájl (*.img);;Minden fájl (*.*)</translation>
+    </message>
+    <message>
+        <source>Error: %1</source>
+        <translation>Hiba: %1</translation>
+    </message>
+    <message>
+        <source>Writing canceled.</source>
+        <translation>Írás megszakítva.</translation>
+    </message>
+    <message>
+        <source>Confirm write</source>
+        <translation>Írás megerősítése</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Kiválasztott eszköz: %1
+Biztos ki akarod írni ezt a képfájlt?
+
+Az USB-SD eszköz törölve lesz!</translation>
+    </message>
+    <message>
+        <source>Cannot unmount partititons on device %1</source>
+        <translation>Nem tudom a particiókat leválasztani az eszközről %1</translation>
+    </message>
+    <message>
+        <source>Not enough space on %1 [%2 &lt; %3]</source>
+        <translation>Nincs elegendő hely a következő eszközön. %1 [%2 &lt; %3]</translation>
+    </message>
+    <message>
+        <source>Syncing file system...</source>
+        <translation>Fájlrendszer szinkronizálása...</translation>
+    </message>
+    <message>
+        <source>Writing done!</source>
+        <translation>Írás kész!</translation>
     </message>
 </context>
 <context>
