@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="es_ES">
 <context>
     <name>Creator</name>
     <message>
@@ -13,7 +11,7 @@
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>Seleccion tu memoria USB o tarjeta SD</translation>
+        <translation>Selecciona tu memoria USB o tarjeta SD</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
@@ -28,16 +26,72 @@
         <translation>Cargar dispositivo</translation>
     </message>
     <message>
+        <source>Yes</source>
+        <translation>Sí</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>No</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>Aceptar</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Seleccionar versión</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>Cerrar</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>Descargar</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>Acerca de</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>Escribir</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>Ayuda</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Seleccionar archivo</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>Mostrar todo</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Seleccionar proyecto</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Seleccionar imagen</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation>Expulsar  Cargar         Quitar</translation>
+    </message>
+    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>Se requiere privilegios de root para escribir imagen. 
+        <translation>Se requiere privilegios de root para escribir la imagen.
 Ejecuta la aplicación con sudo.</translation>
     </message>
     <message>
         <source>Version: %1
 Build date: %2</source>
         <translation>Versión: %1
-Fecha de construcción: %2</translation>
+Fecha de compilación: %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
@@ -45,7 +99,7 @@ Fecha de construcción: %2</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>bajo GPLv2, usando trabajos primarios de RasPlex.</translation>
+        <translation>bajo GPLv2, usando trabajos anteriores de RasPlex.</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
@@ -61,11 +115,11 @@ Fecha de construcción: %2</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
-        <translation>Haz click en el logo abajo o dona</translation>
+        <translation>Haz clic en el logo abajo o dona</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>usando OpenCollective</translation>
+        <translation>usando OpenCollective a:</translation>
     </message>
     <message>
         <source>[Stable]</source>
@@ -85,19 +139,31 @@ Fecha de construcción: %2</translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation>Descarga completa, verificando checksum...</translation>
+        <translation>Descarga completa, validando suma de verificación...</translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation>Descarga completa, checksum correcto.</translation>
+        <translation>Descarga completa, suma de verificación correcta.</translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation>Descarga completa, checksum no correcto.</translation>
+        <translation>Descarga completa, suma de verificación no correcta.</translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>
         <translation>%1 segundos restantes - %2% a %3</translation>
+    </message>
+    <message>
+        <source>Update Notification</source>
+        <translation>Notificación de actualización</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>Visitar sitio web</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>Creador de USB-SD de LibreELEC %1 esta disponible.</translation>
     </message>
     <message>
         <source>Download canceled.</source>
@@ -121,7 +187,7 @@ ya existe.</translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
-        <translation>¿Deseas sobreescribir?</translation>
+        <translation>¿Deseas sobrescribir?</translation>
     </message>
     <message>
         <source>File already exists.</source>
@@ -129,7 +195,11 @@ ya existe.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation>¡Falló la apertura del archivo para escritura!</translation>
+        <translation>¡Error al abrir el archivo para escritura!</translation>
+    </message>
+    <message>
+        <source>Cance&amp;l</source>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <source>Open image file</source>
@@ -140,12 +210,26 @@ ya existe.</translation>
         <translation>Imagen comprimida gz (*img.gz);;Imagen comprimida zip (*img.zip);;Imagen sin comprimir (*.img);;Todos los archivos (*.*)</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>Error: %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>Escritura cancelada.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Confirmar escritura</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Dispositivo seleccionado: %1
+¿Estas seguro de que deseas escribir la imagen?
+
+¡Tu dispositivo USB-SD será formateado!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -163,98 +247,12 @@ ya existe.</translation>
         <source>Writing done!</source>
         <translation>¡Escritura realizada!</translation>
     </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Error: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Dispositivo seleccionado: %1
-¿Estas seguro de que deseas escribir la imagen?
-
-¡Tu dispositivo USB-SD ha sido formateado!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Sí</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>No</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Notificación de actualización</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Seleccionar versión</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>Cerrar</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>Descargar</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>Acerca</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>Escribir</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>Ayuda</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Seleccionar archivo</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>Mostrar todo</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>Cancelar</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>Visita el sitio web</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>Creador de USB-SD de LibreELEC %1 esta disponible.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Seleccionar proyecto</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Seleccionar imagen</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Write Error</source>
-        <translation>Escribir Error</translation>
+        <translation>Error de escritura</translation>
     </message>
     <message>
         <source>An error occurred when attempting to write data to handle.
@@ -269,7 +267,7 @@ Error %1: %2</translation>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation>Ha ocurrido un error al tratar de obtenerel handle en el volumen.
+        <translation>Ha ocurrido un error al tratar de obtener el handle en el volumen.
 Error %1: %2</translation>
     </message>
     <message>
