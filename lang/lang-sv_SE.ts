@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="sv_SE">
 <context>
     <name>Creator</name>
     <message>
@@ -13,11 +11,11 @@
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>Välj USB eller SD-kort</translation>
+        <translation>Välj USB-minne eller SD-kort</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
-        <translation>Ladda ner eller välj en lokal fil</translation>
+        <translation>Ladda ned eller välj en lokal fil</translation>
     </message>
     <message>
         <source>Eject device</source>
@@ -26,6 +24,62 @@
     <message>
         <source>Load device</source>
         <translation>Ladda enhet</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Ja</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Nej</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Välj version</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>&amp;Stäng</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>&amp;Ladda ned</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>&amp;Om</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>S&amp;kriv</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Hjälp</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Välj &amp;fil</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>&amp;Visa alla</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Välj projekt</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Välj avbild</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -61,11 +115,11 @@ Byggdatum: %2</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
-        <translation>Klicka på logotypen nedan för att donera</translation>
+        <translation>Klicka på logotypen nedan eller donera</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>använd OpenCollective</translation>
+        <translation>använd OpenCollective för:</translation>
     </message>
     <message>
         <source>[Stable]</source>
@@ -100,6 +154,18 @@ Byggdatum: %2</translation>
         <translation>%1 sekunder kvarstår - %2% till %3</translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation>Kontrollera uppdateringar</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>&amp;Besök hemsidan</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>LibreELEC USB-SD Creator %1 finns tillgängligt.</translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation>Nedladdning avbruten.</translation>
     </message>
@@ -132,6 +198,10 @@ finns redan.</translation>
         <translation>Kunde inte skriva till filen!</translation>
     </message>
     <message>
+        <source>Cance&amp;l</source>
+        <translation>&amp;Avbryt</translation>
+    </message>
+    <message>
         <source>Open image file</source>
         <translation>Öppna avbild</translation>
     </message>
@@ -140,12 +210,26 @@ finns redan.</translation>
         <translation>Komprimerad gz avbild (*img.gz);;Komprimerad zip avbild (*img.zip);;Okomprimerad avbild (*.img);;Alla filer (*.*)</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>Fel: %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>Skrivningen avbröts.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Bekräfta skrivning</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Vald enhet: %1
+Är du säker på att du vill skriva avbilden?
+
+Din USB-SD enhet kommer raderas!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -163,92 +247,6 @@ finns redan.</translation>
         <source>Writing done!</source>
         <translation>Skrivning klar!</translation>
     </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Fel: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Vald enhet: %1
-Är du säker på att du vill skriva avbilden?
-
-Din USB-SD enhet kommer raderas!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Ja</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Nej</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Kontrollera uppdateringar</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Välj version</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>&amp;Stäng</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>&amp;Ladda ner</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>&amp;Om</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>S&amp;kriv</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Hjälp</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Välj &amp;fil</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>&amp;Visa alla</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>&amp;Avbryt</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>&amp;Besök hemsidan</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD Creator %1 finns tillgängligt.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Välj projekt</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Välj avbild</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>QObject</name>
@@ -264,7 +262,7 @@ Fel %1: %2</translation>
     </message>
     <message>
         <source>Volume Error</source>
-        <translation>Volym Fel</translation>
+        <translation>Volymfel</translation>
     </message>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.

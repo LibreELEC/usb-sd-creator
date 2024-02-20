@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="nb_NO">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="no_NO">
 <context>
     <name>Creator</name>
     <message>
@@ -26,6 +24,62 @@
     <message>
         <source>Load device</source>
         <translation>Last enhet</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Ja</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Nei</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Velg versjon</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>Lukk</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>Last ned</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>Om</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>Skriv</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>Hjelp</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Velg fil</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>Vis alle</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Velg prosjekt</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Velg bildefil</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -65,7 +119,7 @@ Byggdato: %2</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>ved hjelp av OpenCollective</translation>
+        <translation>ved hjelp av OpenCollective for:</translation>
     </message>
     <message>
         <source>[Stable]</source>
@@ -100,6 +154,18 @@ Byggdato: %2</translation>
         <translation>%1 sekunder gjenstår - %2% på %3</translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation>Oppdateringsvarsling</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>Besøk nettside</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>LibreELEC USB-SD Creator %1 er tilgjengelig.</translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation>Nedlasting avbrutt.</translation>
     </message>
@@ -132,6 +198,10 @@ eksisterer allerede.</translation>
         <translation>Åpning av fil for skriving feilet!</translation>
     </message>
     <message>
+        <source>Cance&amp;l</source>
+        <translation>Avbryt</translation>
+    </message>
+    <message>
         <source>Open image file</source>
         <translation>Åpne bildefil</translation>
     </message>
@@ -140,12 +210,25 @@ eksisterer allerede.</translation>
         <translation>Komprimert gz bilde (*img.gz);;Komprimert zip bilde (*img.zip);;Ukomprimert bilde (*.img);;Alle filer (*.*)</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>Feil: %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>Skriving avbrutt.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Bekreft skriving</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Valgt enhet: %1
+Er du sikker på at du vil skrive bildefilen?
+Din USB-SD enhet vil bli tømt!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -162,91 +245,6 @@ eksisterer allerede.</translation>
     <message>
         <source>Writing done!</source>
         <translation>Skriving fullført!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Feil: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Valgt enhet: %1
-Er du sikker på at du vil skrive bildefilen?
-Din USB-SD enhet vil bli tømt!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Ja</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Nei</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Oppdateringsvarsling</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Velg versjon</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>Lukk</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>Last ned</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>Om</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>Skriv</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>Hjelp</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Velg fil</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>Vis alle</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>Avbryt</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>Besøk nettside</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD Creator %1 er tilgjengelig.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Velg prosjekt</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Velg bildefil</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

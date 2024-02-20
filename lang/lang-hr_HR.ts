@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="hr_HR">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="hr_HR">
 <context>
     <name>Creator</name>
     <message>
@@ -26,6 +24,62 @@
     <message>
         <source>Load device</source>
         <translation>Učitaj uređaj</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Da</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Ne</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Odaberi verziju</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>&amp;Zatvori</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>&amp;Preuzmi</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>&amp;O</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>&amp;Zapiši</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Pomoć</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Odaberi &amp;datoteku</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>&amp;Prikaži sve</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Odaberi projekt</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Odaberite datoteku slike</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -64,7 +118,7 @@ Datum izrade: %2</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>koristeći OpenCollective</translation>
+        <translation>koristeći OpenCollective također:</translation>
     </message>
     <message>
         <source>[Stable]</source>
@@ -99,6 +153,18 @@ Datum izrade: %2</translation>
         <translation>%1 sekunda preostaje - %2% sa %3</translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation>Obavijest o ažuriranju</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>Posjeti web stranicu</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>LibreELEC USB-SD aplikacija %1 je dostupna.</translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation>Preuzimanje otkazano.</translation>
     </message>
@@ -129,6 +195,10 @@ already exist.</source>
         <translation>Neuspjeli pokušaj otvaranja datoteke slike za zapis!</translation>
     </message>
     <message>
+        <source>Cance&amp;l</source>
+        <translation>Otkaži</translation>
+    </message>
+    <message>
         <source>Open image file</source>
         <translation>Otvori datoteku slike</translation>
     </message>
@@ -137,12 +207,26 @@ already exist.</source>
         <translation>komprimirani gz slika (*img.gz);;Komprimirana zip slika (*img.zip);;Nekomprimirana</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>Pogreška: %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>Zapisivanje otkazano.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Potvrdi zapisivanje</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Odaberi uređaj: %1
+Jesi li siguran da želiš zapisati slikovnu datoteku?
+
+Tvoj USB-SD uređaj će biti izbrisan!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -159,92 +243,6 @@ already exist.</source>
     <message>
         <source>Writing done!</source>
         <translation>Zapisivanje završeno!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Pogreška: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Odaberi uređaj: %1
-Jesi li siguran da želiš zapisati slikovnu datoteku?
-
-Tvoj USB-SD uređaj će biti izbrisan!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Da</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Ne</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Obavijest o ažuriranju</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Odaberi verziju</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>&amp;Zatvori</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>&amp;Preuzmi</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>&amp;O</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>&amp;Zapiši</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Pomoć</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Odaberi &amp;datoteku</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>&amp;Prikaži sve</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>Otkaži</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>Posjeti web stranicu</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD aplikacija %1 je dostupna.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Odaberi projekt</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Odaberite datoteku slike</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

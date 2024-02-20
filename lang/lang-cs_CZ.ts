@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="cs_CZ">
 <context>
     <name>Creator</name>
     <message>
@@ -28,23 +26,80 @@
         <translation>Načíst zařízení</translation>
     </message>
     <message>
+        <source>Yes</source>
+        <translation>Ano</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Ne</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Vybrat verzi</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>&amp;Zavřít</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>&amp;Stáhnout</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>&amp;O programu</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>&amp;Zapsat</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Nápověda</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Vybrat &amp;soubor</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>&amp;Ukázat vše</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Vybrat projekt</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Vybrat soubor img</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>K zapsání obrazu jsou potřeba práva root. Spustťe aplikaci pomocí sudo.</translation>
+        <translation>K zapsání obrazu jsou potřeba práva root.
+Spusťte aplikaci pomocí sudo.</translation>
     </message>
     <message>
         <source>Version: %1
 Build date: %2</source>
         <translation>Verze: %1
-Datum buildu: %2</translation>
+Datum sestavení: %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
-        <translation>Tento software byl vytvořen s láskou a uvolněn</translation>
+        <translation>Tento software byl vytvořen s láskou a poté vydán</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>pod GPlv2 díky předchozí práci z RasPlex</translation>
+        <translation>pod GPlv2 díky předchozí práci z RasPlex</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
@@ -52,7 +107,7 @@ Datum buildu: %2</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation>Pokud se vám líbí LibreELEC zvažte</translation>
+        <translation>Pokud se vám líbí LibreELEC, zvažte</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
@@ -64,7 +119,7 @@ Datum buildu: %2</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>pomocí OpenCollectiveu</translation>
+        <translation>pomocí OpenCollectiveu na:</translation>
     </message>
     <message>
         <source>[Stable]</source>
@@ -80,31 +135,43 @@ Datum buildu: %2</translation>
     </message>
     <message>
         <source>Download complete, syncing file...</source>
-        <translation>Stažení dokončeno, probíhá synchronizace...</translation>
+        <translation>Stahování dokončeno, probíhá synchronizace...</translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation>Stažení dokončeno, probíhá ověřování...</translation>
+        <translation>Stahování dokončeno, probíhá ověřování...</translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation>Stažení dokončeno, ověření proběhlo v pořádku.</translation>
+        <translation>Stahování dokončeno, ověření proběhlo v pořádku.</translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation>Stažení dokončeno, ověření se nezdařilo.</translation>
+        <translation>Stahování dokončeno, ověření se nezdařilo.</translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation>%1 sekund zbývá - %2% na %3</translation>
+        <translation>Zbývá %1 s – %2% na %3</translation>
+    </message>
+    <message>
+        <source>Update Notification</source>
+        <translation>Upozornění na aktualizaci</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>&amp;Navštivte webové stránky</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>LibreELEC USB-SD Creator %1 je k dispozici.</translation>
     </message>
     <message>
         <source>Download canceled.</source>
-        <translation>Stahování zrušeno.</translation>
+        <translation>Stahování bylo zrušeno.</translation>
     </message>
     <message>
         <source>Directory to store image file</source>
-        <translation>Cesta k uložení img souboru</translation>
+        <translation>Cesta k uložení img souboru</translation>
     </message>
     <message>
         <source>Error</source>
@@ -128,7 +195,11 @@ již existuje.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation>Nepodařilo se otevřít soubor k zapsání!</translation>
+        <translation>Nepodařilo se otevřít soubor k zapsání!</translation>
+    </message>
+    <message>
+        <source>Cance&amp;l</source>
+        <translation>&amp;Zrušit</translation>
     </message>
     <message>
         <source>Open image file</source>
@@ -136,23 +207,37 @@ již existuje.</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation>Komprimovaný soubor gz (*img.gz);;Komprimovaný soubor zip (*img.zip);;Nekomprimovaný soubor (*.img);;All files (*.*)</translation>
+        <translation>Komprimovaný soubor gz (*img.gz);;Komprimovaný soubor zip (*img.zip);;Nekomprimovaný soubor (*.img);;Všechny soubory (*.*)</translation>
+    </message>
+    <message>
+        <source>Error: %1</source>
+        <translation>Chyba: %1</translation>
     </message>
     <message>
         <source>Writing canceled.</source>
-        <translation>Zapisování bylo zrušeno</translation>
+        <translation>Zapisování bylo zrušeno.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Potvrďte zápis</translation>
     </message>
     <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Zvolené zařízení: %1
+Jste si jisti, že chcete zapsat img?
+
+Vaše USB zařízení bude zcela vymazáno!</translation>
+    </message>
+    <message>
         <source>Cannot unmount partititons on device %1</source>
-        <translation>Nelze odebrat partions na zařízení %1</translation>
+        <translation>Na zařízení %1 nelze odpojit oddíly</translation>
     </message>
     <message>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation>Nedostatek místa na %1 [%2 &lt; %3]</translation>
+        <translation>Na %1 není dostatek místa [%2 &lt; %3]</translation>
     </message>
     <message>
         <source>Syncing file system...</source>
@@ -161,92 +246,6 @@ již existuje.</translation>
     <message>
         <source>Writing done!</source>
         <translation>Zapisování dokončeno!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Chyba: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Zvolené zařízení: %1
-Určitě chcete zapsat img?
-
-Vaše USB zařízení bude zcela smazáno!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Ano</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Ne</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Upozornění na aktualizaci</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Vybrat verzi</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>Zavřít</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>Stáhnout</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>O programu</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>Zapsat</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>Pomoc</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Vybrat soubor</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>Ukázat vše</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>Zrušit</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>Navštivte webové stránky</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD Creator %1 je k dispozici.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Vybrat projekt</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Vybrat soubor img</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -258,7 +257,7 @@ Vaše USB zařízení bude zcela smazáno!</translation>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation>Při pokusu o zapsání dat nastala chyba.
+        <translation>Při pokusu o zapsání dat nastala chyba.
 Chyba %1: %2</translation>
     </message>
     <message>
@@ -278,7 +277,7 @@ Chyba %1: %2</translation>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation>Při pokusu o uzamčení svazku nastala chyba.
+        <translation>Při pokusu o uzamčení svazku nastala chyba.
 Chyba %1: %2</translation>
     </message>
     <message>
@@ -288,7 +287,7 @@ Chyba %1: %2</translation>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation>Při pokusu o odemčení svazku nastala chyba.
+        <translation>Při pokusu o odemčení svazku nastala chyba.
 Chyba %1: %2</translation>
     </message>
     <message>
@@ -298,7 +297,7 @@ Chyba %1: %2</translation>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation>Při pokusu o odebrání svazku nastala chyba.
+        <translation>Při pokusu o odebrání svazku nastala chyba.
 Chyba %1: %2</translation>
     </message>
 </context>

@@ -1,129 +1,129 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="hu_HU">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="es">
 <context>
     <name>Creator</name>
     <message>
         <source>LibreELEC USB-SD Creator</source>
-        <translation>LibreELEC USB-SD készítő</translation>
+        <translation>Creador de USB-SD de LibreELEC</translation>
     </message>
     <message>
         <source>Write image</source>
-        <translation>Lemezkép írása</translation>
+        <translation>Escribir imagen</translation>
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>USB meghajtó vagy SD kártya kiválasztása</translation>
+        <translation>Selecciona tu memoria USB o tarjeta SD</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
-        <translation>Letöltés vagy helyi lemezkép kiválasztása</translation>
+        <translation>Descarga o elige un archivo de imagen local</translation>
     </message>
     <message>
         <source>Eject device</source>
-        <translation>Eszköz kiadása</translation>
+        <translation>Expulsar dispositivo</translation>
     </message>
     <message>
         <source>Load device</source>
-        <translation>Eszköz betöltése</translation>
+        <translation>Cargar dispositivo</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation>Igen</translation>
+        <translation>Sí</translation>
     </message>
     <message>
         <source>No</source>
-        <translation>Nem</translation>
+        <translation>No</translation>
     </message>
     <message>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>Aceptar</translation>
     </message>
     <message>
         <source>Select version</source>
-        <translation>Verzió kiválasztása</translation>
+        <translation>Seleccionar versión</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>Bezár</translation>
+        <translation>Cerrar</translation>
     </message>
     <message>
         <source>&amp;Download</source>
-        <translation>Letöltés</translation>
+        <translation>Descargar</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>Rólunk</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <source>&amp;Write</source>
-        <translation>Írás</translation>
+        <translation>Escribir</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>Segítség</translation>
+        <translation>Ayuda</translation>
     </message>
     <message>
         <source>Select &amp;file</source>
-        <translation>Tallózás</translation>
+        <translation>Seleccionar archivo</translation>
     </message>
     <message>
         <source>&amp;Show all</source>
-        <translation>Mutasd mind</translation>
+        <translation>Mostrar todo</translation>
     </message>
     <message>
         <source>Select project</source>
-        <translation>Projekt kiválsztása</translation>
+        <translation>Seleccionar proyecto</translation>
     </message>
     <message>
         <source>Select image</source>
-        <translation>Lemezkép kiválasztása</translation>
+        <translation>Seleccionar imagen</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>
-        <translation type="unfinished"/>
+        <translation>Expulsar  Cargar         Quitar</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>Rendszergazdai jogosultság szükséges az íráshoz.
-Futtasd az alkalmazást sudo -val.</translation>
+        <translation>Se requiere privilegios de root para escribir la imagen.
+Ejecuta la aplicación con sudo.</translation>
     </message>
     <message>
         <source>Version: %1
 Build date: %2</source>
-        <translation>Verzió %1
-Build dátum: %2</translation>
+        <translation>Versión: %1
+Fecha de compilación: %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
-        <translation>Ez a program szeretettel lett létrehozva és kiadva</translation>
+        <translation>Este software fue creado con amor y publicado</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>GPLv2 alatt, felhasználva RasPlex korábbi munkáját.</translation>
+        <translation>bajo GPLv2, usando trabajos anteriores de RasPlex.</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
-        <translation>A licenszért, közreműködőkért és a történetért kérjük olvassa el:</translation>
+        <translation>Para licencia, créditos e historia, por favor lee:</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation>Ha tetszik a LibreELEC kérjük</translation>
+        <translation>Si disfrutas usar LibreELEC por favor considera una</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation>adományozzon a projekt támogátására.</translation>
+        <translation>donación para apoyar el proyecto.</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
-        <translation>Kattintson az alábbi logóra vagy adományozzon</translation>
+        <translation>Haz clic en el logo abajo o dona</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>OpenCollective használva hogy:</translation>
+        <translation>usando OpenCollective a:</translation>
     </message>
     <message>
         <source>[Stable]</source>
-        <translation>[Stabil]</translation>
+        <translation>[Estable]</translation>
     </message>
     <message>
         <source>[Alpha]</source>
@@ -131,174 +131,174 @@ Build dátum: %2</translation>
     </message>
     <message>
         <source>[Beta]</source>
-        <translation>[Béta]</translation>
+        <translation>[Beta]</translation>
     </message>
     <message>
         <source>Download complete, syncing file...</source>
-        <translation>Letöltés kész, fájl szinkronizálása...</translation>
+        <translation>Descarga completa, sincronizando archivo...</translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation>Letöltés kész, checksum ellenőrzése...</translation>
+        <translation>Descarga completa, validando suma de verificación...</translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation>Letöltés kész, checksum rendben.</translation>
+        <translation>Descarga completa, suma de verificación correcta.</translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation>Letöltés kész, checksum hibás.</translation>
+        <translation>Descarga completa, suma de verificación no correcta.</translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation>%1 másodperc van hátra - %2% a %3 -ból</translation>
+        <translation>%1 segundos restantes - %2% a %3</translation>
     </message>
     <message>
         <source>Update Notification</source>
-        <translation>Frissítési értesesítés</translation>
+        <translation>Notificación de actualización</translation>
     </message>
     <message>
         <source>&amp;Visit Website</source>
-        <translation>Weboldal meglátogatása</translation>
+        <translation>Visitar sitio web</translation>
     </message>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD készítő %1 elérhető.</translation>
+        <translation>Creador de USB-SD de LibreELEC %1 esta disponible.</translation>
     </message>
     <message>
         <source>Download canceled.</source>
-        <translation>Letöltés megszakítva.</translation>
+        <translation>Descarga cancelada.</translation>
     </message>
     <message>
         <source>Directory to store image file</source>
-        <translation>Könyvtár a képfájl tárolásához</translation>
+        <translation>Directorio para guardar archivo de imagen</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Hiba</translation>
+        <translation>Error</translation>
     </message>
     <message>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation>A 
+        <translation>El archivo
 %1/%2
-fájl már létezik.</translation>
+ya existe.</translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
-        <translation>Biztosan felül akarod írni?</translation>
+        <translation>¿Deseas sobrescribir?</translation>
     </message>
     <message>
         <source>File already exists.</source>
-        <translation>A fájl már létezik.</translation>
+        <translation>El archivo ya existe.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation>Nem sikerült a fájlt megnyitni az íráshoz!</translation>
+        <translation>¡Error al abrir el archivo para escritura!</translation>
     </message>
     <message>
         <source>Cance&amp;l</source>
-        <translation>Mégsem</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <source>Open image file</source>
-        <translation>Lemezkép megnyitása</translation>
+        <translation>Abrir archivo de imagen</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation>Gz tömörített képfájl (*img.gz);;Zip tömörített képfájl (*img.zip);;Tömörítetlen képfájl (*.img);;Minden fájl (*.*)</translation>
+        <translation>Imagen comprimida gz (*img.gz);;Imagen comprimida zip (*img.zip);;Imagen sin comprimir (*.img);;Todos los archivos (*.*)</translation>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Hiba: %1</translation>
+        <translation>Error: %1</translation>
     </message>
     <message>
         <source>Writing canceled.</source>
-        <translation>Írás megszakítva.</translation>
+        <translation>Escritura cancelada.</translation>
     </message>
     <message>
         <source>Confirm write</source>
-        <translation>Írás megerősítése</translation>
+        <translation>Confirmar escritura</translation>
     </message>
     <message>
         <source>Selected device: %1
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation>Kiválasztott eszköz: %1
-Biztos ki akarod írni ezt a képfájlt?
+        <translation>Dispositivo seleccionado: %1
+¿Estas seguro de que deseas escribir la imagen?
 
-Az USB-SD eszköz törölve lesz!</translation>
+¡Tu dispositivo USB-SD será formateado!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
-        <translation>Nem tudom a particiókat leválasztani az eszközről %1</translation>
+        <translation>No se pueden desmontar las particiones en el dispositivo %1</translation>
     </message>
     <message>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation>Nincs elegendő hely a következő eszközön. %1 [%2 &lt; %3]</translation>
+        <translation>No hay suficiente espacio en %1 [%2 &lt; %3]</translation>
     </message>
     <message>
         <source>Syncing file system...</source>
-        <translation>Fájlrendszer szinkronizálása...</translation>
+        <translation>Sincronizando sistema de archivos...</translation>
     </message>
     <message>
         <source>Writing done!</source>
-        <translation>Írás kész!</translation>
+        <translation>¡Escritura realizada!</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Write Error</source>
-        <translation>Írás hiba</translation>
+        <translation>Error de escritura</translation>
     </message>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation>Egy hiba történt az adat kiírása közben.
-Hiba %1: %2</translation>
+        <translation>Ha ocurrido un error al tratar de escribir los datos al handle.
+Error %1: %2</translation>
     </message>
     <message>
         <source>Volume Error</source>
-        <translation>Tároló Hiba</translation>
+        <translation>Error del volumen</translation>
     </message>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation>Egy hiba történt egy kezelő kérése közben.
+        <translation>Ha ocurrido un error al tratar de obtener el handle en el volumen.
 Error %1: %2</translation>
     </message>
     <message>
         <source>Lock Error</source>
-        <translation>Zárási Hiba</translation>
+        <translation>Error de bloqueo</translation>
     </message>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation>Egy hiba történt a tároló zárolása közben.
-Hiba %1: %2</translation>
+        <translation>Ha ocurrido un error al tratar de bloquear el volumen.
+Error %1: %2</translation>
     </message>
     <message>
         <source>Unlock Error</source>
-        <translation>Feloldási Hiba</translation>
+        <translation>Error de desbloqueo</translation>
     </message>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation>Egy hiba történt a tároló feloldása közben
-Hiba %1: %2</translation>
+        <translation>Ha ocurrido un error al tratar de desbloquear el volumen.
+Error %1: %2</translation>
     </message>
     <message>
         <source>Dismount Error</source>
-        <translation>Leválasztási Hiba</translation>
+        <translation>Error de desmontaje</translation>
     </message>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation>Egy hiba történt a tároló leválasztása közben.
-Hiba %1: %2</translation>
+        <translation>Ha ocurrido un error al tratar de desmontar el volumen.
+Error %1: %2</translation>
     </message>
 </context>
 </TS>

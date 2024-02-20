@@ -1,37 +1,37 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="hu_HU">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ko_KR">
 <context>
     <name>Creator</name>
     <message>
         <source>LibreELEC USB-SD Creator</source>
-        <translation>LibreELEC USB-SD készítő</translation>
+        <translation>LibreELEC USB-SD 만들기</translation>
     </message>
     <message>
         <source>Write image</source>
-        <translation>Lemezkép írása</translation>
+        <translation>이미지 쓰기</translation>
     </message>
     <message>
         <source>Select your USB stick or SD card</source>
-        <translation>USB meghajtó vagy SD kártya kiválasztása</translation>
+        <translation>USB 메모리나 SD 카드를 선택합니다</translation>
     </message>
     <message>
         <source>Download or select a local image file</source>
-        <translation>Letöltés vagy helyi lemezkép kiválasztása</translation>
+        <translation>내려받거나 로컬 이미지 파일을 선택합니다</translation>
     </message>
     <message>
         <source>Eject device</source>
-        <translation>Eszköz kiadása</translation>
+        <translation>장치 꺼내기</translation>
     </message>
     <message>
         <source>Load device</source>
-        <translation>Eszköz betöltése</translation>
+        <translation>장치 읽기</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation>Igen</translation>
+        <translation>예</translation>
     </message>
     <message>
         <source>No</source>
-        <translation>Nem</translation>
+        <translation>아니오</translation>
     </message>
     <message>
         <source>OK</source>
@@ -39,266 +39,261 @@
     </message>
     <message>
         <source>Select version</source>
-        <translation>Verzió kiválasztása</translation>
+        <translation>버전 선택</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>Bezár</translation>
+        <translation>닫기(&amp;C)</translation>
     </message>
     <message>
         <source>&amp;Download</source>
-        <translation>Letöltés</translation>
+        <translation>내려받기(&amp;D)</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>Rólunk</translation>
+        <translation>정보(&amp;A)</translation>
     </message>
     <message>
         <source>&amp;Write</source>
-        <translation>Írás</translation>
+        <translation>쓰기(&amp;W)</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>Segítség</translation>
+        <translation>도움말(&amp;H)</translation>
     </message>
     <message>
         <source>Select &amp;file</source>
-        <translation>Tallózás</translation>
+        <translation>파일 선택(&amp;f)</translation>
     </message>
     <message>
         <source>&amp;Show all</source>
-        <translation>Mutasd mind</translation>
+        <translation>모두 보기(&amp;S)</translation>
     </message>
     <message>
         <source>Select project</source>
-        <translation>Projekt kiválsztása</translation>
+        <translation>프로젝트 선택</translation>
     </message>
     <message>
         <source>Select image</source>
-        <translation>Lemezkép kiválasztása</translation>
+        <translation>이미지 선택</translation>
     </message>
     <message>
         <source>Eject  Load         Remove</source>
-        <translation type="unfinished"/>
+        <translation>읽기 취소         지우기</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
 Run application with sudo.</source>
-        <translation>Rendszergazdai jogosultság szükséges az íráshoz.
-Futtasd az alkalmazást sudo -val.</translation>
+        <translation>이미지를 쓰려면 루트 권한이 필요합니다.
+앱을 sudo로 실행해야 합니다.</translation>
     </message>
     <message>
         <source>Version: %1
 Build date: %2</source>
-        <translation>Verzió %1
-Build dátum: %2</translation>
+        <translation>버전: %1
+만든 날짜: %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
-        <translation>Ez a program szeretettel lett létrehozva és kiadva</translation>
+        <translation>이 소프트웨어는 애정으로 만들고 배포되는데</translation>
     </message>
     <message>
         <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>GPLv2 alatt, felhasználva RasPlex korábbi munkáját.</translation>
+        <translation>이전 RasPlex를 사용하고, GPLv2를 따릅니다.</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
-        <translation>A licenszért, közreműködőkért és a történetért kérjük olvassa el:</translation>
+        <translation>라이센스, 기여, 이력을 볼 곳:</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
-        <translation>Ha tetszik a LibreELEC kérjük</translation>
+        <translation>LibreELEC을 즐겁게 사용하신다면</translation>
     </message>
     <message>
         <source>donation to support the project.</source>
-        <translation>adományozzon a projekt támogátására.</translation>
+        <translation>프로젝트 지원을 위한 기부를 바랍니다.</translation>
     </message>
     <message>
         <source>Click the logo below or donate</source>
-        <translation>Kattintson az alábbi logóra vagy adományozzon</translation>
+        <translation>아래 로고를 누르거나</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>OpenCollective használva hogy:</translation>
+        <translation>OpenCollective 사용</translation>
     </message>
     <message>
         <source>[Stable]</source>
-        <translation>[Stabil]</translation>
+        <translation>[안정판]</translation>
     </message>
     <message>
         <source>[Alpha]</source>
-        <translation>[Alfa]</translation>
+        <translation>[알파]</translation>
     </message>
     <message>
         <source>[Beta]</source>
-        <translation>[Béta]</translation>
+        <translation>[배타]</translation>
     </message>
     <message>
         <source>Download complete, syncing file...</source>
-        <translation>Letöltés kész, fájl szinkronizálása...</translation>
+        <translation>내려받기 완료, 파일 동기화 중...</translation>
     </message>
     <message>
         <source>Download complete, verifying checksum...</source>
-        <translation>Letöltés kész, checksum ellenőrzése...</translation>
+        <translation>내려받기 완료, 검사 합계 검증 중...</translation>
     </message>
     <message>
         <source>Download complete, checksum ok.</source>
-        <translation>Letöltés kész, checksum rendben.</translation>
+        <translation>내려받기 완료, 검사 합계 성공.</translation>
     </message>
     <message>
         <source>Download complete, checksum not ok.</source>
-        <translation>Letöltés kész, checksum hibás.</translation>
+        <translation>내려받기 완료, 검사 합계 실패.</translation>
     </message>
     <message>
         <source>%1 seconds remaining - %2% at %3</source>
-        <translation>%1 másodperc van hátra - %2% a %3 -ból</translation>
+        <translation>%1 초 남음 - %3에서 %2%</translation>
     </message>
     <message>
         <source>Update Notification</source>
-        <translation>Frissítési értesesítés</translation>
+        <translation>알림 업데이트</translation>
     </message>
     <message>
         <source>&amp;Visit Website</source>
-        <translation>Weboldal meglátogatása</translation>
+        <translation>웹사이트 방문(&amp;V)</translation>
     </message>
     <message>
         <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD készítő %1 elérhető.</translation>
+        <translation>LibreELEC USB-SD 만들기 %1 사용 가능.</translation>
     </message>
     <message>
         <source>Download canceled.</source>
-        <translation>Letöltés megszakítva.</translation>
+        <translation>내려받기 취소됨.</translation>
     </message>
     <message>
         <source>Directory to store image file</source>
-        <translation>Könyvtár a képfájl tárolásához</translation>
+        <translation>이미지 파일을 저장할 디렉터리</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Hiba</translation>
+        <translation>오류</translation>
     </message>
     <message>
         <source>File 
 %1/%2
 already exist.</source>
-        <translation>A 
+        <translation>파일 
 %1/%2
-fájl már létezik.</translation>
+이미 있음.</translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
-        <translation>Biztosan felül akarod írni?</translation>
+        <translation>덮어쓸까요?</translation>
     </message>
     <message>
         <source>File already exists.</source>
-        <translation>A fájl már létezik.</translation>
+        <translation>파일이 이미 있습니다.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation>Nem sikerült a fájlt megnyitni az íráshoz!</translation>
+        <translation>쓸 파일을 열 수 없음!</translation>
     </message>
     <message>
         <source>Cance&amp;l</source>
-        <translation>Mégsem</translation>
+        <translation>취소(&amp;I)</translation>
     </message>
     <message>
         <source>Open image file</source>
-        <translation>Lemezkép megnyitása</translation>
+        <translation>이미지 파일 열기</translation>
     </message>
     <message>
         <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation>Gz tömörített képfájl (*img.gz);;Zip tömörített képfájl (*img.zip);;Tömörítetlen képfájl (*.img);;Minden fájl (*.*)</translation>
+        <translation>압축된 gz 이미지 (*img.gz);;압축된 zip 이미지 (*img.zip);;압축 안된 이미지 (*.img);;모든 파일 (*.*)</translation>
     </message>
     <message>
         <source>Error: %1</source>
-        <translation>Hiba: %1</translation>
+        <translation>오류: %1</translation>
     </message>
     <message>
         <source>Writing canceled.</source>
-        <translation>Írás megszakítva.</translation>
+        <translation>쓰기 취소됨.</translation>
     </message>
     <message>
         <source>Confirm write</source>
-        <translation>Írás megerősítése</translation>
+        <translation>쓰기 확인</translation>
     </message>
     <message>
         <source>Selected device: %1
 Are you sure you want to write the image?
 
 Your USB-SD device will be wiped!</source>
-        <translation>Kiválasztott eszköz: %1
-Biztos ki akarod írni ezt a képfájlt?
+        <translation>선택된 장치: %1
+이미지를 쓸까요?
 
-Az USB-SD eszköz törölve lesz!</translation>
+USB-SD 장치가 지워집니다!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
-        <translation>Nem tudom a particiókat leválasztani az eszközről %1</translation>
+        <translation>%1 장치의 파티션을 마운트 해제할 수 없음</translation>
     </message>
     <message>
         <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation>Nincs elegendő hely a következő eszközön. %1 [%2 &lt; %3]</translation>
+        <translation>%1에 여유 공간이 없음 [%2 &lt; %3]</translation>
     </message>
     <message>
         <source>Syncing file system...</source>
-        <translation>Fájlrendszer szinkronizálása...</translation>
+        <translation>파일 시스템 동기화 중...</translation>
     </message>
     <message>
         <source>Writing done!</source>
-        <translation>Írás kész!</translation>
+        <translation>쓰기 완료!</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Write Error</source>
-        <translation>Írás hiba</translation>
+        <translation>쓰기 오류</translation>
     </message>
     <message>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
-        <translation>Egy hiba történt az adat kiírása közben.
-Hiba %1: %2</translation>
+        <translation>처리할 데이터를 쓰는 데에 오류가 있습니다. 오류 %1: %2</translation>
     </message>
     <message>
         <source>Volume Error</source>
-        <translation>Tároló Hiba</translation>
+        <translation>디스크 볼륨 오류</translation>
     </message>
     <message>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
-        <translation>Egy hiba történt egy kezelő kérése közben.
-Error %1: %2</translation>
+        <translation>디스크 볼륨 처리에 오류가 있습니다. 오류 %1: %2</translation>
     </message>
     <message>
         <source>Lock Error</source>
-        <translation>Zárási Hiba</translation>
+        <translation>잠금 오류</translation>
     </message>
     <message>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
-        <translation>Egy hiba történt a tároló zárolása közben.
-Hiba %1: %2</translation>
+        <translation>디스크 볼륨을 잠그는 데에 오류가 있습니다. 오류 %1: %2</translation>
     </message>
     <message>
         <source>Unlock Error</source>
-        <translation>Feloldási Hiba</translation>
+        <translation>잠금 해제 오류</translation>
     </message>
     <message>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
-        <translation>Egy hiba történt a tároló feloldása közben
-Hiba %1: %2</translation>
+        <translation>디스크 볼륨의 잠금 해제에 오류가 있습니다. 오류 %1: %2</translation>
     </message>
     <message>
         <source>Dismount Error</source>
-        <translation>Leválasztási Hiba</translation>
+        <translation>마운트 해제 오류</translation>
     </message>
     <message>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
-        <translation>Egy hiba történt a tároló leválasztása közben.
-Hiba %1: %2</translation>
+        <translation>디스크 볼륨의 마운트 해제에 오류가 있습니다. 오류 %1: %2</translation>
     </message>
 </context>
 </TS>

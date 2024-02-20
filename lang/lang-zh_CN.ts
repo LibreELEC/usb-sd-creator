@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="zh_CN">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="zh_CN">
 <context>
     <name>Creator</name>
     <message>
@@ -26,6 +24,62 @@
     <message>
         <source>Load device</source>
         <translation>读取设备</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>是</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>否</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>完成</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>选择版本</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>关闭 &amp;C</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>下载 &amp;D</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>关于 &amp;A</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>写入 &amp;W</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>帮助 &amp;H</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>选择文件 &amp;f</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>显示所有 &amp;S</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>选择项目</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>选择镜像</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -99,6 +153,18 @@ Build date: %2</source>
         <translation>还剩 %1 秒—— %2% / %3</translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation>更新通知</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>访问网站 &amp;V</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>更新提示：LibreELEC USB-SD Creator %1 </translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation>下载取消。</translation>
     </message>
@@ -131,6 +197,10 @@ already exist.</source>
         <translation>打开或写入文件失败！</translation>
     </message>
     <message>
+        <source>Cance&amp;l</source>
+        <translation>取消 &amp;l</translation>
+    </message>
+    <message>
         <source>Open image file</source>
         <translation>打开镜像文件</translation>
     </message>
@@ -139,12 +209,26 @@ already exist.</source>
         <translation>gz 压缩格式 (*img.gz);;zip 压缩格式 (*img.zip);;镜像文件 (*.img);;所有文件 (*.*)</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>出错： %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>写入操作已取消。</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>确认写入</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>请选择设备： %1
+您确认要写入镜像么？
+
+您的 USB-SD 设备数据将被删除！</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -161,92 +245,6 @@ already exist.</source>
     <message>
         <source>Writing done!</source>
         <translation>写入完成！</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>出错： %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>请选择设备： %1
-您确认要写入镜像么？
-
-您的 USB-SD 设备数据将被删除！</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>是</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>否</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>完成</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>更新通知</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>选择版本</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>关闭 &amp;C</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>下载 &amp;D</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>关于 &amp;A</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>写入 &amp;W</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>帮助 &amp;H</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>选择文件 &amp;f</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>显示所有 &amp;S</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>取消 &amp;l</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>访问网站 &amp;V</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>更新提示：LibreELEC USB-SD Creator %1 </translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>选择项目</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>选择镜像</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

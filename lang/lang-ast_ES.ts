@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ast_ES">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ast_ES">
 <context>
     <name>Creator</name>
     <message>
@@ -26,6 +24,62 @@
     <message>
         <source>Load device</source>
         <translation>Cargar preséu</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Sí</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Non</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>Aceutar</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Esbillar versión</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>&amp;Zarrar</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>&amp;Baxar</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>&amp;Tocante a</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>&amp;Escribir</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Ayuda</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Esbillar &amp;ficheru</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>&amp;Amosar too</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Esbillar proyeutu</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Esbillar imaxe</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -65,7 +119,7 @@ Data de construcción: %2</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>usando OpenCollective</translation>
+        <translation>usando OpenCollective a:</translation>
     </message>
     <message>
         <source>[Stable]</source>
@@ -100,6 +154,18 @@ Data de construcción: %2</translation>
         <translation>%1 segundos restantes - %2% a %3</translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation>Avisur d&apos;anovamientu</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>&amp;Visitar sitiu web</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>Ta disponible LibreELEC USB-SD Creator %1.</translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation>Encaboxóse la descarga.</translation>
     </message>
@@ -132,6 +198,10 @@ ficheru
         <translation>¡Fallu al abrir el ficheru pa escritura!</translation>
     </message>
     <message>
+        <source>Cance&amp;l</source>
+        <translation>Encabo&amp;xar</translation>
+    </message>
+    <message>
         <source>Open image file</source>
         <translation>Abrir ficheru d&apos;imaxe</translation>
     </message>
@@ -140,12 +210,26 @@ ficheru
         <translation>Imaxe gz comprimida (*img.gz);;Imaxe zip comprimida (*img.zip);;Imaxe ensin comprimir (*.img);;Tolos ficheros (*.*)</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>Fallu: %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>Encaboxóse la escritura</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Confirmar escritura</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Esbillóse&apos;l preséu: %1
+¿De xuru que quies escribir la imaxe?
+
+¡Llimpiaráse&apos;l to preséu USB/SD!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -162,92 +246,6 @@ ficheru
     <message>
         <source>Writing done!</source>
         <translation>¡Féxose la escritura!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Fallu: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Esbillóse&apos;l preséu: %1
-¿De xuru que quies escribir la imaxe?
-
-¡Llimpiaráse&apos;l to preséu USB/SD!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Sí</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Non</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>Aceutar</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Avisur d&apos;anovamientu</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Esbillar versión</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>&amp;Zarrar</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>&amp;Baxar</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>&amp;Tocante a</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>&amp;Escribir</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Ayuda</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Esbillar &amp;ficheru</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>&amp;Amosar too</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>Encabo&amp;xar</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>&amp;Visitar sitiu web</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>Ta disponible LibreELEC USB-SD Creator %1.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Esbillar proyeutu</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Esbillar imaxe</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

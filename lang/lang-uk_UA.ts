@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="uk_UA">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="uk_UA">
 <context>
     <name>Creator</name>
     <message>
@@ -26,6 +24,62 @@
     <message>
         <source>Load device</source>
         <translation>Завантажити пристрій</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Так</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Ні</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>Гаразд</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Виберіть версію</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>&amp;Закрити</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>За&amp;вантажити</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>&amp;Про програму</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>Запи&amp;сати</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Допомога</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Вибрати &amp;файл</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>П&amp;оказати всі</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Вибрати проект</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Вибрати образ</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -65,7 +119,7 @@ Build date: %2</source>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>через OpenCollective</translation>
+        <translation>через OpenCollective на користь:</translation>
     </message>
     <message>
         <source>[Stable]</source>
@@ -100,6 +154,18 @@ Build date: %2</source>
         <translation>%1 секунд залишилося - %2% на швидкості %3</translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation>Повідомлення про оновлення</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>Відвідати веб-сайт</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>Доступний LibreELEC USB-SD Creator %1.</translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation>Завантаження скасоване.</translation>
     </message>
@@ -132,6 +198,10 @@ already exist.</source>
         <translation>Не вдалося відкрити файл для запису!</translation>
     </message>
     <message>
+        <source>Cance&amp;l</source>
+        <translation>Скасувати</translation>
+    </message>
+    <message>
         <source>Open image file</source>
         <translation>Відкрити файл образу</translation>
     </message>
@@ -140,12 +210,26 @@ already exist.</source>
         <translation>Стиснутий образ gz (*img.gz);;Стиснутий образ zip (*img.zip);;Нестиснутий образ (*.img);;Всі файли (*.*)</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>Помилка: %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>Запис скасований.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Підтвердіть запис</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Вибраний пристрій: %1
+Ви впевнені, що хочете записати образ?
+
+Ваш пристрій USB-SD буде витертий!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -162,92 +246,6 @@ already exist.</source>
     <message>
         <source>Writing done!</source>
         <translation>Запис завершено!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Помилка: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Вибраний пристрій: %1
-Ви впевнені, що хочете записати образ?
-
-Ваш пристрій USB-SD буде витертий!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Так</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Ні</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>Гаразд</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Повідомлення про оновлення</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Виберіть версію</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>&amp;Закрити</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>За&amp;вантажити</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>&amp;Про програму</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>Запи&amp;сати</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Допомога</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Вибрати &amp;файл</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>П&amp;оказати всі</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>Скасувати</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>Відвідати веб-сайт</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>Доступний LibreELEC USB-SD Creator %1.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Вибрати проект</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Вибрати образ</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

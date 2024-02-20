@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="tr_TR">
 <context>
     <name>Creator</name>
     <message>
@@ -26,6 +24,62 @@
     <message>
         <source>Load device</source>
         <translation>Alet dolu</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Evet</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Hayır</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>Tamam</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Sürümü seç</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>Kapat</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>İndir</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>Hakkında</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>Yaz</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>Yardım</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Dosyayı seç</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>Tümünü göster</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Proje seç</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>İmaj seç</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -65,7 +119,7 @@ Yapım tarihi: %2</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>OpenCollective kullanmak</translation>
+        <translation>OpenCollective kullanmak:</translation>
     </message>
     <message>
         <source>[Stable]</source>
@@ -100,6 +154,18 @@ Yapım tarihi: %2</translation>
         <translation>%1 kalan saniye - %2% de %3</translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation>Güncelleme Bildirimi</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>Siteye Git</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>LibreELEC USB-SD Creator %1 mevcut.</translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation>İndirme iptal edildi.</translation>
     </message>
@@ -132,6 +198,10 @@ zaten var.</translation>
         <translation>Yazmak için dosya açılmıyor!</translation>
     </message>
     <message>
+        <source>Cance&amp;l</source>
+        <translation>İptal</translation>
+    </message>
+    <message>
         <source>Open image file</source>
         <translation>İmaj dosyasını aç</translation>
     </message>
@@ -140,12 +210,25 @@ zaten var.</translation>
         <translation>Sıkıştırılmış gz imaj (*img.gz);;Sıkıştırılmış zip imaj (*img.zip);;Sıkıştırılmamış imaj (*.img);;Tüm dosyalar (*.*)</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>Hata: %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>Yazma iptal edildi.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Yazma onayı</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Alet seçildi: %1
+İmajı yazmak istediğinden emin misin?
+USB-SD aleti silinecek!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -162,91 +245,6 @@ zaten var.</translation>
     <message>
         <source>Writing done!</source>
         <translation>Yazma bitti!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Hata: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Alet seçildi: %1
-İmajı yazmak istediğinden emin misin?
-USB-SD aleti silinecek!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Evet</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Hayır</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>Tamam</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Güncelleme Bildirimi</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Sürümü seç</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>Kapat</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>İndir</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>Hakkında</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>Yaz</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>Yardım</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Dosyayı seç</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>Tümünü göster</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>İptal</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>Siteye Git</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD Creator %1 mevcut.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Proje seç</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>İmaj seç</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
