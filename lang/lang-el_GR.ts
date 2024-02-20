@@ -79,7 +79,7 @@
     </message>
     <message>
         <source>Eject  Load         Remove</source>
-        <translation type="unfinished"/>
+        <translation>Εξαγωγή  Φόρτωση         Αφαίρεση</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -119,7 +119,7 @@ Build date: %2</source>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>ρησιμοποιώντας το OpenCollective στο:</translation>
+        <translation>χρησιμοποιώντας το OpenCollective στο:</translation>
     </message>
     <message>
         <source>[Stable]</source>
