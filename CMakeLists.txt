@@ -61,6 +61,7 @@ qt_add_translations(LibreELEC.USB-SD.Creator
     RESOURCE_PREFIX
         "/lang"
     TS_FILES
+        lang/lang-ar_SA.ts
         lang/lang-ast_ES.ts
         lang/lang-bg_BG.ts
         lang/lang-cs_CZ.ts
