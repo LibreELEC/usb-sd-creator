@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="fi_FI">
 <context>
     <name>Creator</name>
     <message>
@@ -26,6 +24,62 @@
     <message>
         <source>Load device</source>
         <translation>Lataa laite</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Kyllä</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Ei</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Valitse versio</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>Sulje</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>Lataa</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>Tietoja</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>Kirjoita</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>Apua</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Valitse tiedosto</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>Näytä kaikki</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Valitse projekti</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Valitse levykuva</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -65,7 +119,7 @@ Luotu: %2</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>käyttäen OpenCollectiveia</translation>
+        <translation>käyttäen OpenCollective:</translation>
     </message>
     <message>
         <source>[Stable]</source>
@@ -100,6 +154,18 @@ Luotu: %2</translation>
         <translation>%1 sekuntia jäljellä - %2% @ %3</translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation>Ilmoitus päivityksestä</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>Käy web-sivulla</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>LibreELEC USB-SD -työkalu %1 on saatavilla.</translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation>Lataus peruutettu.</translation>
     </message>
@@ -132,6 +198,10 @@ on jo olemassa.</translation>
         <translation>Tiedostoa ei saatu auki!</translation>
     </message>
     <message>
+        <source>Cance&amp;l</source>
+        <translation>Peruuta</translation>
+    </message>
+    <message>
         <source>Open image file</source>
         <translation>Avaa levykuva</translation>
     </message>
@@ -140,12 +210,26 @@ on jo olemassa.</translation>
         <translation>Pakattu gz-levykuva (*img.gz);;Pakattu zip-levykuva (*img.zip);;Pakkaamaton levykuva (*.img);;Kaikki tiedostot (*.*)</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>Virhe: %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>Kirjoitus peruutettu.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Vahvista kirjoitus</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Valittu laite: %1
+Oletko varma, että haluat kirjoittaa levykuvan?
+
+USB/SD-laitteesi nykyinen sisältö häviää!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -162,92 +246,6 @@ on jo olemassa.</translation>
     <message>
         <source>Writing done!</source>
         <translation>Kirjoitus valmis!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Virhe: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Valittu laite: %1
-Oletko varma, että haluat kirjoittaa levykuvan?
-
-USB/SD-laitteesi nykyinen sisältö häviää!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Kyllä</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Ei</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Ilmoitus päivityksestä</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Valitse versio</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>Sulje</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>Lataa</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>Tietoja</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>Kirjoita</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>Apua</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Valitse tiedosto</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>Näytä kaikki</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>Peruuta</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>Käy web-sivulla</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD -työkalu %1 on saatavilla.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Valitse projekti</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Valitse levykuva</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
