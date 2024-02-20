@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="nl_NL">
 <context>
     <name>Creator</name>
     <message>
@@ -26,6 +24,62 @@
     <message>
         <source>Load device</source>
         <translation>Apparaat &amp;inlezen</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>&amp;Ja</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>&amp;Nee</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>&amp;OK</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Kies versie</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>&amp;Sluiten</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>&amp;Download</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>&amp;Over</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>&amp;Schrijf</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Help</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Kies &amp;bestand</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>&amp;Toon alles</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Kies &amp;project</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Kies &amp;image</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -65,7 +119,7 @@ Bouwdatum: %2</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>via OpenCollective</translation>
+        <translation>via OpenCollective aan:</translation>
     </message>
     <message>
         <source>[Stable]</source>
@@ -100,6 +154,18 @@ Bouwdatum: %2</translation>
         <translation>%1 seconds te gaan - %2% met %3</translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation>Updatemelding</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>&amp;Bezoek website</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>LibreELEC USB-SD Creator %1 is beschikbaar.</translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation>Download afgebroken.</translation>
     </message>
@@ -132,6 +198,10 @@ bestaat al.</translation>
         <translation>Te schrijven bestand kon niet geopend worden!</translation>
     </message>
     <message>
+        <source>Cance&amp;l</source>
+        <translation>Af&amp;breken</translation>
+    </message>
+    <message>
         <source>Open image file</source>
         <translation>Open imagebestand</translation>
     </message>
@@ -140,12 +210,26 @@ bestaat al.</translation>
         <translation>Gecomprimeerd gz-imagebestand (*img.gz);;Gecomprimeerd zipbestand (*img.zip);;Ongecomprimeerde image (*.img);;Alle bestanden (*.*)</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>Fout: %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>Schrijven afgebroken.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Bevestig schrijven</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Gekozen apparaat: %1
+Weet u zeker dat u de image wilt schrijven?
+
+Uw USB-SD-apparaat zal gewist worden!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -162,92 +246,6 @@ bestaat al.</translation>
     <message>
         <source>Writing done!</source>
         <translation>Schrijven is klaar!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Fout: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Gekozen apparaat: %1
-Weet u zeker dat u de image wilt schrijven?
-
-Uw USB-SD-apparaat zal gewist worden!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>&amp;Ja</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>&amp;Nee</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>&amp;OK</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Updatemelding</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Kies versie</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>&amp;Sluiten</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>&amp;Download</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>&amp;Over</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>&amp;Schrijf</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Help</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Kies &amp;bestand</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>&amp;Toon alles</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>Af&amp;breken</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>&amp;Bezoek website</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD Creator %1 is beschikbaar.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Kies &amp;project</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Kies &amp;image</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
