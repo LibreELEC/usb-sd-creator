@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="br_BR">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="pt_BR">
 <context>
     <name>Creator</name>
     <message>
@@ -26,6 +24,62 @@
     <message>
         <source>Load device</source>
         <translation>Carregar dispositivo</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Sim</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Não</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Selecione a versão</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>&amp;Fechar</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>&amp;Transferência</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>&amp;Sobre</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>&amp;Gravar</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Ajuda</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Selecione o &amp;arquivo</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>&amp;Mostrar todos</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Selecionar projeto</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Selecionar imagem</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -65,7 +119,7 @@ Data de compilação: %2</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>utilizando OpenCollective</translation>
+        <translation>utilizando OpenCollective para:</translation>
     </message>
     <message>
         <source>[Stable]</source>
@@ -100,6 +154,18 @@ Data de compilação: %2</translation>
         <translation>%1 segundos restando - %2% em %3</translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation>Notificação de Atualização</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>&amp;Visitar o site</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>LibreELEC USB-SD Creator %1 está disponível.</translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation>Transferência cancelada.</translation>
     </message>
@@ -132,6 +198,10 @@ já existe</translation>
         <translation>Erro ao abrir arquivo para gravar!</translation>
     </message>
     <message>
+        <source>Cance&amp;l</source>
+        <translation>Cancel&amp;ar</translation>
+    </message>
+    <message>
         <source>Open image file</source>
         <translation>Abrir arquivo de imagem</translation>
     </message>
@@ -141,12 +211,26 @@ já existe</translation>
 (*img.zip);;Imagem não-comprimida (*.img);;Todos os Arquivos (*.*)</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>Erro: %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>Gravação cancelada.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Confirme a gravação</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Selecione o dispositivo: %1
+Você tem certeza que quer gravar a imagem?
+
+Seu dispositivo USB-SD será totalmente apagado!</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -163,92 +247,6 @@ já existe</translation>
     <message>
         <source>Writing done!</source>
         <translation>Gravação completa!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Erro: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Selecione o dispositivo: %1
-Você tem certeza que quer gravar a imagem?
-
-Seu dispositivo USB-SD será totalmente apagado!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Sim</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Não</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Notificação de Atualização</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Selecione a versão</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>&amp;Fechar</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>&amp;Transferência</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>&amp;Sobre</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>&amp;Gravar</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>&amp;Ajuda</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Selecione o &amp;arquivo</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>&amp;Mostrar todos</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>Cancel&amp;ar</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>&amp;Visitar o site</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD Creator %1 está disponível.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Selecionar projeto</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Selecionar imagem</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
