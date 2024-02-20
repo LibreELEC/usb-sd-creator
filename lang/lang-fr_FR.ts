@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="fr_FR">
 <context>
     <name>Creator</name>
     <message>
@@ -21,11 +19,67 @@
     </message>
     <message>
         <source>Eject device</source>
-        <translation>Ejecter le périphérique</translation>
+        <translation>Éjecter le périphérique</translation>
     </message>
     <message>
         <source>Load device</source>
         <translation>Charger le périphérique</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Oui</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Non</translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation>OK</translation>
+    </message>
+    <message>
+        <source>Select version</source>
+        <translation>Choisir une version</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>Fermer</translation>
+    </message>
+    <message>
+        <source>&amp;Download</source>
+        <translation>Télécharger</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>À propos</translation>
+    </message>
+    <message>
+        <source>&amp;Write</source>
+        <translation>Ecrire</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>Aide</translation>
+    </message>
+    <message>
+        <source>Select &amp;file</source>
+        <translation>Choisir un fichier</translation>
+    </message>
+    <message>
+        <source>&amp;Show all</source>
+        <translation>Montrer tout</translation>
+    </message>
+    <message>
+        <source>Select project</source>
+        <translation>Choisir un projet</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Choisir une image</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation>Éjecter Charger Supprimer</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
@@ -36,8 +90,8 @@ Lancez le programme avec sudo.</translation>
     <message>
         <source>Version: %1
 Build date: %2</source>
-        <translation>Version: %1
-Date de compilation: %2</translation>
+        <translation>Version : %1
+Date de compilation : %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
@@ -49,7 +103,7 @@ Date de compilation: %2</translation>
     </message>
     <message>
         <source>For license, credits and history, please read:</source>
-        <translation>Au sujet de la license, des contributions et de l&apos;historique, veuillez consulter:</translation>
+        <translation>Au sujet de la licence, des contributions et de l&apos;historique, veuillez consulter :</translation>
     </message>
     <message>
         <source>If you enjoy using LibreELEC please consider a</source>
@@ -65,7 +119,7 @@ Date de compilation: %2</translation>
     </message>
     <message>
         <source>using OpenCollective</source>
-        <translation>avec OpenCollective</translation>
+        <translation>avec OpenCollective à:</translation>
     </message>
     <message>
         <source>[Stable]</source>
@@ -100,6 +154,18 @@ Date de compilation: %2</translation>
         <translation>%1 secondes restantes - %2% at %3</translation>
     </message>
     <message>
+        <source>Update Notification</source>
+        <translation>Notification de mise à jour</translation>
+    </message>
+    <message>
+        <source>&amp;Visit Website</source>
+        <translation>Visiter le site</translation>
+    </message>
+    <message>
+        <source>LibreELEC USB-SD Creator %1 is available.</source>
+        <translation>LibreELEC USB-SD Creator %1 est disponible.</translation>
+    </message>
+    <message>
         <source>Download canceled.</source>
         <translation>Téléchargement annulé.</translation>
     </message>
@@ -121,7 +187,7 @@ existe déjà.</translation>
     </message>
     <message>
         <source>Do you want to overwrite?</source>
-        <translation>Voulez-vous écraser?</translation>
+        <translation>Voulez-vous écraser ?</translation>
     </message>
     <message>
         <source>File already exists.</source>
@@ -129,7 +195,11 @@ existe déjà.</translation>
     </message>
     <message>
         <source>Failed to open file for writing!</source>
-        <translation>Impossible d&apos;ouvrir le fichier en écriture!</translation>
+        <translation>Impossible d&apos;ouvrir le fichier en écriture !</translation>
+    </message>
+    <message>
+        <source>Cance&amp;l</source>
+        <translation>Annuler</translation>
     </message>
     <message>
         <source>Open image file</source>
@@ -140,12 +210,26 @@ existe déjà.</translation>
         <translation>Image compressée gz (*img.gz);;Image compressée zip (*img.zip);;Image non compressée (*.img);;All files (*.*)</translation>
     </message>
     <message>
+        <source>Error: %1</source>
+        <translation>Erreur : %1</translation>
+    </message>
+    <message>
         <source>Writing canceled.</source>
         <translation>Ecriture annulée.</translation>
     </message>
     <message>
         <source>Confirm write</source>
         <translation>Confirmer l&apos;écriture</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Périphérique sélectionné : %1
+Êtes-vous certain de vouloir écrire l&apos;image ?
+
+Votre périphérique USB-SD sera effacé !</translation>
     </message>
     <message>
         <source>Cannot unmount partititons on device %1</source>
@@ -161,93 +245,7 @@ existe déjà.</translation>
     </message>
     <message>
         <source>Writing done!</source>
-        <translation>Ecriture terminée!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Erreur: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Périphérique sélectionné: %1
-Etes-vous certain de vouloir écrire l&apos;image?
-
-Votre périphérique USB-SD sera effacé!</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation>Oui</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation>Non</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>OK</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Notification de mise à jour</translation>
-    </message>
-    <message>
-        <source>Select version</source>
-        <translation>Choisir une version</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>Fermer</translation>
-    </message>
-    <message>
-        <source>&amp;Download</source>
-        <translation>Télécharger</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>A propos</translation>
-    </message>
-    <message>
-        <source>&amp;Write</source>
-        <translation>Ecrire</translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation>Aide</translation>
-    </message>
-    <message>
-        <source>Select &amp;file</source>
-        <translation>Choisir un fichier</translation>
-    </message>
-    <message>
-        <source>&amp;Show all</source>
-        <translation>Montrer tout</translation>
-    </message>
-    <message>
-        <source>Cance&amp;l</source>
-        <translation>Annuler</translation>
-    </message>
-    <message>
-        <source>&amp;Visit Website</source>
-        <translation>Visiter le site</translation>
-    </message>
-    <message>
-        <source>LibreELEC USB-SD Creator %1 is available.</source>
-        <translation>LibreELEC USB-SD Creator %1 est disponible.</translation>
-    </message>
-    <message>
-        <source>Select project</source>
-        <translation>Choisir un projet</translation>
-    </message>
-    <message>
-        <source>Select image</source>
-        <translation>Choisir une image</translation>
-    </message>
-    <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Ecriture terminée !</translation>
     </message>
 </context>
 <context>
@@ -260,7 +258,7 @@ Votre périphérique USB-SD sera effacé!</translation>
         <source>An error occurred when attempting to write data to handle.
 Error %1: %2</source>
         <translation>Une erreur est survenue lors de l&apos;écriture des données sur le descripteur.
-Erreur %1: %2</translation>
+Erreur %1 : %2</translation>
     </message>
     <message>
         <source>Volume Error</source>
@@ -270,7 +268,7 @@ Erreur %1: %2</translation>
         <source>An error occurred when attempting to get a handle on the volume.
 Error %1: %2</source>
         <translation>Une erreur est survenue lors de l&apos;acquisition d&apos;un descripteur du volume.
-Erreur %1: %2</translation>
+Erreur %1 : %2</translation>
     </message>
     <message>
         <source>Lock Error</source>
@@ -280,7 +278,7 @@ Erreur %1: %2</translation>
         <source>An error occurred when attempting to lock the volume.
 Error %1: %2</source>
         <translation>Une erreur est survenue lors du vérouillage du volume.
-Erreur %1: %2</translation>
+Erreur %1 : %2</translation>
     </message>
     <message>
         <source>Unlock Error</source>
@@ -290,7 +288,7 @@ Erreur %1: %2</translation>
         <source>An error occurred when attempting to unlock the volume.
 Error %1: %2</source>
         <translation>Une erreur est survenue lors du dévérouillage du volume.
-Erreur %1: %2</translation>
+Erreur %1 : %2</translation>
     </message>
     <message>
         <source>Dismount Error</source>
@@ -300,7 +298,7 @@ Erreur %1: %2</translation>
         <source>An error occurred when attempting to dismount the volume.
 Error %1: %2</source>
         <translation>Une erreur est survenue lors du démontage du volume.
-Erreur %1: %2</translation>
+Erreur %1 : %2</translation>
     </message>
 </context>
 </TS>
