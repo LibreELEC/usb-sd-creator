@@ -22,6 +22,9 @@
 
 #ifdef Q_OS_MACOS
 #include "privileges_unix.h"
+
+#include <QLatin1String>
+#include <QProcess>
 #else
 #include "privileges.h"
 #endif
@@ -29,47 +32,42 @@
 #include <QApplication>
 #include <QFileInfo>
 #include <QDesktopServices>
-#include <QProcess>
 #include <QProxyStyle>
 #include <QNetworkProxy>
 #include <QDebug>
 
+#ifndef ALWAYS_DEBUG_OUTPUT
 void noMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
     Q_UNUSED(type);
     Q_UNUSED(context);
     Q_UNUSED(msg);
 }
+#endif
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    QString argFile = "";
+
+    const auto cmdArgs = app.arguments();
 
 #ifndef ALWAYS_DEBUG_OUTPUT
-    if (app.arguments().contains("--debug") == false)
+    if (cmdArgs.contains("--debug") == false)
         qInstallMessageHandler(noMessageOutput);
 #endif
 
 #ifdef Q_OS_MACOS
     // If not running with root privileges, relaunch executable with sudo.
-    if (getuid() != 0 && app.arguments().contains("--elevated") == false)
+    if (getuid() != 0 && cmdArgs.contains("--elevated") == false)
     {
-        QString askPassCommand = QCoreApplication::applicationDirPath() + "/askPass.js";
-
-        QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
-        env.insert("SUDO_ASKPASS", askPassCommand);
+        const auto sudoPrompt = QLatin1String{"%1 requires admin permissions."}.arg(app.applicationDisplayName());
+        const QLatin1String appleScript{"do shell script \"sudo %1\" with prompt \"%2\" with administrator privileges"};
 
         QProcess myProcess;
-        myProcess.setProcessEnvironment(env);
-        myProcess.setProgram("sudo");
-        myProcess.setArguments(QStringList()
-            << "-A"
-            << QCoreApplication::applicationFilePath()
-            << "--elevated");
-        bool success = myProcess.startDetached();
+        myProcess.setProgram(QLatin1String{"osascript"});
+        myProcess.setArguments({"-e", appleScript.arg(QCoreApplication::applicationFilePath(), sudoPrompt)});
 
-        if (success)
+        if (myProcess.startDetached())
         {
             return 0;
         }
@@ -82,7 +80,7 @@ int main(int argc, char *argv[])
 
     qDebug() << "App data: Version:" << BUILD_VERSION ", Build date: " BUILD_DATE;
 
-    if (app.arguments().contains("--no-proxy") == false) {
+    if (cmdArgs.contains("--no-proxy") == false) {
         QNetworkProxyQuery npq(QUrl("http://releases.libreelec.tv/"));
         QList<QNetworkProxy> listOfProxies = QNetworkProxyFactory::systemProxyForQuery(npq);
         if (listOfProxies.size()) {
@@ -94,9 +92,10 @@ int main(int argc, char *argv[])
     Privileges privileges = Privileges();
     privileges.Whoami();
 
+    QString argFile;
     // skip program filename
-    for (int i=1; i<app.arguments().size(); i++) {
-        QString file = app.arguments().at(i);
+    for (int i = 1; i < cmdArgs.size(); i++) {
+        QString file = cmdArgs.at(i);
         QFileInfo checkFile(file);
 
         if (checkFile.exists() && checkFile.isFile()) {
