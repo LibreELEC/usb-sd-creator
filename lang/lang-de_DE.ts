@@ -79,7 +79,7 @@
     </message>
     <message>
         <source>Eject  Load         Remove</source>
-        <translation type="unfinished"/>
+        <translation>Auswerfen  Laden         Entfernen</translation>
     </message>
     <message>
         <source>Root privileges required to write image.
