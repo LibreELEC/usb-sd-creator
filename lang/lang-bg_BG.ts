@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="bg_BG">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="bg_BG">
 <context>
     <name>Creator</name>
     <message>
@@ -28,156 +26,6 @@
         <translation>Зареди устройство</translation>
     </message>
     <message>
-        <source>Root privileges required to write image.
-Run application with sudo.</source>
-        <translation>Root права са нужни за записване на файла.
-Пуснете програмата с sudo.</translation>
-    </message>
-    <message>
-        <source>Version: %1
-Build date: %2</source>
-        <translation>Версия: %1
-Дата на изграждане: %2</translation>
-    </message>
-    <message>
-        <source>This software was created with love and released</source>
-        <translation>Тази програма бе създаде с любов и пусната</translation>
-    </message>
-    <message>
-        <source>under GPLv2, using earlier work from RasPlex.</source>
-        <translation>под GPLv2, използвайки по-ранна работа от RasPlex.</translation>
-    </message>
-    <message>
-        <source>For license, credits and history, please read:</source>
-        <translation>За лиценз, кредити и история, моля прочетете:</translation>
-    </message>
-    <message>
-        <source>If you enjoy using LibreELEC please consider a</source>
-        <translation>Ако ти харесва ползване на LibreELEC, моля помислете</translation>
-    </message>
-    <message>
-        <source>donation to support the project.</source>
-        <translation>за дарение, за да подкрепите проекта.</translation>
-    </message>
-    <message>
-        <source>Click the logo below or donate</source>
-        <translation>Кликни на логото долу или дарете</translation>
-    </message>
-    <message>
-        <source>using OpenCollective</source>
-        <translation>използвайки OpenCollective</translation>
-    </message>
-    <message>
-        <source>[Stable]</source>
-        <translation>[Стабилна]</translation>
-    </message>
-    <message>
-        <source>[Alpha]</source>
-        <translation>[Alpha]</translation>
-    </message>
-    <message>
-        <source>[Beta]</source>
-        <translation>[Beta]</translation>
-    </message>
-    <message>
-        <source>Download complete, syncing file...</source>
-        <translation>Свалянето завърши, синхронизиране на файл...</translation>
-    </message>
-    <message>
-        <source>Download complete, verifying checksum...</source>
-        <translation>Свалянето завърши, сравняване на чек сума...</translation>
-    </message>
-    <message>
-        <source>Download complete, checksum ok.</source>
-        <translation>Свалянето завърши, чек сумата е ок</translation>
-    </message>
-    <message>
-        <source>Download complete, checksum not ok.</source>
-        <translation>Свалянето завърши, чек сумата не е ок</translation>
-    </message>
-    <message>
-        <source>%1 seconds remaining - %2% at %3</source>
-        <translation>%1 секунди остават - %2% от %3</translation>
-    </message>
-    <message>
-        <source>Download canceled.</source>
-        <translation>Отменено сваляне</translation>
-    </message>
-    <message>
-        <source>Directory to store image file</source>
-        <translation>Папка за запазване image файла</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Грешка</translation>
-    </message>
-    <message>
-        <source>File 
-%1/%2
-already exist.</source>
-        <translation>Файла
-%1/%2
-вече съществува.</translation>
-    </message>
-    <message>
-        <source>Do you want to overwrite?</source>
-        <translation>Искаш ли да се презапише?</translation>
-    </message>
-    <message>
-        <source>File already exists.</source>
-        <translation>Файла вече съществува.</translation>
-    </message>
-    <message>
-        <source>Failed to open file for writing!</source>
-        <translation>Неуспех при отваряне на файл за записване!</translation>
-    </message>
-    <message>
-        <source>Open image file</source>
-        <translation>Отвори файл за запис</translation>
-    </message>
-    <message>
-        <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
-        <translation>Сгъстен gz файл (*img.gz);;Сгъстен zip файл (*img.zip);;Некомпресиран файл (*.img);;Всички файлове (*.*)</translation>
-    </message>
-    <message>
-        <source>Writing canceled.</source>
-        <translation>Записването отменено.</translation>
-    </message>
-    <message>
-        <source>Confirm write</source>
-        <translation>Потвърди запис</translation>
-    </message>
-    <message>
-        <source>Cannot unmount partititons on device %1</source>
-        <translation>Не може да се разкачи дяловете на устройство %1</translation>
-    </message>
-    <message>
-        <source>Not enough space on %1 [%2 &lt; %3]</source>
-        <translation>Няма достатъчно място на %1[%2 &lt; %3]</translation>
-    </message>
-    <message>
-        <source>Syncing file system...</source>
-        <translation>Синхронизира файлова система...</translation>
-    </message>
-    <message>
-        <source>Writing done!</source>
-        <translation>Записването завърши!</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Грешка: %1</translation>
-    </message>
-    <message>
-        <source>Selected device: %1
-Are you sure you want to write the image?
-
-Your USB-SD device will be wiped!</source>
-        <translation>Избрано устройство: %1
-Сигурен ли си, че искаш да запишеш файла?
-
-Твоето USB-SD устройство ще бъде изтрито!</translation>
-    </message>
-    <message>
         <source>Yes</source>
         <translation>Да</translation>
     </message>
@@ -188,10 +36,6 @@ Your USB-SD device will be wiped!</source>
     <message>
         <source>OK</source>
         <translation>OK</translation>
-    </message>
-    <message>
-        <source>Update Notification</source>
-        <translation>Известие за актуализация</translation>
     </message>
     <message>
         <source>Select version</source>
@@ -226,8 +70,92 @@ Your USB-SD device will be wiped!</source>
         <translation>Покажи всичко</translation>
     </message>
     <message>
-        <source>Cance&amp;l</source>
-        <translation>Отказ</translation>
+        <source>Select project</source>
+        <translation>Избери проект</translation>
+    </message>
+    <message>
+        <source>Select image</source>
+        <translation>Избери файл</translation>
+    </message>
+    <message>
+        <source>Eject  Load         Remove</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <source>Root privileges required to write image.
+Run application with sudo.</source>
+        <translation>Root права са нужни за записване на файла.
+Пуснете програмата с sudo.</translation>
+    </message>
+    <message>
+        <source>Version: %1
+Build date: %2</source>
+        <translation>Версия: %1
+Дата на създаване: %2</translation>
+    </message>
+    <message>
+        <source>This software was created with love and released</source>
+        <translation>Тази програма бе създаде с любов и пусната</translation>
+    </message>
+    <message>
+        <source>under GPLv2, using earlier work from RasPlex.</source>
+        <translation>под GPLv2, използвайки по-ранна работа от RasPlex.</translation>
+    </message>
+    <message>
+        <source>For license, credits and history, please read:</source>
+        <translation>За лиценз, кредити и история, моля прочетете:</translation>
+    </message>
+    <message>
+        <source>If you enjoy using LibreELEC please consider a</source>
+        <translation>Ако ти харесва ползване на LibreELEC, моля помислете</translation>
+    </message>
+    <message>
+        <source>donation to support the project.</source>
+        <translation>за дарение, за да подкрепите проекта.</translation>
+    </message>
+    <message>
+        <source>Click the logo below or donate</source>
+        <translation>Кликни на логото долу или дарете</translation>
+    </message>
+    <message>
+        <source>using OpenCollective</source>
+        <translation>използвайки OpenCollective на:</translation>
+    </message>
+    <message>
+        <source>[Stable]</source>
+        <translation>[Стабилна]</translation>
+    </message>
+    <message>
+        <source>[Alpha]</source>
+        <translation>[Alpha]</translation>
+    </message>
+    <message>
+        <source>[Beta]</source>
+        <translation>[Beta]</translation>
+    </message>
+    <message>
+        <source>Download complete, syncing file...</source>
+        <translation>Свалянето завърши, синхронизиране на файл...</translation>
+    </message>
+    <message>
+        <source>Download complete, verifying checksum...</source>
+        <translation>Свалянето завърши, сравняване на чек сума...</translation>
+    </message>
+    <message>
+        <source>Download complete, checksum ok.</source>
+        <translation>Свалянето завърши, чек сумата е ок</translation>
+    </message>
+    <message>
+        <source>Download complete, checksum not ok.</source>
+        <translation>Свалянето завърши, чек сумата не е ок</translation>
+    </message>
+    <message>
+        <source>%1 seconds remaining - %2% at %3</source>
+        <translation>%1 секунди остават - %2% от %3</translation>
+    </message>
+    <message>
+        <source>Update Notification</source>
+        <translation>Известие за актуализация</translation>
     </message>
     <message>
         <source>&amp;Visit Website</source>
@@ -238,16 +166,86 @@ Your USB-SD device will be wiped!</source>
         <translation>LibreELEC създател за USB-SD %1 е наличен.</translation>
     </message>
     <message>
-        <source>Select project</source>
-        <translation>Избери проект</translation>
+        <source>Download canceled.</source>
+        <translation>Отменено сваляне</translation>
     </message>
     <message>
-        <source>Select image</source>
-        <translation>Избери файл</translation>
+        <source>Directory to store image file</source>
+        <translation>Папка за запазване image файла</translation>
     </message>
     <message>
-        <source>Eject  Load         Remove</source>
-        <translation type="unfinished"></translation>
+        <source>Error</source>
+        <translation>Грешка</translation>
+    </message>
+    <message>
+        <source>File 
+%1/%2
+already exist.</source>
+        <translation>Файла
+%1/%2
+вече съществува.</translation>
+    </message>
+    <message>
+        <source>Do you want to overwrite?</source>
+        <translation>Искаш ли да се презапише?</translation>
+    </message>
+    <message>
+        <source>File already exists.</source>
+        <translation>Файла вече съществува.</translation>
+    </message>
+    <message>
+        <source>Failed to open file for writing!</source>
+        <translation>Неуспех при отваряне на файл за записване!</translation>
+    </message>
+    <message>
+        <source>Cance&amp;l</source>
+        <translation>Отказ</translation>
+    </message>
+    <message>
+        <source>Open image file</source>
+        <translation>Отвори файл за запис</translation>
+    </message>
+    <message>
+        <source>Compressed gz image (*img.gz);;Compressed zip image (*img.zip);;Uncompressed image (*.img);;All files (*.*)</source>
+        <translation>Сгъстен gz файл (*img.gz);;Сгъстен zip файл (*img.zip);;Некомпресиран файл (*.img);;Всички файлове (*.*)</translation>
+    </message>
+    <message>
+        <source>Error: %1</source>
+        <translation>Грешка: %1</translation>
+    </message>
+    <message>
+        <source>Writing canceled.</source>
+        <translation>Записването отменено.</translation>
+    </message>
+    <message>
+        <source>Confirm write</source>
+        <translation>Потвърди запис</translation>
+    </message>
+    <message>
+        <source>Selected device: %1
+Are you sure you want to write the image?
+
+Your USB-SD device will be wiped!</source>
+        <translation>Избрано устройство: %1
+Сигурен ли си, че искаш да запишеш файла?
+
+Твоето USB-SD устройство ще бъде изтрито!</translation>
+    </message>
+    <message>
+        <source>Cannot unmount partititons on device %1</source>
+        <translation>Не може да се разкачи дяловете на устройство %1</translation>
+    </message>
+    <message>
+        <source>Not enough space on %1 [%2 &lt; %3]</source>
+        <translation>Няма достатъчно място на %1[%2 &lt; %3]</translation>
+    </message>
+    <message>
+        <source>Syncing file system...</source>
+        <translation>Синхронизира файлова система...</translation>
+    </message>
+    <message>
+        <source>Writing done!</source>
+        <translation>Записването завърши!</translation>
     </message>
 </context>
 <context>
