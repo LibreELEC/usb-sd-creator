@@ -50,7 +50,8 @@ OBJECTS_DIR = .generated_files
 # hide the full g++ command line and print only filename
 CONFIG += silent
 
-TRANSLATIONS += lang/lang-ast_ES.ts \
+TRANSLATIONS += lang/lang-ar_SA.ts \
+                lang/lang-ast_ES.ts \
                 lang/lang-bg_BG.ts \
                 lang/lang-cs_CZ.ts \
                 lang/lang-da_DK.ts \
@@ -65,6 +66,7 @@ TRANSLATIONS += lang/lang-ast_ES.ts \
                 lang/lang-hr_HR.ts \
                 lang/lang-hu_HU.ts \
                 lang/lang-it_IT.ts \
+                lang/lang-ko_KR.ts \
                 lang/lang-lt_LT.ts \
                 lang/lang-nl_NL.ts \
                 lang/lang-no_NO.ts \
