@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
     if (getuid() != 0 && cmdArgs.contains("--elevated") == false)
     {
         const auto sudoPrompt = QLatin1String{"%1 requires admin permissions."}.arg(app.applicationDisplayName());
-        const QLatin1String appleScript{"do shell script \"sudo %1\" with prompt \"%2\" with administrator privileges"};
+        const QLatin1String appleScript{R"(do shell script "sudo '%1'" with prompt "%2" with administrator privileges)"};
 
         QProcess myProcess;
         myProcess.setProgram(QLatin1String{"osascript"});

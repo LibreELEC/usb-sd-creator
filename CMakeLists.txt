@@ -2,7 +2,10 @@ cmake_minimum_required(VERSION 3.19)
 project(LibreELEC.USB-SD.Creator
     VERSION 1.5
     LANGUAGES CXX
+    HOMEPAGE_URL "https://libreelec.tv/"
 )
+
+set(projectDisplayName "LibreELEC USB-SD Creator")
 
 # LINUX is available only since CMake 3.25
 if (NOT LINUX AND UNIX AND NOT APPLE)
@@ -36,12 +39,16 @@ qt_add_executable(LibreELEC.USB-SD.Creator WIN32 MACOSX_BUNDLE
     resources.qrc
     translator.cpp translator.h
 )
-# TODO: use Qt's template <QTDIR>/lib/cmake/Qt6/macos/Info.plist.app.in
+
+string(TIMESTAMP currentYear "%Y")
 set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
-    MACOSX_BUNDLE_INFO_PLIST "dmg_osx/template.app/Contents/Info.plist"
-    MACOSX_BUNDLE_BUNDLE_NAME "LibreELEC USB-SD Creator"
+    # TODO: use Qt's template (<QTDIR>/lib/cmake/Qt6/macos/Info.plist.app.in) once we support dark mode properly
+    MACOSX_BUNDLE_INFO_PLIST "dmg_osx/Info.plist.in"
+    MACOSX_BUNDLE_BUNDLE_NAME "${projectDisplayName}"
     MACOSX_BUNDLE_BUNDLE_VERSION "${PROJECT_VERSION}"
+    MACOSX_BUNDLE_COPYRIGHT "LibreELEC © ${currentYear}"
     MACOSX_BUNDLE_GUI_IDENTIFIER "tv.libreelec.usb-sd-creator"
+    MACOSX_BUNDLE_ICON_FILE "icon.icns"
     MACOSX_BUNDLE_SHORT_VERSION_STRING "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}"
 )
 
@@ -102,11 +109,37 @@ if(WIN32)
         winapp.rc
     )
 elseif(APPLE)
+    set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
+        OUTPUT_NAME "${projectDisplayName}"
+    )
+
     target_sources(LibreELEC.USB-SD.Creator PUBLIC
         deviceenumerator_unix.cpp deviceenumerator_unix.h
         diskwriter_unix.cpp diskwriter_unix.h
         privileges_unix.cpp privileges_unix.h
     )
+
+    set(bundleContentsDir "$<TARGET_BUNDLE_CONTENT_DIR:LibreELEC.USB-SD.Creator>")
+    install(FILES "dmg_osx/icon.icns"
+        DESTINATION "${bundleContentsDir}/Resources"
+    )
+
+    qt_generate_deploy_script(
+        TARGET LibreELEC.USB-SD.Creator
+        OUTPUT_SCRIPT qtDeployScript
+        CONTENT "
+            qt_deploy_runtime_dependencies(
+                EXECUTABLE \"$<TARGET_BUNDLE_DIR:LibreELEC.USB-SD.Creator>\"
+                GENERATE_QT_CONF
+                NO_APP_STORE_COMPLIANCE
+                VERBOSE
+            )
+            # macdeployqt also packages extra frameworks that aren't needed
+            foreach(qtModule in Pdf Svg)
+                file(REMOVE_RECURSE \"${bundleContentsDir}/Frameworks/Qt\\\${qtModule}.framework\")
+            endforeach()
+        ")
+    install(SCRIPT ${qtDeployScript})
 elseif(LINUX)
     set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES SUFFIX .Linux.bin)
 
@@ -122,5 +155,21 @@ elseif(LINUX)
 endif()
 
 install(TARGETS LibreELEC.USB-SD.Creator
-    BUNDLE DESTINATION .
+    BUNDLE
+        DESTINATION .
 )
+
+# cpack
+set(CPACK_PACKAGE_NAME "${projectDisplayName}")
+set(CPACK_PACKAGE_VENDOR "LibreELEC")
+if(APPLE)
+    set(CPACK_PACKAGE_FILE_NAME "LibreELEC.USB-SD.Creator.macOS")
+
+    set(CPACK_GENERATOR DragNDrop)
+    set(CPACK_DMG_BACKGROUND_IMAGE "${CMAKE_SOURCE_DIR}/dmg_osx/background.png")
+    set(CPACK_DMG_DS_STORE_SETUP_SCRIPT "DS_Store_Setup.scpt")
+    set(CPACK_DMG_VOLUME_NAME "${projectDisplayName}")
+
+    configure_file("dmg_osx/DS_Store_Setup.scpt.in" "${CPACK_DMG_DS_STORE_SETUP_SCRIPT}" @ONLY)
+endif()
+include(CPack)

@@ -1,0 +1,47 @@
+on run argv
+	set image_name to item 1 of argv
+
+	tell application "Finder"
+		tell disk image_name
+			set dmg_topleft_x to 100
+			set dmg_topleft_y to 100
+			set dmg_width to 480
+			set dmg_height to 320
+			set dmg_bottomright_x to (dmg_topleft_x + dmg_width)
+			set dmg_bottomright_y to (dmg_topleft_y + dmg_height)
+
+			set le_icon_x to 130
+			set app_icon_x to 360
+			set both_icon_y to 180
+			
+			open
+			set viewOptions to the icon view options of container window
+			set arrangement of viewOptions to not arranged
+			set icon size of viewOptions to 72
+			set background picture of viewOptions to file ".background:background.png"
+			close
+
+			open
+			update without registering applications
+			tell container window
+				set current view to icon view
+				set sidebar width to 0
+				set pathbar visible to false
+				set statusbar visible to false
+				set toolbar visible to false
+				set the bounds to { dmg_topleft_x, dmg_topleft_y, dmg_bottomright_x, dmg_bottomright_y }
+				set position of item "@projectDisplayName@.app" to { le_icon_x, both_icon_y }
+				set position of item "Applications" to { app_icon_x, both_icon_y }
+
+				-- set volume icon
+				-- another possible solution (if SetFile disappears at some point): NSWorkspace.shared.setIcon from AppKit
+				do shell script "cd '/Volumes/" & image_name & "' \\
+					&& ln -s '@projectDisplayName@.app/Contents/Resources/icon.icns' .VolumeIcon.icns \\
+					&& SetFile -a C .
+				"
+			end tell
+			delay 2
+			close
+		end tell
+	end tell
+end run
