@@ -119,9 +119,27 @@ elseif(APPLE)
         privileges_unix.cpp privileges_unix.h
     )
 
+    set(bundleContentsDir "$<TARGET_BUNDLE_CONTENT_DIR:LibreELEC.USB-SD.Creator>")
     install(FILES "dmg_osx/icon.icns"
-        DESTINATION "$<TARGET_BUNDLE_CONTENT_DIR:LibreELEC.USB-SD.Creator>/Resources"
+        DESTINATION "${bundleContentsDir}/Resources"
     )
+
+    qt_generate_deploy_script(
+        TARGET LibreELEC.USB-SD.Creator
+        OUTPUT_SCRIPT qtDeployScript
+        CONTENT "
+            qt_deploy_runtime_dependencies(
+                EXECUTABLE \"$<TARGET_BUNDLE_DIR:LibreELEC.USB-SD.Creator>\"
+                GENERATE_QT_CONF
+                NO_APP_STORE_COMPLIANCE
+                VERBOSE
+            )
+            # macdeployqt also packages extra frameworks that aren't needed
+            foreach(qtModule in Pdf Svg)
+                file(REMOVE_RECURSE \"${bundleContentsDir}/Frameworks/Qt\\\${qtModule}.framework\")
+            endforeach()
+        ")
+    install(SCRIPT ${qtDeployScript})
 elseif(LINUX)
     set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES SUFFIX .Linux.bin)
 
