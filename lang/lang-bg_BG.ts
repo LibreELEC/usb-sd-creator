@@ -91,7 +91,7 @@ Run application with sudo.</source>
         <source>Version: %1
 Build date: %2</source>
         <translation>Версия: %1
-Дата на създаване: %2</translation>
+Дата на компилацията: %2</translation>
     </message>
     <message>
         <source>This software was created with love and released</source>
