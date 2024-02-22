@@ -6,6 +6,7 @@ LibreELEC.USB-SD.Creator.macOS.dmg
 release/
 tools/
 build/
+windows/winapp.rc
 
 # Qt files
 *.qm

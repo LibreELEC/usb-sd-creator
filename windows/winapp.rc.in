@@ -28,14 +28,14 @@
 
 #define VER_COMPANYNAME_STR         "LibreELEC"
 #define VER_FILEDESCRIPTION_STR     "LibreELEC USB disk or SD card Creator Application"
-#define VER_INTERNALNAME_STR        "LibreELEC USB-SD Creator"
-#define VER_LEGALCOPYRIGHT_STR      "Copyright © 2016 LibreELEC"
+#define VER_INTERNALNAME_STR        "@projectDisplayName@"
+#define VER_LEGALCOPYRIGHT_STR      "Copyright © @copyrightYears@ LibreELEC"
 #define VER_LEGALTRADEMARKS1_STR    "All Rights Reserved"
 #define VER_LEGALTRADEMARKS2_STR    VER_LEGALTRADEMARKS1_STR
 #define VER_ORIGINALFILENAME_STR    "LibreELEC.USB-SD.Creator.exe"
-#define VER_PRODUCTNAME_STR         "LibreELEC USB-SD Creator"
+#define VER_PRODUCTNAME_STR         "@projectDisplayName@"
 
-#define VER_COMPANYDOMAIN_STR       "https://libreelec.tv/"
+#define VER_COMPANYDOMAIN_STR       "@PROJECT_HOMEPAGE_URL@"
 ////////////////////////////////////////////////////////////////
 
 #define MANIFEST_RESOURCE_ID 1
