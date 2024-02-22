@@ -3,7 +3,7 @@
     <name>Creator</name>
     <message>
         <source>LibreELEC USB-SD Creator</source>
-        <translation>ليبر إليك صانع  USB-SD</translation>
+        <translation>LibreELEC USB-SD Creator</translation>
     </message>
     <message>
         <source>Write image</source>
