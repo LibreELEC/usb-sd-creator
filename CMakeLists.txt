@@ -138,6 +138,11 @@ elseif(APPLE)
             foreach(qtModule in Pdf Svg)
                 file(REMOVE_RECURSE \"${bundleContentsDir}/Frameworks/Qt\\\${qtModule}.framework\")
             endforeach()
+
+            # codesign
+            execute_process(COMMAND \"${CMAKE_SOURCE_DIR}/dmg_osx/codesign.sh\"
+                WORKING_DIRECTORY \"${bundleContentsDir}\"
+            )
         ")
     install(SCRIPT ${qtDeployScript})
 elseif(LINUX)
