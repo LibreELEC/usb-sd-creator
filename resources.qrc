@@ -1,23 +1,16 @@
 <RCC>
-    <qresource prefix="/icons">
-        <file>winapp_le_icons.ico</file>
-        <file>le_icon_256.png</file>
-        <file>header.png</file>
-        <file>refresh.png</file>
-        <file>opencollective.png</file>
-        <file>no1.png</file>
-        <file>no2.png</file>
-        <file>no3.png</file>
-        <file>no4.png</file>
-        <file>device_eject.png</file>
-        <file>device_load.png</file>
-        <file>device_remove.png</file>
-    </qresource>
-    <qresource prefix="/qss">
-        <file>stylesheet.qss</file>
-        <file>stylesheet_osx.qss</file>
-    </qresource>
     <qresource prefix="/">
+        <file>icons/le_icon_256.png</file>
+        <file>icons/header.png</file>
+        <file>icons/refresh.png</file>
+        <file>icons/opencollective.png</file>
+        <file>icons/no1.png</file>
+        <file>icons/no2.png</file>
+        <file>icons/no3.png</file>
+        <file>icons/no4.png</file>
+        <file>icons/device_eject.png</file>
+        <file>icons/device_load.png</file>
+        <file>icons/device_remove.png</file>
         <file>lang/flag-empty.png</file>
         <file>lang/flag-ar_SA.png</file>
         <file>lang/flag-ast_ES.png</file>
@@ -50,5 +43,7 @@
         <file>lang/flag-tr_TR.png</file>
         <file>lang/flag-uk_UA.png</file>
         <file>lang/flag-zh_CN.png</file>
+        <file>qss/stylesheet.qss</file>
+        <file>qss/stylesheet_osx.qss</file>
     </qresource>
 </RCC>

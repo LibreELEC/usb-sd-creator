@@ -18,7 +18,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include "creator.h"
-#include "version.h"
 
 #ifdef Q_OS_MACOS
 #include "privileges_unix.h"
@@ -78,7 +77,7 @@ int main(int argc, char *argv[])
     }
 #endif
 
-    qDebug() << "App data: Version:" << BUILD_VERSION ", Build date: " BUILD_DATE;
+    qDebug() << "App data: Version:" << BUILD_VERSION << ", Build date:" << BUILD_DATE;
 
     if (cmdArgs.contains("--no-proxy") == false) {
         QNetworkProxyQuery npq(QUrl("http://releases.libreelec.tv/"));

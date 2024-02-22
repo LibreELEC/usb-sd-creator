@@ -41,12 +41,13 @@ qt_add_executable(LibreELEC.USB-SD.Creator WIN32 MACOSX_BUNDLE
 )
 
 string(TIMESTAMP currentYear "%Y")
+set(copyrightYears "2016-${currentYear}")
 set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
     # TODO: use Qt's template (<QTDIR>/lib/cmake/Qt6/macos/Info.plist.app.in) once we support dark mode properly
     MACOSX_BUNDLE_INFO_PLIST "dmg_osx/Info.plist.in"
     MACOSX_BUNDLE_BUNDLE_NAME "${projectDisplayName}"
     MACOSX_BUNDLE_BUNDLE_VERSION "${PROJECT_VERSION}"
-    MACOSX_BUNDLE_COPYRIGHT "LibreELEC © ${currentYear}"
+    MACOSX_BUNDLE_COPYRIGHT "LibreELEC © ${copyrightYears}"
     MACOSX_BUNDLE_GUI_IDENTIFIER "tv.libreelec.usb-sd-creator"
     MACOSX_BUNDLE_ICON_FILE "icon.icns"
     MACOSX_BUNDLE_SHORT_VERSION_STRING "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}"
@@ -60,7 +61,11 @@ target_link_libraries(LibreELEC.USB-SD.Creator PUBLIC
     z
 )
 
+string(TIMESTAMP nowDateTime UTC)
 target_compile_definitions(LibreELEC.USB-SD.Creator PRIVATE
+    "BUILD_DATE=\"${nowDateTime}\""
+    "BUILD_VERSION=\"${PROJECT_VERSION}\""
+    "COPYRIGHT_YEARS=\"${copyrightYears}\""
     $<$<CONFIG:Debug>:ALWAYS_DEBUG_OUTPUT>
 )
 
@@ -106,8 +111,10 @@ if(WIN32)
         deviceenumerator_windows.cpp deviceenumerator_windows.h
         diskwriter_windows.cpp diskwriter_windows.h
         privileges.h
-        winapp.rc
+        windows/winapp.rc
     )
+
+    configure_file("windows/winapp.rc.in" "${CMAKE_SOURCE_DIR}/windows/winapp.rc" @ONLY)
 elseif(APPLE)
     set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
         OUTPUT_NAME "${projectDisplayName}"
