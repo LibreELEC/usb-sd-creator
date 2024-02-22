@@ -106,7 +106,7 @@ if(WIN32)
         deviceenumerator_windows.cpp deviceenumerator_windows.h
         diskwriter_windows.cpp diskwriter_windows.h
         privileges.h
-        winapp.rc
+        windows/winapp.rc
     )
 elseif(APPLE)
     set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
