@@ -19,7 +19,6 @@
 
 #include "creator.h"
 #include "ui_creator.h"
-#include "version.h"
 
 #include <QRegularExpression>
 #include <QDebug>
@@ -304,7 +303,7 @@ void Creator::setArgFile(QString file)
 void Creator::retranslateUi()
 {
     // retranslate dynamic texts
-    ui->labelVersion->setText(tr("Version: %1\nBuild date: %2").arg(BUILD_VERSION).arg(BUILD_DATE));
+    ui->labelVersion->setText(tr("Version: %1\nBuild date: %2").arg(QLatin1String{BUILD_VERSION}, QLatin1String{BUILD_DATE}));
 
     ui->labelAbout->setTextFormat(Qt::RichText);
     ui->labelAbout->setText(QString("<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\"><h2>&copy; LibreELEC 2016-2022</h2></span></p><p align=\"center\">%1<br/>%2</p><p align=\"center\">%3<br/><a href=\"https://github.com/LibreELEC/usb-sd-creator\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/LibreELEC/usb-sd-creator</span></a><br/></p><p align=\"center\">%4<br/>%5</p><p align=\"center\">%6<br/>%7 <br/><br/><a href=\"https://opencollective.com/libreelec/donate\"><img src=\":/icons/opencollective.png\"></a></p></body></html>") \

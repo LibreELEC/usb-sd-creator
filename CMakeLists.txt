@@ -60,7 +60,10 @@ target_link_libraries(LibreELEC.USB-SD.Creator PUBLIC
     z
 )
 
+string(TIMESTAMP nowDateTime UTC)
 target_compile_definitions(LibreELEC.USB-SD.Creator PRIVATE
+    "BUILD_DATE=\"${nowDateTime}\""
+    "BUILD_VERSION=\"${PROJECT_VERSION}\""
     $<$<CONFIG:Debug>:ALWAYS_DEBUG_OUTPUT>
 )
 
