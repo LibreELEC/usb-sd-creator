@@ -169,6 +169,7 @@ set(CPACK_PACKAGE_NAME "${projectDisplayName}")
 set(CPACK_PACKAGE_VENDOR "LibreELEC")
 if(APPLE)
     set(CPACK_PACKAGE_FILE_NAME "LibreELEC.USB-SD.Creator.macOS")
+    set(CPACK_POST_BUILD_SCRIPTS "${CMAKE_SOURCE_DIR}/dmg_osx/notarize.cmake")
 
     set(CPACK_GENERATOR DragNDrop)
     set(CPACK_DMG_BACKGROUND_IMAGE "${CMAKE_SOURCE_DIR}/dmg_osx/background.png")
