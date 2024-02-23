@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    Privileges privileges = Privileges();
+    Privileges privileges;
     privileges.Whoami();
 
     QString argFile;
