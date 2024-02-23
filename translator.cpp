@@ -46,8 +46,6 @@ void Translator::fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr)
     QStringList qmFiles;
     // languages from resources
     qmFiles << QDir(":/lang").entryList(QStringList("*.qm"));
-    // languages from a local disk (mostly for testing purposes)
-    qmFiles << QDir(".").entryList(QStringList("*.qm"));
 
     // add menu entry for all the files
     QList<QAction *> actions;
