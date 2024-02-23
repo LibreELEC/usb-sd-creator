@@ -16,7 +16,7 @@ fi
 echo 'notarize dmg'
 xcrun notarytool submit \
   --verbose \
-  --key "$ASC_API_KEY" \
+  --key "$ASC_API_KEY_PATH" \
   --key-id "$ASC_API_KEY_ID" \
   --issuer "$ASC_API_KEY_ISSUER" \
   --team-id "$ASC_TEAM_ID" \

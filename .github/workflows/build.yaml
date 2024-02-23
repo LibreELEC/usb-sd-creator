@@ -20,6 +20,9 @@ jobs:
     - name: Setup
       run: |
         ci/${{ matrix.platform }}/setup.sh
+      env:
+        MACOS_ASC_API_KEY: ${{ secrets.MACOS_ASC_API_KEY }}
+        MACOS_CODE_SIGN_KEY_BASE64: ${{ secrets.MACOS_CODE_SIGN_KEY_BASE64 }}
     - name: Configure
       run: |
         cmake --preset ${{ matrix.preset || 'release' }}
@@ -31,11 +34,9 @@ jobs:
       run: |
         cpack --preset release
       env:
-        ASC_API_KEY: ${{ secrets.MACOS_ASC_API_KEY }}
         ASC_API_KEY_ID: ${{ secrets.MACOS_ASC_API_KEY_ID }}
         ASC_API_KEY_ISSUER: ${{ secrets.MACOS_ASC_API_KEY_ISSUER }}
         ASC_TEAM_ID: ${{ secrets.MACOS_ASC_TEAM_ID }}
-        CODE_SIGN_IDENTITY: ${{ secrets.MACOS_CODE_SIGN_IDENTITY }}
     - name: Artifact
       if: ${{ matrix.artifact }}
       uses: actions/upload-artifact@v4
