@@ -8,39 +8,39 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - os: ubuntu-22.04
-          platform: linux
-        - os: macos-latest
-          platform: macos
-          preset: release-macos
-          artifact: '*.dmg'
+          - os: ubuntu-22.04
+            platform: linux
+          - os: macos-latest
+            platform: macos
+            preset: release-macos
+            artifact: "*.dmg"
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Setup
-      run: |
-        ci/${{ matrix.platform }}/setup.sh
-      env:
-        MACOS_ASC_API_KEY: ${{ secrets.MACOS_ASC_API_KEY }}
-        MACOS_CODE_SIGN_KEY_BASE64: ${{ secrets.MACOS_CODE_SIGN_KEY_BASE64 }}
-        MACOS_KEYCHAIN_PASSWORD: ${{ secrets.MACOS_KEYCHAIN_PASSWORD }}
-    - name: Configure
-      run: |
-        cmake --preset ${{ matrix.preset || 'release' }}
-    - name: Build
-      run: |
-        cmake --build --preset release
-    - name: Pack
-      if: ${{ matrix.artifact }}
-      run: |
-        cpack --preset release
-      env:
-        ASC_API_KEY_ID: ${{ secrets.MACOS_ASC_API_KEY_ID }}
-        ASC_API_KEY_ISSUER: ${{ secrets.MACOS_ASC_API_KEY_ISSUER }}
-        ASC_TEAM_ID: ${{ secrets.MACOS_ASC_TEAM_ID }}
-    - name: Artifact
-      if: ${{ matrix.artifact }}
-      uses: actions/upload-artifact@v4
-      with:
-        path: build/${{ matrix.artifact }}
-        name: ${{ matrix.platform }}
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        run: |
+          ci/${{ matrix.platform }}/setup.sh
+        env:
+          MACOS_ASC_API_KEY: ${{ secrets.MACOS_ASC_API_KEY }}
+          MACOS_CODE_SIGN_KEY_BASE64: ${{ secrets.MACOS_CODE_SIGN_KEY_BASE64 }}
+          MACOS_KEYCHAIN_PASSWORD: ${{ secrets.MACOS_KEYCHAIN_PASSWORD }}
+      - name: Configure
+        run: |
+          cmake --preset ${{ matrix.preset || 'release' }}
+      - name: Build
+        run: |
+          cmake --build --preset release
+      - name: Pack
+        if: ${{ matrix.artifact }}
+        run: |
+          cpack --preset release
+        env:
+          ASC_API_KEY_ID: ${{ secrets.MACOS_ASC_API_KEY_ID }}
+          ASC_API_KEY_ISSUER: ${{ secrets.MACOS_ASC_API_KEY_ISSUER }}
+          ASC_TEAM_ID: ${{ secrets.MACOS_ASC_TEAM_ID }}
+      - name: Artifact
+        if: ${{ matrix.artifact }}
+        uses: actions/upload-artifact@v4
+        with:
+          path: build/${{ matrix.artifact }}
+          name: ${{ matrix.platform }}
