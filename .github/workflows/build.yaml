@@ -30,6 +30,8 @@ jobs:
       if: ${{ matrix.artifact }}
       run: |
         cpack --preset release
+      env:
+        CODE_SIGN_IDENTITY: ${{ secrets.MACOS_CODE_SIGN_IDENTITY }}
     - name: Artifact
       if: ${{ matrix.artifact }}
       uses: actions/upload-artifact@v4
