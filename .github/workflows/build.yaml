@@ -9,30 +9,16 @@ jobs:
       matrix:
         include:
         - os: ubuntu-22.04
-          CC: gcc
-          CXX: g++
+          platform: linux
     steps:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Setup
       run: |
-        sudo add-apt-repository universe -y
-        sudo apt update -y
-        sudo apt install -y cmake \
-                            gcc \
-                            g++ \
-                            libgl1-mesa-dev \
-                            qt6-base-dev \
-                            qt6-l10n-tools \
-                            qt6-tools-dev \
-                            qt6-tools-dev-tools \
-                            qt6-wayland-dev
+        ci/${{ matrix.platform }}/setup.sh
     - name: Configure
-      env:
-        CC: ${{ matrix.CC }}
-        CXX: ${{ matrix.CXX }}
       run: |
-        cmake -DCMAKE_BUILD_TYPE=Release -S ${{ github.workspace }} -B build
+        cmake --preset release
     - name: Build
       run: |
-        cmake --build build --parallel
+        cmake --build --preset release
