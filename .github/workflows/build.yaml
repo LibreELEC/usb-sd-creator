@@ -10,6 +10,9 @@ jobs:
         include:
         - os: ubuntu-22.04
           platform: linux
+        - os: macos-latest
+          platform: macos
+          preset: release-macos
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -18,7 +21,7 @@ jobs:
         ci/${{ matrix.platform }}/setup.sh
     - name: Configure
       run: |
-        cmake --preset release
+        cmake --preset ${{ matrix.preset || 'release' }}
     - name: Build
       run: |
         cmake --build --preset release
