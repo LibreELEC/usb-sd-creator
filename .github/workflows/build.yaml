@@ -9,30 +9,38 @@ jobs:
       matrix:
         include:
         - os: ubuntu-22.04
-          CC: gcc
-          CXX: g++
+          platform: linux
+        - os: macos-latest
+          platform: macos
+          preset: release-macos
+          artifact: '*.dmg'
     steps:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Setup
       run: |
-        sudo add-apt-repository universe -y
-        sudo apt update -y
-        sudo apt install -y cmake \
-                            gcc \
-                            g++ \
-                            libgl1-mesa-dev \
-                            qt6-base-dev \
-                            qt6-l10n-tools \
-                            qt6-tools-dev \
-                            qt6-tools-dev-tools \
-                            qt6-wayland-dev
-    - name: Configure
+        ci/${{ matrix.platform }}/setup.sh
       env:
-        CC: ${{ matrix.CC }}
-        CXX: ${{ matrix.CXX }}
+        MACOS_ASC_API_KEY: ${{ secrets.MACOS_ASC_API_KEY }}
+        MACOS_CODE_SIGN_KEY_BASE64: ${{ secrets.MACOS_CODE_SIGN_KEY_BASE64 }}
+        MACOS_KEYCHAIN_PASSWORD: ${{ secrets.MACOS_KEYCHAIN_PASSWORD }}
+    - name: Configure
       run: |
-        cmake -DCMAKE_BUILD_TYPE=Release -S ${{ github.workspace }} -B build
+        cmake --preset ${{ matrix.preset || 'release' }}
     - name: Build
       run: |
-        cmake --build build --parallel
+        cmake --build --preset release
+    - name: Pack
+      if: ${{ matrix.artifact }}
+      run: |
+        cpack --preset release
+      env:
+        ASC_API_KEY_ID: ${{ secrets.MACOS_ASC_API_KEY_ID }}
+        ASC_API_KEY_ISSUER: ${{ secrets.MACOS_ASC_API_KEY_ISSUER }}
+        ASC_TEAM_ID: ${{ secrets.MACOS_ASC_TEAM_ID }}
+    - name: Artifact
+      if: ${{ matrix.artifact }}
+      uses: actions/upload-artifact@v4
+      with:
+        path: build/${{ matrix.artifact }}
+        name: ${{ matrix.platform }}

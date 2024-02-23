@@ -6,14 +6,14 @@ on run argv
 			set dmg_topleft_x to 100
 			set dmg_topleft_y to 100
 			set dmg_width to 480
-			set dmg_height to 320
+			set dmg_height to (320 + 28)
 			set dmg_bottomright_x to (dmg_topleft_x + dmg_width)
 			set dmg_bottomright_y to (dmg_topleft_y + dmg_height)
 
 			set le_icon_x to 130
 			set app_icon_x to 360
-			set both_icon_y to 180
-			
+			set both_icon_y to 185
+
 			open
 			set viewOptions to the icon view options of container window
 			set arrangement of viewOptions to not arranged
