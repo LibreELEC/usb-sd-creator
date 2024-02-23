@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 6,
   "configurePresets": [
     {
       "name": "release",
@@ -23,6 +23,15 @@
     {
       "name": "release",
       "configurePreset": "release"
+    }
+  ],
+  "packagePresets": [
+    {
+      "name": "release",
+      "configurePreset": "release",
+      "output": {
+        "verbose": true
+      }
     }
   ]
 }

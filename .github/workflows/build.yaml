@@ -13,6 +13,7 @@ jobs:
         - os: macos-latest
           platform: macos
           preset: release-macos
+          artifact: '*.dmg'
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -25,3 +26,13 @@ jobs:
     - name: Build
       run: |
         cmake --build --preset release
+    - name: Pack
+      if: ${{ matrix.artifact }}
+      run: |
+        cpack --preset release
+    - name: Artifact
+      if: ${{ matrix.artifact }}
+      uses: actions/upload-artifact@v4
+      with:
+        path: build/${{ matrix.artifact }}
+        name: ${{ matrix.platform }}
