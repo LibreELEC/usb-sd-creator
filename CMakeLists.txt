@@ -28,6 +28,11 @@ if(LINUX)
 endif()
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS ${qtComponents})
 
+if(MSVC_TOOLSET_VERSION EQUAL 142)
+    list(APPEND CMAKE_PREFIX_PATH "windows/msvc2019/zlib")
+endif()
+find_package(ZLIB REQUIRED)
+
 qt_add_executable(LibreELEC.USB-SD.Creator WIN32 MACOSX_BUNDLE
     creator.cpp creator.h creator.ui
     deviceenumerator.h
@@ -58,7 +63,7 @@ target_link_libraries(LibreELEC.USB-SD.Creator PUBLIC
     Qt${QT_VERSION_MAJOR}::Gui
     Qt${QT_VERSION_MAJOR}::Network
     Qt${QT_VERSION_MAJOR}::Widgets
-    z
+    ZLIB::ZLIB
 )
 
 string(TIMESTAMP nowDateTime UTC)
