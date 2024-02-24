@@ -112,6 +112,12 @@ qt_add_translations(LibreELEC.USB-SD.Creator
 )
 
 if(WIN32)
+    if(MSVC)
+        set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
+            LINK_OPTIONS "/MANIFEST:NO" # disable default manifest
+        )
+    endif()
+
     target_sources(LibreELEC.USB-SD.Creator PUBLIC
         deviceenumerator_windows.cpp deviceenumerator_windows.h
         diskwriter_windows.cpp diskwriter_windows.h
