@@ -220,6 +220,7 @@ if(qtDeployExecutable)
 endif()
 
 # cpack
+set(CPACK_PACKAGE_DIRECTORY "cpack")
 set(CPACK_PACKAGE_NAME "${projectDisplayName}")
 set(CPACK_PACKAGE_VENDOR "LibreELEC")
 if(WIN32)
