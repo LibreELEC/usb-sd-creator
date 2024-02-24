@@ -20,6 +20,10 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
+if(WIN32)
+    option(DUMMY_WRITE "Write image to local file named 'dummy_image_file' instead to real device (for testing)")
+endif()
+
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
 
 set(qtComponents Gui Network Widgets LinguistTools)
@@ -72,6 +76,7 @@ target_compile_definitions(LibreELEC.USB-SD.Creator PRIVATE
     "BUILD_VERSION=\"${PROJECT_VERSION}\""
     "COPYRIGHT_YEARS=\"${copyrightYears}\""
     $<$<CONFIG:Debug>:ALWAYS_DEBUG_OUTPUT>
+    $<$<BOOL:${DUMMY_WRITE}>:WINDOWS_DUMMY_WRITE>
 )
 
 qt_add_translations(LibreELEC.USB-SD.Creator
