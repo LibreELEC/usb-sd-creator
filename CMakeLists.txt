@@ -20,14 +20,31 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
+include(GNUInstallDirs)
+# GNU dirs must be adjusted before finding Qt for qt_deploy_runtime_dependencies to use customzied vars
+if(WIN32)
+    set(CMAKE_INSTALL_BINDIR .)
+endif()
 
+# options
+if(WIN32)
+    option(DUMMY_WRITE "Write image to local file named 'dummy_image_file' instead to real device (for testing)")
+endif()
+
+# dependencies
+find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
 set(qtComponents Gui Network Widgets LinguistTools)
 if(LINUX)
     list(APPEND qtComponents DBus)
 endif()
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS ${qtComponents})
 
+if(MSVC_TOOLSET_VERSION EQUAL 142)
+    list(APPEND CMAKE_PREFIX_PATH "windows/msvc2019/zlib")
+endif()
+find_package(ZLIB REQUIRED)
+
+# executable
 qt_add_executable(LibreELEC.USB-SD.Creator WIN32 MACOSX_BUNDLE
     creator.cpp creator.h creator.ui
     deviceenumerator.h
@@ -58,7 +75,7 @@ target_link_libraries(LibreELEC.USB-SD.Creator PUBLIC
     Qt${QT_VERSION_MAJOR}::Gui
     Qt${QT_VERSION_MAJOR}::Network
     Qt${QT_VERSION_MAJOR}::Widgets
-    z
+    ZLIB::ZLIB
 )
 
 string(TIMESTAMP nowDateTime UTC)
@@ -67,6 +84,7 @@ target_compile_definitions(LibreELEC.USB-SD.Creator PRIVATE
     "BUILD_VERSION=\"${PROJECT_VERSION}\""
     "COPYRIGHT_YEARS=\"${copyrightYears}\""
     $<$<CONFIG:Debug>:ALWAYS_DEBUG_OUTPUT>
+    $<$<BOOL:${DUMMY_WRITE}>:WINDOWS_DUMMY_WRITE>
 )
 
 qt_add_translations(LibreELEC.USB-SD.Creator
@@ -107,6 +125,12 @@ qt_add_translations(LibreELEC.USB-SD.Creator
 )
 
 if(WIN32)
+    if(MSVC)
+        set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
+            LINK_OPTIONS "/MANIFEST:NO" # disable default manifest
+        )
+    endif()
+
     target_sources(LibreELEC.USB-SD.Creator PUBLIC
         deviceenumerator_windows.cpp deviceenumerator_windows.h
         diskwriter_windows.cpp diskwriter_windows.h
@@ -115,6 +139,14 @@ if(WIN32)
     )
 
     configure_file("windows/winapp.rc.in" "${CMAKE_SOURCE_DIR}/windows/winapp.rc" @ONLY)
+
+    set(qtDeployExecutable "$<TARGET_FILE_NAME:LibreELEC.USB-SD.Creator>")
+    set(qtDeployExtraCommands "
+        # windeployqt also packages extra libs that aren't needed
+        foreach(dll in Qt${QT_VERSION_MAJOR}Svg opengl32sw D3Dcompiler_47)
+            file(REMOVE \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_BIN_DIR}/\\\${dll}.dll\")
+        endforeach()
+    ")
 elseif(APPLE)
     set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
         OUTPUT_NAME "${projectDisplayName}"
@@ -126,32 +158,24 @@ elseif(APPLE)
         privileges_unix.cpp privileges_unix.h
     )
 
-    set(bundleContentsDir "$<TARGET_BUNDLE_CONTENT_DIR:LibreELEC.USB-SD.Creator>")
     install(FILES "dmg_osx/icon.icns"
-        DESTINATION "${bundleContentsDir}/Resources"
+        DESTINATION "$<TARGET_BUNDLE_CONTENT_DIR:LibreELEC.USB-SD.Creator>/Resources"
     )
 
-    qt_generate_deploy_script(
-        TARGET LibreELEC.USB-SD.Creator
-        OUTPUT_SCRIPT qtDeployScript
-        CONTENT "
-            qt_deploy_runtime_dependencies(
-                EXECUTABLE \"$<TARGET_BUNDLE_DIR:LibreELEC.USB-SD.Creator>\"
-                GENERATE_QT_CONF
-                NO_APP_STORE_COMPLIANCE
-                VERBOSE
-            )
-            # macdeployqt also packages extra frameworks that aren't needed
-            foreach(qtModule in Pdf Svg)
-                file(REMOVE_RECURSE \"${bundleContentsDir}/Frameworks/Qt\\\${qtModule}.framework\")
-            endforeach()
+    set(qtDeployExecutable "$<TARGET_FILE_NAME:LibreELEC.USB-SD.Creator>.app")
+    set(qtDeployExtraCommands "
+        set(bundleContentsDir \"\\\${QT_DEPLOY_PREFIX}/${qtDeployExecutable}/Contents\")
 
-            # codesign
-            execute_process(COMMAND \"${CMAKE_SOURCE_DIR}/dmg_osx/codesign.sh\"
-                WORKING_DIRECTORY \"${bundleContentsDir}\"
-            )
-        ")
-    install(SCRIPT ${qtDeployScript})
+        # macdeployqt also packages extra frameworks that aren't needed
+        foreach(qtModule in Pdf Svg)
+            file(REMOVE_RECURSE \"\\\${bundleContentsDir}/Frameworks/Qt\\\${qtModule}.framework\")
+        endforeach()
+
+        # codesign
+        execute_process(COMMAND \"${CMAKE_SOURCE_DIR}/dmg_osx/codesign.sh\"
+            WORKING_DIRECTORY \"\\\${bundleContentsDir}\"
+        )
+    ")
 elseif(LINUX)
     set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES SUFFIX .Linux.bin)
 
@@ -166,15 +190,37 @@ elseif(LINUX)
     )
 endif()
 
+# install
 install(TARGETS LibreELEC.USB-SD.Creator
     BUNDLE
         DESTINATION .
 )
+if(qtDeployExecutable)
+    qt_generate_deploy_script(
+        TARGET LibreELEC.USB-SD.Creator
+        OUTPUT_SCRIPT qtDeployScript
+        CONTENT "
+            qt_deploy_runtime_dependencies(
+                EXECUTABLE \"${qtDeployExecutable}\"
+                GENERATE_QT_CONF
+                NO_APP_STORE_COMPLIANCE
+                NO_COMPILER_RUNTIME
+                NO_TRANSLATIONS
+                VERBOSE
+            )
+            ${qtDeployExtraCommands}
+        "
+    )
+    install(SCRIPT ${qtDeployScript})
+endif()
 
 # cpack
 set(CPACK_PACKAGE_NAME "${projectDisplayName}")
 set(CPACK_PACKAGE_VENDOR "LibreELEC")
-if(APPLE)
+if(WIN32)
+    set(CPACK_PACKAGE_FILE_NAME "LibreELEC.USB-SD.Creator.Win32")
+    set(CPACK_GENERATOR INNOSETUP)
+elseif(APPLE)
     set(CPACK_PACKAGE_FILE_NAME "LibreELEC.USB-SD.Creator.macOS")
 
     set(notarizeScript "${CMAKE_BINARY_DIR}/notarize.cmake")

@@ -19,14 +19,14 @@
 #ifndef PRIVILEGES_H
 #define PRIVILEGES_H
 
+#include <QString>
+
 class Privileges {
 public:
-    Privileges() {}
     void SetRoot() {}
     void SetUser() {}
     void SetRealUser() {}
     void Whoami() {}
-    void SaveUserEnv(pid_t) {}
     QString GetUserEnvDbusSession()
     {
         return QString();

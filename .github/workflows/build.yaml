@@ -14,16 +14,57 @@ jobs:
           platform: macos
           preset: release-macos
           artifact: '*.dmg'
+        - os: windows-latest
+          platform: windows-msvc
+          preset: release-msvc
+          artifact: '*.Win32.exe'
+          useQtAction: true
+        - os: windows-latest
+          platform: windows-mingw
+          preset: release-ninja
     steps:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Setup
+      shell: bash
       run: |
-        ci/${{ matrix.platform }}/setup.sh
+        setupScript='ci/${{ matrix.platform }}/setup.sh'
+        [ ! -f "$setupScript" ] || "$setupScript"
       env:
         MACOS_ASC_API_KEY: ${{ secrets.MACOS_ASC_API_KEY }}
         MACOS_CODE_SIGN_KEY_BASE64: ${{ secrets.MACOS_CODE_SIGN_KEY_BASE64 }}
         MACOS_KEYCHAIN_PASSWORD: ${{ secrets.MACOS_KEYCHAIN_PASSWORD }}
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v3
+      if: ${{ matrix.useQtAction }}
+      with:
+        version: '6.6.2'
+        arch: 'win64_msvc2019_64'
+        archives: 'qtbase qttools opengl32sw d3dcompiler_47'
+        extra: '--external 7z'
+        cache: true
+        setup-python: false
+    - name: Prepare MSVC environment
+      uses: ilammy/msvc-dev-cmd@v1
+      if: ${{ matrix.platform == 'windows-msvc' }}
+      with:
+        arch: x64
+        toolset: 14.29
+    - name: Setup msys2
+      uses: msys2/setup-msys2@v2
+      if: ${{ matrix.platform == 'windows-mingw' }}
+      with:
+        update: true
+        install: >-
+          mingw-w64-x86_64-cmake
+          mingw-w64-x86_64-gcc
+          mingw-w64-x86_64-ninja
+          mingw-w64-x86_64-qt6-base
+          mingw-w64-x86_64-qt6-tools
+    - name: Put MSYS2_MinGW64 on PATH
+      if: ${{ matrix.platform == 'windows-mingw' }}
+      run: |
+        echo "${{ runner.temp }}/msys64/mingw64/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
     - name: Configure
       run: |
         cmake --preset ${{ matrix.preset || 'release' }}
@@ -44,3 +85,4 @@ jobs:
       with:
         path: build/${{ matrix.artifact }}
         name: ${{ matrix.platform }}
+        compression-level: 0

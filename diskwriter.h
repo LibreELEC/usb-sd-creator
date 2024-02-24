@@ -25,7 +25,7 @@
 #include <QStringList>
 #include <QByteArray>
 
-#include "zlib.h"
+#include <zlib.h>
 
 class DiskWriter : public QObject
 {
