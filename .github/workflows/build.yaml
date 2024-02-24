@@ -17,6 +17,7 @@ jobs:
         - os: windows-latest
           platform: windows-msvc
           preset: release-msvc
+          artifact: '*.Win32.exe'
           useQtAction: true
     steps:
     - name: Checkout
@@ -66,3 +67,4 @@ jobs:
       with:
         path: build/${{ matrix.artifact }}
         name: ${{ matrix.platform }}
+        compression-level: 0

@@ -219,6 +219,7 @@ set(CPACK_PACKAGE_NAME "${projectDisplayName}")
 set(CPACK_PACKAGE_VENDOR "LibreELEC")
 if(WIN32)
     set(CPACK_PACKAGE_FILE_NAME "LibreELEC.USB-SD.Creator.Win32")
+    set(CPACK_GENERATOR INNOSETUP)
 elseif(APPLE)
     set(CPACK_PACKAGE_FILE_NAME "LibreELEC.USB-SD.Creator.macOS")
 
