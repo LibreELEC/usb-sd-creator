@@ -14,16 +14,38 @@ jobs:
           platform: macos
           preset: release-macos
           artifact: '*.dmg'
+        - os: windows-latest
+          platform: windows-msvc
+          preset: release-msvc
+          useQtAction: true
     steps:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Setup
+      shell: bash
       run: |
-        ci/${{ matrix.platform }}/setup.sh
+        setupScript='ci/${{ matrix.platform }}/setup.sh'
+        [ ! -f "$setupScript" ] || "$setupScript"
       env:
         MACOS_ASC_API_KEY: ${{ secrets.MACOS_ASC_API_KEY }}
         MACOS_CODE_SIGN_KEY_BASE64: ${{ secrets.MACOS_CODE_SIGN_KEY_BASE64 }}
         MACOS_KEYCHAIN_PASSWORD: ${{ secrets.MACOS_KEYCHAIN_PASSWORD }}
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v3
+      if: ${{ matrix.useQtAction }}
+      with:
+        version: '6.6.2'
+        arch: 'win64_msvc2019_64'
+        archives: 'qtbase qttools opengl32sw d3dcompiler_47'
+        extra: '--external 7z'
+        cache: true
+        setup-python: false
+    - name: Prepare MSVC environment
+      uses: ilammy/msvc-dev-cmd@v1
+      if: ${{ matrix.platform == 'windows-msvc' }}
+      with:
+        arch: x64
+        toolset: 14.29
     - name: Configure
       run: |
         cmake --preset ${{ matrix.preset || 'release' }}

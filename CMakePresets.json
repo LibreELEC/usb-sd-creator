@@ -17,6 +17,11 @@
         "CMAKE_OSX_ARCHITECTURES": "x86_64;arm64",
         "CMAKE_OSX_DEPLOYMENT_TARGET": "11.0"
       }
+    },
+    {
+      "name": "release-msvc",
+      "inherits": "release",
+      "generator": "NMake Makefiles"
     }
   ],
   "buildPresets": [
