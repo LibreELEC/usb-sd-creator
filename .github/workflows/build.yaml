@@ -83,6 +83,10 @@ jobs:
         ASC_API_KEY_ID: ${{ secrets.MACOS_ASC_API_KEY_ID }}
         ASC_API_KEY_ISSUER: ${{ secrets.MACOS_ASC_API_KEY_ISSUER }}
         ASC_TEAM_ID: ${{ secrets.MACOS_ASC_TEAM_ID }}
+    - name: Pack zip
+      if: ${{ matrix.platform == 'windows-msvc' }}
+      run: |
+        cpack --preset release -G ZIP
     - name: Artifact
       uses: actions/upload-artifact@v4
       with:
