@@ -19,6 +19,9 @@ jobs:
           preset: release-msvc
           artifact: '*.Win32.exe'
           useQtAction: true
+        - os: windows-latest
+          platform: windows-mingw
+          preset: release-ninja
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -47,6 +50,21 @@ jobs:
       with:
         arch: x64
         toolset: 14.29
+    - name: Setup msys2
+      uses: msys2/setup-msys2@v2
+      if: ${{ matrix.platform == 'windows-mingw' }}
+      with:
+        update: true
+        install: >-
+          mingw-w64-x86_64-cmake
+          mingw-w64-x86_64-gcc
+          mingw-w64-x86_64-ninja
+          mingw-w64-x86_64-qt6-base
+          mingw-w64-x86_64-qt6-tools
+    - name: Put MSYS2_MinGW64 on PATH
+      if: ${{ matrix.platform == 'windows-mingw' }}
+      run: |
+        echo "${{ runner.temp }}/msys64/mingw64/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
     - name: Configure
       run: |
         cmake --preset ${{ matrix.preset || 'release' }}

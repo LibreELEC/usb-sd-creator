@@ -10,9 +10,13 @@
       }
     },
     {
-      "name": "release-macos",
+      "name": "release-ninja",
       "inherits": "release",
-      "generator": "Ninja",
+      "generator": "Ninja"
+    },
+    {
+      "name": "release-macos",
+      "inherits": "release-ninja",
       "cacheVariables": {
         "CMAKE_OSX_ARCHITECTURES": "x86_64;arm64",
         "CMAKE_OSX_DEPLOYMENT_TARGET": "11.0"
