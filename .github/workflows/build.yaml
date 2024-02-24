@@ -13,11 +13,11 @@ jobs:
         - os: macos-latest
           platform: macos
           preset: release-macos
-          artifact: '*.dmg'
+          cpack: true
         - os: windows-latest
           platform: windows-msvc
           preset: release-msvc
-          artifact: '*.Win32.exe'
+          cpack: true
           useQtAction: true
         - os: windows-latest
           platform: windows-mingw
@@ -34,6 +34,7 @@ jobs:
         MACOS_ASC_API_KEY: ${{ secrets.MACOS_ASC_API_KEY }}
         MACOS_CODE_SIGN_KEY_BASE64: ${{ secrets.MACOS_CODE_SIGN_KEY_BASE64 }}
         MACOS_KEYCHAIN_PASSWORD: ${{ secrets.MACOS_KEYCHAIN_PASSWORD }}
+
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
       if: ${{ matrix.useQtAction }}
@@ -50,6 +51,7 @@ jobs:
       with:
         arch: x64
         toolset: 14.29
+
     - name: Setup msys2
       uses: msys2/setup-msys2@v2
       if: ${{ matrix.platform == 'windows-mingw' }}
@@ -65,24 +67,29 @@ jobs:
       if: ${{ matrix.platform == 'windows-mingw' }}
       run: |
         echo "${{ runner.temp }}/msys64/mingw64/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+
     - name: Configure
       run: |
         cmake --preset ${{ matrix.preset || 'release' }}
     - name: Build
       run: |
         cmake --build --preset release
+
     - name: Pack
-      if: ${{ matrix.artifact }}
+      if: ${{ matrix.cpack }}
       run: |
         cpack --preset release
       env:
         ASC_API_KEY_ID: ${{ secrets.MACOS_ASC_API_KEY_ID }}
         ASC_API_KEY_ISSUER: ${{ secrets.MACOS_ASC_API_KEY_ISSUER }}
         ASC_TEAM_ID: ${{ secrets.MACOS_ASC_TEAM_ID }}
+    - name: Pack zip
+      if: ${{ matrix.platform == 'windows-msvc' }}
+      run: |
+        cpack --preset release -G ZIP
     - name: Artifact
-      if: ${{ matrix.artifact }}
       uses: actions/upload-artifact@v4
       with:
-        path: build/${{ matrix.artifact }}
+        path: build/cpack/LibreELEC.USB-SD.Creator.*
         name: ${{ matrix.platform }}
         compression-level: 0

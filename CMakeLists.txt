@@ -29,6 +29,7 @@ endif()
 # options
 if(WIN32)
     option(DUMMY_WRITE "Write image to local file named 'dummy_image_file' instead to real device (for testing)")
+    option(REQUIRE_ADMIN "Build exe that runs only as administrator" ON)
 endif()
 
 # dependencies
@@ -125,18 +126,22 @@ qt_add_translations(LibreELEC.USB-SD.Creator
 )
 
 if(WIN32)
-    if(MSVC)
-        set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
-            LINK_OPTIONS "/MANIFEST:NO" # disable default manifest
-        )
-    endif()
-
     target_sources(LibreELEC.USB-SD.Creator PUBLIC
         deviceenumerator_windows.cpp deviceenumerator_windows.h
         diskwriter_windows.cpp diskwriter_windows.h
         privileges.h
-        windows/winapp.rc
     )
+
+    if(REQUIRE_ADMIN)
+        target_sources(LibreELEC.USB-SD.Creator PUBLIC
+            windows/winapp.rc
+        )
+        if(MSVC)
+            set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
+                LINK_OPTIONS "/MANIFEST:NO" # disable default manifest
+            )
+        endif()
+    endif()
 
     configure_file("windows/winapp.rc.in" "${CMAKE_SOURCE_DIR}/windows/winapp.rc" @ONLY)
 
@@ -215,10 +220,11 @@ if(qtDeployExecutable)
 endif()
 
 # cpack
+set(CPACK_PACKAGE_DIRECTORY "cpack")
 set(CPACK_PACKAGE_NAME "${projectDisplayName}")
 set(CPACK_PACKAGE_VENDOR "LibreELEC")
 if(WIN32)
-    set(CPACK_PACKAGE_FILE_NAME "LibreELEC.USB-SD.Creator.Win32")
+    set(CPACK_PACKAGE_FILE_NAME "LibreELEC.USB-SD.Creator.x64")
     set(CPACK_GENERATOR INNOSETUP)
 elseif(APPLE)
     set(CPACK_PACKAGE_FILE_NAME "LibreELEC.USB-SD.Creator.macOS")
