@@ -33,11 +33,11 @@ if(WIN32)
 endif()
 
 # dependencies
-find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
 set(qtComponents Gui Network Widgets LinguistTools)
 if(LINUX)
     list(APPEND qtComponents DBus)
 endif()
+find_package(QT NAMES Qt6 REQUIRED COMPONENTS ${qtComponents})
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS ${qtComponents})
 
 if(MSVC_TOOLSET_VERSION EQUAL 142)

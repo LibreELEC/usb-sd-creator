@@ -46,7 +46,9 @@ void noMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
 
 int main(int argc, char *argv[])
 {
+#ifdef Q_OS_WINDOWS
     qputenv("QT_QPA_PLATFORM", "windows:darkmode=0");
+#endif
     QApplication app(argc, argv);
 
     const auto cmdArgs = app.arguments();
