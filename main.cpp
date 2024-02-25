@@ -60,14 +60,15 @@ int main(int argc, char *argv[])
 
 #ifdef Q_OS_MACOS
     // If not running with root privileges, relaunch executable with sudo.
-    if (getuid() != 0 && cmdArgs.contains("--elevated") == false)
+    const QLatin1String elevatedParam{"--elevated"};
+    if (!cmdArgs.contains(elevatedParam) && getuid() != 0)
     {
         const auto sudoPrompt = QLatin1String{"%1 requires admin permissions."}.arg(app.applicationDisplayName());
-        const QLatin1String appleScript{R"(do shell script "sudo '%1'" with prompt "%2" with administrator privileges)"};
+        const QLatin1String appleScript{R"(do shell script "sudo '%1' %2" with prompt "%3" with administrator privileges)"};
 
         QProcess myProcess;
         myProcess.setProgram(QLatin1String{"osascript"});
-        myProcess.setArguments({"-e", appleScript.arg(QCoreApplication::applicationFilePath(), sudoPrompt)});
+        myProcess.setArguments({"-e", appleScript.arg(QCoreApplication::applicationFilePath(), elevatedParam, sudoPrompt)});
 
         if (myProcess.startDetached())
         {
