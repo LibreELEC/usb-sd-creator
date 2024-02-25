@@ -38,6 +38,7 @@
 #include <QProcess>
 #include <QVersionNumber>
 #include <QSignalBlocker>
+#include <QApplication>
 
 #if defined(Q_OS_WIN)
 #include "diskwriter_windows.h"
@@ -73,6 +74,12 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     restoreGeometry(settings.value("window/geometry").toByteArray());
 
     ui->setupUi(this);
+
+#ifdef Q_OS_MACOS
+    auto fontAbout = ui->labelAbout->font();
+    fontAbout.setPointSize(fontAbout.pointSize() + 2);
+    ui->labelAbout->setFont(fontAbout);
+#endif
 
 #if defined(Q_OS_WIN)
     diskWriter = new DiskWriter_windows();
@@ -305,7 +312,6 @@ void Creator::retranslateUi()
     // retranslate dynamic texts
     ui->labelVersion->setText(tr("Version: %1\nBuild date: %2").arg(QLatin1String{BUILD_VERSION}, QLatin1String{BUILD_DATE}));
 
-    ui->labelAbout->setTextFormat(Qt::RichText);
     ui->labelAbout->setText(QString("<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\"><h2>&copy; LibreELEC %8</h2></span></p><p align=\"center\">%1<br/>%2</p><p align=\"center\">%3<br/><a href=\"https://github.com/LibreELEC/usb-sd-creator\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/LibreELEC/usb-sd-creator</span></a><br/></p><p align=\"center\">%4<br/>%5</p><p align=\"center\">%6<br/>%7 <br/><br/><a href=\"https://opencollective.com/libreelec/donate\"><img src=\":/icons/opencollective.png\"></a></p></body></html>") \
           .arg(tr("This software was created with love and released"))
           .arg(tr("under GPLv2, using earlier work from RasPlex."))
