@@ -83,7 +83,19 @@ int main(int argc, char *argv[])
 
     qDebug() << "App data: Version:" << BUILD_VERSION << ", Build date:" << BUILD_DATE;
 
-    if (cmdArgs.contains("--no-proxy") == false) {
+    const QLatin1String httpProxyParam{"--http-proxy"};
+    const auto httpProxyParamIndex = cmdArgs.indexOf(httpProxyParam);
+    if (httpProxyParamIndex != -1)
+    {
+        const auto httpProxy = cmdArgs.at(httpProxyParamIndex + 1);
+        const auto proxyHostPort = httpProxy.split(':');
+
+        QNetworkProxy proxy{QNetworkProxy::HttpProxy, proxyHostPort[0]};
+        if (proxyHostPort.size() > 1)
+            proxy.setPort(proxyHostPort[1].toUShort());
+        QNetworkProxy::setApplicationProxy(proxy);
+    }
+    else if (!cmdArgs.contains("--no-proxy")) {
         QNetworkProxyQuery npq(QUrl("http://releases.libreelec.tv/"));
         QList<QNetworkProxy> listOfProxies = QNetworkProxyFactory::systemProxyForQuery(npq);
         if (listOfProxies.size()) {
