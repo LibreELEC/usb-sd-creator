@@ -65,10 +65,11 @@ int main(int argc, char *argv[])
     {
         const auto sudoPrompt = QLatin1String{"%1 requires admin permissions."}.arg(app.applicationDisplayName());
         const QLatin1String appleScript{R"(do shell script "sudo '%1' %2" with prompt "%3" with administrator privileges)"};
+        const auto cliParams = QStringList{elevatedParam} + cmdArgs.mid(1);
 
         QProcess myProcess;
         myProcess.setProgram(QLatin1String{"osascript"});
-        myProcess.setArguments({"-e", appleScript.arg(QCoreApplication::applicationFilePath(), elevatedParam, sudoPrompt)});
+        myProcess.setArguments({"-e", appleScript.arg(QCoreApplication::applicationFilePath(), cliParams.join(' '), sudoPrompt)});
 
         if (myProcess.startDetached())
         {
