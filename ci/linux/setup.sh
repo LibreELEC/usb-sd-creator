@@ -1,8 +1,8 @@
 #!/bin/sh
 
 sudo add-apt-repository universe -y
-sudo apt update -y
-sudo apt install -y cmake \
+sudo apt-get update -y -qq
+sudo apt-get install -y -qq cmake \
   gcc \
   g++ \
   libgl1-mesa-dev \
