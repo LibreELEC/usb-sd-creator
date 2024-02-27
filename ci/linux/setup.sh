@@ -10,7 +10,7 @@ sudo apt-get install -y -qq cmake \
   qt6-l10n-tools \
   qt6-tools-dev \
   qt6-tools-dev-tools \
-  qt6-wayland-dev \
+  qt6-wayland-dev
 
-echo "CC=gcc" >> $GITHUB_ENV
-echo "CXX=g++" >> $GITHUB_ENV
+echo "CC=gcc" >>$GITHUB_ENV
+echo "CXX=g++" >>$GITHUB_ENV
