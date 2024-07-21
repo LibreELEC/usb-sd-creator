@@ -78,27 +78,36 @@ The finished executable is located at `C:\usb-sd-creator\releases`.
 
 ### 1. Install XCode with Command-line tools
 
-### 2. Setup QT 6.6.2 (static build or shared)
+### 2. Setup QT 6.7.2
 
-#### Static build
+#### Install pre-requisites
 
-Open a command prompt and type the following in the console:
+The build requires both `python3` and `cmake`. If you don't have them installed, run the following commands:
 
 ```
-mkdir -p ~/Downloads ~/Qt
-cd ~/Downloads
-
-wget https://download.qt.io/official_releases/qt/6.6/6.6.2/single/qt-everywhere-src-6.6.2.tar.xz
-tar xf qt-everywhere-src-6.6.2.tar.xz
-cd qt-everywhere-src-6.6.2
-./configure -static -no-shared -release -opensource -confirm-license -silent -prefix ~/Qt/6.6.2-static -nomake examples -nomake tests -no-strip -no-cups -qt-zlib -qt-pcre -qt-libpng -qt-libjpeg -qt-harfbuzz -qt-freetype
-ninja qtbase/all qttools/all
-ninja install
+brew install python
+brew install cmake
 ```
 
-#### Shared library
+Now install `aqt`, a command line package manager for `QT`:
 
-TODO
+```
+pip3 install aqtinstall --break-system-packages
+```
+
+#### Install required QT packages
+
+To see the available QT versions run:
+
+```
+aqt list-qt mac desktop
+```
+
+Install the required packages:
+
+```
+aqt install-qt --outputdir ~/Qt mac desktop 6.7.2 --archives qtbase qttools
+```
 
 ### 4. Build USB-SD-Creator
 
@@ -106,26 +115,29 @@ Assuming the repo is in your home directory
 
 ```
 cd ~/usb-sd-creator
-
-./osx_build.sh
 ```
 
-If building again cleanup using:
+#### Debug build
 ```
-./osx_clean.sh
+cmake -S . -B build -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.7.2/macos" && cmake --build build
+```
+
+#### Release build
+```
+cmake --preset release -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.7.2/macos" && cmake --build --preset release
 ```
 
 ### 5. Run USB-SD-Creator
 
 #### Open the app
 
-Simply double click the app from a finder window in the root of the repo: `LibreELEC USB-SD Creator`
+Simply double click the app from a finder window in the `build` folder in the repo: `build/LibreELEC USB-SD Creator`
 
 #### Command line
 
 Run the app from the command line, that will prompt for a password:
 ```
-./LibreELEC\ USB-SD\ Creator.app/Contents/MacOS/LibreELEC\ USB-SD\ Creator
+./build/LibreELEC\ USB-SD\ Creator.app/Contents/MacOS/LibreELEC\ USB-SD\ Creator
 ```
 
 **Or:**
@@ -133,5 +145,27 @@ Run the app from the command line, that will prompt for a password:
 Run the app from the command line using sudo
 
 ```
-sudo ./LibreELEC\ USB-SD\ Creator.app/Contents/MacOS/LibreELEC\ USB-SD\ Creator
+sudo ./build/LibreELEC\ USB-SD\ Creator.app/Contents/MacOS/LibreELEC\ USB-SD\ Creator
 ```
+
+### 6. Debugging USB-SD-Creator
+
+#### Using QT Creator
+
+If you need to, install QT Creator:
+
+```
+brew install --cask qt-creator
+```
+
+Then simply open CMakeLists.txt in QT Creator
+
+#### Using XCode
+
+Build the xcode project, and open the project file in Xcode, located in the build folder (note you may need to clear any previous build files before genreating for XCode):
+
+```
+cmake -S . -B build -G Xcode -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.7.2/macos" && cmake --build build
+```
+
+
