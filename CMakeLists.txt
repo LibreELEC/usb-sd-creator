@@ -42,6 +42,8 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS ${qtComponents})
 
 if(MSVC_TOOLSET_VERSION EQUAL 142)
     list(APPEND CMAKE_PREFIX_PATH "windows/msvc2019/zlib")
+elseif(MSVC_TOOLSET_VERSION EQUAL 143)
+    list(APPEND CMAKE_PREFIX_PATH "windows/msvc2022/zlib")
 endif()
 find_package(ZLIB REQUIRED)
 
