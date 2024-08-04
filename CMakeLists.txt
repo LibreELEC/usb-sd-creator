@@ -161,6 +161,7 @@ elseif(APPLE)
         deviceenumerator_unix.cpp deviceenumerator_unix.h
         diskwriter_unix.cpp diskwriter_unix.h
         privileges_unix.cpp privileges_unix.h
+        macos/askpass.cpp macos/askpass.h
     )
 
     install(FILES "dmg_osx/icon.icns"
