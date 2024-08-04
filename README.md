@@ -20,57 +20,176 @@ Issues should be reported via the forum here: https://forum.libreelec.tv/board/4
 
 # **How to compile the USB/SD Creator**
 
+Build instructions are supplied for Windows x64 (Installer and Portable) and MacOS (Intel and Apple Silicon). Instructions tested locally on Mac Sonoma and Windows 11.
+
+It is possible to build for Linux, but for now instructions are TBD.
+
 # Windows
 
-### 1. install "Qt Online Installer"
-select: Custom install -> select QT 6.6.2 -> disable all besides MinGW
-Install to `C:\QT`
+## Install pre-requisites
 
-### 2. Install 7zip
+### 1. Install 7zip
 https://www.7-zip.org/download.html
 
-### 3. Install Git
+### 2. Install Git
 https://git-scm.com/download/win
 
-### 4. Install Ruby
-https://rubyinstaller.org/downloads/ select "WITHOUT DEVKIT" for download
+### 3. Install CMake
+https://cmake.org/download, select windows x64 installer and "Add cmake to PATH".
 
-### 5. Install Perl
-https://www.activestate.com/products/perl/ (needs registration) or
-
-https://www.softpedia.com/get/Programming/Coding-languages-Compilers/ActivePerl.shtml
-
-### 6. Install Python
+### 4. Install Python
 https://www.python.org/downloads/windows/ select Windows installer (64-bit) for download
 at install select "Add Python to PATH"
 
-### 7. Add programs to PATH variable
+### 5. Install Inno Setup (Compiler for Installer)
 
-`C:\Qt\Tools\Ninja`
-`C:\Qt\Tools\CMake_64\bin`
+https://jrsoftware.org/isdl.php, download and install the latest stable version.
 
-reboot Windows
+#### 5. Add 7-Zip to PATH variable
 
-### 8. Clone Git Repo
-Clone the repository to `C:\usb-sd-creator`
+`C:\Program Files\7-Zip`
+
+## Building for Windows using MSys2 and MinGW
+
+### 1. Install msys2 and MinGW
+
+Install the latest msys2 via the installer (not the base installer): https://repo.msys2.org/distrib/x86_64/
+
+After the install, from the resulting msys2 console install mingw:
+
+```
+pacman -S mingw-w64-x86_64-cmake mingw-w64-x86_64-gcc mingw-w64-x86_64-ninja mingw-w64-x86_64-zlib mingw-w64-x86_64-qt6-base mingw-w64-x86_64-qt6-tools
+```
+
+Add msys2 to PATH: `C:\msys64\mingw64\bin`. Then do a restart of windows.
+
+Note: you must use a standard commnd prompt when using mingw for the build.
+
+### 2. Clone Git Repo
+Clone the repository to `%UserProfile%/usb-sd-creator`
 `git clone https://github.com/LibreELEC/usb-sd-creator.git`
 
-### 9. Enable powershell script execution
-Open cmd with admin rights
-`powershell Set-ExecutionPolicy RemoteSigned`
+### 3. Build USB-SD-Creator
 
-### 10. Build static Qt files
+Assuming the repo is in your home directory
 
-Compiling needs around **13GB RAM**.
+```
+cd %UserProfile%/usb-sd-creator
+```
 
-Open powershell at C:\usb-sd-creator
-`.\windows_qt_build_static.ps1`
+#### Debug build
 
-After the compiling is finished the files are located at `C:\Qt\static\$version` .
+```
+cmake -S . -B build -G Ninja && cmake --build build
+```
 
-### 11. Build USB-SD-Creator
-Open a cmd at `C:\usb-sd-creator` and run `windows_build.bat`.
-The finished executable is located at `C:\usb-sd-creator\releases`.
+#### Release build
+```
+cmake --preset release-ninja && cmake --build --preset release
+```
+
+### 4. Build Installer
+
+#### Debug build
+
+```
+cd build
+cpack -C Debug
+```
+
+#### Release build
+
+##### Create installer
+
+```
+cpack --preset release
+```
+
+##### Create Zip for portable installs (UWP)
+
+```
+cpack --preset release -G ZIP
+```
+
+### 5. Run USB-SD-Creator
+
+Run the installer in `build/cpack`. Then run the app from Start Menu: `LibreELEC USB-SD Creator x64`.
+
+## Building for Windows using Visual Studio (MSVC)
+
+### 1. Install Qt 6.7.2 and Visual Studio Community 2022
+
+#### Install required Qt packages
+
+To see the available Qt versions run:
+
+```
+aqt list-qt windows desktop
+```
+
+Install the required packages:
+
+```
+aqt install-qt --outputdir ~/Qt windows desktop 6.7.2 win64_msvc2019_64 --archives qtbase qttools opengl32sw d3dcompiler_47 --external 7z.exe
+aqt install-qt --outputdir ~/Qt windows desktop 6.7.2 win64_msvc2019_64 --modules debug_info --external 7z.exe
+```
+
+#### Install Visual Studio Community 2022
+
+Install Visual Studio Community 2022 from: https://visualstudio.microsoft.com/vs/community/. Note that you only require the Desktop C++ package which you can select in the online installer.
+
+Note that the command prompt is to be used thoughtout the MSVC build must be started from a standard command prompt for `x64` as follows: `"C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/VsDevCmd.bat" -arch=x64 -host_arch=x64`.
+
+### 2. Clone Git Repo
+Clone the repository to `%UserProfile%/usb-sd-creator`
+`git clone https://github.com/LibreELEC/usb-sd-creator.git`
+
+### 3. Build USB-SD-Creator
+
+Assuming the repo is in your home directory
+
+```
+cd %UserProfile%/usb-sd-creator
+```
+
+#### Debug build
+
+```
+cmake -S . -B build -D CMAKE_PREFIX_PATH="%UserProfile%/Qt/6.7.2/msvc2019_64" && cmake --build build
+```
+
+#### Release build
+
+```
+cmake --preset release-msvc -D CMAKE_PREFIX_PATH="%UserProfile%/Qt/6.7.2/msvc2019_64" && cmake --build --preset release
+```
+
+### 4. Build Installer
+
+#### Debug build
+
+```
+cd build
+cpack -C Debug
+```
+
+#### Release build
+
+##### Create installer
+
+```
+cpack --preset release
+```
+
+##### Create Zip for portable installs (UWP)
+
+```
+cpack --preset release -G ZIP
+```
+
+### 5. Run USB-SD-Creator
+
+Run the installer in `build/cpack`. Then run the app from Start Menu: `LibreELEC USB-SD Creator x64`.
 
 # MacOS
 
@@ -78,7 +197,7 @@ The finished executable is located at `C:\usb-sd-creator\releases`.
 
 ### 1. Install XCode with Command-line tools
 
-### 2. Setup QT 6.7.2
+### 2. Setup Qt 6.7.2
 
 #### Install pre-requisites
 
@@ -89,15 +208,15 @@ brew install python
 brew install cmake
 ```
 
-Now install `aqt`, a command line package manager for `QT`:
+Now install `aqt`, a command line package manager for `Qt`:
 
 ```
 pip3 install aqtinstall --break-system-packages
 ```
 
-#### Install required QT packages
+#### Install required Qt packages
 
-To see the available QT versions run:
+To see the available Qt versions run:
 
 ```
 aqt list-qt mac desktop
@@ -150,15 +269,15 @@ sudo ./build/LibreELEC\ USB-SD\ Creator.app/Contents/MacOS/LibreELEC\ USB-SD\ Cr
 
 ### 6. Debugging USB-SD-Creator
 
-#### Using QT Creator
+#### Using Qt Creator
 
-If you need to, install QT Creator:
+If you need to, install Qt Creator:
 
 ```
 brew install --cask qt-creator
 ```
 
-Then simply open CMakeLists.txt in QT Creator
+Then simply open CMakeLists.txt in Qt Creator
 
 #### Using XCode
 
