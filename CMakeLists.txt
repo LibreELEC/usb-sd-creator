@@ -44,6 +44,8 @@ if(MSVC_TOOLSET_VERSION EQUAL 142)
     list(APPEND CMAKE_PREFIX_PATH "windows/msvc2019/zlib")
 elseif(MSVC_TOOLSET_VERSION EQUAL 143)
     list(APPEND CMAKE_PREFIX_PATH "windows/msvc2022/zlib")
+elseif(MINGW)
+    list(APPEND CMAKE_PREFIX_PATH "windows/mingw64/zlib")
 endif()
 find_package(ZLIB REQUIRED)
 
