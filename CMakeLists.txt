@@ -66,7 +66,7 @@ string(TIMESTAMP currentYear "%Y")
 set(copyrightYears "2016-${currentYear}")
 set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
     # TODO: use Qt's template (<QTDIR>/lib/cmake/Qt6/macos/Info.plist.app.in) once we support dark mode properly
-    MACOSX_BUNDLE_INFO_PLIST "dmg_osx/Info.plist.in"
+    MACOSX_BUNDLE_INFO_PLIST "macos/Info.plist.in"
     MACOSX_BUNDLE_BUNDLE_NAME "${projectDisplayName}"
     MACOSX_BUNDLE_BUNDLE_VERSION "${PROJECT_VERSION}"
     MACOSX_BUNDLE_COPYRIGHT "LibreELEC © ${copyrightYears}"
@@ -165,9 +165,10 @@ elseif(APPLE)
         deviceenumerator_unix.cpp deviceenumerator_unix.h
         diskwriter_unix.cpp diskwriter_unix.h
         privileges_unix.cpp privileges_unix.h
+        macos/askpass.cpp macos/askpass.h
     )
 
-    install(FILES "dmg_osx/icon.icns"
+    install(FILES "macos/dmg_osx/icon.icns"
         DESTINATION "$<TARGET_BUNDLE_CONTENT_DIR:LibreELEC.USB-SD.Creator>/Resources"
     )
 
@@ -181,7 +182,7 @@ elseif(APPLE)
         endforeach()
 
         # codesign
-        execute_process(COMMAND \"${CMAKE_SOURCE_DIR}/dmg_osx/codesign.sh\"
+        execute_process(COMMAND \"${CMAKE_SOURCE_DIR}/macos/codesign.sh\"
             WORKING_DIRECTORY \"\\\${bundleContentsDir}\"
         )
     ")
@@ -236,15 +237,15 @@ elseif(APPLE)
 
     set(notarizeScript "${CMAKE_BINARY_DIR}/notarize.cmake")
     file(WRITE "${notarizeScript}"
-        "execute_process(COMMAND sh -c \"${CMAKE_SOURCE_DIR}/dmg_osx/notarize.sh \${CPACK_PACKAGE_FILES}\")"
+        "execute_process(COMMAND sh -c \"${CMAKE_SOURCE_DIR}/macos/notarize.sh \${CPACK_PACKAGE_FILES}\")"
     )
     set(CPACK_POST_BUILD_SCRIPTS "${notarizeScript}")
 
     set(CPACK_GENERATOR DragNDrop)
-    set(CPACK_DMG_BACKGROUND_IMAGE "${CMAKE_SOURCE_DIR}/dmg_osx/background.png")
+    set(CPACK_DMG_BACKGROUND_IMAGE "${CMAKE_SOURCE_DIR}/macos/dmg_osx/background.png")
     set(CPACK_DMG_DS_STORE_SETUP_SCRIPT "DS_Store_Setup.scpt")
     set(CPACK_DMG_VOLUME_NAME "${projectDisplayName}")
 
-    configure_file("dmg_osx/DS_Store_Setup.scpt.in" "${CPACK_DMG_DS_STORE_SETUP_SCRIPT}" @ONLY)
+    configure_file("macos/dmg_osx/DS_Store_Setup.scpt.in" "${CPACK_DMG_DS_STORE_SETUP_SCRIPT}" @ONLY)
 endif()
 include(CPack)

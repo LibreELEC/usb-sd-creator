@@ -21,6 +21,7 @@
 
 #ifdef Q_OS_MACOS
 #include "privileges_unix.h"
+#include "macos/askpass.h"
 
 #include <QLatin1String>
 #include <QProcess>
@@ -59,25 +60,36 @@ int main(int argc, char *argv[])
 #endif
 
 #ifdef Q_OS_MACOS
+    // special GUI when executing as a "get admin password" program
+    if (qEnvironmentVariableIsSet(sudo::AskPassEnvVar.data()))
+    {
+        sudo::askpass();
+        return app.exec();
+    }
+
     // If not running with root privileges, relaunch executable with sudo.
     const QLatin1String elevatedParam{"--elevated"};
     if (!cmdArgs.contains(elevatedParam) && getuid() != 0)
     {
-        const auto sudoPrompt = QLatin1String{"%1 requires admin permissions."}.arg(app.applicationDisplayName());
-        const QLatin1String appleScript{R"(do shell script "sudo '%1' %2" with prompt "%3" with administrator privileges)"};
-        const auto cliParams = QStringList{elevatedParam} + cmdArgs.mid(1);
+        const auto executablePath = QCoreApplication::applicationFilePath();
 
-        QProcess myProcess;
-        myProcess.setProgram(QLatin1String{"osascript"});
-        myProcess.setArguments({"-e", appleScript.arg(QCoreApplication::applicationFilePath(), cliParams.join(' '), sudoPrompt)});
+        // Apple Script "do shell script ... with administrator privileges" can't be used here:
+        // GUI app launched like that doesn't have all GUI capabilities, like accepting file drops
+        QProcess sudoProc;
+        sudoProc.setProgram(QLatin1String{"sudo"});
+        sudoProc.setArguments(QStringList{QLatin1String{"--askpass"}, executablePath, elevatedParam} + cmdArgs.mid(1));
 
-        if (myProcess.startDetached())
+        QProcessEnvironment sudoEnv;
+        sudoEnv.insert(sudo::AskPassEnvVar, executablePath);
+        sudoProc.setProcessEnvironment(sudoEnv);
+
+        if (sudoProc.startDetached())
         {
             return 0;
         }
         else
         {
-            qDebug() << "Unable to start elevated process for " << QCoreApplication::applicationFilePath();
+            qDebug() << "Unable to start elevated process for " << executablePath;
         }
     }
 #endif

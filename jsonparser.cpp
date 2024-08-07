@@ -108,30 +108,30 @@ bool ReadImageName(const QJsonObject& imageObject, int projectIndex, QList<QVari
 void JsonParser::parseAndSet(const QByteArray &data, const QString label)
 {
     //qDebug() << "parseAndSet data:" << data;
-    QJsonDocument jsonDocument = QJsonDocument::fromJson(data);
-    QJsonObject jsonObject = jsonDocument.object();
-
-    int imageCount = 0;
+    const QJsonDocument jsonDocument = QJsonDocument::fromJson(data);
+    const auto jsonObject = jsonDocument.object();
 
     // get project versions (LibreElec 7.0, 8.0, ...)
-    for (auto itProjectVersions = jsonObject.begin(); itProjectVersions != jsonObject.end(); itProjectVersions++)
+    for (auto itProjectVersions = jsonObject.begin(); itProjectVersions != jsonObject.end(); ++itProjectVersions)
     {
-        QString project = itProjectVersions.key();
-        QString projectUrl = itProjectVersions.value().toObject()["url"].toString();
+        const auto project = itProjectVersions.key();
+        const auto projectObj = itProjectVersions.value().toObject();
+        const auto projectUrl = projectObj["url"].toString();
 
         // get projects (imx6, Wetek, ...)
-        QJsonObject projectVersionsNode = itProjectVersions.value().toObject()["project"].toObject();
-        for (auto itProjects = projectVersionsNode.begin(); itProjects != projectVersionsNode.end(); itProjects++)
+        const auto projectVersionsNode = projectObj["project"].toObject();
+        for (auto itProjects = projectVersionsNode.begin(); itProjects != projectVersionsNode.end(); ++itProjects)
         {
-            QString projectId = itProjects.key();
-            QString projectName = itProjects.value().toObject()["displayName"].toString();
+            const auto projectId = itProjects.key();
+            const auto releasesNode = itProjects.value().toObject();
+            auto projectName = releasesNode["displayName"].toString();
 
             // skip Virtual
             if (projectId == "Virtual.x86_64")
                 continue;
 
-            if (label != "")
-                projectName = projectName + " - " + label;
+            if (!label.isEmpty())
+                projectName += QString{" - %1"}.arg(label);
 
             QVariantMap projectData;
             projectData.insert("name", projectName);
@@ -139,35 +139,33 @@ void JsonParser::parseAndSet(const QByteArray &data, const QString label)
             projectData.insert("url", projectUrl);
 
             // get releases
-            QJsonObject releasesNode = itProjects.value().toObject();
-            for (auto itReleases = releasesNode.begin(); itReleases != releasesNode.end(); itReleases++)
+            for (auto itReleases = releasesNode.begin(); itReleases != releasesNode.end(); ++itReleases)
             {
                 QList<QVariantMap> imagesList;
                 ProjectData projectCheck;
                 projectCheck.name = projectName;
                 int projectIndex = projectList.indexOf(projectCheck);
 
-                QJsonObject releaseNode = itReleases.value().toObject();
-                for (auto itReleaseItems = releaseNode.begin(); itReleaseItems != releaseNode.end(); itReleaseItems++)
+                const auto releaseNode = itReleases.value().toObject();
+                for (auto itReleaseItems = releaseNode.begin(); itReleaseItems != releaseNode.end(); ++itReleaseItems)
                 {
-                    QJsonObject releaseItemsNode = itReleaseItems.value().toObject();
+                    const auto releaseItemsNode = itReleaseItems.value().toObject();
 
-                    QJsonObject::Iterator itFile = releaseItemsNode.find("file");
-                    if (ReadImageName(itFile.value().toObject(), projectIndex, imagesList, projectList))
-                        imageCount++;
+                    const auto itFile = releaseItemsNode.find("file");
+                    if (itFile != releaseItemsNode.end())
+                        ReadImageName(itFile.value().toObject(), projectIndex, imagesList, projectList);
 
-                    QJsonObject::Iterator itImage = releaseItemsNode.find("image");
-                    if (ReadImageName(itImage.value().toObject(), projectIndex, imagesList, projectList))
-                        imageCount++;
+                    const auto itImage = releaseItemsNode.find("image");
+                    if (itImage != releaseItemsNode.end())
+                        ReadImageName(itImage.value().toObject(), projectIndex, imagesList, projectList);
 
-                    QJsonObject::Iterator itUbootsNode = releaseItemsNode.find("uboot");
+                    const auto itUbootsNode = releaseItemsNode.find("uboot");
                     if (itUbootsNode != releaseItemsNode.end())
                     {
                         QJsonArray ubootsNode = itUbootsNode.value().toArray();
                         for (QJsonValue uboot : ubootsNode)
                         {
-                            if (ReadImageName(uboot.toObject(), projectIndex, imagesList, projectList))
-                                imageCount++;
+                            ReadImageName(uboot.toObject(), projectIndex, imagesList, projectList);
                         }
                     }
                 }
