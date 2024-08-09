@@ -26,6 +26,8 @@ It is possible to build for Linux, but for now instructions are TBD.
 
 # Windows
 
+Note: the offical release for Windows is built using Visual Studio
+
 ## Install pre-requisites
 
 ### 1. Install 7zip
