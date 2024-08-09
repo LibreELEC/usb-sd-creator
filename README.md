@@ -205,13 +205,15 @@ The build requires both `python3` and `cmake`. If you don't have them installed,
 
 ```
 brew install python
+brew install pipx
 brew install cmake
 ```
 
 Now install `aqt`, a command line package manager for `Qt`:
 
 ```
-pip3 install aqtinstall --break-system-packages
+sudo pipx install aqtinstall
+pipx ensurepath
 ```
 
 #### Install required Qt packages
