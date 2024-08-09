@@ -317,6 +317,7 @@ cmake -S . -B build -G Xcode -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.7.2/macos" 
 sudo apt install build-essential
 sudo apt install libgl-dev
 sudo apt install cmake
+sudo apt install git
 ```
 
 ### 2. Setup Qt 6.7.2
