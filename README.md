@@ -246,7 +246,11 @@ Install the required packages:
 aqt install-qt --outputdir ~/Qt mac desktop 6.7.2 --archives qtbase qttools
 ```
 
-### 3. Build USB-SD-Creator
+### 3. Clone Git Repo
+Clone the repository to `~/usb-sd-creator`
+`git clone https://github.com/LibreELEC/usb-sd-creator.git`
+
+### 4. Build USB-SD-Creator
 
 Assuming the repo is in your home directory
 
@@ -264,7 +268,7 @@ cmake -S . -B build -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.7.2/macos" && cmake 
 cmake --preset release -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.7.2/macos" && cmake --build --preset release
 ```
 
-### 4. Run USB-SD-Creator
+### 5. Run USB-SD-Creator
 
 #### Open the app
 
@@ -285,7 +289,7 @@ Run the app from the command line using sudo
 sudo ./build/LibreELEC\ USB-SD\ Creator.app/Contents/MacOS/LibreELEC\ USB-SD\ Creator
 ```
 
-### 5. Debugging USB-SD-Creator
+### 6. Debugging USB-SD-Creator
 
 #### Using Qt Creator
 
@@ -352,7 +356,11 @@ aqt install-qt --outputdir ~/Qt linux desktop 6.7.2 linux_gcc_64 --archives qtba
 aqt install-qt --outputdir ~/Qt linux desktop 6.7.2 linux_gcc_64 --modules debug_info
 ```
 
-### 3. Build USB-SD-Creator
+### 3. Clone Git Repo
+Clone the repository to `~/usb-sd-creator`
+`git clone https://github.com/LibreELEC/usb-sd-creator.git`
+
+### 4. Build USB-SD-Creator
 
 Assuming the repo is in your home directory
 
@@ -370,7 +378,7 @@ cmake -S . -B build -D CMAKE_PREFIX_PATH="~/Qt/6.7.2/gcc_64" && cmake --build bu
 cmake --preset release -D CMAKE_PREFIX_PATH="~/Qt/6.7.2/gcc_64" && cmake --build --preset release
 ```
 
-### 4. Run USB-SD-Creator
+### 5. Run USB-SD-Creator
 
 #### Command line
 
