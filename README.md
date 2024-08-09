@@ -20,9 +20,11 @@ Issues should be reported via the forum here: https://forum.libreelec.tv/board/4
 
 # **How to compile the USB/SD Creator**
 
-Build instructions are supplied for Windows x64 (Installer and Portable) and MacOS (Intel and Apple Silicon). Instructions tested locally on Mac Sonoma and Windows 11.
+Build instructions are supplied for Windows x64 (Installer and Portable), MacOS (Intel and Apple Silicon) and Ubuntu Linux (x86_64). Instructions have been tested locally on Windows 11, MacOS Sonoma and Ubuntu 24.04.
 
-It is possible to build for Linux, but for now instructions are TBD.
+- [Windows](#Windows)
+- [MacOS](#MacOS)
+- [Linux](#Linux)
 
 # Windows
 
@@ -195,7 +197,7 @@ Run the installer in `build/cpack`. Then run the app from Start Menu: `LibreELEC
 
 # MacOS
 
-### Building for MacOS
+## Building for MacOS
 
 ### 1. Install XCode with Command-line tools
 
@@ -232,7 +234,7 @@ Install the required packages:
 aqt install-qt --outputdir ~/Qt mac desktop 6.7.2 --archives qtbase qttools
 ```
 
-### 4. Build USB-SD-Creator
+### 3. Build USB-SD-Creator
 
 Assuming the repo is in your home directory
 
@@ -250,7 +252,7 @@ cmake -S . -B build -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.7.2/macos" && cmake 
 cmake --preset release -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.7.2/macos" && cmake --build --preset release
 ```
 
-### 5. Run USB-SD-Creator
+### 4. Run USB-SD-Creator
 
 #### Open the app
 
@@ -271,7 +273,7 @@ Run the app from the command line using sudo
 sudo ./build/LibreELEC\ USB-SD\ Creator.app/Contents/MacOS/LibreELEC\ USB-SD\ Creator
 ```
 
-### 6. Debugging USB-SD-Creator
+### 5. Debugging USB-SD-Creator
 
 #### Using Qt Creator
 
@@ -291,4 +293,77 @@ Build the xcode project, and open the project file in Xcode, located in the buil
 cmake -S . -B build -G Xcode -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.7.2/macos" && cmake --build build
 ```
 
+# Linux
 
+### 1. Install build tools
+
+```
+sudo apt install build-essential
+sudo apt install libgl-dev
+sudo apt install cmake
+```
+
+### 2. Setup Qt 6.7.2
+
+#### Install pre-requisites (Pip and Pipx)
+
+```
+sudo apt install python3-pip
+sudo apt-install pipx
+pipx ensurepath
+```
+
+Now install `aqt`, a command line package manager for `Qt`:
+
+```
+pipx install aqtinstall
+```
+
+#### Install required Qt packages
+
+To see the available Qt versions run:
+
+```
+aqt list-qt linux desktop
+```
+
+To see the available compiler versions run:
+
+```
+aqt list-qt linux desktop --arch 6.7.2
+```
+
+Install the required packages:
+
+```
+aqt install-qt --outputdir ~/Qt linux desktop 6.7.2 linux_gcc_64 --archives qtbase qttools
+aqt install-qt --outputdir ~/Qt linux desktop 6.7.2 linux_gcc_64 --modules debug_info
+```
+
+### 3. Build USB-SD-Creator
+
+Assuming the repo is in your home directory
+
+```
+cd ~/usb-sd-creator
+```
+
+#### Debug build
+```
+cmake -S . -B build -D CMAKE_PREFIX_PATH="~/Qt/6.7.2/gcc_64" && cmake --build build
+```
+
+#### Release build
+```
+cmake --preset release -D CMAKE_PREFIX_PATH="~/Qt/6.7.2/gcc_64" && cmake --build --preset release
+```
+
+### 4. Run USB-SD-Creator
+
+#### Command line
+
+Run the app from the command line, that will prompt for a password:
+
+```
+./build/LibreELEC.USB-SD.Creator.Linux.bin
+```
