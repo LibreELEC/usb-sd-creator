@@ -131,6 +131,12 @@ To see the available Qt versions run:
 aqt list-qt windows desktop
 ```
 
+To see the available compiler versions run:
+
+```
+aqt list-qt linux desktop --arch 6.7.2
+```
+
 Install the required packages:
 
 ```
@@ -226,6 +232,12 @@ To see the available Qt versions run:
 
 ```
 aqt list-qt mac desktop
+```
+
+To see the available compiler versions run:
+
+```
+aqt list-qt linux desktop --arch 6.7.2
 ```
 
 Install the required packages:
