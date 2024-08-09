@@ -130,8 +130,8 @@ aqt list-qt windows desktop
 Install the required packages:
 
 ```
-aqt install-qt --outputdir ~/Qt windows desktop 6.7.2 win64_msvc2019_64 --archives qtbase qttools opengl32sw d3dcompiler_47 --external 7z.exe
-aqt install-qt --outputdir ~/Qt windows desktop 6.7.2 win64_msvc2019_64 --modules debug_info --external 7z.exe
+aqt install-qt --outputdir %UserProfile%/Qt windows desktop 6.7.2 win64_msvc2019_64 --archives qtbase qttools opengl32sw d3dcompiler_47 --external 7z.exe
+aqt install-qt --outputdir %UserProfile%/Qt windows desktop 6.7.2 win64_msvc2019_64 --modules debug_info --external 7z.exe
 ```
 
 #### Install Visual Studio Community 2022
