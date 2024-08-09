@@ -20,10 +20,10 @@ Issues should be reported via the forum here: https://forum.libreelec.tv/board/4
 
 # **How to compile the USB/SD Creator**
 
-Build instructions are supplied for Windows x64 (Installer and Portable), MacOS (Intel and Apple Silicon) and Ubuntu Linux (x86_64). Instructions have been tested locally on Windows 11, MacOS Sonoma and Ubuntu 24.04.
+Build instructions are supplied for Windows x64 (Installer and Portable), macOS (Intel and Apple Silicon) and Ubuntu Linux (x86_64). Instructions have been tested locally on Windows 11, macOS Sonoma and Ubuntu 24.04.
 
 - [Windows](#Windows)
-- [MacOS](#MacOS)
+- [macOS](#macOS)
 - [Linux](#Linux)
 
 # Windows
@@ -201,9 +201,9 @@ cpack --preset release -G ZIP
 
 Run the installer in `build/cpack`. Then run the app from Start Menu: `LibreELEC USB-SD Creator x64`.
 
-# MacOS
+# macOS
 
-## Building for MacOS
+## Building for macOS
 
 ### 1. Install XCode with Command-line tools
 
