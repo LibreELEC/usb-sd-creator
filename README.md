@@ -4,7 +4,7 @@ This is a lightweight image writing app with a simple four-step GUI for creating
 
 ## Translation Changes
 
-Changes to master language (en_GB) strings can be submitted via pull request to this GitHub repo. English strings are periodically synchronised to a Transifex project: https://www.transifex.com/libreelec/libreelec-usb-sd-creator allowing contributors to translate them into other languages. Translated strings are periodically synchronised from Transifex back to this repo for inclusion in the next release.
+Changes to master language (en_GB) strings can be submitted via pull request to this GitHub repo. English strings are periodically synchronised to a Transifex project: [https://www.transifex.com/libreelec/libreelec-usb-sd-creator](https://www.transifex.com/libreelec/libreelec-usb-sd-creator) allowing contributors to translate them into other languages. Translated strings are periodically synchronised from Transifex back to this repo for inclusion in the next release.
 
 Pull requests for all other languages will be rejected. You will be asked to submit changes via Transifex.
 
@@ -16,7 +16,7 @@ Please note: languages are translated by people (you) not magic!
 
 ## Issues and Support
 
-Issues should be reported via the forum here: https://forum.libreelec.tv/board/41-usb-sd-creator-support
+Issues should be reported via the forum here: [https://forum.libreelec.tv/board/41-usb-sd-creator-support](https://forum.libreelec.tv/board/41-usb-sd-creator-support)
 
 # **How to compile the USB/SD Creator**
 
@@ -57,7 +57,7 @@ https://jrsoftware.org/isdl.php, download and install the latest stable version.
 
 ### 1. Install msys2 and MinGW
 
-Install the latest msys2 via the installer (not the base installer): https://repo.msys2.org/distrib/x86_64/
+Install the latest msys2 via the installer (not the base installer): [https://repo.msys2.org](https://repo.msys2.org/distrib/x86_64/)
 
 After the install, from the resulting msys2 console install mingw:
 
@@ -147,7 +147,7 @@ aqt install-qt --outputdir %UserProfile%/Qt windows desktop 6.7.2 win64_msvc2019
 
 #### Install Visual Studio Community 2022
 
-Install Visual Studio Community 2022 from: https://visualstudio.microsoft.com/vs/community/. Note that you only require the Desktop C++ package which you can select in the online installer.
+Install Visual Studio Community 2022 from: [https://visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/community/). Note that you only require the Desktop C++ package which you can select in the online installer.
 
 Note that the command prompt is to be used thoughtout the MSVC build must be started from a standard command prompt for `x64` as follows: `"C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/VsDevCmd.bat" -arch=x64 -host_arch=x64`.
 
