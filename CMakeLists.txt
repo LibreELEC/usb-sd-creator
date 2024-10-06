@@ -238,6 +238,7 @@ if(WIN32)
     set(CPACK_PACKAGE_FILE_NAME "LibreELEC.USB-SD.Creator.x64")
     set(CPACK_PACKAGE_EXECUTABLES "LibreELEC.USB-SD.Creator;LibreELEC USB-SD Creator x64")
     set(CPACK_GENERATOR INNOSETUP)
+    set(CPACK_PACKAGE_INSTALL_DIRECTORY "${projectDisplayName}")
 elseif(APPLE)
     set(CPACK_PACKAGE_FILE_NAME "LibreELEC.USB-SD.Creator.macOS")
 
