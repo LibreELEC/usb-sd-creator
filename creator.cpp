@@ -1274,6 +1274,11 @@ void Creator::getImageFileNameFromUser()
         return;
     }
 
+    // save selected dir:
+    QFileInfo info(filename);
+    loadDir = info.absoluteDir().path();
+    settings.setValue("preferred/savedir", loadDir);
+
     downloadProgressBarText();
     setImageFileName(filename);
 
