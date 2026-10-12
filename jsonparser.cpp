@@ -30,42 +30,28 @@
 #include <QVersionNumber>
 #include <algorithm>
 
-QTextStream& qStdOut()
-{
-    static QTextStream ts( stdout );
-    return ts;
-}
-
 bool compareVersion(const QVariantMap &imageMap1, const QVariantMap &imageMap2)
 {
-    QString versionStr1;
-    QString versionStr2;
+    static const QRegularExpression regExp(QStringLiteral("-([0-9]+\\.[0-9]+\\.[0-9]+).*\\.img\\.gz"));
 
-    // must compare only version not whole string
-    // name-8.0.2.img.gz < name-8.0.2.1.img.gz
-    // LibreELEC-WeTek_Hub.aarch64-8.0.2.1.img.gz
-    // LibreELEC-A64.arm-9.95.5-pine64-plus.img.gz
-    QRegularExpression regExp = QRegularExpression("-([0-9]+\\.[0-9]+\\.[0-9]+).*\\.img\\.gz");
+    const QString name1 = imageMap1.value(QStringLiteral("name")).toString();
+    const QString name2 = imageMap2.value(QStringLiteral("name")).toString();
 
-    QRegularExpressionMatch match = regExp.match(imageMap1["name"].toString());
-    if (match.hasMatch())
-        versionStr1 = match.captured(1);
+    const QRegularExpressionMatch match1 = regExp.match(name1);
+    const QRegularExpressionMatch match2 = regExp.match(name2);
 
-    QRegularExpressionMatch match2 = regExp.match(imageMap2["name"].toString());
-    if (match2.hasMatch())
-        versionStr2 = match2.captured(1);
+    if (!match1.hasMatch() || !match2.hasMatch())
+        return false;
+
+    const QString versionStr1 = match1.captured(1);
+    const QString versionStr2 = match2.captured(1);
 
     if (versionStr1.isEmpty() || versionStr2.isEmpty())
-        return false; // some error
-
-    int versionCmp = QVersionNumber::compare(
-              QVersionNumber::fromString(versionStr1),
-              QVersionNumber::fromString(versionStr2));
-
-    if (versionCmp < 0)
-        return true;
-    else
         return false;
+
+    return QVersionNumber::compare(
+               QVersionNumber::fromString(versionStr1),
+               QVersionNumber::fromString(versionStr2)) < 0;
 }
 
 JsonParser::JsonParser(const QByteArray &data)
@@ -87,10 +73,6 @@ bool ReadImageName(const QJsonObject& imageObject, int projectIndex, QList<QVari
 
     if (imageName.endsWith(".img.gz"))
     {
-        // QTextStream& textStream = qStdOut();
-        // textStream << "Image: " << imageName << " - " << imageProps["sha256"].toString() << " - " << imageProps["size"].toString() << "\n";
-        // textStream.flush();
-
         //We need to add the full map to the list as we'll need the name, sha256 and the size.
         if (projectIndex < 0) // new project
             imagesList.append(std::move(imageProps));

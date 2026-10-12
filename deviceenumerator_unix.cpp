@@ -41,7 +41,7 @@ QStringList DeviceEnumerator_unix::getRemovableDeviceNames() const
 #ifdef Q_OS_LINUX
     names = getDeviceNamesFromSysfs();
 
-    foreach (QString device, names) {
+    for (const QString &device : names) {
         // show all devices but unmount it before writing
         //if (! checkIsMounted(device))
             unmounted << "/dev/"+device;
@@ -59,7 +59,8 @@ QStringList DeviceEnumerator_unix::getRemovableDeviceNames() const
         device = device.trimmed(); // Odd trailing whitespace
 
         if (device.startsWith("/dev/disk")) {
-            QString name = device.split(QRegularExpression(QStringLiteral("\\s+")), Qt::SkipEmptyParts).first();
+            static const QRegularExpression whitespaceRegex(QStringLiteral("\\s+"));
+            QString name = device.split(whitespaceRegex, Qt::SkipEmptyParts).first();
             // We only want to add USB devics
             if (this->checkIfUSB(name))
                 names << name;
@@ -77,7 +78,7 @@ QStringList DeviceEnumerator_unix::getUserFriendlyNames(const QStringList &devic
     QStringList returnList;
 
 #ifdef Q_OS_LINUX
-    foreach (QString device, devices) {
+    for (QString device : devices) {
         qint64 size = getSizeOfDevice(device);
         QStringList partInfo = getPartitionsInfo(device);
 
@@ -91,8 +92,9 @@ QStringList DeviceEnumerator_unix::getUserFriendlyNames(const QStringList &devic
 
         if (partInfo.size() > 0) {
             friendlyName << " (partitions: ";
-            foreach (QString partition, partInfo)
+            for (const QString &partition : partInfo) {
                 friendlyName << partition << ", ";
+            }
 
             device.chop(2);
             friendlyName << ")";
@@ -105,8 +107,7 @@ QStringList DeviceEnumerator_unix::getUserFriendlyNames(const QStringList &devic
 
     return returnList;
 #else
-    foreach (QString device, devices) {
-        QString item = device;
+    for (QString device : devices) {
         QString label;
         QProcess lsblk;
         QString output;
@@ -185,7 +186,7 @@ bool DeviceEnumerator_unix::unmountDevicePartitions(const QString &device) const
     }
 
     ls = blkid_probe_get_partitions(pr);
-    if (ls == NULL) {
+    if (ls == nullptr) {
         qDebug() << "unmountDevicePartitions: Failed to get partitions";
         blkid_free_probe(pr);
 
@@ -277,7 +278,7 @@ QStringList DeviceEnumerator_unix::getDeviceNamesFromSysfs() const
     currentDir.setFilter(QDir::Dirs);
 
     QStringList entries = currentDir.entryList();
-    foreach (QString device, entries) {
+    for (const QString &device : entries) {
         // Skip "." and ".." dir entries
         if (device == "." || device == "..")
             continue;
@@ -322,7 +323,7 @@ QStringList DeviceEnumerator_unix::getPartitionsInfo(const QString& device) cons
     }
 
     ls = blkid_probe_get_partitions(pr);
-    if (ls == NULL) {
+    if (ls == nullptr) {
         qDebug() << "Failed to get partitions";
         blkid_free_probe(pr);
         return partList;
@@ -337,7 +338,7 @@ QStringList DeviceEnumerator_unix::getPartitionsInfo(const QString& device) cons
 
     for (i = 0; i < nparts; i++) {
         blkid_partition par = blkid_partlist_get_partition(ls, i);
-        if (par == NULL)
+        if (par == nullptr)
             continue;
 
         QString partition;
@@ -368,7 +369,7 @@ QStringList DeviceEnumerator_unix::getPartitionsInfo(const QString& device) cons
         continue;
     }
 
-    if (blkid_probe_lookup_value(pr, "LABEL", &label, NULL) != 0) {
+    if (blkid_probe_lookup_value(pr, "LABEL", &label, nullptr) != 0) {
         qDebug() << "Failed to lookup LABEL for" << device;
         blkid_free_probe(pr);
         continue;
@@ -391,7 +392,7 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
     }
 
     ls = blkid_probe_get_partitions(pr);
-    if (ls == NULL) {
+    if (ls == nullptr) {
         qDebug() << "Failed to get partitions";
         blkid_free_probe(pr);
         return qLabel;
@@ -406,7 +407,7 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
 
     // at least one partititon
     char devName[64];
-    const char *label = NULL;
+    const char *label = nullptr;
 
     if (device.startsWith("/dev/mmcblk")) {
         // check /dev/mmcblk0p1
@@ -417,14 +418,14 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
     }
 
     prPart = blkid_new_probe_from_filename(devName);
-    if (prPart == NULL)
+    if (prPart == nullptr)
         return qLabel;  // no label
 
     rv = blkid_do_probe(prPart);
     if (rv != 0)
         return qLabel;  // no label
 
-    rv = blkid_probe_lookup_value(prPart, "LABEL", &label, NULL);
+    rv = blkid_probe_lookup_value(prPart, "LABEL", &label, nullptr);
 
     blkid_free_probe(prPart);
     blkid_free_probe(pr);
@@ -433,7 +434,7 @@ QString DeviceEnumerator_unix::getFirstPartitionLabel(const QString& device) con
         return qLabel;  // no label
 
     qDebug() << "devName" << devName << "label" << label;
-    if (label != NULL)
+    if (label != nullptr)
         qLabel = QString::fromLatin1(label);
 
     return qLabel;

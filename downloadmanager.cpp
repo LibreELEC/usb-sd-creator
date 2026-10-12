@@ -28,10 +28,10 @@
 DownloadManager::DownloadManager(QObject *parent) :
     QObject(parent),
     manager(new QNetworkAccessManager(this)),
-    latestReply(NULL)
+    latestReply(nullptr)
 {
-    connect(manager, SIGNAL(finished(QNetworkReply*)),
-            this, SLOT(handleGetFinished(QNetworkReply*)));
+    connect(manager, &QNetworkAccessManager::finished,
+            this, &DownloadManager::handleGetFinished);
 }
 
 DownloadManager::~DownloadManager()
@@ -43,8 +43,8 @@ QNetworkReply* DownloadManager::get(const QUrl &url)
 {
     QNetworkRequest req(url);
     req.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::NoLessSafeRedirectPolicy);
-    req.setRawHeader("User-Agent", "Wget/1.14 (linux-gnu)");
-    req.setRawHeader("Connection", "keep-alive");
+    req.setRawHeader(QByteArrayLiteral("User-Agent"), QByteArrayLiteral("Wget/1.14 (linux-gnu)"));
+    req.setRawHeader(QByteArrayLiteral("Connection"), QByteArrayLiteral("keep-alive"));
     qDebug() << "Getting" << url;
 
     latestReply = manager->get(req);
@@ -52,7 +52,8 @@ QNetworkReply* DownloadManager::get(const QUrl &url)
     latestReply->ignoreSslErrors();
 #endif
 
-    connect(latestReply, SIGNAL(downloadProgress(qint64,qint64)), SLOT(handleProgress(qint64,qint64)));
+    connect(latestReply, &QNetworkReply::downloadProgress,
+            this, &DownloadManager::handleProgress);
     return latestReply;
 }
 
@@ -92,7 +93,8 @@ void DownloadManager::handleGetFinished(QNetworkReply *reply)
 
                 // prepare for download
                 get(redirectionUrl);
-                connect(latestReply, SIGNAL(readyRead()), this, SLOT(handleReadyRead()));
+                connect(latestReply, &QNetworkReply::readyRead,
+                        this, &DownloadManager::handleReadyRead);
             } else {
                 qDebug() << "Redirected but no redirection url?!";
             }
@@ -109,8 +111,9 @@ void DownloadManager::handleGetFinished(QNetworkReply *reply)
 
         default:
             qDebug() << "Unhandled reply:" << responseCode;
-            foreach (const QByteArray& header, reply->rawHeaderList())
+            for (const QByteArray& header : reply->rawHeaderList()) {
                 qDebug() << header << reply->rawHeader(header);
+            }
 
             break;
         }
@@ -121,7 +124,7 @@ void DownloadManager::handleGetFinished(QNetworkReply *reply)
 
     reply->deleteLater();
     if (reply == latestReply)
-        latestReply = NULL;
+        latestReply = nullptr;
 }
 
 void DownloadManager::handleReadyRead()
@@ -140,6 +143,6 @@ void DownloadManager::handleReadyRead()
     } else {
         qDebug() << "HandleReadyRead(): Something went wrong with the get request:" << latestReply->errorString();
         latestReply->deleteLater();
-        latestReply = NULL;
+        latestReply = nullptr;
     }
 }

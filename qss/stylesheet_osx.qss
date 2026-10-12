@@ -16,7 +16,20 @@
 *  along with LibreELEC.  If not, see <http://www.gnu.org/licenses/>.
 *******************************************************************************/
 
+QLabel {
+  color: black;
+}
+
+QCheckBox {
+  color: black;
+}
+
+QCheckBox:disabled {
+  color: #808080;
+}
+
 QProgressBar {
+  color: black;
   background-color: #F0F0F0;
   margin: 1px;
   border: 1px solid #ABABAB;
@@ -29,8 +42,14 @@ QProgressBar::chunk {
 }
 
 QLineEdit {
+  color: black;
+  background-color: white;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+QLineEdit:disabled {
+  color: #808080;
 }
 
 /* from http://stackoverflow.com/questions/29939990/qcombobox-style-for-choosed-item-in-drop-down-list
@@ -59,9 +78,14 @@ QMenu::item:checked {
 }
 
 QPushButton {
+  color: black;
   padding-left: 8px;
   padding-right: 8px;
   min-height: 23px;  /* same as in Creator */
+}
+
+QPushButton:disabled {
+  color: #808080;
 }
 
 QPushButton:focus {
@@ -73,3 +97,4 @@ QPushButton:focus {
 QPushButton:hover {
   color: rgb(250,169,31);
 }
+

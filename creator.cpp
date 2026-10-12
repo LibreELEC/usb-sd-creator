@@ -103,55 +103,55 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     // add minimize button on Windows
     this->setWindowFlags(windowFlags() | Qt::WindowMinimizeButtonHint);
 
-    connect(diskWriterThread, SIGNAL(finished()),
-            diskWriter, SLOT(deleteLater()));
-    connect(this, SIGNAL(proceedToWriteImageToDevice(QString,QString,QString)),
-            diskWriter, SLOT(writeImageToRemovableDevice(QString,QString,QString)));
+    connect(diskWriterThread, &QThread::finished,
+            diskWriter, &QObject::deleteLater);
+    connect(this, &Creator::proceedToWriteImageToDevice,
+            diskWriter, &DiskWriter::writeImageToRemovableDevice);
 
-    connect(diskWriter, SIGNAL(bytesWritten(int)),this, SLOT(handleWriteProgress(int)));
-    connect(diskWriter, SIGNAL(syncing()), this, SLOT(writingSyncing()));
-    connect(diskWriter, SIGNAL(finished()), this, SLOT(writingFinished()));
-    connect(diskWriter, SIGNAL(error(QString)), this, SLOT(writingError(QString)));
+    connect(diskWriter, &DiskWriter::bytesWritten, this, &Creator::handleWriteProgress);
+    connect(diskWriter, &DiskWriter::syncing, this, &Creator::writingSyncing);
+    connect(diskWriter, &DiskWriter::finished, this, &Creator::writingFinished);
+    connect(diskWriter, &DiskWriter::error, this, &Creator::writingError);
     diskWriterThread->start();
 
-    connect(ui->refreshRemovablesButton,SIGNAL(clicked()),
-            this,SLOT(refreshRemovablesList()));
+    connect(ui->refreshRemovablesButton, &QAbstractButton::clicked,
+            this, &Creator::refreshRemovablesList);
 
-    connect(manager, SIGNAL(downloadProgress(qint64, qint64)),
-            this, SLOT(handleDownloadProgress(qint64, qint64)));
-    connect(manager, SIGNAL(downloadComplete(QByteArray)),
-            this, SLOT(handleFinishedDownload(QByteArray)));
-    connect(manager, SIGNAL(partialData(QByteArray,qlonglong)),
-            this, SLOT(handlePartialData(QByteArray,qlonglong)));
-    connect(manager, SIGNAL(downloadError(QString)),
-            this, SLOT(handleDownloadError(QString)));
+    connect(manager, &DownloadManager::downloadProgress,
+            this, &Creator::handleDownloadProgress);
+    connect(manager, &DownloadManager::downloadComplete,
+            this, &Creator::handleFinishedDownload);
+    connect(manager, &DownloadManager::partialData,
+            this, &Creator::handlePartialData);
+    connect(manager, &DownloadManager::downloadError,
+            this, &Creator::handleDownloadError);
 
-    connect(ui->downloadButton, SIGNAL(clicked()),
-            this, SLOT(downloadButtonClicked()));
-    connect(ui->loadButton, SIGNAL(clicked()),
-            this, SLOT(getImageFileNameFromUser()));
-    connect(ui->writeFlashButton, SIGNAL(clicked()),
-            this, SLOT(writeFlashButtonClicked()));
+    connect(ui->downloadButton, &QPushButton::clicked,
+            this, &Creator::downloadButtonClicked);
+    connect(ui->loadButton, &QPushButton::clicked,
+            this, &Creator::getImageFileNameFromUser);
+    connect(ui->writeFlashButton, &QPushButton::clicked,
+            this, &Creator::writeFlashButtonClicked);
 
-    connect(ui->imagesShowAll, SIGNAL(stateChanged(int)),
-            this, SLOT(projectImagesShowAllChanged(int)));
-    connect(ui->projectSelectBox, SIGNAL(currentIndexChanged(int)),
-            this, SLOT(setProjectImages()));
-    connect(ui->imageSelectBox, SIGNAL(currentTextChanged(QString)),
-            this, SLOT(projectImagesChanged(QString)));
+    connect(ui->imagesShowAll, &QCheckBox::checkStateChanged,
+            this, [this](Qt::CheckState state) { projectImagesShowAllChanged(static_cast<int>(state)); });
+    connect(ui->projectSelectBox, &QComboBox::currentIndexChanged,
+            this, &Creator::setProjectImages);
+    connect(ui->imageSelectBox, &QComboBox::currentTextChanged,
+            this, &Creator::projectImagesChanged);
 
-    connect(ui->removableDevicesComboBox, SIGNAL(currentIndexChanged(int)),
-            this, SLOT(savePreferredRemovableDevice(int)));
+    connect(ui->removableDevicesComboBox, &QComboBox::currentIndexChanged,
+            this, &Creator::savePreferredRemovableDevice);
 
-    connect(ui->ejectUSB, SIGNAL(clicked()), this, SLOT(ejectUSB()));
-    connect(ui->loadUSB, SIGNAL(clicked()), this, SLOT(loadUSB()));
-    connect(ui->removeUSB, SIGNAL(clicked()), this, SLOT(removeUSB()));
-    connect(ui->helpButton, SIGNAL(clicked()), this, SLOT(showHelp()));
-    connect(ui->showAboutButton, SIGNAL(clicked()), this, SLOT(showAbout()));
-    connect(ui->closeAboutButton, SIGNAL(clicked()), this, SLOT(closeAbout()));
-    connect(ui->closeAppButton, SIGNAL(clicked()), this, SLOT(close()));
+    connect(ui->ejectUSB, &QPushButton::clicked, this, &Creator::ejectUSB);
+    connect(ui->loadUSB, &QPushButton::clicked, this, &Creator::loadUSB);
+    connect(ui->removeUSB, &QPushButton::clicked, this, &Creator::removeUSB);
+    connect(ui->helpButton, &QPushButton::clicked, this, &Creator::showHelp);
+    connect(ui->showAboutButton, &QPushButton::clicked, this, &Creator::showAbout);
+    connect(ui->closeAboutButton, &QPushButton::clicked, this, &Creator::closeAbout);
+    connect(ui->closeAppButton, &QPushButton::clicked, this, &QWidget::close);
 
-    connect(ui->langButton,SIGNAL(clicked()), this, SLOT(languageChange()));
+    connect(ui->langButton, &QPushButton::clicked, this, &Creator::languageChange);
 
     refreshRemovablesList();
 
@@ -159,8 +159,16 @@ Creator::Creator(Privileges &privilegesArg, QWidget *parent) :
     // if there is any change then list is changed and current device removed
     timerId = startTimer(timerValue);
 
-    // set Fusion style
-    QApplication::setStyle(QStyleFactory::create("Fusion"));
+    // ensure Fusion style and standard light palette
+    if (!QApplication::style() || QApplication::style()->objectName().compare(QLatin1String("fusion"), Qt::CaseInsensitive) != 0) {
+        QStyle *fusionStyle = QStyleFactory::create("Fusion");
+        if (fusionStyle) {
+            QApplication::setStyle(fusionStyle);
+            QApplication::setPalette(fusionStyle->standardPalette());
+        }
+    } else {
+        QApplication::setPalette(QApplication::style()->standardPalette());
+    }
     // and apply some changes to styles
 
 #ifdef Q_OS_MACOS
@@ -350,7 +358,7 @@ void Creator::dragEnterEvent(QDragEnterEvent *event)
 
 void Creator::dropEvent(QDropEvent *event)
 {
-    foreach (const QUrl &url, event->mimeData()->urls()) {
+    for (const QUrl &url : event->mimeData()->urls()) {
         QString file = url.toLocalFile();
         QFileInfo infoFile(file);
         file = infoFile.absoluteFilePath();
@@ -554,7 +562,7 @@ void Creator::setProjectImages()
             QString imageSize = (*it)["size"].toString();
 
             QString versionNum;
-            QRegularExpression versionNumRegExp = QRegularExpression("-([0-9]+\\.[0-9]+\\.[0-9]+).*\\.img\\.gz");
+            static const QRegularExpression versionNumRegExp(QStringLiteral("-([0-9]+\\.[0-9]+\\.[0-9]+).*\\.img\\.gz"));
             QRegularExpressionMatch versionNumMatch = versionNumRegExp.match(imageName);
             if (versionNumMatch.hasMatch())
                 versionNum = versionNumMatch.captured(1);
@@ -578,7 +586,7 @@ void Creator::setProjectImages()
 
             // LibreELEC-RPi2.arm-7.90.002.img.gz
             // LibreELEC-TinkerBoard.arm-8.90.015-rk3288.img.gz
-            QRegularExpression regExp = QRegularExpression(".+-[0-9]+\\.(9[05])\\.[0-9]+.*\\.img\\.gz");
+            static const QRegularExpression regExp(QStringLiteral(".+-[0-9]+\\.(9[05])\\.[0-9]+.*\\.img\\.gz"));
             QRegularExpressionMatch match = regExp.match(imageName);
             QStringList regExpVal = match.capturedTexts();
             QString alphaBetaNumber;
@@ -668,7 +676,7 @@ void Creator::reset(const QString& message)
     QString destination = ui->removableDevicesComboBox->itemData(idx).toString();
     QString file = ui->fileNameLabel->text();
 
-    if (file.isFilled()) {
+    if (!file.isEmpty()) {
         QFileInfo checkFile(file);
         if (!checkFile.exists() || !checkFile.isFile())
             file = "";
@@ -680,7 +688,7 @@ void Creator::reset(const QString& message)
         }
     }
 
-    if (destination.isNull() == false && file.isFilled())
+    if (!destination.isNull() && !file.isEmpty())
         ui->writeFlashButton->setEnabled(true);
     else
         ui->writeFlashButton->setEnabled(false);
@@ -752,14 +760,15 @@ bool Creator::isChecksumValid(const QString checksumSha256)
 {
     checksum = checksumMap[selectedImage];
 
-    if (checksumSha256.isFilled() && checksumSha256 == checksum)
+    if (!checksumSha256.isEmpty() && checksumSha256 == checksum)
         return true;  // checksum calculated at download stage
 
     QByteArray referenceSum, downloadSum;
     QCryptographicHash c(QCryptographicHash::Sha256);
 
     // calculate the sha256 sum of the downloaded file
-    imageFile.open(QFile::ReadOnly);
+    if (!imageFile.open(QFile::ReadOnly))
+        return false;
     while (!imageFile.atEnd())
         c.addData(imageFile.read(4096));
 
@@ -779,7 +788,7 @@ bool Creator::isChecksumValid(const QString checksumSha256)
 // Might not be portable!
 unsigned int Creator::getUncompressedImageSize()
 {
-    FILE *file;
+    FILE *file = nullptr;
     unsigned int len;
     unsigned char bufSize[4];
     unsigned int fileSize;
@@ -792,9 +801,9 @@ unsigned int Creator::getUncompressedImageSize()
 #else
     file = fopen(imageFile.fileName().toStdString().c_str(), "rb");
 #endif
-    if (file == NULL)
+    if (file == nullptr)
     {
-        emit error("Couldn't open " + imageFile.fileName());
+        qDebug() << "Couldn't open" << imageFile.fileName();
         return 0;
     }
 
@@ -1243,7 +1252,7 @@ void Creator::getImageFileNameFromUser()
 
     QString loadDir = settings.value("preferred/savedir", getDefaultSaveDir()).toString();
     // load from previous folder if exist
-    if (ui->fileNameLabel->text().isFilled()) {
+    if (!ui->fileNameLabel->text().isEmpty()) {
         QDir curDir = QFileInfo(ui->fileNameLabel->text()).absoluteDir();
         qDebug() << "curDir" << curDir;
 
@@ -1270,7 +1279,7 @@ void Creator::getImageFileNameFromUser()
 
     int idx = ui->removableDevicesComboBox->currentIndex();
     QString destination = ui->removableDevicesComboBox->itemData(idx).toString();
-    if (destination.isNull() == false && ui->fileNameLabel->text().isFilled())
+    if (!destination.isNull() && !ui->fileNameLabel->text().isEmpty())
         ui->writeFlashButton->setEnabled(true);
     else
         ui->writeFlashButton->setEnabled(false);
@@ -1474,7 +1483,7 @@ void Creator::refreshRemovablesList()
 
     idx = ui->removableDevicesComboBox->currentIndex();
     QString destination = ui->removableDevicesComboBox->itemData(idx).toString();
-    if (destination.isNull() == false && ui->fileNameLabel->text().isFilled())
+    if (!destination.isNull() && !ui->fileNameLabel->text().isEmpty())
         ui->writeFlashButton->setEnabled(true);
     else
         ui->writeFlashButton->setEnabled(false);

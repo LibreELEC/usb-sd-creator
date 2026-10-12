@@ -22,9 +22,9 @@
 
 // initialize the sample size to the specified number
 MovingAverage::MovingAverage(const unsigned int numSamples)
+    : size(numSamples)
+    , total(0.0)
 {
-    size = numSamples;
-    total = 0;
 }
 
 // add sample to a list
@@ -41,10 +41,11 @@ void MovingAverage::AddValue(double val)
 }
 
 // get the average value
-double MovingAverage::AverageValue()
+double MovingAverage::AverageValue() const
 {
-    //if (samples.size() < size / 10)
-    //    return std::numeric_limits<double>::max();
+    if (samples.empty()) {
+        return 0.0;
+    }
 
     return total / samples.size();
 }

@@ -28,7 +28,7 @@
 class ProjectData
 {
   public:
-    ProjectData() {}
+    ProjectData() = default;
 
     ProjectData(QString name, QString id, QString url, QList<QMap<QString, QVariant>> &images)
     {
@@ -43,12 +43,9 @@ class ProjectData
         ProjectData::images = images;
     }
 
-    bool operator== (const ProjectData &data) const
+    bool operator==(const ProjectData &data) const
     {
-        if (data.name == this->name)
-            return true;
-
-        return false;
+        return data.name == this->name;
     }
 
     QString name;
@@ -60,8 +57,8 @@ class ProjectData
 class JsonParser
 {
 public:
-    JsonParser() {}
-    JsonParser(const QByteArray &data);
+    JsonParser() = default;
+    explicit JsonParser(const QByteArray &data);
     void addExtra(const QByteArray &data, const QString label);
     void parseAndSet(const QByteArray &data, const QString label);
     QList<ProjectData> getProjectData() const;

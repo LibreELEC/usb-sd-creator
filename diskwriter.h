@@ -32,8 +32,8 @@ class DiskWriter : public QObject
     Q_OBJECT
 
 public:
-    DiskWriter(QObject *parent = 0) : QObject(parent) {}
-    virtual ~DiskWriter() {}
+    explicit DiskWriter(QObject *parent = nullptr) : QObject(parent) {}
+    virtual ~DiskWriter() = default;
 
 private:
     virtual void writeUncompressedImage(const QString &filename, const QString& device, const QString& deviceText);

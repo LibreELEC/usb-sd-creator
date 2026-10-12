@@ -49,8 +49,8 @@ void Translator::fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr)
 
     // add menu entry for all the files
     QList<QAction *> actions;
-    foreach (const QString &qmFile, qmFiles) {
-        QRegularExpression regExp = QRegularExpression("lang-(.*)\\.qm");
+    for (const QString &qmFile : qmFiles) {
+        static const QRegularExpression regExp(QStringLiteral("lang-(.*)\\.qm"));
         QRegularExpressionMatch match = regExp.match(qmFile);
         QString locale = match.captured(1);
 
@@ -97,7 +97,7 @@ void Translator::fillLanguages(QMenu *menuPtr, QPushButton *langBtnPtr)
 
     menu->addActions(actions);  // add to menu
 
-    connect(menu, SIGNAL(triggered(QAction*)), SLOT(languageAction(QAction*)));
+    connect(menu, &QMenu::triggered, this, &Translator::languageAction);
 
     QString locale = settings->value("preferred/lang").toString();
 
@@ -130,7 +130,7 @@ void Translator::languageAction(QAction *action)
 
     langBtn->setIcon(action->icon());
 
-    if (qtranslator->isFilled())
+    if (!qtranslator->isEmpty())
         qApp->removeTranslator(qtranslator);
 
     bool loaded = false;
@@ -139,7 +139,7 @@ void Translator::languageAction(QAction *action)
     else
         loaded = qtranslator->load("lang-" + locale + ".qm");
 
-    if (loaded && qtranslator->isFilled())
+    if (loaded && !qtranslator->isEmpty())
         qApp->installTranslator(qtranslator);
 
     // clear checked status

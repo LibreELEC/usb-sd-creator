@@ -148,6 +148,8 @@ macx {
     # use spaces on macOS
     TARGET = "LibreELEC USB-SD Creator"
 
+    QMAKE_MACOSX_DEPLOYMENT_TARGET = 12.0
+
     QMAKE_INFO_PLIST = dmg_osx/template.app/Contents/Info.plist
     #QT_CONFIG -= no-pkg-config
     #CONFIG += link_pkgconfig
@@ -159,7 +161,8 @@ linux* {
     # manually add suffix 32/64
     TARGET = LibreELEC.USB-SD.Creator.Linux-bit.bin
 
-    QMAKE_CXXFLAGS += -std=c++11
+    CONFIG += c++17
+    QMAKE_CXXFLAGS += -std=c++17
 
     LIBS += -lblkid
 }

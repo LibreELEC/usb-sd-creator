@@ -1,4 +1,7 @@
-cmake_minimum_required(VERSION 3.19)
+cmake_minimum_required(VERSION 3.25)
+if(POLICY CMP0207)
+    cmake_policy(SET CMP0207 NEW)
+endif()
 project(LibreELEC.USB-SD.Creator
     VERSION 1.5
     LANGUAGES CXX
@@ -7,12 +10,8 @@ project(LibreELEC.USB-SD.Creator
 
 set(projectDisplayName "LibreELEC USB-SD Creator")
 
-# LINUX is available only since CMake 3.25
-if (NOT LINUX AND UNIX AND NOT APPLE)
-    set(LINUX 1)
-endif()
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -24,6 +23,10 @@ include(GNUInstallDirs)
 # GNU dirs must be adjusted before finding Qt for qt_deploy_runtime_dependencies to use customzied vars
 if(WIN32)
     set(CMAKE_INSTALL_BINDIR .)
+elseif(APPLE)
+    if(NOT CMAKE_OSX_DEPLOYMENT_TARGET)
+        set(CMAKE_OSX_DEPLOYMENT_TARGET "12.0" CACHE STRING "Minimum macOS version to target")
+    endif()
 endif()
 
 # options
@@ -38,7 +41,7 @@ if(LINUX)
     list(APPEND qtComponents DBus)
 endif()
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS ${qtComponents})
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS ${qtComponents})
+find_package(Qt${QT_VERSION_MAJOR} 6.11 REQUIRED COMPONENTS ${qtComponents})
 
 if(MSVC_TOOLSET_VERSION EQUAL 142)
     if(CMAKE_SYSTEM_PROCESSOR MATCHES "ARM64")
@@ -46,7 +49,7 @@ if(MSVC_TOOLSET_VERSION EQUAL 142)
     else()
         list(APPEND CMAKE_PREFIX_PATH "windows/msvc2019-x64/zlib")
     endif()
-elseif(MSVC_TOOLSET_VERSION EQUAL 143)
+elseif(MSVC_TOOLSET_VERSION GREATER_EQUAL 143)
     if(CMAKE_SYSTEM_PROCESSOR MATCHES "ARM64")
         list(APPEND CMAKE_PREFIX_PATH "windows/msvc2022-arm64/zlib")
     else()
@@ -98,41 +101,12 @@ target_compile_definitions(LibreELEC.USB-SD.Creator PRIVATE
     $<$<BOOL:${DUMMY_WRITE}>:WINDOWS_DUMMY_WRITE>
 )
 
+file(GLOB TS_FILES CONFIGURE_DEPENDS "lang/lang-*.ts")
 qt_add_translations(LibreELEC.USB-SD.Creator
     RESOURCE_PREFIX
         "/lang"
     TS_FILES
-        lang/lang-ar_SA.ts
-        lang/lang-ast_ES.ts
-        lang/lang-bg_BG.ts
-        lang/lang-cs_CZ.ts
-        lang/lang-da_DK.ts
-        lang/lang-de_DE.ts
-        lang/lang-el_GR.ts
-        lang/lang-en_GB.ts
-        lang/lang-es_ES.ts
-        lang/lang-fa_IR.ts
-        lang/lang-fi_FI.ts
-        lang/lang-fr_FR.ts
-        lang/lang-he_IL.ts
-        lang/lang-hr_HR.ts
-        lang/lang-hu_HU.ts
-        lang/lang-it_IT.ts
-        lang/lang-ko_KR.ts
-        lang/lang-lt_LT.ts
-        lang/lang-nl_NL.ts
-        lang/lang-no_NO.ts
-        lang/lang-pl_PL.ts
-        lang/lang-pt_BR.ts
-        lang/lang-pt_PT.ts
-        lang/lang-ru_RU.ts
-        lang/lang-sk_SK.ts
-        lang/lang-sl_SI.ts
-        lang/lang-sr_RS.ts
-        lang/lang-sv_SE.ts
-        lang/lang-tr_TR.ts
-        lang/lang-uk_UA.ts
-        lang/lang-zh_CN.ts
+        ${TS_FILES}
 )
 
 if(WIN32)
@@ -143,15 +117,24 @@ if(WIN32)
     )
 
     if(REQUIRE_ADMIN)
-        target_sources(LibreELEC.USB-SD.Creator PUBLIC
-            windows/winapp.rc
-        )
         if(MSVC)
-            set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
-                LINK_OPTIONS "/MANIFEST:NO" # disable default manifest
+            target_sources(LibreELEC.USB-SD.Creator PRIVATE
+                windows/windows.manifest
             )
+            target_link_options(LibreELEC.USB-SD.Creator PRIVATE
+                "/MANIFESTUAC:NO"
+            )
+            set(RC_MANIFEST_ENTRY "")
+        else()
+            set(RC_MANIFEST_ENTRY "#define MANIFEST_RESOURCE_ID 1\nMANIFEST_RESOURCE_ID RT_MANIFEST \"windows.manifest\"")
         endif()
+    else()
+        set(RC_MANIFEST_ENTRY "")
     endif()
+
+    target_sources(LibreELEC.USB-SD.Creator PUBLIC
+        windows/winapp.rc
+    )
 
     configure_file("windows/winapp.rc.in" "${CMAKE_SOURCE_DIR}/windows/winapp.rc" @ONLY)
 
@@ -162,6 +145,37 @@ if(WIN32)
             file(REMOVE \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_BIN_DIR}/\\\${dll}.dll\")
         endforeach()
     ")
+    if(MINGW)
+        get_filename_component(MINGW_BIN_DIR "${CMAKE_CXX_COMPILER}" DIRECTORY)
+        string(APPEND qtDeployExtraCommands "
+        # Deploy MinGW / MSYS2 runtime dependencies
+        file(GLOB_RECURSE _deployed_plugins LIST_DIRECTORIES false \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_PLUGINS_DIR}/*.dll\")
+        if(_deployed_plugins)
+            set(_plugin_libs LIBRARIES \\\${_deployed_plugins})
+        else()
+            set(_plugin_libs \"\")
+        endif()
+        if(POLICY CMP0207)
+            cmake_policy(SET CMP0207 NEW)
+        endif()
+        file(GET_RUNTIME_DEPENDENCIES
+            RESOLVED_DEPENDENCIES_VAR _resolved_deps
+            UNRESOLVED_DEPENDENCIES_VAR _unresolved_deps
+            CONFLICTING_DEPENDENCIES_PREFIX _conflicts
+            EXECUTABLES \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_BIN_DIR}/${qtDeployExecutable}\"
+            \\\${_plugin_libs}
+            DIRECTORIES \"${MINGW_BIN_DIR}\"
+            POST_EXCLUDE_REGEXES \"^[aA][pP][iI]-[mM][sS]-[wW][iI][nN]\" \"^[eE][xX][tT]-[mM][sS]-[wW][iI][nN]\"
+        )
+        foreach(_dep IN LISTS _resolved_deps)
+            file(TO_CMAKE_PATH \"\\\${_dep}\" _dep_norm)
+            string(TOLOWER \"\\\${_dep_norm}\" _dep_lower)
+            if(NOT _dep_lower MATCHES \"^[a-z]:/windows/\")
+                file(INSTALL DESTINATION \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_BIN_DIR}\" TYPE FILE FILES \"\\\${_dep}\")
+            endif()
+        endforeach()
+        ")
+    endif()
 elseif(APPLE)
     set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
         OUTPUT_NAME "${projectDisplayName}"
@@ -204,14 +218,29 @@ elseif(LINUX)
     target_link_libraries(LibreELEC.USB-SD.Creator PUBLIC
         Qt${QT_VERSION_MAJOR}::DBus
     )
+
+    install(FILES "linux/LibreELEC.USB-SD.Creator.desktop"
+        DESTINATION "${CMAKE_INSTALL_DATADIR}/applications"
+    )
+    install(FILES "icons/le_icon_256.png"
+        DESTINATION "${CMAKE_INSTALL_DATADIR}/icons/hicolor/256x256/apps"
+        RENAME "LibreELEC.USB-SD.Creator.png"
+    )
 endif()
 
 # install
 install(TARGETS LibreELEC.USB-SD.Creator
     BUNDLE
         DESTINATION .
+    RUNTIME
+        DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 if(qtDeployExecutable)
+    set(compilerRuntimeFlag "")
+    if(NOT MINGW)
+        set(compilerRuntimeFlag "NO_COMPILER_RUNTIME")
+    endif()
+
     qt_generate_deploy_script(
         TARGET LibreELEC.USB-SD.Creator
         OUTPUT_SCRIPT qtDeployScript
@@ -220,7 +249,7 @@ if(qtDeployExecutable)
                 EXECUTABLE \"${qtDeployExecutable}\"
                 GENERATE_QT_CONF
                 NO_APP_STORE_COMPLIANCE
-                NO_COMPILER_RUNTIME
+                ${compilerRuntimeFlag}
                 NO_TRANSLATIONS
                 VERBOSE
             )
@@ -255,5 +284,8 @@ elseif(APPLE)
     set(CPACK_DMG_VOLUME_NAME "${projectDisplayName}")
 
     configure_file("macos/dmg_osx/DS_Store_Setup.scpt.in" "${CPACK_DMG_DS_STORE_SETUP_SCRIPT}" @ONLY)
+elseif(LINUX)
+    set(CPACK_PACKAGE_FILE_NAME "LibreELEC.USB-SD.Creator.Linux")
+    set(CPACK_GENERATOR TGZ)
 endif()
 include(CPack)

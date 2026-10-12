@@ -26,8 +26,8 @@ class DiskWriter_udisks2 : public DiskWriter
 {
     Q_OBJECT
 public:
-    explicit DiskWriter_udisks2(QObject *parent = 0);
-    ~DiskWriter_udisks2();
+    explicit DiskWriter_udisks2(QObject *parent = nullptr);
+    ~DiskWriter_udisks2() override;
 
 private:
     QDBusUnixFileDescriptor fd;

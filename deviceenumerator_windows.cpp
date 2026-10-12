@@ -57,7 +57,7 @@ QStringList DeviceEnumerator_windows::getUserFriendlyNames(const QStringList &de
     return names;
 #endif
 
-    foreach (const QString &dev, devices) {
+    for (const QString &dev : devices) {
         qint64 size = getSizeOfDevice(dev);
         QString label = getLabelOfDevice(dev);
         if (label.isEmpty())
@@ -85,10 +85,10 @@ qint64 DeviceEnumerator_windows::getSizeOfDevice(const QString &device) const
     GET_LENGTH_INFORMATION lenInfo;
     bool ok = DeviceIoControl(handle,
                               IOCTL_DISK_GET_LENGTH_INFO,
-                              NULL, 0,
+                              nullptr, 0,
                               &lenInfo, sizeof(lenInfo),
                               &junk,
-                              (LPOVERLAPPED) NULL);
+                              nullptr);
     if (ok)
         size = lenInfo.Length.QuadPart;
 
@@ -102,7 +102,7 @@ QString DeviceEnumerator_windows::getLabelOfDevice(const QString &device)
 
     if (GetVolumeInformation((const wchar_t *) device.utf16(), \
           label, ARRAYSIZE(label), \
-          NULL, NULL, NULL, NULL, 0))
+          nullptr, nullptr, nullptr, nullptr, 0))
     {
         return QString::fromUtf16((const char16_t *) label);
     }
@@ -141,7 +141,7 @@ int DeviceEnumerator_windows::loadEjectDrive(const QString &device, const loadEj
     DWORD dwRet;
 
     // try to flush, write access required which only admins will get
-    HANDLE hVolWrite = CreateFile(LPCWS_device, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL);
+    HANDLE hVolWrite = CreateFile(LPCWS_device, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, nullptr, OPEN_EXISTING, 0, nullptr);
     if (hVolWrite != INVALID_HANDLE_VALUE) {
         qDebug() << "Flushing cache...";
         res = FlushFileBuffers(hVolWrite);
@@ -151,7 +151,7 @@ int DeviceEnumerator_windows::loadEjectDrive(const QString &device, const loadEj
         CloseHandle(hVolWrite);
     }
 
-    HANDLE hVolRead = CreateFile(LPCWS_device, GENERIC_READ, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL);
+    HANDLE hVolRead = CreateFile(LPCWS_device, GENERIC_READ, FILE_SHARE_READ | FILE_SHARE_WRITE, nullptr, OPEN_EXISTING, 0, nullptr);
     if (hVolRead == INVALID_HANDLE_VALUE) {
         qDebug() << "error opening the volume for read access -> abort\n" << GetLastError();
         return ERRL_NO_VOLREAD;
@@ -161,14 +161,14 @@ int DeviceEnumerator_windows::loadEjectDrive(const QString &device, const loadEj
         // allowing (unlocking) eject, usually for CD/DVD only, but does not hurt (and returns TRUE) for other drives
         qDebug() << "Allowing eject...";
         PREVENT_MEDIA_REMOVAL pmr = {0}; // pmr.PreventMediaRemoval = FALSE;
-        res = DeviceIoControl(hVolRead, IOCTL_STORAGE_MEDIA_REMOVAL, &pmr, sizeof(pmr), NULL, 0, &dwRet, NULL);
+        res = DeviceIoControl(hVolRead, IOCTL_STORAGE_MEDIA_REMOVAL, &pmr, sizeof(pmr), nullptr, 0, &dwRet, nullptr);
         if (!res)
             qDebug() << "failed err=" << GetLastError();
     }
 
     // try to lock the volume, seems to flush too, maybe even with read access...
     qDebug() << "Locking volume...";
-    int Locked = DeviceIoControl(hVolRead, FSCTL_LOCK_VOLUME, NULL, 0, NULL, 0, &dwRet, NULL);
+    int Locked = DeviceIoControl(hVolRead, FSCTL_LOCK_VOLUME, nullptr, 0, nullptr, 0, &dwRet, nullptr);
     if (!Locked)
         qDebug() << "failed err=" << GetLastError();
 
@@ -178,25 +178,25 @@ int DeviceEnumerator_windows::loadEjectDrive(const QString &device, const loadEj
     if (action == LOADEJECT_EJECT) {
         // dismount the file system if either we got a lock or we want to force it
         qDebug() << "Dismounting volume...";
-        res = DeviceIoControl(hVolRead, FSCTL_DISMOUNT_VOLUME, NULL, 0, NULL, 0, &dwRet, NULL);
+        res = DeviceIoControl(hVolRead, FSCTL_DISMOUNT_VOLUME, nullptr, 0, nullptr, 0, &dwRet, nullptr);
         if (!res)
             qDebug() << "failed err=" << GetLastError();
     }
 
     if (action == LOADEJECT_EJECT) {
         qDebug() << "Ejecting media...";
-        res = DeviceIoControl(hVolRead, IOCTL_STORAGE_EJECT_MEDIA, NULL, 0, NULL, 0, &dwRet, NULL);
+        res = DeviceIoControl(hVolRead, IOCTL_STORAGE_EJECT_MEDIA, nullptr, 0, nullptr, 0, &dwRet, nullptr);
         if (!res)
             qDebug() << "failed err=" << GetLastError();
     } else {
         qDebug() << "Loading media...";
-        res = DeviceIoControl(hVolRead, IOCTL_STORAGE_LOAD_MEDIA, NULL, 0, NULL, 0, &dwRet, NULL);
+        res = DeviceIoControl(hVolRead, IOCTL_STORAGE_LOAD_MEDIA, nullptr, 0, nullptr, 0, &dwRet, nullptr);
         if (!res)
             qDebug() << "failed err=" << GetLastError();
     }
 
     if (Locked)
-        DeviceIoControl(hVolRead, FSCTL_UNLOCK_VOLUME, NULL, 0, NULL, 0, &dwRet, NULL);
+        DeviceIoControl(hVolRead, FSCTL_UNLOCK_VOLUME, nullptr, 0, nullptr, 0, &dwRet, nullptr);
 
     CloseHandle(hVolRead);
 

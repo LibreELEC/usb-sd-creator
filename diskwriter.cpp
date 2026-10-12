@@ -67,7 +67,7 @@ void DiskWriter::writeGzCompressedImage(const QString &filename, const QString& 
 #else
     gzFile src = gzopen(filename.toStdString().c_str(), "rb");
 #endif
-    if (src == NULL) {
+    if (src == nullptr) {
         emit error("Couldn't open " + filename);
         this->close();
         return;
@@ -140,7 +140,7 @@ void DiskWriter::writeZipCompressedImage(const QString &filename, const QString&
 #else
     gzFile src = gzopen(filename.toStdString().c_str(), "rb");
 #endif
-    if (src == NULL) {
+    if (src == nullptr) {
         emit error("Couldn't open " + filename);
         this->close();
         return;
@@ -183,10 +183,10 @@ void DiskWriter::writeZipCompressedImage(const QString &filename, const QString&
 
     // Initialize inflate stream
     stream.total_out = 0;
-    stream.zalloc = NULL;
-    stream.zfree = NULL;
-    stream.opaque = NULL;
-    stream.next_in = NULL;
+    stream.zalloc = nullptr;
+    stream.zfree = nullptr;
+    stream.opaque = nullptr;
+    stream.next_in = nullptr;
     stream.avail_in = 0;
 
     if (inflateInit2(&stream, -MAX_WBITS) != Z_OK) {

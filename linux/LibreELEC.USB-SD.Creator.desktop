@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=LibreELEC USB-SD Creator
+GenericName=USB/SD Card Flashing Tool
+Comment=Write LibreELEC images to SD cards or USB drives
+Exec=LibreELEC.USB-SD.Creator
+Icon=LibreELEC.USB-SD.Creator
+Terminal=false
+Categories=Utility;Archiving;HardwareSettings;
+StartupNotify=true

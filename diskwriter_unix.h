@@ -27,17 +27,17 @@ class DiskWriter_unix : public DiskWriter
 {
     Q_OBJECT
 public:
-    explicit DiskWriter_unix(QObject *parent = 0);
-    ~DiskWriter_unix();
+    explicit DiskWriter_unix(QObject *parent = nullptr);
+    ~DiskWriter_unix() override;
 
 private:
     QFile dev;
 
-    bool open(const QString &device);
-    void close();
-    void sync();
-    bool isOpen();
-    bool write(const QByteArray &data);
+    bool open(const QString &device) override;
+    void close() override;
+    void sync() override;
+    bool isOpen() override;
+    bool write(const QByteArray &data) override;
 };
 
 #endif // DISKWRITER_UNIX_H

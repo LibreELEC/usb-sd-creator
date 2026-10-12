@@ -39,9 +39,6 @@
 #include "privileges.h"
 #endif
 
-// useful macro
-#define isFilled()  isEmpty() == false
-
 class QThread;
 class DiskWriter;
 class DeviceEnumerator;
@@ -55,8 +52,8 @@ class Creator : public QDialog
     Q_OBJECT
 
 public:
-    explicit Creator(Privileges &priv, QWidget *parent = 0);
-    ~Creator();
+    explicit Creator(Privileges &priv, QWidget *parent = nullptr);
+    ~Creator() override;
     void setArgFile(QString argFile);
     void retranslateUi();
 
@@ -65,13 +62,9 @@ private:
     DownloadManager* manager;
     Translator *translator;
 
-    void parseAndSetLinks(const QByteArray &data);
-    void saveAndUpdateProgress(QNetworkReply *reply);
     void disableControls(const int which);
     bool isChecksumValid(const QString);
 
-    QByteArray rangeByteArray(qlonglong first, qlonglong last);
-    QNetworkRequest createRequest(QUrl &url, qlonglong first, qlonglong last);
     unsigned int getUncompressedImageSize();
     void setImageFileName(QString filename);
     QString getDefaultSaveDir();
@@ -101,9 +94,9 @@ private:
         STACK_WIDGET_ABOUT = 1
     };
 
-    int timerId;
-    QTimer *devicesTimer;
-    qlonglong bytesDownloaded;
+    int timerId = 0;
+    QTimer *devicesTimer = nullptr;
+    qlonglong bytesDownloaded = 0;
     QString imageFileName;
     QCryptographicHash imageHash;
     QFile imageFile;
@@ -112,22 +105,22 @@ private:
     QString checksum;
     QString selectedImage;
     QMap<QString, QString> checksumMap;
-    DiskWriter *diskWriter;
-    QThread* diskWriterThread;
-    DeviceEnumerator* devEnumerator;
+    DiskWriter *diskWriter = nullptr;
+    QThread* diskWriterThread = nullptr;
+    DeviceEnumerator* devEnumerator = nullptr;
     static const int timerValue;
     static const QString releasesUrl;
     static const QString versionUrl;
     static const QString helpUrl;
-    JsonParser *parserData;
+    JsonParser *parserData = nullptr;
     QSettings settings;
     QElapsedTimer speedTime;
-    qlonglong bytesLast;
-    MovingAverage *averageSpeed;
-    unsigned int uncompressedImageSize;
+    qlonglong bytesLast = 0;
+    MovingAverage *averageSpeed = nullptr;
+    unsigned int uncompressedImageSize = 0;
     Privileges privileges;
     QString deviceEjected;
-    bool showLoadEject;
+    bool showLoadEject = false;
 
 protected:
     void timerEvent(QTimerEvent *event) override;
@@ -139,7 +132,6 @@ protected:
 
 signals:
     void proceedToWriteImageToDevice(const QString& image, const QString& device, const QString& deviceText);
-    void error(const QString& message);
 
 private slots:
     void httpsUrlHandler(const QUrl &url);

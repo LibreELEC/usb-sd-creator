@@ -20,28 +20,34 @@
 
 #include <QApplication>
 #include <QInputDialog>
+#include <QLineEdit>
 
 #include <iostream>
 
 namespace sudo
 {
-void askpass()
+int askpass()
 {
     const auto passwordPrompt = QObject::tr("%1 requires admin permissions.\n\nPlease enter your password to allow this.",
                                             "arg is app name");
 
-    auto getAdminPasswordDlg = new QInputDialog;
-    getAdminPasswordDlg->setAttribute(Qt::WA_DeleteOnClose);
-    getAdminPasswordDlg->setInputMode(QInputDialog::TextInput);
-    getAdminPasswordDlg->setTextEchoMode(QLineEdit::Password);
-    getAdminPasswordDlg->setLabelText(passwordPrompt.arg(qApp->applicationDisplayName()));
-    getAdminPasswordDlg->show();
+    QInputDialog getAdminPasswordDlg;
+    getAdminPasswordDlg.setInputMode(QInputDialog::TextInput);
+    getAdminPasswordDlg.setTextEchoMode(QLineEdit::Password);
+    getAdminPasswordDlg.setLabelText(passwordPrompt.arg(qApp->applicationDisplayName()));
+    getAdminPasswordDlg.setWindowTitle(qApp->applicationDisplayName());
+    getAdminPasswordDlg.setWindowFlags(getAdminPasswordDlg.windowFlags() | Qt::WindowStaysOnTopHint);
+    getAdminPasswordDlg.raise();
+    getAdminPasswordDlg.activateWindow();
 
-    QObject::connect(getAdminPasswordDlg, &QInputDialog::accepted, [=]{
-        const auto enteredPassword = getAdminPasswordDlg->textValue();
+    if (getAdminPasswordDlg.exec() == QDialog::Accepted)
+    {
+        const auto enteredPassword = getAdminPasswordDlg.textValue();
         std::cout << qUtf8Printable(enteredPassword);
         std::cout.flush();
-        qApp->quit();
-    });
+        return 0;
+    }
+
+    return 1;
 }
 }

@@ -27,7 +27,7 @@ class DeviceEnumerator_udisks2 : public DeviceEnumerator
 {
 public:
     DeviceEnumerator_udisks2();
-    ~DeviceEnumerator_udisks2() = default;
+    ~DeviceEnumerator_udisks2() override = default;
 
     QStringList getRemovableDeviceNames() const override;
     QStringList getUserFriendlyNames(const QStringList& devices) const override;

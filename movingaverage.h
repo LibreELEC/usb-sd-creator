@@ -25,14 +25,14 @@
 class MovingAverage
 {
 public:
-    MovingAverage(const unsigned int numSamples = 10);
+    explicit MovingAverage(const unsigned int numSamples = 10);
     void AddValue(double val);
-    double AverageValue();
+    double AverageValue() const;
 
 private:
     std::list<double> samples;
-    unsigned int size;
-    double total;
+    unsigned int size{10};
+    double total{0.0};
 };
 
 #endif // MOVINGAVERAGE_H

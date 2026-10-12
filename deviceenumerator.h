@@ -31,7 +31,7 @@ public:
       LOADEJECT_EJECT
     };
 
-    virtual ~DeviceEnumerator() {}
+    virtual ~DeviceEnumerator() = default;
     virtual QStringList getRemovableDeviceNames() const = 0;
     virtual QStringList getUserFriendlyNames(const QStringList& devices) const = 0;
     virtual bool unmountDevicePartitions(const QString &device) const = 0;
@@ -41,7 +41,7 @@ public:
 
     QString sizeToHuman(const qint64 size) const
     {
-        const QStringList suffixes = QStringList() << " B" << " kB" << " MB" << " GB" << " TB";
+        static const QStringList suffixes{" B", " kB", " MB", " GB", " TB"};
 
         if (size <= 0)
             return "0 MB";

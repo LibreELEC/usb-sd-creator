@@ -29,7 +29,7 @@
 #define VER_COMPANYNAME_STR         "LibreELEC"
 #define VER_FILEDESCRIPTION_STR     "LibreELEC USB disk or SD card Creator Application"
 #define VER_INTERNALNAME_STR        "@projectDisplayName@"
-#define VER_LEGALCOPYRIGHT_STR      "Copyright © @copyrightYears@ LibreELEC"
+#define VER_LEGALCOPYRIGHT_STR      "Copyright Â© @copyrightYears@ LibreELEC"
 #define VER_LEGALTRADEMARKS1_STR    "All Rights Reserved"
 #define VER_LEGALTRADEMARKS2_STR    VER_LEGALTRADEMARKS1_STR
 #define VER_ORIGINALFILENAME_STR    "LibreELEC.USB-SD.Creator.exe"
@@ -38,8 +38,7 @@
 #define VER_COMPANYDOMAIN_STR       "@PROJECT_HOMEPAGE_URL@"
 ////////////////////////////////////////////////////////////////
 
-#define MANIFEST_RESOURCE_ID 1
-MANIFEST_RESOURCE_ID RT_MANIFEST "windows.manifest"
+@RC_MANIFEST_ENTRY@
 IDI_ICON1 ICON DISCARDABLE "winapp_le_icons.ico"
 
 VS_VERSION_INFO VERSIONINFO

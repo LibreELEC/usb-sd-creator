@@ -28,8 +28,8 @@ class DiskWriter_windows : public DiskWriter
 {
     Q_OBJECT
 public:
-    explicit DiskWriter_windows(QObject *parent = 0);
-    ~DiskWriter_windows();
+    explicit DiskWriter_windows(QObject *parent = nullptr);
+    ~DiskWriter_windows() override;
 
     static QString errorAsString(DWORD error);
 
@@ -37,11 +37,11 @@ private:
     friend class DeviceEnumerator_windows;
     QFile dev;
 
-    bool open(const QString& device);
-    void close();
-    void sync();
-    bool isOpen();
-    bool write(const QByteArray &data);
+    bool open(const QString& device) override;
+    void close() override;
+    void sync() override;
+    bool isOpen() override;
+    bool write(const QByteArray &data) override;
 
     HANDLE hVolume;
     HANDLE hRawDisk;

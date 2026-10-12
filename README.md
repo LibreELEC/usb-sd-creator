@@ -105,7 +105,7 @@ Run the installer in `build/cpack`. Then run the app from Start Menu: `LibreELEC
 
 ## Building for Windows using Visual Studio (MSVC)
 
-### 1. Install Qt 6.7.2 and Visual Studio Community 2022
+### 1. Install Qt 6.11.1 and Visual Studio Community 2022
 
 #### Install required Qt packages
 
@@ -118,14 +118,14 @@ aqt list-qt windows desktop
 To see the available compiler versions run:
 
 ```
-aqt list-qt linux desktop --arch 6.7.2
+aqt list-qt linux desktop --arch 6.11.1
 ```
 
 Install the required packages:
 
 ```
-aqt install-qt --outputdir %UserProfile%/Qt windows desktop 6.7.2 win64_msvc2019_64 --archives qtbase qttools opengl32sw d3dcompiler_47 --external 7z.exe
-aqt install-qt --outputdir %UserProfile%/Qt windows desktop 6.7.2 win64_msvc2019_64 --modules debug_info --external 7z.exe
+aqt install-qt --outputdir %UserProfile%/Qt windows desktop 6.11.1 win64_msvc2022_64 --archives qtbase qtdeclarative qttools opengl32sw d3dcompiler_47 --external 7z.exe
+aqt install-qt --outputdir %UserProfile%/Qt windows desktop 6.11.1 win64_msvc2022_64 --modules debug_info --external 7z.exe
 ```
 
 #### Install Visual Studio Community 2022
@@ -150,13 +150,13 @@ cd %UserProfile%/usb-sd-creator
 #### Debug build
 
 ```
-cmake -S . -B build -D CMAKE_PREFIX_PATH="%UserProfile%/Qt/6.7.2/msvc2019_64" && cmake --build build
+cmake -S . -B build -D CMAKE_PREFIX_PATH="%UserProfile%/Qt/6.11.1/msvc2022_64" && cmake --build build
 ```
 
 #### Release build
 
 ```
-cmake --preset release-msvc -D CMAKE_PREFIX_PATH="%UserProfile%/Qt/6.7.2/msvc2019_64" && cmake --build --preset release
+cmake --preset release-msvc -D CMAKE_PREFIX_PATH="%UserProfile%/Qt/6.11.1/msvc2022_64" && cmake --build --preset release
 ```
 
 ### 4. Build Installer
@@ -192,7 +192,7 @@ Run the installer in `build/cpack`. Then run the app from Start Menu: `LibreELEC
 
 ### 1. Install XCode with Command-line tools
 
-### 2. Setup Qt 6.7.2
+### 2. Setup Qt 6.11.1
 
 #### Install pre-requisites
 
@@ -224,13 +224,13 @@ aqt list-qt mac desktop
 To see the available compiler versions run:
 
 ```
-aqt list-qt linux desktop --arch 6.7.2
+aqt list-qt linux desktop --arch 6.11.1
 ```
 
 Install the required packages:
 
 ```
-aqt install-qt --outputdir ~/Qt mac desktop 6.7.2 --archives qtbase qttools
+aqt install-qt --outputdir ~/Qt mac desktop 6.11.1 --archives qtbase qtdeclarative qttools
 ```
 
 ### 3. Clone Git Repo
@@ -248,13 +248,13 @@ cd ~/usb-sd-creator
 #### Debug build
 
 ```
-cmake -S . -B build -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.7.2/macos" && cmake --build build
+cmake -S . -B build -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.11.1/macos" && cmake --build build
 ```
 
 #### Release build
 
 ```
-cmake --preset release -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.7.2/macos" && cmake --build --preset release
+cmake --preset release -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.11.1/macos" && cmake --build --preset release
 ```
 
 ### 5. Run USB-SD-Creator
@@ -295,7 +295,7 @@ Then simply open CMakeLists.txt in Qt Creator
 Build the xcode project, and open the project file in Xcode, located in the build folder (note you may need to clear any previous build files before genreating for XCode):
 
 ```
-cmake -S . -B build -G Xcode -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.7.2/macos" && cmake --build build
+cmake -S . -B build -G Xcode -D CMAKE_PREFIX_PATH="/Users/$USER/Qt/6.11.1/macos" && cmake --build build
 ```
 ### 7. Build Install .dmg
 
@@ -326,7 +326,7 @@ sudo apt install cmake
 sudo apt install git
 ```
 
-### 2. Setup Qt 6.7.2
+### 2. Setup Qt 6.11.1
 
 #### Install pre-requisites (Pip and Pipx)
 
@@ -352,14 +352,14 @@ aqt list-qt linux desktop
 To see the available compiler versions run:
 
 ```
-aqt list-qt linux desktop --arch 6.7.2
+aqt list-qt linux desktop --arch 6.11.1
 ```
 
 Install the required packages:
 
 ```
-aqt install-qt --outputdir ~/Qt linux desktop 6.7.2 linux_gcc_64 --archives qtbase qttools
-aqt install-qt --outputdir ~/Qt linux desktop 6.7.2 linux_gcc_64 --modules debug_info
+aqt install-qt --outputdir ~/Qt linux desktop 6.11.1 linux_gcc_64 --archives icu qtbase qtdeclarative qttools
+aqt install-qt --outputdir ~/Qt linux desktop 6.11.1 linux_gcc_64 --modules debug_info
 ```
 
 ### 3. Clone Git Repo
@@ -378,13 +378,13 @@ cd ~/usb-sd-creator
 #### Debug build
 
 ```
-cmake -S . -B build -D CMAKE_PREFIX_PATH="~/Qt/6.7.2/gcc_64" && cmake --build build
+cmake -S . -B build -D CMAKE_PREFIX_PATH="~/Qt/6.11.1/gcc_64" && cmake --build build
 ```
 
 #### Release build
 
 ```
-cmake --preset release -D CMAKE_PREFIX_PATH="~/Qt/6.7.2/gcc_64" && cmake --build --preset release
+cmake --preset release -D CMAKE_PREFIX_PATH="~/Qt/6.11.1/gcc_64" && cmake --build --preset release
 ```
 
 ### 5. Run USB-SD-Creator

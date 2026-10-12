@@ -110,10 +110,10 @@ bool DiskWriter_windows::write(const QByteArray &data)
 
     DWORD byteswritten;
     bool ok;
-    ok = WriteFile(hRawDisk, data.constData(), data.size(), &byteswritten, NULL);
+    ok = WriteFile(hRawDisk, data.constData(), data.size(), &byteswritten, nullptr);
     if (!ok) {
         const QString errText = errorAsString(GetLastError());
-        QMessageBox::critical(NULL, QObject::tr("Write Error"),
+        QMessageBox::critical(nullptr, QObject::tr("Write Error"),
                               QObject::tr("An error occurred when attempting to write data to handle.\n"
                                           "Error %1: %2").arg(GetLastError()).arg(errText));
     }
@@ -129,10 +129,10 @@ HANDLE DiskWriter_windows::getHandleOnDevice(const QString& device, DWORD access
 
     //qDebug() << "getHandleOnDevice" << devicename;
 
-    hDevice = CreateFile(devicename.toStdWString().c_str(), access, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL);
+    hDevice = CreateFile(devicename.toStdWString().c_str(), access, FILE_SHARE_READ | FILE_SHARE_WRITE, nullptr, OPEN_EXISTING, 0, nullptr);
     //if (hDevice == INVALID_HANDLE_VALUE) {
     //    const QString errText = errorAsString(GetLastError());
-    //    QMessageBox::critical(NULL, QObject::tr("Device Error"),
+    //    QMessageBox::critical(nullptr, QObject::tr("Device Error"),
     //                          QObject::tr("An error occurred when attempting to get a handle on the device.\n"
     //                                      "Error %1: %2").arg(GetLastError()).arg(errText));
     //}
@@ -149,10 +149,10 @@ HANDLE DiskWriter_windows::getHandleOnVolume(const QString &volume, DWORD access
 
     //qDebug() << "getHandleOnVolume" << volumename;
 
-    hVolume = CreateFile(volumename.toStdWString().c_str(), access, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL);
+    hVolume = CreateFile(volumename.toStdWString().c_str(), access, FILE_SHARE_READ | FILE_SHARE_WRITE, nullptr, OPEN_EXISTING, 0, nullptr);
     if (hVolume == INVALID_HANDLE_VALUE) {
         const QString errText = errorAsString(GetLastError());
-        QMessageBox::critical(NULL, QObject::tr("Volume Error"),
+        QMessageBox::critical(nullptr, QObject::tr("Volume Error"),
                               QObject::tr("An error occurred when attempting to get a handle on the volume.\n"
                                           "Error %1: %2").arg(GetLastError()).arg(errText));
     }
@@ -165,10 +165,10 @@ bool DiskWriter_windows::getLockOnVolume(HANDLE handle) const
 {
     DWORD junk;
     bool ok;
-    ok = DeviceIoControl(handle, FSCTL_LOCK_VOLUME, NULL, 0, NULL, 0, &junk, NULL);
+    ok = DeviceIoControl(handle, FSCTL_LOCK_VOLUME, nullptr, 0, nullptr, 0, &junk, nullptr);
     if (!ok) {
         const QString errText = errorAsString(GetLastError());
-        QMessageBox::critical(NULL, QObject::tr("Lock Error"),
+        QMessageBox::critical(nullptr, QObject::tr("Lock Error"),
                               QObject::tr("An error occurred when attempting to lock the volume.\n"
                                           "Error %1: %2").arg(GetLastError()).arg(errText));
     }
@@ -181,10 +181,10 @@ bool DiskWriter_windows::removeLockOnVolume(HANDLE handle) const
 {
     DWORD junk;
     bool ok;
-    ok = DeviceIoControl(handle, FSCTL_UNLOCK_VOLUME, NULL, 0, NULL, 0, &junk, NULL);
+    ok = DeviceIoControl(handle, FSCTL_UNLOCK_VOLUME, nullptr, 0, nullptr, 0, &junk, nullptr);
     if (!ok) {
         const QString errText = errorAsString(GetLastError());
-        QMessageBox::critical(NULL, QObject::tr("Unlock Error"),
+        QMessageBox::critical(nullptr, QObject::tr("Unlock Error"),
                               QObject::tr("An error occurred when attempting to unlock the volume.\n"
                                           "Error %1: %2").arg(GetLastError()).arg(errText));
     }
@@ -197,10 +197,10 @@ bool DiskWriter_windows::unmountVolume(HANDLE handle) const
 {
     DWORD junk;
     bool ok;
-    ok = DeviceIoControl(handle, FSCTL_DISMOUNT_VOLUME, NULL, 0, NULL, 0, &junk, NULL);
+    ok = DeviceIoControl(handle, FSCTL_DISMOUNT_VOLUME, nullptr, 0, nullptr, 0, &junk, nullptr);
     if (!ok) {
         const QString errText = errorAsString(GetLastError());
-        QMessageBox::critical(NULL, QObject::tr("Dismount Error"),
+        QMessageBox::critical(nullptr, QObject::tr("Dismount Error"),
                               QObject::tr("An error occurred when attempting to dismount the volume.\n"
                                           "Error %1: %2").arg(GetLastError()).arg(errText));
     }
@@ -212,7 +212,7 @@ bool DiskWriter_windows::unmountVolume(HANDLE handle) const
 bool DiskWriter_windows::isVolumeMounted(HANDLE handle) const
 {
     DWORD junk;
-    return DeviceIoControl(handle, FSCTL_IS_VOLUME_MOUNTED, NULL, 0, NULL, 0, &junk, NULL);
+    return DeviceIoControl(handle, FSCTL_IS_VOLUME_MOUNTED, nullptr, 0, nullptr, 0, &junk, nullptr);
 }
 
 ULONG DiskWriter_windows::deviceNumberFromName(const QString &device)
@@ -221,12 +221,12 @@ ULONG DiskWriter_windows::deviceNumberFromName(const QString &device)
     if (volumename.endsWith("\\"))
         volumename.chop(1);
 
-    HANDLE h = ::CreateFile(volumename.toStdWString().c_str(), 0, 0, NULL, OPEN_EXISTING, 0, NULL);
+    HANDLE h = ::CreateFile(volumename.toStdWString().c_str(), 0, 0, nullptr, OPEN_EXISTING, 0, nullptr);
 
     STORAGE_DEVICE_NUMBER info;
     DWORD bytesReturned = 0;
 
-    ::DeviceIoControl(h, IOCTL_STORAGE_GET_DEVICE_NUMBER, NULL, 0, &info, sizeof(info), &bytesReturned, NULL);
+    ::DeviceIoControl(h, IOCTL_STORAGE_GET_DEVICE_NUMBER, nullptr, 0, &info, sizeof(info), &bytesReturned, nullptr);
     CloseHandle(h);
 
     return info.DeviceNumber;
@@ -237,9 +237,9 @@ QString DiskWriter_windows::errorAsString(DWORD error)
     if(error == 0)
         return QString();
 
-    LPSTR messageBuffer = NULL;
+    LPSTR messageBuffer = nullptr;
     size_t size = FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
-                                 NULL, error, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR)&messageBuffer, 0, NULL);
+                                 nullptr, error, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR)&messageBuffer, 0, nullptr);
     const QString message = QString::fromUtf16((const char16_t *)messageBuffer, size);
     LocalFree(messageBuffer);
 

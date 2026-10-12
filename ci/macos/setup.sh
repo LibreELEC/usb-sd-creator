@@ -1,17 +1,33 @@
 #!/usr/bin/env bash
+set -e
 
-brew install ninja
+brew install ninja p7zip
 
-qtVersion='6.7.2'
-qtVersionWithoutDots=${qtVersion//./}
+qtVersion='6.11.1'
+
+if command -v pipx >/dev/null 2>&1; then
+  pipx install aqtinstall
+  AQT="aqt"
+elif command -v python3 >/dev/null 2>&1; then
+  python3 -m pip install --break-system-packages aqtinstall 2>/dev/null || python3 -m pip install aqtinstall
+  AQT="python3 -m aqt"
+else
+  pip install aqtinstall
+  AQT="aqt"
+fi
 
 cd ..
-for module in base tools ; do
-  archive="$module.7z"
-  curl -L -o "$archive" "https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/qt6_$qtVersionWithoutDots/qt.qt6.$qtVersionWithoutDots.clang_64/$qtVersion-0-202406110330qt$module-MacOS-MacOS_13-Clang-MacOS-MacOS_13-X86_64-ARM64.7z"
-  7z x "$archive" '-xr!*.dSYM'
-done
-echo "CMAKE_PREFIX_PATH=$PWD/$(ls -1 | fgrep 6.)/macos" >> $GITHUB_ENV
+$AQT install-qt mac desktop "$qtVersion" clang_64 --outputdir "$PWD" --archives qtbase qtdeclarative qttools
+
+qtDir=$(find "$PWD/$qtVersion" -maxdepth 2 -type d \( -name "macos" -o -name "clang_64" \) 2>/dev/null | head -n 1)
+if [ -z "$qtDir" ]; then
+  qtDir="$PWD/$qtVersion/macos"
+fi
+
+echo "CMAKE_PREFIX_PATH=$qtDir" >> "$GITHUB_ENV"
+if [ -d "$qtDir/bin" ]; then
+  echo "$qtDir/bin" >> "$GITHUB_PATH"
+fi
 
 if [ "$MACOS_ASC_API_KEY" ]; then
   ascApiKey='ascApiKey.p8'

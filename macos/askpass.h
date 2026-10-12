@@ -25,7 +25,7 @@ namespace sudo
 {
 inline const QLatin1String AskPassEnvVar{"SUDO_ASKPASS"};
 
-void askpass();
+int askpass();
 }
 
 #endif // ASKPASS_H

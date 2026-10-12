@@ -30,8 +30,8 @@ class DownloadManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit DownloadManager(QObject *parent = 0);
-    ~DownloadManager();
+    explicit DownloadManager(QObject *parent = nullptr);
+    ~DownloadManager() override;
 
     QNetworkReply* get(const QUrl& url);
 
@@ -50,8 +50,8 @@ private slots:
     void handleReadyRead();
 
 private:
-    QNetworkAccessManager* manager;
-    QNetworkReply* latestReply;
+    QNetworkAccessManager* manager = nullptr;
+    QNetworkReply* latestReply = nullptr;
 
     enum {
         RESPONSE_OK = 200,

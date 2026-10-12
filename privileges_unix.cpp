@@ -207,8 +207,8 @@ uid_t Privileges::userUidFromPid(pid_t pid, pid_t *ppid)
     // function for os x from
     //   http://stackoverflow.com/questions/6457682/how-to-programatically-get-uid-from-pid-in-osx-using-c
 
-    struct kinfo_proc *sProcesses = NULL;
-    struct kinfo_proc *sNewProcesses;
+    struct kinfo_proc *sProcesses = nullptr;
+    struct kinfo_proc *sNewProcesses = nullptr;
     int    aiNames[4];
     size_t iNamesLength;
     int    i, iRetCode, iNumProcs;
@@ -221,13 +221,13 @@ uid_t Privileges::userUidFromPid(pid_t pid, pid_t *ppid)
     aiNames[3] = 0;
     iNamesLength = 3;
 
-    iRetCode = sysctl(aiNames, iNamesLength, NULL, &iSize, NULL, 0);
+    iRetCode = sysctl(aiNames, iNamesLength, nullptr, &iSize, nullptr, 0);
 
     // allocate memory and populate info in the  processes structure
     do {
         iSize += iSize / 10;
         sNewProcesses = (kinfo_proc *)realloc(sProcesses, iSize);
-        if (sNewProcesses == 0) {
+        if (sNewProcesses == nullptr) {
             if (sProcesses)
                 free(sProcesses);
 
@@ -235,7 +235,7 @@ uid_t Privileges::userUidFromPid(pid_t pid, pid_t *ppid)
         }
 
         sProcesses = sNewProcesses;
-        iRetCode = sysctl(aiNames, iNamesLength, sProcesses, &iSize, NULL, 0);
+        iRetCode = sysctl(aiNames, iNamesLength, sProcesses, &iSize, nullptr, 0);
     } while (iRetCode == -1 && errno == ENOMEM);
 
     iNumProcs = iSize / sizeof(struct kinfo_proc);

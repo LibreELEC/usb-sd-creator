@@ -1,6 +1,10 @@
 name: Build
 on: [push, pull_request]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
@@ -8,8 +12,11 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - os: ubuntu-22.04
+        - os: ubuntu-24.04
           platform: linux
+          useQtAction: true
+          qtArch: linux_gcc_64
+          qtArchives: icu qtbase qtdeclarative qttools
         - os: macos-latest
           platform: macos
           preset: release-macos
@@ -19,12 +26,15 @@ jobs:
           preset: release-msvc
           cpack: true
           useQtAction: true
+          qtArch: win64_msvc2022_64
+          qtArchives: qtbase qtdeclarative qttools opengl32sw d3dcompiler_47
         - os: windows-latest
           platform: windows-mingw
           preset: release-ninja
+          cpack: true
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Setup
       shell: bash
       run: |
@@ -35,38 +45,46 @@ jobs:
         MACOS_CODE_SIGN_KEY_BASE64: ${{ secrets.MACOS_CODE_SIGN_KEY_BASE64 }}
         MACOS_KEYCHAIN_PASSWORD: ${{ secrets.MACOS_KEYCHAIN_PASSWORD }}
 
-    - name: Install Qt
-      uses: jurplel/install-qt-action@v3
+    - name: Set up Python
+      uses: actions/setup-python@v7
       if: ${{ matrix.useQtAction }}
       with:
-        version: '6.7.2'
-        arch: 'win64_msvc2019_64'
-        archives: 'qtbase qttools opengl32sw d3dcompiler_47'
+        python-version: '3.14'
+
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v4
+      if: ${{ matrix.useQtAction }}
+      with:
+        version: '6.11.1'
+        arch: ${{ matrix.qtArch }}
+        archives: ${{ matrix.qtArchives }}
         extra: '--external 7z'
         cache: true
         setup-python: false
+        aqtsource: 'git+https://github.com/miurahr/aqtinstall.git'
+
     - name: Prepare MSVC environment
-      uses: ilammy/msvc-dev-cmd@v1
+      uses: TheMrMilchmann/setup-msvc-dev@v4
       if: ${{ matrix.platform == 'windows-msvc' }}
       with:
         arch: x64
-        toolset: 14.29
 
     - name: Setup msys2
       uses: msys2/setup-msys2@v2
       if: ${{ matrix.platform == 'windows-mingw' }}
       with:
+        msystem: UCRT64
         update: true
         install: >-
-          mingw-w64-x86_64-cmake
-          mingw-w64-x86_64-gcc
-          mingw-w64-x86_64-ninja
-          mingw-w64-x86_64-qt6-base
-          mingw-w64-x86_64-qt6-tools
-    - name: Put MSYS2_MinGW64 on PATH
+          mingw-w64-ucrt-x86_64-cmake
+          mingw-w64-ucrt-x86_64-gcc
+          mingw-w64-ucrt-x86_64-ninja
+          mingw-w64-ucrt-x86_64-qt6-base
+          mingw-w64-ucrt-x86_64-qt6-tools
+    - name: Put MSYS2_UCRT64 on PATH
       if: ${{ matrix.platform == 'windows-mingw' }}
       run: |
-        echo "${{ runner.temp }}/msys64/mingw64/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+        echo "${{ runner.temp }}/msys64/ucrt64/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
 
     - name: Configure
       run: |
@@ -84,11 +102,37 @@ jobs:
         ASC_API_KEY_ISSUER: ${{ secrets.MACOS_ASC_API_KEY_ISSUER }}
         ASC_TEAM_ID: ${{ secrets.MACOS_ASC_TEAM_ID }}
     - name: Pack zip
-      if: ${{ matrix.platform == 'windows-msvc' }}
+      if: ${{ runner.os == 'Windows' }}
       run: |
         cpack --preset release -G ZIP
+
+    - name: Build Linux AppImage
+      if: ${{ matrix.platform == 'linux' }}
+      env:
+        APPIMAGE_EXTRACT_AND_RUN: 1
+        NO_STRIP: "true"
+      run: |
+        export QMAKE="${QT_ROOT_DIR}/bin/qmake"
+        [ -x "$QMAKE" ] || export QMAKE="$(which qmake)"
+        export LD_LIBRARY_PATH="${QT_ROOT_DIR}/lib:${LD_LIBRARY_PATH}"
+
+        mkdir -p build/cpack
+        cmake --install build --prefix AppDir/usr
+        ln -sf LibreELEC.USB-SD.Creator.Linux.bin AppDir/usr/bin/LibreELEC.USB-SD.Creator
+        chmod +x AppDir/usr/bin/*
+
+        linuxdeploy \
+          --appdir AppDir \
+          --executable AppDir/usr/bin/LibreELEC.USB-SD.Creator.Linux.bin \
+          --desktop-file AppDir/usr/share/applications/LibreELEC.USB-SD.Creator.desktop \
+          --icon-file AppDir/usr/share/icons/hicolor/256x256/apps/LibreELEC.USB-SD.Creator.png \
+          --plugin qt \
+          --output appimage
+
+        mv LibreELEC*.AppImage build/cpack/LibreELEC.USB-SD.Creator.Linux.x86_64.AppImage || mv *.AppImage build/cpack/LibreELEC.USB-SD.Creator.Linux.x86_64.AppImage
+
     - name: Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         path: build/cpack/LibreELEC.USB-SD.Creator.*
         name: ${{ matrix.platform }}
