@@ -3,7 +3,7 @@ if(POLICY CMP0207)
     cmake_policy(SET CMP0207 NEW)
 endif()
 project(LibreELEC.USB-SD.Creator
-    VERSION 1.5
+    VERSION 1.6
     LANGUAGES CXX
     HOMEPAGE_URL "https://libreelec.tv/"
 )
