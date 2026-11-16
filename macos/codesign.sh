@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 # working directory - .app/Contents
 
@@ -24,3 +25,6 @@ done
 
 echo 'sign app bundle'
 sign ..
+
+echo 'verify app bundle'
+codesign --verify --deep --strict --verbose=2 ..

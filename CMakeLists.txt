@@ -204,6 +204,7 @@ elseif(APPLE)
         # codesign
         execute_process(COMMAND \"${CMAKE_SOURCE_DIR}/macos/codesign.sh\"
             WORKING_DIRECTORY \"\\\${bundleContentsDir}\"
+            COMMAND_ERROR_IS_FATAL ANY
         )
     ")
 elseif(LINUX)
@@ -274,7 +275,7 @@ elseif(APPLE)
 
     set(notarizeScript "${CMAKE_BINARY_DIR}/notarize.cmake")
     file(WRITE "${notarizeScript}"
-        "execute_process(COMMAND sh -c \"${CMAKE_SOURCE_DIR}/macos/notarize.sh \${CPACK_PACKAGE_FILES}\")"
+        "execute_process(COMMAND sh -c \"${CMAKE_SOURCE_DIR}/macos/notarize.sh \${CPACK_PACKAGE_FILES}\" COMMAND_ERROR_IS_FATAL ANY)"
     )
     set(CPACK_POST_BUILD_SCRIPTS "${notarizeScript}")
 
