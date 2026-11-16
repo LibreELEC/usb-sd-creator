@@ -25,7 +25,7 @@ if(WIN32)
     set(CMAKE_INSTALL_BINDIR .)
 elseif(APPLE)
     if(NOT CMAKE_OSX_DEPLOYMENT_TARGET)
-        set(CMAKE_OSX_DEPLOYMENT_TARGET "12.0" CACHE STRING "Minimum macOS version to target")
+        set(CMAKE_OSX_DEPLOYMENT_TARGET "13.0" CACHE STRING "Minimum macOS version to target")
     endif()
 endif()
 
