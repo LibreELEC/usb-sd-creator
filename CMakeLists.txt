@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.25)
 if(POLICY CMP0207)
     cmake_policy(SET CMP0207 NEW)
 endif()
+if(POLICY CMP0219)
+    cmake_policy(SET CMP0219 OLD)
+endif()
 project(LibreELEC.USB-SD.Creator
     VERSION 1.5
     LANGUAGES CXX
