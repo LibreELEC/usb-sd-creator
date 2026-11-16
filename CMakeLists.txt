@@ -144,7 +144,7 @@ if(WIN32)
     set(qtDeployExecutable "$<TARGET_FILE_NAME:LibreELEC.USB-SD.Creator>")
     set(qtDeployExtraCommands "
         # windeployqt also packages extra libs that aren't needed
-        foreach(dll in Qt${QT_VERSION_MAJOR}Svg opengl32sw D3Dcompiler_47)
+        foreach(dll Qt${QT_VERSION_MAJOR}Svg opengl32sw D3Dcompiler_47)
             file(REMOVE \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_BIN_DIR}/\\\${dll}.dll\")
         endforeach()
     ")
@@ -200,7 +200,7 @@ elseif(APPLE)
         set(bundleContentsDir \"\\\${QT_DEPLOY_PREFIX}/${qtDeployExecutable}/Contents\")
 
         # macdeployqt also packages extra frameworks that aren't needed
-        foreach(qtModule in Pdf Svg)
+        foreach(qtModule Pdf Svg)
             file(REMOVE_RECURSE \"\\\${bundleContentsDir}/Frameworks/Qt\\\${qtModule}.framework\")
         endforeach()
 
