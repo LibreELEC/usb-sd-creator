@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.25)
 if(POLICY CMP0207)
     cmake_policy(SET CMP0207 NEW)
 endif()
+if(POLICY CMP0219)
+    cmake_policy(SET CMP0219 OLD)
+endif()
 project(LibreELEC.USB-SD.Creator
     VERSION 1.5
     LANGUAGES CXX
@@ -25,7 +28,7 @@ if(WIN32)
     set(CMAKE_INSTALL_BINDIR .)
 elseif(APPLE)
     if(NOT CMAKE_OSX_DEPLOYMENT_TARGET)
-        set(CMAKE_OSX_DEPLOYMENT_TARGET "12.0" CACHE STRING "Minimum macOS version to target")
+        set(CMAKE_OSX_DEPLOYMENT_TARGET "13.0" CACHE STRING "Minimum macOS version to target")
     endif()
 endif()
 
@@ -141,7 +144,7 @@ if(WIN32)
     set(qtDeployExecutable "$<TARGET_FILE_NAME:LibreELEC.USB-SD.Creator>")
     set(qtDeployExtraCommands "
         # windeployqt also packages extra libs that aren't needed
-        foreach(dll in Qt${QT_VERSION_MAJOR}Svg opengl32sw D3Dcompiler_47)
+        foreach(dll Qt${QT_VERSION_MAJOR}Svg opengl32sw D3Dcompiler_47)
             file(REMOVE \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_BIN_DIR}/\\\${dll}.dll\")
         endforeach()
     ")
@@ -197,13 +200,14 @@ elseif(APPLE)
         set(bundleContentsDir \"\\\${QT_DEPLOY_PREFIX}/${qtDeployExecutable}/Contents\")
 
         # macdeployqt also packages extra frameworks that aren't needed
-        foreach(qtModule in Pdf Svg)
+        foreach(qtModule Pdf Svg)
             file(REMOVE_RECURSE \"\\\${bundleContentsDir}/Frameworks/Qt\\\${qtModule}.framework\")
         endforeach()
 
         # codesign
         execute_process(COMMAND \"${CMAKE_SOURCE_DIR}/macos/codesign.sh\"
             WORKING_DIRECTORY \"\\\${bundleContentsDir}\"
+            COMMAND_ERROR_IS_FATAL ANY
         )
     ")
 elseif(LINUX)
@@ -274,7 +278,7 @@ elseif(APPLE)
 
     set(notarizeScript "${CMAKE_BINARY_DIR}/notarize.cmake")
     file(WRITE "${notarizeScript}"
-        "execute_process(COMMAND sh -c \"${CMAKE_SOURCE_DIR}/macos/notarize.sh \${CPACK_PACKAGE_FILES}\")"
+        "execute_process(COMMAND sh -c \"${CMAKE_SOURCE_DIR}/macos/notarize.sh \${CPACK_PACKAGE_FILES}\" COMMAND_ERROR_IS_FATAL ANY)"
     )
     set(CPACK_POST_BUILD_SCRIPTS "${notarizeScript}")
 

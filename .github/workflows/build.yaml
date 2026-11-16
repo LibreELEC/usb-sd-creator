@@ -43,6 +43,7 @@ jobs:
       env:
         MACOS_ASC_API_KEY: ${{ secrets.MACOS_ASC_API_KEY }}
         MACOS_CODE_SIGN_KEY_BASE64: ${{ secrets.MACOS_CODE_SIGN_KEY_BASE64 }}
+        MACOS_CODE_SIGN_KEY_PASSWORD: ${{ secrets.MACOS_CODE_SIGN_KEY_PASSWORD }}
         MACOS_KEYCHAIN_PASSWORD: ${{ secrets.MACOS_KEYCHAIN_PASSWORD }}
 
     - name: Set up Python
