@@ -38,12 +38,22 @@ fi
 if [[ "$MACOS_CODE_SIGN_KEY_BASE64" && "$MACOS_KEYCHAIN_PASSWORD" ]]; then
   codesignKey='codesign.p12'
   echo "$MACOS_CODE_SIGN_KEY_BASE64" | base64 --decode > "$codesignKey"
-  echo "CODE_SIGN_IDENTITY=Developer ID Application: Kodi Foundation" >> $GITHUB_ENV
+  codeSignIdentity='Developer ID Application: Kodi Foundation'
+  echo "CODE_SIGN_IDENTITY=$codeSignIdentity" >> $GITHUB_ENV
 
   keychainPath='build.keychain'
   security create-keychain -p "$MACOS_KEYCHAIN_PASSWORD" "$keychainPath"
+  security set-keychain-settings -lut 21600 "$keychainPath"
   security unlock-keychain -p "$MACOS_KEYCHAIN_PASSWORD" "$keychainPath"
+  security list-keychains -d user -s "$keychainPath" $(security list-keychains -d user | tr -d '"')
   security default-keychain -s "$keychainPath"
-  security import "$codesignKey" -f pkcs12 -P "" -T "$(which codesign)" "$keychainPath"
-  security set-key-partition-list -S apple-tool:,apple: -s -k "$MACOS_KEYCHAIN_PASSWORD" "$keychainPath"
+  security import "$codesignKey" -k "$keychainPath" -f pkcs12 -P "" -T /usr/bin/codesign
+  security set-key-partition-list -S apple-tool:,apple: -s -k "$MACOS_KEYCHAIN_PASSWORD" "$keychainPath" > /dev/null
+  rm -f "$codesignKey"
+
+  security find-identity -p codesigning "$keychainPath"
+  if ! security find-identity -v -p codesigning "$keychainPath" | grep -qF "$codeSignIdentity" ; then
+    echo "::error::no valid code signing identity matching '$codeSignIdentity' in $keychainPath"
+    exit 1
+  fi
 fi
