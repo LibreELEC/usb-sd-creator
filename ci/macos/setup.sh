@@ -47,7 +47,7 @@ if [[ "$MACOS_CODE_SIGN_KEY_BASE64" && "$MACOS_KEYCHAIN_PASSWORD" ]]; then
   security unlock-keychain -p "$MACOS_KEYCHAIN_PASSWORD" "$keychainPath"
   security list-keychains -d user -s "$keychainPath" $(security list-keychains -d user | tr -d '"')
   security default-keychain -s "$keychainPath"
-  security import "$codesignKey" -k "$keychainPath" -f pkcs12 -P "" -T /usr/bin/codesign
+  security import "$codesignKey" -k "$keychainPath" -f pkcs12 -P "${MACOS_CODE_SIGN_KEY_PASSWORD:-}" -T /usr/bin/codesign
   security set-key-partition-list -S apple-tool:,apple: -s -k "$MACOS_KEYCHAIN_PASSWORD" "$keychainPath" > /dev/null
   rm -f "$codesignKey"
 
