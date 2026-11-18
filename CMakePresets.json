@@ -26,6 +26,19 @@
       "name": "release-msvc",
       "inherits": "release",
       "generator": "NMake Makefiles"
+    },
+    {
+      "name": "release-mingw-static",
+      "inherits": "release-ninja",
+      "cacheVariables": {
+        "STATIC_BUILD": "ON",
+        "ZLIB_USE_STATIC_LIBS": "ON",
+        "OPENSSL_USE_STATIC_LIBS": "ON",
+        "OPENSSL_DEPENDENCIES": "-lws2_32;-lgdi32;-lcrypt32;-lbcrypt",
+        "LIBPNG_DEPENDENCIES": "-lz",
+        "FREETYPE_DEPENDENCIES": "-lharfbuzz;-lgraphite2;-lglib-2.0;-lintl;-liconv;-lpcre2-8;-lfreetype;-lbz2;-lpng16;-lz;-lbrotlidec;-lbrotlicommon;-lws2_32;-lusp10;-lgdi32;-lole32;-lwinmm;-lshlwapi;-lrpcrt4;-lm",
+        "HARFBUZZ_DEPENDENCIES": "-lfreetype;-lbz2;-lpng16;-lz;-lbrotlidec;-lbrotlicommon;-lgraphite2;-lglib-2.0;-lintl;-liconv;-lpcre2-8;-lws2_32;-lusp10;-lgdi32;-lole32;-lwinmm;-lshlwapi;-lrpcrt4;-lm"
+      }
     }
   ],
   "buildPresets": [

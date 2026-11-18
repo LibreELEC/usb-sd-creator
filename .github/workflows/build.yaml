@@ -1,5 +1,23 @@
 name: Build
-on: [push, pull_request]
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '*'
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version string (optional, defaults to tag or 0.0)'
+        required: false
+        default: ''
+      create_release:
+        description: 'Create GitHub release if untagged'
+        type: boolean
+        required: false
+        default: false
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -7,6 +25,7 @@ concurrency:
 
 jobs:
   build:
+    name: Build (${{ matrix.platform }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -30,11 +49,61 @@ jobs:
           qtArchives: qtbase qtdeclarative qttools opengl32sw d3dcompiler_47
         - os: windows-latest
           platform: windows-mingw
-          preset: release-ninja
-          cpack: true
+          preset: release-mingw-static
+          staticBuild: true
+
     steps:
     - name: Checkout
       uses: actions/checkout@v5
+
+    - name: Determine version
+      id: ver
+      shell: bash
+      run: |
+        if [ "${{ github.ref_type }}" = "tag" ]; then
+          RAW_TAG="${{ github.ref_name }}"
+          VERSION="${RAW_TAG#v}"
+        elif [ -n "${{ inputs.version }}" ]; then
+          RAW_TAG="${{ inputs.version }}"
+          VERSION="${RAW_TAG#v}"
+        else
+          VERSION="0.0"
+        fi
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "Selected VERSION: $VERSION"
+
+    - name: Update version in CMakeLists.txt
+      shell: bash
+      env:
+        BUILD_VERSION: ${{ steps.ver.outputs.version }}
+      run: |
+        python3 -c '
+        import os, re
+        version = os.environ.get("BUILD_VERSION", "0.0")
+        with open("CMakeLists.txt", "r", encoding="utf-8") as f:
+            content = f.read()
+        content = re.sub(
+            r"(project\s*\(\s*LibreELEC\.USB-SD\.Creator[\s\S]*?VERSION\s+)[0-9]+(?:\.[0-9]+)*",
+            rf"\g<1>{version}",
+            content
+        )
+        with open("CMakeLists.txt", "w", encoding="utf-8") as f:
+            f.write(content)
+        ' || python -c '
+        import os, re
+        version = os.environ.get("BUILD_VERSION", "0.0")
+        with open("CMakeLists.txt", "r", encoding="utf-8") as f:
+            content = f.read()
+        content = re.sub(
+            r"(project\s*\(\s*LibreELEC\.USB-SD\.Creator[\s\S]*?VERSION\s+)[0-9]+(?:\.[0-9]+)*",
+            rf"\g<1>{version}",
+            content
+        )
+        with open("CMakeLists.txt", "w", encoding="utf-8") as f:
+            f.write(content)
+        '
+        git diff CMakeLists.txt
+
     - name: Setup
       shell: bash
       run: |
@@ -80,16 +149,46 @@ jobs:
           mingw-w64-ucrt-x86_64-cmake
           mingw-w64-ucrt-x86_64-gcc
           mingw-w64-ucrt-x86_64-ninja
-          mingw-w64-ucrt-x86_64-qt6-base
-          mingw-w64-ucrt-x86_64-qt6-tools
+          mingw-w64-ucrt-x86_64-pkgconf
+          mingw-w64-ucrt-x86_64-brotli
+          mingw-w64-ucrt-x86_64-bzip2
+          mingw-w64-ucrt-x86_64-dbus
+          mingw-w64-ucrt-x86_64-freetype
+          mingw-w64-ucrt-x86_64-gettext
+          mingw-w64-ucrt-x86_64-glib2
+          mingw-w64-ucrt-x86_64-graphite2
+          mingw-w64-ucrt-x86_64-harfbuzz
+          mingw-w64-ucrt-x86_64-libiconv
+          mingw-w64-ucrt-x86_64-libjpeg-turbo
+          mingw-w64-ucrt-x86_64-libpng
+          mingw-w64-ucrt-x86_64-libtiff
+          mingw-w64-ucrt-x86_64-libwebp
+          mingw-w64-ucrt-x86_64-openssl
+          mingw-w64-ucrt-x86_64-pcre2
+          mingw-w64-ucrt-x86_64-vulkan-loader
+          mingw-w64-ucrt-x86_64-zlib
+          mingw-w64-ucrt-x86_64-zstd
+
+    - name: Install MSYS2 Qt 6.11.2 static
+      if: ${{ matrix.staticBuild }}
+      shell: msys2 {0}
+      run: |
+        pacman -U --noconfirm https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-qt6-static-6.11.2-1-any.pkg.tar.zst
+
     - name: Put MSYS2_UCRT64 on PATH
       if: ${{ matrix.platform == 'windows-mingw' }}
+      shell: pwsh
       run: |
-        echo "${{ runner.temp }}/msys64/ucrt64/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+        $msysUcrt = ("${{ runner.temp }}/msys64/ucrt64" -replace '\\', '/')
+        "$msysUcrt/qt6-static/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+        "$msysUcrt/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+        "CMAKE_PREFIX_PATH=$msysUcrt/qt6-static" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+        "PKG_CONFIG_ARGN=--static" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
 
     - name: Configure
       run: |
         cmake --preset ${{ matrix.preset || 'release' }}
+
     - name: Build
       run: |
         cmake --build --preset release
@@ -102,10 +201,22 @@ jobs:
         ASC_API_KEY_ID: ${{ secrets.MACOS_ASC_API_KEY_ID }}
         ASC_API_KEY_ISSUER: ${{ secrets.MACOS_ASC_API_KEY_ISSUER }}
         ASC_TEAM_ID: ${{ secrets.MACOS_ASC_TEAM_ID }}
+
     - name: Pack zip
-      if: ${{ runner.os == 'Windows' }}
+      if: ${{ runner.os == 'Windows' && !matrix.staticBuild }}
       run: |
         cpack --preset release -G ZIP
+
+    - name: Package static Windows executable
+      if: ${{ matrix.staticBuild }}
+      shell: pwsh
+      run: |
+        strip --strip-all build/LibreELEC.USB-SD.Creator.exe
+        objdump -p build/LibreELEC.USB-SD.Creator.exe | Select-String "DLL Name:"
+        New-Item -ItemType Directory -Force -Path build/cpack | Out-Null
+        Copy-Item build/LibreELEC.USB-SD.Creator.exe build/cpack/LibreELEC.USB-SD.Creator.x64.exe
+        $sizeMB = [math]::Round((Get-Item build/cpack/LibreELEC.USB-SD.Creator.x64.exe).Length / 1MB, 2)
+        Write-Host "Standalone executable size: $sizeMB MB"
 
     - name: Build Linux AppImage
       if: ${{ matrix.platform == 'linux' }}
@@ -138,3 +249,102 @@ jobs:
         path: build/cpack/LibreELEC.USB-SD.Creator.*
         name: ${{ matrix.platform }}
         compression-level: 0
+
+  release:
+    name: Create GitHub Release
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/') || (github.event_name == 'workflow_dispatch' && inputs.create_release)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v5
+      with:
+        fetch-depth: 0
+
+    - name: Determine release tag and version
+      id: release_info
+      shell: bash
+      run: |
+        if [ "${{ github.ref_type }}" = "tag" ]; then
+          TAG="${{ github.ref_name }}"
+          VERSION="${TAG#v}"
+          IS_PRERELEASE="false"
+        elif [ -n "${{ inputs.version }}" ]; then
+          TAG="${{ inputs.version }}"
+          VERSION="${TAG#v}"
+          IS_PRERELEASE="false"
+        else
+          TAG="0.0"
+          VERSION="0.0"
+          IS_PRERELEASE="true"
+        fi
+        echo "tag=$TAG" >> $GITHUB_OUTPUT
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "is_prerelease=$IS_PRERELEASE" >> $GITHUB_OUTPUT
+
+    - name: Download all artifacts
+      uses: actions/download-artifact@v6
+      with:
+        path: artifacts
+
+    - name: Prepare release assets
+      shell: bash
+      run: |
+        mkdir -p release_assets
+
+        # 1. Linux AppImage
+        cp artifacts/linux/LibreELEC.USB-SD.Creator.Linux.x86_64.AppImage release_assets/
+
+        # 2. macOS DMG
+        cp artifacts/macos/LibreELEC.USB-SD.Creator.macOS.dmg release_assets/
+
+        # 3. Windows: upload standalone static LibreELEC.USB-SD.Creator.x64.exe from MSYS2 static build
+        cp artifacts/windows-mingw/LibreELEC.USB-SD.Creator.x64.exe release_assets/
+
+        echo "Files ready for release:"
+        ls -la release_assets/
+
+    - name: Generate release notes header with download links
+      id: notes
+      shell: bash
+      env:
+        TAG: ${{ steps.release_info.outputs.tag }}
+        REPO: ${{ github.repository }}
+      run: |
+        cat << 'EOF' > release_body.md
+        ## Downloads
+
+        | Platform | Package | Description |
+        | :--- | :--- | :--- |
+        | **Windows** | [LibreELEC.USB-SD.Creator.x64.exe](https://github.com/${{ env.REPO }}/releases/download/${{ env.TAG }}/LibreELEC.USB-SD.Creator.x64.exe) | 64-bit Windows Standalone (.exe) |
+        | **macOS** | [LibreELEC.USB-SD.Creator.macOS.dmg](https://github.com/${{ env.REPO }}/releases/download/${{ env.TAG }}/LibreELEC.USB-SD.Creator.macOS.dmg) | macOS Universal Disk Image |
+        | **Linux** | [LibreELEC.USB-SD.Creator.Linux.x86_64.AppImage](https://github.com/${{ env.REPO }}/releases/download/${{ env.TAG }}/LibreELEC.USB-SD.Creator.Linux.x86_64.AppImage) | x86_64 Standalone AppImage |
+
+        ---
+
+        EOF
+
+    - name: Publish Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TAG: ${{ steps.release_info.outputs.tag }}
+        PRERELEASE: ${{ steps.release_info.outputs.is_prerelease }}
+      run: |
+        EXTRA_ARGS=()
+        if [ "$PRERELEASE" = "true" ]; then
+          EXTRA_ARGS+=(--prerelease)
+        fi
+
+        if gh release view "$TAG" >/dev/null 2>&1; then
+          gh release upload "$TAG" release_assets/* --clobber
+        else
+          gh release create "$TAG" \
+            release_assets/* \
+            --target "${{ github.sha }}" \
+            --title "LibreELEC USB-SD Creator $TAG" \
+            --generate-notes \
+            --notes "$(cat release_body.md)" \
+            "${EXTRA_ARGS[@]}"
+        fi

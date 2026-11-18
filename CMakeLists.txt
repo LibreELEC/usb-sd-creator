@@ -36,6 +36,12 @@ endif()
 if(WIN32)
     option(DUMMY_WRITE "Write image to local file named 'dummy_image_file' instead to real device (for testing)")
     option(REQUIRE_ADMIN "Build exe that runs only as administrator" ON)
+    option(STATIC_BUILD "Link statically against .a libraries on MinGW" OFF)
+endif()
+
+# Must be set after project() because Windows-GNU.cmake resets CMAKE_FIND_LIBRARY_SUFFIXES
+if(MINGW AND STATIC_BUILD)
+    set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
 endif()
 
 # dependencies
@@ -45,6 +51,14 @@ if(LINUX)
 endif()
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS ${qtComponents})
 find_package(Qt${QT_VERSION_MAJOR} 6.11 REQUIRED COMPONENTS ${qtComponents})
+
+get_target_property(qtCoreType Qt${QT_VERSION_MAJOR}::Core TYPE)
+if(qtCoreType STREQUAL "STATIC_LIBRARY")
+    set(QT_STATIC_BUILD TRUE)
+    if(MSVC)
+        set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+    endif()
+endif()
 
 if(MSVC_TOOLSET_VERSION EQUAL 142)
     if(CMAKE_SYSTEM_PROCESSOR MATCHES "ARM64")
@@ -141,43 +155,63 @@ if(WIN32)
 
     configure_file("windows/winapp.rc.in" "${CMAKE_SOURCE_DIR}/windows/winapp.rc" @ONLY)
 
-    set(qtDeployExecutable "$<TARGET_FILE_NAME:LibreELEC.USB-SD.Creator>")
-    set(qtDeployExtraCommands "
-        # windeployqt also packages extra libs that aren't needed
-        foreach(dll Qt${QT_VERSION_MAJOR}Svg opengl32sw D3Dcompiler_47)
-            file(REMOVE \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_BIN_DIR}/\\\${dll}.dll\")
-        endforeach()
-    ")
-    if(MINGW)
-        get_filename_component(MINGW_BIN_DIR "${CMAKE_CXX_COMPILER}" DIRECTORY)
-        string(APPEND qtDeployExtraCommands "
-        # Deploy MinGW / MSYS2 runtime dependencies
-        file(GLOB_RECURSE _deployed_plugins LIST_DIRECTORIES false \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_PLUGINS_DIR}/*.dll\")
-        if(_deployed_plugins)
-            set(_plugin_libs LIBRARIES \\\${_deployed_plugins})
-        else()
-            set(_plugin_libs \"\")
-        endif()
-        if(POLICY CMP0207)
-            cmake_policy(SET CMP0207 NEW)
-        endif()
-        file(GET_RUNTIME_DEPENDENCIES
-            RESOLVED_DEPENDENCIES_VAR _resolved_deps
-            UNRESOLVED_DEPENDENCIES_VAR _unresolved_deps
-            CONFLICTING_DEPENDENCIES_PREFIX _conflicts
-            EXECUTABLES \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_BIN_DIR}/${qtDeployExecutable}\"
-            \\\${_plugin_libs}
-            DIRECTORIES \"${MINGW_BIN_DIR}\"
-            POST_EXCLUDE_REGEXES \"^[aA][pP][iI]-[mM][sS]-[wW][iI][nN]\" \"^[eE][xX][tT]-[mM][sS]-[wW][iI][nN]\"
+    if(QT_STATIC_BUILD)
+        qt_import_plugins(LibreELEC.USB-SD.Creator
+            NO_DEFAULT
+            INCLUDE
+                Qt${QT_VERSION_MAJOR}::QWindowsIntegrationPlugin
+                Qt${QT_VERSION_MAJOR}::QSchannelBackendPlugin
         )
-        foreach(_dep IN LISTS _resolved_deps)
-            file(TO_CMAKE_PATH \"\\\${_dep}\" _dep_norm)
-            string(TOLOWER \"\\\${_dep_norm}\" _dep_lower)
-            if(NOT _dep_lower MATCHES \"^[a-z]:/windows/\")
-                file(INSTALL DESTINATION \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_BIN_DIR}\" TYPE FILE FILES \"\\\${_dep}\")
-            endif()
-        endforeach()
+        if(MINGW)
+            target_compile_options(LibreELEC.USB-SD.Creator PRIVATE
+                $<$<CONFIG:Release>:-Os -ffunction-sections -fdata-sections>
+            )
+            target_link_options(LibreELEC.USB-SD.Creator PRIVATE
+                -static
+                -static-libgcc
+                -static-libstdc++
+                $<$<CONFIG:Release>:-Wl,-s -Wl,--gc-sections>
+            )
+        endif()
+    else()
+        set(qtDeployExecutable "$<TARGET_FILE_NAME:LibreELEC.USB-SD.Creator>")
+        set(qtDeployExtraCommands "
+            # windeployqt also packages extra libs that aren't needed
+            foreach(dll Qt${QT_VERSION_MAJOR}Svg opengl32sw D3Dcompiler_47)
+                file(REMOVE \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_BIN_DIR}/\\\${dll}.dll\")
+            endforeach()
         ")
+        if(MINGW)
+            get_filename_component(MINGW_BIN_DIR "${CMAKE_CXX_COMPILER}" DIRECTORY)
+            string(APPEND qtDeployExtraCommands "
+            # Deploy MinGW / MSYS2 runtime dependencies
+            file(GLOB_RECURSE _deployed_plugins LIST_DIRECTORIES false \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_PLUGINS_DIR}/*.dll\")
+            if(_deployed_plugins)
+                set(_plugin_libs LIBRARIES \\\${_deployed_plugins})
+            else()
+                set(_plugin_libs \"\")
+            endif()
+            if(POLICY CMP0207)
+                cmake_policy(SET CMP0207 NEW)
+            endif()
+            file(GET_RUNTIME_DEPENDENCIES
+                RESOLVED_DEPENDENCIES_VAR _resolved_deps
+                UNRESOLVED_DEPENDENCIES_VAR _unresolved_deps
+                CONFLICTING_DEPENDENCIES_PREFIX _conflicts
+                EXECUTABLES \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_BIN_DIR}/${qtDeployExecutable}\"
+                \\\${_plugin_libs}
+                DIRECTORIES \"${MINGW_BIN_DIR}\"
+                POST_EXCLUDE_REGEXES \"^[aA][pP][iI]-[mM][sS]-[wW][iI][nN]\" \"^[eE][xX][tT]-[mM][sS]-[wW][iI][nN]\"
+            )
+            foreach(_dep IN LISTS _resolved_deps)
+                file(TO_CMAKE_PATH \"\\\${_dep}\" _dep_norm)
+                string(TOLOWER \"\\\${_dep_norm}\" _dep_lower)
+                if(NOT _dep_lower MATCHES \"^[a-z]:/windows/\")
+                    file(INSTALL DESTINATION \"\\\${QT_DEPLOY_PREFIX}/\\\${QT_DEPLOY_BIN_DIR}\" TYPE FILE FILES \"\\\${_dep}\")
+                endif()
+            endforeach()
+            ")
+        endif()
     endif()
 elseif(APPLE)
     set_target_properties(LibreELEC.USB-SD.Creator PROPERTIES
