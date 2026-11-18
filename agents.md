@@ -11,6 +11,8 @@ When modifying this repository, strictly adhere to the following rules:
 ### One Commit per Meaningful Change
 * Every atomic, meaningful change must be encapsulated in its own standalone git commit.
 * Use concise Conventional Commits syntax (`feat:`, `fix:`, `chore:`, `content:`, `docs:`, `refactor:`).
+* Commit messages should be concise and use an imperative tone to describe the change.
+* If the commit fixes something, describe problem and solution, not the journey taken to reach the patch.
 * Never bundle unrelated changes (e.g., dependency updates mixed with content edits or styling changes) into a single commit.
 
 ### Do Not Create Pull Requests
